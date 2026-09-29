@@ -1,0 +1,24 @@
+def x_or_y(n, x, y):
+    """Return x if n is prime, otherwise return y.
+
+    A number is prime if it is greater than 1 and has no positive
+    divisors other than 1 and itself.
+
+    Examples:
+        >>> x_or_y(7, 34, 12)
+        34
+        >>> x_or_y(15, 8, 5)
+        5
+    """
+    if n <= 1:
+        return y
+    if n <= 3:
+        return x
+    if n % 2 == 0 or n % 3 == 0:
+        return y
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return y
+        i += 6
+    return x

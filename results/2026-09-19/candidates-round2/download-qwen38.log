@@ -1,0 +1,16 @@
+=== 00:19:18 START mtp-Qwen3.8-27B-Q8_0.gguf
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+path=/var/lib/ollama/candidates-r2/mtp-Qwen3.8-27B-Q8_0.gguf
+=== 00:20:05 rc=0 wall=47s size=3164006816
+=== 00:20:05 START dflash-Qwen3.8-27B-Q8_0.gguf
+path=/var/lib/ollama/candidates-r2/dflash-Qwen3.8-27B-Q8_0.gguf
+=== 00:20:36 rc=0 wall=31s size=2056414560
+=== 00:20:36 START Qwen3.8-27B-Q4_K_M.gguf
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+path=/var/lib/ollama/candidates-r2/Qwen3.8-27B-Q4_K_M.gguf
+=== 00:24:14 rc=0 wall=218s size=18973870528
+=== 00:24:14 START Qwen3.8-27B-Q8_0.gguf
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+path=/var/lib/ollama/candidates-r2/Qwen3.8-27B-Q8_0.gguf
+=== 00:29:40 rc=0 wall=326s size=28595763648
+QWEN38 DOWNLOADS DONE 00:29:41

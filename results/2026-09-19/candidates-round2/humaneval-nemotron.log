@@ -1,0 +1,171 @@
+HumanEval: 1 model(s) × 164 tasks = 164 generations.
+Already completed: 0. Results: /home/hm/Projects/Tests/2026-09-19/candidates-round2/humaneval-nemotron
+
+Model 1/1: nemotron-cascade-2-30b-a3b:q4_k_m
+[------------------------------] 1/164 (  0.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/0         ETA 11m 04s
+[------------------------------] 2/164 (  1.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/1         ETA 10m 14s
+[------------------------------] 3/164 (  1.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/2         ETA 8m 44s
+[------------------------------] 4/164 (  2.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/3         ETA 8m 30s
+[------------------------------] 5/164 (  3.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/4         ETA 8m 30s
+[#-----------------------------] 6/164 (  3.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/5         ETA 8m 19s
+[#-----------------------------] 7/164 (  4.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/6         ETA 8m 33s
+[#-----------------------------] 8/164 (  4.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/7         ETA 8m 13s
+[#-----------------------------] 9/164 (  5.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/8         ETA 8m 07s
+[#-----------------------------] 10/164 (  6.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/9         ETA 8m 01s
+[##----------------------------] 11/164 (  6.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/10        ETA 8m 30s
+[##----------------------------] 12/164 (  7.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/11        ETA 8m 37s
+[##----------------------------] 13/164 (  7.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/12        ETA 8m 31s
+[##----------------------------] 14/164 (  8.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/13        ETA 8m 15s
+[##----------------------------] 15/164 (  9.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/14        ETA 7m 58s
+[##----------------------------] 16/164 (  9.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/15        ETA 7m 43s
+[###---------------------------] 17/164 ( 10.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/16        ETA 7m 37s
+[###---------------------------] 18/164 ( 11.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/17        ETA 7m 45s
+[###---------------------------] 19/164 ( 11.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/18        ETA 7m 42s
+[###---------------------------] 20/164 ( 12.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/19        ETA 7m 44s
+[###---------------------------] 21/164 ( 12.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/20        ETA 7m 44s
+[####--------------------------] 22/164 ( 13.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/21        ETA 7m 45s
+[####--------------------------] 23/164 ( 14.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/22        ETA 7m 37s
+[####--------------------------] 24/164 ( 14.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/23        ETA 7m 23s
+[####--------------------------] 25/164 ( 15.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/24        ETA 7m 16s
+[####--------------------------] 26/164 ( 15.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/25        ETA 7m 16s
+[####--------------------------] 27/164 ( 16.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/26        ETA 7m 10s
+[#####-------------------------] 28/164 ( 17.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/27        ETA 7m 00s
+[#####-------------------------] 29/164 ( 17.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/28        ETA 6m 51s
+[#####-------------------------] 30/164 ( 18.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/29        ETA 6m 44s
+[#####-------------------------] 31/164 ( 18.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/30        ETA 6m 40s
+[#####-------------------------] 32/164 ( 19.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/31        ETA 6m 40s
+[######------------------------] 33/164 ( 20.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/32        ETA 6m 57s
+[######------------------------] 34/164 ( 20.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/33        ETA 6m 59s
+[######------------------------] 35/164 ( 21.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/34        ETA 6m 50s
+[######------------------------] 36/164 ( 22.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/35        ETA 6m 46s
+[######------------------------] 37/164 ( 22.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/36        ETA 6m 42s
+[######------------------------] 38/164 ( 23.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/37        ETA 6m 43s
+[#######-----------------------] 39/164 ( 23.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/38        ETA 6m 51s
+[#######-----------------------] 40/164 ( 24.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/39        ETA 6m 52s
+[#######-----------------------] 41/164 ( 25.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/40        ETA 6m 57s
+[#######-----------------------] 42/164 ( 25.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/41        ETA 6m 59s
+[#######-----------------------] 43/164 ( 26.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/42        ETA 6m 53s
+[########----------------------] 44/164 ( 26.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/43        ETA 6m 51s
+[########----------------------] 45/164 ( 27.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/44        ETA 6m 49s
+[########----------------------] 46/164 ( 28.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/45        ETA 6m 41s
+[########----------------------] 47/164 ( 28.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/46        ETA 6m 45s
+[########----------------------] 48/164 ( 29.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/47        ETA 6m 40s
+[########----------------------] 49/164 ( 29.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/48        ETA 6m 35s
+[#########---------------------] 50/164 ( 30.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/49        ETA 6m 33s
+[#########---------------------] 51/164 ( 31.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/50        ETA 6m 28s
+[#########---------------------] 52/164 ( 31.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/51        ETA 6m 25s
+[#########---------------------] 53/164 ( 32.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/52        ETA 6m 19s
+[#########---------------------] 54/164 ( 32.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/53        ETA 6m 12s
+[##########--------------------] 55/164 ( 33.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/54        ETA 6m 10s
+[##########--------------------] 56/164 ( 34.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/55        ETA 6m 04s
+[##########--------------------] 57/164 ( 34.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/56        ETA 6m 01s
+[##########--------------------] 58/164 ( 35.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/57        ETA 6m 01s
+[##########--------------------] 59/164 ( 36.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/58        ETA 5m 57s
+[##########--------------------] 60/164 ( 36.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/59        ETA 5m 54s
+[###########-------------------] 61/164 ( 37.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/60        ETA 5m 50s
+[###########-------------------] 62/164 ( 37.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/61        ETA 5m 48s
+[###########-------------------] 63/164 ( 38.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/62        ETA 5m 44s
+[###########-------------------] 64/164 ( 39.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/63        ETA 5m 43s
+[###########-------------------] 65/164 ( 39.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/64        ETA 5m 41s
+[############------------------] 66/164 ( 40.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/65        ETA 5m 37s
+[############------------------] 67/164 ( 40.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/66        ETA 5m 33s
+[############------------------] 68/164 ( 41.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/67        ETA 5m 35s
+[############------------------] 69/164 ( 42.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/68        ETA 5m 36s
+[############------------------] 70/164 ( 42.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/69        ETA 5m 33s
+[############------------------] 71/164 ( 43.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/70        ETA 5m 31s
+[#############-----------------] 72/164 ( 43.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/71        ETA 5m 29s
+[#############-----------------] 73/164 ( 44.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/72        ETA 5m 26s
+[#############-----------------] 74/164 ( 45.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/73        ETA 5m 23s
+[#############-----------------] 75/164 ( 45.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/74        ETA 5m 20s
+[#############-----------------] 76/164 ( 46.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/75        ETA 5m 16s
+[##############----------------] 77/164 ( 47.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/76        ETA 5m 15s
+[##############----------------] 78/164 ( 47.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/77        ETA 5m 13s
+[##############----------------] 79/164 ( 48.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/78        ETA 5m 09s
+[##############----------------] 80/164 ( 48.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/79        ETA 5m 05s
+[##############----------------] 81/164 ( 49.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/80        ETA 5m 02s
+[###############---------------] 82/164 ( 50.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/81        ETA 5m 00s
+[###############---------------] 83/164 ( 50.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/82        ETA 4m 56s
+[###############---------------] 84/164 ( 51.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/83        ETA 4m 53s
+[###############---------------] 85/164 ( 51.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/84        ETA 4m 49s
+[###############---------------] 86/164 ( 52.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/85        ETA 4m 45s
+[###############---------------] 87/164 ( 53.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/86        ETA 4m 42s
+[################--------------] 88/164 ( 53.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/87        ETA 4m 40s
+[################--------------] 89/164 ( 54.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/88        ETA 4m 38s
+[################--------------] 90/164 ( 54.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/89        ETA 4m 35s
+[################--------------] 91/164 ( 55.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/90        ETA 4m 32s
+[################--------------] 92/164 ( 56.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/91        ETA 4m 29s
+[#################-------------] 93/164 ( 56.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/92        ETA 4m 25s
+[#################-------------] 94/164 ( 57.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/93        ETA 4m 22s
+[#################-------------] 95/164 ( 57.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/94        ETA 4m 19s
+[#################-------------] 96/164 ( 58.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/95        ETA 4m 15s
+[#################-------------] 97/164 ( 59.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/96        ETA 4m 11s
+[#################-------------] 98/164 ( 59.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/97        ETA 4m 06s
+[##################------------] 99/164 ( 60.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/98        ETA 4m 02s
+[##################------------] 100/164 ( 61.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/99        ETA 4m 00s
+[##################------------] 101/164 ( 61.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/100       ETA 3m 56s
+[##################------------] 102/164 ( 62.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/101       ETA 3m 52s
+[##################------------] 103/164 ( 62.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/102       ETA 3m 48s
+[###################-----------] 104/164 ( 63.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/103       ETA 3m 45s
+[###################-----------] 105/164 ( 64.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/104       ETA 3m 41s
+[###################-----------] 106/164 ( 64.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/105       ETA 3m 40s
+[###################-----------] 107/164 ( 65.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/106       ETA 3m 35s
+[###################-----------] 108/164 ( 65.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/107       ETA 3m 33s
+[###################-----------] 109/164 ( 66.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/108       ETA 3m 29s
+[####################----------] 110/164 ( 67.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/109       ETA 3m 26s
+[####################----------] 111/164 ( 67.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/110       ETA 3m 22s
+[####################----------] 112/164 ( 68.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/111       ETA 3m 19s
+[####################----------] 113/164 ( 68.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/112       ETA 3m 16s
+[####################----------] 114/164 ( 69.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/113       ETA 3m 12s
+[#####################---------] 115/164 ( 70.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/114       ETA 3m 08s
+[#####################---------] 116/164 ( 70.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/115       ETA 3m 06s
+[#####################---------] 117/164 ( 71.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/116       ETA 3m 02s
+[#####################---------] 118/164 ( 72.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/117       ETA 2m 58s
+[#####################---------] 119/164 ( 72.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/118       ETA 2m 54s
+[#####################---------] 120/164 ( 73.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/119       ETA 2m 50s
+[######################--------] 121/164 ( 73.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/120       ETA 2m 47s
+[######################--------] 122/164 ( 74.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/121       ETA 2m 43s
+[######################--------] 123/164 ( 75.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/122       ETA 2m 39s
+[######################--------] 124/164 ( 75.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/123       ETA 2m 35s
+[######################--------] 125/164 ( 76.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/124       ETA 2m 33s
+[#######################-------] 126/164 ( 76.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/125       ETA 2m 30s
+[#######################-------] 127/164 ( 77.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/126       ETA 2m 27s
+[#######################-------] 128/164 ( 78.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/127       ETA 2m 23s
+[#######################-------] 129/164 ( 78.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/128       ETA 2m 19s
+[#######################-------] 130/164 ( 79.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/129       ETA 2m 18s
+[#######################-------] 131/164 ( 79.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/130       ETA 2m 15s
+[########################------] 132/164 ( 80.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/131       ETA 2m 10s
+[########################------] 133/164 ( 81.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/132       ETA 2m 06s
+[########################------] 134/164 ( 81.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/133       ETA 2m 02s
+[########################------] 135/164 ( 82.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/134       ETA 1m 58s
+[########################------] 136/164 ( 82.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/135       ETA 1m 54s
+[#########################-----] 137/164 ( 83.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/136       ETA 1m 50s
+[#########################-----] 138/164 ( 84.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/137       ETA 1m 46s
+[#########################-----] 139/164 ( 84.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/138       ETA 1m 42s
+[#########################-----] 140/164 ( 85.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/139       ETA 1m 38s
+[#########################-----] 141/164 ( 86.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/140       ETA 1m 33s
+[#########################-----] 142/164 ( 86.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/141       ETA 1m 30s
+[##########################----] 143/164 ( 87.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/142       ETA 1m 25s
+[##########################----] 144/164 ( 87.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/143       ETA 1m 21s
+[##########################----] 145/164 ( 88.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/144       ETA 1m 17s
+[##########################----] 146/164 ( 89.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/145       ETA 1m 13s
+[##########################----] 147/164 ( 89.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/146       ETA 1m 09s
+[###########################---] 148/164 ( 90.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/147       ETA 1m 06s
+[###########################---] 149/164 ( 90.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/148       ETA 1m 02s
+[###########################---] 150/164 ( 91.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/149       ETA 58s
+[###########################---] 151/164 ( 92.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/150       ETA 54s
+[###########################---] 152/164 ( 92.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/151       ETA 50s
+[###########################---] 153/164 ( 93.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/152       ETA 46s
+[############################--] 154/164 ( 93.9%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/153       ETA 42s
+[############################--] 155/164 ( 94.5%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/154       ETA 37s
+[############################--] 156/164 ( 95.1%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/155       ETA 33s
+[############################--] 157/164 ( 95.7%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/156       ETA 29s
+[############################--] 158/164 ( 96.3%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/157       ETA 25s
+[#############################-] 159/164 ( 97.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/158       ETA 21s
+[#############################-] 160/164 ( 97.6%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/159       ETA 17s
+[#############################-] 161/164 ( 98.2%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/160       ETA 13s
+[#############################-] 162/164 ( 98.8%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/161       ETA 8s
+[#############################-] 163/164 ( 99.4%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/162       ETA 4s
+[##############################] 164/164 (100.0%) nemotron-cascade-2-30b-a3b:q4_k_m / HumanEval/163       ETA 0s
+
+Finished 164/164 generations. Report: /home/hm/Projects/Tests/2026-09-19/candidates-round2/humaneval-nemotron/report.html
+Leader: nemotron-cascade-2-30b-a3b:q4_k_m (89.0%)

@@ -1,0 +1,32 @@
+```python
+def generate_integers(a: int, b: int) -> list[int]:
+    """
+    Return the even single‑digit integers between a and b (inclusive),
+    sorted in ascending order.  The order of a and b does not matter.
+
+    Parameters
+    ----------
+    a : int
+        First positive integer.
+    b : int
+        Second positive integer.
+
+    Returns
+    -------
+    list[int]
+        Even digits between a and b in ascending order.
+
+    Examples
+    --------
+    >>> generate_integers(2, 8)
+    [2, 4, 6, 8]
+    >>> generate_integers(8, 2)
+    [2, 4, 6, 8]
+    >>> generate_integers(10, 14)
+    []
+    """
+    low, high = sorted((a, b))
+    # Even single‑digit numbers are 0, 2, 4, 6, 8
+    even_digits = [0, 2, 4, 6, 8]
+    return [d for d in even_digits if low <= d <= high]
+```

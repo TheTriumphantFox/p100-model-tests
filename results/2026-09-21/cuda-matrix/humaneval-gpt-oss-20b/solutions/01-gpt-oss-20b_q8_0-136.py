@@ -1,0 +1,14 @@
+def largest_smallest_integers(lst):
+    """
+    Return a tuple (a, b) where:
+    - a is the largest negative integer in lst
+    - b is the smallest positive integer in lst
+    If no negative or positive integers are present, the corresponding value is None.
+    """
+    negatives = [x for x in lst if isinstance(x, int) and x < 0]
+    positives = [x for x in lst if isinstance(x, int) and x > 0]
+
+    largest_negative = max(negatives) if negatives else None
+    smallest_positive = min(positives) if positives else None
+
+    return (largest_negative, smallest_positive)

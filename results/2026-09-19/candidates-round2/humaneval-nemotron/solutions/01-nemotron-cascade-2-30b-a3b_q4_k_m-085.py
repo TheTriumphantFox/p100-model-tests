@@ -1,0 +1,11 @@
+def add(lst):
+    """Given a non-empty list of integers lst, add the even elements that are at odd indices.
+
+    Examples:
+        add([4, 2, 6, 7]) ==> 2
+    """
+    total = 0
+    for i in range(1, len(lst), 2):  # iterate over odd indices (1, 3, 5, ...)
+        if lst[i] % 2 == 0:          # check if the element is even
+            total += lst[i]
+    return total

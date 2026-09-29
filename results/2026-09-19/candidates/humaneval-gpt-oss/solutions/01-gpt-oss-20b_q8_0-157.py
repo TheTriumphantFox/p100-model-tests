@@ -1,0 +1,17 @@
+def right_angle_triangle(a: float, b: float, c: float) -> bool:
+    """
+    Return True if the three sides form a right‑angled triangle, False otherwise.
+    The sides must satisfy the triangle inequality and the Pythagorean theorem
+    for some ordering of the sides.
+    """
+    # Ensure all sides are positive
+    if a <= 0 or b <= 0 or c <= 0:
+        return False
+
+    # Triangle inequality
+    if a + b <= c or a + c <= b or b + c <= a:
+        return False
+
+    # Check Pythagorean theorem for all permutations
+    sides = sorted([a, b, c])  # smallest to largest
+    return abs(sides[0] ** 2 + sides[1] ** 2 - sides[2] ** 2) < 1e-9

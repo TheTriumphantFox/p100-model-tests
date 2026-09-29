@@ -1,0 +1,11 @@
+def sorted_list_sum(lst):
+    """
+    Accepts a list of strings, removes strings with odd lengths,
+    and returns the remaining strings sorted first by length (ascending)
+    and then alphabetically for strings of equal length.
+    """
+    # Filter out strings with odd lengths
+    filtered = [s for s in lst if len(s) % 2 == 0]
+
+    # Sort by length, then alphabetically
+    return sorted(filtered, key=lambda s: (len(s), s))

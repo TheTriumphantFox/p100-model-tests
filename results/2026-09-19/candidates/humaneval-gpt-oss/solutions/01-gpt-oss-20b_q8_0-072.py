@@ -1,0 +1,11 @@
+def will_it_fly(q, w):
+    """
+    Return True if the list `q` is a palindrome and the sum of its elements
+    is less than or equal to the maximum weight `w`. Otherwise return False.
+    """
+    # Check if the list is palindromic
+    if q != q[::-1]:
+        return False
+
+    # Check if the sum of elements is within the weight limit
+    return sum(q) <= w

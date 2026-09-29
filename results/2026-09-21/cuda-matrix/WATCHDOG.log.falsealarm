@@ -1,0 +1,2 @@
+[09-21 11:56:33] watchdog: started; guarding :8080 pid=1416288, polling every 45s, kill rule = 12+ attempts with zero successes
+[09-21 11:56:33] watchdog: !!! PRODUCTION ROUTER CHANGED on :8080 (1416288 -> GONE). Stopping rather than acting blind.

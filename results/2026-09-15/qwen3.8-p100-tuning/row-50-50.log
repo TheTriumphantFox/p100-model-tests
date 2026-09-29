@@ -1,0 +1,18 @@
+0.00.044.499 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.044.531 I srv          init: The UI is disabled
+0.00.044.532 I srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.044.559 W srv  llama_server: -----------------
+0.00.044.559 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.044.560 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.044.560 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.044.560 W srv  llama_server: -----------------
+0.00.045.686 I srv    load_model: loading model '/var/lib/ollama/blobs/sha256-f5f1dd8920d417aac2718b0bda3403da274301efdd6760b4f0f4b864ff2ad57d'
+0.00.279.431 E llama_model_load: error loading model: device Vulkan0 does not support split buffers
+0.00.279.434 E llama_model_load_from_file_impl: failed to load model
+0.00.279.467 E common_fit_params: encountered an error while trying to fit params to free device memory: failed to load model
+0.00.470.457 E llama_model_load: error loading model: device Vulkan0 does not support split buffers
+0.00.470.461 E llama_model_load_from_file_impl: failed to load model
+0.00.470.463 E cmn  common_init_: failed to load model '/var/lib/ollama/blobs/sha256-f5f1dd8920d417aac2718b0bda3403da274301efdd6760b4f0f4b864ff2ad57d'
+0.00.470.465 E srv    load_model: failed to load model, '/var/lib/ollama/blobs/sha256-f5f1dd8920d417aac2718b0bda3403da274301efdd6760b4f0f4b864ff2ad57d'
+0.00.470.467 I srv    operator(): operator(): cleaning up before exit...
+0.00.470.763 E srv  llama_server: exiting due to model loading error

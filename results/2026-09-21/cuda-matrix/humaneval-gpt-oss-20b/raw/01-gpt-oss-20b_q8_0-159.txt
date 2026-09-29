@@ -1,0 +1,31 @@
+```python
+def eat(number, need, remaining):
+    """
+    You're a hungry rabbit, and you already have eaten a certain number of carrots,
+    but now you need to eat more carrots to complete the day's meals.
+    You should return an array of [total number of eaten carrots after your meals,
+    the number of carrots left after your meals].
+    If there are not enough remaining carrots, you will eat all remaining carrots,
+    but will still be hungry.
+
+    Example:
+    * eat(5, 6, 10) -> [11, 4]
+    * eat(4, 8, 9) -> [12, 1]
+    * eat(1, 10, 10) -> [11, 0]
+    * eat(2, 11, 5) -> [7, 0]
+
+    Parameters:
+    number (int): the number of carrots that you have eaten.
+    need (int): the number of carrots that you need to eat.
+    remaining (int): the number of remaining carrots that exist in stock.
+
+    Returns:
+    list[int]: [total eaten, remaining after eating]
+    """
+    # Determine how many carrots we can actually eat
+    to_eat = min(need, remaining)
+    # Update totals
+    total_eaten = number + to_eat
+    remaining_after = remaining - to_eat
+    return [total_eaten, remaining_after]
+```

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="206" viewBox="0 0 1500 206">
+<rect width="100%" height="100%" fill="#111718"/>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif}.title{fill:#f7f7f7;font-size:28px;font-weight:bold}.sub{fill:#9eafb0;font-size:14px}.label{fill:#e7eeee;font-size:16px}.value{fill:#fff;font-size:15px;font-weight:bold}</style>
+<text x="36" y="42" class="title">MMLU-Pro accuracy by model</text>
+<text x="36" y="68" class="sub">Balanced 70-question test subset | Higher is better</text>
+<line x1="450.0" y1="80" x2="450.0" y2="141" stroke="#293536"/>
+<text x="450.0" y="181" text-anchor="middle" class="sub">0%</text>
+<line x1="645.0" y1="80" x2="645.0" y2="141" stroke="#293536"/>
+<text x="645.0" y="181" text-anchor="middle" class="sub">20%</text>
+<line x1="840.0" y1="80" x2="840.0" y2="141" stroke="#293536"/>
+<text x="840.0" y="181" text-anchor="middle" class="sub">40%</text>
+<line x1="1035.0" y1="80" x2="1035.0" y2="141" stroke="#293536"/>
+<text x="1035.0" y="181" text-anchor="middle" class="sub">60%</text>
+<line x1="1230.0" y1="80" x2="1230.0" y2="141" stroke="#293536"/>
+<text x="1230.0" y="181" text-anchor="middle" class="sub">80%</text>
+<line x1="1425.0" y1="80" x2="1425.0" y2="141" stroke="#293536"/>
+<text x="1425.0" y="181" text-anchor="middle" class="sub">100%</text>
+<text x="436" y="116" text-anchor="end" class="label">xing4.0-29b-a4b:iq4_nl</text>
+<rect x="450" y="98" width="975" height="26" rx="4" fill="#1c2728"/>
+<rect x="450" y="98" width="390.0" height="26" rx="4" fill="#52c1a2"/>
+<text x="850.0" y="117" class="value">40.0%</text>
+</svg>

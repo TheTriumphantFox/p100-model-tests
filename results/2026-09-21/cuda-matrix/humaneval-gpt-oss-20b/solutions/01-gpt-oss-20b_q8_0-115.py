@@ -1,0 +1,29 @@
+def max_fill(grid, capacity):
+    """
+    Count the total number of times a bucket must be lowered to empty all wells.
+
+    Each row in `grid` represents a well. Each `1` in a row represents one unit of water.
+    A bucket can hold at most `capacity` units of water. The bucket can be lowered
+    into a well as many times as needed to empty it.
+
+    Parameters
+    ----------
+    grid : List[List[int]]
+        2D list where each inner list represents a well and contains 0s and 1s.
+    capacity : int
+        The maximum number of water units a bucket can hold.
+
+    Returns
+    -------
+    int
+        The total number of bucket lowers required to empty all wells.
+    """
+    total_lowers = 0
+    for well in grid:
+        water_units = sum(well)
+        if water_units == 0:
+            continue
+        # Number of bucket lowers for this well is ceil(water_units / capacity)
+        lowers = (water_units + capacity - 1) // capacity
+        total_lowers += lowers
+    return total_lowers

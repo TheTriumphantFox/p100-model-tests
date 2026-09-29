@@ -1,0 +1,383 @@
+<title>Local Models on τ-bench Retail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+  :root {
+    --ground: #f3f5f3;
+    --surface: #ffffff;
+    --ink: #1a211e;
+    --muted: #57625c;
+    --rule: #d5dbd7;
+    --accent: #264b7a;
+    --accent-soft: #e3eaf3;
+    --harness: #b8791b;
+    --harness-soft: #f6ead3;
+    --fail: #a8443a;
+    --fail-soft: #f4dfdb;
+    --neutral-bar: #9aa39e;
+    --wrong-bar: #c9857c;
+    --display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+    --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #111513;
+      --surface: #191e1b;
+      --ink: #e4e9e6;
+      --muted: #9ba7a0;
+      --rule: #2f3833;
+      --accent: #8fb1e3;
+      --accent-soft: #1f2c3d;
+      --harness: #e0a54a;
+      --harness-soft: #362a15;
+      --fail: #e0877c;
+      --fail-soft: #3a211e;
+      --neutral-bar: #6c7670;
+      --wrong-bar: #9a5b53;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #111513;
+    --surface: #191e1b;
+    --ink: #e4e9e6;
+    --muted: #9ba7a0;
+    --rule: #2f3833;
+    --accent: #8fb1e3;
+    --accent-soft: #1f2c3d;
+    --harness: #e0a54a;
+    --harness-soft: #362a15;
+    --fail: #e0877c;
+    --fail-soft: #3a211e;
+    --neutral-bar: #6c7670;
+    --wrong-bar: #9a5b53;
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+    padding-inline: 16px;
+    padding-block: 32px 64px;
+  }
+  .page { max-width: 760px; margin-inline: auto; display: flex; flex-direction: column; gap: 48px; }
+  section { display: flex; flex-direction: column; gap: 16px; }
+  p, li { max-width: 66ch; }
+  p { margin: 0; }
+  ul { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 8px; }
+  h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.15; }
+  h1 { font-size: clamp(30px, 6vw, 44px); font-weight: 700; letter-spacing: -0.01em; }
+  h2 { font-size: 26px; font-weight: 600; }
+  h3 { font-size: 19px; font-weight: 600; }
+  code { font-family: var(--mono); font-size: 0.86em; background: var(--accent-soft); padding: 0.05em 0.35em; border-radius: 3px; overflow-wrap: anywhere; }
+  strong { font-weight: 600; }
+  a { color: var(--accent); }
+
+  .eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  header { display: flex; flex-direction: column; gap: 14px; border-bottom: 2px solid var(--ink); padding-bottom: 24px; }
+  .lede { font-size: 18px; color: var(--muted); }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-family: var(--mono); font-size: 13px; color: var(--muted); }
+  .meta span b { color: var(--ink); font-weight: 500; }
+
+  .findings { display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+  .finding { background: var(--surface); padding: 18px 20px; display: grid; grid-template-columns: 4px 1fr; gap: 16px; }
+  .finding::before { content: ""; background: var(--tone, var(--accent)); border-radius: 2px; }
+  .finding h3 { font-size: 18px; margin-bottom: 4px; }
+  .finding p { color: var(--muted); }
+  .finding.harness { --tone: var(--harness); }
+  .finding.fail { --tone: var(--fail); }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+  th, td { padding: 9px 12px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--rule); }
+  th:first-child, td:first-child { text-align: left; }
+  thead th { font-family: var(--display); font-weight: 600; font-size: 13px; letter-spacing: 0.02em; color: var(--muted); background: var(--ground); vertical-align: bottom; }
+  tbody tr:last-child td { border-bottom: none; }
+  td.model { font-weight: 500; }
+  td.model small { display: block; font-family: var(--mono); font-size: 11px; color: var(--muted); font-weight: 400; }
+  tr.total td { font-weight: 600; border-top: 2px solid var(--rule); }
+  .hl { color: var(--fail); font-weight: 600; }
+  .hh { color: var(--harness); font-weight: 600; }
+  .note { font-size: 14px; color: var(--muted); }
+  dl.defs { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; font-size: 14px; color: var(--muted); }
+  dl.defs dt { font-weight: 600; color: var(--ink); }
+  dl.defs dd { margin: 0; }
+  @media (max-width: 520px) { dl.defs { grid-template-columns: 1fr; } dl.defs dd { margin-bottom: 6px; } }
+
+  /* task-outcome chart */
+  .chart { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 18px; }
+  .row { display: grid; grid-template-columns: 110px 1fr; gap: 12px; align-items: center; }
+  .row .label { font-weight: 500; font-size: 14px; line-height: 1.25; }
+  .row .label small { display: block; font-family: var(--mono); font-size: 11px; color: var(--muted); font-weight: 400; }
+  .bar { display: flex; height: 26px; border-radius: 3px; overflow: hidden; background: var(--ground); }
+  .bar span { display: block; height: 100%; border-right: 1px solid var(--surface); }
+  .bar span:last-child { border-right: none; }
+  .c-pass { background: var(--accent); }
+  .c-asked { background: var(--harness); }
+  .c-lookup { background: var(--fail); }
+  .c-wrong { background: var(--wrong-bar); }
+  .c-other { background: var(--neutral-bar); }
+  .scale { display: grid; grid-template-columns: 110px 1fr; gap: 12px; }
+  .ticks { position: relative; height: 16px; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .ticks span { position: absolute; transform: translateX(-50%); }
+  .ticks span:first-child { transform: none; }
+  .ticks span:last-child { transform: translateX(-100%); }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13px; color: var(--muted); }
+  .legend i { display: inline-block; width: 11px; height: 11px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+  .ceil { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  @media (max-width: 520px) {
+    .row, .scale { grid-template-columns: 1fr; gap: 6px; }
+    .scale > :first-child { display: none; }
+  }
+
+  blockquote { margin: 0; padding: 12px 16px; border-left: 3px solid var(--accent); background: var(--accent-soft); font-style: italic; border-radius: 0 4px 4px 0; max-width: 66ch; }
+  .callout { padding: 14px 18px; background: var(--harness-soft); border-radius: 6px; font-size: 15px; max-width: 66ch; }
+  .callout strong { color: var(--ink); }
+  ol.modes { margin: 0; padding-left: 1.4em; display: flex; flex-direction: column; gap: 12px; }
+  pre { margin: 0; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.55; }
+  pre code { background: none; padding: 0; font-size: inherit; }
+  details { border-top: 1px solid var(--rule); padding-top: 12px; }
+  details summary { cursor: pointer; font-family: var(--display); font-weight: 600; font-size: 19px; }
+  details[open] summary { margin-bottom: 12px; }
+  details > *:not(summary) + * { margin-top: 12px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; }
+</style>
+
+<div class="page">
+  <header>
+    <div class="eyebrow">Benchmark report · revised 2026-09-23</div>
+    <h1>Devstral and three other local models on τ-bench retail</h1>
+    <p class="lede">Can <code>devstral-cuda</code> run a multi-turn, tool-calling agent loop on this hardware, and how does it compare to the rest of the shelf?</p>
+    <div class="meta">
+      <span><b>115</b> retail tasks</span>
+      <span><b>4</b> models</span>
+      <span><b>2×</b> P100 16 GB</span>
+      <span>scripted customer</span>
+      <span>run 2026-09-22/23</span>
+    </div>
+  </header>
+
+  <section aria-labelledby="h-findings">
+    <h2 id="h-findings">What the run shows</h2>
+    <div class="findings">
+      <div class="finding">
+        <div>
+          <h3>Tool calling is not where these models fail</h3>
+          <p>Zero tool-call parse failures in about 4,000 model calls over 375 completed tasks, across four architectures (mistral3, gpt-oss, qwen35, g9v3). llama.cpp's <code>--jinja</code> parsers handled every format. Every failure was reasoning or policy behaviour.</p>
+        </div>
+      </div>
+      <div class="finding harness">
+        <div>
+          <h3>The scripted customer penalises asking, but can't reverse the ranking</h3>
+          <p>A model that asks a question never gets an answer and scores zero. Half of gpt-oss's stalls never found the order they were meant to act on. With those removed, the stall problem can at most <em>tie</em> gpt-oss with devstral (57.4% each), not put it ahead.</p>
+        </div>
+      </div>
+      <div class="finding fail">
+        <div>
+          <h3>Every passing write broke the task policy</h3>
+          <p>The retail policy requires an explicit “yes” before any write. The scripted customer never says it: 0 of 560 writes were confirmed. Devstral repeated identical writes 24 times across 14 tasks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-results">
+    <h2 id="h-results">Results</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Model</th><th>n</th><th>Pass</th><th>Stall:<br>lookup</th><th>Stall:<br>asked</th><th>Ceiling</th><th>Unterm.</th><th>Err</th><th>Parse<br>fail</th><th>Hours</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="model">qwen3.6-27b-abliterated<small>q5_k_m</small></td><td>115</td><td><strong>76 · 66.1%</strong></td><td>2</td><td>6</td><td>71.3%</td><td>9</td><td>8</td><td>0</td><td>7.80</td></tr>
+          <tr><td class="model">g9v3-39a5b<small>q4_k_m · partial</small></td><td>30</td><td>17 · 56.7%</td><td>0</td><td>9</td><td>86.7%</td><td>0</td><td>0</td><td>0</td><td>1.09</td></tr>
+          <tr><td class="model">devstral-patched<small>q8_0</small></td><td>115</td><td>61 · 53.0%</td><td>0</td><td>5</td><td>57.4%</td><td>3</td><td>0</td><td>0</td><td>3.45</td></tr>
+          <tr><td class="model">gpt-oss-20b<small>q8_0</small></td><td>115</td><td>52 · 45.2%</td><td class="hl">16</td><td>14</td><td>57.4%</td><td>0</td><td>0</td><td>0</td><td>1.52</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <dl class="defs">
+      <dt>Stall</dt><dd>A failed, completed, error-free task whose ground truth contains a write, where the agent made none.</dd>
+      <dt>Stall: lookup</dt><dd>The agent never opened any order the ground truth acts on. It would have failed whatever the customer said: a model failure.</dd>
+      <dt>Stall: asked</dt><dd>Found the right order, then ended on a question. The only stall the scripted customer can be blamed for.</dd>
+      <dt>Ceiling</dt><dd>(pass + asked stalls) ÷ n. An upper bound: assumes every answered question leads to a correct write.</dd>
+    </dl>
+    <p class="note">gpt-oss and qwen3.6 each had one more stall that found the order and stopped silently.</p>
+  </section>
+
+  <section aria-labelledby="h-where">
+    <h2 id="h-where">Where each model's tasks went</h2>
+    <p>Each bar is one model's tasks, as a share of the tasks it ran. The blue and amber segments together make up its ceiling.</p>
+    <div class="chart" role="img" aria-label="Stacked bars of task outcomes per model. qwen3.6: 76 pass, 6 asked, 2 lookup, 21 acted wrongly, 10 other, of 115. g9v3: 17 pass, 9 asked, 4 acted wrongly, of 30. devstral: 61 pass, 5 asked, 46 acted wrongly, 3 other, of 115. gpt-oss: 52 pass, 14 asked, 16 lookup, 32 acted wrongly, 1 other, of 115.">
+      <div class="legend" aria-hidden="true">
+        <span><i class="c-pass"></i>Pass</span>
+        <span><i class="c-asked"></i>Stall: asked (harness)</span>
+        <span><i class="c-lookup"></i>Stall: never found order</span>
+        <span><i class="c-wrong"></i>Acted, wrong</span>
+        <span><i class="c-other"></i>Unterminated / error / silent</span>
+      </div>
+      <div class="row" aria-hidden="true">
+        <div class="label">qwen3.6<small>n=115 · ceil 71.3%</small></div>
+        <div class="bar"><span class="c-pass" style="width:66.09%" title="Pass 76"></span><span class="c-asked" style="width:5.22%" title="Asked 6"></span><span class="c-lookup" style="width:1.74%" title="Lookup 2"></span><span class="c-wrong" style="width:18.26%" title="Acted wrong 21"></span><span class="c-other" style="width:8.70%" title="Other 10"></span></div>
+      </div>
+      <div class="row" aria-hidden="true">
+        <div class="label">g9v3<small>n=30 · ceil 86.7%</small></div>
+        <div class="bar"><span class="c-pass" style="width:56.67%" title="Pass 17"></span><span class="c-asked" style="width:30%" title="Asked 9"></span><span class="c-wrong" style="width:13.33%" title="Acted wrong 4"></span></div>
+      </div>
+      <div class="row" aria-hidden="true">
+        <div class="label">devstral<small>n=115 · ceil 57.4%</small></div>
+        <div class="bar"><span class="c-pass" style="width:53.04%" title="Pass 61"></span><span class="c-asked" style="width:4.35%" title="Asked 5"></span><span class="c-wrong" style="width:40%" title="Acted wrong 46"></span><span class="c-other" style="width:2.61%" title="Other 3"></span></div>
+      </div>
+      <div class="row" aria-hidden="true">
+        <div class="label">gpt-oss<small>n=115 · ceil 57.4%</small></div>
+        <div class="bar"><span class="c-pass" style="width:45.22%" title="Pass 52"></span><span class="c-asked" style="width:12.17%" title="Asked 14"></span><span class="c-lookup" style="width:13.91%" title="Lookup 16"></span><span class="c-wrong" style="width:27.83%" title="Acted wrong 32"></span><span class="c-other" style="width:0.87%" title="Other 1"></span></div>
+      </div>
+      <div class="scale" aria-hidden="true">
+        <div></div>
+        <div class="ticks"><span style="left:0">0%</span><span style="left:25%">25%</span><span style="left:50%">50%</span><span style="left:75%">75%</span><span style="left:100%">100%</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-stall">
+    <h2 id="h-stall">The stall confound</h2>
+    <p>Real τ-bench drives the customer with a frontier LLM. There is no metered API key on this box, and 24–28 GB of agent weights leave no VRAM for a second local model, so the customer is scripted. The full instruction arrives on turn 1, and every later turn is a fixed nudge that adds nothing. <strong>These numbers are not comparable to published τ-bench results.</strong> The harness is easier for some models than for others.</p>
+    <p>A scripted customer cannot answer a question. A model that asks “Option A or B? Confirm the payment method?” never gets an answer and scores zero. But not every stall is a model waiting on the customer, so each one is checked against the ground truth: did the agent call <code>get_order_details</code> on any order the correct writes touch?</p>
+    <ul>
+      <li><strong>gpt-oss stalled on 31 failed tasks, and 16 never opened the target order.</strong> In 15 of them it never called <code>get_user_details</code>, which lists every order, and asked the customer for an order ID it could have looked up. Tasks 6, 58 and 112 stop after a single lookup call. Only 14 stalls found the right order and then asked, and some of those were legitimate by policy: a cancellation reason the task withholds until asked (114), or a second payment method when a gift card falls short (49).</li>
+      <li><strong>Its ceiling is 57.4%, exactly devstral's.</strong> An earlier draft counted every stall ending in a question as the harness's fault, giving about 61–62%, and concluded the ranking was not safe. With lookup failures removed, the harness can at best tie the two. On observed scores, devstral leads.</li>
+      <li><strong>devstral stalled on only 5 tasks, all after finding the order.</strong> It acts, which is why it scores respectably here. The next section explains why that is not simply a virtue.</li>
+      <li>g9v3's opening was misleading: 0/8 early, with a 75% stall rate. Over 30 tasks it recovered to 56.7%. The 30-task figure is the honest one, and it is still partial.</li>
+    </ul>
+
+    <h3>Every failure, by cause</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th></th><th>devstral</th><th>gpt-oss</th><th>qwen3.6</th><th>g9v3 (30)</th></tr></thead>
+        <tbody>
+          <tr><td>Stall: found order, asked <span class="hh">(harness)</span></td><td>5</td><td>14</td><td>6</td><td>9</td></tr>
+          <tr><td>Stall: never opened target order</td><td>0</td><td class="hl">16</td><td>2</td><td>0</td></tr>
+          <tr><td>Stall: found order, stopped silently</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+          <tr><td>Acted, wrong arguments</td><td>36</td><td>22</td><td>19</td><td>3</td></tr>
+          <tr><td>Acted, required output missed</td><td>10</td><td>10</td><td>2</td><td>1</td></tr>
+          <tr><td>Unterminated</td><td>3</td><td>0</td><td>1</td><td>0</td></tr>
+          <tr><td>Error (TimeoutError)</td><td>0</td><td>0</td><td>8</td><td>0</td></tr>
+          <tr class="total"><td>Total failures</td><td>54</td><td>63</td><td>39</td><td>13</td></tr>
+          <tr><td>Harness-attributable share</td><td>9.3%</td><td>22.2%</td><td>15.4%</td><td>69.2%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">The “asked” test is <code>run.py</code>'s <code>ASKING</code> regex, which matches any final message ending in a question. It is generous, so the ceilings are upper bounds twice over. Stall totals match the earlier draft; only the split changed.</p>
+
+    <h3>Two conclusions survive</h3>
+    <ul>
+      <li><strong>Devstral's score is mostly real.</strong> Two-thirds of its failures (36/54) are writes with wrong arguments, and only 9.3% are the harness. 53.0% is close to its true capability under this setup.</li>
+      <li><strong>Half of gpt-oss's caution is failing to look things up.</strong> It is 2.3× faster than devstral and ties it at the upper bound, but 16 of its 31 stalls ask the customer for something <code>get_user_details</code> would have returned. A control plane can supply a “yes”; it cannot supply an order ID the model didn't think to look up. That weakens the case for gpt-oss as a gated planner without ruling it out.</li>
+    </ul>
+    <p class="note">g9v3's 69.2% harness share is the largest here. On 30 tasks, its 86.7% ceiling is the least reliable number in the report.</p>
+  </section>
+
+  <section aria-labelledby="h-yes">
+    <h2 id="h-yes">The policy requires a “yes” the harness never gives</h2>
+    <p>The retail system prompt says:</p>
+    <blockquote>Before taking consequential actions that update the database (cancel, modify, return, exchange), you have to list the action detail and obtain explicit user confirmation (yes) to proceed.</blockquote>
+    <p>Neither customer policy ever says yes. The turn-1 restatement ends “Please go ahead and complete it”, a blanket go-ahead given before the agent has listed any action. That doesn't satisfy the policy as written.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th></th><th>devstral</th><th>gpt-oss</th><th>qwen3.6</th><th>g9v3 (30)</th></tr></thead>
+        <tbody>
+          <tr><td>Writes issued</td><td>250</td><td>125</td><td>156</td><td>29</td></tr>
+          <tr><td>…without a prior “yes”</td><td>250</td><td>125</td><td>156</td><td>29</td></tr>
+          <tr><td>Passes containing an unconfirmed write</td><td>56 / 61</td><td>44 / 52</td><td>72 / 76</td><td>13 / 17</td></tr>
+          <tr><td>Writes beyond the ground truth</td><td class="hl">87</td><td>10</td><td>16</td><td>1</td></tr>
+          <tr><td>Identical writes repeated</td><td class="hl">24 in 14 tasks</td><td>0</td><td>2 in 1 task</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The remaining passes are tasks that needed no write. Under this harness, no model can pass a write task while following its instructions. A model that lists the action and asks for a yes is complying, and scores zero for it.</p>
+    <p>This doesn't separate the models, because every write is unconfirmed by design. What it changes is how devstral's low stall rate reads: it takes the blanket go-ahead as enough and <strong>doesn't follow the confirmation rule in its own system prompt</strong>.</p>
+    <div class="callout"><strong>For an AIOS-style planner:</strong> a “confirm before writing” rule in the prompt can't be relied on to hold devstral back. The check has to be enforced in the control plane: the tool layer refuses writes that carry no confirmation token. Once a real user simulator exists, the unconfirmed-writes count becomes a per-model policy-violation rate.</div>
+  </section>
+
+  <section aria-labelledby="h-confirm">
+    <h2 id="h-confirm">Attempted fix: the <code>confirm</code> customer policy</h2>
+    <p><code>run.py --user-policy confirm</code> answers a confirmation request and restates the instruction, instead of the default <code>nudge</code>, which adds nothing. A/B test on devstral, tasks 40–63:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th></th><th>nudge</th><th>confirm</th></tr></thead>
+        <tbody>
+          <tr><td>Pass</td><td>14 / 24</td><td>15 / 24</td></tr>
+          <tr><td>Stalled</td><td>5</td><td><strong>0</strong></td></tr>
+          <tr><td>Mean steps</td><td>10.3</td><td>15.7</td></tr>
+          <tr><td>Time per task</td><td>98 s</td><td>147 s (1.49×)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Gained 40, 45, 55 and 58; <strong>lost 56, 60 and 62</strong>. Net +1 on 24 tasks, and a net loss on tasks 51–63 (7/13 → 6/13): within noise, at 1.5× the time. Stalls went to zero, but an over-action problem replaced them. Task 62's correct behaviour is to change nothing, yet under <code>confirm</code> devstral issued a spurious <code>cancel_pending_order</code>. Rewording the reply to refuse any wider mandate made it <em>worse</em>: two spurious writes instead of one. What drives this is the extra turn itself, not its wording.</p>
+    <p><code>nudge</code> stays the default. The real fix is an LLM customer: a canned reply can't tell “yes, do what you asked about” from “no, that's outside my request”. <code>gemma4-e4b</code> (6.0 GB) fits beside devstral (23.9 GB) in 32 GB, with about 2.8 GB left for both KV caches. It's feasible but not built.</p>
+  </section>
+
+  <section aria-labelledby="h-modes">
+    <h2 id="h-modes">Failure modes seen</h2>
+    <ol class="modes">
+      <li><strong>Miscounting over tool output.</strong> Asked how many T-shirt options are available, devstral said 11. The data holds 12 variants, 10 of them <code>available: true</code>. It called <code>get_product_details</code> correctly and then counted wrong: an aggregation error, not a tool error.</li>
+      <li><strong>Duplicate writes.</strong> Devstral re-issued a write with identical arguments 24 times across 14 tasks (2, 5, 11, 20, 22, 34, 49, 52, 53, 58, 75, 78, 91, 97), not recognising that the first call had succeeded. It was mostly harmless <em>here</em> only because the retail backend checks order state. It rejected 20 of the 24, and the other 4 were identical <code>modify_user_address</code> rewrites. Five of the 14 tasks still passed. A backend without those checks would have executed every repeat. This is the most concerning failure for a control plane, and an argument for idempotency keys on every write tool.</li>
+      <li><strong>Wrong variant selection.</strong> Right tool, right order, wrong <code>new_item_ids</code>.</li>
+      <li><strong>Stalls.</strong> Covered above: some ask for a confirmation nobody gives, and others ask for information the model never looked up.</li>
+    </ol>
+    <p>17 tasks were solved by no model. Their required outputs are mostly long numbers (<code>746342064230</code>, <code>1288.65</code>, <code>46.66</code>), so reporting exact values is harder here than sequencing tool calls.</p>
+  </section>
+
+  <section aria-labelledby="h-cost">
+    <h2 id="h-cost">Cost</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Model</th><th>Wall clock</th><th>vs devstral</th></tr></thead>
+        <tbody>
+          <tr><td>gpt-oss-20b</td><td>1.52 h</td><td>0.44×</td></tr>
+          <tr><td>devstral</td><td>3.45 h</td><td>1.00×</td></tr>
+          <tr><td>qwen3.6-27b</td><td>7.80 h</td><td>2.26×</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>qwen3.6 gains 13 points over devstral for 2.3× the wall clock, 3× the unterminated tasks and 8 timeouts. gpt-oss is 2.3× faster than devstral, ties it at the most generous reading of the stall problem, and never repeated a write.</p>
+  </section>
+
+  <section aria-labelledby="h-setup">
+    <h2 id="h-setup">Setup, caveats and reproducing</h2>
+    <details>
+      <summary>Setup</summary>
+      <ul>
+        <li>Router: llama.cpp, CUDA 12.6 build for sm_60 (Pascal), <code>--jinja</code>, ctx 32768, f16 KV cache, <code>--models-max 1</code>, so one model is loaded at a time.</li>
+        <li>The f16 KV cache is required, not a preference. The g9v3 fork's graph aborts on a quantized cache (<code>GGML_ASSERT(obj_new)</code> in <code>build_arch_graph</code>), so using f16 everywhere put all four models on one config. g9v3 also needs the fork build at <code>~/llama-cuda12-g9v3</code>.</li>
+        <li>Both Qwen models ran with <code>enable_thinking: false</code>, confirmed by empty <code>reasoning_content</code> and completion tokens halved (98→52, 95→52). gpt-oss reasons through its built-in harmony format and can't be cleanly switched off; devstral doesn't reason.</li>
+        <li>Scoring is τ-bench's own <code>calculate_reward()</code>, unmodified: the ground-truth actions are replayed on a fresh database, the database states are compared, and required output strings are checked. No partial credit.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Caveats</summary>
+      <ul>
+        <li>g9v3 ran 30 of 115 tasks, stopped deliberately while its early results looked structurally bad. It's a partial sample and can't be ranked directly against the others.</li>
+        <li>qwen3.6 lost 8 tasks to <code>TimeoutError</code>, all scored as failures, so its true rate is somewhat above 66.1%.</li>
+        <li>The customer is scripted, as above. The <code>.PARTIAL-superseded-by-unsloth</code> files come from the abandoned uncensored-Q6_K_P run and contain no results.</li>
+        <li><code>qwen3.8-27b-unsloth_q8_0</code> was pulled from this run to be scheduled separately; <code>drive_unsloth.sh</code> is staged but hasn't been run.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>Reproducing</summary>
+      <pre><code>cd ~/Projects/Tests/2026-09-22/devstral-tau-scripted
+./drive_all.sh          # devstral, gpt-oss, qwen3.6, g9v3 -- resumable
+./drive_unsloth.sh      # qwen3.8 unsloth q8_0, standalone
+../../.venv/bin/python summarise.py</code></pre>
+      <p>A model is skipped if its JSON already holds 115 results, so an interrupted run resumes at the next model. <code>summarise.py</code> runs on the CPU only and prints every number here except the A/B test.</p>
+    </details>
+  </section>
+
+  <footer>Source: <code>2026-09-22/devstral-tau-scripted/REPORT.md</code>, rendered as a page. Numbers from <code>summarise.py</code> over the four <code>retail_*.json</code> result files.</footer>
+</div>

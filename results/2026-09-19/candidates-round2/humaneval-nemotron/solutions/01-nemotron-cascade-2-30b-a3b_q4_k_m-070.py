@@ -1,0 +1,34 @@
+def strange_sort_list(lst):
+    """
+    Given a list of integers, return a new list sorted in "strange" order.
+    Strange sorting is defined as:
+        - Start with the smallest element.
+        - Then take the largest element from the remaining items.
+        - Then the smallest of the remaining, then the largest, and so on.
+    The original list is not modified.
+
+    Examples:
+    >>> strange_sort_list([1, 2, 3, 4])
+    [1, 4, 2, 3]
+    >>> strange_sort_list([5, 5, 5, 5])
+    [5, 5, 5, 5]
+    >>> strange_sort_list([])
+    []
+    """
+    # Create a sorted copy of the input list.
+    sorted_lst = sorted(lst)
+    result = []
+    left, right = 0, len(sorted_lst) - 1
+
+    # Alternate between taking the smallest (left) and largest (right) remaining element.
+    while left <= right:
+        # Take the smallest remaining element.
+        result.append(sorted_lst[left])
+        left += 1
+
+        # If there are still elements left, take the largest remaining element.
+        if left <= right:
+            result.append(sorted_lst[right])
+            right -= 1
+
+    return result

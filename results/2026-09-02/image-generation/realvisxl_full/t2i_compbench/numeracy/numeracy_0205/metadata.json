@@ -1,0 +1,7 @@
+{
+  "dataset": "t2i_compbench",
+  "category": "numeracy",
+  "prompt_id": "numeracy_0205",
+  "index": 205,
+  "prompt": "two cups, two drums, four tables and four bowls"
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "name": "baseline",
+    "status": "ok",
+    "environment": {},
+    "prompt_tokens": 1055,
+    "prompt_tok_s": 34.46866922120345,
+    "generated_tokens": 128,
+    "generation_tok_s": 61.026891881325575,
+    "load_seconds": 17.332822092
+  },
+  {
+    "name": "p100-flags",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1",
+      "GGML_VK_DISABLE_INTEGER_DOT_PRODUCT": "1"
+    },
+    "prompt_tokens": 1055,
+    "prompt_tok_s": 256.6843150312145,
+    "generated_tokens": 128,
+    "generation_tok_s": 60.9314611507192,
+    "load_seconds": 7.036726888
+  }
+]

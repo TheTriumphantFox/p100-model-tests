@@ -1,0 +1,24 @@
+def find_max(words):
+    """Write a function that accepts a list of strings.
+    The list contains different words. Return the word with maximum number of unique
+    characters. If multiple strings have maximum number of unique
+    characters, return the one which comes first in lexicographical order.
+
+    find_max(["name", "of", "string"]) == "string"
+    find_max(["name", "enam", "game"]) == "enam"
+    find_max(["aaaaaaa", "bb" ,"cc"]) == ""aaaaaaa"
+    """
+    if not words:
+        return ""
+    
+    def count_unique_chars(s):
+        return len(set(s))
+    
+    # Sort by (-unique_count, word) to get max unique count first,
+    # then lexicographically smallest.
+    # We use a generator expression to avoid creating a full list if possible,
+    # though for this task size it is negligible.
+    return min(
+        words,
+        key=lambda w: (-count_unique_chars(w), w)
+    )

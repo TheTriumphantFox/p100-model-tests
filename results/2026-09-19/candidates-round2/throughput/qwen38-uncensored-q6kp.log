@@ -1,0 +1,50 @@
+========================================================================================
+  LOCAL OLLAMA LLM BENCHMARK
+  Ollama: shim-llamacpp | API: http://127.0.0.1:11500
+  Models: 1 | Tests: 4 | Iterations: 5 | Requests: 20
+  Context: 8192 | Thinking: off | Score: generation tok/s
+  Report: /home/hm/Projects/Tests/2026-09-19/candidates-round2/throughput/qwen38-uncensored-q6kp.json
+========================================================================================
+   1. qwen3.8-27b-uncensored-hauhaucs:q6_k_p (Q6_K, 25.9 GB)
+
+Every iteration unloads the previous model before starting, then keeps the current model warm across its tests.
+
+
+========================================================================
+MODEL 1/1: qwen3.8-27b-uncensored-hauhaucs:q6_k_p
+========================================================================
+  Iteration 1/5 (cold model load)
+     1/4 speed_brief                10.30 tok/s |   23 tok |  180.69s (load 177.6s)
+     2/4 speed_medium                9.90 tok/s |  201 tok |   21.25s (load 0.1s)
+     3/4 speed_long                  9.88 tok/s |  420 tok |   43.50s (load 0.1s)
+     4/4 python_coding               9.88 tok/s |  400 tok |   41.84s (load 0.1s)
+  Iteration 2/5 (cold model load)
+     1/4 speed_brief                10.29 tok/s |   23 tok |    2.55s (load 0.1s)
+     2/4 speed_medium                9.90 tok/s |  201 tok |   21.25s (load 0.1s)
+     3/4 speed_long                  9.88 tok/s |  420 tok |   43.43s (load 0.0s)
+     4/4 python_coding               9.88 tok/s |  400 tok |   41.77s (load 0.0s)
+  Iteration 3/5 (cold model load)
+     1/4 speed_brief                10.29 tok/s |   23 tok |    2.48s (load 0.0s)
+     2/4 speed_medium                9.90 tok/s |  201 tok |   21.25s (load 0.1s)
+     3/4 speed_long                  9.88 tok/s |  420 tok |   43.43s (load 0.0s)
+     4/4 python_coding               9.88 tok/s |  400 tok |   41.77s (load 0.0s)
+  Iteration 4/5 (cold model load)
+     1/4 speed_brief                10.30 tok/s |   23 tok |    2.48s (load 0.0s)
+     2/4 speed_medium                9.90 tok/s |  201 tok |   21.25s (load 0.1s)
+     3/4 speed_long                  9.88 tok/s |  420 tok |   43.44s (load 0.0s)
+     4/4 python_coding               9.88 tok/s |  400 tok |   41.77s (load 0.0s)
+  Iteration 5/5 (cold model load)
+     1/4 speed_brief                10.30 tok/s |   23 tok |    2.48s (load 0.0s)
+     2/4 speed_medium                9.90 tok/s |  201 tok |   21.24s (load 0.1s)
+     3/4 speed_long                  9.88 tok/s |  420 tok |   43.44s (load 0.0s)
+     4/4 python_coding               9.88 tok/s |  400 tok |   41.78s (load 0.0s)
+
+========================================================================================
+  COMPLETE — ONE WORST RUN REMOVED PER MODEL/TEST
+========================================================================================
+
+  Overall ranking (retained speed-test generation throughput):
+  # 1 qwen3.8-27b-uncensored-hauhaucs:q6_k_p                            10.03 tok/s | 16/16 retained successful
+
+  Raw runs: 20 | Retained: 16 | Removed: 4
+  JSON report: /home/hm/Projects/Tests/2026-09-19/candidates-round2/throughput/qwen38-uncensored-q6kp.json

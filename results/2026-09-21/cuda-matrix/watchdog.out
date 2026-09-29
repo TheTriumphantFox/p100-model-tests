@@ -1,0 +1,3 @@
+[09-21 11:57:21] watchdog: started; guarding :8080 pid=1416288, polling every 45s, kill rule = 12+ attempts with zero successes
+[09-21 11:57:21] watchdog: !!! humaneval-opus-distill: 110 attempts, ZERO successes -- this run cannot produce a result. Killing harness pid=None.
+[09-21 11:57:21] watchdog: !!!   Check router-8081.log; a load error here means the model is UNRUNNABLE on this build, not that it scored zero.

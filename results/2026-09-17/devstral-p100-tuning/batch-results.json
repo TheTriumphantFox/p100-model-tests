@@ -1,0 +1,152 @@
+{
+  "started": "2026-09-17T17:59:10.725620-04:00",
+  "model": "hf.co/lmstudio-community/Devstral-Small-2-24B-Instruct-2512-GGUF:q8_0",
+  "settings": {
+    "trials": 2,
+    "num_ctx": 2048,
+    "num_predict": 128
+  },
+  "batches": [
+    {
+      "num_batch": 128,
+      "warmup_load_seconds": 8.526404698,
+      "mean_prompt_tps": 223.26826814918638,
+      "mean_generation_tps": 10.095008824450533,
+      "trials": [
+        {
+          "prompt_tokens": 1189,
+          "prompt_tps": 222.13416567322813,
+          "generated_tokens": 128,
+          "generation_tps": 10.096439932177166
+        },
+        {
+          "prompt_tokens": 1189,
+          "prompt_tps": 224.40237062514464,
+          "generated_tokens": 128,
+          "generation_tps": 10.0935777167239
+        }
+      ]
+    },
+    {
+      "num_batch": 192,
+      "warmup_load_seconds": 8.514048034,
+      "mean_prompt_tps": 231.69757329433077,
+      "mean_generation_tps": 10.150561212260836,
+      "trials": [
+        {
+          "prompt_tokens": 1189,
+          "prompt_tps": 231.684050764723,
+          "generated_tokens": 128,
+          "generation_tps": 10.14899678752536
+        },
+        {
+          "prompt_tokens": 1189,
+          "prompt_tps": 231.71109582393856,
+          "generated_tokens": 128,
+          "generation_tps": 10.152125636996312
+        }
+      ]
+    },
+    {
+      "num_batch": 256,
+      "warmup_load_seconds": 8.511471718,
+      "mean_prompt_tps": 278.3441755621151,
+      "mean_generation_tps": 10.11556211847761,
+      "trials": [
+        {
+          "prompt_tokens": 1189,
+          "prompt_tps": 278.44957217359047,
+          "generated_tokens": 128,
+          "generation_tps": 10.11445773231329
+        },
+        {
+          "prompt_tokens": 1189,
+          "prompt_tps": 278.23877895063964,
+          "generated_tokens": 128,
+          "generation_tps": 10.11666650464193
+        }
+      ]
+    },
+    {
+      "num_batch": 320,
+      "warmup_load_seconds": 8.513830184,
+      "mean_prompt_tps": 235.5127183803964,
+      "mean_generation_tps": 10.011949426773175,
+      "trials": [
+        {
+          "prompt_tokens": 1189,
+          "prompt_tps": 235.15144227536413,
+          "generated_tokens": 128,
+          "generation_tps": 10.011654191206953
+        },
+        {
+          "prompt_tokens": 1189,
+          "prompt_tps": 235.87399448542868,
+          "generated_tokens": 128,
+          "generation_tps": 10.012244662339397
+        }
+      ]
+    },
+    {
+      "num_batch": 384,
+      "warmup_load_seconds": 8.524618855,
+      "mean_prompt_tps": 250.76738334737155,
+      "mean_generation_tps": 9.998601429570765,
+      "trials": [
+        {
+          "prompt_tokens": 1189,
+          "prompt_tps": 250.78621160956658,
+          "generated_tokens": 128,
+          "generation_tps": 9.999389099822183
+        },
+        {
+          "prompt_tokens": 1189,
+          "prompt_tps": 250.7485550851765,
+          "generated_tokens": 128,
+          "generation_tps": 9.99781375931935
+        }
+      ]
+    },
+    {
+      "num_batch": 512,
+      "warmup_load_seconds": 8.511502705,
+      "mean_prompt_tps": 255.05935036255568,
+      "mean_generation_tps": 10.182377125715394,
+      "trials": [
+        {
+          "prompt_tokens": 1189,
+          "prompt_tps": 254.8970678905156,
+          "generated_tokens": 128,
+          "generation_tps": 10.182732313469051
+        },
+        {
+          "prompt_tokens": 1189,
+          "prompt_tps": 255.22163283459577,
+          "generated_tokens": 128,
+          "generation_tps": 10.182021937961736
+        }
+      ]
+    },
+    {
+      "num_batch": 1024,
+      "warmup_load_seconds": 8.774570069,
+      "mean_prompt_tps": 223.1471962904301,
+      "mean_generation_tps": 10.01441074947017,
+      "trials": [
+        {
+          "prompt_tokens": 1190,
+          "prompt_tps": 223.22626101265186,
+          "generated_tokens": 128,
+          "generation_tps": 10.013109350507484
+        },
+        {
+          "prompt_tokens": 1190,
+          "prompt_tps": 223.06813156820834,
+          "generated_tokens": 128,
+          "generation_tps": 10.015712148432854
+        }
+      ]
+    }
+  ],
+  "finished": "2026-09-17T18:05:29.326295-04:00"
+}

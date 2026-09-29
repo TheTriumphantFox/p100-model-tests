@@ -1,0 +1,28 @@
+def is_multiply_prime(a):
+    """Return True if a is the product of exactly three prime numbers (not necessarily distinct),
+    otherwise return False.  a is guaranteed to be less than 100.
+    """
+    if a < 2:
+        return False
+
+    # Simple primality test for numbers < 100
+    def is_prime(n):
+        if n < 2:
+            return False
+        for i in range(2, int(n ** 0.5) + 1):
+            if n % i == 0:
+                return False
+        return True
+
+    # Count prime factors with multiplicity
+    count = 0
+    n = a
+    for p in range(2, n + 1):
+        while n % p == 0:
+            if is_prime(p):
+                count += 1
+            n //= p
+        if n == 1:
+            break
+
+    return count == 3

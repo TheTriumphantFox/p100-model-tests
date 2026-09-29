@@ -1,0 +1,7 @@
+{
+  "dataset": "t2i_compbench",
+  "category": "non_spatial",
+  "prompt_id": "non_spatial_0101",
+  "index": 101,
+  "prompt": "A man is running his hand over a smooth rock at the beach."
+}

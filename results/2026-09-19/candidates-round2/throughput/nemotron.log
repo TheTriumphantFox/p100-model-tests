@@ -1,0 +1,50 @@
+========================================================================================
+  LOCAL OLLAMA LLM BENCHMARK
+  Ollama: shim-llamacpp | API: http://127.0.0.1:11500
+  Models: 1 | Tests: 4 | Iterations: 5 | Requests: 20
+  Context: 8192 | Thinking: off | Score: generation tok/s
+  Report: /home/hm/Projects/Tests/2026-09-19/candidates-round2/throughput/nemotron.json
+========================================================================================
+   1. nemotron-cascade-2-30b-a3b:q4_k_m (Q4_K_M, 24.7 GB)
+
+Every iteration unloads the previous model before starting, then keeps the current model warm across its tests.
+
+
+========================================================================
+MODEL 1/1: nemotron-cascade-2-30b-a3b:q4_k_m
+========================================================================
+  Iteration 1/5 (cold model load)
+     1/4 speed_brief                70.48 tok/s |   40 tok |  136.82s (load 135.7s)
+     2/4 speed_medium               69.21 tok/s |  184 tok |    3.19s (load 0.0s)
+     3/4 speed_long                 68.94 tok/s |  420 tok |    6.78s (load 0.0s)
+     4/4 python_coding              68.97 tok/s |  400 tok |    6.46s (load 0.0s)
+  Iteration 2/5 (cold model load)
+     1/4 speed_brief                70.47 tok/s |   40 tok |    0.89s (load 0.0s)
+     2/4 speed_medium               69.17 tok/s |  184 tok |    3.19s (load 0.0s)
+     3/4 speed_long                 68.97 tok/s |  420 tok |    6.75s (load 0.0s)
+     4/4 python_coding              68.97 tok/s |  400 tok |    6.43s (load 0.0s)
+  Iteration 3/5 (cold model load)
+     1/4 speed_brief                70.56 tok/s |   40 tok |    0.85s (load 0.0s)
+     2/4 speed_medium               69.20 tok/s |  184 tok |    3.18s (load 0.0s)
+     3/4 speed_long                 68.97 tok/s |  420 tok |    6.75s (load 0.0s)
+     4/4 python_coding              69.02 tok/s |  400 tok |    6.43s (load 0.0s)
+  Iteration 4/5 (cold model load)
+     1/4 speed_brief                70.54 tok/s |   40 tok |    0.85s (load 0.0s)
+     2/4 speed_medium               69.16 tok/s |  184 tok |    3.18s (load 0.0s)
+     3/4 speed_long                 69.00 tok/s |  420 tok |    6.74s (load 0.0s)
+     4/4 python_coding              68.96 tok/s |  400 tok |    6.43s (load 0.0s)
+  Iteration 5/5 (cold model load)
+     1/4 speed_brief                70.53 tok/s |   40 tok |    0.85s (load 0.0s)
+     2/4 speed_medium               69.15 tok/s |  184 tok |    3.18s (load 0.0s)
+     3/4 speed_long                 68.98 tok/s |  420 tok |    6.74s (load 0.0s)
+     4/4 python_coding              69.02 tok/s |  400 tok |    6.43s (load 0.0s)
+
+========================================================================================
+  COMPLETE — ONE WORST RUN REMOVED PER MODEL/TEST
+========================================================================================
+
+  Overall ranking (retained speed-test generation throughput):
+  # 1 nemotron-cascade-2-30b-a3b:q4_k_m                                 69.56 tok/s | 16/16 retained successful
+
+  Raw runs: 20 | Retained: 16 | Removed: 4
+  JSON report: /home/hm/Projects/Tests/2026-09-19/candidates-round2/throughput/nemotron.json

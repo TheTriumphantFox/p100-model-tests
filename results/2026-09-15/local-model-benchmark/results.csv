@@ -1,0 +1,11 @@
+rank,model,parameter_size,quantization,size_gb,generation_tps_mean,generation_tps_min,generation_tps_max,prompt_tps_mean,load_seconds,tokens_per_trial
+1,qwen3.6-35b-a3b-abliterated-vl:q4_k_m,35.1B,Q4_K_M,22.07,61.90,61.89,61.92,437.98,16.54,"[160, 160]"
+2,qwen3.6-35b-a3b-abliterated:q6_k,34.7B,Q6_K,30.65,56.20,56.13,56.26,475.59,21.55,"[160, 160]"
+3,gemma4-e4b-abliterated:q4_k_m,8.0B,Q4_K_M,6.33,54.95,54.94,54.96,521.55,5.79,"[160, 160]"
+4,qwen3.6-35b-a3b-abliterated:q5_k_m,34.7B,Q5_K_M,28.03,52.82,52.82,52.82,424.34,19.28,"[160, 160]"
+5,qwen3.5-9b-opus-distill:q4_k_m,9.4B,Q4_K_M,6.54,40.67,40.63,40.70,318.45,6.77,"[160, 160]"
+6,qwen3.6-35b-a3b-abliterated:q8_0,34.7B,Q8_0,43.61,32.55,32.37,32.74,318.89,33.34,"[160, 160]"
+7,thinkingcap-qwen3.6-27b-q6_k:latest,27.3B,Q6_K,22.43,12.34,12.34,12.34,151.19,16.79,"[160, 160]"
+8,qwen3.8-27b-stock:q4_k_m,27.3B,Q4_K_M,17.74,11.15,11.15,11.15,115.14,13.52,"[160, 160]"
+9,qwen3.6-27b-opus-distill:q4_k_m,27.4B,Q4_K_M,17.48,11.07,11.07,11.07,114.79,14.03,"[160, 160]"
+10,qwen3.6-27b-abliterated:q5_k_m,26.9B,Q5_K_M,20.81,9.57,9.57,9.57,112.81,15.53,"[160, 160]"

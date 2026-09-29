@@ -1,0 +1,23 @@
+MMLU-Pro: 1 model(s), 14 categories, 70 questions/model, 5 per request.
+Planned batches: 14; scored answers: 70.
+Results: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/mmlu-devstral-pc5-think12288
+
+Model 1/1: devstral-patched:latest
+[##----------------------------] 1/14 (  7.1%) devstral-patched:latest / biology                          ETA 1m 30s
+[####--------------------------] 2/14 ( 14.3%) devstral-patched:latest / business                         ETA 1m 14s
+[######------------------------] 3/14 ( 21.4%) devstral-patched:latest / chemistry                        ETA 1m 11s
+[########----------------------] 4/14 ( 28.6%) devstral-patched:latest / computer science                 ETA 1m 14s
+[##########--------------------] 5/14 ( 35.7%) devstral-patched:latest / economics                        ETA 1m 03s
+[############------------------] 6/14 ( 42.9%) devstral-patched:latest / engineering                      ETA 55s
+[###############---------------] 7/14 ( 50.0%) devstral-patched:latest / health                           ETA 46s
+[#################-------------] 8/14 ( 57.1%) devstral-patched:latest / history                          ETA 40s
+[###################-----------] 9/14 ( 64.3%) devstral-patched:latest / law                              ETA 35s
+[#####################---------] 10/14 ( 71.4%) devstral-patched:latest / math                             ETA 27s
+[#######################-------] 11/14 ( 78.6%) devstral-patched:latest / other                            ETA 20s
+[#########################-----] 12/14 ( 85.7%) devstral-patched:latest / philosophy                       ETA 13s
+[###########################---] 13/14 ( 92.9%) devstral-patched:latest / physics                          ETA 6s
+[##############################] 14/14 (100.0%) devstral-patched:latest / psychology                       ETA 0s
+
+Finished 14/14 batches and scored 70 answers.
+HTML report: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/mmlu-devstral-pc5-think12288/report.html
+Leader: devstral-patched:latest (58.6%)

@@ -1,0 +1,22 @@
+def is_equal_to_sum_even(n):
+    """
+    Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers.
+
+    A positive even number is of the form 2*k where k >= 1.
+    The smallest possible sum of four such numbers is 2 + 2 + 2 + 2 = 8.
+    Any larger even number can be expressed as:
+        (2 + 2 + 2 + (n - 6))
+    where (n - 6) is also even and >= 2 when n >= 8.
+
+    Parameters
+    ----------
+    n : int
+        The number to test.
+
+    Returns
+    -------
+    bool
+        True if n can be expressed as the sum of exactly four positive even numbers, False otherwise.
+    """
+    # The sum of four positive even numbers is always even and at least 8.
+    return n >= 8 and n % 2 == 0

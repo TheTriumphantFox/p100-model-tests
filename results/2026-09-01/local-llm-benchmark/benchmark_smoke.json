@@ -1,0 +1,109 @@
+{
+  "complete": true,
+  "started_at": "2026-09-02T02:04:04.038927+00:00",
+  "ollama_host": "http://127.0.0.1:11434",
+  "ollama_version": "0.33.2",
+  "iterations_requested": 1,
+  "context_size": 65536,
+  "thinking_enabled": false,
+  "score_metric": "generation_tok_per_sec (higher is better); failed runs score 0",
+  "outlier_policy": "remove one worst run independently from every model/test group",
+  "quality_note": "Quality prompts are included and responses are retained, but no subjective quality grade is assigned.",
+  "models": [
+    {
+      "name": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+      "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+      "modified_at": "2026-08-24T21:21:32.363077229-04:00",
+      "size": 6325657788,
+      "digest": "0810d70aa9aa19e57a63ee31039ed656d3ad2253375c4f4e57edc3a6f460bbe6",
+      "details": {
+        "parent_model": "/var/lib/ollama/blobs/sha256-ef5523975d644e47293960b8b87c83b11a6d50253a544e35addca72af33e13c6",
+        "format": "gguf",
+        "family": "gemma4",
+        "families": [
+          "gemma4"
+        ],
+        "parameter_size": "8.0B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 131072,
+        "embedding_length": 2560
+      },
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "speed_brief",
+      "name": "Brief Response Speed (50 tokens)",
+      "type": "speed",
+      "prompt": "Write a one-sentence summary of photosynthesis.",
+      "max_tokens": 60
+    }
+  ],
+  "raw_results": [
+    {
+      "run_id": 1,
+      "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+      "iteration": 1,
+      "test_id": "speed_brief",
+      "success": true,
+      "error": "",
+      "score": 38.922,
+      "generation_tok_per_sec": 38.922,
+      "prompt_tok_per_sec": 112.3,
+      "tokens_generated": 37,
+      "prompt_tokens": 18,
+      "generation_time_sec": 0.951,
+      "prompt_eval_time_sec": 0.16,
+      "load_time_sec": 3.835,
+      "total_time_sec": 4.947,
+      "wall_time_sec": 4.948,
+      "response": "Photosynthesis is the process used by plants and other organisms to convert light energy, typically from the sun, into chemical energy in the form of glucose, using carbon dioxide and water."
+    }
+  ],
+  "requests_completed": 1,
+  "finished_at": "2026-09-02T02:04:08.998258+00:00",
+  "removed_worst": [
+    {
+      "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+      "test_id": "speed_brief",
+      "run_id": 1,
+      "score": 38.922,
+      "success": true,
+      "tokens_generated": 37,
+      "total_time_sec": 4.947,
+      "error": ""
+    }
+  ],
+  "retained_results": [],
+  "summary": {
+    "by_model_test": {
+      "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest": {
+        "speed_brief": {
+          "name": "Brief Response Speed (50 tokens)",
+          "type": "speed",
+          "raw_runs": 1,
+          "retained_runs": 0,
+          "successful_retained_runs": 0,
+          "avg_score_tok_per_sec": 0.0,
+          "avg_tokens_generated": 0.0,
+          "avg_generation_time_sec": 0.0,
+          "avg_total_time_sec": 0.0
+        }
+      }
+    },
+    "overall": {
+      "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest": {
+        "raw_runs": 1,
+        "retained_runs": 0,
+        "successful_retained_runs": 0,
+        "average_speed_tok_per_sec": 0.0,
+        "average_total_time_sec": 0.0
+      }
+    }
+  }
+}

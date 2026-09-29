@@ -1,0 +1,16 @@
+=== 23:11:41 START ornith-ai/Ornith-1.5-35B-A3B-GGUF :: Ornith-1.5-35B-Q4_K_M.gguf
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+path=/var/lib/ollama/candidates-r2/Ornith-1.5-35B-Q4_K_M.gguf
+=== 23:16:04 DONE rc=0 wall=263s bytes=21713463040 ( GB) rate= MB/s
+=== 23:16:05 START bartowski/nvidia_Nemotron-Cascade-2-30B-A3B-GGUF :: nvidia_Nemotron-Cascade-2-30B-A3B-Q4_K_M.gguf
+path=/var/lib/ollama/candidates-r2/nvidia_Nemotron-Cascade-2-30B-A3B-Q4_K_M.gguf
+=== 23:23:03 DONE rc=0 wall=418s bytes=24725740992 ( GB) rate= MB/s
+=== 23:23:03 START XingChen-AGI/Xing4.0-29B-A4B-GGUF :: xing4_0-29b-IQ4_NL.gguf
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+path=/var/lib/ollama/candidates-r2/xing4_0-29b-IQ4_NL.gguf
+=== 23:26:57 DONE rc=0 wall=234s bytes=20104012544 ( GB) rate= MB/s
+=== 23:26:57 START linuxid10t/G9v3-39A5B-GGUF :: G9v3-39A5B-Q4_K_M.gguf
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+path=/var/lib/ollama/candidates-r2/G9v3-39A5B-Q4_K_M.gguf
+=== 23:31:57 DONE rc=0 wall=300s bytes=23559222240 ( GB) rate= MB/s
+ALL DONE 23:31:57

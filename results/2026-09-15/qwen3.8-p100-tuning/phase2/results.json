@@ -1,0 +1,273 @@
+[
+  {
+    "name": "no-mmvq-layer-50-50",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "1,1"
+    ],
+    "ready_seconds": 5.510975152000356,
+    "generation_tok_s": 14.813111064208655,
+    "generation_trials_tok_s": [
+      14.813860921408152,
+      14.812361207009161
+    ],
+    "prompt_tok_s": 5.771203376052439,
+    "prompt_trials_tok_s": [
+      5.770886961563517,
+      5.771519790541362
+    ]
+  },
+  {
+    "name": "no-mmvq-layer-45-55",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "45,55"
+    ],
+    "ready_seconds": 5.506977060000281,
+    "generation_tok_s": 14.803436601133793,
+    "generation_trials_tok_s": [
+      14.803006945291118,
+      14.803866256976466
+    ],
+    "prompt_tok_s": 5.743478284858264,
+    "prompt_trials_tok_s": [
+      5.746133781486701,
+      5.740822788229827
+    ]
+  },
+  {
+    "name": "no-mmvq-layer-55-45",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "55,45"
+    ],
+    "ready_seconds": 5.322015284000372,
+    "generation_tok_s": 14.800398236589329,
+    "generation_trials_tok_s": [
+      14.808079708045302,
+      14.792716765133356
+    ],
+    "prompt_tok_s": 5.756101131928762,
+    "prompt_trials_tok_s": [
+      5.755962754180777,
+      5.756239509676747
+    ]
+  },
+  {
+    "name": "no-mmvq-layer-60-40",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "60,40"
+    ],
+    "ready_seconds": 5.006296591000137,
+    "generation_tok_s": 14.770944277640172,
+    "generation_trials_tok_s": [
+      14.773150136965715,
+      14.76873841831463
+    ],
+    "prompt_tok_s": 5.780006035000081,
+    "prompt_trials_tok_s": [
+      5.770714574007547,
+      5.7892974959926145
+    ]
+  },
+  {
+    "name": "no-mmvq-disable-fusion",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1",
+      "GGML_VK_DISABLE_FUSION": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "1,1"
+    ],
+    "ready_seconds": 5.507069203000356,
+    "generation_tok_s": 14.559677821278072,
+    "generation_trials_tok_s": [
+      14.560262864336183,
+      14.559092778219963
+    ],
+    "prompt_tok_s": 5.757721234818751,
+    "prompt_trials_tok_s": [
+      5.758236055838631,
+      5.7572064137988725
+    ]
+  },
+  {
+    "name": "no-mmvq-disable-async",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1",
+      "GGML_VK_DISABLE_ASYNC": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "1,1"
+    ],
+    "ready_seconds": 5.50706770800025,
+    "generation_tok_s": 14.784683203357481,
+    "generation_trials_tok_s": [
+      14.78972102743144,
+      14.779645379283524
+    ],
+    "prompt_tok_s": 5.741715851391943,
+    "prompt_trials_tok_s": [
+      5.740710348744777,
+      5.7427213540391095
+    ]
+  },
+  {
+    "name": "no-mmvq-disable-multi-add",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1",
+      "GGML_VK_DISABLE_MULTI_ADD": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "1,1"
+    ],
+    "ready_seconds": 5.507276513999386,
+    "generation_tok_s": 14.790642837445514,
+    "generation_trials_tok_s": [
+      14.786487199850317,
+      14.794798475040709
+    ],
+    "prompt_tok_s": 5.76184482013653,
+    "prompt_trials_tok_s": [
+      5.762811492673262,
+      5.760878147599798
+    ]
+  },
+  {
+    "name": "no-mmvq-disable-graph-opt",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1",
+      "GGML_VK_DISABLE_GRAPH_OPTIMIZE": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "1,1"
+    ],
+    "ready_seconds": 5.50727621400074,
+    "generation_tok_s": 14.68781841973244,
+    "generation_trials_tok_s": [
+      14.711217639375464,
+      14.66441920008942
+    ],
+    "prompt_tok_s": 5.660076839773081,
+    "prompt_trials_tok_s": [
+      5.657332068753224,
+      5.662821610792938
+    ]
+  },
+  {
+    "name": "no-mmvq-disable-int-dot",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1",
+      "GGML_VK_DISABLE_INTEGER_DOT_PRODUCT": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "1,1"
+    ],
+    "ready_seconds": 5.5069343400000434,
+    "generation_tok_s": 14.77724830515201,
+    "generation_trials_tok_s": [
+      14.778941939471968,
+      14.775554670832054
+    ],
+    "prompt_tok_s": 19.447224083169097,
+    "prompt_trials_tok_s": [
+      19.457613306260544,
+      19.436834860077653
+    ]
+  },
+  {
+    "name": "no-mmvq-transfer-queue",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1",
+      "GGML_VK_ASYNC_USE_TRANSFER_QUEUE": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "1,1"
+    ],
+    "ready_seconds": 5.506793187000767,
+    "generation_tok_s": 14.78630500213183,
+    "generation_trials_tok_s": [
+      14.778878306410368,
+      14.79373169785329
+    ],
+    "prompt_tok_s": 5.771580756111515,
+    "prompt_trials_tok_s": [
+      5.768032140832273,
+      5.775129371390756
+    ]
+  },
+  {
+    "name": "no-mmvq-serialize",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1",
+      "GGML_VK_SERIALIZE_SUBMISSIONS": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "1,1"
+    ],
+    "ready_seconds": 5.507158616999732,
+    "generation_tok_s": 12.582670074309977,
+    "generation_trials_tok_s": [
+      12.594392242727062,
+      12.570947905892893
+    ],
+    "prompt_tok_s": 5.609063275008101,
+    "prompt_trials_tok_s": [
+      5.600598275674625,
+      5.617528274341575
+    ]
+  }
+]

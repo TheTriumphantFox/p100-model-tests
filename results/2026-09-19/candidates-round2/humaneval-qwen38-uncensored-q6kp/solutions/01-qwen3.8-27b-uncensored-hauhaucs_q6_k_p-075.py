@@ -1,0 +1,47 @@
+def is_multiply_prime(a):
+    """Write a function that returns true if the given number is the multiplication of 3 prime numbers
+    and false otherwise.
+    Knowing that (a) is less then 100. 
+    Example:
+    is_multiply_prime(30) == True
+    30 = 2 * 3 * 5
+    """
+    if a < 2:
+        return False
+    
+    def is_prime(n):
+        if n < 2:
+            return False
+        if n == 2:
+            return True
+        if n % 2 == 0:
+            return False
+        for i in range(3, int(n**0.5) + 1, 2):
+            if n % i == 0:
+                return False
+        return True
+    
+    # We need to check if a can be written as p1 * p2 * p3 where p1, p2, p3 are primes
+    # Since a < 100, we can iterate through possible prime factors
+    # Find all prime factors and check if there are exactly 3 (counting multiplicity)
+    
+    # Actually, the problem says "multiplication of 3 prime numbers", which means
+    # a = p1 * p2 * p3 where each pi is prime. This allows for repeated primes.
+    # So we need to check if a has exactly 3 prime factors (with multiplicity).
+    
+    count = 0
+    n = a
+    d = 2
+    while d * d <= n:
+        while n % d == 0:
+            if not is_prime(d):
+                return False
+            count += 1
+            n //= d
+        d += 1
+    if n > 1:
+        if not is_prime(n):
+            return False
+        count += 1
+    
+    return count == 3

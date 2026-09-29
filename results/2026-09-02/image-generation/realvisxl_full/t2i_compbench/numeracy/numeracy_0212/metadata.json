@@ -1,0 +1,7 @@
+{
+  "dataset": "t2i_compbench",
+  "category": "numeracy",
+  "prompt_id": "numeracy_0212",
+  "index": 212,
+  "prompt": "four tents, three pigs, one cow and four paddles"
+}

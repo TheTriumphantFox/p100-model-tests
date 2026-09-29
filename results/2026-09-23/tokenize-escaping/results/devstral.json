@@ -1,0 +1,405 @@
+{
+ "model": "devstral",
+ "rows": [
+  {
+   "id": "size-1000-port",
+   "family": "size",
+   "bytes": 1437,
+   "raw": 487,
+   "escaped": 596,
+   "ascii": 596,
+   "plan_json": 747,
+   "plan_block": 645
+  },
+  {
+   "id": "size-1000-timeout",
+   "family": "size",
+   "bytes": 1437,
+   "raw": 487,
+   "escaped": 596,
+   "ascii": 596,
+   "plan_json": 749,
+   "plan_block": 647
+  },
+  {
+   "id": "size-2000-port",
+   "family": "size",
+   "bytes": 1991,
+   "raw": 665,
+   "escaped": 820,
+   "ascii": 820,
+   "plan_json": 973,
+   "plan_block": 825
+  },
+  {
+   "id": "size-2000-timeout",
+   "family": "size",
+   "bytes": 1991,
+   "raw": 665,
+   "escaped": 820,
+   "ascii": 820,
+   "plan_json": 975,
+   "plan_block": 827
+  },
+  {
+   "id": "size-3000-port",
+   "family": "size",
+   "bytes": 2987,
+   "raw": 981,
+   "escaped": 1218,
+   "ascii": 1218,
+   "plan_json": 1371,
+   "plan_block": 1141
+  },
+  {
+   "id": "size-3000-timeout",
+   "family": "size",
+   "bytes": 2987,
+   "raw": 981,
+   "escaped": 1218,
+   "ascii": 1218,
+   "plan_json": 1372,
+   "plan_block": 1142
+  },
+  {
+   "id": "size-5000-port",
+   "family": "size",
+   "bytes": 4809,
+   "raw": 1554,
+   "escaped": 1947,
+   "ascii": 1947,
+   "plan_json": 2090,
+   "plan_block": 1704
+  },
+  {
+   "id": "size-5000-timeout",
+   "family": "size",
+   "bytes": 4809,
+   "raw": 1554,
+   "escaped": 1947,
+   "ascii": 1947,
+   "plan_json": 2091,
+   "plan_block": 1705
+  },
+  {
+   "id": "size-7500-port",
+   "family": "size",
+   "bytes": 7348,
+   "raw": 2370,
+   "escaped": 2977,
+   "ascii": 2977,
+   "plan_json": 3126,
+   "plan_block": 2526
+  },
+  {
+   "id": "size-7500-timeout",
+   "family": "size",
+   "bytes": 7348,
+   "raw": 2370,
+   "escaped": 2977,
+   "ascii": 2977,
+   "plan_json": 3128,
+   "plan_block": 2528
+  },
+  {
+   "id": "size-10000-port",
+   "family": "size",
+   "bytes": 9922,
+   "raw": 3170,
+   "escaped": 3987,
+   "ascii": 3987,
+   "plan_json": 4136,
+   "plan_block": 3326
+  },
+  {
+   "id": "size-10000-timeout",
+   "family": "size",
+   "bytes": 9922,
+   "raw": 3170,
+   "escaped": 3987,
+   "ascii": 3987,
+   "plan_json": 4135,
+   "plan_block": 3325
+  },
+  {
+   "id": "size-13000-port",
+   "family": "size",
+   "bytes": 12911,
+   "raw": 4130,
+   "escaped": 5213,
+   "ascii": 5213,
+   "plan_json": 5366,
+   "plan_block": 4290
+  },
+  {
+   "id": "size-13000-timeout",
+   "family": "size",
+   "bytes": 12911,
+   "raw": 4130,
+   "escaped": 5213,
+   "ascii": 5213,
+   "plan_json": 5367,
+   "plan_block": 4291
+  },
+  {
+   "id": "size-15500-port",
+   "family": "size",
+   "bytes": 15327,
+   "raw": 5014,
+   "escaped": 6313,
+   "ascii": 6313,
+   "plan_json": 6471,
+   "plan_block": 5179
+  },
+  {
+   "id": "size-15500-timeout",
+   "family": "size",
+   "bytes": 15327,
+   "raw": 5014,
+   "escaped": 6313,
+   "ascii": 6313,
+   "plan_json": 6469,
+   "plan_block": 5177
+  },
+  {
+   "id": "variety-feature",
+   "family": "variety",
+   "bytes": 2901,
+   "raw": 950,
+   "escaped": 1180,
+   "ascii": 1180,
+   "plan_json": 1332,
+   "plan_block": 1109
+  },
+  {
+   "id": "variety-remove-upstream",
+   "family": "variety",
+   "bytes": 2751,
+   "raw": 920,
+   "escaped": 1144,
+   "ascii": 1144,
+   "plan_json": 1301,
+   "plan_block": 1084
+  },
+  {
+   "id": "variety-method",
+   "family": "variety",
+   "bytes": 2950,
+   "raw": 968,
+   "escaped": 1207,
+   "ascii": 1207,
+   "plan_json": 1362,
+   "plan_block": 1130
+  },
+  {
+   "id": "variety-description",
+   "family": "variety",
+   "bytes": 2956,
+   "raw": 965,
+   "escaped": 1204,
+   "ascii": 1212,
+   "plan_json": 1356,
+   "plan_block": 1124
+  },
+  {
+   "id": "variety-multi",
+   "family": "variety",
+   "bytes": 2898,
+   "raw": 951,
+   "escaped": 1188,
+   "ascii": 1188,
+   "plan_json": 1346,
+   "plan_block": 1116
+  },
+  {
+   "id": "variety-weight",
+   "family": "variety",
+   "bytes": 2898,
+   "raw": 948,
+   "escaped": 1183,
+   "ascii": 1183,
+   "plan_json": 1335,
+   "plan_block": 1107
+  },
+  {
+   "id": "variety-loglevel",
+   "family": "variety",
+   "bytes": 2879,
+   "raw": 952,
+   "escaped": 1183,
+   "ascii": 1183,
+   "plan_json": 1332,
+   "plan_block": 1108
+  },
+  {
+   "id": "context-port",
+   "family": "context",
+   "bytes": 2911,
+   "raw": 962,
+   "escaped": 1199,
+   "ascii": 1199,
+   "plan_json": 1350,
+   "plan_block": 1120
+  },
+  {
+   "id": "context-host",
+   "family": "context",
+   "bytes": 2925,
+   "raw": 971,
+   "escaped": 1210,
+   "ascii": 1210,
+   "plan_json": 1364,
+   "plan_block": 1132
+  },
+  {
+   "id": "context-pick",
+   "family": "context",
+   "bytes": 2884,
+   "raw": 958,
+   "escaped": 1191,
+   "ascii": 1191,
+   "plan_json": 1342,
+   "plan_block": 1116
+  },
+  {
+   "id": "activation-activate",
+   "family": "activation",
+   "bytes": 183,
+   "raw": 104,
+   "escaped": 113,
+   "ascii": 113,
+   "plan_json": 255,
+   "plan_block": 253
+  },
+  {
+   "id": "activation-deactivate",
+   "family": "activation",
+   "bytes": 185,
+   "raw": 105,
+   "escaped": 114,
+   "ascii": 114,
+   "plan_json": 250,
+   "plan_block": 248
+  },
+  {
+   "id": "activation-activate-2ctx",
+   "family": "activation",
+   "bytes": 183,
+   "raw": 102,
+   "escaped": 111,
+   "ascii": 111,
+   "plan_json": 247,
+   "plan_block": 245
+  },
+  {
+   "id": "injection-context-note",
+   "family": "injection",
+   "bytes": 2930,
+   "raw": 973,
+   "escaped": 1212,
+   "ascii": 1212,
+   "plan_json": 1366,
+   "plan_block": 1134
+  },
+  {
+   "id": "injection-target-comment",
+   "family": "injection",
+   "bytes": 2890,
+   "raw": 944,
+   "escaped": 1173,
+   "ascii": 1173,
+   "plan_json": 1326,
+   "plan_block": 1104
+  },
+  {
+   "id": "injection-fake-controller",
+   "family": "injection",
+   "bytes": 2938,
+   "raw": 960,
+   "escaped": 1197,
+   "ascii": 1197,
+   "plan_json": 1351,
+   "plan_block": 1121
+  },
+  {
+   "id": "injection-retarget",
+   "family": "injection",
+   "bytes": 2898,
+   "raw": 964,
+   "escaped": 1198,
+   "ascii": 1198,
+   "plan_json": 1356,
+   "plan_block": 1129
+  },
+  {
+   "id": "injection-user-voice",
+   "family": "injection",
+   "bytes": 2907,
+   "raw": 965,
+   "escaped": 1202,
+   "ascii": 1202,
+   "plan_json": 1357,
+   "plan_block": 1127
+  },
+  {
+   "id": "nochange-port",
+   "family": "nochange",
+   "bytes": 2886,
+   "raw": 952,
+   "escaped": 1187,
+   "ascii": 1187,
+   "plan_json": 1343,
+   "plan_block": 1115
+  },
+  {
+   "id": "nochange-timeout",
+   "family": "nochange",
+   "bytes": 2997,
+   "raw": 1005,
+   "escaped": 1248,
+   "ascii": 1248,
+   "plan_json": 1401,
+   "plan_block": 1165
+  },
+  {
+   "id": "nochange-feature",
+   "family": "nochange",
+   "bytes": 2829,
+   "raw": 942,
+   "escaped": 1169,
+   "ascii": 1169,
+   "plan_json": 1325,
+   "plan_block": 1105
+  },
+  {
+   "id": "escaping-port",
+   "family": "escaping",
+   "bytes": 3916,
+   "raw": 1290,
+   "escaped": 1614,
+   "ascii": 1639,
+   "plan_json": 1770,
+   "plan_block": 1453
+  },
+  {
+   "id": "escaping-banner",
+   "family": "escaping",
+   "bytes": 3887,
+   "raw": 1290,
+   "escaped": 1618,
+   "ascii": 1643,
+   "plan_json": 1767,
+   "plan_block": 1446
+  },
+  {
+   "id": "escaping-timeout-7500",
+   "family": "escaping",
+   "bytes": 7434,
+   "raw": 2426,
+   "escaped": 3062,
+   "ascii": 3087,
+   "plan_json": 3218,
+   "plan_block": 2589
+  }
+ ]
+}

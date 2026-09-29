@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# Build llama.cpp against CUDA 12.6 with sm_60 (Pascal / Tesla P100).
+# Host has CUDA 13.x, which dropped Pascal; the container supplies both a
+# CUDA 12 toolkit and a gcc nvcc accepts. No GPU needed to compile.
+set -euo pipefail
+
+OUT=${OUT:-/home/hm/llama-cuda12}
+IMG=docker.io/nvidia/cuda:12.6.3-devel-ubuntu24.04
+mkdir -p "$OUT"
+
+podman run --rm -v "$OUT":/out:Z "$IMG" bash -euxc '
+  export DEBIAN_FRONTEND=noninteractive
+  apt-get update -qq
+  apt-get install -y -qq git cmake ninja-build build-essential
+
+  git clone --depth 1 https://github.com/ggml-org/llama.cpp /src
+  git -C /src rev-parse HEAD > /out/LLAMA_COMMIT
+
+  # libcuda.so.1 is the DRIVER lib, absent without --gpus. Link against the
+  # toolkit stub; the host supplies the real one at runtime.
+  ln -sf /usr/local/cuda/lib64/stubs/libcuda.so /usr/local/cuda/lib64/stubs/libcuda.so.1
+  STUBS=-L/usr/local/cuda/lib64/stubs\ -Wl,-rpath-link,/usr/local/cuda/lib64/stubs
+
+  cmake -S /src -B /b -G Ninja \
+      -DCMAKE_BUILD_TYPE=Release \
+      -DGGML_CUDA=ON \
+      -DCMAKE_CUDA_ARCHITECTURES=60 \
+      -DLLAMA_CURL=OFF \
+      -DLLAMA_BUILD_TESTS=OFF \
+      -DCMAKE_EXE_LINKER_FLAGS="$STUBS" \
+      -DCMAKE_SHARED_LINKER_FLAGS="$STUBS"
+  cmake --build /b -j"$(nproc)" --target llama-server llama-bench llama-cli
+
+  mkdir -p /out/bin /out/lib
+  find /b/bin -maxdepth 1 -type f -executable -exec cp -a {} /out/bin/ \;
+  find /b -name "*.so*" -exec cp -a {} /out/lib/ \;
+
+  for l in libcudart libcublas libcublasLt; do
+    find /usr/local/cuda/lib64 -maxdepth 1 -name "${l}.so*" -exec cp -a {} /out/lib/ \;
+  done
+  chmod -R a+rX /out
+'
+echo "BUILD OK: $(cat "$OUT"/LLAMA_COMMIT) -> $OUT"

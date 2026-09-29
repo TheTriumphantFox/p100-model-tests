@@ -1,0 +1,55 @@
+def valid_date(date):
+    """Validate a date string in mm-dd-yyyy format.
+
+    Returns True if the date string is non‑empty, matches the required format,
+    and represents a calendar‑valid date (taking month‑specific day limits into
+    account). Otherwise returns False.
+    """
+    # Rule 1: non‑empty string
+    if not date:
+        return False
+
+    # Rule 4: must be exactly mm-dd-yyyy with two‑digit month and day,
+    #         four‑digit year, and hyphens as separators.
+    parts = date.split('-')
+    if len(parts) != 3:
+        return False
+    month_str, day_str, year_str = parts
+
+    # Each part must be numeric
+    if not (month_str.isdigit() and day_str.isdigit() and year_str.isdigit()):
+        return False
+
+    # Ensure month and day have exactly two digits, year exactly four digits
+    if len(month_str) != 2 or len(day_str) != 2 or len(year_str) != 4:
+        return False
+
+    month = int(month_str)
+    day = int(day_str)
+    year = int(year_str)
+
+    # Rule 3: month range 1‑12
+    if not (1 <= month <= 12):
+        return False
+
+    # Rule 2: day range according to month
+    # Days per month for a non‑leap year; February is handled separately.
+    days_in_month = {
+        1: 31, 2: 29, 3: 31, 4: 30,
+        5: 31, 6: 30, 7: 31, 8: 31,
+        9: 30, 10: 31, 11: 30, 12: 31
+    }
+
+    # Leap year check for February
+    if month == 2:
+        # Leap year if divisible by 4, but not by 100 unless also by 400
+        is_leap = (year % 4 == 0) and (year % 100 != 0 or year % 400 == 0)
+        max_day = 29 if is_leap else 28
+    else:
+        max_day = days_in_month[month]
+
+    if not (1 <= day <= max_day):
+        return False
+
+    # All checks passed
+    return True

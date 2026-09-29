@@ -1,0 +1,15 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+devstral-patched:latest,biology,1,5,5,5,13.451626940649403,12.747297572914542,1.6822039550170302,20,,raw/01-devstral-patched_latest-01-biology.txt
+devstral-patched:latest,business,2,3,5,5,13.486322172053104,12.797379096760983,1.7025013540114742,20,,raw/01-devstral-patched_latest-02-business.txt
+devstral-patched:latest,chemistry,3,3,5,5,13.4569760290886,12.748435129587843,1.6900288919860031,20,,raw/01-devstral-patched_latest-03-chemistry.txt
+devstral-patched:latest,computer science,4,4,5,5,13.415408804398645,12.698090207232832,1.7233166429796256,20,,raw/01-devstral-patched_latest-04-computer_science.txt
+devstral-patched:latest,economics,5,2,5,5,13.495704654601056,12.790340734677171,1.711817700008396,20,,raw/01-devstral-patched_latest-05-economics.txt
+devstral-patched:latest,engineering,6,3,5,5,13.508347483327322,12.795741577203106,1.641301782015944,20,,raw/01-devstral-patched_latest-06-engineering.txt
+devstral-patched:latest,health,7,4,5,5,13.517203344696796,12.816733527293234,1.637975004996406,20,,raw/01-devstral-patched_latest-07-health.txt
+devstral-patched:latest,history,8,2,5,5,13.456478049456594,12.753637975232435,1.6642200289934408,20,,raw/01-devstral-patched_latest-08-history.txt
+devstral-patched:latest,law,9,2,5,5,13.423674663820847,12.706318852365282,1.7338350689969957,20,,raw/01-devstral-patched_latest-09-law.txt
+devstral-patched:latest,math,10,2,5,5,13.500997723731784,12.790995139421847,1.7273569329991005,20,,raw/01-devstral-patched_latest-10-math.txt
+devstral-patched:latest,other,11,3,5,5,13.523253911263113,12.826926283654647,1.6291385620133951,20,,raw/01-devstral-patched_latest-11-other.txt
+devstral-patched:latest,philosophy,12,4,5,5,13.51231749081669,12.818705054415403,1.6292814520129468,20,,raw/01-devstral-patched_latest-12-philosophy.txt
+devstral-patched:latest,physics,13,2,5,5,13.496169112397446,12.777266687110293,1.6507132000115234,20,,raw/01-devstral-patched_latest-13-physics.txt
+devstral-patched:latest,psychology,14,2,5,5,13.4989656417577,12.802130274477673,1.653763448994141,20,,raw/01-devstral-patched_latest-14-psychology.txt

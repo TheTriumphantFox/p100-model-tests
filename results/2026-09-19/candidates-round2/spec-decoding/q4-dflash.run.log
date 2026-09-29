@@ -1,0 +1,9 @@
+=== q4-dflash  (spec=draft-dflash draft=dflash-Qwen3.8-27B-Q8_0.gguf)  ready in 17s
+0, 11144 MiB 1, 11205 MiB 
+  prompt 0:  21.94 tok/s  (200 tok, draft 181/138 accepted)
+  prompt 1:  21.28 tok/s  (200 tok, draft 187/136 accepted)
+  prompt 2:  21.88 tok/s  (200 tok, draft 183/138 accepted)
+  prompt 3:  20.90 tok/s  (200 tok, draft 191/135 accepted)
+  prompt 4:  19.20 tok/s  (200 tok, draft 207/129 accepted)
+  prompt 5:  21.93 tok/s  (200 tok, draft 182/138 accepted)
+  MEAN  21.19 tok/s  (min 19.20, max 21.94)

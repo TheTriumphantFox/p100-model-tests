@@ -1,0 +1,9 @@
+=== q8-baseline  (spec=none draft=)  ready in 130s
+0, 13564 MiB 1, 14065 MiB 
+  prompt 0:  10.87 tok/s  (200 tok)
+  prompt 1:  10.86 tok/s  (200 tok)
+  prompt 2:  10.86 tok/s  (200 tok)
+  prompt 3:  10.86 tok/s  (200 tok)
+  prompt 4:  10.86 tok/s  (200 tok)
+  prompt 5:  10.86 tok/s  (200 tok)
+  MEAN  10.86 tok/s  (min 10.86, max 10.87)

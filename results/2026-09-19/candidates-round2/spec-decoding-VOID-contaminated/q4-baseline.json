@@ -1,0 +1,51 @@
+{
+ "label": "q4-baseline",
+ "n_predict": 200,
+ "runs": [
+  {
+   "i": 0,
+   "gen_tps": 5.0033961494215236,
+   "predicted_n": 200,
+   "prompt_n": 31,
+   "prompt_tps": 18.719919806279023
+  },
+  {
+   "i": 1,
+   "gen_tps": 4.964550613867931,
+   "predicted_n": 200,
+   "prompt_n": 53,
+   "prompt_tps": 31.982659364160597
+  },
+  {
+   "i": 2,
+   "gen_tps": 4.984828336790232,
+   "predicted_n": 200,
+   "prompt_n": 37,
+   "prompt_tps": 22.584565463804573
+  },
+  {
+   "i": 3,
+   "gen_tps": 4.998877262214901,
+   "predicted_n": 200,
+   "prompt_n": 49,
+   "prompt_tps": 29.353832292570246
+  },
+  {
+   "i": 4,
+   "gen_tps": 5.013990924374076,
+   "predicted_n": 200,
+   "prompt_n": 31,
+   "prompt_tps": 19.192503284394515
+  },
+  {
+   "i": 5,
+   "gen_tps": 5.020115400596506,
+   "predicted_n": 200,
+   "prompt_n": 57,
+   "prompt_tps": 34.06407751788812
+  }
+ ],
+ "mean_gen_tps": 4.997626447877528,
+ "min_gen_tps": 4.964550613867931,
+ "max_gen_tps": 5.020115400596506
+}

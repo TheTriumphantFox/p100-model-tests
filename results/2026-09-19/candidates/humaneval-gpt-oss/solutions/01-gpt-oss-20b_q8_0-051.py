@@ -1,0 +1,31 @@
+def remove_vowels(text: str) -> str:
+    """
+    Remove all vowels (both uppercase and lowercase) from the input string.
+
+    Parameters
+    ----------
+    text : str
+        The string from which vowels should be removed.
+
+    Returns
+    -------
+    str
+        The string with all vowels removed.
+
+    Examples
+    --------
+    >>> remove_vowels('')
+    ''
+    >>> remove_vowels("abcdef\\nghijklm")
+    'bcdf\\nghjklm'
+    >>> remove_vowels('abcdef')
+    'bcdf'
+    >>> remove_vowels('aaaaa')
+    ''
+    >>> remove_vowels('aaBAA')
+    'B'
+    >>> remove_vowels('zbcd')
+    'zbcd'
+    """
+    vowels = set("aeiouAEIOU")
+    return "".join(ch for ch in text if ch not in vowels)

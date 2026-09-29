@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="259" viewBox="0 0 1900 259">
+<rect width="100%" height="100%" fill="#111718"/>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif}.title{fill:#f7f7f7;font-size:28px;font-weight:bold}.sub{fill:#9eafb0;font-size:14px}.label{fill:#e7eeee;font-size:16px}.value{fill:#fff;font-size:15px;font-weight:bold}</style>
+<text x="36" y="42" class="title">MMLU-Pro category accuracy</text>
+<text x="36" y="68" class="sub">5 deterministically selected test questions per category</text>
+<text x="445" y="137" text-anchor="middle" class="sub" transform="rotate(-40 445 137)">Biology</text>
+<text x="550" y="137" text-anchor="middle" class="sub" transform="rotate(-40 550 137)">Business</text>
+<text x="655" y="137" text-anchor="middle" class="sub" transform="rotate(-40 655 137)">Chemistry</text>
+<text x="760" y="137" text-anchor="middle" class="sub" transform="rotate(-40 760 137)">Computer Science</text>
+<text x="865" y="137" text-anchor="middle" class="sub" transform="rotate(-40 865 137)">Economics</text>
+<text x="970" y="137" text-anchor="middle" class="sub" transform="rotate(-40 970 137)">Engineering</text>
+<text x="1075" y="137" text-anchor="middle" class="sub" transform="rotate(-40 1075 137)">Health</text>
+<text x="1180" y="137" text-anchor="middle" class="sub" transform="rotate(-40 1180 137)">History</text>
+<text x="1285" y="137" text-anchor="middle" class="sub" transform="rotate(-40 1285 137)">Law</text>
+<text x="1390" y="137" text-anchor="middle" class="sub" transform="rotate(-40 1390 137)">Math</text>
+<text x="1495" y="137" text-anchor="middle" class="sub" transform="rotate(-40 1495 137)">Other</text>
+<text x="1600" y="137" text-anchor="middle" class="sub" transform="rotate(-40 1600 137)">Philosophy</text>
+<text x="1705" y="137" text-anchor="middle" class="sub" transform="rotate(-40 1705 137)">Physics</text>
+<text x="1810" y="137" text-anchor="middle" class="sub" transform="rotate(-40 1810 137)">Psychology</text>
+<text x="388" y="182" text-anchor="end" class="label">qwen3.8-27b-ggmlorg:q8_0</text>
+<rect x="400" y="158" width="100" height="38" rx="3" fill="#43b776"/>
+<text x="450" y="183" text-anchor="middle" class="value">100%</text>
+<rect x="505" y="158" width="100" height="38" rx="3" fill="#9b9352"/>
+<text x="555" y="183" text-anchor="middle" class="value">60%</text>
+<rect x="610" y="158" width="100" height="38" rx="3" fill="#9b9352"/>
+<text x="660" y="183" text-anchor="middle" class="value">60%</text>
+<rect x="715" y="158" width="100" height="38" rx="3" fill="#43b776"/>
+<text x="765" y="183" text-anchor="middle" class="value">100%</text>
+<rect x="820" y="158" width="100" height="38" rx="3" fill="#6ea564"/>
+<text x="870" y="183" text-anchor="middle" class="value">80%</text>
+<rect x="925" y="158" width="100" height="38" rx="3" fill="#43b776"/>
+<text x="975" y="183" text-anchor="middle" class="value">100%</text>
+<rect x="1030" y="158" width="100" height="38" rx="3" fill="#6ea564"/>
+<text x="1080" y="183" text-anchor="middle" class="value">80%</text>
+<rect x="1135" y="158" width="100" height="38" rx="3" fill="#6ea564"/>
+<text x="1185" y="183" text-anchor="middle" class="value">80%</text>
+<rect x="1240" y="158" width="100" height="38" rx="3" fill="#b17b49"/>
+<text x="1290" y="183" text-anchor="middle" class="value">40%</text>
+<rect x="1345" y="158" width="100" height="38" rx="3" fill="#b13f49"/>
+<text x="1395" y="183" text-anchor="middle" class="value">0%</text>
+<rect x="1450" y="158" width="100" height="38" rx="3" fill="#6ea564"/>
+<text x="1500" y="183" text-anchor="middle" class="value">80%</text>
+<rect x="1555" y="158" width="100" height="38" rx="3" fill="#6ea564"/>
+<text x="1605" y="183" text-anchor="middle" class="value">80%</text>
+<rect x="1660" y="158" width="100" height="38" rx="3" fill="#b15d49"/>
+<text x="1710" y="183" text-anchor="middle" class="value">20%</text>
+<rect x="1765" y="158" width="100" height="38" rx="3" fill="#6ea564"/>
+<text x="1815" y="183" text-anchor="middle" class="value">80%</text>
+</svg>

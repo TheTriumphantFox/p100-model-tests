@@ -1,0 +1,15 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+qwen3.8-27b-unsloth:ud_q6_k,biology,1,5,5,5,10.267446444999342,164.4910520318556,10.74850686499849,20,,raw/01-qwen3.8-27b-unsloth_ud_q6_k-01-biology.txt
+qwen3.8-27b-unsloth:ud_q6_k,business,2,3,5,5,10.289193208926699,142.28914845846776,8.3286084739957,20,,raw/01-qwen3.8-27b-unsloth_ud_q6_k-02-business.txt
+qwen3.8-27b-unsloth:ud_q6_k,chemistry,3,3,5,5,10.279346377481241,166.38689700881528,10.734056215005694,20,,raw/01-qwen3.8-27b-unsloth_ud_q6_k-03-chemistry.txt
+qwen3.8-27b-unsloth:ud_q6_k,computer science,4,5,5,5,10.263636909475235,174.91895246474107,15.380772951000836,20,,raw/01-qwen3.8-27b-unsloth_ud_q6_k-04-computer_science.txt
+qwen3.8-27b-unsloth:ud_q6_k,economics,5,4,5,5,10.297441600634324,136.23333287868735,8.341582151013426,20,,raw/01-qwen3.8-27b-unsloth_ud_q6_k-05-economics.txt
+qwen3.8-27b-unsloth:ud_q6_k,engineering,6,5,5,5,10.298470265226802,136.34392520056107,9.328548121004133,20,,raw/01-qwen3.8-27b-unsloth_ud_q6_k-06-engineering.txt
+qwen3.8-27b-unsloth:ud_q6_k,health,7,4,5,5,10.302104050220697,123.38556957750318,7.690482959005749,20,,raw/01-qwen3.8-27b-unsloth_ud_q6_k-07-health.txt
+qwen3.8-27b-unsloth:ud_q6_k,history,8,4,5,5,10.277534542793598,166.2914096638868,10.853393893019529,20,,raw/01-qwen3.8-27b-unsloth_ud_q6_k-08-history.txt
+qwen3.8-27b-unsloth:ud_q6_k,law,9,3,5,5,10.276504775748682,169.52313780336655,15.491225514997495,20,,raw/01-qwen3.8-27b-unsloth_ud_q6_k-09-law.txt
+qwen3.8-27b-unsloth:ud_q6_k,math,10,0,5,5,10.297722607156814,145.96858692198035,8.394539654022083,20,,raw/01-qwen3.8-27b-unsloth_ud_q6_k-10-math.txt
+qwen3.8-27b-unsloth:ud_q6_k,other,11,4,5,5,10.293011148360375,132.70422503170005,5.741004767973209,20,,raw/01-qwen3.8-27b-unsloth_ud_q6_k-11-other.txt
+qwen3.8-27b-unsloth:ud_q6_k,philosophy,12,4,5,5,10.296895537479926,131.8977603931581,7.865285195992328,20,,raw/01-qwen3.8-27b-unsloth_ud_q6_k-12-philosophy.txt
+qwen3.8-27b-unsloth:ud_q6_k,physics,13,1,5,5,10.276647346569655,138.4004278868577,9.411203232972184,20,,raw/01-qwen3.8-27b-unsloth_ud_q6_k-13-physics.txt
+qwen3.8-27b-unsloth:ud_q6_k,psychology,14,4,5,5,10.296291224419507,137.56363118662003,8.295287921995623,20,,raw/01-qwen3.8-27b-unsloth_ud_q6_k-14-psychology.txt

@@ -1,0 +1,75 @@
+```python
+def minPath(grid, k):
+    """
+    Given a grid with N rows and N columns (N >= 2) and a positive integer k, 
+    each cell of the grid contains a value. Every integer in the range [1, N * N]
+    inclusive appears exactly once on the cells of the grid.
+
+    You have to find the minimum path of length k in the grid. You can start
+    from any cell, and in each step you can move to any of the neighbor cells,
+    in other words, you can go to cells which share an edge with you current
+    cell.
+    Please note that a path of length k means visiting exactly k cells (not
+    necessarily distinct).
+    You CANNOT go off the grid.
+    A path A (of length k) is considered less than a path B (of length k) if
+    after making the ordered lists of the values on the cells that A and B go
+    through (let's call them lst_A and lst_B), lst_A is lexicographically less
+    than lst_B, in other words, there exist an integer index i (1 <= i <= k)
+    such that lst_A[i] < lst_B[i] and for any j (1 <= j < i) we have
+    lst_A[j] = lst_B[j].
+    It is guaranteed that the answer is unique.
+    Return an ordered list of the values on the cells that the minimum path go through.
+
+    Examples:
+
+        Input: grid = [ [1,2,3], [4,5,6], [7,8,9]], k = 3
+        Output: [1, 2, 1]
+
+        Input: grid = [ [5,9,3], [4,1,6], [7,8,2]], k = 1
+        Output: [1]
+    """
+    n = len(grid)
+    # Find the cell with value 1, since the minimum path must start with the smallest possible value.
+    # Actually, the minimum path of length k is lexicographically smallest.
+    # The first element should be as small as possible. The smallest value in the grid is 1.
+    # So the path must start at the cell containing 1.
+    
+    # Find position of 1
+    start_r, start_c = -1, -1
+    for i in range(n):
+        for j in range(n):
+            if grid[i][j] == 1:
+                start_r, start_c = i, j
+                break
+        if start_r != -1:
+            break
+    
+    # Now we need to find the lexicographically smallest path of length k starting from (start_r, start_c).
+    # At each step, we can move to any neighbor (up, down, left, right) that is within bounds.
+    # We want to choose the next cell with the smallest value, but we also need to ensure that
+    # from that cell, we can complete the remaining path. However, since we can revisit cells,
+    # and the grid is connected, from any cell we can always continue. So the greedy approach works:
+    # at each step, among all neighbors (including staying? No, we must move to a neighbor),
+    # choose the one with the smallest value.
+    
+    # Wait, can we stay in the same cell? The problem says "move to any of the neighbor cells",
+    # so we must move to a different cell (a neighbor). But we can revisit cells.
+    
+    # So the path is: start at cell with value 1, then at each step move to a neighbor with the smallest value.
+    # But is this greedy approach correct? Let's think:
+    # We want lexicographically smallest sequence. The first element is fixed (1).
+    # For the second element, we want the smallest possible value among all neighbors of the start cell.
+    # For the third element, given that we chose the smallest second element, we want the smallest possible
+    # third element among neighbors of the cell we're at.
+    # This greedy approach should work because the choice at each step only depends on the current cell,
+    # and we want to minimize the current element first.
+    
+    # However, there's a subtlety: what if choosing a slightly larger second element allows a much smaller
+    # third element? But lexicographic order prioritizes earlier elements. So we must minimize the second
+    # element first, regardless of what comes after. So greedy is correct.
+    
+    path = [1]
+    r, c = start_r, start_c
+    for _ in range(k - 1):
+        # Find the

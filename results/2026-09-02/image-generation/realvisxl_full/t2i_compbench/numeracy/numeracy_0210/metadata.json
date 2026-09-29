@@ -1,0 +1,7 @@
+{
+  "dataset": "t2i_compbench",
+  "category": "numeracy",
+  "prompt_id": "numeracy_0210",
+  "index": 210,
+  "prompt": "two helicopters, one rabbit and two turtles"
+}

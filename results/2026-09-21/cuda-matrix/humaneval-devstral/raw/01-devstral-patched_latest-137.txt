@@ -1,0 +1,44 @@
+```python
+def compare_one(a, b):
+    """
+    Create a function that takes integers, floats, or strings representing
+    real numbers, and returns the larger variable in its given variable type.
+    Return None if the values are equal.
+    Note: If a real number is represented as a string, the floating point might be . or ,
+
+    compare_one(1, 2.5) ➞ 2.5
+    compare_one(1, "2,3") ➞ "2,3"
+    compare_one("5,1", "6") ➞ "6"
+    compare_one("1", 1) ➞ None
+    """
+    def parse_value(val):
+        if isinstance(val, str):
+            val = val.replace(',', '.')
+            try:
+                return float(val)
+            except ValueError:
+                return val
+        return val
+
+    a_parsed = parse_value(a)
+    b_parsed = parse_value(b)
+
+    if isinstance(a_parsed, float) and isinstance(b_parsed, float):
+        if a_parsed > b_parsed:
+            return a
+        elif a_parsed < b_parsed:
+            return b
+        else:
+            return None
+    elif isinstance(a_parsed, str) and isinstance(b_parsed, str):
+        a_float = parse_value(a)
+        b_float = parse_value(b)
+        if a_float > b_float:
+            return a
+        elif a_float < b_float:
+            return b
+        else:
+            return None
+    else:
+        return None
+```

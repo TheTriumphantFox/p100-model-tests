@@ -1,0 +1,23 @@
+MMLU-Pro: 1 model(s), 14 categories, 70 questions/model, 5 per request.
+Planned batches: 14; scored answers: 70.
+Results: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/mmlu-uncensored-q6kp-pc5-think12288
+
+Model 1/1: qwen3.8-27b-uncensored-hauhaucs:q6_k_p
+[##----------------------------] 1/14 (  7.1%) qwen3.8-27b-uncensored-hauhaucs:q6_k_p / biology           ETA 8m 19s
+[####--------------------------] 2/14 ( 14.3%) qwen3.8-27b-uncensored-hauhaucs:q6_k_p / business          ETA 16m 27s
+[######------------------------] 3/14 ( 21.4%) qwen3.8-27b-uncensored-hauhaucs:q6_k_p / chemistry         ETA 28m 46s
+[########----------------------] 4/14 ( 28.6%) qwen3.8-27b-uncensored-hauhaucs:q6_k_p / computer science  ETA 25m 59s
+[##########--------------------] 5/14 ( 35.7%) qwen3.8-27b-uncensored-hauhaucs:q6_k_p / economics         ETA 42m 27s
+[############------------------] 6/14 ( 42.9%) qwen3.8-27b-uncensored-hauhaucs:q6_k_p / engineering       ETA 41m 04s
+[###############---------------] 7/14 ( 50.0%) qwen3.8-27b-uncensored-hauhaucs:q6_k_p / health            ETA 35m 14s
+[#################-------------] 8/14 ( 57.1%) qwen3.8-27b-uncensored-hauhaucs:q6_k_p / history           ETA 38m 49s
+[###################-----------] 9/14 ( 64.3%) qwen3.8-27b-uncensored-hauhaucs:q6_k_p / law               ETA 40m 35s
+[#####################---------] 10/14 ( 71.4%) qwen3.8-27b-uncensored-hauhaucs:q6_k_p / math              ETA 31m 01s
+[#######################-------] 11/14 ( 78.6%) qwen3.8-27b-uncensored-hauhaucs:q6_k_p / other             ETA 21m 37s
+[#########################-----] 12/14 ( 85.7%) qwen3.8-27b-uncensored-hauhaucs:q6_k_p / philosophy        ETA 13m 28s
+[###########################---] 13/14 ( 92.9%) qwen3.8-27b-uncensored-hauhaucs:q6_k_p / physics           ETA 6m 19s
+[##############################] 14/14 (100.0%) qwen3.8-27b-uncensored-hauhaucs:q6_k_p / psychology        ETA 0s
+
+Finished 14/14 batches and scored 70 answers.
+HTML report: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/mmlu-uncensored-q6kp-pc5-think12288/report.html
+Leader: qwen3.8-27b-uncensored-hauhaucs:q6_k_p (82.9%)

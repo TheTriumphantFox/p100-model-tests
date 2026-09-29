@@ -1,0 +1,27 @@
+```python
+def special_factorial(n: int) -> int:
+    """
+    Compute the Brazilian factorial of n:
+    brazilian_factorial(n) = n! * (n-1)! * ... * 1!
+    where n > 0
+
+    Parameters
+    ----------
+    n : int
+        Positive integer to compute the special factorial for.
+
+    Returns
+    -------
+    int
+        The product of all factorials from 1! to n!.
+    """
+    if n <= 0:
+        raise ValueError("n must be a positive integer")
+
+    result = 1
+    current_factorial = 1
+    for i in range(1, n + 1):
+        current_factorial *= i          # compute i!
+        result *= current_factorial     # multiply into the product
+    return result
+```

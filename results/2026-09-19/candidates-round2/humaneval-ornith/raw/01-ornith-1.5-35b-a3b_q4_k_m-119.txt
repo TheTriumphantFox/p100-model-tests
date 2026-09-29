@@ -1,0 +1,56 @@
+```python
+def match_parens(lst):
+    '''
+    You are given a list of two strings, both strings consist of open
+    parentheses '(' or close parentheses ')' only.
+    Your job is to check if it is possible to concatenate the two strings in
+    some order, that the resulting string will be good.
+    A string S is considered to be good if and only if all parentheses in S
+    are balanced. For example: the string '(())()' is good, while the string
+    '())' is not.
+    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.
+
+    Examples:
+    match_parens(['()(', ')']) == 'Yes'
+    match_parens([')', ')']) == 'No'
+    '''
+    def balance(s):
+        # returns the minimum and maximum possible balance at the end
+        # considering all ways to interpret the string
+        min_bal = 0
+        max_bal = 0
+        for c in s:
+            if c == '(':
+                min_bal += 1
+                max_bal += 1
+            else:
+                min_bal -= 1
+                max_bal -= 1
+            if max_bal < 0:
+                return None
+            if min_bal < 0:
+                min_bal = 0
+        return min_bal, max_bal
+
+    s1, s2 = lst
+    # try both orders
+    for a, b in [(s1, s2), (s2, s1)]:
+        b1 = balance(a)
+        b2 = balance(b)
+        if b1 is None or b2 is None:
+            continue
+        # combine: total open must equal total close
+        # a's max_bal is the balance after a; b starts from there
+        # We need: there's a way to have final balance 0
+        # min combined balance >= 0 and max combined balance >= 0 and total parity
+        total_open = a.count('(') + b.count('(')
+        total_close = a.count(')') + b.count(')')
+        if total_open != total_close:
+            continue
+        # min final balance and max final balance
+        min_final = b1[0] + b2[0]
+        max_final = b1[1] + b2[1]
+        if min_final <= 0 <= max_final:
+            return 'Yes'
+    return 'No'
+```

@@ -1,0 +1,5 @@
+{"slug":"unsloth-q8","ctx":8192,"kv":"f16","weights_mib":27701,"vram_mib":27997,"tok_per_s":10.91,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 10.91, "prompt_eval_count": 32, "wall_s": 19.3}}
+{"slug":"unsloth-q8","ctx":12288,"kv":"f16","weights_mib":27701,"vram_mib":28285,"tok_per_s":10.91,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 10.91, "prompt_eval_count": 32, "wall_s": 19.2}}
+{"slug":"unsloth-q8","ctx":16384,"kv":"f16","weights_mib":27701,"vram_mib":28573,"tok_per_s":10.91,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 10.91, "prompt_eval_count": 32, "wall_s": 19.2}}
+{"slug":"unsloth-q8","ctx":24576,"kv":"f16","weights_mib":27701,"vram_mib":29149,"tok_per_s":10.91,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 10.91, "prompt_eval_count": 32, "wall_s": 19.2}}
+{"slug":"unsloth-q8","ctx":32768,"kv":"f16","weights_mib":27701,"vram_mib":29725,"tok_per_s":10.91,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 10.91, "prompt_eval_count": 32, "wall_s": 19.2}}

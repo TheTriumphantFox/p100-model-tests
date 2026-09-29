@@ -1,0 +1,73 @@
+```python
+from collections import deque
+
+
+def minpath(grid, k):
+    """
+    Find the lexicographically smallest path of length k in the grid.
+    """
+    N = len(grid)
+
+    def neighbors(r, c):
+        if r > 0:
+            yield r - 1, c
+        if r + 1 < N:
+            yield r + 1, c
+        if c > 0:
+            yield r, c - 1
+        if c + 1 < N:
+            yield r, c + 1
+
+    # pos maps a value to its (row, col)
+    pos = {}
+    for r in range(N):
+        for c in range(N):
+            pos[grid[r][c]] = (r, c)
+
+    # Start from the smallest value
+    best = [pos[1]]
+    for _ in range(k - 1):
+        nxt = []
+        for (r, c) in best:
+            for (nr, nc) in neighbors(r, c):
+                nxt.append((grid[nr][nc], nr, nc))
+        nxt.sort()
+        threshold = nxt[0][0]
+        best = [(nr, nc) for (_, nr, nc) in nxt if _ == threshold]
+    return [grid[r][c] for (r, c) in best]
+
+
+def minpath(grid, k):
+    """
+    Find the lexicographically smallest path of length k in the grid.
+    """
+    N = len(grid)
+
+    def neighbors(r, c):
+        if r > 0:
+            yield r - 1, c
+        if r + 1 < N:
+            yield r + 1, c
+        if c > 0:
+            yield r, c - 1
+        if c + 1 < N:
+            yield r, c + 1
+
+    # pos maps a value to its (row, col)
+    pos = {}
+    for r in range(N):
+        for c in range(N):
+            pos[grid[r][c]] = (r, c)
+
+    # Start from the smallest value
+    best = [pos[1]]
+    for _ in range(k - 1):
+        nxt = []
+        for (r, c) in best:
+            for (nr, nc) in neighbors(r, c):
+                nxt.append((grid[nr][nc], nr, nc))
+        nxt.sort()
+        threshold = nxt[0][0]
+        best = [(nr, nc) for (_, nr, nc) in nxt if _ == threshold]
+    return [grid[r][c] for (r, c) in best]
+```

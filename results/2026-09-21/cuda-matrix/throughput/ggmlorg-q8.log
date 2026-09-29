@@ -1,0 +1,50 @@
+========================================================================================
+  LOCAL OLLAMA LLM BENCHMARK
+  Ollama: shim-llamacpp | API: http://127.0.0.1:11500
+  Models: 1 | Tests: 4 | Iterations: 5 | Requests: 20
+  Context: 8192 | Thinking: off | Score: generation tok/s
+  Report: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/throughput/ggmlorg-q8.json
+========================================================================================
+   1. qwen3.8-27b-ggmlorg:q8_0 (Q8_0, 28.6 GB)
+
+Every iteration unloads the previous model before starting, then keeps the current model warm across its tests.
+
+
+========================================================================
+MODEL 1/1: qwen3.8-27b-ggmlorg:q8_0
+========================================================================
+  Iteration 1/5 (cold model load)
+     1/4 speed_brief                11.24 tok/s |   29 tok |   10.88s (load 7.5s)
+     2/4 speed_medium               10.92 tok/s |  202 tok |   19.40s (load 0.1s)
+     3/4 speed_long                 10.89 tok/s |  420 tok |   39.50s (load 0.1s)
+     4/4 python_coding              10.89 tok/s |  400 tok |   38.01s (load 0.1s)
+  Iteration 2/5 (cold model load)
+     1/4 speed_brief                11.25 tok/s |   29 tok |    2.87s (load 0.1s)
+     2/4 speed_medium               10.92 tok/s |  202 tok |   19.40s (load 0.1s)
+     3/4 speed_long                 10.89 tok/s |  420 tok |   39.43s (load 0.0s)
+     4/4 python_coding              10.89 tok/s |  400 tok |   37.95s (load 0.0s)
+  Iteration 3/5 (cold model load)
+     1/4 speed_brief                11.25 tok/s |   29 tok |    2.81s (load 0.0s)
+     2/4 speed_medium               10.92 tok/s |  202 tok |   19.39s (load 0.1s)
+     3/4 speed_long                 10.89 tok/s |  420 tok |   39.43s (load 0.0s)
+     4/4 python_coding              10.89 tok/s |  400 tok |   37.95s (load 0.0s)
+  Iteration 4/5 (cold model load)
+     1/4 speed_brief                11.25 tok/s |   29 tok |    2.80s (load 0.0s)
+     2/4 speed_medium               10.92 tok/s |  202 tok |   19.40s (load 0.1s)
+     3/4 speed_long                 10.89 tok/s |  420 tok |   39.42s (load 0.0s)
+     4/4 python_coding              10.89 tok/s |  400 tok |   37.95s (load 0.0s)
+  Iteration 5/5 (cold model load)
+     1/4 speed_brief                11.25 tok/s |   29 tok |    2.80s (load 0.0s)
+     2/4 speed_medium               10.92 tok/s |  202 tok |   19.40s (load 0.1s)
+     3/4 speed_long                 10.89 tok/s |  420 tok |   39.43s (load 0.0s)
+     4/4 python_coding              10.89 tok/s |  400 tok |   37.95s (load 0.0s)
+
+========================================================================================
+  COMPLETE — ONE WORST RUN REMOVED PER MODEL/TEST
+========================================================================================
+
+  Overall ranking (retained speed-test generation throughput):
+  # 1 qwen3.8-27b-ggmlorg:q8_0                                          11.02 tok/s | 16/16 retained successful
+
+  Raw runs: 20 | Retained: 16 | Removed: 4
+  JSON report: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/throughput/ggmlorg-q8.json

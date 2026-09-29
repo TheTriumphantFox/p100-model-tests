@@ -1,0 +1,2 @@
+{"name": "qwen36moe-loop", "description": "Tool-loop planner on the same model",
+ "planner": {"model": "qwen36moe", "persona": "planner-loop"}, "deadline_s": 240}

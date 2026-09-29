@@ -1,0 +1,14 @@
+def compare_one(a, b):
+    def to_float(val):
+        if isinstance(val, (int, float)):
+            return float(val)
+        s = str(val).replace(',', '.')
+        return float(s)
+    fa = to_float(a)
+    fb = to_float(b)
+    if fa == fb:
+        return None
+    if fa > fb:
+        return a
+    else:
+        return b

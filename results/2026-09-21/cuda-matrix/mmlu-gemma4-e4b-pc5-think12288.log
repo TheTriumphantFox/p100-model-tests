@@ -1,0 +1,23 @@
+MMLU-Pro: 1 model(s), 14 categories, 70 questions/model, 5 per request.
+Planned batches: 14; scored answers: 70.
+Results: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/mmlu-gemma4-e4b-pc5-think12288
+
+Model 1/1: gemma4-e4b-abliterated:q4_k_m
+[##----------------------------] 1/14 (  7.1%) gemma4-e4b-abliterated:q4_k_m / biology                    ETA 9s
+[####--------------------------] 2/14 ( 14.3%) gemma4-e4b-abliterated:q4_k_m / business                   ETA 8s
+[######------------------------] 3/14 ( 21.4%) gemma4-e4b-abliterated:q4_k_m / chemistry                  ETA 8s
+[########----------------------] 4/14 ( 28.6%) gemma4-e4b-abliterated:q4_k_m / computer science           ETA 7s
+[##########--------------------] 5/14 ( 35.7%) gemma4-e4b-abliterated:q4_k_m / economics                  ETA 6s
+[############------------------] 6/14 ( 42.9%) gemma4-e4b-abliterated:q4_k_m / engineering                ETA 6s
+[###############---------------] 7/14 ( 50.0%) gemma4-e4b-abliterated:q4_k_m / health                     ETA 5s
+[#################-------------] 8/14 ( 57.1%) gemma4-e4b-abliterated:q4_k_m / history                    ETA 4s
+[###################-----------] 9/14 ( 64.3%) gemma4-e4b-abliterated:q4_k_m / law                        ETA 3s
+[#####################---------] 10/14 ( 71.4%) gemma4-e4b-abliterated:q4_k_m / math                       ETA 3s
+[#######################-------] 11/14 ( 78.6%) gemma4-e4b-abliterated:q4_k_m / other                      ETA 2s
+[#########################-----] 12/14 ( 85.7%) gemma4-e4b-abliterated:q4_k_m / philosophy                 ETA 1s
+[###########################---] 13/14 ( 92.9%) gemma4-e4b-abliterated:q4_k_m / physics                    ETA 1s
+[##############################] 14/14 (100.0%) gemma4-e4b-abliterated:q4_k_m / psychology                 ETA 0s
+
+Finished 14/14 batches and scored 70 answers.
+HTML report: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/mmlu-gemma4-e4b-pc5-think12288/report.html
+Leader: gemma4-e4b-abliterated:q4_k_m (0.0%)

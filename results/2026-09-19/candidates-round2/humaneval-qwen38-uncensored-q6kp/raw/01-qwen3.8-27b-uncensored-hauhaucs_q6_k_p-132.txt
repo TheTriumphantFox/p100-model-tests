@@ -1,0 +1,65 @@
+```python
+def is_nested(string):
+    '''
+    Create a function that takes a string as input which contains only square brackets.
+    The function should return True if and only if there is a valid subsequence of brackets 
+    where at least one bracket in the subsequence is nested.
+
+    is_nested('[[]]') ➞ True
+    is_nested('[]]]]]]][[[[[]') ➞ False
+    is_nested('[][]') ➞ False
+    is_nested('[]') ➞ False
+    is_nested('[[][]]') ➞ True
+    is_nested('[[]][[') ➞ True
+    '''
+    # We need to check if there exists a valid subsequence of brackets
+    # where at least one bracket is nested (i.e., depth >= 2 at some point)
+    
+    # A valid subsequence means we can pick a subsequence of the string that forms
+    # a valid bracket sequence. We want to know if any such valid subsequence has
+    # nesting depth >= 2.
+    
+    # Key insight: We can greedily build a valid bracket subsequence.
+    # To maximize nesting, we want to match brackets as deeply as possible.
+    
+    # Actually, let's think differently. We need to find if there's a subsequence
+    # that is a valid bracket sequence with max depth >= 2.
+    
+    # A valid bracket subsequence can be constructed by:
+    # - Picking some '[' and matching ']' in order
+    # - The subsequence must be balanced and properly nested
+    
+    # We can use a greedy approach: scan left to right, maintain a stack/counter.
+    # But we want to know if we can achieve depth >= 2.
+    
+    # Let's think: we need at least two '[' that are both matched by ']' after them,
+    # and the inner '[' is matched before the outer ']' in the subsequence.
+    
+    # More precisely: we need indices i < j < k < l such that:
+    # s[i] = '[', s[j] = '[', s[k] = ']', s[l] = ']'
+    # and we can form a valid subsequence containing these four (and possibly others)
+    # where the nesting depth reaches 2.
+    
+    # Actually, the simplest valid nested subsequence is "[[]]" which requires
+    # finding '[' at position i, '[' at position j > i, ']' at position k > j, ']' at position l > k.
+    
+    # But we also need the subsequence to be valid. If we just pick these four,
+    # "[[]]" is valid. So we just need to check if there exist i < j < k < l with
+    # s[i] = '[', s[j] = '[', s[k] = ']', s[l] = ']'.
+    
+    # Wait, but what about longer sequences? The question is whether ANY valid subsequence
+    # has nesting >= 2. The minimal such subsequence is "[[]]", so we just need to check
+    # if we can find such a pattern.
+    
+    # Let's verify with the examples:
+    # is_nested('[[]]') -> True: positions 0,1,2,3 work
+    # is_nested('[]]]]]]][[[[[]') -> False: Let's check. We need i<j<k<l with [,[,],]
+    #   The string is: [ ] ] ] ] ] ] [ [ [ [ [ ]
+    #   Indices: 0:[, 1:], 2:], 3:], 4:], 5:], 6:], 7:[, 8:[, 9:[, 10:[, 11:[, 12:]
+    #   We need two '[' before two ']' where the first ']' is after the second '['.
+    #   The '[' are at 0,7,8,9,10,11. The ']' are at 1,2,3,4,5,6,12.
+    #   For i=0, j=7: we need k>7 and l>k with s[k]=']' and s[l]=']'. k=12 is ']', but we need l>12 which doesn't exist. So no.
+    #   For i=7, j=8: k>8, l>k. k=12, no l>12. No.
+    #   Similarly for other pairs. So False. Correct.
+    # is_nested('[][]') -> False: [ ] [ ]
+    #   i=0, j=2: need k>2, l>k with s[k]=']', s[l]=

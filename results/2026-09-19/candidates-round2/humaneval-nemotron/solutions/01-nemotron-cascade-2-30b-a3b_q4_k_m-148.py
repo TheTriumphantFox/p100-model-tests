@@ -1,0 +1,41 @@
+def bf(planet1, planet2):
+    """
+    Returns a tuple of planet names that lie strictly between the two given planets,
+    ordered from the one closest to the Sun to the one farthest.
+
+    Parameters
+    ----------
+    planet1 : str
+        Name of the first planet.
+    planet2 : str
+        Name of the second planet.
+
+    Returns
+    -------
+    tuple
+        Tuple of planet names between the two inputs, sorted by proximity to the Sun.
+        Empty tuple if either input is not a valid planet name.
+    """
+    # Ordered list of the eight planets from the Sun outward
+    planets = [
+        "Mercury", "Venus", "Earth", "Mars",
+        "Jupiter", "Saturn", "Uranus", "Neptune"
+    ]
+
+    # Validate both inputs
+    if planet1 not in planets or planet2 not in planets:
+        return ()
+
+    # Find the indices of the two planets
+    idx1 = planets.index(planet1)
+    idx2 = planets.index(planet2)
+
+    # Determine the slice that lies strictly between the two indices
+    start = min(idx1, idx2) + 1
+    end = max(idx1, idx2)
+
+    # Extract the planets between them (already in correct order)
+    between = planets[start:end]
+
+    # Return as a tuple
+    return tuple(between)

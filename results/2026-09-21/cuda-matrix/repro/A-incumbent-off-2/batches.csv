@@ -1,0 +1,15 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+qwen3.6-27b-abliterated:q5_k_m,biology,1,5,5,5,11.622697035224327,162.0568298170968,10.652283172006719,20,,raw/01-qwen3.6-27b-abliterated_q5_k_m-01-biology.txt
+qwen3.6-27b-abliterated:q5_k_m,business,2,3,5,5,11.648094750261937,141.04263076762768,8.160624866985017,20,,raw/01-qwen3.6-27b-abliterated_q5_k_m-02-business.txt
+qwen3.6-27b-abliterated:q5_k_m,chemistry,3,3,5,5,11.624804775934795,163.69966688704903,10.644322656997247,20,,raw/01-qwen3.6-27b-abliterated_q5_k_m-03-chemistry.txt
+qwen3.6-27b-abliterated:q5_k_m,computer science,4,4,5,5,11.59587673814945,172.76869820233685,15.309267235017614,20,,raw/01-qwen3.6-27b-abliterated_q5_k_m-04-computer_science.txt
+qwen3.6-27b-abliterated:q5_k_m,economics,5,4,5,5,11.639302666098668,133.74539728369243,8.198247247986728,20,,raw/01-qwen3.6-27b-abliterated_q5_k_m-05-economics.txt
+qwen3.6-27b-abliterated:q5_k_m,engineering,6,5,5,5,11.644737684816542,133.82046152858527,9.190002786985133,20,,raw/01-qwen3.6-27b-abliterated_q5_k_m-06-engineering.txt
+qwen3.6-27b-abliterated:q5_k_m,health,7,4,5,5,11.644493610084131,121.63555344712658,7.423717888013925,20,,raw/01-qwen3.6-27b-abliterated_q5_k_m-07-health.txt
+qwen3.6-27b-abliterated:q5_k_m,history,8,4,5,5,11.618423101143021,163.7568051873448,10.662092156999279,20,,raw/01-qwen3.6-27b-abliterated_q5_k_m-08-history.txt
+qwen3.6-27b-abliterated:q5_k_m,law,9,3,5,5,11.6138690501423,167.30183246327724,15.317460781981936,20,,raw/01-qwen3.6-27b-abliterated_q5_k_m-09-law.txt
+qwen3.6-27b-abliterated:q5_k_m,math,10,1,5,5,11.641470643703478,145.34435811324914,8.163801598013379,20,,raw/01-qwen3.6-27b-abliterated_q5_k_m-10-math.txt
+qwen3.6-27b-abliterated:q5_k_m,other,11,4,5,5,11.648698549154595,131.02280411796653,5.583486263989471,20,,raw/01-qwen3.6-27b-abliterated_q5_k_m-11-other.txt
+qwen3.6-27b-abliterated:q5_k_m,philosophy,12,4,5,5,11.638022583582824,130.6737214637018,7.693789326993283,20,,raw/01-qwen3.6-27b-abliterated_q5_k_m-12-philosophy.txt
+qwen3.6-27b-abliterated:q5_k_m,physics,13,2,5,5,11.620954673047345,136.4087002780917,9.294542862015078,20,,raw/01-qwen3.6-27b-abliterated_q5_k_m-13-physics.txt
+qwen3.6-27b-abliterated:q5_k_m,psychology,14,4,5,5,11.641084413577461,135.70355897196418,8.154056213999866,20,,raw/01-qwen3.6-27b-abliterated_q5_k_m-14-psychology.txt

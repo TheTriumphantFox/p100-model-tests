@@ -1,0 +1,50 @@
+========================================================================================
+  LOCAL OLLAMA LLM BENCHMARK
+  Ollama: shim-llamacpp | API: http://127.0.0.1:11500
+  Models: 1 | Tests: 4 | Iterations: 5 | Requests: 20
+  Context: 8192 | Thinking: off | Score: generation tok/s
+  Report: /home/hm/Projects/Tests/2026-09-19/candidates-round2/throughput/xing.json
+========================================================================================
+   1. xing4.0-29b-a4b:iq4_nl (IQ4_NL, 20.1 GB)
+
+Every iteration unloads the previous model before starting, then keeps the current model warm across its tests.
+
+
+========================================================================
+MODEL 1/1: xing4.0-29b-a4b:iq4_nl
+========================================================================
+  Iteration 1/5 (cold model load)
+     1/4 speed_brief                32.37 tok/s |   42 tok |  118.96s (load 117.1s)
+     2/4 speed_medium               31.72 tok/s |  250 tok |    8.54s (load 0.0s)
+     3/4 speed_long                 31.68 tok/s |  420 tok |   14.11s (load 0.0s)
+     4/4 python_coding              31.67 tok/s |  400 tok |   13.61s (load 0.0s)
+  Iteration 2/5 (cold model load)
+     1/4 speed_brief                32.37 tok/s |   42 tok |    1.34s (load 0.0s)
+     2/4 speed_medium               31.70 tok/s |  250 tok |    8.54s (load 0.0s)
+     3/4 speed_long                 31.70 tok/s |  420 tok |   14.09s (load 0.0s)
+     4/4 python_coding              31.71 tok/s |  400 tok |   13.58s (load 0.0s)
+  Iteration 3/5 (cold model load)
+     1/4 speed_brief                32.38 tok/s |   42 tok |    1.34s (load 0.0s)
+     2/4 speed_medium               31.74 tok/s |  250 tok |    8.54s (load 0.0s)
+     3/4 speed_long                 31.75 tok/s |  420 tok |   14.07s (load 0.0s)
+     4/4 python_coding              31.67 tok/s |  400 tok |   13.60s (load 0.0s)
+  Iteration 4/5 (cold model load)
+     1/4 speed_brief                32.35 tok/s |   42 tok |    1.34s (load 0.0s)
+     2/4 speed_medium               31.68 tok/s |  250 tok |    8.55s (load 0.0s)
+     3/4 speed_long                 31.70 tok/s |  420 tok |   14.09s (load 0.0s)
+     4/4 python_coding              31.68 tok/s |  400 tok |   13.59s (load 0.0s)
+  Iteration 5/5 (cold model load)
+     1/4 speed_brief                32.40 tok/s |   42 tok |    1.34s (load 0.0s)
+     2/4 speed_medium               31.72 tok/s |  250 tok |    8.54s (load 0.0s)
+     3/4 speed_long                 31.69 tok/s |  420 tok |   14.09s (load 0.0s)
+     4/4 python_coding              31.67 tok/s |  400 tok |   13.60s (load 0.0s)
+
+========================================================================================
+  COMPLETE — ONE WORST RUN REMOVED PER MODEL/TEST
+========================================================================================
+
+  Overall ranking (retained speed-test generation throughput):
+  # 1 xing4.0-29b-a4b:iq4_nl                                            31.94 tok/s | 16/16 retained successful
+
+  Raw runs: 20 | Retained: 16 | Removed: 4
+  JSON report: /home/hm/Projects/Tests/2026-09-19/candidates-round2/throughput/xing.json

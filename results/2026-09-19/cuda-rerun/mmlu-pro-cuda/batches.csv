@@ -1,0 +1,43 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+qwen3.8-27b-stock:q4_k_m,biology,1,5,5,5,12.64208918108971,147.65982693532027,104.13834229399981,20,,raw/01-qwen3.8-27b-stock_q4_k_m-01-biology.txt
+qwen3.8-27b-stock:q4_k_m,business,2,2,5,5,12.681592478293869,137.84142796301893,8.222195895999903,20,,raw/01-qwen3.8-27b-stock_q4_k_m-02-business.txt
+qwen3.8-27b-stock:q4_k_m,chemistry,3,3,5,5,12.646981639744405,160.59949433402983,10.755842219999977,20,,raw/01-qwen3.8-27b-stock_q4_k_m-03-chemistry.txt
+qwen3.8-27b-stock:q4_k_m,computer science,4,5,5,5,12.62459688084085,169.17944551891125,15.456254087999696,20,,raw/01-qwen3.8-27b-stock_q4_k_m-04-computer_science.txt
+qwen3.8-27b-stock:q4_k_m,economics,5,4,5,5,12.675709095011412,131.9760372554829,8.14546063400121,20,,raw/01-qwen3.8-27b-stock_q4_k_m-05-economics.txt
+qwen3.8-27b-stock:q4_k_m,engineering,6,5,5,5,12.678754591294007,131.7169288314464,9.172673745000793,20,,raw/01-qwen3.8-27b-stock_q4_k_m-06-engineering.txt
+qwen3.8-27b-stock:q4_k_m,health,7,4,5,5,12.676070620924643,118.72206936925282,7.428268589999789,20,,raw/01-qwen3.8-27b-stock_q4_k_m-07-health.txt
+qwen3.8-27b-stock:q4_k_m,history,8,4,5,5,12.648933283833841,161.64731460466172,10.645772783000211,20,,raw/01-qwen3.8-27b-stock_q4_k_m-08-history.txt
+qwen3.8-27b-stock:q4_k_m,law,9,2,5,5,12.642712519256431,164.41577461083588,15.419076094000047,20,,raw/01-qwen3.8-27b-stock_q4_k_m-09-law.txt
+qwen3.8-27b-stock:q4_k_m,math,10,0,5,5,12.676576791849977,141.40192825868857,8.280131265000819,20,,raw/01-qwen3.8-27b-stock_q4_k_m-10-math.txt
+qwen3.8-27b-stock:q4_k_m,other,11,4,5,5,12.676062586791415,128.87479156475038,5.5230072750000545,20,,raw/01-qwen3.8-27b-stock_q4_k_m-11-other.txt
+qwen3.8-27b-stock:q4_k_m,philosophy,12,4,5,5,12.674295325022797,127.72298774920911,7.724528331000329,20,,raw/01-qwen3.8-27b-stock_q4_k_m-12-philosophy.txt
+qwen3.8-27b-stock:q4_k_m,physics,13,1,5,5,12.649709309680063,133.57394995997367,9.397032638000383,20,,raw/01-qwen3.8-27b-stock_q4_k_m-13-physics.txt
+qwen3.8-27b-stock:q4_k_m,psychology,14,4,5,5,12.673604620289302,132.97911453867317,8.178457321999304,20,,raw/01-qwen3.8-27b-stock_q4_k_m-14-psychology.txt
+qwen3.6-27b-abliterated:q5_k_m,biology,1,5,5,5,11.61683721151763,152.40811685100766,17.832333579000988,20,,raw/02-qwen3.6-27b-abliterated_q5_k_m-01-biology.txt
+qwen3.6-27b-abliterated:q5_k_m,business,2,3,5,5,11.649546687014542,141.06558284440086,8.153994385998885,20,,raw/02-qwen3.6-27b-abliterated_q5_k_m-02-business.txt
+qwen3.6-27b-abliterated:q5_k_m,chemistry,3,3,5,5,11.620225467234741,163.97485961072096,10.630064525001217,20,,raw/02-qwen3.6-27b-abliterated_q5_k_m-03-chemistry.txt
+qwen3.6-27b-abliterated:q5_k_m,computer science,4,4,5,5,11.59472045998575,172.8308044356688,15.303115564000109,20,,raw/02-qwen3.6-27b-abliterated_q5_k_m-04-computer_science.txt
+qwen3.6-27b-abliterated:q5_k_m,economics,5,4,5,5,11.647178995011513,134.24109194139183,8.169530998999107,20,,raw/02-qwen3.6-27b-abliterated_q5_k_m-05-economics.txt
+qwen3.6-27b-abliterated:q5_k_m,engineering,6,5,5,5,11.643612314284383,134.32334817701692,9.163388542998291,20,,raw/02-qwen3.6-27b-abliterated_q5_k_m-06-engineering.txt
+qwen3.6-27b-abliterated:q5_k_m,health,7,4,5,5,11.643591978263743,121.5913142735526,7.426042666000285,20,,raw/02-qwen3.6-27b-abliterated_q5_k_m-07-health.txt
+qwen3.6-27b-abliterated:q5_k_m,history,8,4,5,5,11.614051143635617,163.8114382044274,10.656023845000163,20,,raw/02-qwen3.6-27b-abliterated_q5_k_m-08-history.txt
+qwen3.6-27b-abliterated:q5_k_m,law,9,3,5,5,11.621731242816317,166.8623753906189,15.350143549998393,20,,raw/02-qwen3.6-27b-abliterated_q5_k_m-09-law.txt
+qwen3.6-27b-abliterated:q5_k_m,math,10,1,5,5,11.649125995199396,144.73815128411212,8.175107830000343,20,,raw/02-qwen3.6-27b-abliterated_q5_k_m-10-math.txt
+qwen3.6-27b-abliterated:q5_k_m,other,11,4,5,5,11.645151279248982,131.1239220074912,5.555269694999879,20,,raw/02-qwen3.6-27b-abliterated_q5_k_m-11-other.txt
+qwen3.6-27b-abliterated:q5_k_m,philosophy,12,4,5,5,11.639377176927264,130.6149146626607,7.696173573000124,20,,raw/02-qwen3.6-27b-abliterated_q5_k_m-12-philosophy.txt
+qwen3.6-27b-abliterated:q5_k_m,physics,13,2,5,5,11.620279479341757,136.19070976209395,9.32151928500025,20,,raw/02-qwen3.6-27b-abliterated_q5_k_m-13-physics.txt
+qwen3.6-27b-abliterated:q5_k_m,psychology,14,4,5,5,11.64205342538317,135.80040028709377,8.151170858000114,20,,raw/02-qwen3.6-27b-abliterated_q5_k_m-14-psychology.txt
+devstral-patched:latest,biology,1,5,5,5,13.47562697038933,248.2874272945218,142.77577429099983,20,,raw/03-devstral-patched_latest-01-biology.txt
+devstral-patched:latest,business,2,3,5,5,13.517559647921642,211.1408000643284,5.495218275000298,20,,raw/03-devstral-patched_latest-02-business.txt
+devstral-patched:latest,chemistry,3,2,5,5,13.45939401770314,250.21775392579477,7.111277320000227,20,,raw/03-devstral-patched_latest-03-chemistry.txt
+devstral-patched:latest,computer science,4,4,5,5,13.44103184113238,266.05063822809353,10.266772726001363,20,,raw/03-devstral-patched_latest-04-computer_science.txt
+devstral-patched:latest,economics,5,2,5,5,13.512728314435783,209.83621731038352,5.427426475000175,20,,raw/03-devstral-patched_latest-05-economics.txt
+devstral-patched:latest,engineering,6,3,5,5,13.517970790368716,231.06909913666172,5.664627930000279,20,,raw/03-devstral-patched_latest-06-engineering.txt
+devstral-patched:latest,health,7,4,5,5,13.543372990586679,176.00069268439822,5.100397934000284,20,,raw/03-devstral-patched_latest-07-health.txt
+devstral-patched:latest,history,8,2,5,5,13.48151313807159,244.96229138586878,7.127641544000653,20,,raw/03-devstral-patched_latest-08-history.txt
+devstral-patched:latest,law,9,2,5,5,13.443290487326003,263.85583886117763,9.965005889000167,20,,raw/03-devstral-patched_latest-09-law.txt
+devstral-patched:latest,math,10,2,5,5,13.503313037853838,212.67782369640634,5.617252540001573,20,,raw/03-devstral-patched_latest-10-math.txt
+devstral-patched:latest,other,11,3,5,5,13.550282387884964,160.3340561814743,4.4005605970014585,20,,raw/03-devstral-patched_latest-11-other.txt
+devstral-patched:latest,philosophy,12,4,5,5,13.5273516286255,205.99959756909217,5.0783290849994955,20,,raw/03-devstral-patched_latest-12-philosophy.txt
+devstral-patched:latest,physics,13,2,5,5,13.52284244739107,229.20359762240113,5.662514816000112,20,,raw/03-devstral-patched_latest-13-physics.txt
+devstral-patched:latest,psychology,14,2,5,5,13.51834540859537,215.77258044246815,5.35451678499885,20,,raw/03-devstral-patched_latest-14-psychology.txt

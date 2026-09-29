@@ -1,0 +1,55 @@
+We need answer one MCQ. Need solve engineering fin minimum weight rectangular profile fin. Need output only line. Let's analyze carefully.
+
+Question: maximum heat dissipation from rectangular profile fin, designed for minimum weight, is 500 kcal per hour per meter width of fin. Base temp 110, ambient 10, h=90 kcal/m^2-hr-°C, k=35 kcal/m-hr-°C. Determine height and thickness. Assume thermal gradient at fin base is zero.
+
+We need identify formula for minimum weight rectangular fin? Rectangular profile fin of constant thickness? "designed for minimum weight" likely optimum rectangular fin: for given heat dissipation, base temp, h, k, minimize volume (weight) per unit width. There is known optimum rectangular fin: thickness t and length L such that? Let's derive.
+
+Rectangular fin of length L (height), thickness t, width b=1 m. Heat dissipated Q = sqrt(h P k A_c) (Tb-Ta) tanh(mL), where P perimeter ~ 2(b+t) but for thin fin P≈2b, A_c=b t. For per unit width b=1, P≈2, A_c=t. m = sqrt(h P/(k A_c)) = sqrt(2h/(k t)). Q = sqrt(h*2*k*t) ΔT tanh(L sqrt(2h/(k t))). Weight/volume per unit width V = L t.
+
+For minimum weight for given Q, optimize L,t. Known optimum: mL = 1.255? Or maybe for rectangular fin minimum weight: optimum parameter m L = 1.255? Let's recall. For a straight fin of uniform cross-section, maximum heat dissipation for given volume? There is optimum length for given base area? For minimum weight (volume) for specified heat dissipation, optimum fin parameter? Let's derive.
+
+Let x = mL. Q = C sqrt(t) tanh(x), where C = sqrt(2 h k) ΔT? Actually sqrt(h P k A_c) = sqrt(2 h k t). m = sqrt(2h/(k t)), L = x/m = x sqrt(k t/(2h)). Volume V = L t = x t^{3/2} sqrt(k/(2h)). For fixed Q, t^{1/2} tanh x = Q / sqrt(2 h k) ΔT = constant K. So t = [K / tanh x]^2. Then V ∝ x * t^{3/2} = x * K^3 / tanh^3 x. Minimize f(x)= x / tanh^3 x. derivative: ln f = ln x - 3 ln tanh x. d/dx: 1/x - 3 sech^2 x / tanh x = 0 => 1/x = 3/(sinh x cosh x) = 6/sinh(2x)? Since sech^2/tanh = 1/(sinh cosh). So 1/x = 3/(sinh x cosh x) => sinh x cosh x = 3x => (1/2)sinh 2x = 3x => sinh 2x = 6x. Solve x? Let's solve. x=1.255? sinh(2.51)=? sinh 2.51 ~ (e^2.51 - e^-2.51)/2 = (12.31-0.081)/2=6.115; 6x=7.53 no. x=1.5: sinh3=10.017, 9 -> >. x=1.4: sinh2.8=7.819, 8.4 -> <. x=1.45: sinh2.9=9.078, 8.7 -> >. root ~1.43? sinh2.86=8.55? 6*1.43=8.58. x~1.428. Hmm known optimum maybe 1.255 for maximum heat transfer for given volume? Let's check.
+
+Alternative objective: minimum weight for given heat dissipation maybe optimum mL = 1.255? Let's verify. There are different criteria: For a fin of given volume, maximum heat transfer occurs at mL=1.255? Let's derive for fixed volume V, maximize Q. Let V = L t = x t^{3/2} sqrt(k/(2h)) fixed => t ∝ V^{2/3} x^{-4/3}. Q ∝ sqrt(t) tanh x ∝ x^{-2/3} tanh x. Maximize g = tanh x / x^{2/3}. derivative: sech^2 x / x^{2/3} - (2/3) tanh x / x^{5/3}=0 => x sech^2 x = (2/3) tanh x => x/(sinh x cosh x) = 2/3 => sinh x cosh x = (3/2)x => sinh 2x = 3x. Solve x? x=1.255: sinh2.51=6.115, 3x=3.765 no. Wait maybe I made algebra. Let's recalc: g = tanh x * x^{-2/3}. ln g = ln tanh x - (2/3) ln x. derivative = sech^2/tanh - (2/3)(1/x)=0 => 1/(sinh cosh) = (2/3)(1/x) => x/(sinh cosh)=2/3 => sinh cosh = (3/2)x => sinh 2x = 3x. For x=1.255, sinh2.51=6.115, 3x=3.765, not. x=0.8: sinh1.6=2.376, 2.4 close. root ~0.8? That seems too small. Maybe known optimum for max heat transfer per unit volume is mL=1.255? Let's check known fin optimization: For a straight rectangular fin of minimum weight, optimum length is L_opt = 1.255 sqrt(k/(h t))? Or maybe optimum thickness? Let's recall from heat transfer: "For a rectangular fin of minimum weight, the optimum length is L = 1.255 sqrt(k/(h t))"? Hmm.
+
+Let's search memory: In fin design, for a given heat dissipation and minimum weight, optimum rectangular fin has length L = 1.255 sqrt(k/(h t))? Actually parameter m L = 1.255? Let's test with known formula: For a fin of uniform cross-section, the optimum length for maximum heat transfer for a given volume is L_opt = 1.255 sqrt(k A_c/(h P))? That is m L = 1.255. I recall "The optimum length of a fin for maximum heat transfer for a given volume is L_opt = 1.255 sqrt(k/(h))" maybe. Let's verify by derivation maybe I used wrong volume relation due to P not constant? Let's re-derive carefully.
+
+For rectangular fin per unit width, cross-section area A_c = t (if width 1). Perimeter P = 2(1+t) ≈ 2 if t small. But if t not negligible? Maybe exact P=2(1+t). But likely thin.
+
+Q = sqrt(h P k A_c) ΔT tanh(mL), m=sqrt(hP/(kA_c)). Let b=1. If P=2, A_c=t.
+
+Volume V = A_c L = t L.
+
+Let x=mL. Then L = x/m = x sqrt(k t/(2h)). V = t * x sqrt(k t/(2h)) = x sqrt(k/(2h)) t^{3/2}. So t = [V / (x sqrt(k/(2h)))]^{2/3}. Q = sqrt(2hk t) ΔT tanh x = sqrt(2hk ΔT) * [V / (x sqrt(k/(2h)))]^{1/3} * tanh x. Simplify constant: sqrt(2hk) * (V^{1/3}) * ( (2h/k)^{1/6} ) / x^{2/3} tanh x. Maximize tanh x / x^{2/3}. We got equation sinh 2x = 3x. Let's solve: x=0.8: sinh1.6=2.3756, 3x=2.4 close. x=0.81: sinh1.62=2.414? 3x=2.43. root ~0.805. That seems optimum x ~0.8, not 1.255. Did I recall wrong? Let's check known: For a fin of given volume, maximum heat transfer occurs at mL = 1.255? Let's test with x=1.255: g=tanh1.255 / 1.255^{2/3}. tanh=0.849, x^{2/3}=1.164, g=0.729. x=0.8: tanh=0.664, x^{2/3}=0.861, g=0.771. So x=0.8 better. Maybe known 1.255 is for minimum weight for given heat dissipation? Let's test our min weight equation gave x~1.43. g? For fixed Q, V ∝ x/tanh^3 x. At x=1.255: tanh=0.849, tanh^3=0.611, x/tanh^3=2.054. x=1.43: tanh=0.891, cube=0.707, ratio=2.023. x=1.5: tanh=0.905, cube=0.741, ratio=2.024. So optimum ~1.43. Not 1.255.
+
+Maybe if perimeter includes both sides and tip? For rectangular fin, heat transfer from tip also. But standard fin equation with convective tip boundary condition? "Assume thermal gradient at fin base is zero" weird. Wait "Assume the thermal gradient at the fin base is zero." That is unusual: thermal gradient at fin base zero? For a fin, base temperature specified, gradient at base not zero generally. Maybe they mean "thermal gradient at the fin tip is zero" (adiabatic tip) typo? The question says base? Let's read: "Assume the thermal gradient at the fin base is zero." Could be "tip" in original? If gradient at tip zero, standard adiabatic tip. If base zero, impossible with base temp? Maybe they mean "thermal gradient at the fin tip is zero" for optimum? Need parse.
+
+Maybe this is from a known problem: "The maximum heat dissipation from a rectangular profile fin, designed for minimum weight, is 500 kcal per hour per meter width of the fin. The fin base temperature and ambient air temperature are 110°C and 10°C, h=90, k=35. Determine height and thickness. Assume thermal gradient at the fin tip is zero." Options around thickness 5.14, length 44.85 etc. Need match.
+
+Let's compute using possible formulas.
+
+Given Q=500 kcal/hr per m width. ΔT=100°C. h=90, k=35.
+
+If using optimum minimum weight with x = mL = ? and Q formula. Need find t and L.
+
+Let's compute for x root ~1.43 (min weight fixed Q). Q = sqrt(2 h k t) ΔT tanh x. Solve t = Q^2 / [2 h k ΔT^2 tanh^2 x]. Then L = x sqrt(k t/(2h)). Let's calculate.
+
+2 h k = 2*90*35=6300. ΔT^2=10000. Denom base = 63,000,000 * tanh^2 x? Actually Q^2=250000. t = 250000 / (6300*10000*tanh^2 x) = 250000/(63,000,000 tanh^2)=0.00396825 / tanh^2 x m. If x=1.43, tanh? Let's compute accurately. Need root of sinh 2x=6x. Let's solve. x=1.42: 2x=2.84, sinh 2.84 = (e^2.84 - e^-2.84)/2. e^2.84=17.115? e^-2.84=0.0584, diff=17.0566/2=8.5283. 6x=8.52. close. x=1.421: 2.842, e^2.842=17.15, e^-=0.0583, sinh=8.5458, 6x=8.526. x=1.422: sinh 2.844? e^2.844=17.184, /2=8.562? 6x=8.532. root ~1.4205. tanh x = sinh/cosh. At x=1.42, e^x=4.137, e^-x=0.2417, sinh=1.9477, cosh=2.1894, tanh=0.8896. tanh^2=0.7914. t=0.003968/0.7914=0.005014 m =5.014 mm. L = x sqrt(k t/(2h)) =1.42 sqrt(35*0.005014/(180)) =1.42 sqrt(0.17549/180=0.0009749) =1.42*0.03122=0.04433 m=44.33 mm. Option D: thickness 5.14, length 44.85. Close. Option F: 5.14,42.85. Our result ~5.01,44.3. If x=1.255? Let's compute.
+
+x=1.255, tanh? e^1.255=3.508, e^-=0.285, sinh=1.6115, cosh=1.8965, tanh=0.8497, tanh^2=0.722. t=0.003968/0.722=0.005496 m=5.50 mm. L=1.255 sqrt(35*0.005496/180)=1.255 sqrt(0.19236/180=0.0010687)=1.255*0.03269=0.04103 m=41.0 mm. Not options (maybe B 4.14,40.85? no).
+
+If x=1.5? tanh=0.9051, t=0.003968/0.819=0.004845=4.845 mm, L=1.5 sqrt(35*0.004845/180)=1.5 sqrt(0.1696/180=0.000942)=1.5*0.03069=46.0 mm. Option? 5.14,47.85? no.
+
+If using exact perimeter P=2(1+t) not approximated, maybe t ~5.14, L~44.85. Let's test.
+
+For rectangular fin per unit width, P=2(1+t) (both sides plus edges? Actually perimeter of cross-section: 2(width+thickness)=2(1+t) m if width=1 m. A_c=t. m=sqrt(hP/(kA_c))=sqrt(90*2(1+t)/(35 t)) = sqrt(180(1+t)/(35t)) = sqrt(5.142857(1+t)/t). Q = sqrt(h P k A_c) ΔT tanh(mL) = sqrt(90*2(1+t)*35*t)*100 tanh = sqrt(6300 t(1+t))*100 tanh = 100*sqrt(6300)*sqrt(t(1+t)) tanh = 2490.38 sqrt(t(1+t)) tanh? sqrt6300=79.372, *100=7937.2? Wait sqrt(6300)=79.372, times 100 =7937.2. Q=7937.2 sqrt(t(1+t)) tanh. Set Q=500 => sqrt(t(1+t)) tanh = 0.06299.
+
+Optimization with exact P? Volume V=tL. m=sqrt(hP/(k t)) with P=2(1+t). x=mL. L=x/m = x sqrt(k t/(hP)) = x sqrt(35 t/(180(1+t))). V=tL = x sqrt(35/180) t^{3/2}/sqrt(1+t). For fixed Q, Q = sqrt(hP k t) ΔT tanh x = 100 sqrt(6300 t(1+t)) tanh x. So sqrt(t(1+t)) tanh x = constant C=Q/(100 sqrt6300)=500/(7937.25)=0.062994. Then t(1+t) = C^2 / tanh^2 x. Solve t = [-1 + sqrt(1+4 C^2/tanh^2 x)]/2. V ∝ x t^{3/2}/sqrt(1+t). Minimize. Could yield different x.
+
+But options thickness ~5 mm, length ~45 mm. Let's see if exact P and optimum x maybe yields t=5.14 mm, L=44.85 mm. Check Q for t=0.00514, L=0.04485. P=2(1.00514)=2.01028. A_c=0.00514. m=sqrt(90*2.01028/(35*0.00514)) = sqrt(180.925/(0.1799))=sqrt(1005.7)=31.71 m^-1. mL=1.422. tanh=0.8898. sqrt(hPkA_c)=sqrt(90*2.01028*35*0.00514)=sqrt(32.55)=5.705? Wait units: 90*2.010=180.9; *35=6332; *0.00514=32.55; sqrt=5.705. Q=5.705*100*0.8898=507.6 kcal/hr. Slight high. If t=5.014, L=44.33 with P approx gave Q=500. Exact P for t=5.014, L=44.33: P=2.01003, m=sqrt(90*2.010/(35*0.005014))=sqrt(180.9/0.1755)=sqrt1030.8=32.11, mL=1.423, sqrt term=sqrt(90*2.010*35*0.005014)=sqrt(28.78)=5.365, Q=5.365*100*0.890=477.5. Need larger t to get 500. t=5.14 gives 507.6. So option D plausible if exact P and maybe optimum x ~1.42.
+
+Let's compute exact optimum for minimum weight with exact P. Need see if t=5.14, L=44.85 matches. Let's derive or numerically optimize.
+
+Given Q fixed, exact P. Let C = Q/(ΔT sqrt(h k? wait)) maybe. Use dimensionless.
+
+Q = ΔT sqrt(h k t P) tanh x, P=2(1+t) (b=1). Let t in m. Define C = Q/(ΔT sqrt(2 h k)) = 500/(100

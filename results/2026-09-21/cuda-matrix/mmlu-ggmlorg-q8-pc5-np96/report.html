@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>MMLU-Pro benchmark</title><style>
+body{background:#111718;color:#e7eeee;font:16px system-ui,sans-serif;max-width:1800px;margin:2rem auto;padding:0 1rem}h1,h2{color:#fff}.card{background:#182122;border:1px solid #293536;border-radius:8px;padding:1rem;margin:1rem 0;overflow:auto}img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}th,td{border-bottom:1px solid #293536;padding:.55rem;text-align:left}th,.note{color:#9eafb0}code{color:#b9e5dc}
+</style></head><body><h1>Local LLM MMLU-Pro benchmark</h1>
+<p class="note">Started: <code>2026-09-21T08:26:22.247076-04:00</code> | State: <code>complete</code> | Answers scored: <code>70</code></p>
+<div class="card"><h2>Overall accuracy</h2><img src="overall-accuracy.svg"></div>
+<div class="card"><h2>Category comparison</h2><img src="category-heatmap.svg"></div>
+<div class="card"><h2>Ranking</h2><table><thead><tr><th>Rank</th><th>Model</th><th>Accuracy</th><th>Correct</th><th>Parsed</th><th>Generation tok/s</th></tr></thead><tbody><tr><td>1</td><td><code>qwen3.8-27b-ggmlorg:q8_0</code></td><td><strong>68.6%</strong></td><td>48/70</td><td>70/70</td><td>11.40</td></tr></tbody></table></div>
+<div class="card"><h2>Method</h2><p>Zero-shot direct-answer evaluation on a deterministic, balanced subset of the MMLU-Pro test split. 5 questions are selected from each of 14 categories (70 total). Questions are sent in category batches. Temperature is 0, seed is 42, thinking is disabled, and malformed or missing answers score as incorrect.</p><p class="note">This compact local comparison is not directly comparable to the official full 12,032-question, normally 5-shot CoT MMLU-Pro leaderboard.</p></div>
+</body></html>

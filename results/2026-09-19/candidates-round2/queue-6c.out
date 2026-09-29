@@ -1,0 +1,16 @@
+[09:11:10] ================ QUEUE-6C START ================
+[09:11:10] shims: 127.0.0.1:11500 127.0.0.1:11501
+[09:11:10] --- PHASE B: thinking-on MMLU-Pro (ctx 16384, num_predict 12288) ---
+[09:11:17] router stopped (was pid 2752137); GPU now 24501 MiB
+[09:11:17] !!! WARN: 24501 MiB still resident before load
+[09:11:19] router started from /home/hm/llama-cuda12 ctx=16384 (50631b3d2c56, pid 2770775)
+[09:11:19] ornith: MMLU-Pro THINKING-ON num_predict=12288
+[09:15:39] ornith: MMLU-think@12288 -> 100.00% parsed/attempt=15/15 tok=3635 tps=33.1 wall=4.1min (thinking-off tok=280, ratio=13.0x)
+[09:15:39] ornith: think DONE
+[09:15:39] !!! RIG-FAIL: router does not list 'nemotron-cascade-2-30b-a3b_q4_k_m'. Listed: 
+[09:15:44] router stopped (was pid none); GPU now 5973 MiB
+[09:15:44] !!! WARN: 5973 MiB still resident before load
+[09:15:46] router started from /home/hm/llama-cuda12-xing ctx=16384 (510016260020, pid 2779368)
+[09:15:46] xing: MMLU-Pro THINKING-ON num_predict=12288
+[09:16:37] !!! RIG-FAIL xing: thinking-on results unreadable ([Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-19/candidates-round2/mmlu-xing-think12288/results.json')
+[09:16:37] xing: think DONE

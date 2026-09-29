@@ -1,0 +1,22 @@
+def same_chars(s0: str, s1: str) -> bool:
+    """
+    Check if two words have the same characters.
+
+    Two words have the same characters if the set of distinct characters in each
+    word is identical. The order and the number of occurrences of characters do
+    not matter.
+
+    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')
+    True
+    >>> same_chars('abcd', 'dddddddabc')
+    True
+    >>> same_chars('dddddddabc', 'abcd')
+    True
+    >>> same_chars('eabcd', 'dddddddabc')
+    False
+    >>> same_chars('abcd', 'dddddddabce')
+    False
+    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')
+    False
+    """
+    return set(s0) == set(s1)

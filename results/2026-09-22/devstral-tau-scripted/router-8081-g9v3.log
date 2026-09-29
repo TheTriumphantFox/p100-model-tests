@@ -1,0 +1,126 @@
+0.00.016.405 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.017.522 I srv   load_models: Loaded 0 cached model presets
+0.00.255.034 I srv   load_models: Loaded 13 local model presets from /home/hm/llama-bench-models
+0.00.255.211 I srv    operator(): Available models (13) (*: custom preset)
+0.00.255.212 I srv    operator():     _dl
+0.00.255.212 I srv    operator():     devstral-patched_q8_0
+0.00.255.213 I srv    operator():     g9v3-39a5b_q4_k_m
+0.00.255.213 I srv    operator():     gemma4-e4b-abliterated_q4_k_m
+0.00.255.213 I srv    operator():     gpt-oss-20b_q8_0
+0.00.255.213 I srv    operator():     ornith-1.5-35b-a3b_q4_k_m
+0.00.255.213 I srv    operator():     qwen3.6-27b-abliterated_q5_k_m
+0.00.255.213 I srv    operator():     qwen3.6-27b-opus-distill_q4_k_m
+0.00.255.213 I srv    operator():     qwen3.6-35b-a3b-abliterated-vl_q4_k_m
+0.00.255.213 I srv    operator():     qwen3.8-27b-ggmlorg_q8_0
+0.00.255.214 I srv    operator():     qwen3.8-27b-stock_q4_k_m
+0.00.255.214 I srv    operator():     qwen3.8-27b-uncensored-hauhaucs_q6_k_p
+0.00.255.214 I srv    operator():     qwen3.8-27b-unsloth_q8_0
+0.00.255.264 W srv  llama_server: -----------------
+0.00.255.264 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.255.264 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.255.264 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.255.264 W srv  llama_server: -----------------
+0.00.255.272 W srv  llama_server: -----------------
+0.00.255.272 W srv  llama_server: the following feature(s) are enabled:
+0.00.255.273 W srv  llama_server:     router mode
+0.00.255.273 W srv  llama_server: do not expose the server to untrusted environments
+0.00.255.273 W srv  llama_server: -----------------
+0.00.255.274 I srv  llama_server: starting server in router mode. models will be automatically loaded on-demand
+0.00.256.492 I srv  llama_server: listening on http://127.0.0.1:8081
+0.05.732.532 I srv  ensure_model: model name=g9v3-39a5b_q4_k_m is not loaded, loading...
+0.05.732.566 I srv          load: spawning server instance with name=g9v3-39a5b_q4_k_m on port 57493
+0.05.732.584 I srv          load: spawning server instance with args:
+0.05.732.584 I srv          load:   /home/hm/llama-cuda12-g9v3/bin/llama-server
+0.05.732.584 I srv          load:   --host
+0.05.732.585 I srv          load:   127.0.0.1
+0.05.732.585 I srv          load:   --jinja
+0.05.732.585 I srv          load:   --port
+0.05.732.585 I srv          load:   57493
+0.05.732.585 I srv          load:   --alias
+0.05.732.585 I srv          load:   g9v3-39a5b_q4_k_m
+0.05.732.585 I srv          load:   --batch-size
+0.05.732.585 I srv          load:   512
+0.05.732.586 I srv          load:   --ctx-size
+0.05.732.586 I srv          load:   32768
+0.05.732.586 I srv          load:   --cache-type-k
+0.05.732.586 I srv          load:   q8_0
+0.05.732.586 I srv          load:   --cache-type-v
+0.05.732.586 I srv          load:   q8_0
+0.05.732.586 I srv          load:   --flash-attn
+0.05.732.586 I srv          load:   on
+0.05.732.586 I srv          load:   --model
+0.05.732.587 I srv          load:   /home/hm/llama-bench-models/g9v3-39a5b_q4_k_m.gguf
+0.05.732.587 I srv          load:   --parallel
+0.05.732.587 I srv          load:   1
+0.05.732.587 I srv          load:   --split-mode
+0.05.732.587 I srv          load:   layer
+0.05.732.587 I srv          load:   --ubatch-size
+0.05.732.587 I srv          load:   512
+0.05.732.784 I srv  ensure_model: waiting until model name=g9v3-39a5b_q4_k_m is fully loaded...
+[57493] 0.00.005.895 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+[57493] 0.00.006.102 W srv  llama_server: -----------------
+[57493] 0.00.006.103 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+[57493] 0.00.006.103 W srv  llama_server: this can be a security risk (cross-origin attacks)
+[57493] 0.00.006.103 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+[57493] 0.00.006.103 W srv  llama_server: -----------------
+[57493] 0.00.007.377 I srv    load_model: loading model '/home/hm/llama-bench-models/g9v3-39a5b_q4_k_m.gguf'
+[57493] /src/ggml/src/ggml.c:1804: GGML_ASSERT(obj_new) failed
+[57493] ⚠️ warning: The current terminal doesn't support styling.  Styled output might not appear as expected.
+[57493] [New LWP 509082]
+[57493] [New LWP 509080]
+[57493] [New LWP 509070]
+[57493] [New LWP 509069]
+[57493] [New LWP 509068]
+[57493] [New LWP 509067]
+[57493] [New LWP 509066]
+[57493] [New LWP 509065]
+[57493] [New LWP 509064]
+[57493] [New LWP 509063]
+[57493] [New LWP 509062]
+[57493] [New LWP 509061]
+[57493] [New LWP 509060]
+[57493] [New LWP 509059]
+[57493] [New LWP 509058]
+[57493] [New LWP 509057]
+[57493] [New LWP 509056]
+[57493] 
+[57493] This GDB supports auto-downloading debuginfo from the following URLs:
+[57493]   <https://debuginfod.archlinux.org>
+[57493]   <https://debuginfod.cachyos.org>
+[57493] Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+[57493] Debuginfod has been disabled.
+[57493] To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[57493] [Thread debugging using libthread_db enabled]
+[57493] Using host libthread_db library "/usr/lib/libthread_db.so.1".
+[57493] 0x00007f740aeb61f2 in ?? () from /usr/lib/libc.so.6
+[57493] #0  0x00007f740aeb61f2 in ?? () from /usr/lib/libc.so.6
+[57493] #1  0x00007f740af2ead2 in wait4 () from /usr/lib/libc.so.6
+[57493] #2  0x00007f740ad47853 in ggml_print_backtrace () from /home/hm/llama-cuda12-g9v3/lib/libggml-base.so.0
+[57493] #3  0x00007f740ad479fb in ggml_abort () from /home/hm/llama-cuda12-g9v3/lib/libggml-base.so.0
+[57493] #4  0x00007f740ad49f38 in ggml_new_tensor () from /home/hm/llama-cuda12-g9v3/lib/libggml-base.so.0
+[57493] #5  0x00007f740ad4ad18 in ggml_add () from /home/hm/llama-cuda12-g9v3/lib/libggml-base.so.0
+[57493] #6  0x00007f740a541bd8 in llm_graph_context::build_moe_ffn(ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, long, long, llm_ffn_op_type, bool, float, llama_expert_gating_func_type, int, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*) const () from /home/hm/llama-cuda12-g9v3/lib/libllama.so.0
+[57493] #7  0x00007f740a542168 in llm_graph_context::build_moe_ffn(ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, long, long, llm_ffn_op_type, bool, float, llama_expert_gating_func_type, int, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*, ggml_tensor*) const () from /home/hm/llama-cuda12-g9v3/lib/libllama.so.0
+[57493] #8  0x00007f740a6923f9 in llama_model_g9v3::graph::graph(llama_model const&, llm_graph_params const&) () from /home/hm/llama-cuda12-g9v3/lib/libllama.so.0
+[57493] #9  0x00007f740a6929c2 in llama_model_g9v3::build_arch_graph(llm_graph_params const&) const () from /home/hm/llama-cuda12-g9v3/lib/libllama.so.0
+[57493] #10 0x00007f740a5d37af in llama_model::build_graph(llm_graph_params const&) const () from /home/hm/llama-cuda12-g9v3/lib/libllama.so.0
+[57493] #11 0x00007f740a50a523 in llama_context::graph_reserve(unsigned int, unsigned int, unsigned int, llama_memory_context_i const*, bool, unsigned long*) () from /home/hm/llama-cuda12-g9v3/lib/libllama.so.0
+[57493] #12 0x00007f740a50b0ea in llama_context::resolve_fused_ops(llama_memory_context_i const*, unsigned int) () from /home/hm/llama-cuda12-g9v3/lib/libllama.so.0
+[57493] #13 0x00007f740a50bee3 in llama_context::sched_reserve() () from /home/hm/llama-cuda12-g9v3/lib/libllama.so.0
+[57493] #14 0x00007f740a50d179 in llama_context::llama_context(llama_model const&, llama_context_params) () from /home/hm/llama-cuda12-g9v3/lib/libllama.so.0
+[57493] #15 0x00007f740a50e454 in llama_init_from_model () from /home/hm/llama-cuda12-g9v3/lib/libllama.so.0
+[57493] #16 0x00007f740aa236c6 in common_get_device_memory_data_impl(char const*, llama_model_params const*, llama_context_params const*, std::vector<ggml_backend_device*, std::allocator<ggml_backend_device*> >&, unsigned int&, unsigned int&, unsigned int&, ggml_log_level) () from /home/hm/llama-cuda12-g9v3/lib/libllama-common.so.0
+[57493] #17 0x00007f740aa24e2b in common_params_fit_impl(char const*, llama_model_params*, llama_context_params*, float*, llama_model_tensor_buft_override*, unsigned long*, unsigned int, common_fit_extra_model const*, ggml_log_level) () from /home/hm/llama-cuda12-g9v3/lib/libllama-common.so.0
+[57493] #18 0x00007f740aa28e79 in common_fit_params(char const*, llama_model_params*, llama_context_params*, float*, llama_model_tensor_buft_override*, unsigned long*, unsigned int, common_fit_extra_model const*, ggml_log_level) () from /home/hm/llama-cuda12-g9v3/lib/libllama-common.so.0
+[57493] #19 0x00007f740a9f683e in common_init_result::common_init_result(common_params&, bool) () from /home/hm/llama-cuda12-g9v3/lib/libllama-common.so.0
+[57493] #20 0x00007f740a9f7be3 in common_init_from_params(common_params&, bool) () from /home/hm/llama-cuda12-g9v3/lib/libllama-common.so.0
+[57493] #21 0x00007f740b7634f6 in server_context_impl::load_model(common_params&) () from /home/hm/llama-cuda12-g9v3/lib/libllama-server-impl.so
+[57493] #22 0x00007f740b6c52b7 in llama_server(common_params&, int, char**) () from /home/hm/llama-cuda12-g9v3/lib/libllama-server-impl.so
+[57493] #23 0x00007f740b6c6726 in llama_server(int, char**) () from /home/hm/llama-cuda12-g9v3/lib/libllama-server-impl.so
+[57493] #24 0x00007f740ae27c8e in ?? () from /usr/lib/libc.so.6
+[57493] #25 0x00007f740ae27dcb in __libc_start_main () from /usr/lib/libc.so.6
+[57493] #26 0x00005611474e32a5 in _start ()
+[57493] [Inferior 1 (process 509050) detached]
+0.07.457.559 I srv    operator(): instance name=g9v3-39a5b_q4_k_m exited with status 1
+0.07.457.639 W srv    operator(): got exception: {"error":{"code":500,"message":"model name=g9v3-39a5b_q4_k_m failed to load","type":"server_error"}}
+0.30.439.394 I srv    operator(): operator(): cleaning up before exit...

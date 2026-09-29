@@ -1,0 +1,23 @@
+[01:04:43] ================ QUEUE-8 START (queue-7 finished) ================
+[01:04:43] shim :11501 reachable: 404fail
+[01:04:45] router stopped (was pid 329271); GPU now 37 MiB after 1x2s
+[01:04:47] router started from /home/hm/llama-cuda12 ctx=16384 (pid 330069)
+[01:04:47] qwen38-27b: MMLU-Pro THINKING-ON num_predict=12288
+[02:10:45] qwen38-27b: MMLU-think@12288 -> 80.00% parsed/attempt=60/70 tok=20083 tps=12.0 wall=35.9min (thinking-off tok=280, ratio=71.7x)
+[02:10:45] !!! WARN qwen38-27b: parsed 60/70 -- num_predict=12288 may be truncating the answer after the reasoning.
+[02:10:45] qwen38-27b: think DONE
+[02:10:45] --- THINKING-ON COLUMN COMPLETE ---
+model                                      off  on(scored)   delta  on(answered)   parsed      tok    tps
+qwen3.6-27b-abliterated:q5_k_m  (incumbent)   71.43      87.14%  +15.71        87.14%   70/70     44201   11.0
+qwen3.8-27b-stock:q4_k_m  (shelf)        67.14      80.00%  +12.86        93.33%   60/70     20083   12.0
+ornith-1.5-35b-a3b:q4_k_m                61.43      81.43%  +20.00        87.69%   65/70     41180   53.0
+                                       truncated at 12288: law (these score 0 and make the scored figure a floor)
+nemotron-cascade-2-30b-a3b:q4_k_m        48.57      71.43%  +22.86        83.33%   60/70     59583   68.4
+                                       truncated at 12288: chemistry, law (these score 0 and make the scored figure a floor)
+xing4.0-29b-a4b:iq4_nl                   44.29      40.00%   -4.29        87.50%   32/70    121269   29.5
+                                       truncated at 12288: chemistry, computer science, economics, engineering, history, law, other, psychology (these score 0 and make the scored figure a floor)
+g9v3-39a5b:q4_k_m                        67.14      68.57%   +1.43        87.27%   55/70     54288   38.1
+                                       truncated at 12288: chemistry, history, law (these score 0 and make the scored figure a floor)
+[02:10:48] router stopped (was pid 330069); GPU now 37 MiB after 1x2s
+[02:10:50] router started from /home/hm/llama-cuda12 ctx=8192 (pid 450463)
+[02:10:50] ================ QUEUE-8 DONE ================

@@ -1,0 +1,358 @@
+{
+  "metadata": {
+    "started": "2026-09-21T09:47:23.311702-04:00",
+    "interrupted": false,
+    "backend": "Ollama /api/chat",
+    "dataset": "/home/hm/Projects/Tests/datasets/mmlu_pro/data/test-00000-of-00001.parquet",
+    "dataset_sha256": "0e24a191921c2f453518a537a8b2117bd137e7714d4ef1565e9ba06c1ecb9ad8",
+    "method": "balanced deterministic zero-shot direct-answer subset",
+    "settings": {
+      "per_category": 1,
+      "batch_size": 1,
+      "categories_arg": "biology,chemistry,computer science,economics,engineering,health,history,law,math,physics",
+      "seed": 42,
+      "num_ctx": 49152,
+      "num_predict": 4864,
+      "temperature": 0,
+      "thinking": false
+    },
+    "categories": [
+      "biology",
+      "chemistry",
+      "computer science",
+      "economics",
+      "engineering",
+      "health",
+      "history",
+      "law",
+      "math",
+      "physics"
+    ],
+    "question_ids": {
+      "biology": [
+        3463
+      ],
+      "chemistry": [
+        3577
+      ],
+      "computer science": [
+        10743
+      ],
+      "economics": [
+        7111
+      ],
+      "engineering": [
+        11537
+      ],
+      "health": [
+        6232
+      ],
+      "history": [
+        4740
+      ],
+      "law": [
+        1078
+      ],
+      "math": [
+        8808
+      ],
+      "physics": [
+        9911
+      ]
+    },
+    "models": [
+      {
+        "name": "qwen3.8-27b-ggmlorg:q8_0",
+        "digest": "Qwen3.8-27B-Q8_0.gguf",
+        "size_bytes": 28595763648,
+        "parameter_size": "27B",
+        "quantization": "Q8_0",
+        "family": "qwen35"
+      }
+    ],
+    "updated": "2026-09-21T10:04:42.159658-04:00",
+    "finished": "2026-09-21T10:04:42.159603-04:00"
+  },
+  "results": [
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "biology",
+      "question_id": 3463,
+      "expected_answer": "C",
+      "predicted_answer": "C",
+      "correct": true,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-01-biology.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "chemistry",
+      "question_id": 3577,
+      "expected_answer": "F",
+      "predicted_answer": "F",
+      "correct": true,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-02-chemistry.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "computer science",
+      "question_id": 10743,
+      "expected_answer": "H",
+      "predicted_answer": "H",
+      "correct": true,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-03-computer_science.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "economics",
+      "question_id": 7111,
+      "expected_answer": "F",
+      "predicted_answer": "F",
+      "correct": true,
+      "batch": 4,
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-04-economics.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "engineering",
+      "question_id": 11537,
+      "expected_answer": "D",
+      "predicted_answer": "",
+      "correct": false,
+      "batch": 5,
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-05-engineering.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "health",
+      "question_id": 6232,
+      "expected_answer": "C",
+      "predicted_answer": "C",
+      "correct": true,
+      "batch": 6,
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-06-health.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "history",
+      "question_id": 4740,
+      "expected_answer": "C",
+      "predicted_answer": "C",
+      "correct": true,
+      "batch": 7,
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-07-history.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "law",
+      "question_id": 1078,
+      "expected_answer": "B",
+      "predicted_answer": "",
+      "correct": false,
+      "batch": 8,
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-08-law.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "math",
+      "question_id": 8808,
+      "expected_answer": "C",
+      "predicted_answer": "C",
+      "correct": true,
+      "batch": 9,
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-09-math.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "physics",
+      "question_id": 9911,
+      "expected_answer": "G",
+      "predicted_answer": "G",
+      "correct": true,
+      "batch": 10,
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-10-physics.txt",
+      "error": ""
+    }
+  ],
+  "batches": [
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "biology",
+      "batch": 1,
+      "correct": 1,
+      "total": 1,
+      "parsed": 1,
+      "generation_tps": 10.872416141439166,
+      "prompt_tps": 118.23434521618913,
+      "wall_seconds": 15.94739060199936,
+      "eval_count": 113,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-01-biology.txt"
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "chemistry",
+      "batch": 2,
+      "correct": 1,
+      "total": 1,
+      "parsed": 1,
+      "generation_tps": 10.897108209579228,
+      "prompt_tps": 128.73960437388928,
+      "wall_seconds": 11.944974582002033,
+      "eval_count": 101,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-02-chemistry.txt"
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "computer science",
+      "batch": 3,
+      "correct": 1,
+      "total": 1,
+      "parsed": 1,
+      "generation_tps": 10.850907594232181,
+      "prompt_tps": 104.43046236587213,
+      "wall_seconds": 17.950855777977267,
+      "eval_count": 174,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-03-computer_science.txt"
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "economics",
+      "batch": 4,
+      "correct": 1,
+      "total": 1,
+      "parsed": 1,
+      "generation_tps": 10.915444982240572,
+      "prompt_tps": 91.65478633091371,
+      "wall_seconds": 10.0681921299838,
+      "eval_count": 85,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-04-economics.txt"
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "engineering",
+      "batch": 5,
+      "correct": 0,
+      "total": 1,
+      "parsed": 0,
+      "generation_tps": 10.6620182838927,
+      "prompt_tps": 133.72820931411312,
+      "wall_seconds": 459.8059383799846,
+      "eval_count": 4864,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-05-engineering.txt"
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "health",
+      "batch": 6,
+      "correct": 1,
+      "total": 1,
+      "parsed": 1,
+      "generation_tps": 10.83020497333745,
+      "prompt_tps": 137.246217742702,
+      "wall_seconds": 23.155992636980955,
+      "eval_count": 222,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-06-health.txt"
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "history",
+      "batch": 7,
+      "correct": 1,
+      "total": 1,
+      "parsed": 1,
+      "generation_tps": 10.897298229176794,
+      "prompt_tps": 139.46661091699158,
+      "wall_seconds": 11.856523810012732,
+      "eval_count": 89,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-07-history.txt"
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "law",
+      "batch": 8,
+      "correct": 0,
+      "total": 1,
+      "parsed": 0,
+      "generation_tps": 10.650460263012329,
+      "prompt_tps": 130.8853349621286,
+      "wall_seconds": 462.050427663984,
+      "eval_count": 4864,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-08-law.txt"
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "math",
+      "batch": 9,
+      "correct": 1,
+      "total": 1,
+      "parsed": 1,
+      "generation_tps": 10.890712715721355,
+      "prompt_tps": 88.9410596175986,
+      "wall_seconds": 12.180911060975632,
+      "eval_count": 107,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-09-math.txt"
+    },
+    {
+      "model": "qwen3.8-27b-ggmlorg:q8_0",
+      "category": "physics",
+      "batch": 10,
+      "correct": 1,
+      "total": 1,
+      "parsed": 1,
+      "generation_tps": 10.875865375776254,
+      "prompt_tps": 103.8498084725889,
+      "wall_seconds": 13.849607654992724,
+      "eval_count": 126,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-27b-ggmlorg_q8_0-10-physics.txt"
+    }
+  ],
+  "model_summaries": [
+    {
+      "name": "qwen3.8-27b-ggmlorg:q8_0",
+      "digest": "Qwen3.8-27B-Q8_0.gguf",
+      "size_bytes": 28595763648,
+      "parameter_size": "27B",
+      "quantization": "Q8_0",
+      "family": "qwen35",
+      "accuracy": 80.0,
+      "correct": 8,
+      "total": 10,
+      "parsed": 8,
+      "category_scores": {
+        "biology": 100.0,
+        "chemistry": 100.0,
+        "computer science": 100.0,
+        "economics": 100.0,
+        "engineering": 0.0,
+        "health": 100.0,
+        "history": 100.0,
+        "law": 0.0,
+        "math": 100.0,
+        "physics": 100.0
+      },
+      "generation_tps": 10.834243676840803,
+      "wall_seconds": 1038.810814298893
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+[2026-09-23 21:00:00] === planner benchmark starting: 40 tasks per model ===
+selftest ok: 40 tasks; ideal plans admitted by the grammar and scored correct; every broken variant classified as intended
+[2026-09-23 21:00:03] router stopped (was none); GPU 33 MiB
+[2026-09-23 21:00:05] router started from /home/hm/llama-cuda12-g9v3 ctx=32768 (pid 3639294)
+[2026-09-23 21:02:25] g9v3: load HTTP 200, weights 22468 MiB, GPU 24985 MiB
+[2026-09-23 21:02:25] g9v3: running 40 tasks (attempt 1)
+[2026-09-23 21:46:42] g9v3: run.py rc=0 after 44m
+[2026-09-23 21:46:46] router stopped (was 3639294); GPU 33 MiB
+[2026-09-23 21:46:48] router started from /home/hm/llama-cuda12 ctx=32768 (pid 3724062)
+[2026-09-23 21:49:14] devstral: load HTTP 200, weights 23895 MiB, GPU 29711 MiB
+[2026-09-23 21:49:14] devstral: running 40 tasks (attempt 1)
+[2026-09-23 23:40:58] devstral: run.py rc=0 after 111m
+[2026-09-23 23:41:08] gptoss: load HTTP 200, weights 11549 MiB, GPU 12897 MiB
+[2026-09-23 23:41:08] gptoss: running 40 tasks (attempt 1)
+[2026-09-24 00:40:02] gptoss: run.py rc=0 after 58m
+[2026-09-24 00:41:59] ornith: load HTTP 200, weights 20708 MiB, GPU 21731 MiB
+[2026-09-24 00:41:59] ornith: running 40 tasks (attempt 1)
+[2026-09-24 01:09:42] ornith: run.py rc=0 after 27m
+[2026-09-24 01:11:36] qwen36: load HTTP 200, weights 19849 MiB, GPU 22391 MiB
+[2026-09-24 01:11:36] qwen36: running 40 tasks (attempt 1)
+[2026-09-24 03:18:36] qwen36: run.py rc=0 after 127m
+[2026-09-24 03:22:57] qwen38: load HTTP 200, weights 27702 MiB, GPU 29725 MiB
+[2026-09-24 03:22:57] qwen38: running 40 tasks (attempt 1)
+[2026-09-24 05:31:37] qwen38: run.py rc=0 after 128m
+Traceback (most recent call last):
+  File "/home/hm/Projects/Tests/2026-09-23/planner-bench/summarise.py", line 240, in <module>
+    main()
+    ~~~~^^
+  File "/home/hm/Projects/Tests/2026-09-23/planner-bench/summarise.py", line 211, in main
+    f"| {statistics.median(bpt):.2f} | {largest(120)} | {largest(240)} "
+         ~~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/lib/python3.14/statistics.py", line 343, in median
+    raise StatisticsError("no median for empty data")
+statistics.StatisticsError: no median for empty data
+[2026-09-24 05:31:38] === all models done; RESULTS.md written ===
+[2026-09-24 05:31:42] router stopped (was 3724062); GPU 33 MiB
+[2026-09-24 05:31:42] === exit: bench router stopped, :8080 devstral service restarted ===
+[2026-09-24 05:32:29] rerun: main run finished; looking for results cut off by the old token cap
+[2026-09-24 05:32:29] rerun: 4 capped result(s) moved to 'superseded'; re-running them with no token cap
+[2026-09-24 05:32:29] === planner benchmark starting: 40 tasks per model ===
+selftest ok: 40 tasks; ideal plans admitted by the grammar and scored correct; every broken variant classified as intended
+[2026-09-24 05:32:32] router stopped (was none); GPU 33 MiB
+[2026-09-24 05:32:34] router started from /home/hm/llama-cuda12-g9v3 ctx=32768 (pid 385212)
+[2026-09-24 05:34:54] g9v3: load HTTP 200, weights 22468 MiB, GPU 24985 MiB
+[2026-09-24 05:34:54] g9v3: running 40 tasks (attempt 1)
+[2026-09-24 05:49:45] g9v3: run.py rc=0 after 14m
+[2026-09-24 05:49:49] router stopped (was 385212); GPU 33 MiB
+[2026-09-24 05:49:51] router started from /home/hm/llama-cuda12 ctx=32768 (pid 416992)
+[2026-09-24 05:49:51] devstral: already complete, skipping
+[2026-09-24 05:50:00] gptoss: load HTTP 200, weights 11549 MiB, GPU 12897 MiB
+[2026-09-24 05:50:00] gptoss: running 40 tasks (attempt 1)
+[2026-09-24 06:04:25] gptoss: run.py rc=0 after 14m
+[2026-09-24 06:04:25] ornith: already complete, skipping
+[2026-09-24 06:04:25] qwen36: already complete, skipping
+[2026-09-24 06:04:25] qwen38: already complete, skipping
+[2026-09-24 06:04:25] === all models done; RESULTS.md written ===
+[2026-09-24 06:04:29] router stopped (was 416992); GPU 33 MiB
+[2026-09-24 06:04:29] === exit: bench router stopped, :8080 devstral service restarted ===
+[2026-09-24 08:06:22] === planner benchmark starting: 40 tasks per model ===
+selftest ok: 40 tasks; ideal plans admitted by the grammar and scored correct; every broken variant classified as intended
+[2026-09-24 08:06:25] router stopped (was none); GPU 33 MiB
+[2026-09-24 08:06:27] router started from /home/hm/llama-cuda12-g9v3 ctx=32768 (pid 666068)
+[2026-09-24 08:06:27] g9v3: already complete, skipping
+[2026-09-24 08:06:31] router stopped (was 666068); GPU 33 MiB
+[2026-09-24 08:06:33] router started from /home/hm/llama-cuda12 ctx=32768 (pid 666254)
+[2026-09-24 08:06:33] devstral: already complete, skipping
+[2026-09-24 08:06:33] gptoss: already complete, skipping
+[2026-09-24 08:06:33] ornith: already complete, skipping
+[2026-09-24 08:06:33] qwen36: already complete, skipping
+[2026-09-24 08:06:33] qwen38: already complete, skipping
+[2026-09-24 08:06:41] qwen36moe: load HTTP 200, weights 27951 MiB, GPU 29251 MiB
+[2026-09-24 08:06:41] qwen36moe: running 40 tasks (attempt 1)
+[2026-09-24 08:34:09] qwen36moe: run.py rc=0 after 27m
+[2026-09-24 08:34:09] === all models done; RESULTS.md written ===
+[2026-09-24 08:34:14] router stopped (was 666254); GPU 33 MiB
+[2026-09-24 08:34:14] === exit: bench router stopped, :8080 devstral service restarted ===
+[2026-09-24 08:34:43] pinned: === pinned-checks pass starting ===
+selftest ok: 40 tasks; ideal plans admitted by the grammar and scored correct; every broken variant classified as intended
+[2026-09-24 08:34:46] pinned: router stopped; GPU 33 MiB
+[2026-09-24 08:37:41] pinned: qwen36moe: load HTTP 200, weights 27951 MiB, GPU 29251 MiB
+[2026-09-24 08:37:41] pinned: qwen36moe-pinned: running 40 tasks with the check sequence pinned
+[2026-09-24 09:05:20] pinned: qwen36moe-pinned: run.py rc=0 after 27m
+[2026-09-24 09:07:18] pinned: ornith: load HTTP 200, weights 20708 MiB, GPU 21731 MiB
+[2026-09-24 09:07:18] pinned: ornith-pinned: running 40 tasks with the check sequence pinned
+[2026-09-24 09:35:02] pinned: ornith-pinned: run.py rc=0 after 27m
+[2026-09-24 09:35:02] pinned: RESULTS.md updated
+[2026-09-24 09:35:06] pinned: router stopped; GPU 33 MiB
+[2026-09-24 09:35:06] pinned: === exit: :8080 devstral service restarted ===

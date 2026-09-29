@@ -1,0 +1,118 @@
+[  0] PASS  steps= 8   154.5s  tools=5
+[  1] PASS  steps= 9    41.1s  tools=6
+[  2] PASS  steps=13    44.1s  tools=10
+[  3] fail  steps=12    39.7s  tools=9
+[  4] PASS  steps=11    42.4s  tools=8
+[  5] fail  steps= 9    50.7s  tools=6
+[  6] fail  steps= 4    19.1s  tools=1
+[  7] PASS  steps= 9    49.9s  tools=6
+[  8] PASS  steps=10    45.4s  tools=7
+[  9] fail  steps= 4    14.9s  tools=1
+[ 10] PASS  steps= 7    32.7s  tools=5
+[ 11] PASS  steps=10    35.6s  tools=7
+[ 12] fail  steps= 8    30.6s  tools=5
+[ 13] PASS  steps= 8    33.9s  tools=5
+[ 14] PASS  steps= 9    35.2s  tools=6
+[ 15] PASS  steps= 8    62.4s  tools=5
+[ 16] PASS  steps=11    57.9s  tools=8
+[ 17] PASS  steps= 6    22.8s  tools=3
+[ 18] fail  steps= 4   104.8s  tools=1
+[ 19] PASS  steps=10    59.5s  tools=7
+[ 20] fail  steps=14    51.2s  tools=11
+[ 21] PASS  steps=10    76.3s  tools=7
+[ 22] fail  steps= 8    29.8s  tools=5
+[ 23] fail  steps=13    76.4s  tools=10
+[ 24] fail  steps= 9    35.0s  tools=6
+[ 25] PASS  steps= 9    42.0s  tools=7
+[ 26] PASS  steps=10   100.5s  tools=7
+[ 27] fail  steps= 8    70.3s  tools=5
+[ 28] PASS  steps=12    68.1s  tools=9
+[ 29] PASS  steps=13   314.0s  tools=10
+[ 30] fail  steps=15    65.2s  tools=12
+[ 31] fail  steps=13    45.2s  tools=10
+[ 32] fail  steps=14    58.2s  tools=11
+[ 33] PASS  steps= 7    20.1s  tools=4
+[ 34] fail  steps= 7    28.1s  tools=4
+[ 35] PASS  steps=11    78.6s  tools=8
+[ 36] fail  steps=14    53.1s  tools=11
+[ 37] fail  steps=13    56.8s  tools=10
+[ 38] fail  steps=13    48.4s  tools=10
+[ 39] fail  steps= 7    34.0s  tools=4
+[ 40] PASS  steps= 7    20.4s  tools=4
+[ 41] fail  steps=11   148.4s  tools=8
+[ 42] PASS  steps=12    45.9s  tools=9
+[ 43] fail  steps= 4    18.6s  tools=1
+[ 44] fail  steps= 8    51.2s  tools=5
+[ 45] PASS  steps= 8    61.1s  tools=5
+[ 46] fail  steps= 8    42.4s  tools=5
+[ 47] PASS  steps= 7    31.9s  tools=4
+[ 48] fail  steps= 4    13.8s  tools=1
+[ 49] fail  steps=11    53.8s  tools=8
+[ 50] PASS  steps= 3    21.0s  tools=0
+[ 51] fail  steps= 5    18.3s  tools=2
+[ 52] fail  steps= 7    38.8s  tools=4
+[ 53] fail  steps= 5    14.1s  tools=2
+[ 54] PASS  steps=19   118.1s  tools=16
+[ 55] fail  steps=12    47.1s  tools=9
+[ 56] PASS  steps=10    41.1s  tools=7
+[ 57] PASS  steps= 6    32.3s  tools=3
+[ 58] fail  steps= 4    41.7s  tools=1
+[ 59] fail  steps= 8    72.3s  tools=5
+[ 60] PASS  steps= 8    42.0s  tools=5
+[ 61] PASS  steps= 7    49.9s  tools=4
+[ 62] fail  steps=10    48.5s  tools=7
+[ 63] fail  steps= 9    42.9s  tools=6
+[ 64] PASS  steps= 8    34.5s  tools=5
+[ 65] PASS  steps= 6    24.3s  tools=3
+[ 66] fail  steps= 9    33.2s  tools=6
+[ 67] PASS  steps= 7    20.1s  tools=4
+[ 68] PASS  steps= 8    26.9s  tools=5
+[ 69] fail  steps= 7    24.6s  tools=4
+[ 70] PASS  steps=11    36.6s  tools=8
+[ 71] fail  steps= 7    25.9s  tools=4
+[ 72] fail  steps=11    54.4s  tools=9
+[ 73] PASS  steps= 7    21.9s  tools=4
+[ 74] fail  steps=10    45.1s  tools=7
+[ 75] PASS  steps= 8    33.6s  tools=5
+[ 76] fail  steps=14    46.7s  tools=11
+[ 77] PASS  steps= 8    30.4s  tools=5
+[ 78] PASS  steps=12    50.4s  tools=9
+[ 79] fail  steps= 8    35.5s  tools=5
+[ 80] PASS  steps= 8    36.3s  tools=5
+[ 81] fail  steps= 9    28.0s  tools=6
+[ 82] PASS  steps=11    55.8s  tools=8
+[ 83] PASS  steps=10    35.9s  tools=7
+[ 84] fail  steps= 4    18.7s  tools=1
+[ 85] fail  steps= 4     9.9s  tools=1
+[ 86] fail  steps=11    36.2s  tools=8
+[ 87] fail  steps=10    26.8s  tools=7
+[ 88] PASS  steps= 9    30.0s  tools=6
+[ 89] fail  steps= 9    37.0s  tools=6
+[ 90] PASS  steps= 8    27.1s  tools=5
+[ 91] fail  steps= 9    61.7s  tools=6
+[ 92] PASS  steps= 9    68.3s  tools=6
+[ 93] fail  steps= 9    70.3s  tools=6
+[ 94] fail  steps= 4    12.2s  tools=1
+[ 95] fail  steps= 9    36.5s  tools=6
+[ 96] PASS  steps=11    50.0s  tools=8
+[ 97] fail  steps= 9    44.5s  tools=6
+[ 98] fail  steps=10    49.1s  tools=7
+[ 99] fail  steps= 4    11.0s  tools=1
+[100] PASS  steps=14    65.4s  tools=11
+[101] fail  steps= 4    49.7s  tools=1
+[102] fail  steps=11    40.2s  tools=8
+[103] fail  steps= 4    27.3s  tools=1
+[104] fail  steps=16    85.1s  tools=13
+[105] fail  steps=15    70.6s  tools=12
+[106] PASS  steps= 7    35.1s  tools=4
+[107] PASS  steps=10    32.3s  tools=7
+[108] PASS  steps=11    53.5s  tools=8
+[109] PASS  steps=10    47.2s  tools=7
+[110] fail  steps=11    65.5s  tools=8
+[111] fail  steps=11    55.2s  tools=8
+[112] fail  steps= 4    29.4s  tools=1
+[113] fail  steps=11    51.5s  tools=8
+[114] fail  steps= 9    37.3s  tools=6
+
+pass 52/115 (45.2%)   correct-state incl. unterminated 52/115   unterminated 0   parse failures 0
+total 5481s   ->  /home/hm/Projects/Tests/2026-09-22/devstral-tau-scripted/retail_gptoss.json

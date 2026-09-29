@@ -1,0 +1,7 @@
+{
+  "dataset": "t2i_compbench",
+  "category": "non_spatial",
+  "prompt_id": "non_spatial_0123",
+  "index": 123,
+  "prompt": "A man is holding a telescope and stargazing in the middle of the night."
+}

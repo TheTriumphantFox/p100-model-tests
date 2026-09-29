@@ -1,0 +1,156 @@
+{
+  "source": "manifest.jsonl",
+  "charts": [
+    {
+      "title": "3d_spatial \u2014 CLIP alignment",
+      "svg": "test_3d_spatial_clip.svg",
+      "png": "test_3d_spatial_clip.png"
+    },
+    {
+      "title": "3d_spatial \u2014 generation speed",
+      "svg": "test_3d_spatial_speed.svg",
+      "png": "test_3d_spatial_speed.png"
+    },
+    {
+      "title": "color \u2014 CLIP alignment",
+      "svg": "test_color_clip.svg",
+      "png": "test_color_clip.png"
+    },
+    {
+      "title": "color \u2014 generation speed",
+      "svg": "test_color_speed.svg",
+      "png": "test_color_speed.png"
+    },
+    {
+      "title": "color_attr \u2014 CLIP alignment",
+      "svg": "test_color_attr_clip.svg",
+      "png": "test_color_attr_clip.png"
+    },
+    {
+      "title": "color_attr \u2014 generation speed",
+      "svg": "test_color_attr_speed.svg",
+      "png": "test_color_attr_speed.png"
+    },
+    {
+      "title": "colors \u2014 CLIP alignment",
+      "svg": "test_colors_clip.svg",
+      "png": "test_colors_clip.png"
+    },
+    {
+      "title": "colors \u2014 generation speed",
+      "svg": "test_colors_speed.svg",
+      "png": "test_colors_speed.png"
+    },
+    {
+      "title": "complex \u2014 CLIP alignment",
+      "svg": "test_complex_clip.svg",
+      "png": "test_complex_clip.png"
+    },
+    {
+      "title": "complex \u2014 generation speed",
+      "svg": "test_complex_speed.svg",
+      "png": "test_complex_speed.png"
+    },
+    {
+      "title": "counting \u2014 CLIP alignment",
+      "svg": "test_counting_clip.svg",
+      "png": "test_counting_clip.png"
+    },
+    {
+      "title": "counting \u2014 generation speed",
+      "svg": "test_counting_speed.svg",
+      "png": "test_counting_speed.png"
+    },
+    {
+      "title": "non_spatial \u2014 CLIP alignment",
+      "svg": "test_non_spatial_clip.svg",
+      "png": "test_non_spatial_clip.png"
+    },
+    {
+      "title": "non_spatial \u2014 generation speed",
+      "svg": "test_non_spatial_speed.svg",
+      "png": "test_non_spatial_speed.png"
+    },
+    {
+      "title": "numeracy \u2014 CLIP alignment",
+      "svg": "test_numeracy_clip.svg",
+      "png": "test_numeracy_clip.png"
+    },
+    {
+      "title": "numeracy \u2014 generation speed",
+      "svg": "test_numeracy_speed.svg",
+      "png": "test_numeracy_speed.png"
+    },
+    {
+      "title": "position \u2014 CLIP alignment",
+      "svg": "test_position_clip.svg",
+      "png": "test_position_clip.png"
+    },
+    {
+      "title": "position \u2014 generation speed",
+      "svg": "test_position_speed.svg",
+      "png": "test_position_speed.png"
+    },
+    {
+      "title": "shape \u2014 CLIP alignment",
+      "svg": "test_shape_clip.svg",
+      "png": "test_shape_clip.png"
+    },
+    {
+      "title": "shape \u2014 generation speed",
+      "svg": "test_shape_speed.svg",
+      "png": "test_shape_speed.png"
+    },
+    {
+      "title": "single_object \u2014 CLIP alignment",
+      "svg": "test_single_object_clip.svg",
+      "png": "test_single_object_clip.png"
+    },
+    {
+      "title": "single_object \u2014 generation speed",
+      "svg": "test_single_object_speed.svg",
+      "png": "test_single_object_speed.png"
+    },
+    {
+      "title": "spatial \u2014 CLIP alignment",
+      "svg": "test_spatial_clip.svg",
+      "png": "test_spatial_clip.png"
+    },
+    {
+      "title": "spatial \u2014 generation speed",
+      "svg": "test_spatial_speed.svg",
+      "png": "test_spatial_speed.png"
+    },
+    {
+      "title": "texture \u2014 CLIP alignment",
+      "svg": "test_texture_clip.svg",
+      "png": "test_texture_clip.png"
+    },
+    {
+      "title": "texture \u2014 generation speed",
+      "svg": "test_texture_speed.svg",
+      "png": "test_texture_speed.png"
+    },
+    {
+      "title": "two_object \u2014 CLIP alignment",
+      "svg": "test_two_object_clip.svg",
+      "png": "test_two_object_clip.png"
+    },
+    {
+      "title": "two_object \u2014 generation speed",
+      "svg": "test_two_object_speed.svg",
+      "png": "test_two_object_speed.png"
+    },
+    {
+      "title": "Overall \u2014 CLIP prompt alignment",
+      "svg": "overall_clip_alignment.svg",
+      "png": "overall_clip_alignment.png"
+    },
+    {
+      "title": "Overall \u2014 generation speed",
+      "svg": "overall_generation_speed.svg",
+      "png": "overall_generation_speed.png"
+    }
+  ],
+  "metric": "CLIP prompt-image cosine similarity plus images/minute"
+}

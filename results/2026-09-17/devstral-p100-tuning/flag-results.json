@@ -1,0 +1,121 @@
+{
+  "started": "2026-09-17T17:41:35.701994-04:00",
+  "model": "hf.co/lmstudio-community/Devstral-Small-2-24B-Instruct-2512-GGUF:q8_0",
+  "settings": {
+    "trials": 2,
+    "num_ctx": 2048,
+    "num_predict": 128,
+    "temperature": 0,
+    "seed": 42
+  },
+  "configurations": [
+    {
+      "name": "baseline",
+      "environment": {},
+      "warmup_wall_seconds": 187.91176547500072,
+      "warmup_load_seconds": 75.708290813,
+      "processor": "NAME                                                                     ID              SIZE     PROCESSOR    CONTEXT    UNTIL              \nhf.co/lmstudio-community/Devstral-Small-2-24B-Instruct-2512-GGUF:q8_0    18917eee3e39    25 GB    100% GPU     2048       9 minutes from now",
+      "mean_prompt_tps": 11.023003280685451,
+      "mean_generation_tps": 12.418878275165953,
+      "trials": [
+        {
+          "prompt_tokens": 1191,
+          "prompt_tps": 11.02229653259374,
+          "generated_tokens": 128,
+          "generation_tps": 12.377038234701716,
+          "done_reason": "length"
+        },
+        {
+          "prompt_tokens": 1191,
+          "prompt_tps": 11.02371002877716,
+          "generated_tokens": 128,
+          "generation_tps": 12.46071831563019,
+          "done_reason": "length"
+        }
+      ]
+    },
+    {
+      "name": "disable-int-dot",
+      "environment": {
+        "GGML_VK_DISABLE_INTEGER_DOT_PRODUCT": "1"
+      },
+      "warmup_wall_seconds": 18.333324511986575,
+      "warmup_load_seconds": 11.521895866,
+      "processor": "NAME                                                                     ID              SIZE     PROCESSOR    CONTEXT    UNTIL              \nhf.co/lmstudio-community/Devstral-Small-2-24B-Instruct-2512-GGUF:q8_0    18917eee3e39    25 GB    100% GPU     2048       9 minutes from now",
+      "mean_prompt_tps": 255.97979814359593,
+      "mean_generation_tps": 10.181380108414151,
+      "trials": [
+        {
+          "prompt_tokens": 1194,
+          "prompt_tps": 255.81584687043377,
+          "generated_tokens": 128,
+          "generation_tps": 10.18098692737417,
+          "done_reason": "length"
+        },
+        {
+          "prompt_tokens": 1194,
+          "prompt_tps": 256.1437494167581,
+          "generated_tokens": 128,
+          "generation_tps": 10.181773289454133,
+          "done_reason": "length"
+        }
+      ]
+    },
+    {
+      "name": "disable-mmvq",
+      "environment": {
+        "GGML_VK_DISABLE_MMVQ": "1"
+      },
+      "warmup_wall_seconds": 119.41792860299756,
+      "warmup_load_seconds": 8.771150802,
+      "processor": "NAME                                                                     ID              SIZE     PROCESSOR    CONTEXT    UNTIL              \nhf.co/lmstudio-community/Devstral-Small-2-24B-Instruct-2512-GGUF:q8_0    18917eee3e39    25 GB    100% GPU     2048       9 minutes from now",
+      "mean_prompt_tps": 11.057531375641943,
+      "mean_generation_tps": 10.067611407476772,
+      "trials": [
+        {
+          "prompt_tokens": 1194,
+          "prompt_tps": 11.057714881544925,
+          "generated_tokens": 128,
+          "generation_tps": 10.094457306991217,
+          "done_reason": "length"
+        },
+        {
+          "prompt_tokens": 1194,
+          "prompt_tps": 11.05734786973896,
+          "generated_tokens": 128,
+          "generation_tps": 10.040765507962327,
+          "done_reason": "length"
+        }
+      ]
+    },
+    {
+      "name": "disable-both",
+      "environment": {
+        "GGML_VK_DISABLE_INTEGER_DOT_PRODUCT": "1",
+        "GGML_VK_DISABLE_MMVQ": "1"
+      },
+      "warmup_wall_seconds": 14.679095642000902,
+      "warmup_load_seconds": 8.513204205,
+      "processor": "NAME                                                                     ID              SIZE     PROCESSOR    CONTEXT    UNTIL              \nhf.co/lmstudio-community/Devstral-Small-2-24B-Instruct-2512-GGUF:q8_0    18917eee3e39    25 GB    100% GPU     2048       9 minutes from now",
+      "mean_prompt_tps": 255.83327784984237,
+      "mean_generation_tps": 10.181751048135162,
+      "trials": [
+        {
+          "prompt_tokens": 1193,
+          "prompt_tps": 255.602143372877,
+          "generated_tokens": 128,
+          "generation_tps": 10.181187758044391,
+          "done_reason": "length"
+        },
+        {
+          "prompt_tokens": 1193,
+          "prompt_tps": 256.0644123268077,
+          "generated_tokens": 128,
+          "generation_tps": 10.182314338225934,
+          "done_reason": "length"
+        }
+      ]
+    }
+  ],
+  "finished": "2026-09-17T17:56:38.663488-04:00"
+}

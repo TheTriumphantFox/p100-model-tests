@@ -1,0 +1,40 @@
+def check_if_last_char_is_a_letter(txt: str) -> bool:
+    """
+    Return True if the last character of `txt` is an alphabetical
+    character and it forms a single‑letter word at the end of the string.
+    Otherwise return False.
+
+    A single‑letter word at the end means:
+    - The last character is a letter.
+    - Either the string has only that character, or the character
+      is preceded by a space.
+    - The string does not end with a space.
+
+    Parameters
+    ----------
+    txt : str
+        The input string to check.
+
+    Returns
+    -------
+    bool
+        True if the last character is a letter and not part of a larger word,
+        False otherwise.
+    """
+    if not txt:
+        return False
+
+    last_char = txt[-1]
+    if not last_char.isalpha():
+        return False
+
+    # If the string ends with a space, it's not a letter at the end.
+    if last_char == ' ':
+        return False
+
+    # If the string has only one character, it's a single-letter word.
+    if len(txt) == 1:
+        return True
+
+    # Check if the preceding character is a space.
+    return txt[-2] == ' '

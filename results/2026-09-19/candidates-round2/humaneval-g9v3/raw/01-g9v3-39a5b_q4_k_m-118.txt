@@ -1,0 +1,13 @@
+```python
+def get_closest_vowel(word):
+    vowels = set("aeiouAEIOU")
+    # We need to find a vowel that is between two consonants.
+    # We search from the right side of the word.
+    # So we iterate from len(word)-2 down to 1 (inclusive).
+    # For each position i, check if word[i] is a vowel,
+    # and word[i-1] and word[i+1] are consonants (not vowels).
+    for i in range(len(word) - 2, 0, -1):
+        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:
+            return word[i]
+    return ""
+```

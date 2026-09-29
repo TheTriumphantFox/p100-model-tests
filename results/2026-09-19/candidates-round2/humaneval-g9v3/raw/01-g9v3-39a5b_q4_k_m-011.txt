@@ -1,0 +1,24 @@
+```python
+from typing import List
+
+
+def string_xor(a: str, b: str) -> str:
+    """ Input are two strings a and b consisting only of 1s and 0s.
+    Perform binary XOR on these inputs and return result also as a string.
+    >>> string_xor('010', '110')
+    '100'
+    """
+    # Ensure both strings are of equal length by padding the shorter one with leading zeros
+    max_len = max(len(a), len(b))
+    a_padded = a.zfill(max_len)
+    b_padded = b.zfill(max_len)
+    
+    # Perform XOR character by character
+    result_chars = []
+    for bit_a, bit_b in zip(a_padded, b_padded):
+        # XOR: '1' if bits differ, '0' if they are the same
+        xor_bit = '1' if bit_a != bit_b else '0'
+        result_chars.append(xor_bit)
+    
+    return ''.join(result_chars)
+```

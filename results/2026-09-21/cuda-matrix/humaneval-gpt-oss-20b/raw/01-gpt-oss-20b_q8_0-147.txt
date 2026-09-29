@@ -1,0 +1,34 @@
+```python
+def get_max_triples(n: int) -> int:
+    """
+    Count the number of triples (i, j, k) with 1 <= i < j < k <= n such that
+    a[i] + a[j] + a[k] is divisible by 3, where a[i] = i*i - i + 1.
+    """
+    # Count how many elements of a have each residue modulo 3
+    cnt = [0, 0, 0]  # cnt[0], cnt[1], cnt[2]
+    for i in range(1, n + 1):
+        val = i * i - i + 1
+        cnt[val % 3] += 1
+
+    # Helper to compute nCk
+    def comb(n: int, k: int) -> int:
+        if n < k:
+            return 0
+        if k == 0 or k == n:
+            return 1
+        if k == 1:
+            return n
+        if k == 2:
+            return n * (n - 1) // 2
+        if k == 3:
+            return n * (n - 1) * (n - 2) // 6
+        return 0
+
+    # Triples with all residues equal
+    total = comb(cnt[0], 3) + comb(cnt[1], 3) + comb(cnt[2], 3)
+
+    # Triples with one of each residue
+    total += cnt[0] * cnt[1] * cnt[2]
+
+    return total
+```

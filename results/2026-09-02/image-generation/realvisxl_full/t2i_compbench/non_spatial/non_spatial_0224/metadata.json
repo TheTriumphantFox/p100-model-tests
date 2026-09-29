@@ -1,0 +1,7 @@
+{
+  "dataset": "t2i_compbench",
+  "category": "non_spatial",
+  "prompt_id": "non_spatial_0224",
+  "index": 224,
+  "prompt": "The sun was setting behind the mountains as the hiker reached the peak."
+}

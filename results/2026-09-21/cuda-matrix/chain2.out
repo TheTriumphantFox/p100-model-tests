@@ -1,0 +1,325 @@
+[09-21 09:21:35] chain: waiting for pid 1136548 (priority run)
+[09-21 09:42:55] chain: pid 1136548 finished
+[09-21 09:42:55] ================ PROCESS TEST: ggmlorg-q8, thinking-on at a usable context ================
+[09-21 09:42:55] target ctx=49152 kv=q8_0 (the :8080 production configuration), 10 questions
+[09-21 09:42:55] === CTX LADDER ggmlorg-q8-q8_0 (weights 27271 MiB, KV q8_0, runtime /home/hm/llama-cuda12) rungs: 16384 32768 49152 ===
+[09-21 09:42:57] router stopped (was pid 1136082, children: 1136588); GPU 37 MiB after 1x2s
+[09-21 09:42:59] router started from /home/hm/llama-cuda12 ctx=16384 --cache-type-k q8_0 --cache-type-v q8_0 (pid 1278985)
+[09-21 09:46:01] ggmlorg-q8-q8_0 ctx=16384 kv=q8_0 -> resident, 28137 MiB resident of 27271 MiB weights, 10.85 tok/s
+[09-21 09:46:03] router stopped (was pid 1278985, children: 1279077); GPU 37 MiB after 1x2s
+[09-21 09:46:05] router started from /home/hm/llama-cuda12 ctx=32768 --cache-type-k q8_0 --cache-type-v q8_0 (pid 1284865)
+[09-21 09:46:33] ggmlorg-q8-q8_0 ctx=32768 kv=q8_0 -> resident, 28937 MiB resident of 27271 MiB weights, 10.85 tok/s
+[09-21 09:46:35] router stopped (was pid 1284865, children: 1284912); GPU 37 MiB after 1x2s
+[09-21 09:46:38] router started from /home/hm/llama-cuda12 ctx=49152 --cache-type-k q8_0 --cache-type-v q8_0 (pid 1285933)
+[09-21 09:47:06] ggmlorg-q8-q8_0 ctx=49152 kv=q8_0 -> resident, 29737 MiB resident of 27271 MiB weights, 10.85 tok/s
+[09-21 09:47:06] === CTX LADDER ggmlorg-q8-q8_0 done -> /home/hm/Projects/Tests/2026-09-21/cuda-matrix/ctx-ladder/ggmlorg-q8-q8_0.jsonl ===
+model                  ctx  VRAM MiB  weights   tok/s  status
+------------------------------------------------------------------
+ggmlorg-q8-q8_0      16384     28137    27271   10.85  resident
+ggmlorg-q8-q8_0      32768     28937    27271   10.85  resident
+ggmlorg-q8-q8_0      49152     29737    27271   10.85  resident
+  largest fully-resident context: 49152; measured KV 50.0 KiB/token
+
+[09-21 09:47:06] ggmlorg-q8: measured 10.85 tok/s at ctx=49152 with q8_0 KV
+[09-21 09:47:06] ggmlorg-q8: num_predict=4864 api_timeout=1800s (sized from the measured rate, ten batches)
+[09-21 09:47:08] router stopped (was pid 1285933, children: 1286086); GPU 37 MiB after 1x2s
+[09-21 09:47:10] router started from /home/hm/llama-cuda12 ctx=49152 --cache-type-k q8_0 --cache-type-v q8_0 (pid 1287061)
+[09-21 09:47:23] ggmlorg-q8: 29737 MiB resident, weights 27271 MiB -- fully offloaded
+[09-21 09:47:23] ggmlorg-q8: 10 questions, one per category, thinking ON
+
+=== PROCESS TEST: ctx 49152, q8_0 KV, num_predict 4864 ===
+batches completed     10/10
+questions parsed      8/10
+generated tokens      10745  (mean 1074/batch)
+decode rate           10.83 tok/s
+wall clock            17.3 min
+score (NOT a result)  80.0% over 10 questions
+
+path coverage:
+  thinking engaged    YES
+  cap-truncation      2 batch(es): engineering, law
+  client timeout      0 batch(es) -- path not exercised
+  other errors        0 batch(es)
+  unparsed answers    2: engineering, law
+
+10 questions cannot resolve any difference between models. Read the paths, not the score.
+[09-21 10:04:42] ================ PROCESS TEST DONE ================
+[09-21 10:04:42] chain: process-test rc=0
+[09-21 10:04:42] ================ QUEUE-1 START (per-category 5, matching round 2) ================
+[09-21 10:04:42] prod router :8080 pid=1416288 -- asserted unchanged after every stop_router
+[09-21 10:04:42] --- QUEUE-1: ggmlorg-q8 thinking-off (throughput) ---
+[09-21 10:04:44] router stopped (was pid 1287061, children: 1287399); GPU 37 MiB after 1x2s
+[09-21 10:04:46] router started from /home/hm/llama-cuda12 ctx=8192  (pid 1319891)
+[09-21 10:04:46] ggmlorg-q8: throughput
+[09-21 10:13:13] ggmlorg-q8: throughput -> speed_brief=11.2 speed_medium=10.9 speed_long=10.9 python_coding=10.9
+[09-21 10:13:13] ggmlorg-q8: bench_off DONE (pc=5 what=throughput)
+[09-21 10:13:13] --- QUEUE-1: ggmlorg-q8 has no think leg here ---
+[09-21 10:13:13] --- QUEUE-1: gemma4-e4b thinking-off (mmlu96,mmlu2048,humaneval,throughput) ---
+[09-21 10:13:15] router stopped (was pid 1319891, children: 1320110); GPU 37 MiB after 1x2s
+[09-21 10:13:17] router started from /home/hm/llama-cuda12 ctx=8192  (pid 1336535)
+[09-21 10:13:17] gemma4-e4b: MMLU-Pro per-category=5 (batch 5) num_predict=96
+[09-21 10:13:26] gemma4-e4b: MMLU pc=5 np=96 -> UNREADABLE unsupported format string passed to NoneType.__format__
+[09-21 10:13:26] gemma4-e4b: MMLU-Pro per-category=5 (batch 5) num_predict=2048
+[09-21 10:13:36] gemma4-e4b: MMLU pc=5 np=2048 -> UNREADABLE unsupported format string passed to NoneType.__format__
+[09-21 10:13:36] gemma4-e4b: HumanEval 164 tasks
+[09-21 10:16:29] gemma4-e4b: HumanEval -> UNREADABLE unsupported format string passed to NoneType.__format__
+[09-21 10:16:29] gemma4-e4b: throughput
+Terminated                 "$HERE/bench_off.sh" "$TAG" "$SLUG" 5 "$WHAT"
+[09-21 10:16:31] --- QUEUE-1: gemma4-e4b thinking-on ---
+[09-21 10:16:33] router stopped (was pid 1336535, children: 1344331); GPU 37 MiB after 1x2s
+[09-21 10:16:35] router started from /home/hm/llama-cuda12 ctx=16384  (pid 1344496)
+[09-21 10:16:35] gemma4-e4b: GPU 37 MiB with ctx 16384 loaded
+[09-21 10:16:35] gemma4-e4b: MMLU-Pro THINKING-ON num_predict=12288 ctx=16384 timeout=2400
+[09-21 10:16:45] gemma4-e4b: MMLU-think@12288 -> 0.00% parsed=0/70 among-answered=0.00% tok=0 tps=0.0 wall=0.0min
+[09-21 10:16:45] !!! RIG-FAIL gemma4-e4b: 0 generated tokens -- every request errored, not a result.
+[09-21 10:16:45] gemma4-e4b: think DONE
+[09-21 10:16:45] --- QUEUE-1: gpt-oss-20b thinking-off (mmlu2048,humaneval,throughput) ---
+[09-21 10:16:47] router stopped (was pid 1344496, children: none); GPU 37 MiB after 1x2s
+[09-21 10:16:49] router started from /home/hm/llama-cuda12 ctx=8192  (pid 1345430)
+[09-21 10:16:49] gpt-oss-20b: MMLU-Pro per-category=5 (batch 5) num_predict=2048
+[09-21 10:18:50] gpt-oss-20b: MMLU pc=5 np=2048 -> 71.43% parsed=70/70 tps=65.7 wall=2.0min
+[09-21 10:18:50] gpt-oss-20b: HumanEval 164 tasks
+[09-21 10:31:48] gpt-oss-20b: HumanEval -> 95.12% parsed=164/164 tps=66.1 wall=12.9min
+[09-21 10:31:48] gpt-oss-20b: throughput
+[09-21 10:33:20] gpt-oss-20b: throughput -> speed_brief=67.5 speed_medium=66.3 speed_long=66.0 python_coding=66.1
+[09-21 10:33:20] gpt-oss-20b: bench_off DONE (pc=5 what=mmlu2048,humaneval,throughput)
+[09-21 10:33:20] --- QUEUE-1: gpt-oss-20b thinking-on ---
+[09-21 10:33:22] router stopped (was pid 1345430, children: 1345543); GPU 37 MiB after 1x2s
+[09-21 10:33:24] router started from /home/hm/llama-cuda12 ctx=16384  (pid 1378368)
+[09-21 10:33:24] gpt-oss-20b: GPU 37 MiB with ctx 16384 loaded
+[09-21 10:33:24] gpt-oss-20b: MMLU-Pro THINKING-ON num_predict=12288 ctx=16384 timeout=2400
+[09-21 10:43:02] gpt-oss-20b: MMLU-think@12288 -> 72.86% parsed=65/70 among-answered=78.46% tok=35091 tps=65.2 wall=9.6min (off tok=5348, ratio=6.6x)
+[09-21 10:43:02] !!! WARN gpt-oss-20b: 1 batch(es) hit the 12288-token cap (law). Those score 0/5, so 72.86% is a FLOOR, not a score.
+[09-21 10:43:02] gpt-oss-20b: think DONE
+[09-21 10:43:02] --- QUEUE-1: qwen36-vl thinking-off (mmlu96,mmlu2048,humaneval,throughput) ---
+[09-21 10:43:04] router stopped (was pid 1378368, children: 1378498); GPU 37 MiB after 1x2s
+[09-21 10:43:06] router started from /home/hm/llama-cuda12 ctx=8192  (pid 1396257)
+[09-21 10:43:06] qwen36-vl: MMLU-Pro per-category=5 (batch 5) num_predict=96
+[09-21 10:43:11] qwen36-vl: MMLU pc=5 np=96 -> UNREADABLE unsupported format string passed to NoneType.__format__
+[09-21 10:43:11] qwen36-vl: MMLU-Pro per-category=5 (batch 5) num_predict=2048
+[09-21 10:43:16] qwen36-vl: MMLU pc=5 np=2048 -> UNREADABLE unsupported format string passed to NoneType.__format__
+[09-21 10:43:16] qwen36-vl: HumanEval 164 tasks
+[09-21 11:12:39] qwen36-vl: HumanEval -> UNREADABLE unsupported format string passed to NoneType.__format__
+[09-21 11:12:39] qwen36-vl: throughput
+[09-21 11:12:46] qwen36-vl: throughput -> speed_brief=0.0 speed_medium=0.0 speed_long=0.0 python_coding=0.0
+[09-21 11:12:46] qwen36-vl: bench_off DONE (pc=5 what=mmlu96,mmlu2048,humaneval,throughput)
+[09-21 11:12:46] --- QUEUE-1: qwen36-vl thinking-on ---
+[09-21 11:12:48] router stopped (was pid 1396257, children: none); GPU 37 MiB after 1x2s
+[09-21 11:12:50] router started from /home/hm/llama-cuda12 ctx=16384  (pid 1461719)
+[09-21 11:12:51] qwen36-vl: GPU 37 MiB with ctx 16384 loaded
+[09-21 11:12:51] qwen36-vl: MMLU-Pro THINKING-ON num_predict=12288 ctx=16384 timeout=2400
+[09-21 11:12:56] qwen36-vl: MMLU-think@12288 -> 0.00% parsed=0/70 among-answered=0.00% tok=0 tps=0.0 wall=0.0min
+[09-21 11:12:56] !!! RIG-FAIL qwen36-vl: 0 generated tokens -- every request errored, not a result.
+[09-21 11:12:56] qwen36-vl: think DONE
+[09-21 11:12:56] --- QUEUE-1: opus-distill thinking-off (mmlu96,mmlu2048,humaneval,throughput) ---
+[09-21 11:12:58] router stopped (was pid 1461719, children: none); GPU 37 MiB after 1x2s
+[09-21 11:13:00] router started from /home/hm/llama-cuda12 ctx=8192  (pid 1462487)
+[09-21 11:13:00] opus-distill: MMLU-Pro per-category=5 (batch 5) num_predict=96
+[09-21 11:13:09] opus-distill: MMLU pc=5 np=96 -> UNREADABLE unsupported format string passed to NoneType.__format__
+[09-21 11:13:09] opus-distill: MMLU-Pro per-category=5 (batch 5) num_predict=2048
+[09-21 11:13:18] opus-distill: MMLU pc=5 np=2048 -> UNREADABLE unsupported format string passed to NoneType.__format__
+[09-21 11:13:18] opus-distill: HumanEval 164 tasks
+[09-21 11:34:11] opus-distill: HumanEval -> UNREADABLE unsupported format string passed to NoneType.__format__
+[09-21 11:34:11] opus-distill: throughput
+[09-21 11:34:25] opus-distill: throughput -> speed_brief=0.0 speed_medium=0.0 speed_long=0.0 python_coding=0.0
+[09-21 11:34:25] opus-distill: bench_off DONE (pc=5 what=mmlu96,mmlu2048,humaneval,throughput)
+[09-21 11:34:25] --- QUEUE-1: opus-distill thinking-on ---
+[09-21 11:34:27] router stopped (was pid 1462487, children: none); GPU 37 MiB after 1x2s
+[09-21 11:34:29] router started from /home/hm/llama-cuda12 ctx=16384  (pid 1509048)
+[09-21 11:34:29] opus-distill: GPU 37 MiB with ctx 16384 loaded
+[09-21 11:34:29] opus-distill: MMLU-Pro THINKING-ON num_predict=12288 ctx=16384 timeout=2400
+[09-21 11:34:38] opus-distill: MMLU-think@12288 -> 0.00% parsed=0/70 among-answered=0.00% tok=0 tps=0.0 wall=0.0min
+[09-21 11:34:38] !!! RIG-FAIL opus-distill: 0 generated tokens -- every request errored, not a result.
+[09-21 11:34:38] opus-distill: think DONE
+[09-21 11:34:40] router stopped (was pid 1509048, children: none); GPU 37 MiB after 1x2s
+[09-21 11:34:42] router started from /home/hm/llama-cuda12 ctx=8192  (pid 1509880)
+[09-21 11:34:42] ================ QUEUE-1 DONE ================
+model (slug)               tok/s             MMLU-off@5                  MMLU-ON@5            HumanEval
+-------------------------------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/hm/Projects/Tests/2026-09-21/cuda-matrix/summarise.py", line 149, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/hm/Projects/Tests/2026-09-21/cuda-matrix/summarise.py", line 138, in main
+    cap = int(d.name.split("think")[-1])
+ValueError: invalid literal for int() with base 10: '12288.log'
+[09-21 11:34:42] chain: queue-1 rc=1
+[09-21 11:34:42] ================ QUEUE-2 PART 1: context ladders ================
+[09-21 11:34:42] === CTX LADDER ggmlorg-q8 (weights 27271 MiB, KV f16, runtime /home/hm/llama-cuda12) rungs: 8192 12288 16384 24576 32768 ===
+[09-21 11:34:45] router stopped (was pid 1509880, children: none); GPU 37 MiB after 1x2s
+[09-21 11:34:47] router started from /home/hm/llama-cuda12 ctx=8192 --cache-type-k f16 --cache-type-v f16 (pid 1510125)
+[09-21 11:35:14] ggmlorg-q8 ctx=8192 kv=f16 -> resident, 27997 MiB resident of 27271 MiB weights, 10.9 tok/s
+[09-21 11:35:17] router stopped (was pid 1510125, children: 1510215); GPU 37 MiB after 1x2s
+[09-21 11:35:19] router started from /home/hm/llama-cuda12 ctx=12288 --cache-type-k f16 --cache-type-v f16 (pid 1511253)
+[09-21 11:35:47] ggmlorg-q8 ctx=12288 kv=f16 -> resident, 28285 MiB resident of 27271 MiB weights, 10.9 tok/s
+[09-21 11:35:49] router stopped (was pid 1511253, children: 1511409); GPU 37 MiB after 1x2s
+[09-21 11:35:51] router started from /home/hm/llama-cuda12 ctx=16384 --cache-type-k f16 --cache-type-v f16 (pid 1512536)
+[09-21 11:36:19] ggmlorg-q8 ctx=16384 kv=f16 -> resident, 28573 MiB resident of 27271 MiB weights, 10.9 tok/s
+[09-21 11:36:21] router stopped (was pid 1512536, children: 1512614); GPU 37 MiB after 1x2s
+[09-21 11:36:23] router started from /home/hm/llama-cuda12 ctx=24576 --cache-type-k f16 --cache-type-v f16 (pid 1513599)
+[09-21 11:36:51] ggmlorg-q8 ctx=24576 kv=f16 -> resident, 29149 MiB resident of 27271 MiB weights, 10.9 tok/s
+[09-21 11:36:53] router stopped (was pid 1513599, children: 1513819); GPU 37 MiB after 1x2s
+[09-21 11:36:55] router started from /home/hm/llama-cuda12 ctx=32768 --cache-type-k f16 --cache-type-v f16 (pid 1514787)
+[09-21 11:37:23] ggmlorg-q8 ctx=32768 kv=f16 -> resident, 29725 MiB resident of 27271 MiB weights, 10.91 tok/s
+[09-21 11:37:23] === CTX LADDER ggmlorg-q8 done -> /home/hm/Projects/Tests/2026-09-21/cuda-matrix/ctx-ladder/ggmlorg-q8.jsonl ===
+[09-21 11:37:23] === CTX LADDER unsloth-q8 (weights 27701 MiB, KV f16, runtime /home/hm/llama-cuda12) rungs: 8192 12288 16384 24576 32768 ===
+[09-21 11:37:25] router stopped (was pid 1514787, children: 1514877); GPU 37 MiB after 1x2s
+[09-21 11:37:27] router started from /home/hm/llama-cuda12 ctx=8192 --cache-type-k f16 --cache-type-v f16 (pid 1515962)
+[09-21 11:42:00] unsloth-q8 ctx=8192 kv=f16 -> resident, 27997 MiB resident of 27701 MiB weights, 10.91 tok/s
+[09-21 11:42:02] router stopped (was pid 1515962, children: 1516000); GPU 37 MiB after 1x2s
+[09-21 11:42:04] router started from /home/hm/llama-cuda12 ctx=12288 --cache-type-k f16 --cache-type-v f16 (pid 1524354)
+[09-21 11:42:32] unsloth-q8 ctx=12288 kv=f16 -> resident, 28285 MiB resident of 27701 MiB weights, 10.91 tok/s
+[09-21 11:42:34] router stopped (was pid 1524354, children: 1524444); GPU 37 MiB after 1x2s
+[09-21 11:42:36] router started from /home/hm/llama-cuda12 ctx=16384 --cache-type-k f16 --cache-type-v f16 (pid 1525505)
+[09-21 11:43:04] unsloth-q8 ctx=16384 kv=f16 -> resident, 28573 MiB resident of 27701 MiB weights, 10.91 tok/s
+[09-21 11:43:07] router stopped (was pid 1525505, children: 1525575); GPU 37 MiB after 1x2s
+[09-21 11:43:09] router started from /home/hm/llama-cuda12 ctx=24576 --cache-type-k f16 --cache-type-v f16 (pid 1526633)
+[09-21 11:43:36] unsloth-q8 ctx=24576 kv=f16 -> resident, 29149 MiB resident of 27701 MiB weights, 10.91 tok/s
+[09-21 11:43:39] router stopped (was pid 1526633, children: 1526735); GPU 37 MiB after 1x2s
+[09-21 11:43:41] router started from /home/hm/llama-cuda12 ctx=32768 --cache-type-k f16 --cache-type-v f16 (pid 1527676)
+[09-21 11:44:09] unsloth-q8 ctx=32768 kv=f16 -> resident, 29725 MiB resident of 27701 MiB weights, 10.91 tok/s
+[09-21 11:44:09] === CTX LADDER unsloth-q8 done -> /home/hm/Projects/Tests/2026-09-21/cuda-matrix/ctx-ladder/unsloth-q8.jsonl ===
+[09-21 11:44:09] === CTX LADDER uncensored-q6kp (weights 24723 MiB, KV f16, runtime /home/hm/llama-cuda12) rungs: 8192 12288 16384 24576 32768 ===
+[09-21 11:44:11] router stopped (was pid 1527676, children: 1527895); GPU 37 MiB after 1x2s
+[09-21 11:44:13] router started from /home/hm/llama-cuda12 ctx=8192 --cache-type-k f16 --cache-type-v f16 (pid 1528850)
+[09-21 11:47:33] uncensored-q6kp ctx=8192 kv=f16 -> resident, 25353 MiB resident of 24723 MiB weights, 9.91 tok/s
+[09-21 11:47:35] router stopped (was pid 1528850, children: 1528941); GPU 37 MiB after 1x2s
+[09-21 11:47:37] router started from /home/hm/llama-cuda12 ctx=12288 --cache-type-k f16 --cache-type-v f16 (pid 1535350)
+[09-21 11:48:06] uncensored-q6kp ctx=12288 kv=f16 -> resident, 25641 MiB resident of 24723 MiB weights, 9.91 tok/s
+[09-21 11:48:08] router stopped (was pid 1535350, children: 1535400); GPU 37 MiB after 1x2s
+[09-21 11:48:11] router started from /home/hm/llama-cuda12 ctx=16384 --cache-type-k f16 --cache-type-v f16 (pid 1536441)
+[09-21 11:48:40] uncensored-q6kp ctx=16384 kv=f16 -> resident, 25929 MiB resident of 24723 MiB weights, 9.91 tok/s
+[09-21 11:48:42] router stopped (was pid 1536441, children: 1536599); GPU 37 MiB after 1x2s
+[09-21 11:48:44] router started from /home/hm/llama-cuda12 ctx=24576 --cache-type-k f16 --cache-type-v f16 (pid 1537631)
+[09-21 11:49:13] uncensored-q6kp ctx=24576 kv=f16 -> resident, 26505 MiB resident of 24723 MiB weights, 9.91 tok/s
+[09-21 11:49:15] router stopped (was pid 1537631, children: 1537788); GPU 37 MiB after 1x2s
+[09-21 11:49:17] router started from /home/hm/llama-cuda12 ctx=32768 --cache-type-k f16 --cache-type-v f16 (pid 1538807)
+[09-21 11:49:46] uncensored-q6kp ctx=32768 kv=f16 -> resident, 27081 MiB resident of 24723 MiB weights, 9.91 tok/s
+[09-21 11:49:46] === CTX LADDER uncensored-q6kp done -> /home/hm/Projects/Tests/2026-09-21/cuda-matrix/ctx-ladder/uncensored-q6kp.jsonl ===
+[09-21 11:49:46] === CTX LADDER incumbent (weights 19848 MiB, KV f16, runtime /home/hm/llama-cuda12) rungs: 8192 12288 16384 24576 32768 ===
+[09-21 11:49:48] router stopped (was pid 1538807, children: 1538885); GPU 37 MiB after 1x2s
+[09-21 11:49:50] router started from /home/hm/llama-cuda12 ctx=8192 --cache-type-k f16 --cache-type-v f16 (pid 1539935)
+[09-21 11:52:02] incumbent ctx=8192 kv=f16 -> resident, 20663 MiB resident of 19848 MiB weights, 11.14 tok/s
+[09-21 11:52:04] router stopped (was pid 1539935, children: 1539972); GPU 37 MiB after 1x2s
+[09-21 11:52:06] router started from /home/hm/llama-cuda12 ctx=12288 --cache-type-k f16 --cache-type-v f16 (pid 1544119)
+[09-21 11:52:32] incumbent ctx=12288 kv=f16 -> resident, 20951 MiB resident of 19848 MiB weights, 11.14 tok/s
+[09-21 11:52:34] router stopped (was pid 1544119, children: 1544276); GPU 37 MiB after 1x2s
+[09-21 11:52:36] router started from /home/hm/llama-cuda12 ctx=16384 --cache-type-k f16 --cache-type-v f16 (pid 1545148)
+[09-21 11:53:01] incumbent ctx=16384 kv=f16 -> resident, 21239 MiB resident of 19848 MiB weights, 11.14 tok/s
+[09-21 11:53:03] router stopped (was pid 1545148, children: 1545238); GPU 37 MiB after 1x2s
+[09-21 11:53:05] router started from /home/hm/llama-cuda12 ctx=24576 --cache-type-k f16 --cache-type-v f16 (pid 1546290)
+[09-21 11:53:31] incumbent ctx=24576 kv=f16 -> resident, 21815 MiB resident of 19848 MiB weights, 11.14 tok/s
+[09-21 11:53:33] router stopped (was pid 1546290, children: 1546338); GPU 37 MiB after 1x2s
+[09-21 11:53:35] router started from /home/hm/llama-cuda12 ctx=32768 --cache-type-k f16 --cache-type-v f16 (pid 1547247)
+[09-21 11:54:00] incumbent ctx=32768 kv=f16 -> resident, 22391 MiB resident of 19848 MiB weights, 11.14 tok/s
+[09-21 11:54:00] === CTX LADDER incumbent done -> /home/hm/Projects/Tests/2026-09-21/cuda-matrix/ctx-ladder/incumbent.jsonl ===
+[09-21 11:54:00] === CTX LADDER g9v3 (weights 22467 MiB, KV f16, runtime /home/hm/llama-cuda12-g9v3) rungs: 8192 12288 16384 24576 32768 ===
+[09-21 11:54:03] router stopped (was pid 1547247, children: 1547372); GPU 37 MiB after 1x2s
+[09-21 11:54:05] router started from /home/hm/llama-cuda12-g9v3 ctx=8192 --cache-type-k f16 --cache-type-v f16 (pid 1548357)
+[09-21 11:56:30] g9v3 ctx=8192 kv=f16 -> resident, 23881 MiB resident of 22467 MiB weights, 39.19 tok/s
+[09-21 11:56:32] router stopped (was pid 1548357, children: 1548400); GPU 37 MiB after 1x2s
+[09-21 11:56:34] router started from /home/hm/llama-cuda12-g9v3 ctx=12288 --cache-type-k f16 --cache-type-v f16 (pid 1552912)
+[09-21 11:56:46] g9v3 ctx=12288 kv=f16 -> resident, 24065 MiB resident of 22467 MiB weights, 39.18 tok/s
+[09-21 11:56:49] router stopped (was pid 1552912, children: 1552963); GPU 37 MiB after 1x2s
+[09-21 11:56:51] router started from /home/hm/llama-cuda12-g9v3 ctx=16384 --cache-type-k f16 --cache-type-v f16 (pid 1553554)
+[09-21 11:57:03] g9v3 ctx=16384 kv=f16 -> resident, 24249 MiB resident of 22467 MiB weights, 39.19 tok/s
+[09-21 11:57:05] router stopped (was pid 1553554, children: 1553721); GPU 37 MiB after 1x2s
+[09-21 11:57:07] router started from /home/hm/llama-cuda12-g9v3 ctx=24576 --cache-type-k f16 --cache-type-v f16 (pid 1554182)
+[09-21 11:57:19] g9v3 ctx=24576 kv=f16 -> resident, 24617 MiB resident of 22467 MiB weights, 39.19 tok/s
+[09-21 11:57:21] router stopped (was pid 1554182, children: 1554272); GPU 37 MiB after 1x2s
+[09-21 11:57:23] router started from /home/hm/llama-cuda12-g9v3 ctx=32768 --cache-type-k f16 --cache-type-v f16 (pid 1554789)
+[09-21 11:57:35] g9v3 ctx=32768 kv=f16 -> resident, 24985 MiB resident of 22467 MiB weights, 39.18 tok/s
+[09-21 11:57:35] === CTX LADDER g9v3 done -> /home/hm/Projects/Tests/2026-09-21/cuda-matrix/ctx-ladder/g9v3.jsonl ===
+model                  ctx  VRAM MiB  weights   tok/s  status
+------------------------------------------------------------------
+g9v3                  8192     23881    22467   39.19  resident
+g9v3                 12288     24065    22467   39.18  resident
+g9v3                 16384     24249    22467   39.19  resident
+g9v3                 24576     24617    22467   39.19  resident
+g9v3                 32768     24985    22467   39.18  resident
+  largest fully-resident context: 32768; measured KV 46.0 KiB/token
+
+ggmlorg-q8-q8_0      16384     28137    27271   10.85  resident
+ggmlorg-q8-q8_0      32768     28937    27271   10.85  resident
+ggmlorg-q8-q8_0      49152     29737    27271   10.85  resident
+  largest fully-resident context: 49152; measured KV 50.0 KiB/token
+
+ggmlorg-q8            8192     27997    27271   10.90  resident
+ggmlorg-q8           12288     28285    27271   10.90  resident
+ggmlorg-q8           16384     28573    27271   10.90  resident
+ggmlorg-q8           24576     29149    27271   10.90  resident
+ggmlorg-q8           32768     29725    27271   10.91  resident
+  largest fully-resident context: 32768; measured KV 72.0 KiB/token
+
+incumbent             8192     20663    19848   11.14  resident
+incumbent            12288     20951    19848   11.14  resident
+incumbent            16384     21239    19848   11.14  resident
+incumbent            24576     21815    19848   11.14  resident
+incumbent            32768     22391    19848   11.14  resident
+  largest fully-resident context: 32768; measured KV 72.0 KiB/token
+
+uncensored-q6kp       8192     25353    24723    9.91  resident
+uncensored-q6kp      12288     25641    24723    9.91  resident
+uncensored-q6kp      16384     25929    24723    9.91  resident
+uncensored-q6kp      24576     26505    24723    9.91  resident
+uncensored-q6kp      32768     27081    24723    9.91  resident
+  largest fully-resident context: 32768; measured KV 72.0 KiB/token
+
+unsloth-q8            8192     27997    27701   10.91  resident
+unsloth-q8           12288     28285    27701   10.91  resident
+unsloth-q8           16384     28573    27701   10.91  resident
+unsloth-q8           24576     29149    27701   10.91  resident
+unsloth-q8           32768     29725    27701   10.91  resident
+  largest fully-resident context: 32768; measured KV 72.0 KiB/token
+
+[09-21 11:57:35] ================ QUEUE-2 PART 2: thinking-on, big quants ================
+[09-21 11:57:35] --- QUEUE-2: ggmlorg-q8 thinking-on at ctx=32768 np=12288 ---
+[09-21 11:57:37] router stopped (was pid 1554789, children: 1554832); GPU 37 MiB after 1x2s
+[09-21 11:57:39] router started from /home/hm/llama-cuda12 ctx=32768  (pid 1555455)
+[09-21 12:00:25] ggmlorg-q8: 29725 MiB resident, weights 27271 MiB -- fully offloaded
+[09-21 12:00:25] ggmlorg-q8: MMLU-Pro THINKING-ON num_predict=12288 ctx=32768 timeout=3600
+[09-21 13:21:48] ggmlorg-q8: MMLU-think@12288 -> 78.57% parsed=60/70 among-answered=91.67% tok=51195 tps=10.8 wall=81.3min (off tok=280, ratio=182.8x)
+[09-21 13:21:48] !!! WARN ggmlorg-q8: 2 batch(es) hit the 12288-token cap (engineering, law). Those score 0/5, so 78.57% is a FLOOR, not a score.
+[09-21 13:21:48] ggmlorg-q8: think DONE
+[09-21 13:21:48] --- QUEUE-2: uncensored-q6kp thinking-on at ctx=32768 np=12288 ---
+[09-21 13:21:50] router stopped (was pid 1555455, children: 1555610); GPU 37 MiB after 1x2s
+[09-21 13:21:52] router started from /home/hm/llama-cuda12 ctx=32768  (pid 1709040)
+[09-21 13:24:54] uncensored-q6kp: 27081 MiB resident, weights 24723 MiB -- fully offloaded
+[09-21 13:24:54] uncensored-q6kp: MMLU-Pro THINKING-ON num_predict=12288 ctx=32768 timeout=3600
+[09-21 14:49:38] uncensored-q6kp: MMLU-think@12288 -> 82.86% parsed=65/70 among-answered=89.23% tok=48622 tps=9.8 wall=84.7min
+[09-21 14:49:38] !!! WARN uncensored-q6kp: 1 batch(es) hit the 12288-token cap (law). Those score 0/5, so 82.86% is a FLOOR, not a score.
+[09-21 14:49:38] uncensored-q6kp: think DONE
+[09-21 14:49:38] --- QUEUE-2: unsloth-q8 thinking-on at ctx=32768 np=12288 ---
+[09-21 14:49:40] router stopped (was pid 1709040, children: 1709082); GPU 37 MiB after 1x2s
+[09-21 14:49:42] router started from /home/hm/llama-cuda12 ctx=32768  (pid 1869490)
+[09-21 14:54:12] unsloth-q8: 29725 MiB resident, weights 27701 MiB -- fully offloaded
+[09-21 14:54:13] unsloth-q8: MMLU-Pro THINKING-ON num_predict=12288 ctx=32768 timeout=3600
+[09-21 16:16:27] unsloth-q8: MMLU-think@12288 -> 77.14% parsed=60/70 among-answered=90.00% tok=51779 tps=10.8 wall=82.2min
+[09-21 16:16:27] !!! WARN unsloth-q8: 2 batch(es) hit the 12288-token cap (engineering, law). Those score 0/5, so 77.14% is a FLOOR, not a score.
+[09-21 16:16:27] unsloth-q8: think DONE
+[09-21 16:16:29] router stopped (was pid 1869490, children: 1869532); GPU 37 MiB after 1x2s
+[09-21 16:16:31] router started from /home/hm/llama-cuda12 ctx=8192  (pid 2027509)
+[09-21 16:16:31] ================ QUEUE-2 DONE ================
+model                                   tok/s      MMLU-off@5   MMLU-ON@5                       HumanEval  
+--------------------------------------  ---------  -----------  ------------------------------  -----------
+qwen3.6-27b-abliterated:q5_k_m          11.1-11.5  71.43        87.14 @11                       96.34      
+qwen3.8-27b-stock:q4_k_m                12.1-12.6  67.14        82.86 (64/70 parsed) @12 cap:2  93.29      
+ornith-1.5-35b-a3b:q4_k_m               47.8-49.6  61.43        81.43 (65/70 parsed) @53 cap:1  92.07      
+g9v3-39a5b:q4_k_m                       39.0-40.2  67.14        68.57 (55/70 parsed) @38 cap:3  93.90      
+qwen3.8-27b-unsloth:q8_0                10.9-11.2  68.57        77.14 (60/70 parsed) @11 cap:2  97.56      
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p  9.9-10.3   68.57        82.86 (65/70 parsed) @10 cap:1  95.73      
+qwen3.8-27b-ggmlorg:q8_0                10.9-11.2  68.57        78.57 (60/70 parsed) @11 cap:2  95.73      
+gpt-oss-20b:q8_0                        66.0-67.5  71.43        72.86 (65/70 parsed) @65 cap:1  95.12      
+qwen3.6-27b-opus-distill:q4_k_m         —          CANNOT LOAD  CANNOT LOAD                     CANNOT LOAD
+qwen3.6-35b-a3b-abliterated-vl:q4_k_m   —          CANNOT LOAD  CANNOT LOAD                     CANNOT LOAD
+gemma4-e4b-abliterated:q4_k_m           —          CANNOT LOAD  CANNOT LOAD                     —          
+glm-4.7-flash:q5_k_m                    —          54.29        —                               84.76      
+nemotron-cascade-2-30b-a3b:q4_k_m       69.0-70.5  48.57        71.43 (60/70 parsed) @68 cap:2  89.02      
+qwen3.8-27b-unsloth:ud_q6_k             9.8-10.2   70.00        —                               95.73      
+xing4.0-29b-a4b:iq4_nl                  31.7-32.4  44.29        40.00 (32/70 parsed) @30 cap:8  83.54      
+
+15 models, 53/60 cells filled.
+— = never run. (p/n) = fewer answers parsed than asked; an unparsed answer scores
+as incorrect, so those cells are FLOORS. cap:N / TMO:N / PART / RIG? per the header.
+[09-21 16:16:33] chain: queue-2 rc=0
+[09-21 16:16:33] chain: ALL QUEUES DONE

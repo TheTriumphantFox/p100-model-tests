@@ -1,0 +1,15 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+qwen3.8-27b-stock:q4_k_m,biology,1,5,5,5,12.06199008678424,150.09138841531788,52.880658031994244,305,,raw/01-qwen3.8-27b-stock_q4_k_m-01-biology.txt
+qwen3.8-27b-stock:q4_k_m,business,2,5,5,5,12.039642221156212,137.88083966023063,88.96892341200146,992,,raw/01-qwen3.8-27b-stock_q4_k_m-02-business.txt
+qwen3.8-27b-stock:q4_k_m,chemistry,3,5,5,5,12.003471391519739,159.9618398939504,202.5747532749956,2322,,raw/01-qwen3.8-27b-stock_q4_k_m-03-chemistry.txt
+qwen3.8-27b-stock:q4_k_m,computer science,4,5,5,5,12.006636997936264,169.7085866340437,93.55592759599676,957,,raw/01-qwen3.8-27b-stock_q4_k_m-04-computer_science.txt
+qwen3.8-27b-stock:q4_k_m,economics,5,5,5,5,11.996063870020857,131.740809367627,333.094684709009,3917,,raw/01-qwen3.8-27b-stock_q4_k_m-05-economics.txt
+qwen3.8-27b-stock:q4_k_m,engineering,6,2,5,2,11.882897618126165,132.9283342012851,1041.6589167070051,12288,,raw/01-qwen3.8-27b-stock_q4_k_m-06-engineering.txt
+qwen3.8-27b-stock:q4_k_m,health,7,5,5,5,12.019746831984788,118.76544803521894,218.17189652399975,2550,,raw/01-qwen3.8-27b-stock_q4_k_m-07-health.txt
+qwen3.8-27b-stock:q4_k_m,history,8,4,5,5,12.01482215428814,161.49572986290747,151.36051926200162,1708,,raw/01-qwen3.8-27b-stock_q4_k_m-08-history.txt
+qwen3.8-27b-stock:q4_k_m,law,9,0,5,2,11.85129525933636,164.76487438122672,1050.7664303689962,12288,,raw/01-qwen3.8-27b-stock_q4_k_m-09-law.txt
+qwen3.8-27b-stock:q4_k_m,math,10,4,5,5,11.999687199619354,141.7001503759865,303.73660093700164,3562,,raw/01-qwen3.8-27b-stock_q4_k_m-10-math.txt
+qwen3.8-27b-stock:q4_k_m,other,11,4,5,5,12.087933628631356,129.1855591722806,37.62858459999552,407,,raw/01-qwen3.8-27b-stock_q4_k_m-11-other.txt
+qwen3.8-27b-stock:q4_k_m,philosophy,12,5,5,5,12.054207900583167,126.30897543685144,61.00639991500066,661,,raw/01-qwen3.8-27b-stock_q4_k_m-12-philosophy.txt
+qwen3.8-27b-stock:q4_k_m,physics,13,5,5,5,12.041776874441789,134.59839056323668,70.69803619899903,759,,raw/01-qwen3.8-27b-stock_q4_k_m-13-physics.txt
+qwen3.8-27b-stock:q4_k_m,psychology,14,4,5,5,12.02482530444577,133.55508360205386,168.1186282960116,1943,,raw/01-qwen3.8-27b-stock_q4_k_m-14-psychology.txt

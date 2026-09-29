@@ -1,0 +1,2 @@
+{"name": "qwen36moe-careful", "description": "Same model, persona with explicit hash rules",
+ "planner": {"model": "qwen36moe", "persona": "planner-v8-careful", "pin": true}, "deadline_s": 240}

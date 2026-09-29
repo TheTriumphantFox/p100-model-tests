@@ -1,0 +1,25 @@
+def sort_array(arr):
+    """
+    In this Kata, you have to sort an array of non-negative integers according to
+    number of ones in their binary representation in ascending order.
+    For similar number of ones, sort based on decimal value.
+
+    It must be implemented like this:
+    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]
+    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]
+    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]
+    """
+    def count_ones(n):
+        # For negative numbers, use the binary representation of the absolute value
+        # But looking at the test case with negatives: [-2, -3, -4, -5, -6] -> [-6, -5, -4, -3, -2]
+        # Let's check: 
+        # -2 in binary (two's complement concept, but Python uses infinite bits)
+        # Actually, for negative numbers, bin(-2) = '-0b10', bin(-3) = '-0b11', etc.
+        # Let's count ones in the binary string representation (ignoring the sign)
+        if n < 0:
+            # Count ones in the binary representation of the absolute value
+            return bin(abs(n)).count('1')
+        else:
+            return bin(n).count('1')
+    
+    return sorted(arr, key=lambda x: (count_ones(x), x))

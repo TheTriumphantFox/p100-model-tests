@@ -1,0 +1,12 @@
+[08:23:09] ================ QUEUE-6 START ================
+./run-queue-6.sh: line 60: line: command not found
+pgrep: only one pattern can be provided
+Try `pgrep --help' for more information.
+[08:56:10] queue-5 has exited; taking over the rig
+[08:56:16] shims up: 127.0.0.1:11500 127.0.0.1:11501
+[08:56:16] --- PHASE B: thinking-on MMLU-Pro ---
+./run-queue-6.sh: line 20: bc: command not found
+[08:56:23] router stopped (was pid 2702685); GPU now  MiB
+./run-queue-6.sh: line 20: bc: command not found
+./run-queue-6.sh: line 51: [: : integer expected
+[08:56:25] router started from /home/hm/llama-cuda12 (50631b3d2c56, pid 2743367)

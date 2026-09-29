@@ -1,0 +1,63 @@
+We need to answer 5 MMLU-Pro multiple-choice questions. Provide only one answer per line in format "1: A". No explanation. Must choose correct answer letter.
+
+Let's analyze each question.
+
+Question 1: Two texts: Epic of Gilgamesh (Sumerian) and Maxims of Ptahhotep (Egyptian). The question: "The two texts best support which of the following conclusions?" We need to infer from the excerpts. The Sumerian text describes House of Darkness, afterlife gloom, etc. The Egyptian maxims talk about truth, moral conduct, but not afterlife. The conclusion likely about afterlife perspective. Which option best matches? Let's examine options:
+
+A. Ancient Sumerians had a darker perspective on life than ancient Egyptians. (Sumerian afterlife gloom vs Egyptian? Might be true.)
+
+B. Ancient Sumerians were more focused on the physical aspects of life than ancient Egyptians. (Not clear.)
+
+C. Ancient Egyptians were more inclined than ancient Sumerians to view the afterlife as a punishment. (Egyptian maxims talk about punishment? Not really; they talk about moral conduct, but not afterlife punishment.)
+
+D. Ancient Egyptians were more spiritual in their belief systems than ancient Sumerians. (Maybe but not directly from texts.)
+
+E. Ancient Sumerians had a more positive view of life after death than ancient Egyptians. (Opposite of gloom.)
+
+F. Ancient Egyptians had a less gloomy view of the afterlife than ancient Sumerians. (Yes, Sumerian gloom, Egyptian not gloom.)
+
+G. Ancient Egyptians were more optimistic about life after death than ancient Sumerians. (Similar to F.)
+
+H. Ancient Egyptians suffered under a more rigid social hierarchy than ancient Sumerians. (Not from texts.)
+
+I. Ancient Egyptians were more inclined than ancient Sumerians to view political obedience as morally proper. (Maxims talk about obedience, but Sumerian text not.)
+
+J. Ancient Egyptians were more patriarchal in their gender relations than ancient Sumerians. (Not from texts.)
+
+We need best supported conclusion. The Sumerian text is about afterlife gloom; Egyptian maxims talk about moral conduct, truth, but not afterlife. So conclusion: Egyptians had less gloomy view of afterlife than Sumerians. Option F or G. Which is more precise? F: "Ancient Egyptians had a less gloomy view of the afterlife than ancient Sumerians." G: "Ancient Egyptians were more optimistic about life after death than ancient Sumerians." Both similar. Which is best? The texts: Sumerian gloom; Egyptian maxims not mention afterlife gloom. So yes, Egyptians less gloomy. So choose F.
+
+Thus answer for Q1: 1: F.
+
+Question 2: Gault site evidence 13,000 years ago. Paleoindians chose location based on: options. We need to know what Gault site is known for. Gault site in south-central Texas, evidence of Paleoindians. The site is near the Gault River? Actually Gault site is near the Gault River, a tributary of the San Antonio River? Wait. Let's recall: Gault site is in south-central Texas, near the Gault River, a tributary of the San Antonio River. It's a site with evidence of Paleoindian occupation. The question: "The Gault site in south-central Texas has produced evidence from 13,000 years ago that Paleoindians chose this location based on the:" Which factor? Likely proximity to water sources, abundant resources, etc. Let's examine options:
+
+A. nearness of the site to navigable rivers and the Gulf coast. (South-central Texas not near Gulf coast? It's inland but not far from Gulf? But not navigable rivers.)
+
+B. proximity to other Paleoindian settlements. (Could be.)
+
+C. presence of a large lake for fishing and transportation. (No large lake.)
+
+D. nearby location of migratory routes of large mammals such as bison. (Paleoindians hunted bison; site may be near bison migration routes.)
+
+E. proximity to a local source of chert for quarrying and making stone tools. (Chert sources? Gault site may have chert.)
+
+F. abundance of wild game, plants, and fish in a rich and diverse woodland environment. (Could be.)
+
+G. availability of clay for pottery making. (Pottery not yet.)
+
+We need to recall Gault site: It's a Paleoindian site with evidence of big game hunting, especially bison. The site is near the Gault River, which may have been a water source. The site is known for the Gault projectile points. The site is near the Gault River, which is a tributary of the San Antonio River. The site is in the Edwards Plateau region, which had abundant game. The question likely expects answer D: migratory routes of large mammals such as bison. Because Paleoindians hunted bison. Let's confirm: The Gault site is known for bison remains. Yes, the site had bison remains. So answer D.
+
+Thus Q2: 2: D.
+
+Question 3: Which event most directly caused formation of Second Bank of the United States? Options: A need to finance Louisiana Purchase; B Federalist counter-reaction to budget-cutting; C failure of Specie Circular; D economic depression following Panic of 1819; E unregulated currency and federal debts after War of 1812; F efforts by Hamilton to stabilize national economy; G efforts by Jefferson to reduce national debt; H need to finance American Revolution; I need to finance War of 1812; J Hamilton's assassination.
+
+The Second Bank was established in 1816 after the War of 1812 and the Panic of 1819? Actually the Second Bank was chartered in 1816, after the War of 1812 and the Panic of 1819? Wait, the Second Bank was chartered in 1816, after the War of 1812 and the Panic of 1819? The Panic of 1819 occurred in 1819, after the bank was chartered. So the cause was the need to stabilize the economy after the War of 1812 and the chaotic currency. The correct answer likely E: Unregulated currency and federal debts after the War of 1812. The Second Bank was created to address the lack of a stable national currency and to manage federal debt. So answer E.
+
+Thus Q3: 3: E.
+
+Question 4: Which nineteenth-century figure would have been the LEAST likely to oppose those liberals described in the above decrees? The Carlsbad Resolutions were anti-liberal, anti-constitutional. Who would least likely oppose those liberals? That is, who would support the Carlsbad Resolutions? The Carlsbad Resolutions were anti-liberal, anti-constitutional, anti-democratic. So the figure least likely to oppose those liberals would be someone who is conservative, autocratic, anti-liberal. Options: A John Stuart Mill (liberal, would oppose). B Napoleon Bonaparte (autocratic, but also liberal reforms? He was a conservative? He was a revolutionary but later autocratic; he might oppose liberals). C Simon Bolivar (liberal, would oppose). D Queen Victoria (conservative monarchy, but she was somewhat liberal? She might oppose liberals? She was conservative but allowed some liberal reforms; but likely she would oppose Carlsbad? Actually Carlsbad is about suppressing liberalism; Queen Victoria might support such suppression? She was conservative but also had liberal aspects. But likely she would oppose liberals? She might support Carlsbad? Hard.)
+
+E William Frederick I (King of Prussia? He was conservative, anti-liberal). F Pope Pius IX (conservative, anti-liberal). G Otto von Bismarck (conservative, anti-liberal). H Giuseppe Mazzini (liberal, would oppose). I Karl Marx (liberal? Actually Marx was revolutionary, would oppose Carlsbad). J Klemens Von Metternich (conservative, anti-liberal). So which is least likely to oppose liberals? That means which would support liberals? Actually "least likely to oppose those liberals described in the above decrees" means the person would be least likely to oppose the liberals, i.e., would be more liberal or supportive of liberalism. So we need the figure who is liberal. Among options, John Stuart Mill is a liberal philosopher, would oppose Carlsbad. Simon Bolivar was a liberal revolutionary, would oppose. Giuseppe Mazzini was a liberal nationalist, would oppose. Karl Marx would oppose. So the least likely to oppose liberals would be someone who is not anti-liberal, maybe a conservative who would support Carlsbad. Wait, the phrase "least likely to oppose those liberals described in the above decrees" means the person would be least likely to oppose the liberals, i.e., would be more tolerant of liberals. That would be someone who is liberal. So we need the liberal figure among the list. John Stuart Mill is a liberal. Simon Bolivar is a liberal. Giuseppe Mazzini is a liberal. Karl Marx is a revolutionary but not necessarily liberal? He is anti-liberal? He is anti-capitalist, but he might oppose liberalism. So the best answer: John Stuart Mill. But we need to check nuance: The Carlsbad Resolutions were anti-liberal, anti-constitutional. The question: "Which of the following nineteenth-century figures would have been the LEAST likely to oppose those liberals described in the above decrees?" So the least likely to oppose liberals would be someone who is liberal. Among options, John Stuart Mill is the most liberal. So answer A.
+
+Thus Q4: 4: A.
+
+Question 5: Which culture, previously-known as the temple-mound builders, based their subsistence primarily on maize and squash agriculture

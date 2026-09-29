@@ -1,0 +1,5 @@
+[09-21 12:18:36] chain4: waiting for repro (pid 1513302)
+[09-21 18:54:08] finalize: regenerating the dataset
+[09-21 18:54:09] finalize: wrote FINAL.md
+[09-21 18:54:09] finalize: stopped watchdog pid 1554811
+[09-21 18:54:09] finalize: ================ ALL WORK COMPLETE ================

@@ -1,0 +1,28 @@
+```python
+def closest_integer(value: str) -> int:
+    """
+    Return the integer closest to the numeric string `value`. If the
+    number is exactly halfway between two integers, round away from zero.
+    """
+    # Convert the string to a float
+    num = float(value)
+
+    # Handle the special case of zero
+    if num == 0.0:
+        return 0
+
+    # Compute the floor and ceil of the number
+    lower = int(num // 1)          # floor
+    upper = lower + 1              # ceil
+
+    # Compute the absolute differences to the two candidates
+    diff_lower = abs(num - lower)
+    diff_upper = abs(num - upper)
+
+    # If the differences are equal, round away from zero
+    if diff_lower == diff_upper:
+        return upper if num > 0 else lower
+
+    # Otherwise return the closer integer
+    return lower if diff_lower < diff_upper else upper
+```

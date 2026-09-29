@@ -1,0 +1,23 @@
+MMLU-Pro: 1 model(s), 14 categories, 70 questions/model.
+Planned batches: 14; scored answers: 70.
+Results: /home/hm/Projects/Tests/2026-09-19/candidates-round2/mmlu-xing-96
+
+Model 1/1: xing4.0-29b-a4b:iq4_nl
+[##----------------------------] 1/14 (  7.1%) xing4.0-29b-a4b:iq4_nl / biology                           ETA 1m 07s
+[####--------------------------] 2/14 ( 14.3%) xing4.0-29b-a4b:iq4_nl / business                          ETA 52s
+[######------------------------] 3/14 ( 21.4%) xing4.0-29b-a4b:iq4_nl / chemistry                         ETA 51s
+[########----------------------] 4/14 ( 28.6%) xing4.0-29b-a4b:iq4_nl / computer science                  ETA 57s
+[##########--------------------] 5/14 ( 35.7%) xing4.0-29b-a4b:iq4_nl / economics                         ETA 47s
+[############------------------] 6/14 ( 42.9%) xing4.0-29b-a4b:iq4_nl / engineering                       ETA 39s
+[###############---------------] 7/14 ( 50.0%) xing4.0-29b-a4b:iq4_nl / health                            ETA 33s
+[#################-------------] 8/14 ( 57.1%) xing4.0-29b-a4b:iq4_nl / history                           ETA 28s
+[###################-----------] 9/14 ( 64.3%) xing4.0-29b-a4b:iq4_nl / law                               ETA 26s
+[#####################---------] 10/14 ( 71.4%) xing4.0-29b-a4b:iq4_nl / math                              ETA 20s
+[#######################-------] 11/14 ( 78.6%) xing4.0-29b-a4b:iq4_nl / other                             ETA 14s
+[#########################-----] 12/14 ( 85.7%) xing4.0-29b-a4b:iq4_nl / philosophy                        ETA 9s
+[###########################---] 13/14 ( 92.9%) xing4.0-29b-a4b:iq4_nl / physics                           ETA 5s
+[##############################] 14/14 (100.0%) xing4.0-29b-a4b:iq4_nl / psychology                        ETA 0s
+
+Finished 14/14 batches and scored 70 answers.
+HTML report: /home/hm/Projects/Tests/2026-09-19/candidates-round2/mmlu-xing-96/report.html
+Leader: xing4.0-29b-a4b:iq4_nl (44.3%)

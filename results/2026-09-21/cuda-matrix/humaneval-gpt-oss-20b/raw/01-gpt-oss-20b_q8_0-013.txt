@@ -1,0 +1,19 @@
+```python
+def greatest_common_divisor(a: int, b: int) -> int:
+    """Return the greatest common divisor of two integers a and b.
+
+    Uses the Euclidean algorithm, which repeatedly replaces the larger
+    number with the remainder of the division until the remainder is zero.
+    The last non‑zero remainder is the GCD.
+
+    >>> greatest_common_divisor(3, 5)
+    1
+    >>> greatest_common_divisor(25, 15)
+    5
+    """
+    # Ensure a and b are non‑negative
+    a, b = abs(a), abs(b)
+    while b:
+        a, b = b, a % b
+    return a
+```

@@ -1,0 +1,9 @@
+[09-21 08:26:22] ggmlorg-q8: MMLU-Pro per-category=5 (batch 5) num_predict=96
+[09-21 08:31:29] ggmlorg-q8: MMLU pc=5 np=96 -> 68.57% parsed=70/70 tps=11.4 wall=5.1min
+[09-21 08:31:29] ggmlorg-q8: MMLU-Pro per-category=5 (batch 5) num_predict=2048
+[09-21 08:33:41] ggmlorg-q8: MMLU pc=5 np=2048 -> 68.57% parsed=70/70 tps=11.4 wall=2.2min
+[09-21 08:33:41] ggmlorg-q8: HumanEval 164 tasks
+[09-21 09:42:49] ggmlorg-q8: HumanEval -> 95.73% parsed=164/164 tps=10.9 wall=69.1min
+[09-21 09:42:49] ggmlorg-q8: throughput
+[09-21 09:42:49] ggmlorg-q8: throughput -> 
+[09-21 09:42:49] ggmlorg-q8: bench_off DONE (pc=5 what=mmlu96,mmlu2048,humaneval,throughput)

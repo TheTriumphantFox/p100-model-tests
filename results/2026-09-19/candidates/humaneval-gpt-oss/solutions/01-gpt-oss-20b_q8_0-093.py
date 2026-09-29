@@ -1,0 +1,40 @@
+def encode(message: str) -> str:
+    """
+    Encode a message by swapping the case of all letters and replacing
+    each vowel with the letter that appears two places ahead in the
+    English alphabet.
+
+    Parameters
+    ----------
+    message : str
+        The input string containing only letters and spaces.
+
+    Returns
+    -------
+    str
+        The encoded string.
+
+    Examples
+    --------
+    >>> encode('test')
+    'TGST'
+    >>> encode('This is a message')
+    'tHKS KS C MGSSCGG'
+    """
+    # Mapping for vowels: two places ahead
+    vowel_map = {
+        'a': 'c', 'e': 'g', 'i': 'k', 'o': 'q', 'u': 'w',
+        'A': 'C', 'E': 'G', 'I': 'K', 'O': 'Q', 'U': 'W'
+    }
+
+    result_chars = []
+    for ch in message:
+        # Swap case
+        swapped = ch.swapcase()
+        # Replace vowel if present in mapping
+        if swapped in vowel_map:
+            result_chars.append(vowel_map[swapped])
+        else:
+            result_chars.append(swapped)
+
+    return ''.join(result_chars)

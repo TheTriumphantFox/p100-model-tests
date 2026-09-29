@@ -1,0 +1,26 @@
+{
+  "source": "manifest.jsonl",
+  "charts": [
+    {
+      "title": "single_object \u2014 CLIP alignment",
+      "svg": "test_single_object_clip.svg",
+      "png": "test_single_object_clip.png"
+    },
+    {
+      "title": "single_object \u2014 generation speed",
+      "svg": "test_single_object_speed.svg",
+      "png": "test_single_object_speed.png"
+    },
+    {
+      "title": "Overall \u2014 CLIP prompt alignment",
+      "svg": "overall_clip_alignment.svg",
+      "png": "overall_clip_alignment.png"
+    },
+    {
+      "title": "Overall \u2014 generation speed",
+      "svg": "overall_generation_speed.svg",
+      "png": "overall_generation_speed.png"
+    }
+  ],
+  "metric": "CLIP prompt-image cosine similarity plus images/minute"
+}

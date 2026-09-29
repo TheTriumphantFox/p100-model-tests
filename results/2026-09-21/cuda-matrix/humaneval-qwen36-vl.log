@@ -1,0 +1,499 @@
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+HumanEval: 1 model(s) × 164 tasks = 164 generations.
+Already completed: 0. Results: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/humaneval-qwen36-vl
+
+Model 1/1: qwen3.6-35b-a3b-abliterated-vl:q4_k_m
+[------------------------------] 1/164 (  0.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/0     ETA 29m 11s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[------------------------------] 2/164 (  1.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/1     ETA 29m 00s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[------------------------------] 3/164 (  1.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/2     ETA 28m 50s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[------------------------------] 4/164 (  2.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/3     ETA 28m 39s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[------------------------------] 5/164 (  3.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/4     ETA 28m 28s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#-----------------------------] 6/164 (  3.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/5     ETA 28m 17s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#-----------------------------] 7/164 (  4.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/6     ETA 28m 06s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#-----------------------------] 8/164 (  4.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/7     ETA 27m 56s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#-----------------------------] 9/164 (  5.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/8     ETA 27m 45s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#-----------------------------] 10/164 (  6.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/9     ETA 27m 34s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##----------------------------] 11/164 (  6.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/10    ETA 27m 23s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##----------------------------] 12/164 (  7.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/11    ETA 27m 13s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##----------------------------] 13/164 (  7.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/12    ETA 27m 02s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##----------------------------] 14/164 (  8.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/13    ETA 26m 51s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##----------------------------] 15/164 (  9.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/14    ETA 26m 40s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##----------------------------] 16/164 (  9.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/15    ETA 26m 30s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###---------------------------] 17/164 ( 10.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/16    ETA 26m 19s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###---------------------------] 18/164 ( 11.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/17    ETA 26m 08s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###---------------------------] 19/164 ( 11.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/18    ETA 25m 57s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###---------------------------] 20/164 ( 12.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/19    ETA 25m 47s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###---------------------------] 21/164 ( 12.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/20    ETA 25m 36s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[####--------------------------] 22/164 ( 13.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/21    ETA 25m 25s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[####--------------------------] 23/164 ( 14.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/22    ETA 25m 14s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[####--------------------------] 24/164 ( 14.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/23    ETA 25m 04s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[####--------------------------] 25/164 ( 15.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/24    ETA 24m 53s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[####--------------------------] 26/164 ( 15.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/25    ETA 24m 42s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[####--------------------------] 27/164 ( 16.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/26    ETA 24m 31s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#####-------------------------] 28/164 ( 17.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/27    ETA 24m 21s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#####-------------------------] 29/164 ( 17.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/28    ETA 24m 10s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#####-------------------------] 30/164 ( 18.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/29    ETA 23m 59s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#####-------------------------] 31/164 ( 18.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/30    ETA 23m 48s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#####-------------------------] 32/164 ( 19.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/31    ETA 23m 38s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[######------------------------] 33/164 ( 20.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/32    ETA 23m 27s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[######------------------------] 34/164 ( 20.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/33    ETA 23m 16s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[######------------------------] 35/164 ( 21.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/34    ETA 23m 05s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[######------------------------] 36/164 ( 22.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/35    ETA 22m 55s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[######------------------------] 37/164 ( 22.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/36    ETA 22m 44s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[######------------------------] 38/164 ( 23.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/37    ETA 22m 33s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#######-----------------------] 39/164 ( 23.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/38    ETA 22m 22s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#######-----------------------] 40/164 ( 24.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/39    ETA 22m 12s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#######-----------------------] 41/164 ( 25.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/40    ETA 22m 01s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#######-----------------------] 42/164 ( 25.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/41    ETA 21m 50s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#######-----------------------] 43/164 ( 26.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/42    ETA 21m 39s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[########----------------------] 44/164 ( 26.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/43    ETA 21m 29s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[########----------------------] 45/164 ( 27.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/44    ETA 21m 18s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[########----------------------] 46/164 ( 28.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/45    ETA 21m 07s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[########----------------------] 47/164 ( 28.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/46    ETA 20m 56s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[########----------------------] 48/164 ( 29.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/47    ETA 20m 46s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[########----------------------] 49/164 ( 29.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/48    ETA 20m 35s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#########---------------------] 50/164 ( 30.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/49    ETA 20m 24s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#########---------------------] 51/164 ( 31.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/50    ETA 20m 13s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#########---------------------] 52/164 ( 31.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/51    ETA 20m 03s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#########---------------------] 53/164 ( 32.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/52    ETA 19m 52s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#########---------------------] 54/164 ( 32.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/53    ETA 19m 41s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##########--------------------] 55/164 ( 33.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/54    ETA 19m 30s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##########--------------------] 56/164 ( 34.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/55    ETA 19m 20s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##########--------------------] 57/164 ( 34.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/56    ETA 19m 09s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##########--------------------] 58/164 ( 35.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/57    ETA 18m 58s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##########--------------------] 59/164 ( 36.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/58    ETA 18m 48s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##########--------------------] 60/164 ( 36.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/59    ETA 18m 37s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###########-------------------] 61/164 ( 37.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/60    ETA 18m 26s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###########-------------------] 62/164 ( 37.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/61    ETA 18m 15s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###########-------------------] 63/164 ( 38.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/62    ETA 18m 05s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###########-------------------] 64/164 ( 39.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/63    ETA 17m 54s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###########-------------------] 65/164 ( 39.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/64    ETA 17m 43s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[############------------------] 66/164 ( 40.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/65    ETA 17m 32s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[############------------------] 67/164 ( 40.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/66    ETA 17m 22s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[############------------------] 68/164 ( 41.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/67    ETA 17m 11s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[############------------------] 69/164 ( 42.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/68    ETA 17m 00s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[############------------------] 70/164 ( 42.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/69    ETA 16m 49s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[############------------------] 71/164 ( 43.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/70    ETA 16m 39s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#############-----------------] 72/164 ( 43.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/71    ETA 16m 28s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#############-----------------] 73/164 ( 44.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/72    ETA 16m 17s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#############-----------------] 74/164 ( 45.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/73    ETA 16m 06s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#############-----------------] 75/164 ( 45.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/74    ETA 15m 56s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#############-----------------] 76/164 ( 46.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/75    ETA 15m 45s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##############----------------] 77/164 ( 47.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/76    ETA 15m 34s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##############----------------] 78/164 ( 47.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/77    ETA 15m 23s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##############----------------] 79/164 ( 48.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/78    ETA 15m 13s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##############----------------] 80/164 ( 48.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/79    ETA 15m 02s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##############----------------] 81/164 ( 49.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/80    ETA 14m 51s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###############---------------] 82/164 ( 50.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/81    ETA 14m 40s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###############---------------] 83/164 ( 50.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/82    ETA 14m 30s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###############---------------] 84/164 ( 51.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/83    ETA 14m 19s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###############---------------] 85/164 ( 51.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/84    ETA 14m 08s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###############---------------] 86/164 ( 52.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/85    ETA 13m 57s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###############---------------] 87/164 ( 53.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/86    ETA 13m 47s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[################--------------] 88/164 ( 53.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/87    ETA 13m 36s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[################--------------] 89/164 ( 54.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/88    ETA 13m 25s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[################--------------] 90/164 ( 54.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/89    ETA 13m 14s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[################--------------] 91/164 ( 55.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/90    ETA 13m 04s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[################--------------] 92/164 ( 56.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/91    ETA 12m 53s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#################-------------] 93/164 ( 56.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/92    ETA 12m 42s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#################-------------] 94/164 ( 57.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/93    ETA 12m 32s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#################-------------] 95/164 ( 57.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/94    ETA 12m 21s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#################-------------] 96/164 ( 58.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/95    ETA 12m 10s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#################-------------] 97/164 ( 59.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/96    ETA 11m 59s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#################-------------] 98/164 ( 59.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/97    ETA 11m 49s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##################------------] 99/164 ( 60.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/98    ETA 11m 38s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##################------------] 100/164 ( 61.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/99    ETA 11m 27s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##################------------] 101/164 ( 61.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/100   ETA 11m 16s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##################------------] 102/164 ( 62.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/101   ETA 11m 06s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##################------------] 103/164 ( 62.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/102   ETA 10m 55s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###################-----------] 104/164 ( 63.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/103   ETA 10m 44s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###################-----------] 105/164 ( 64.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/104   ETA 10m 33s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###################-----------] 106/164 ( 64.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/105   ETA 10m 23s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###################-----------] 107/164 ( 65.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/106   ETA 10m 12s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###################-----------] 108/164 ( 65.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/107   ETA 10m 01s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###################-----------] 109/164 ( 66.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/108   ETA 9m 50s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[####################----------] 110/164 ( 67.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/109   ETA 9m 40s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[####################----------] 111/164 ( 67.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/110   ETA 9m 29s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[####################----------] 112/164 ( 68.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/111   ETA 9m 18s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[####################----------] 113/164 ( 68.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/112   ETA 9m 07s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[####################----------] 114/164 ( 69.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/113   ETA 8m 57s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#####################---------] 115/164 ( 70.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/114   ETA 8m 46s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#####################---------] 116/164 ( 70.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/115   ETA 8m 35s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#####################---------] 117/164 ( 71.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/116   ETA 8m 24s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#####################---------] 118/164 ( 72.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/117   ETA 8m 14s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#####################---------] 119/164 ( 72.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/118   ETA 8m 03s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#####################---------] 120/164 ( 73.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/119   ETA 7m 52s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[######################--------] 121/164 ( 73.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/120   ETA 7m 41s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[######################--------] 122/164 ( 74.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/121   ETA 7m 31s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[######################--------] 123/164 ( 75.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/122   ETA 7m 20s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[######################--------] 124/164 ( 75.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/123   ETA 7m 09s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[######################--------] 125/164 ( 76.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/124   ETA 6m 58s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#######################-------] 126/164 ( 76.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/125   ETA 6m 48s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#######################-------] 127/164 ( 77.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/126   ETA 6m 37s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#######################-------] 128/164 ( 78.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/127   ETA 6m 26s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#######################-------] 129/164 ( 78.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/128   ETA 6m 16s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#######################-------] 130/164 ( 79.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/129   ETA 6m 05s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#######################-------] 131/164 ( 79.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/130   ETA 5m 54s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[########################------] 132/164 ( 80.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/131   ETA 5m 43s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[########################------] 133/164 ( 81.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/132   ETA 5m 33s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[########################------] 134/164 ( 81.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/133   ETA 5m 22s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[########################------] 135/164 ( 82.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/134   ETA 5m 11s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[########################------] 136/164 ( 82.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/135   ETA 5m 00s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#########################-----] 137/164 ( 83.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/136   ETA 4m 50s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#########################-----] 138/164 ( 84.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/137   ETA 4m 39s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#########################-----] 139/164 ( 84.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/138   ETA 4m 28s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#########################-----] 140/164 ( 85.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/139   ETA 4m 17s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#########################-----] 141/164 ( 86.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/140   ETA 4m 07s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#########################-----] 142/164 ( 86.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/141   ETA 3m 56s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##########################----] 143/164 ( 87.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/142   ETA 3m 45s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##########################----] 144/164 ( 87.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/143   ETA 3m 34s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##########################----] 145/164 ( 88.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/144   ETA 3m 24s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##########################----] 146/164 ( 89.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/145   ETA 3m 13s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##########################----] 147/164 ( 89.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/146   ETA 3m 02s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###########################---] 148/164 ( 90.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/147   ETA 2m 51s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###########################---] 149/164 ( 90.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/148   ETA 2m 41s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###########################---] 150/164 ( 91.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/149   ETA 2m 30s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###########################---] 151/164 ( 92.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/150   ETA 2m 19s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###########################---] 152/164 ( 92.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/151   ETA 2m 08s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[###########################---] 153/164 ( 93.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/152   ETA 1m 58s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[############################--] 154/164 ( 93.9%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/153   ETA 1m 47s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[############################--] 155/164 ( 94.5%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/154   ETA 1m 36s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[############################--] 156/164 ( 95.1%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/155   ETA 1m 25s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[############################--] 157/164 ( 95.7%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/156   ETA 1m 15s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[############################--] 158/164 ( 96.3%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/157   ETA 1m 04s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#############################-] 159/164 ( 97.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/158   ETA 54s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#############################-] 160/164 ( 97.6%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/159   ETA 43s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#############################-] 161/164 ( 98.2%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/160   ETA 32s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#############################-] 162/164 ( 98.8%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/161   ETA 21s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[#############################-] 163/164 ( 99.4%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/162   ETA 11s
+
+  request failed; retrying in 10s: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=qwen3.6-35b-a3b-abliterated-vl_q4_k_m failed to load\",\"type\":\"server_error\"}}"}
+[##############################] 164/164 (100.0%) qwen3.6-35b-a3b-abliterated-vl:q4_k_m / HumanEval/163   ETA 0s
+
+Finished 164/164 generations. Report: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/humaneval-qwen36-vl/report.html
+Leader: qwen3.6-35b-a3b-abliterated-vl:q4_k_m (0.0%)

@@ -1,0 +1,85 @@
+def is_simple_power(x, n):
+    """Your task is to write a function that returns true if a number x is a simple
+    power of n and false in other cases.
+    x is a simple power of n if n**int=x
+    For example:
+    is_simple_power(1, 4) => true
+    is_simple_power(2, 2) => true
+    is_simple_power(8, 2) => true
+    is_simple_power(3, 2) => false
+    is_simple_power(3, 1) => false
+    is_simple_power(5, 3) => false
+    """
+    if n == 0:
+        return x == 0
+    if n == 1:
+        return x == 1
+    if n == -1:
+        return x == 1 or x == -1
+    
+    # Handle negative n
+    if n < 0:
+        # n**k = x
+        # If k is even, x must be positive
+        # If k is odd, x can be positive or negative
+        # We need to check if there exists an integer k such that n**k = x
+        # Since n is negative, let's consider the absolute value
+        abs_n = -n
+        # x must be non-zero for n != 0
+        if x == 0:
+            return False
+        # Check if x is a power of abs_n
+        # But we also need to consider the sign
+        # n**k = (-1)**k * abs_n**k
+        # So x = (-1)**k * abs_n**k
+        # This means |x| must be a power of abs_n, and the sign of x must match (-1)**k
+        
+        # First check if |x| is a power of abs_n
+        abs_x = abs(x)
+        if abs_x == 0:
+            return False
+        
+        # Find if there's an integer k such that abs_n**k = abs_x
+        # k must be >= 0
+        k = 0
+        current = 1
+        while current < abs_x:
+            current *= abs_n
+            k += 1
+            if current > abs_x:
+                break
+        
+        if current != abs_x:
+            return False
+        
+        # Now check the sign
+        # x = (-1)**k * abs_x
+        # So x should equal (-1)**k * abs_x
+        expected_sign = 1 if k % 2 == 0 else -1
+        return x == expected_sign * abs_x
+    
+    # n > 0
+    if x == 0:
+        return False
+    
+    # Check if x is a power of n
+    # n**k = x for some integer k >= 0
+    if x == 1:
+        return True
+    
+    if n == 1:
+        return x == 1
+    
+    # For n > 1, x must be positive
+    if x < 0:
+        return False
+    
+    k = 0
+    current = 1
+    while current < x:
+        current *= n
+        k += 1
+        if current > x:
+            break
+    
+    return current == x

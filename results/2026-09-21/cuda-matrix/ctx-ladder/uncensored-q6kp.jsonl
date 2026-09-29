@@ -1,0 +1,5 @@
+{"slug":"uncensored-q6kp","ctx":8192,"kv":"f16","weights_mib":24723,"vram_mib":25353,"tok_per_s":9.91,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 9.91, "prompt_eval_count": 32, "wall_s": 21.1}}
+{"slug":"uncensored-q6kp","ctx":12288,"kv":"f16","weights_mib":24723,"vram_mib":25641,"tok_per_s":9.91,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 9.91, "prompt_eval_count": 32, "wall_s": 21.1}}
+{"slug":"uncensored-q6kp","ctx":16384,"kv":"f16","weights_mib":24723,"vram_mib":25929,"tok_per_s":9.91,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 9.91, "prompt_eval_count": 32, "wall_s": 21.2}}
+{"slug":"uncensored-q6kp","ctx":24576,"kv":"f16","weights_mib":24723,"vram_mib":26505,"tok_per_s":9.91,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 9.91, "prompt_eval_count": 32, "wall_s": 21.1}}
+{"slug":"uncensored-q6kp","ctx":32768,"kv":"f16","weights_mib":24723,"vram_mib":27081,"tok_per_s":9.91,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 9.91, "prompt_eval_count": 32, "wall_s": 21.1}}

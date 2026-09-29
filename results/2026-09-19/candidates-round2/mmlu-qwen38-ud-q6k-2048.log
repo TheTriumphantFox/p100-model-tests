@@ -1,0 +1,23 @@
+MMLU-Pro: 1 model(s), 14 categories, 70 questions/model.
+Planned batches: 14; scored answers: 70.
+Results: /home/hm/Projects/Tests/2026-09-19/candidates-round2/mmlu-qwen38-ud-q6k-2048
+
+Model 1/1: qwen3.8-27b-unsloth:ud_q6_k
+[##----------------------------] 1/14 (  7.1%) qwen3.8-27b-unsloth:ud_q6_k / biology                      ETA 2m 19s
+[####--------------------------] 2/14 ( 14.3%) qwen3.8-27b-unsloth:ud_q6_k / business                     ETA 1m 54s
+[######------------------------] 3/14 ( 21.4%) qwen3.8-27b-unsloth:ud_q6_k / chemistry                    ETA 1m 49s
+[########----------------------] 4/14 ( 28.6%) qwen3.8-27b-unsloth:ud_q6_k / computer science             ETA 1m 52s
+[##########--------------------] 5/14 ( 35.7%) qwen3.8-27b-unsloth:ud_q6_k / economics                    ETA 1m 36s
+[############------------------] 6/14 ( 42.9%) qwen3.8-27b-unsloth:ud_q6_k / engineering                  ETA 1m 23s
+[###############---------------] 7/14 ( 50.0%) qwen3.8-27b-unsloth:ud_q6_k / health                       ETA 1m 10s
+[#################-------------] 8/14 ( 57.1%) qwen3.8-27b-unsloth:ud_q6_k / history                      ETA 1m 01s
+[###################-----------] 9/14 ( 64.3%) qwen3.8-27b-unsloth:ud_q6_k / law                          ETA 54s
+[#####################---------] 10/14 ( 71.4%) qwen3.8-27b-unsloth:ud_q6_k / math                         ETA 42s
+[#######################-------] 11/14 ( 78.6%) qwen3.8-27b-unsloth:ud_q6_k / other                        ETA 30s
+[#########################-----] 12/14 ( 85.7%) qwen3.8-27b-unsloth:ud_q6_k / philosophy                   ETA 20s
+[###########################---] 13/14 ( 92.9%) qwen3.8-27b-unsloth:ud_q6_k / physics                      ETA 10s
+[##############################] 14/14 (100.0%) qwen3.8-27b-unsloth:ud_q6_k / psychology                   ETA 0s
+
+Finished 14/14 batches and scored 70 answers.
+HTML report: /home/hm/Projects/Tests/2026-09-19/candidates-round2/mmlu-qwen38-ud-q6k-2048/report.html
+Leader: qwen3.8-27b-unsloth:ud_q6_k (70.0%)

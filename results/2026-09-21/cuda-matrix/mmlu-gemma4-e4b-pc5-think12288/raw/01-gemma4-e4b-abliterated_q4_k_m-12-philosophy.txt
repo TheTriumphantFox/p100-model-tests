@@ -1,0 +1,2 @@
+BENCHMARK ERROR
+RuntimeError: Ollama HTTP 502: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=gemma4-e4b-abliterated_q4_k_m failed to load\",\"type\":\"server_error\"}}"}

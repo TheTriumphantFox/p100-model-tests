@@ -1,0 +1,8 @@
+[  0] PASS  steps=10   124.8s  tools=7
+[  1] PASS  steps=10   147.0s  tools=7
+[  2] fail  steps=17   103.2s  tools=14
+[  3] fail  steps=14    76.0s  tools=11
+[  4] fail  steps=14   105.4s  tools=11
+
+pass 2/5 (40.0%)   correct-state incl. unterminated 2/5   unterminated 0   parse failures 0
+total 556s   ->  smoke_5.json

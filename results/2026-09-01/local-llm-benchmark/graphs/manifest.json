@@ -1,0 +1,78 @@
+{
+  "source_report": "/home/hm/Projects/Tests/2026-09-01/local-llm-benchmark/benchmark_results_full_20260901_220432.json",
+  "output_dir": "/home/hm/Projects/Tests/2026-09-01/local-llm-benchmark/graphs",
+  "metric": "mean retained generation_tok_per_sec",
+  "charts": [
+    {
+      "title": "Overall Model Ranking \u2014 All Tests",
+      "svg": "overall_all_tests.svg",
+      "png": "overall_all_tests.png"
+    },
+    {
+      "title": "Overall Model Ranking \u2014 Speed Tests",
+      "svg": "overall_speed.svg",
+      "png": "overall_speed.png"
+    },
+    {
+      "title": "Brief Response Speed (50 tokens)",
+      "svg": "test_speed_brief.svg",
+      "png": "test_speed_brief.png"
+    },
+    {
+      "title": "Medium Response Speed (200 tokens)",
+      "svg": "test_speed_medium.svg",
+      "png": "test_speed_medium.png"
+    },
+    {
+      "title": "Long Response Speed (350+ tokens)",
+      "svg": "test_speed_long.svg",
+      "png": "test_speed_long.png"
+    },
+    {
+      "title": "Logic & Reasoning",
+      "svg": "test_logic_reasoning.svg",
+      "png": "test_logic_reasoning.png"
+    },
+    {
+      "title": "Mathematical Reasoning",
+      "svg": "test_math_reasoning.svg",
+      "png": "test_math_reasoning.png"
+    },
+    {
+      "title": "Factual Knowledge Recall",
+      "svg": "test_factual_knowledge.svg",
+      "png": "test_factual_knowledge.png"
+    },
+    {
+      "title": "Python Coding",
+      "svg": "test_python_coding.svg",
+      "png": "test_python_coding.png"
+    },
+    {
+      "title": "HTML/CSS/JS Coding",
+      "svg": "test_html_coding.svg",
+      "png": "test_html_coding.png"
+    },
+    {
+      "title": "Creative Writing & Style",
+      "svg": "test_creative_writing.svg",
+      "png": "test_creative_writing.png"
+    },
+    {
+      "title": "Information Extraction & Summarization",
+      "svg": "test_summarization.svg",
+      "png": "test_summarization.png"
+    },
+    {
+      "title": "Complex Instruction Following",
+      "svg": "test_instruction_following.svg",
+      "png": "test_instruction_following.png"
+    },
+    {
+      "title": "Context Understanding (with long prompt)",
+      "svg": "test_context_understanding.svg",
+      "png": "test_context_understanding.png"
+    }
+  ],
+  "retained_successful_results": 576
+}

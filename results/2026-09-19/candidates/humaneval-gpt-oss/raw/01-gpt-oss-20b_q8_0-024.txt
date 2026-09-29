@@ -1,0 +1,38 @@
+```python
+def largest_divisor(n: int) -> int:
+    """
+    Return the largest integer that divides n evenly and is strictly smaller than n.
+    If n <= 1, the function returns 1.
+
+    Parameters
+    ----------
+    n : int
+        The number to find the divisor for.
+
+    Returns
+    -------
+    int
+        The largest divisor of n that is less than n.
+
+    Examples
+    --------
+    >>> largest_divisor(15)
+    5
+    >>> largest_divisor(28)
+    14
+    >>> largest_divisor(2)
+    1
+    >>> largest_divisor(1)
+    1
+    """
+    if n <= 1:
+        return 1
+
+    # Start from the largest possible proper divisor: n // 2
+    for d in range(n // 2, 0, -1):
+        if n % d == 0:
+            return d
+
+    # Fallback (should not be reached for n > 1)
+    return 1
+```

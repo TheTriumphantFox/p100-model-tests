@@ -1,0 +1,50 @@
+========================================================================================
+  LOCAL OLLAMA LLM BENCHMARK
+  Ollama: shim-llamacpp | API: http://127.0.0.1:11500
+  Models: 1 | Tests: 4 | Iterations: 5 | Requests: 20
+  Context: 8192 | Thinking: off | Score: generation tok/s
+  Report: 2026-09-19/candidates-round2/throughput/ornith.json
+========================================================================================
+   1. ornith-1.5-35b-a3b:q4_k_m (Q4_K_M, 21.7 GB)
+
+Every iteration unloads the previous model before starting, then keeps the current model warm across its tests.
+
+
+========================================================================
+MODEL 1/1: ornith-1.5-35b-a3b:q4_k_m
+========================================================================
+  Iteration 1/5 (cold model load)
+     1/4 speed_brief                49.83 tok/s |   32 tok |    0.99s (load 0.1s)
+     2/4 speed_medium               46.75 tok/s |  232 tok |    5.44s (load 0.1s)
+     3/4 speed_long                 47.10 tok/s |  420 tok |    9.57s (load 0.1s)
+     4/4 python_coding              48.06 tok/s |  400 tok |    8.93s (load 0.1s)
+  Iteration 2/5 (cold model load)
+     1/4 speed_brief                50.89 tok/s |   32 tok |    0.84s (load 0.1s)
+     2/4 speed_medium               49.54 tok/s |  232 tok |    5.12s (load 0.1s)
+     3/4 speed_long                 47.68 tok/s |  420 tok |    9.36s (load 0.0s)
+     4/4 python_coding              47.43 tok/s |  400 tok |    8.93s (load 0.0s)
+  Iteration 3/5 (cold model load)
+     1/4 speed_brief                49.48 tok/s |   32 tok |    0.80s (load 0.1s)
+     2/4 speed_medium               49.71 tok/s |  232 tok |    5.10s (load 0.1s)
+     3/4 speed_long                 48.55 tok/s |  420 tok |    9.20s (load 0.0s)
+     4/4 python_coding              46.89 tok/s |  400 tok |    9.04s (load 0.0s)
+  Iteration 4/5 (cold model load)
+     1/4 speed_brief                48.29 tok/s |   32 tok |    0.88s (load 0.1s)
+     2/4 speed_medium               48.09 tok/s |  232 tok |    5.29s (load 0.1s)
+     3/4 speed_long                 47.31 tok/s |  420 tok |    9.43s (load 0.0s)
+     4/4 python_coding              48.87 tok/s |  400 tok |    8.68s (load 0.0s)
+  Iteration 5/5 (cold model load)
+     1/4 speed_brief                45.19 tok/s |   32 tok |    0.88s (load 0.1s)
+     2/4 speed_medium               46.60 tok/s |  232 tok |    5.42s (load 0.1s)
+     3/4 speed_long                 47.64 tok/s |  420 tok |    9.38s (load 0.0s)
+     4/4 python_coding              48.24 tok/s |  400 tok |    8.79s (load 0.0s)
+
+========================================================================================
+  COMPLETE — ONE WORST RUN REMOVED PER MODEL/TEST
+========================================================================================
+
+  Overall ranking (retained speed-test generation throughput):
+  # 1 ornith-1.5-35b-a3b:q4_k_m                                         48.65 tok/s | 16/16 retained successful
+
+  Raw runs: 20 | Retained: 16 | Removed: 4
+  JSON report: 2026-09-19/candidates-round2/throughput/ornith.json

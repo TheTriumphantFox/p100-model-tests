@@ -1,0 +1,59 @@
+```python
+def sort_array(arr):
+    """
+    In this Kata, you have to sort an array of non-negative integers according to
+    number of ones in their binary representation in ascending order.
+    For similar number of ones, sort based on decimal value.
+
+    It must be implemented like this:
+    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]
+    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]
+    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]
+    """
+    def count_ones(n):
+        # For negative numbers, we need to handle them specially.
+        # The problem statement says "non-negative integers" but the example includes negative numbers.
+        # Looking at the example: sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]
+        # Let's check the binary representation of negative numbers in Python.
+        # In Python, negative numbers have infinite leading 1s in their two's complement representation.
+        # But the expected output suggests a different behavior.
+        # Let's think about this differently. Maybe for negative numbers, we should consider the absolute value?
+        # Or maybe the problem expects us to handle negative numbers by their absolute value's binary ones count?
+        # Let's check: 
+        # -2: abs is 2, binary 10, ones = 1
+        # -3: abs is 3, binary 11, ones = 2
+        # -4: abs is 4, binary 100, ones = 1
+        # -5: abs is 5, binary 101, ones = 2
+        # -6: abs is 6, binary 110, ones = 2
+        # If we sort by (ones, value):
+        # -2: (1, -2)
+        # -3: (2, -3)
+        # -4: (1, -4)
+        # -5: (2, -5)
+        # -6: (2, -6)
+        # Sorting by ones first, then by value:
+        # ones=1: -4, -2 (sorted by value: -4, -2)
+        # ones=2: -6, -5, -3 (sorted by value: -6, -5, -3)
+        # Result: [-4, -2, -6, -5, -3] which doesn't match expected [-6, -5, -4, -3, -2]
+        
+        # Let me reconsider. Maybe for negative numbers, we should just sort them in ascending order (most negative first)?
+        # Expected: [-6, -5, -4, -3, -2] which is ascending order.
+        
+        # Let me re-read the problem. It says "non-negative integers" but the example has negative numbers.
+        # Perhaps the intended behavior for negative numbers is to just sort them in ascending order?
+        # Or perhaps we should treat negative numbers differently.
+        
+        # Let's try another approach: for negative numbers, use the absolute value for counting ones, but sort negative numbers among themselves in ascending order, and positive numbers by the ones count rule.
+        
+        # Actually, let me just implement it as: sort by (number of ones in binary of absolute value, value) for all numbers.
+        # But that didn't work for the negative example.
+        
+        # Let me try: for negative numbers, just sort in ascending order. For non-negative, sort by (ones, value).
+        # But how to combine them?
+        
+        # Looking at the expected output again: [-6, -5, -4, -3, -2] is just ascending order.
+        # Maybe the problem expects that negative numbers are sorted in ascending order, and they come before non-negative numbers?
+        # Or maybe all numbers are sorted by (ones, value) where for negative numbers, we use a different key?
+        
+        # Let me try a different interpretation: maybe for negative numbers, we should count the ones in the binary representation of the absolute value, and then sort by (ones, value).
+        # But as I showed, that gives [-4, -2, -6, -5, -3] not [-6, -5, -4, -3, -

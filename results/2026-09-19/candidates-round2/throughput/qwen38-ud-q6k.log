@@ -1,0 +1,50 @@
+========================================================================================
+  LOCAL OLLAMA LLM BENCHMARK
+  Ollama: shim-llamacpp | API: http://127.0.0.1:11500
+  Models: 1 | Tests: 4 | Iterations: 5 | Requests: 20
+  Context: 8192 | Thinking: off | Score: generation tok/s
+  Report: /home/hm/Projects/Tests/2026-09-19/candidates-round2/throughput/qwen38-ud-q6k.json
+========================================================================================
+   1. qwen3.8-27b-unsloth:ud_q6_k (Q6_K, 22.0 GB)
+
+Every iteration unloads the previous model before starting, then keeps the current model warm across its tests.
+
+
+========================================================================
+MODEL 1/1: qwen3.8-27b-unsloth:ud_q6_k
+========================================================================
+  Iteration 1/5 (cold model load)
+     1/4 speed_brief                10.23 tok/s |   23 tok |  213.79s (load 210.6s)
+     2/4 speed_medium                9.85 tok/s |  201 tok |   21.44s (load 0.1s)
+     3/4 speed_long                  9.82 tok/s |  420 tok |   43.82s (load 0.1s)
+     4/4 python_coding               9.82 tok/s |  400 tok |   42.15s (load 0.1s)
+  Iteration 2/5 (cold model load)
+     1/4 speed_brief                10.23 tok/s |   23 tok |    2.57s (load 0.1s)
+     2/4 speed_medium                9.85 tok/s |  201 tok |   21.43s (load 0.1s)
+     3/4 speed_long                  9.82 tok/s |  420 tok |   43.76s (load 0.0s)
+     4/4 python_coding               9.82 tok/s |  400 tok |   42.08s (load 0.0s)
+  Iteration 3/5 (cold model load)
+     1/4 speed_brief                10.24 tok/s |   23 tok |    2.50s (load 0.0s)
+     2/4 speed_medium                9.85 tok/s |  201 tok |   21.43s (load 0.1s)
+     3/4 speed_long                  9.82 tok/s |  420 tok |   43.76s (load 0.0s)
+     4/4 python_coding               9.82 tok/s |  400 tok |   42.08s (load 0.0s)
+  Iteration 4/5 (cold model load)
+     1/4 speed_brief                10.23 tok/s |   23 tok |    2.50s (load 0.0s)
+     2/4 speed_medium                9.85 tok/s |  201 tok |   21.43s (load 0.1s)
+     3/4 speed_long                  9.82 tok/s |  420 tok |   43.76s (load 0.0s)
+     4/4 python_coding               9.82 tok/s |  400 tok |   42.08s (load 0.0s)
+  Iteration 5/5 (cold model load)
+     1/4 speed_brief                10.23 tok/s |   23 tok |    2.50s (load 0.0s)
+     2/4 speed_medium                9.85 tok/s |  201 tok |   21.43s (load 0.1s)
+     3/4 speed_long                  9.82 tok/s |  420 tok |   43.76s (load 0.0s)
+     4/4 python_coding               9.82 tok/s |  400 tok |   42.09s (load 0.0s)
+
+========================================================================================
+  COMPLETE — ONE WORST RUN REMOVED PER MODEL/TEST
+========================================================================================
+
+  Overall ranking (retained speed-test generation throughput):
+  # 1 qwen3.8-27b-unsloth:ud_q6_k                                        9.97 tok/s | 16/16 retained successful
+
+  Raw runs: 20 | Retained: 16 | Removed: 4
+  JSON report: /home/hm/Projects/Tests/2026-09-19/candidates-round2/throughput/qwen38-ud-q6k.json

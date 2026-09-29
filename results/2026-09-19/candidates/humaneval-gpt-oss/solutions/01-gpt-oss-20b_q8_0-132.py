@@ -1,0 +1,22 @@
+def is_nested(string: str) -> bool:
+    """
+    Return True if the string contains a subsequence that is a valid
+    bracket sequence with at least one nested pair.
+    The string consists only of '[' and ']'.
+    """
+    n = len(string)
+    # suffix count of ']' after each index
+    suffix_closing = [0] * (n + 1)
+    for i in range(n - 1, -1, -1):
+        suffix_closing[i] = suffix_closing[i + 1] + (1 if string[i] == ']' else 0)
+
+    opening_before = 0
+    for j, ch in enumerate(string):
+        if ch == '[':
+            # need at least one '[' before this one
+            if opening_before >= 1:
+                # need at least two ']' after this '['
+                if suffix_closing[j + 1] >= 2:
+                    return True
+            opening_before += 1
+    return False

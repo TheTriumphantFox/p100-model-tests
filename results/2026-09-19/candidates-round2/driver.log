@@ -1,0 +1,308 @@
+[23:23:31] QUEUE START
+[23:23:31] ornith: MMLU-Pro num_predict=96
+[23:24:18] ornith: MMLU@96 parsed=70/70 acc=61.43
+[23:24:18] ornith: HumanEval 164 tasks
+[23:37:53] ornith: HumanEval rc=0 -> pass@1=92.07317073170732 n=164 tps=52.6
+[23:37:53] ornith: DONE
+[23:37:53] nemotron symlinked
+[23:37:53] nemotron: throughput
+[23:37:53] nemotron: throughput rc=127
+[23:37:53] nemotron: MMLU-Pro num_predict=96
+[23:37:54] nemotron: MMLU@96 parsed=0/0 acc=0
+[23:37:54] nemotron: parser short at 96 -> escalating to num_predict=2048
+[23:37:54] nemotron: MMLU@2048 parsed=0/0 acc=0
+[23:37:54] nemotron: HumanEval 164 tasks
+[23:37:55] nemotron: HumanEval rc=1 -> unreadable [Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-19/candidates-round2/humaneval-nemotron/results.json'
+[23:37:55] nemotron: DONE
+[23:37:55] qwen36-rerun: throughput
+[23:37:55] qwen36-rerun: throughput rc=127
+[23:37:55] qwen36-rerun: MMLU-Pro num_predict=96
+[23:42:03] qwen36-rerun: MMLU@96 parsed=70/70 acc=71.43
+[23:42:03] qwen36-rerun: HumanEval 164 tasks
+[00:48:11] qwen36-rerun: HumanEval rc=0 -> pass@1=96.34146341463415 n=164 tps=11.1
+[00:48:11] qwen36-rerun: DONE
+[00:48:11] QUEUE DONE
+[00:48:29] QUEUE-2 START
+[00:48:31] router stopped (was pid 1652728)
+[00:48:33] router started from /home/hm/llama-cuda12 (50631b3d2c56, pid 1835037)
+[00:48:33] nemotron: throughput
+[00:52:17] nemotron: throughput rc=0 speed_brief=70.5 speed_medium=69.2 speed_long=69.0 python_coding=69.0
+[00:52:17] nemotron: MMLU-Pro num_predict=96
+[00:52:59] nemotron: MMLU@96 -> 48.57% parsed/attempt=70/70 n=70 tps=72.1 wall=0.7min
+[00:52:59] nemotron: MMLU-Pro num_predict=2048
+[00:53:05] nemotron: MMLU@2048 -> 48.57% parsed/attempt=70/70 n=70 tps=72.1 wall=0.1min
+[00:53:05] nemotron: HumanEval 164 tasks
+[01:04:28] nemotron: HumanEval -> 89.02% parsed/attempt=164/164 n=164 tps=68.5 wall=11.3min
+[01:04:28] nemotron: DONE
+[01:04:28] ornith: MMLU-Pro num_predict=2048
+[01:07:13] ornith: MMLU@2048 -> 61.43% parsed/attempt=70/70 n=70 tps=55.7 wall=2.7min
+[01:07:13] ornith: DONE
+[01:07:13] qwen36-rerun: throughput
+[01:17:18] qwen36-rerun: throughput rc=0 speed_brief=11.5 speed_medium=11.1 speed_long=11.1 python_coding=11.1
+[01:17:18] qwen36-rerun: MMLU-Pro num_predict=2048
+[01:19:33] qwen36-rerun: MMLU@2048 -> 71.43% parsed/attempt=70/70 n=70 tps=11.6 wall=2.2min
+[01:19:33] qwen36-rerun: DONE
+[01:19:35] router stopped (was pid 1835037)
+[01:21:36] router started from /home/hm/llama-cuda12-xing (510016260020, pid )
+[01:21:36] xing: throughput
+[01:21:36] xing: throughput rc=1 
+[01:21:36] xing: MMLU-Pro num_predict=96
+[01:21:36] xing: MMLU@96 -> unreadable [Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-19/candidates-round2/mmlu-xing-96/results.json'
+[01:21:36] xing: MMLU-Pro num_predict=2048
+[01:21:36] xing: MMLU@2048 -> unreadable [Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-19/candidates-round2/mmlu-xing-2048/results.json'
+[01:21:36] xing: HumanEval 164 tasks
+[01:21:36] xing: HumanEval -> unreadable [Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-19/candidates-round2/humaneval-xing/results.json'
+[01:21:36] xing: DONE
+[01:21:36] router stopped (was pid none)
+[01:23:37] router started from /home/hm/llama-cuda12-g9v3 (69c86c9df4ae, pid )
+[01:23:37] g9v3: throughput
+[01:23:37] g9v3: throughput rc=1 
+[01:23:37] g9v3: MMLU-Pro num_predict=96
+[01:23:37] g9v3: MMLU@96 -> unreadable [Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-19/candidates-round2/mmlu-g9v3-96/results.json'
+[01:23:37] g9v3: MMLU-Pro num_predict=2048
+[01:23:38] g9v3: MMLU@2048 -> unreadable [Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-19/candidates-round2/mmlu-g9v3-2048/results.json'
+[01:23:38] g9v3: HumanEval 164 tasks
+[01:23:38] g9v3: HumanEval -> unreadable [Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-19/candidates-round2/humaneval-g9v3/results.json'
+[01:23:38] g9v3: DONE
+[01:23:38] router stopped (was pid none)
+[01:23:40] router started from /home/hm/llama-cuda12 (50631b3d2c56, pid 1902696)
+[01:23:40] QUEUE-2 DONE
+[01:23:49] QUEUE-3 START
+[01:23:49] qwen38-27b: throughput
+[01:33:01] qwen38-27b: throughput rc=0 speed_brief=12.6 speed_medium=12.1 speed_long=12.1 python_coding=12.1
+[01:33:01] qwen38-27b: MMLU-Pro num_predict=96
+[01:35:26] qwen38-27b: MMLU@96 -> 67.14% parsed/attempt=70/70 n=70 tps=12.7 wall=2.4min
+[01:35:26] qwen38-27b: MMLU-Pro num_predict=2048
+[01:37:40] qwen38-27b: MMLU@2048 -> 67.14% parsed/attempt=70/70 n=70 tps=12.7 wall=2.2min
+[01:37:41] qwen38-27b: HumanEval 164 tasks
+[02:39:16] qwen38-27b: HumanEval -> 93.29% parsed/attempt=164/164 n=164 tps=12.1 wall=61.5min
+[02:39:16] qwen38-27b: DONE
+[02:39:16] QUEUE-3 DONE
+[02:39:33] QUEUE-4 START (speculative decoding A/B)
+[02:39:33] spec: q4-baseline
+[02:45:36] spec: q4-baseline -> mean 5.00 tok/s (min 4.96 max 5.02)
+[02:45:36] spec: q4-dflash
+[02:45:55] spec: q4-dflash -> FAILED [Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-19/candidates-round2/spec-decoding/q4-dflash.json'
+[02:45:55] spec: q4-mtp
+[02:48:54] spec: q4-mtp -> mean 8.67 tok/s (min 8.04 max 9.30)
+[02:48:54] spec: q4-ngram-cache
+[02:49:12] spec: q4-ngram-cache -> FAILED [Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-19/candidates-round2/spec-decoding/q4-ngram-cache.json'
+[02:49:12] spec: q8-baseline
+[03:00:06] spec: q8-baseline -> mean 2.54 tok/s (min 2.54 max 2.54)
+[03:00:06] spec: q8-dflash
+[03:00:32] spec: q8-dflash -> FAILED [Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-19/candidates-round2/spec-decoding/q8-dflash.json'
+[03:00:32] QUEUE-4 DONE
+[07:28:46] QUEUE-5 START
+[07:28:53] router stopped (was pid 1902696); GPU now 20 MiB 17 MiB 
+[07:28:53] spec: q4-baseline
+[07:32:15] spec: q4-baseline -> mean 12.32 tok/s (min 12.32 max 12.32) 
+[07:32:15] spec: q4-dflash
+[07:33:42] spec: q4-dflash -> mean 21.19 tok/s (min 19.20 max 21.94) draft_n=181 draft_n_accepted=138
+[07:33:42] spec: q4-mtp
+[07:35:15] spec: q4-mtp -> mean 21.42 tok/s (min 18.59 max 22.91) draft_n=178 draft_n_accepted=139
+[07:35:15] spec: q4-ngram-cache
+[07:37:13] spec: q4-ngram-cache -> mean 11.90 tok/s (min 10.71 max 12.26) draft_n=35 draft_n_accepted=4
+[07:37:13] spec: q8-baseline
+[07:41:57] spec: q8-baseline -> mean 10.86 tok/s (min 10.86 max 10.87) 
+[07:41:57] spec: q8-dflash
+[07:43:11] spec: q8-dflash -> mean 22.72 tok/s (min 20.61 max 24.27) draft_n=177 draft_n_accepted=140
+[07:43:11] spec: q8-mtp
+[07:44:34] spec: q8-mtp -> mean 19.46 tok/s (min 17.91 max 20.91) draft_n=180 draft_n_accepted=139
+[07:44:37] router started from /home/hm/llama-cuda12-xing (510016260020, pid 2602212)
+[07:44:37] xing: throughput
+[07:49:43] xing: throughput rc=0 speed_brief=32.4 speed_medium=31.7 speed_long=31.7 python_coding=31.7
+[07:49:43] xing: MMLU-Pro num_predict=96
+[07:50:47] xing: MMLU@96 -> 44.29% parsed/attempt=70/70 n=70 tps=32.9 wall=1.0min
+[07:50:47] xing: MMLU-Pro num_predict=2048
+[07:50:58] xing: MMLU@2048 -> 44.29% parsed/attempt=70/70 n=70 tps=33.0 wall=0.2min
+[07:50:58] xing: HumanEval 164 tasks
+[08:10:16] xing: HumanEval -> 83.54% parsed/attempt=164/164 n=164 tps=31.6 wall=19.2min
+[08:10:17] xing: DONE
+[08:10:24] router stopped (was pid 2602212); GPU now 20 MiB 17 MiB 
+[08:10:26] router started from /home/hm/llama-cuda12-g9v3 (69c86c9df4ae, pid 2653804)
+[08:10:26] g9v3: throughput
+[08:15:09] g9v3: throughput rc=0 speed_brief=40.2 speed_medium=39.2 speed_long=39.0 python_coding=39.0
+[08:15:09] g9v3: MMLU-Pro num_predict=96
+[08:16:02] g9v3: MMLU@96 -> 67.14% parsed/attempt=70/70 n=70 tps=40.5 wall=0.9min
+[08:16:02] g9v3: MMLU-Pro num_predict=2048
+[08:16:10] g9v3: MMLU@2048 -> 67.14% parsed/attempt=70/70 n=70 tps=40.6 wall=0.1min
+[08:16:10] g9v3: HumanEval 164 tasks
+[08:23:09] ================ QUEUE-6 START ================
+[08:34:03] g9v3: HumanEval -> 93.90% parsed/attempt=164/164 n=164 tps=39.1 wall=17.8min
+[08:34:03] g9v3: DONE
+[08:34:10] router stopped (was pid 2653804); GPU now 20 MiB 17 MiB 
+[08:34:12] router started from /home/hm/llama-cuda12 (50631b3d2c56, pid 2702685)
+[08:34:12] QUEUE-5 DONE
+[08:56:10] queue-5 has exited; taking over the rig
+[08:56:16] shims up: 127.0.0.1:11500 127.0.0.1:11501
+[08:56:16] --- PHASE B: thinking-on MMLU-Pro ---
+[08:56:23] router stopped (was pid 2702685); GPU now  MiB
+[08:56:25] router started from /home/hm/llama-cuda12 (50631b3d2c56, pid 2743367)
+[09:01:01] ================ QUEUE-6B START ================
+[09:01:02] shims: 127.0.0.1:11500 127.0.0.1:11501
+[09:01:02] --- PHASE B: thinking-on MMLU-Pro ---
+[09:01:09] router stopped (was pid 2743367); GPU now 37 MiB
+[09:01:11] router started from /home/hm/llama-cuda12 (50631b3d2c56, pid 2752137)
+[09:01:11] ornith: MMLU-Pro THINKING-ON num_predict=4096
+[09:08:57] ornith: MMLU-think@4096 -> 70.00% parsed/attempt=55/70 tok=22176 tps=53.0 wall=7.8min (thinking-off tok=280, ratio=79.2x)
+[09:08:57] !!! WARN ornith: parsed 55/70 -- num_predict=4096 may be truncating the answer after the reasoning.
+[09:08:57] ornith: think DONE
+[09:08:57] nemotron: MMLU-Pro THINKING-ON num_predict=4096
+[09:10:11] !!! RIG-FAIL nemotron: thinking-on results unreadable ([Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-19/candidates-round2/mmlu-nemotron-think4096/results.json')
+[09:10:11] nemotron: think DONE
+[09:11:10] ================ QUEUE-6C START ================
+[09:11:10] shims: 127.0.0.1:11500 127.0.0.1:11501
+[09:11:10] --- PHASE B: thinking-on MMLU-Pro (ctx 16384, num_predict 12288) ---
+[09:11:17] router stopped (was pid 2752137); GPU now 24501 MiB
+[09:11:17] !!! WARN: 24501 MiB still resident before load
+[09:11:19] router started from /home/hm/llama-cuda12 ctx=16384 (50631b3d2c56, pid 2770775)
+[09:11:19] ornith: MMLU-Pro THINKING-ON num_predict=12288
+[09:15:39] ornith: MMLU-think@12288 -> 100.00% parsed/attempt=15/15 tok=3635 tps=33.1 wall=4.1min (thinking-off tok=280, ratio=13.0x)
+[09:15:39] ornith: think DONE
+[09:15:39] !!! RIG-FAIL: router does not list 'nemotron-cascade-2-30b-a3b_q4_k_m'. Listed: 
+[09:15:44] router stopped (was pid none); GPU now 5973 MiB
+[09:15:44] !!! WARN: 5973 MiB still resident before load
+[09:15:46] router started from /home/hm/llama-cuda12-xing ctx=16384 (510016260020, pid 2779368)
+[09:15:46] xing: MMLU-Pro THINKING-ON num_predict=12288
+[09:16:37] !!! RIG-FAIL xing: thinking-on results unreadable ([Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-19/candidates-round2/mmlu-xing-think12288/results.json')
+[09:16:37] xing: think DONE
+[09:17:43] ================ QUEUE-6D START ================
+[09:17:43] shims: 127.0.0.1:11500 127.0.0.1:11501
+[09:17:43] --- PHASE B: thinking-on MMLU-Pro (ctx 16384, num_predict 12288) ---
+[09:17:43] router stopped (was pid none); GPU now 37 MiB after 1x2s
+[09:17:45] router started from /home/hm/llama-cuda12 ctx=16384 (50631b3d2c56, pid 2783061)
+[09:17:45] ornith: MMLU-Pro THINKING-ON num_predict=12288
+[09:31:36] ornith: MMLU-think@12288 -> 81.43% parsed/attempt=65/70 tok=41180 tps=53.0 wall=13.8min (thinking-off tok=280, ratio=147.1x)
+[09:31:36] !!! WARN ornith: parsed 65/70 -- num_predict=12288 may be truncating the answer after the reasoning.
+[09:31:36] ornith: think DONE
+[09:31:38] router stopped (was pid 2783061); GPU now 37 MiB after 1x2s
+[09:31:40] router started from /home/hm/llama-cuda12 ctx=16384 (50631b3d2c56, pid 2808750)
+[09:31:40] nemotron: MMLU-Pro THINKING-ON num_predict=12288
+[09:47:38] nemotron: MMLU-think@12288 -> 71.43% parsed/attempt=60/70 tok=59583 tps=68.4 wall=16.0min (thinking-off tok=280, ratio=212.8x)
+[09:47:38] !!! WARN nemotron: parsed 60/70 -- num_predict=12288 may be truncating the answer after the reasoning.
+[09:47:38] nemotron: think DONE
+[09:47:40] router stopped (was pid 2808750); GPU now 37 MiB after 1x2s
+[09:47:43] router started from /home/hm/llama-cuda12-xing ctx=16384 (510016260020, pid 2838344)
+[09:47:43] xing: MMLU-Pro THINKING-ON num_predict=12288
+[10:03:00] xing: MMLU-think@12288 -> 66.67% parsed/attempt=10/15 tok=17833 tps=30.2 wall=12.3min (thinking-off tok=294, ratio=60.7x)
+[10:03:00] !!! RIG-FAIL xing: only 15 of 70 questions ran. This is a partial/interrupted run, not a result -- delete the directory and re-run.
+[10:03:00] !!! WARN xing: parsed 10/15 -- num_predict=12288 may be truncating the answer after the reasoning.
+[10:03:00] xing: think DONE
+[17:41:45] ================ QUEUE-7 START (resumed) ================
+[17:41:45] shims: 127.0.0.1:11500 127.0.0.1:11501
+[17:41:45] --- B1: thinking-on, remaining candidates (ctx 16384, np 12288) ---
+[17:41:45] router stopped (was pid none); GPU now 37 MiB after 1x2s
+[17:41:48] router started from /home/hm/llama-cuda12-xing ctx=16384 (510016260020, pid 3705391)
+[17:41:48] xing: MMLU-Pro THINKING-ON num_predict=12288
+[18:52:52] xing: MMLU-think@12288 -> 40.00% parsed/attempt=32/70 tok=121269 tps=29.5 wall=71.1min (thinking-off tok=294, ratio=412.5x)
+[18:52:52] !!! WARN xing: parsed 32/70 -- num_predict=12288 may be truncating the answer after the reasoning.
+[18:52:52] xing: think DONE
+[18:52:54] router stopped (was pid 3705391); GPU now 37 MiB after 1x2s
+[18:52:56] router started from /home/hm/llama-cuda12-g9v3 ctx=16384 (69c86c9df4ae, pid 3835156)
+[18:52:56] g9v3: MMLU-Pro THINKING-ON num_predict=12288
+[19:20:18] g9v3: MMLU-think@12288 -> 68.57% parsed/attempt=55/70 tok=54288 tps=38.1 wall=27.4min (thinking-off tok=280, ratio=193.9x)
+[19:20:18] !!! WARN g9v3: parsed 55/70 -- num_predict=12288 may be truncating the answer after the reasoning.
+[19:20:19] g9v3: think DONE
+[19:20:19] --- B2: thinking-on, shelf baselines (ctx 16384, np 12288) ---
+[19:20:21] router stopped (was pid 3835156); GPU now 37 MiB after 1x2s
+[19:20:23] router started from /home/hm/llama-cuda12 ctx=16384 (50631b3d2c56, pid 3885366)
+[19:20:23] qwen36-rerun: MMLU-Pro THINKING-ON num_predict=12288
+[20:31:01] qwen36-rerun: MMLU-think@12288 -> 87.14% parsed/attempt=70/70 tok=44201 tps=11.0 wall=70.6min (thinking-off tok=280, ratio=157.9x)
+[20:31:01] qwen36-rerun: think DONE
+[20:31:03] router stopped (was pid 3885366); GPU now 37 MiB after 1x2s
+[20:31:05] router started from /home/hm/llama-cuda12 ctx=16384 (50631b3d2c56, pid 4014049)
+[20:31:05] qwen38-27b: MMLU-Pro THINKING-ON num_predict=12288
+[20:32:39] qwen38-27b: think DONE
+[20:32:39] --- THINKING-ON COLUMN COMPLETE ---
+model                                      off  on(scored)   delta  on(answered)   parsed      tok    tps
+qwen3.6-27b-abliterated:q5_k_m  (incumbent)   71.43      87.14%  +15.71        87.14%   70/70     44201   11.0
+Traceback (most recent call last):
+  File "/home/hm/Projects/Tests/2026-09-19/candidates-round2/summarise_think.py", line 51, in <module>
+    f"{on['parsed']:>4}/{on['total']:<3} {on['tok']:>8} {on['tps']:>6.1f}")
+                                                        ^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+[20:32:39] --- PHASE A: qwen38-ud-q6k ---
+[20:32:42] router stopped (was pid 4014049); GPU now 37 MiB after 1x2s
+[20:32:44] router started from /home/hm/llama-cuda12 ctx=8192 (50631b3d2c56, pid 4017270)
+[20:32:44] qwen38-ud-q6k: throughput
+[20:45:25] qwen38-ud-q6k: throughput rc=0 speed_brief=10.2 speed_medium=9.8 speed_long=9.8 python_coding=9.8
+[20:45:25] qwen38-ud-q6k: MMLU-Pro num_predict=96
+[20:47:43] qwen38-ud-q6k: MMLU@96 -> 70.00% parsed/attempt=70/70 n=70 tps=10.3 wall=2.3min
+[20:47:44] qwen38-ud-q6k: MMLU-Pro num_predict=2048
+[20:50:01] qwen38-ud-q6k: MMLU@2048 -> 70.00% parsed/attempt=70/70 n=70 tps=10.3 wall=2.3min
+[20:50:01] qwen38-ud-q6k: HumanEval 164 tasks
+[22:04:18] qwen38-ud-q6k: HumanEval -> 95.73% parsed/attempt=164/164 n=164 tps=9.8 wall=74.2min
+[22:04:18] qwen38-ud-q6k: DONE
+[22:04:18] --- PHASE A: qwen38-uncensored-q6kp ---
+[22:04:20] router stopped (was pid 4017270); GPU now 37 MiB after 1x2s
+[22:04:22] router started from /home/hm/llama-cuda12 ctx=8192 (50631b3d2c56, pid 4187709)
+[22:04:22] qwen38-uncensored-q6kp: throughput
+[22:16:26] qwen38-uncensored-q6kp: throughput rc=0 speed_brief=10.3 speed_medium=9.9 speed_long=9.9 python_coding=9.9
+[22:16:26] qwen38-uncensored-q6kp: MMLU-Pro num_predict=96
+[22:18:42] qwen38-uncensored-q6kp: MMLU@96 -> 68.57% parsed/attempt=70/70 n=70 tps=10.3 wall=2.2min
+[22:18:42] qwen38-uncensored-q6kp: MMLU-Pro num_predict=2048
+[22:20:56] qwen38-uncensored-q6kp: MMLU@2048 -> 68.57% parsed/attempt=70/70 n=70 tps=10.3 wall=2.2min
+[22:20:56] qwen38-uncensored-q6kp: HumanEval 164 tasks
+[23:38:15] qwen38-uncensored-q6kp: HumanEval -> 95.73% parsed/attempt=164/164 n=164 tps=9.9 wall=77.2min
+[23:38:15] qwen38-uncensored-q6kp: DONE
+[23:38:15] --- PHASE A: qwen38-unsloth-q8 ---
+[23:38:17] router stopped (was pid 4187709); GPU now 37 MiB after 1x2s
+[23:38:19] router started from /home/hm/llama-cuda12 ctx=8192 (50631b3d2c56, pid 168582)
+[23:38:19] qwen38-unsloth-q8: throughput
+[23:50:58] qwen38-unsloth-q8: throughput rc=0 speed_brief=11.2 speed_medium=10.9 speed_long=10.9 python_coding=10.9
+[23:50:58] qwen38-unsloth-q8: MMLU-Pro num_predict=96
+[23:53:10] qwen38-unsloth-q8: MMLU@96 -> 68.57% parsed/attempt=70/70 n=70 tps=11.4 wall=2.2min
+[23:53:10] qwen38-unsloth-q8: MMLU-Pro num_predict=2048
+[23:55:20] qwen38-unsloth-q8: MMLU@2048 -> 68.57% parsed/attempt=70/70 n=70 tps=11.4 wall=2.2min
+[23:55:20] qwen38-unsloth-q8: HumanEval 164 tasks
+[01:04:20] qwen38-unsloth-q8: HumanEval -> 97.56% parsed/attempt=164/164 n=164 tps=10.9 wall=68.9min
+[01:04:20] qwen38-unsloth-q8: DONE
+[01:04:22] router stopped (was pid 168582); GPU now 37 MiB after 1x2s
+[01:04:24] router started from /home/hm/llama-cuda12 ctx=8192 (50631b3d2c56, pid 329271)
+[01:04:24] ================ QUEUE-7 DONE ================
+[01:04:43] ================ QUEUE-8 START (queue-7 finished) ================
+[01:04:43] shim :11501 reachable: 404fail
+[01:04:45] router stopped (was pid 329271); GPU now 37 MiB after 1x2s
+[01:04:47] router started from /home/hm/llama-cuda12 ctx=16384 (pid 330069)
+[01:04:47] qwen38-27b: MMLU-Pro THINKING-ON num_predict=12288
+[02:10:45] qwen38-27b: MMLU-think@12288 -> 80.00% parsed/attempt=60/70 tok=20083 tps=12.0 wall=35.9min (thinking-off tok=280, ratio=71.7x)
+[02:10:45] !!! WARN qwen38-27b: parsed 60/70 -- num_predict=12288 may be truncating the answer after the reasoning.
+[02:10:45] qwen38-27b: think DONE
+[02:10:45] --- THINKING-ON COLUMN COMPLETE ---
+model                                      off  on(scored)   delta  on(answered)   parsed      tok    tps
+qwen3.6-27b-abliterated:q5_k_m  (incumbent)   71.43      87.14%  +15.71        87.14%   70/70     44201   11.0
+qwen3.8-27b-stock:q4_k_m  (shelf)        67.14      80.00%  +12.86        93.33%   60/70     20083   12.0
+ornith-1.5-35b-a3b:q4_k_m                61.43      81.43%  +20.00        87.69%   65/70     41180   53.0
+                                       truncated at 12288: law (these score 0 and make the scored figure a floor)
+nemotron-cascade-2-30b-a3b:q4_k_m        48.57      71.43%  +22.86        83.33%   60/70     59583   68.4
+                                       truncated at 12288: chemistry, law (these score 0 and make the scored figure a floor)
+xing4.0-29b-a4b:iq4_nl                   44.29      40.00%   -4.29        87.50%   32/70    121269   29.5
+                                       truncated at 12288: chemistry, computer science, economics, engineering, history, law, other, psychology (these score 0 and make the scored figure a floor)
+g9v3-39a5b:q4_k_m                        67.14      68.57%   +1.43        87.27%   55/70     54288   38.1
+                                       truncated at 12288: chemistry, history, law (these score 0 and make the scored figure a floor)
+[02:10:48] router stopped (was pid 330069); GPU now 37 MiB after 1x2s
+[02:10:50] router started from /home/hm/llama-cuda12 ctx=8192 (pid 450463)
+[02:10:50] ================ QUEUE-8 DONE ================
+[02:12:17] ================ QUEUE-9 START ================
+[02:12:19] router stopped (was pid 450463); GPU now 37 MiB after 1x2s
+[02:12:21] router started from /home/hm/llama-cuda12 ctx=16384 (pid 453167)
+[02:12:21] qwen38-27b: MMLU-Pro THINKING-ON num_predict=12288
+[03:16:57] qwen38-27b: MMLU-think@12288 -> 82.86% parsed/attempt=64/70 tok=44659 tps=12.0 wall=64.6min (thinking-off tok=280, ratio=159.5x)
+[03:16:57] !!! WARN qwen38-27b: parsed 64/70 -- num_predict=12288 may be truncating the answer after the reasoning.
+[03:16:57] qwen38-27b: think DONE
+[03:16:57] --- THINKING-ON COLUMN COMPLETE (retimed) ---
+model                                      off  on(scored)   delta  on(answered)   parsed      tok    tps
+qwen3.6-27b-abliterated:q5_k_m  (incumbent)   71.43      87.14%  +15.71        87.14%   70/70     44201   11.0
+qwen3.8-27b-stock:q4_k_m  (shelf)        67.14      82.86%  +15.71        90.62%   64/70     44659   12.0
+                                       truncated at 12288: engineering, law (these score 0 and make the scored figure a floor)
+ornith-1.5-35b-a3b:q4_k_m                61.43      81.43%  +20.00        87.69%   65/70     41180   53.0
+                                       truncated at 12288: law (these score 0 and make the scored figure a floor)
+nemotron-cascade-2-30b-a3b:q4_k_m        48.57      71.43%  +22.86        83.33%   60/70     59583   68.4
+                                       truncated at 12288: chemistry, law (these score 0 and make the scored figure a floor)
+xing4.0-29b-a4b:iq4_nl                   44.29      40.00%   -4.29        87.50%   32/70    121269   29.5
+                                       truncated at 12288: chemistry, computer science, economics, engineering, history, law, other, psychology (these score 0 and make the scored figure a floor)
+g9v3-39a5b:q4_k_m                        67.14      68.57%   +1.43        87.27%   55/70     54288   38.1
+                                       truncated at 12288: chemistry, history, law (these score 0 and make the scored figure a floor)
+[03:16:59] router stopped (was pid 453167); GPU now 37 MiB after 1x2s
+[03:17:01] router started from /home/hm/llama-cuda12 ctx=8192 (pid 570716)
+[03:17:01] ================ QUEUE-9 DONE ================

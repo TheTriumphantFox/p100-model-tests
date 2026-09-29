@@ -1,0 +1,80 @@
+def triples_sum_to_zero(l: list):
+    """
+    triples_sum_to_zero takes a list of integers as an input.
+    it returns True if there are three distinct elements in the list that
+    sum to zero, and False otherwise.
+
+    >>> triples_sum_to_zero([1, 3, 5, 0])
+    False
+    >>> triples_sum_to_zero([1, 3, -2, 1])
+    True
+    >>> triples_sum_to_zero([1, 2, 3, 7])
+    False
+    >>> triples_sum_to_zero([2, 4, -5, 3, 9, 7])
+    True
+    >>> triples_sum_to_zero([1])
+    False
+    """
+    n = len(l)
+    if n < 3:
+        return False
+    
+    # Use a set to track seen numbers
+    # For each pair (i, j), check if -(l[i] + l[j]) exists in the list
+    # But we need to ensure distinct indices.
+    
+    # A simpler approach: iterate over all triples of distinct indices
+    # This is O(n^3) which might be slow for large lists, but let's try a smarter approach.
+    
+    # Sort the list and use two pointers for each element
+    # But we need to handle duplicates carefully.
+    
+    # Let's use the O(n^2) approach with a set
+    # For each pair (i, j) with i < j, check if target = -(l[i] + l[j]) is in the list
+    # and at an index k different from i and j.
+    
+    # To do this efficiently, we can:
+    # 1. Create a set of all values
+    # 2. For each pair (i, j), compute target = -(l[i] + l[j])
+    # 3. Check if target is in the set
+    # 4. But we need to ensure that target appears at an index k != i and k != j
+    
+    # A cleaner approach: use a dictionary to count occurrences
+    from collections import Counter
+    
+    count = Counter(l)
+    
+    # Iterate over all pairs of distinct indices
+    # To avoid O(n^3), we can iterate over unique values
+    # But let's just do O(n^2) with index checks
+    
+    n = len(l)
+    for i in range(n):
+        for j in range(i + 1, n):
+            target = -(l[i] + l[j])
+            # Check if target exists in the list at an index k != i and k != j
+            # We can check if target is in the set of values
+            # But we need to handle the case where target == l[i] or target == l[j]
+            
+            # Let's check if target is in the list
+            if target in count:
+                # Now we need to verify that there's an index k != i and k != j with l[k] == target
+                # If target != l[i] and target != l[j], then we just need count[target] >= 1
+                # If target == l[i] and target == l[j], we need count[target] >= 3
+                # If target == l[i] != l[j], we need count[target] >= 2
+                # If target == l[j] != l[i], we need count[target] >= 2
+                
+                if target == l[i] and target == l[j]:
+                    if count[target] >= 3:
+                        return True
+                elif target == l[i]:
+                    if count[target] >= 2:
+                        return True
+                elif target == l[j]:
+                    if count[target] >= 2:
+                        return True
+                else:
+                    if count[target] >= 1:
+                        return True
+    
+    return False

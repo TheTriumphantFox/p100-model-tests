@@ -1,0 +1,18 @@
+def generate_integers(a: int, b: int) -> list[int]:
+    """
+    Return the even digits between a and b, in ascending order.
+
+    The function only considers single‑digit values for a and b. If either
+    a or b is greater than 9, an empty list is returned.
+
+    Examples:
+        generate_integers(2, 8) => [2, 4, 6, 8]
+        generate_integers(8, 2) => [2, 4, 6, 8]
+        generate_integers(10, 14) => []
+    """
+    # Only single‑digit inputs are meaningful for this problem.
+    if a > 9 or b > 9:
+        return []
+
+    start, end = sorted((a, b))
+    return [n for n in range(start, end + 1) if n % 2 == 0]

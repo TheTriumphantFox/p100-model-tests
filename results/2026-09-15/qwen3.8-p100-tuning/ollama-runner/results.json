@@ -1,0 +1,49 @@
+[
+  {
+    "name": "baseline",
+    "status": "ok",
+    "environment": {},
+    "prompt_tokens": 1055,
+    "prompt_tok_s": 11.713658236533735,
+    "generated_tokens": 128,
+    "generation_tok_s": 11.091813089431295,
+    "load_seconds": 6.019468721
+  },
+  {
+    "name": "disable-mmvq",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1"
+    },
+    "prompt_tokens": 1055,
+    "prompt_tok_s": 11.709832048931247,
+    "generated_tokens": 128,
+    "generation_tok_s": 14.803962002855778,
+    "load_seconds": 5.771429294
+  },
+  {
+    "name": "disable-int-dot",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_INTEGER_DOT_PRODUCT": "1"
+    },
+    "prompt_tokens": 1055,
+    "prompt_tok_s": 118.13960248879269,
+    "generated_tokens": 128,
+    "generation_tok_s": 14.81429014203895,
+    "load_seconds": 5.765108013
+  },
+  {
+    "name": "disable-both",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1",
+      "GGML_VK_DISABLE_INTEGER_DOT_PRODUCT": "1"
+    },
+    "prompt_tokens": 1055,
+    "prompt_tok_s": 139.2795169601526,
+    "generated_tokens": 128,
+    "generation_tok_s": 14.791431000458882,
+    "load_seconds": 5.765230681
+  }
+]

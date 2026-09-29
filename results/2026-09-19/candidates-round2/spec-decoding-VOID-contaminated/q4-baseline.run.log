@@ -1,0 +1,9 @@
+=== q4-baseline  (spec=none draft=)  ready in 103s
+0, 15150 MiB 1, 15081 MiB 
+  prompt 0:   5.00 tok/s  (200 tok)
+  prompt 1:   4.96 tok/s  (200 tok)
+  prompt 2:   4.98 tok/s  (200 tok)
+  prompt 3:   5.00 tok/s  (200 tok)
+  prompt 4:   5.01 tok/s  (200 tok)
+  prompt 5:   5.02 tok/s  (200 tok)
+  MEAN   5.00 tok/s  (min 4.96, max 5.02)

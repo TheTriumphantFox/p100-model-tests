@@ -1,0 +1,266 @@
+Let me solve each question.
+
+Question 1:
+Air compressed polytropically, n = 1.30, from 1 bar, 17°C to 5 bars.
+Heat transferred per kg.
+
+For polytropic process, heat transfer:
+Q = n/(n-1) * W... wait let me recall.
+
+Actually, Q = C_v * (n-γ)/(n-1) * (T2 - T1)... let me be careful.
+
+For a polytropic process:
+Q = m * C_n * (T2 - T1)
+where C_n = C_v * (n-γ)/(n-1)
+
+T2/T1 = (P2/P1)^((n-1)/n)
+
+T1 = 290 K
+P2/P1 = 5
+(n-1)/n = 0.30/1.30 = 0.2308
+
+T2 = 290 * 5^0.2308 = 290 * ?
+5^0.2308 = e^(0.2308 * ln5) = e^(0.2308 * 1.6094) = e^(0.3715) = 1.450
+T2 = 290 * 1.450 = 420.4 K
+
+Q = m * C_v * (n-γ)/(n-1) * (T2 - T1)
+
+For air, C_v = 0.718 kJ/kg·K, γ = 1.4
+
+(n-γ)/(n-1) = (1.30 - 1.4)/(1.30 - 1) = (-0.1)/(0.3) = -0.3333
+
+Q = 1 * 0.718 * (-0.3333) * (420.4 - 290)
+= 0.718 * (-0.3333) * 130.4
+= 0.718 * (-43.47)
+= -31.21 kJ/kg
+
+Close to -31.33 kJ/kg. Answer A.
+
+Let me recompute more precisely.
+5^0.2308:
+ln5 = 1.609438
+0.230769 * 1.609438 = 0.371575
+e^0.371575 = 1.45000
+T2 = 290 * 1.45 = 420.5 K
+T2 - T1 = 130.5 K
+
+Q = 0.718 * (-0.3333) * 130.5 = 0.718 * (-43.5) = -31.23
+
+Hmm, close to -31.33. Let me use C_v = 0.718.
+
+Actually maybe they use R = 0.287, C_v = 0.718.
+
+Q = -31.23, answer A is -31.33. Close enough. Answer A.
+
+Question 2:
+Cylindrical pressure vessel, mean radius 15 in, internal pressure 3500 psi, efficiency 78%, yield strength 12×10^4 psi, factor of safety 1.5.
+
+Thickness of thin-walled cylinder:
+t = P*r / (S*E - 0.6*P) ... this is ASME formula.
+
+Actually the simple formula: t = P*r/(σ_allow * E)
+
+σ_allow = σ_y / FS = 120000/1.5 = 80000 psi
+
+t = P*r/(σ_allow * E) = 3500 * 15 / (80000 * 0.78) = 52500 / 62400 = 0.841 in
+
+Answer D: 0.84 in.
+
+Let me check with ASME formula:
+t = P*r/(S*E + 0.4*P) = 3500*15/(80000*0.78 + 0.4*3500) = 52500/(62400 + 1400) = 52500/63800 = 0.823
+
+Hmm, that gives 0.82. The simple formula gives 0.841.
+
+Answer D: 0.84 in.
+
+Question 3:
+Ammonia converter, N2 + 3H2 = 2NH3.
+P = 100 atm, T = 350°C.
+K = 14.4×10^-5 at 500°C.
+ΔH = -25800 cal/g-mol.
+
+Wait, the question says K at 500°C but operates at 350°C. Need to find K at 350°C using van't Hoff.
+
+Actually, let me reconsider. The problem gives K at 500°C and asks for conversion at 350°C. We need to compute K at 350°C.
+
+van't Hoff equation:
+ln(K2/K1) = -ΔH/R * (1/T2 - 1/T1)
+
+T1 = 500°C = 773 K, K1 = 14.4×10^-5
+T2 = 350°C = 623 K
+
+ΔH = -25800 cal/mol
+R = 1.987 cal/mol·K
+
+ln(K2/K1) = -(-25800)/1.987 * (1/623 - 1/773)
+= 25800/1.987 * (1/623 - 1/773)
+= 12984 * (0.0016051 - 0.0012937)
+= 12984 * 0.0003114
+= 4.043
+
+K2 = K1 * e^4.043 = 14.4×10^-5 * 56.96 = 8.2×10^-3
+
+Hmm, let me recompute.
+1/623 = 0.00160514
+1/773 = 0.00129366
+difference = 0.00031148
+25800/1.987 = 12984.4
+12984.4 * 0.00031148 = 4.0443
+e^4.0443 = 57.06
+
+K2 = 14.4×10^-5 * 57.06 = 8.217×10^-3
+
+Now equilibrium.
+N2 + 3H2 = 2NH3
+Start: 1 mol N2, 3 mol H2, 0 NH3. Total = 4.
+Let conversion of N2 = x.
+N2 = 1-x
+H2 = 3-3x = 3(1-x)
+NH3 = 2x
+Total = (1-x) + 3(1-x) + 2x = 4 - 2x
+
+Mole fractions:
+y_N2 = (1-x)/(4-2x)
+y_H2 = 3(1-x)/(4-2x)
+y_NH3 = 2x/(4-2x)
+
+Kp = (p_NH3^2)/(p_N2 * p_H2^3) = (y_NH3^2)/(y_N2 * y_H2^3) * P^(2 - 1 - 3) = (y_NH3^2)/(y_N2 * y_H2^3) * P^(-2)
+
+Let me compute:
+p_i = y_i * P
+
+Kp = (y_NH3 * P)^2 / [(y_N2 * P)(y_H2 * P)^3]
+= (y_NH3^2)/(y_N2 * y_H2^3) * P^(2 - 4)
+= (y_NH3^2)/(y_N2 * y_H2^3) * P^(-2)
+
+y_NH3^2 = [2x/(4-2x)]^2 = 4x^2/(4-2x)^2
+y_N2 = (1-x)/(4-2x)
+y_H2^3 = [3(1-x)/(4-2x)]^3 = 27(1-x)^3/(4-2x)^3
+
+(y_NH3^2)/(y_N2 * y_H2^3) = [4x^2/(4-2x)^2] / [(1-x)/(4-2x) * 27(1-x)^3/(4-2x)^3]
+= [4x^2/(4-2x)^2] / [27(1-x)^4/(4-2x)^4]
+= 4x^2/(4-2x)^2 * (4-2x)^4/(27(1-x)^4)
+= 4x^2 (4-2x)^2/(27(1-x)^4)
+
+So Kp = 4x^2(4-2x)^2/(27(1-x)^4) * P^(-2)
+
+Note 4-2x = 2(2-x), so (4-2x)^2 = 4(2-x)^2
+= 4x^2 * 4(2-x)^2/(27(1-x)^4) * P^(-2)
+= 16x^2(2-x)^2/(27(1-x)^4) * P^(-2)
+
+Kp * P^2 = 16x^2(2-x)^2/(27(1-x)^4)
+
+Kp = 8.217×10^-3, P = 100, P^2 = 10000
+Kp * P^2 = 82.17
+
+So 16x^2(2-x)^2/(27(1-x)^4) = 82.17
+x^2(2-x)^2/(1-x)^4 = 82.17 * 27/16 = 138.6
+
+Let me solve for x.
+x^2(2-x)^2/(1-x)^4 = 138.6
+
+Take square root:
+x(2-x)/(1-x)^2 = sqrt(138.6) = 11.77
+
+Let me solve:
+x(2-x) = 11.77(1-x)^2
+2x - x^2 = 11.77(1 - 2x + x^2)
+2x - x^2 = 11.77 - 23.54x + 11.77x^2
+0 = 11.77 - 23.54x + 11.77x^2 - 2x + x^2
+0 = 12.77x^2 - 25.54x + 11.77
+
+x = [25.54 ± sqrt(25.54^2 - 4*12.77*11.77)]/(2*12.77)
+= [25.54 ± sqrt(652.3 - 601.5)]/25.54
+= [25.54 ± sqrt(50.8)]/25.54
+= [25.54 ± 7.13]/25.54
+
+x = (25.54 - 7.13)/25.54 = 18.41/25.54 = 0.721
+or x = (25.54 + 7.13)/25.54 = 1.278 (invalid)
+
+So x ≈ 0.72, about 70-72%.
+
+Hmm, answer A is 70%. Let me double check.
+
+Actually let me reconsider the value of K. Let me recompute more carefully.
+
+Actually, wait. Let me reconsider whether the problem wants us to use K at 500°C directly or compute K at 350°C.
+
+The problem says "The equilibrium constant for this reaction K is equal to 14.4 × 10^-5 at 500°C." and "The converter is operated at a pressure of 100 atm and a temperature of 350°C."
+
+So we need K at 350°C. Using van't Hoff as I did.
+
+Let me recompute. Actually, let me reconsider. This is a classic problem from a textbook (maybe "Chemical Reaction Engineering" or similar).
+
+Actually, this looks like it's from Smith, Van Ness, Abbott or similar. Let me reconsider.
+
+Hmm, actually the answer might be different. Let me reconsider.
+
+Actually, let me reconsider the problem. This is from "Introduction to Chemical Engineering Kinetics" or similar.
+
+Let me recompute K at 350°C.
+
+Actually, wait. Let me reconsider. The problem might have a typo and the answer is around 70%.
+
+Let me recompute more carefully.
+
+ln(K2/K1) = -ΔH/R * (1/T2 - 1/T1)
+
+ΔH = -25800 cal/mol (exothermic)
+R = 1.987 cal/(mol·K)
+T1 = 773 K (500°C)
+T2 = 623 K (350°C)
+
+1/T2 - 1/T1 = 1/623 - 1/773 = 0.0016051 - 0.0012937 = 0.0003114
+
+-ΔH/R = 25800/1.987 = 12984.4
+
+ln(K2/K1) = 12984.4 * 0.0003114 = 4.043
+
+K2/K1 = e^4.043 = 57.0
+
+K2 = 14.4×10^-5 * 57.0 = 8.21×10^-3
+
+OK so K2 = 8.21×10^-3.
+
+Now, Kp = 16x^2(2-x)^2/(27(1-x)^4) * P^(-2)
+
+Wait, I need to double-check the Kp expression. Let me reconsider.
+
+Actually, the standard state is pure components at 1 atm. So Kp is in terms of pressures in atm.
+
+Kp = (p_NH3/p°)^2 / [(p_N2/p°)(p_H2/p°)^3] where p° = 1 atm.
+
+So Kp = p_NH3^2/(p_N2 * p_H2^3) with pressures in atm.
+
+p_NH3 = y_NH3 * P, etc.
+
+Kp = (y_NH3 * P)^2/[(y_N2 * P)(y_H2 * P)^3] = (y_NH3^2)/(y_N2 * y_H2^3) * P^(2-4) = (y_NH3^2)/(y_N2 * y_H2^3) * P^(-2)
+
+This is what I had.
+
+So Kp * P^2 = (y_NH3^2)/(y_N2 * y_H2^3) = 16x^2(2-x)^2/(27(1-x)^4)
+
+Kp * P^2 = 8.21×10^-3 * 10000 = 82.1
+
+16x^2(2-x)^2/(27(1-x)^4) = 82.1
+x^2(2-x)^2/(1-x)^4 = 82.1 * 27/16 = 138.5
+
+x(2-x)/(1-x)^2 = 11.77
+
+Solving: x ≈ 0.72
+
+So about 72% conversion. Closest answer is A (70%).
+
+Hmm, but let me reconsider. Maybe I made an error. Let me reconsider whether the answer is 70%.
+
+Actually, let me reconsider. Let me recompute x(2-x)/(1-x)^2 = 11.77.
+
+Try x = 0.70: 0.70*1.30/(0.30)^2 = 0.91/0.09 = 10.11
+Try x = 0.72: 0.72*1.28/(0.28)^2 = 0.9216/0.0784 = 11.75
+Try x = 0.73: 0.73*1.27/(0.27)^2 = 0.9271/0.0729 = 12.72
+
+So x ≈ 0.72 gives 11.75, matching 11.77.
+
+So x ≈ 0.72, i.e., 72%. Closest is 70% (A).
+
+Hmm, but let me reconsider. Maybe

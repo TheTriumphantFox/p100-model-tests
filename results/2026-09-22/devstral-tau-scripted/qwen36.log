@@ -1,0 +1,118 @@
+[  0] PASS  steps=10   317.4s  tools=7
+[  1] PASS  steps=10   185.2s  tools=7
+[  2] fail  steps=14   141.3s  tools=11
+[  3] PASS  steps=14   183.0s  tools=11
+[  4] PASS  steps=15   230.1s  tools=12
+[  5] fail  steps=11   131.8s  tools=8
+[  6] PASS  steps= 9   100.2s  tools=6
+[  7] PASS  steps=10   156.4s  tools=7
+[  8] PASS  steps= 9    98.5s  tools=6
+[  9] PASS  steps=10   168.5s  tools=7
+[ 10] fail  steps=12   127.4s  tools=11
+[ 11] PASS  steps=12   177.2s  tools=9
+[ 12] fail  steps=10   108.4s  tools=7
+[ 13] fail  steps=10   167.4s  tools=7
+[ 14] PASS  steps= 9    92.2s  tools=6
+[ 15] PASS  steps= 9   131.8s  tools=6
+[ 16] PASS  steps=19   248.3s  tools=16
+[ 17] PASS  steps= 6    71.3s  tools=3
+[ 18] PASS  steps= 8    72.4s  tools=5
+[ 19] PASS  steps=12   172.5s  tools=9
+[ 20] PASS  steps=15   363.8s  tools=12
+[ 21] PASS  steps=12   142.4s  tools=9
+[ 22] fail  steps=11   117.9s  tools=8
+[ 23] PASS  steps=15   193.7s  tools=12
+[ 24] fail  steps= 6    53.1s  tools=3
+[ 25] fail  steps=11   145.5s  tools=9
+[ 26] PASS  steps= 9   134.4s  tools=6
+[ 27] PASS  steps=14   235.6s  tools=12
+[ 28] fail  steps=10  1103.1s  tools=10 ERROR TimeoutError: timed out
+[ 29] fail  steps= 0   900.1s  tools=0 ERROR TimeoutError: timed out
+[ 30] fail  steps=11   487.8s  tools=8
+[ 31] fail  steps=12   151.8s  tools=9
+[ 32] fail  steps=10    82.0s  tools=7
+[ 33] PASS  steps=10   143.9s  tools=7
+[ 34] PASS  steps=10   172.5s  tools=7
+[ 35] PASS  steps=11   133.9s  tools=8
+[ 36] PASS  steps=15   357.4s  tools=12
+[ 37] PASS  steps=15   272.7s  tools=12
+[ 38] PASS  steps=15   356.5s  tools=12
+[ 39] fail  steps= 9   119.0s  tools=6
+[ 40] PASS  steps= 8   133.5s  tools=5
+[ 41] fail  steps=13   170.1s  tools=10
+[ 42] PASS  steps=13   152.0s  tools=10
+[ 43] PASS  steps= 9   163.8s  tools=6
+[ 44] PASS  steps=10    95.0s  tools=7
+[ 45] fail  steps= 3    13.3s  tools=0
+[ 46] fail  steps= 3    13.9s  tools=0
+[ 47] PASS  steps= 9   108.3s  tools=6
+[ 48] PASS  steps=10   166.4s  tools=7
+[ 49] PASS  steps=13   161.4s  tools=10
+[ 50] PASS  steps= 6    93.6s  tools=5
+[ 51] PASS  steps= 9    94.3s  tools=6
+[ 52] PASS  steps= 9   260.3s  tools=6
+[ 53] PASS  steps= 9    99.4s  tools=6
+[ 54] fail  steps=30  1812.0s  tools=30 (unterminated)
+[ 55] PASS  steps=16   195.6s  tools=13
+[ 56] PASS  steps=11   120.7s  tools=8
+[ 57] fail  steps= 7    91.2s  tools=4
+[ 58] PASS  steps=10   186.7s  tools=7
+[ 59] fail  steps= 8  1026.8s  tools=7 ERROR TimeoutError: timed out
+[ 60] fail  steps= 0   900.1s  tools=0 ERROR TimeoutError: timed out
+[ 61] PASS  steps= 8   776.6s  tools=5
+[ 62] PASS  steps= 8    97.4s  tools=5
+[ 63] fail  steps= 8    56.2s  tools=5
+[ 64] fail  steps=11   165.1s  tools=8
+[ 65] fail  steps= 7   954.0s  tools=7 ERROR TimeoutError: timed out
+[ 66] fail  steps= 0   900.1s  tools=0 ERROR TimeoutError: timed out
+[ 67] PASS  steps=12   494.1s  tools=9
+[ 68] PASS  steps=11    82.2s  tools=8
+[ 69] PASS  steps= 9   124.2s  tools=6
+[ 70] PASS  steps=13   118.7s  tools=10
+[ 71] PASS  steps=10   147.3s  tools=7
+[ 72] fail  steps= 8   126.9s  tools=5
+[ 73] fail  steps= 6    82.1s  tools=3
+[ 74] PASS  steps=21   270.1s  tools=18
+[ 75] PASS  steps= 9   105.5s  tools=6
+[ 76] fail  steps=16   236.6s  tools=13
+[ 77] PASS  steps= 9    94.6s  tools=6
+[ 78] PASS  steps=16   207.2s  tools=13
+[ 79] fail  steps=11   162.0s  tools=8
+[ 80] PASS  steps= 8    98.2s  tools=5
+[ 81] PASS  steps=12   146.1s  tools=9
+[ 82] PASS  steps=11   237.3s  tools=8
+[ 83] PASS  steps=12   268.4s  tools=9
+[ 84] PASS  steps=10   106.5s  tools=7
+[ 85] PASS  steps=13   124.1s  tools=10
+[ 86] PASS  steps=14   155.5s  tools=11
+[ 87] PASS  steps=23   239.0s  tools=20
+[ 88] PASS  steps=10    94.8s  tools=7
+[ 89] PASS  steps=11   181.5s  tools=8
+[ 90] PASS  steps=11   171.9s  tools=9
+[ 91] PASS  steps=13   230.8s  tools=10
+[ 92] PASS  steps=11   138.2s  tools=8
+[ 93] PASS  steps=10   119.6s  tools=7
+[ 94] PASS  steps=10   116.1s  tools=7
+[ 95] PASS  steps=10   119.6s  tools=7
+[ 96] PASS  steps=13   240.0s  tools=10
+[ 97] PASS  steps=11   170.8s  tools=8
+[ 98] fail  steps=12   236.3s  tools=10
+[ 99] fail  steps=15   286.7s  tools=12
+[100] PASS  steps=15   274.0s  tools=12
+[101] fail  steps=16   278.8s  tools=13
+[102] fail  steps=13   293.4s  tools=10
+[103] PASS  steps=13   121.2s  tools=10
+[104] fail  steps=10    75.0s  tools=7
+[105] fail  steps=11    72.0s  tools=8
+[106] PASS  steps= 9   303.5s  tools=7
+[107] PASS  steps=12   115.5s  tools=9
+[108] PASS  steps=14   196.2s  tools=11
+[109] PASS  steps=11   158.9s  tools=8
+[110] fail  steps=11   159.5s  tools=8
+[111] fail  steps=11   143.7s  tools=8
+[112] fail  steps= 8   958.5s  tools=8 ERROR TimeoutError: timed out
+[113] fail  steps= 0   900.1s  tools=0 ERROR TimeoutError: timed out
+[114] PASS  steps=11   558.3s  tools=9
+
+pass 76/115 (66.1%)   correct-state incl. unterminated 76/115   unterminated 9   parse failures 0
+total 28101s   ->  /home/hm/Projects/Tests/2026-09-22/devstral-tau-scripted/retail_qwen36.json

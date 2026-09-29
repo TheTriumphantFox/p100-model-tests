@@ -1,0 +1,18 @@
+0.00.007.608 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.007.821 W srv  llama_server: -----------------
+0.00.007.822 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.007.822 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.007.822 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.007.823 W srv  llama_server: -----------------
+0.00.009.029 I srv    load_model: loading model '/var/lib/ollama/candidates-r2/Qwen3.8-27B-Q8_0.gguf'
+0.00.629.273 E llama_init_from_model: failed to initialize the context: dflash requires ctx_other to be set (this warning is normal during memory fitting)
+0.00.652.439 W operator(): failed to measure the memory of the extra model, fitting without it: failed to create llama_context from model
+0.12.297.433 I cmn          init: llama threadpool init, n_threads = 6
+0.12.810.058 I common_speculative_init_result: loading draft model '/var/lib/ollama/candidates-r2/dflash-Qwen3.8-27B-Q8_0.gguf'
+0.24.686.603 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 40.00 MiB on device 0: cudaMalloc failed: out of memory
+0.24.686.608 E alloc_tensor_range: failed to allocate CUDA0 buffer of size 41943040
+0.24.686.667 E llama_init_from_model: failed to initialize the context: failed to allocate buffer for kv cache
+0.24.686.668 E common_speculative_init_result: failed to create MTP context
+0.24.686.674 E srv    load_model: failed to create MTP context
+0.24.686.679 I srv    operator(): operator(): cleaning up before exit...
+0.24.686.992 E srv  llama_server: exiting due to model loading error

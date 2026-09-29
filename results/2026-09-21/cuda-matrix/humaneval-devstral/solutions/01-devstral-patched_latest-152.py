@@ -1,0 +1,2 @@
+def compare(game, guess):
+    return [0 if g == s else abs(g - s) for g, s in zip(game, guess)]

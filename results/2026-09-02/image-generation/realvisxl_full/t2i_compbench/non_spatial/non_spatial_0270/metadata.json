@@ -1,0 +1,7 @@
+{
+  "dataset": "t2i_compbench",
+  "category": "non_spatial",
+  "prompt_id": "non_spatial_0270",
+  "index": 270,
+  "prompt": "The painter is creating a landscape painting on canvas."
+}

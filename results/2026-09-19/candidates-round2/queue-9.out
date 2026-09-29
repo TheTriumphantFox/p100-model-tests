@@ -1,0 +1,23 @@
+[02:12:17] ================ QUEUE-9 START ================
+[02:12:19] router stopped (was pid 450463); GPU now 37 MiB after 1x2s
+[02:12:21] router started from /home/hm/llama-cuda12 ctx=16384 (pid 453167)
+[02:12:21] qwen38-27b: MMLU-Pro THINKING-ON num_predict=12288
+[03:16:57] qwen38-27b: MMLU-think@12288 -> 82.86% parsed/attempt=64/70 tok=44659 tps=12.0 wall=64.6min (thinking-off tok=280, ratio=159.5x)
+[03:16:57] !!! WARN qwen38-27b: parsed 64/70 -- num_predict=12288 may be truncating the answer after the reasoning.
+[03:16:57] qwen38-27b: think DONE
+[03:16:57] --- THINKING-ON COLUMN COMPLETE (retimed) ---
+model                                      off  on(scored)   delta  on(answered)   parsed      tok    tps
+qwen3.6-27b-abliterated:q5_k_m  (incumbent)   71.43      87.14%  +15.71        87.14%   70/70     44201   11.0
+qwen3.8-27b-stock:q4_k_m  (shelf)        67.14      82.86%  +15.71        90.62%   64/70     44659   12.0
+                                       truncated at 12288: engineering, law (these score 0 and make the scored figure a floor)
+ornith-1.5-35b-a3b:q4_k_m                61.43      81.43%  +20.00        87.69%   65/70     41180   53.0
+                                       truncated at 12288: law (these score 0 and make the scored figure a floor)
+nemotron-cascade-2-30b-a3b:q4_k_m        48.57      71.43%  +22.86        83.33%   60/70     59583   68.4
+                                       truncated at 12288: chemistry, law (these score 0 and make the scored figure a floor)
+xing4.0-29b-a4b:iq4_nl                   44.29      40.00%   -4.29        87.50%   32/70    121269   29.5
+                                       truncated at 12288: chemistry, computer science, economics, engineering, history, law, other, psychology (these score 0 and make the scored figure a floor)
+g9v3-39a5b:q4_k_m                        67.14      68.57%   +1.43        87.27%   55/70     54288   38.1
+                                       truncated at 12288: chemistry, history, law (these score 0 and make the scored figure a floor)
+[03:16:59] router stopped (was pid 453167); GPU now 37 MiB after 1x2s
+[03:17:01] router started from /home/hm/llama-cuda12 ctx=8192 (pid 570716)
+[03:17:01] ================ QUEUE-9 DONE ================

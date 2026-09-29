@@ -1,0 +1,7 @@
+{
+  "dataset": "t2i_compbench",
+  "category": "non_spatial",
+  "prompt_id": "non_spatial_0265",
+  "index": 265,
+  "prompt": "A dog is running after a frisbee in the park."
+}

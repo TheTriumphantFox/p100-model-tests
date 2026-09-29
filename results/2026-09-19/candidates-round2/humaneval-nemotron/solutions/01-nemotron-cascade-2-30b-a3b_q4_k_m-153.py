@@ -1,0 +1,38 @@
+def Strongest_Extension(class_name, extensions):
+    """
+    Returns the strongest extension for a given class.
+
+    The strength of an extension is defined as:
+        strength = (number of uppercase letters) - (number of lowercase letters)
+
+    The function selects the extension with the highest strength.
+    If multiple extensions have the same strength, the one that appears
+    first in the input list is chosen.
+
+    Parameters
+    ----------
+    class_name : str
+        The name of the class for which the extension is being selected.
+    extensions : list of str
+        A list of extension names.
+
+    Returns
+    -------
+    str
+        A string in the format "ClassName.StrongestExtensionName".
+    """
+    def strength(ext):
+        upper = sum(1 for ch in ext if ch.isupper())
+        lower = sum(1 for ch in ext if ch.islower())
+        return upper - lower
+
+    # Find the index of the strongest extension (first one in case of ties)
+    best_index = 0
+    best_strength = strength(extensions[0])
+    for i in range(1, len(extensions)):
+        cur_strength = strength(extensions[i])
+        if cur_strength > best_strength:
+            best_strength = cur_strength
+            best_index = i
+
+    return f"{class_name}.{extensions[best_index]}"

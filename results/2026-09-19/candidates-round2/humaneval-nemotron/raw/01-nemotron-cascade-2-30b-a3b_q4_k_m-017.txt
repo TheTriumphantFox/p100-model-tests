@@ -1,0 +1,29 @@
+```python
+from typing import List
+
+def parse_music(music_string: str) -> List[int]:
+    """Parse a string of musical notes into a list of beat counts.
+
+    The input string contains note symbols separated by whitespace.
+    Each symbol can be:
+        - 'o'   : whole note (4 beats)
+        - 'o|'  : half note  (2 beats)
+        - '.|'  : quarter note (1 beat)
+
+    Example:
+        >>> parse_music('o o| .| o| o| .| .| .| .| o o')
+        [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]
+    """
+    beats = {
+        'o': 4,
+        'o|': 2,
+        '.|': 1
+    }
+
+    result: List[int] = []
+    for token in music_string.split():
+        if token not in beats:
+            raise ValueError(f"Unknown note token: {token!r}")
+        result.append(beats[token])
+    return result
+```

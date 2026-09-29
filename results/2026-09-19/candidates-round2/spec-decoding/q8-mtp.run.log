@@ -1,0 +1,9 @@
+=== q8-mtp  (spec=draft-mtp draft=mtp-Qwen3.8-27B-Q8_0.gguf)  ready in 11s
+0, 14594 MiB 1, 14599 MiB 
+  prompt 0:  20.91 tok/s  (200 tok, draft 180/139 accepted)
+  prompt 1:  18.73 tok/s  (200 tok, draft 198/132 accepted)
+  prompt 2:  20.53 tok/s  (200 tok, draft 182/138 accepted)
+  prompt 3:  18.98 tok/s  (200 tok, draft 198/133 accepted)
+  prompt 4:  17.91 tok/s  (200 tok, draft 209/129 accepted)
+  prompt 5:  19.72 tok/s  (200 tok, draft 188/136 accepted)
+  MEAN  19.46 tok/s  (min 17.91, max 20.91)

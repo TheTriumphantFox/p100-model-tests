@@ -1,0 +1,55 @@
+def valid_date(date: str) -> bool:
+    """
+    Validate a date string in the format mm-dd-yyyy.
+
+    Rules:
+    1. The string must not be empty.
+    2. The month must be between 1 and 12.
+    3. The day must be within the valid range for the given month
+       (including leap year handling for February).
+    4. The year can be any integer (positive, zero, or negative).
+    5. The format must be exactly mm-dd-yyyy with two digits for month and day,
+       and four digits for year, separated by hyphens.
+    """
+    if not date:
+        return False
+
+    parts = date.split('-')
+    if len(parts) != 3:
+        return False
+
+    month_str, day_str, year_str = parts
+
+    # Ensure month and day have exactly two digits, year has exactly four digits
+    if not (len(month_str) == 2 and len(day_str) == 2 and len(year_str) == 4):
+        return False
+
+    # All parts must be numeric
+    if not (month_str.isdigit() and day_str.isdigit() and year_str.isdigit()):
+        return False
+
+    month = int(month_str)
+    day = int(day_str)
+    year = int(year_str)
+
+    # Month range check
+    if month < 1 or month > 12:
+        return False
+
+    # Determine max days in month
+    if month in {1, 3, 5, 7, 8, 10, 12}:
+        max_day = 31
+    elif month in {4, 6, 9, 11}:
+        max_day = 30
+    else:  # February
+        # Leap year check
+        if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+            max_day = 29
+        else:
+            max_day = 28
+
+    # Day range check
+    if day < 1 or day > max_day:
+        return False
+
+    return True

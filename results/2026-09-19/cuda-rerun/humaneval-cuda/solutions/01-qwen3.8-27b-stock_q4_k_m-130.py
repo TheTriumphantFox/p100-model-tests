@@ -1,0 +1,74 @@
+def tri(n):
+    """Everyone knows Fibonacci sequence, it was studied deeply by mathematicians in 
+    the last couple centuries. However, what people don't know is Tribonacci sequence.
+    Tribonacci sequence is defined by the recurrence:
+    tri(1) = 3
+    tri(n) = 1 + n / 2, if n is even.
+    tri(n) =  tri(n - 1) + tri(n - 2) + tri(n + 1), if n is odd.
+    For example:
+    tri(2) = 1 + (2 / 2) = 2
+    tri(4) = 3
+    tri(3) = tri(2) + tri(1) + tri(4)
+           = 2 + 3 + 3 = 8 
+    You are given a non-negative integer number n, you have to a return a list of the 
+    first n + 1 numbers of the Tribonacci sequence.
+    Examples:
+    tri(3) = [1, 3, 2, 8]
+    """
+    if n < 0:
+        return []
+    
+    # We need to compute tri(0) through tri(n)
+    # But the recurrence is a bit tricky. Let's analyze:
+    # tri(1) = 3
+    # tri(n) = 1 + n/2 if n is even
+    # tri(n) = tri(n-1) + tri(n-2) + tri(n+1) if n is odd
+    
+    # Wait, the example says tri(3) = [1, 3, 2, 8]
+    # So the list has n+1 elements: indices 0 to n.
+    # tri(0) = 1 (from the example, first element is 1)
+    # tri(1) = 3
+    # tri(2) = 2
+    # tri(3) = 8
+    
+    # Let's re-read: "return a list of the first n + 1 numbers"
+    # So for n=3, we return [tri(0), tri(1), tri(2), tri(3)] = [1, 3, 2, 8]
+    
+    # So tri(0) = 1
+    # tri(1) = 3
+    # tri(2) = 1 + 2/2 = 2
+    # tri(3) = tri(2) + tri(1) + tri(4) = 2 + 3 + tri(4)
+    # And tri(4) = 1 + 4/2 = 3
+    # So tri(3) = 2 + 3 + 3 = 8. Correct.
+    
+    # So we need to compute values. The recurrence for odd n depends on tri(n+1).
+    # This means we can't just compute sequentially from 0 to n if n is odd, because tri(n) depends on tri(n+1).
+    
+    # Let's think about this differently. For even n, tri(n) = 1 + n/2.
+    # For odd n, tri(n) = tri(n-1) + tri(n-2) + tri(n+1).
+    
+    # If we want to compute tri(0) through tri(n), and n is odd, we need tri(n+1) which is even, so tri(n+1) = 1 + (n+1)/2.
+    
+    # So we can compute all even values directly, and odd values using the recurrence.
+    
+    # Let's create an array of size n+1 (or n+2 if we need to reference n+1).
+    
+    result = [0] * (n + 1)
+    
+    # tri(0) = 1 (from the example)
+    if n >= 0:
+        result[0] = 1
+    
+    # tri(1) = 3
+    if n >= 1:
+        result[1] = 3
+    
+    # For i from 2 to n:
+    for i in range(2, n + 1):
+        if i % 2 == 0:
+            result[i] = 1 + i // 2
+        else:
+            # tri(i) = tri(i-1) + tri(i-2) + tri(i+1)
+            # tri(i+1) is even, so tri(i+1) = 1 + (i+1)//2
+            tri_i_plus_1 = 1 + (i + 1) // 2
+            result[i] = result

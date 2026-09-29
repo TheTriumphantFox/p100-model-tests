@@ -1,0 +1,5 @@
+def fruit_distribution(s, n):
+    import re
+    apples = int(re.search(r'(\d+)\s*apples', s).group(1))
+    oranges = int(re.search(r'(\d+)\s*oranges', s).group(1))
+    return n - apples - oranges

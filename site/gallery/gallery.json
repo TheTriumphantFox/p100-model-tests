@@ -1,0 +1,226 @@
+[
+ {
+  "dataset": "geneval",
+  "test": "color_attr",
+  "tag": "best",
+  "clip": 0.421779,
+  "prompt": "a photo of a blue pizza and a yellow baseball glove",
+  "file": "gallery/geneval-color_attr-best.jpg"
+ },
+ {
+  "dataset": "geneval",
+  "test": "color_attr",
+  "tag": "worst",
+  "clip": 0.277633,
+  "prompt": "a photo of a black car and a green parking meter",
+  "file": "gallery/geneval-color_attr-worst.jpg"
+ },
+ {
+  "dataset": "geneval",
+  "test": "colors",
+  "tag": "best",
+  "clip": 0.397079,
+  "prompt": "a photo of a purple pizza",
+  "file": "gallery/geneval-colors-best.jpg"
+ },
+ {
+  "dataset": "geneval",
+  "test": "colors",
+  "tag": "worst",
+  "clip": 0.275567,
+  "prompt": "a photo of a brown orange",
+  "file": "gallery/geneval-colors-worst.jpg"
+ },
+ {
+  "dataset": "geneval",
+  "test": "counting",
+  "tag": "best",
+  "clip": 0.362414,
+  "prompt": "a photo of three kites",
+  "file": "gallery/geneval-counting-best.jpg"
+ },
+ {
+  "dataset": "geneval",
+  "test": "counting",
+  "tag": "worst",
+  "clip": 0.210982,
+  "prompt": "a photo of three benchs",
+  "file": "gallery/geneval-counting-worst.jpg"
+ },
+ {
+  "dataset": "geneval",
+  "test": "position",
+  "tag": "best",
+  "clip": 0.40119,
+  "prompt": "a photo of a zebra right of a parking meter",
+  "file": "gallery/geneval-position-best.jpg"
+ },
+ {
+  "dataset": "geneval",
+  "test": "position",
+  "tag": "worst",
+  "clip": 0.233319,
+  "prompt": "a photo of a truck left of a refrigerator",
+  "file": "gallery/geneval-position-worst.jpg"
+ },
+ {
+  "dataset": "geneval",
+  "test": "single_object",
+  "tag": "best",
+  "clip": 0.348385,
+  "prompt": "a photo of a kite",
+  "file": "gallery/geneval-single_object-best.jpg"
+ },
+ {
+  "dataset": "geneval",
+  "test": "single_object",
+  "tag": "worst",
+  "clip": 0.250461,
+  "prompt": "a photo of a car",
+  "file": "gallery/geneval-single_object-worst.jpg"
+ },
+ {
+  "dataset": "geneval",
+  "test": "two_object",
+  "tag": "best",
+  "clip": 0.396965,
+  "prompt": "a photo of a horse and a computer keyboard",
+  "file": "gallery/geneval-two_object-best.jpg"
+ },
+ {
+  "dataset": "geneval",
+  "test": "two_object",
+  "tag": "worst",
+  "clip": 0.243642,
+  "prompt": "a photo of a person and an apple",
+  "file": "gallery/geneval-two_object-worst.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "3d_spatial",
+  "tag": "best",
+  "clip": 0.400561,
+  "prompt": "a microwave in front of a butterfly",
+  "file": "gallery/t2i_compbench-3d_spatial-best.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "3d_spatial",
+  "tag": "worst",
+  "clip": 0.235667,
+  "prompt": "a airplane hidden by a man",
+  "file": "gallery/t2i_compbench-3d_spatial-worst.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "color",
+  "tag": "best",
+  "clip": 0.407325,
+  "prompt": "A bathroom with red tile and a green shower curtain.",
+  "file": "gallery/t2i_compbench-color-best.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "color",
+  "tag": "worst",
+  "clip": 0.253566,
+  "prompt": "a black dove and a white feather",
+  "file": "gallery/t2i_compbench-color-worst.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "complex",
+  "tag": "best",
+  "clip": 0.38523,
+  "prompt": "The red hat was on top of the brown coat rack.",
+  "file": "gallery/t2i_compbench-complex-best.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "complex",
+  "tag": "worst",
+  "clip": 0.247289,
+  "prompt": "The soft towel was on top of the hard counter.",
+  "file": "gallery/t2i_compbench-complex-worst.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "non_spatial",
+  "tag": "best",
+  "clip": 0.385256,
+  "prompt": "A child is playing with a toy microscope and examining insects.",
+  "file": "gallery/t2i_compbench-non_spatial-best.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "non_spatial",
+  "tag": "worst",
+  "clip": 0.215405,
+  "prompt": "A person is nodding in agreement.",
+  "file": "gallery/t2i_compbench-non_spatial-worst.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "numeracy",
+  "tag": "best",
+  "clip": 0.401767,
+  "prompt": "two books, three horses and one lemon",
+  "file": "gallery/t2i_compbench-numeracy-best.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "numeracy",
+  "tag": "worst",
+  "clip": 0.22696,
+  "prompt": "two cars stuck on the road",
+  "file": "gallery/t2i_compbench-numeracy-worst.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "shape",
+  "tag": "best",
+  "clip": 0.419771,
+  "prompt": "a pentagonal stop sign and a pyramidal sculpture",
+  "file": "gallery/t2i_compbench-shape-best.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "shape",
+  "tag": "worst",
+  "clip": 0.251286,
+  "prompt": "a big whale and a small shrimp",
+  "file": "gallery/t2i_compbench-shape-worst.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "spatial",
+  "tag": "best",
+  "clip": 0.406234,
+  "prompt": "a frog near a refrigerator",
+  "file": "gallery/t2i_compbench-spatial-best.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "spatial",
+  "tag": "worst",
+  "clip": 0.241226,
+  "prompt": "a vase on the right of a man",
+  "file": "gallery/t2i_compbench-spatial-worst.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "texture",
+  "tag": "best",
+  "clip": 0.411722,
+  "prompt": "The wooden crate and glass bottle hold the metallic soda on the fabric picnic blanket.",
+  "file": "gallery/t2i_compbench-texture-best.jpg"
+ },
+ {
+  "dataset": "t2i_compbench",
+  "test": "texture",
+  "tag": "worst",
+  "clip": 0.262132,
+  "prompt": "a fabric jacket and a glass plate",
+  "file": "gallery/t2i_compbench-texture-worst.jpg"
+ }
+]

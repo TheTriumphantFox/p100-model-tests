@@ -1,0 +1,19 @@
+[2026-09-22 21:00:04] === multi-model tau-bench retail run starting ===
+[2026-09-22 21:00:06] router stopped (was none); GPU 33 MiB
+[2026-09-22 21:00:08] router started from /home/hm/llama-cuda12 ctx=32768 (pid 991780)
+[2026-09-22 21:00:08] devstral: starting 115 tasks (model=devstral-patched_q8_0)
+[2026-09-23 00:27:10] devstral: finished rc=0 in 207m -- pass 61/115 (53.0%)   correct-state incl. unterminated 61/115   unterminated 3   parse failures 0
+[2026-09-23 00:27:10] gptoss: starting 115 tasks (model=gpt-oss-20b_q8_0)
+[2026-09-23 01:58:49] gptoss: finished rc=0 in 91m -- pass 52/115 (45.2%)   correct-state incl. unterminated 52/115   unterminated 0   parse failures 0
+[2026-09-23 01:58:49] qwen36: starting 115 tasks (model=qwen3.6-27b-abliterated_q5_k_m)
+[2026-09-23 05:11:50] swap: watching for qwen3.6 to reach 115 results
+[2026-09-23 09:47:16] qwen36: finished rc=0 in 468m -- pass 76/115 (66.1%)   correct-state incl. unterminated 76/115   unterminated 9   parse failures 0
+[2026-09-23 09:47:16] qwen38unc: starting 115 tasks (model=qwen3.8-27b-uncensored-hauhaucs_q6_k_p)
+[2026-09-23 09:47:57] swap: qwen3.6 at 115/115 -- stopping original driver
+[2026-09-23 09:48:06] swap: parked qwen38unc.log
+[2026-09-23 09:48:06] swap: launching drive_rest.sh (unsloth q8_0 + g9v3)
+[2026-09-23 09:48:06] === continuation: qwen3.8 dropped from this run; g9v3 only ===
+[2026-09-23 09:48:08] router stopped (was none); GPU 33 MiB
+[2026-09-23 09:48:10] router started from /home/hm/llama-cuda12-g9v3 ctx=32768 (pid 2395535)
+[2026-09-23 09:48:10] g9v3: starting 115 tasks (model=g9v3-39a5b_q4_k_m)
+[2026-09-23 10:54:34] g9v3: STOPPED by request at 30/115 -- pass rate was measuring the scripted-user stall, not the model

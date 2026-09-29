@@ -1,0 +1,240 @@
+###############  CUDA BENCHMARK MATRIX  --  2026-09-21 21:58:41  ###############
+
+=== 1. THE MATRIX (--per-category 5, seed 42) ===
+
+model                                   tok/s      MMLU-off@5   MMLU-ON@5                       HumanEval  
+--------------------------------------  ---------  -----------  ------------------------------  -----------
+qwen3.6-27b-abliterated:q5_k_m          11.1-11.5  71.43        87.14 @11                       96.34      
+qwen3.8-27b-stock:q4_k_m                12.1-12.6  67.14        82.86 (64/70 parsed) @12 cap:2  93.29      
+ornith-1.5-35b-a3b:q4_k_m               47.8-49.6  61.43        81.43 (65/70 parsed) @53 cap:1  92.07      
+g9v3-39a5b:q4_k_m                       39.0-40.2  67.14        68.57 (55/70 parsed) @38 cap:3  93.90      
+qwen3.8-27b-unsloth:q8_0                10.9-11.2  68.57        77.14 (60/70 parsed) @11 cap:2  97.56      
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p  9.9-10.3   68.57        82.86 (65/70 parsed) @10 cap:1  95.73      
+qwen3.8-27b-ggmlorg:q8_0                10.9-11.2  68.57        78.57 (60/70 parsed) @11 cap:2  95.73      
+gpt-oss-20b:q8_0                        66.0-67.5  71.43        72.86 (65/70 parsed) @65 cap:1  95.12      
+qwen3.6-27b-opus-distill:q4_k_m         —          CANNOT LOAD  CANNOT LOAD                     CANNOT LOAD
+qwen3.6-35b-a3b-abliterated-vl:q4_k_m   —          CANNOT LOAD  CANNOT LOAD                     CANNOT LOAD
+gemma4-e4b-abliterated:q4_k_m           —          CANNOT LOAD  CANNOT LOAD                     —          
+devstral-patched:latest                 12.9-13.1  58.57        58.57 @13                       84.76      
+glm-4.7-flash:q5_k_m                    —          54.29        —                               84.76      
+nemotron-cascade-2-30b-a3b:q4_k_m       69.0-70.5  48.57        71.43 (60/70 parsed) @68 cap:2  89.02      
+qwen3.8-27b-unsloth:ud_q6_k             9.8-10.2   70.00        —                               95.73      
+xing4.0-29b-a4b:iq4_nl                  31.7-32.4  44.29        40.00 (32/70 parsed) @30 cap:8  83.54      
+
+16 models, 57/64 cells filled.
+— = never run. (p/n) = fewer answers parsed than asked; an unparsed answer scores
+as incorrect, so those cells are FLOORS. cap:N / TMO:N / PART / RIG? per the header.
+
+=== 2. EVERY RUN, WITH ITS SETTINGS AND PROVENANCE ===
+
+model tag                                kind         score    n  pc  bs    ctx  npred     tok  tok/s    min  run
+-----------------------------------------------------------------------------------------------------------------
+devstral-patched:latest                  HumanEval    84.76  164   -   -   8192   1024       0   12.9   45.8  2026-09-21/cuda-matrix/humaneval-devstral
+devstral-patched:latest                  MMLU-ON      58.57   70   5   5  16384  12288     280   13.5    1.5  2026-09-21/cuda-matrix/mmlu-devstral-pc5-think12288
+devstral-patched:latest                  MMLU-off     58.57   70   5   5   8192   2048     280   13.5    0.4  2026-09-21/cuda-matrix/mmlu-devstral-pc5-np2048
+devstral-patched:latest                  MMLU-off     58.57   70   5   5   8192     96     280   13.5    1.5  2026-09-21/cuda-matrix/mmlu-devstral-pc5-np96
+g9v3-39a5b:q4_k_m                        HumanEval    93.90  164   -   -   8192   1024       0   39.1   17.8  2026-09-19/candidates-round2/humaneval-g9v3
+g9v3-39a5b:q4_k_m                        MMLU-ON      68.57   70   5   5  16384  12288   54288   38.1   27.4  2026-09-19/candidates-round2/mmlu-g9v3-think12288
+                                         -> cap:3
+g9v3-39a5b:q4_k_m                        MMLU-off     67.14   70   5   5   8192   2048     280   40.6    0.1  2026-09-19/candidates-round2/mmlu-g9v3-2048
+g9v3-39a5b:q4_k_m                        MMLU-off     67.14   70   5   5   8192     96     280   40.5    0.9  2026-09-19/candidates-round2/mmlu-g9v3-96
+gemma4-e4b-abliterated:q4_k_m            MMLU-ON       0.00   70   5   5  16384  12288       0    0.0    0.0  2026-09-21/cuda-matrix/mmlu-gemma4-e4b-pc5-think12288
+                                         -> RIG-FAIL(14/14 batches errored)
+gemma4-e4b-abliterated:q4_k_m            MMLU-off      0.00   70   5   5   8192   2048       0    0.0    0.0  2026-09-21/cuda-matrix/mmlu-gemma4-e4b-pc5-np2048
+                                         -> RIG-FAIL(14/14 batches errored)
+gemma4-e4b-abliterated:q4_k_m            MMLU-off      0.00   70   5   5   8192     96       0    0.0    0.0  2026-09-21/cuda-matrix/mmlu-gemma4-e4b-pc5-np96
+                                         -> RIG-FAIL(14/14 batches errored)
+glm-4.7-flash:q5_k_m                     HumanEval    84.76  164   -   -   8192   1024       0   44.7   15.4  2026-09-19/candidates/humaneval-glm
+glm-4.7-flash:q5_k_m                     MMLU-off     54.29   70   5   5   8192   2048     280   45.8    0.1  2026-09-19/candidates/mmlu-glm-2048
+glm-4.7-flash:q5_k_m                     MMLU-off     55.71   70   5   5   8192     96     280   45.8    0.9  2026-09-19/candidates/mmlu-glm-96
+gpt-oss-20b:q8_0                         HumanEval    95.12  164   -   -   8192   1024       0   66.1   12.6  2026-09-19/candidates/humaneval-gpt-oss
+gpt-oss-20b:q8_0                         HumanEval    95.12  164   -   -   8192   1024       0   66.1   12.9  2026-09-21/cuda-matrix/humaneval-gpt-oss-20b
+gpt-oss-20b:q8_0                         MMLU-ON      72.86   70   5   5  16384  12288   35091   65.2    9.6  2026-09-21/cuda-matrix/mmlu-gpt-oss-20b-pc5-think12288
+                                         -> cap:1
+gpt-oss-20b:q8_0                         MMLU-off     77.14   70   5   5   8192   2048    7170   65.7    1.8  2026-09-19/candidates/mmlu-gpt-oss
+gpt-oss-20b:q8_0                         MMLU-off     71.43   70   5   5   8192   2048    5348   65.7    2.0  2026-09-21/cuda-matrix/mmlu-gpt-oss-20b-pc5-np2048
+nemotron-cascade-2-30b-a3b:q4_k_m        HumanEval    89.02  164   -   -   8192   1024       0   68.5   11.3  2026-09-19/candidates-round2/humaneval-nemotron
+nemotron-cascade-2-30b-a3b:q4_k_m        MMLU-ON      71.43   70   5   5  16384  12288   59583   68.4   16.0  2026-09-19/candidates-round2/mmlu-nemotron-think12288
+                                         -> cap:2
+nemotron-cascade-2-30b-a3b:q4_k_m        MMLU-off     48.57   70   5   5   8192   2048     280   72.1    0.1  2026-09-19/candidates-round2/mmlu-nemotron-2048
+nemotron-cascade-2-30b-a3b:q4_k_m        MMLU-off     48.57   70   5   5   8192     96     280   72.1    0.7  2026-09-19/candidates-round2/mmlu-nemotron-96
+ornith-1.5-35b-a3b:q4_k_m                HumanEval    92.07  164   -   -   8192   1024       0   52.6   13.4  2026-09-19/candidates-round2/humaneval-ornith
+ornith-1.5-35b-a3b:q4_k_m                MMLU-ON      81.43   70   5   5  16384  12288   41180   53.0   13.8  2026-09-19/candidates-round2/mmlu-ornith-think12288
+                                         -> cap:1
+ornith-1.5-35b-a3b:q4_k_m                MMLU-ON      70.00   70   5   5   8192   4096   22176   53.0    7.8  2026-09-19/candidates-round2/mmlu-ornith-think4096-TRUNCATED
+                                         -> cap:3
+ornith-1.5-35b-a3b:q4_k_m                MMLU-off     61.43   70   5   5   8192   2048     280   55.7    2.7  2026-09-19/candidates-round2/mmlu-ornith-2048
+ornith-1.5-35b-a3b:q4_k_m                MMLU-off     61.43   70   5   5   8192     96     280   54.6    0.8  2026-09-19/candidates-round2/mmlu-ornith-96
+qwen3.6-27b-abliterated:q5_k_m           HumanEval    96.34  164   -   -   8192   1024       0   11.1   66.0  2026-09-19/candidates-round2/humaneval-qwen36-rerun
+qwen3.6-27b-abliterated:q5_k_m           MMLU-ON      87.14   70   5   5  16384  12288   44201   11.0   70.6  2026-09-19/candidates-round2/mmlu-qwen36-rerun-think12288
+qwen3.6-27b-abliterated:q5_k_m           MMLU-off     71.43   70   5   5   8192   2048     280   11.6    2.2  2026-09-19/candidates-round2/mmlu-qwen36-rerun-2048
+qwen3.6-27b-abliterated:q5_k_m           MMLU-off     71.43   70   5   5   8192     96     280   11.6    4.1  2026-09-19/candidates-round2/mmlu-qwen36-rerun-96
+qwen3.6-27b-opus-distill:q4_k_m          HumanEval     0.00  110   -   -   8192   1024       0    0.0    0.0  2026-09-21/cuda-matrix/humaneval-opus-distill
+                                         -> UNFINISHED
+qwen3.6-27b-opus-distill:q4_k_m          MMLU-ON       0.00   70   5   5  16384  12288       0    0.0    0.0  2026-09-21/cuda-matrix/mmlu-opus-distill-pc5-think12288
+                                         -> RIG-FAIL(14/14 batches errored)
+qwen3.6-27b-opus-distill:q4_k_m          MMLU-off      0.00   70   5   5   8192   2048       0    0.0    0.0  2026-09-21/cuda-matrix/mmlu-opus-distill-pc5-np2048
+                                         -> RIG-FAIL(14/14 batches errored)
+qwen3.6-27b-opus-distill:q4_k_m          MMLU-off      0.00   70   5   5   8192     96       0    0.0    0.0  2026-09-21/cuda-matrix/mmlu-opus-distill-pc5-np96
+                                         -> RIG-FAIL(14/14 batches errored)
+qwen3.6-35b-a3b-abliterated-vl:q4_k_m    HumanEval     0.00  164   -   -   8192   1024       0    0.0    0.0  2026-09-21/cuda-matrix/humaneval-qwen36-vl
+qwen3.6-35b-a3b-abliterated-vl:q4_k_m    MMLU-ON       0.00   70   5   5  16384  12288       0    0.0    0.0  2026-09-21/cuda-matrix/mmlu-qwen36-vl-pc5-think12288
+                                         -> RIG-FAIL(14/14 batches errored)
+qwen3.6-35b-a3b-abliterated-vl:q4_k_m    MMLU-off      0.00   70   5   5   8192   2048       0    0.0    0.0  2026-09-21/cuda-matrix/mmlu-qwen36-vl-pc5-np2048
+                                         -> RIG-FAIL(14/14 batches errored)
+qwen3.6-35b-a3b-abliterated-vl:q4_k_m    MMLU-off      0.00   70   5   5   8192     96       0    0.0    0.0  2026-09-21/cuda-matrix/mmlu-qwen36-vl-pc5-np96
+                                         -> RIG-FAIL(14/14 batches errored)
+qwen3.8-27b-ggmlorg:q8_0                 HumanEval    95.73  164   -   -   8192   1024       0   10.9   69.1  2026-09-21/cuda-matrix/humaneval-ggmlorg-q8
+qwen3.8-27b-ggmlorg:q8_0                 MMLU-ON      80.00   10   1   1  49152   4864   10745   10.8   17.3  2026-09-21/cuda-matrix/PROCESS-mmlu-ggmlorg-q8-ctx49152-q8_0-think4864
+                                         -> cap:2; categories=biology,chemistry,computer science,economics,engineering,health,history,law,math,physics
+qwen3.8-27b-ggmlorg:q8_0                 MMLU-ON      78.57   70   5   5  32768  12288   51195   10.8   81.3  2026-09-21/cuda-matrix/mmlu-ggmlorg-q8-pc5-think12288
+                                         -> cap:2
+qwen3.8-27b-ggmlorg:q8_0                 MMLU-off     68.57   70   5   5   8192   2048     280   11.4    2.2  2026-09-21/cuda-matrix/mmlu-ggmlorg-q8-pc5-np2048
+qwen3.8-27b-ggmlorg:q8_0                 MMLU-off     68.57   70   5   5   8192     96     280   11.4    5.1  2026-09-21/cuda-matrix/mmlu-ggmlorg-q8-pc5-np96
+qwen3.8-27b-stock:q4_k_m                 HumanEval    93.29  164   -   -   8192   1024       0   12.1   61.5  2026-09-19/candidates-round2/humaneval-qwen38-27b
+qwen3.8-27b-stock:q4_k_m                 MMLU-ON      82.86   70   5   5  16384  12288   44659   12.0   64.6  2026-09-19/candidates-round2/mmlu-qwen38-27b-think12288
+                                         -> cap:2
+qwen3.8-27b-stock:q4_k_m                 MMLU-ON      80.00   70   5   5  16384  12288   20083   12.0   35.9  2026-09-19/candidates-round2/mmlu-qwen38-27b-think12288-TIMEDOUT
+                                         -> 2 batch errors
+qwen3.8-27b-stock:q4_k_m                 MMLU-off     67.14   70   5   5   8192   2048     280   12.7    2.2  2026-09-19/candidates-round2/mmlu-qwen38-27b-2048
+qwen3.8-27b-stock:q4_k_m                 MMLU-off     67.14   70   5   5   8192     96     280   12.7    2.4  2026-09-19/candidates-round2/mmlu-qwen38-27b-96
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p   HumanEval    95.73  164   -   -   8192   1024       0    9.9   77.2  2026-09-19/candidates-round2/humaneval-qwen38-uncensored-q6kp
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p   MMLU-ON      82.86   70   5   5  32768  12288   48622    9.8   84.7  2026-09-21/cuda-matrix/mmlu-uncensored-q6kp-pc5-think12288
+                                         -> cap:1
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p   MMLU-off     68.57   70   5   5   8192   2048     280   10.3    2.2  2026-09-19/candidates-round2/mmlu-qwen38-uncensored-q6kp-2048
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p   MMLU-off     68.57   70   5   5   8192     96     280   10.3    2.2  2026-09-19/candidates-round2/mmlu-qwen38-uncensored-q6kp-96
+qwen3.8-27b-unsloth:q8_0                 HumanEval    97.56  164   -   -   8192   1024       0   10.9   68.9  2026-09-19/candidates-round2/humaneval-qwen38-unsloth-q8
+qwen3.8-27b-unsloth:q8_0                 MMLU-ON      77.14   70   5   5  32768  12288   51779   10.8   82.2  2026-09-21/cuda-matrix/mmlu-unsloth-q8-pc5-think12288
+                                         -> cap:2
+qwen3.8-27b-unsloth:q8_0                 MMLU-off     68.57   70   5   5   8192   2048     280   11.4    2.2  2026-09-19/candidates-round2/mmlu-qwen38-unsloth-q8-2048
+qwen3.8-27b-unsloth:q8_0                 MMLU-off     68.57   70   5   5   8192     96     280   11.4    2.2  2026-09-19/candidates-round2/mmlu-qwen38-unsloth-q8-96
+qwen3.8-27b-unsloth:ud_q6_k              HumanEval    95.73  164   -   -   8192   1024       0    9.8   74.2  2026-09-19/candidates-round2/humaneval-qwen38-ud-q6k
+qwen3.8-27b-unsloth:ud_q6_k              MMLU-off     70.00   70   5   5   8192   2048     280   10.3    2.3  2026-09-19/candidates-round2/mmlu-qwen38-ud-q6k-2048
+qwen3.8-27b-unsloth:ud_q6_k              MMLU-off     70.00   70   5   5   8192     96     280   10.3    2.3  2026-09-19/candidates-round2/mmlu-qwen38-ud-q6k-96
+xing4.0-29b-a4b:iq4_nl                   HumanEval    83.54  164   -   -   8192   1024       0   31.6   19.2  2026-09-19/candidates-round2/humaneval-xing
+xing4.0-29b-a4b:iq4_nl                   MMLU-ON      40.00   70   5   5  16384  12288  121269   29.5   71.1  2026-09-19/candidates-round2/mmlu-xing-think12288
+                                         -> cap:8
+xing4.0-29b-a4b:iq4_nl                   MMLU-off     44.29   70   5   5   8192   2048     294   33.0    0.2  2026-09-19/candidates-round2/mmlu-xing-2048
+xing4.0-29b-a4b:iq4_nl                   MMLU-off     44.29   70   5   5   8192     96     294   32.9    1.0  2026-09-19/candidates-round2/mmlu-xing-96
+
+65 runs on disk. pc = --per-category, bs = questions per request,
+npred = num_predict, tok = total generated tokens across all batches.
+
+=== 3. CONTEXT LADDERS ===
+
+model                  ctx  VRAM MiB  weights   tok/s  status
+------------------------------------------------------------------
+g9v3                  8192     23881    22467   39.19  resident
+g9v3                 12288     24065    22467   39.18  resident
+g9v3                 16384     24249    22467   39.19  resident
+g9v3                 24576     24617    22467   39.19  resident
+g9v3                 32768     24985    22467   39.18  resident
+  largest fully-resident context: 32768; measured KV 46.0 KiB/token
+
+ggmlorg-q8-q8_0      16384     28137    27271   10.85  resident
+ggmlorg-q8-q8_0      32768     28937    27271   10.85  resident
+ggmlorg-q8-q8_0      49152     29737    27271   10.85  resident
+  largest fully-resident context: 49152; measured KV 50.0 KiB/token
+
+ggmlorg-q8            8192     27997    27271   10.90  resident
+ggmlorg-q8           12288     28285    27271   10.90  resident
+ggmlorg-q8           16384     28573    27271   10.90  resident
+ggmlorg-q8           24576     29149    27271   10.90  resident
+ggmlorg-q8           32768     29725    27271   10.91  resident
+  largest fully-resident context: 32768; measured KV 72.0 KiB/token
+
+incumbent             8192     20663    19848   11.14  resident
+incumbent            12288     20951    19848   11.14  resident
+incumbent            16384     21239    19848   11.14  resident
+incumbent            24576     21815    19848   11.14  resident
+incumbent            32768     22391    19848   11.14  resident
+  largest fully-resident context: 32768; measured KV 72.0 KiB/token
+
+uncensored-q6kp       8192     25353    24723    9.91  resident
+uncensored-q6kp      12288     25641    24723    9.91  resident
+uncensored-q6kp      16384     25929    24723    9.91  resident
+uncensored-q6kp      24576     26505    24723    9.91  resident
+uncensored-q6kp      32768     27081    24723    9.91  resident
+  largest fully-resident context: 32768; measured KV 72.0 KiB/token
+
+unsloth-q8            8192     27997    27701   10.91  resident
+unsloth-q8           12288     28285    27701   10.91  resident
+unsloth-q8           16384     28573    27701   10.91  resident
+unsloth-q8           24576     29149    27701   10.91  resident
+unsloth-q8           32768     29725    27701   10.91  resident
+  largest fully-resident context: 32768; measured KV 72.0 KiB/token
+
+
+=== 4. PAIRED TESTS (McNemar, exact, same questions) ===
+
+--- MMLU-off: everything vs qwen3.6-27b-abliterated:q5_k_m ---
+  xing4.0-29b-a4b:iq4_nl                    44.29 vs  71.43  -27.14  discordant 22/3  p=0.0002  SIGNIFICANT  n=70
+  nemotron-cascade-2-30b-a3b:q4_k_m         48.57 vs  71.43  -22.86  discordant 17/1  p=0.0001  SIGNIFICANT  n=70
+  glm-4.7-flash:q5_k_m                      54.29 vs  71.43  -17.14  discordant 17/5  p=0.0169  SIGNIFICANT  n=70
+  devstral-patched:latest                   58.57 vs  71.43  -12.86  discordant 14/5  p=0.0636  noise  n=70
+  ornith-1.5-35b-a3b:q4_k_m                 61.43 vs  71.43  -10.00  discordant 10/3  p=0.0923  noise  n=70
+  g9v3-39a5b:q4_k_m                         67.14 vs  71.43   -4.29  discordant 8/5  p=0.5811  noise  n=70
+  qwen3.8-27b-stock:q4_k_m                  67.14 vs  71.43   -4.29  discordant 6/3  p=0.5078  noise  n=70
+  qwen3.8-27b-ggmlorg:q8_0                  68.57 vs  71.43   -2.86  discordant 5/3  p=0.7266  noise  n=70
+  qwen3.8-27b-uncensored-hauhaucs:q6_k_p    68.57 vs  71.43   -2.86  discordant 5/3  p=0.7266  noise  n=70
+  qwen3.8-27b-unsloth:q8_0                  68.57 vs  71.43   -2.86  discordant 5/3  p=0.7266  noise  n=70
+  qwen3.8-27b-unsloth:ud_q6_k               70.00 vs  71.43   -1.43  discordant 4/3  p=1.0000  noise  n=70
+  gpt-oss-20b:q8_0                          71.43 vs  71.43   +0.00  discordant 10/10  p=1.0000  noise  n=70
+
+--- MMLU-ON: everything vs qwen3.6-27b-abliterated:q5_k_m ---
+  xing4.0-29b-a4b:iq4_nl                    40.00 vs  87.14  -47.14  discordant 34/1  p=0.0000  SIGNIFICANT  n=70
+  devstral-patched:latest                   58.57 vs  87.14  -28.57  discordant 21/1  p=0.0000  SIGNIFICANT  n=70
+  g9v3-39a5b:q4_k_m                         68.57 vs  87.14  -18.57  discordant 15/2  p=0.0023  SIGNIFICANT  n=70
+  nemotron-cascade-2-30b-a3b:q4_k_m         71.43 vs  87.14  -15.71  discordant 12/1  p=0.0034  SIGNIFICANT  n=70
+  gpt-oss-20b:q8_0                          72.86 vs  87.14  -14.29  discordant 11/1  p=0.0063  SIGNIFICANT  n=70
+  qwen3.8-27b-unsloth:q8_0                  77.14 vs  87.14  -10.00  discordant 8/1  p=0.0391  SIGNIFICANT  n=70
+  qwen3.8-27b-ggmlorg:q8_0                  78.57 vs  87.14   -8.57  discordant 8/2  p=0.1094  noise  n=70
+  ornith-1.5-35b-a3b:q4_k_m                 81.43 vs  87.14   -5.71  discordant 5/1  p=0.2188  noise  n=70
+  qwen3.8-27b-stock:q4_k_m                  82.86 vs  87.14   -4.29  discordant 5/2  p=0.4531  noise  n=70
+  qwen3.8-27b-uncensored-hauhaucs:q6_k_p    82.86 vs  87.14   -4.29  discordant 4/1  p=0.3750  underpowered  n=70
+
+--- HumanEval: everything vs qwen3.6-27b-abliterated:q5_k_m ---
+  qwen3.6-35b-a3b-abliterated-vl:q4_k_m      0.00 vs  96.34  -96.34  discordant 158/0  p=0.0000  SIGNIFICANT  n=164
+  xing4.0-29b-a4b:iq4_nl                    83.54 vs  96.34  -12.80  discordant 22/1  p=0.0000  SIGNIFICANT  n=164
+  devstral-patched:latest                   84.76 vs  96.34  -11.59  discordant 21/2  p=0.0001  SIGNIFICANT  n=164
+  glm-4.7-flash:q5_k_m                      84.76 vs  96.34  -11.59  discordant 21/2  p=0.0001  SIGNIFICANT  n=164
+  nemotron-cascade-2-30b-a3b:q4_k_m         89.02 vs  96.34   -7.32  discordant 12/0  p=0.0005  SIGNIFICANT  n=164
+  ornith-1.5-35b-a3b:q4_k_m                 92.07 vs  96.34   -4.27  discordant 9/2  p=0.0654  noise  n=164
+  qwen3.8-27b-stock:q4_k_m                  93.29 vs  96.34   -3.05  discordant 7/2  p=0.1797  noise  n=164
+  g9v3-39a5b:q4_k_m                         93.90 vs  96.34   -2.44  discordant 7/3  p=0.3438  noise  n=164
+  gpt-oss-20b:q8_0                          95.12 vs  96.34   -1.22  discordant 5/3  p=0.7266  noise  n=164
+  qwen3.8-27b-ggmlorg:q8_0                  95.73 vs  96.34   -0.61  discordant 4/3  p=1.0000  noise  n=164
+  qwen3.8-27b-uncensored-hauhaucs:q6_k_p    95.73 vs  96.34   -0.61  discordant 4/3  p=1.0000  noise  n=164
+  qwen3.8-27b-unsloth:ud_q6_k               95.73 vs  96.34   -0.61  discordant 5/4  p=1.0000  noise  n=164
+  qwen3.8-27b-unsloth:q8_0                  97.56 vs  96.34   +1.22  discordant 3/5  p=0.7266  noise  n=164
+
+--- the three Qwen3.8 Q8_0-class files against each other ---
+  MMLU-off   -27b-unsloth vs -27b-ggmlorg  68.57 vs  68.57  discordant 0/0  p=1.0000
+  MMLU-off   -27b-unsloth vs red-hauhaucs  68.57 vs  68.57  discordant 0/0  p=1.0000
+  MMLU-off   -27b-ggmlorg vs red-hauhaucs  68.57 vs  68.57  discordant 0/0  p=1.0000
+  HumanEval  -27b-unsloth vs -27b-ggmlorg  97.56 vs  95.73  discordant 3/0  p=0.2500
+  HumanEval  -27b-unsloth vs red-hauhaucs  97.56 vs  95.73  discordant 3/0  p=0.2500
+  HumanEval  -27b-ggmlorg vs red-hauhaucs  95.73 vs  95.73  discordant 1/1  p=1.0000
+
+'underpowered' = fewer than 6 discordant pairs, below which an exact test
+cannot reach p<0.05 no matter which way they fall.
+
+=== 5. RIG STATE ===
+
+index, name, memory.used [MiB], memory.total [MiB]
+0, Tesla P100-PCIE-16GB, 20 MiB, 16384 MiB
+1, Tesla P100-PCIE-16GB, 17 MiB, 16384 MiB
+
+127.0.0.1:11500 users:(("python",pid=1135732,fd=3))
+127.0.0.1:11501 users:(("python",pid=1135733,fd=3))
+127.0.0.1:8080 users:(("llama-server",pid=1416288,fd=19))
+
+queue tail:
+[09-21 21:50:37] devstral ctx16384: 27023 MiB resident, weights 23894 MiB -- fully offloaded
+[09-21 21:50:37] devstral: MMLU-Pro THINKING-ON num_predict=12288 ctx=16384 timeout=2400
+[09-21 21:52:07] devstral: MMLU-think@12288 -> 58.57% parsed=70/70 among-answered=58.57% tok=280 tps=13.5 wall=1.5min (off tok=280, ratio=1.0x)
+[09-21 21:52:07] !!! RIG-FAIL devstral: 280 tokens vs 280 thinking-off (1.00x). Thinking did NOT engage -- the template ignored enable_thinking, or this model has no thinking mode. Do not report this as a thinking-on result.
+[09-21 21:52:07] devstral: think DONE
+[09-21 21:52:07] devstral: bench_think rc=0
+[09-21 21:52:09] router stopped (was pid 2644606, children: 2644716); GPU 37 MiB after 1x2s
+[09-21 21:52:09] ================ QUEUE-DEVSTRAL 'think' DONE; bench router down, GPU released ================

@@ -1,0 +1,15 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+nemotron-cascade-2-30b-a3b:q4_k_m,biology,1,5,5,5,68.66253569574452,446.16123271084007,60.180832468991866,763,,raw/01-nemotron-cascade-2-30b-a3b_q4_k_m-01-biology.txt
+nemotron-cascade-2-30b-a3b:q4_k_m,business,2,5,5,5,68.58111753516187,385.1085974935289,32.18164669399266,2051,,raw/01-nemotron-cascade-2-30b-a3b_q4_k_m-02-business.txt
+nemotron-cascade-2-30b-a3b:q4_k_m,chemistry,3,0,5,0,67.77287724819615,496.4075858614189,184.21840312601125,12288,,raw/01-nemotron-cascade-2-30b-a3b_q4_k_m-03-chemistry.txt
+nemotron-cascade-2-30b-a3b:q4_k_m,computer science,4,4,5,5,68.29053228076504,580.5676700289763,49.49050414300291,3101,,raw/01-nemotron-cascade-2-30b-a3b_q4_k_m-04-computer_science.txt
+nemotron-cascade-2-30b-a3b:q4_k_m,economics,5,4,5,5,68.65992144284952,374.8204364474664,23.03174124698853,1427,,raw/01-nemotron-cascade-2-30b-a3b_q4_k_m-05-economics.txt
+nemotron-cascade-2-30b-a3b:q4_k_m,engineering,6,4,5,5,68.15846366258315,418.2681728316627,111.91413594900223,7466,,raw/01-nemotron-cascade-2-30b-a3b_q4_k_m-06-engineering.txt
+nemotron-cascade-2-30b-a3b:q4_k_m,health,7,5,5,5,68.65111984526406,336.1020256371156,26.374193226001807,1675,,raw/01-nemotron-cascade-2-30b-a3b_q4_k_m-07-health.txt
+nemotron-cascade-2-30b-a3b:q4_k_m,history,8,4,5,5,68.2611186516129,478.32146908512954,73.3026314109884,4802,,raw/01-nemotron-cascade-2-30b-a3b_q4_k_m-08-history.txt
+nemotron-cascade-2-30b-a3b:q4_k_m,law,9,0,5,0,67.64970995599757,558.9861848053887,185.68425137198938,12288,,raw/01-nemotron-cascade-2-30b-a3b_q4_k_m-09-law.txt
+nemotron-cascade-2-30b-a3b:q4_k_m,math,10,3,5,5,68.55437108675446,386.25915360684525,36.76928636500088,2363,,raw/01-nemotron-cascade-2-30b-a3b_q4_k_m-10-math.txt
+nemotron-cascade-2-30b-a3b:q4_k_m,other,11,3,5,5,68.72564041732623,406.20048643138995,22.76401338800497,1480,,raw/01-nemotron-cascade-2-30b-a3b_q4_k_m-11-other.txt
+nemotron-cascade-2-30b-a3b:q4_k_m,philosophy,12,5,5,5,68.60561984083137,356.1051120815001,30.031437173995073,1912,,raw/01-nemotron-cascade-2-30b-a3b_q4_k_m-12-philosophy.txt
+nemotron-cascade-2-30b-a3b:q4_k_m,physics,13,5,5,5,68.5503747642333,416.37656237793084,38.43098082600045,2472,,raw/01-nemotron-cascade-2-30b-a3b_q4_k_m-13-physics.txt
+nemotron-cascade-2-30b-a3b:q4_k_m,psychology,14,3,5,5,68.29513505850781,380.42876347595734,82.72345317500003,5495,,raw/01-nemotron-cascade-2-30b-a3b_q4_k_m-14-psychology.txt

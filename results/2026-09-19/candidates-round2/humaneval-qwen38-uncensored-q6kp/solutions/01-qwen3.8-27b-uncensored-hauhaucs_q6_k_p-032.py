@@ -1,0 +1,75 @@
+import math
+
+
+def poly(xs: list, x: float):
+    """
+    Evaluates polynomial with coefficients xs at point x.
+    return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n
+    """
+    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])
+
+
+def find_zero(xs: list):
+    """ xs are coefficients of a polynomial.
+    find_zero find x such that poly(x) = 0.
+    find_zero returns only only zero point, even if there are many.
+    Moreover, find_zero only takes list xs having even number of coefficients
+    and largest non zero coefficient as it guarantees
+    a solution.
+    >>> round(find_zero([1, 2]), 2) # f(x) = 1 + 2x
+    -0.5
+    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3
+    1.0
+    """
+    # Use bisection method to find a root
+    # We need to find an interval [a, b] where poly(a) and poly(b) have opposite signs
+    
+    # First, let's find a reasonable range to search
+    # The polynomial has even number of coefficients, so odd degree
+    # For odd degree polynomials, there's always at least one real root
+    
+    # Let's try to find bounds by expanding the search range
+    a = -1.0
+    b = 1.0
+    
+    # Expand the range until we find a sign change
+    max_range = 1.0
+    while max_range < 1e10:
+        fa = poly(xs, a)
+        fb = poly(xs, b)
+        if fa * fb <= 0:
+            break
+        max_range *= 2
+        a = -max_range
+        b = max_range
+    
+    # If we still haven't found a sign change, try a different approach
+    if fa * fb > 0:
+        # Try scanning for sign changes
+        found = False
+        for i in range(-1000, 1001):
+            x1 = i * 0.01
+            x2 = (i + 1) * 0.01
+            f1 = poly(xs, x1)
+            f2 = poly(xs, x2)
+            if f1 * f2 <= 0:
+                a, b = x1, x2
+                found = True
+                break
+        if not found:
+            # Fallback: use a very wide range
+            a, b = -1e6, 1e6
+    
+    # Bisection method
+    for _ in range(100):
+        mid = (a + b) / 2
+        fm = poly(xs, mid)
+        if abs(fm) < 1e-12:
+            return mid
+        fa = poly(xs, a)
+        if fa * fm <= 0:
+            b = mid
+        else:
+            a = mid
+    
+    return (a + b) / 2

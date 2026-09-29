@@ -1,0 +1,54 @@
+[
+  {
+    "name": "batch-256",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1",
+      "GGML_VK_DISABLE_INTEGER_DOT_PRODUCT": "1"
+    },
+    "prompt_tokens": 1055,
+    "prompt_tok_s": 163.57669514296603,
+    "generated_tokens": 128,
+    "generation_tok_s": 14.8174198681458,
+    "load_seconds": 5.770515965
+  },
+  {
+    "name": "batch-512",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1",
+      "GGML_VK_DISABLE_INTEGER_DOT_PRODUCT": "1"
+    },
+    "prompt_tokens": 1055,
+    "prompt_tok_s": 139.26455116553208,
+    "generated_tokens": 128,
+    "generation_tok_s": 14.758432137961824,
+    "load_seconds": 5.766191731
+  },
+  {
+    "name": "batch-1024",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1",
+      "GGML_VK_DISABLE_INTEGER_DOT_PRODUCT": "1"
+    },
+    "prompt_tokens": 1055,
+    "prompt_tok_s": 144.95792372987316,
+    "generated_tokens": 128,
+    "generation_tok_s": 14.81350320255209,
+    "load_seconds": 6.023816075
+  },
+  {
+    "name": "batch-2048",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1",
+      "GGML_VK_DISABLE_INTEGER_DOT_PRODUCT": "1"
+    },
+    "prompt_tokens": 1055,
+    "prompt_tok_s": 139.97106645481284,
+    "generated_tokens": 128,
+    "generation_tok_s": 14.80231337029363,
+    "load_seconds": 5.776411646
+  }
+]

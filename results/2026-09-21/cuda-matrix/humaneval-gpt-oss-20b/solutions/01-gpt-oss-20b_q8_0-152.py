@@ -1,0 +1,7 @@
+def compare(game, guess):
+    """
+    Return a list where each element is the absolute difference between the
+    corresponding elements of `game` and `guess`. If the values are equal,
+    the difference is 0.
+    """
+    return [abs(g - h) for g, h in zip(game, guess)]

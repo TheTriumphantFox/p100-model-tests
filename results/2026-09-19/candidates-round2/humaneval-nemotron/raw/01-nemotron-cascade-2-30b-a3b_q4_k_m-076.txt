@@ -1,0 +1,33 @@
+```python
+def is_simple_power(x, n):
+    """
+    Returns True if x is a simple power of n, i.e., there exists an integer k such that n**k == x.
+    Otherwise returns False.
+
+    Examples:
+        is_simple_power(1, 4) -> True   # 4**0 == 1
+        is_simple_power(2, 2) -> True   # 2**1 == 2
+        is_simple_power(8, 2) -> True   # 2**3 == 8
+        is_simple_power(3, 2) -> False
+        is_simple_power(3, 1) -> False
+        is_simple_power(5, 3) -> False
+    """
+    # Edge cases: n must be > 1 and x must be non‑negative integer
+    if not isinstance(x, int) or not isinstance(n, int):
+        return False
+    if n <= 1:
+        return False
+    if x < 0:
+        return False
+
+    # 1 is a power of any n (n**0 == 1)
+    if x == 1:
+        return True
+
+    # Repeatedly divide x by n while it is divisible
+    while x % n == 0:
+        x //= n
+
+    # If we reduced x to 1, then original x was n**k
+    return x == 1
+```

@@ -1,0 +1,16 @@
+def hex_key(num: str) -> int:
+    """Count hexadecimal digits that represent prime numbers.
+
+    Parameters
+    ----------
+    num : str
+        A string containing hexadecimal digits (0-9, A-F, uppercase).
+
+    Returns
+    -------
+    int
+        The number of digits in `num` that correspond to prime numbers
+        (2, 3, 5, 7, B (11), D (13)).
+    """
+    prime_hex_digits = {'2', '3', '5', '7', 'B', 'D'}
+    return sum(1 for ch in num if ch in prime_hex_digits)

@@ -1,0 +1,84 @@
+[09-21 11:36:11] chain3: waiting for the sweep (pid 1239347) before the repro phase
+[09-21 16:16:42] chain3: sweep finished
+[09-21 16:16:43] ================ REPRO PHASE START ================
+[09-21 16:16:43] --- REPRO A: incumbent MMLU-off x3 (control, ~280 tok/run) ---
+[09-21 16:16:45] router stopped (was pid 2027509, children: none); GPU 37 MiB after 1x2s
+[09-21 16:16:47] router started from /home/hm/llama-cuda12 ctx=8192  (pid 2028084)
+[09-21 16:20:56] repro: A-incumbent-off-1 -> 71.43% tok=280 tps=11.6
+[09-21 16:23:11] repro: A-incumbent-off-2 -> 71.43% tok=280 tps=11.6
+[09-21 16:25:26] repro: A-incumbent-off-3 -> 71.43% tok=280 tps=11.6
+[09-21 16:25:26] --- REPRO B: gpt-oss MMLU-off x3 (~5-7k tok/run) ---
+[09-21 16:25:28] router stopped (was pid 2028084, children: 2028273); GPU 37 MiB after 1x2s
+[09-21 16:25:30] router started from /home/hm/llama-cuda12 ctx=8192  (pid 2044672)
+[09-21 16:27:31] repro: B-gptoss-off-1 -> 71.43% tok=5348 tps=65.7
+[09-21 16:29:14] repro: B-gptoss-off-2 -> 71.43% tok=6665 tps=65.8
+[09-21 16:30:57] repro: B-gptoss-off-3 -> 71.43% tok=6665 tps=65.8
+[09-21 16:30:57] --- REPRO C: gpt-oss MMLU-off with NO reasoning_effort (shim on :11502) ---
+[09-21 16:36:18] repro: C-gptoss-off-noeffort -> 60.00% tok=18598 tps=65.4
+[09-21 16:36:18] --- REPRO D: incumbent MMLU-ON x2 (~44k tok/run, ~70 min each) ---
+[09-21 16:36:20] router stopped (was pid 2044672, children: 2044739); GPU 37 MiB after 1x2s
+[09-21 16:36:23] router started from /home/hm/llama-cuda12 ctx=16384  (pid 2065200)
+[09-21 17:45:12] repro: D-1 -> 87.14% parsed=70/70 tok=44201
+[09-21 18:53:56] repro: D-2 -> 87.14% parsed=70/70 tok=44201
+[09-21 18:53:58] router stopped (was pid 2065200, children: 2065341); GPU 37 MiB after 1x2s
+[09-21 18:54:00] router started from /home/hm/llama-cuda12 ctx=8192  (pid 2315784)
+[09-21 18:54:00] ================ REPRO PHASE DONE ================
+arm  run                            score   parsed   gen tok
+------------------------------------------------------------
+A    A-incumbent-off-1             71.43%   70/70        280
+A    A-incumbent-off-2             71.43%   70/70        280
+A    A-incumbent-off-3             71.43%   70/70        280
+
+B    matrix, 2026-09-21            71.43%   70/70       5348
+B    round 1, 2026-09-19           77.14%   70/70       7170
+B    B-gptoss-off-1                71.43%   70/70       5348
+B    B-gptoss-off-2                71.43%   70/70       6665
+B    B-gptoss-off-3                71.43%   70/70       6665
+
+C    C-gptoss-off-noeffort         60.00%   50/70      18598
+
+D    round 2, 2026-09-20           87.14%   70/70      44201
+D    D-incumbent-on-1              87.14%   70/70      44201
+D    D-incumbent-on-2              87.14%   70/70      44201
+
+
+=== SPREAD ACROSS REPEATS (the result) ===
+
+A  incumbent MMLU-off (control)
+     output volume   ~280 tok/run (measured 280-280)
+     scores          71.43%, 71.43%, 71.43%
+     SPREAD          0.00 points
+     item-identical  YES -- fully deterministic
+
+B  gpt-oss MMLU-off
+     output volume   ~5-7k tok/run (measured 5348-7170)
+     scores          71.43%, 77.14%, 71.43%, 71.43%, 71.43%
+     SPREAD          5.71 points
+     item-identical  NO
+       matrix, 2026-09-21 vs round 1, 2026-09-19: discordant 0/4, p=0.1250
+       matrix, 2026-09-21 vs B-gptoss-off-2: discordant 3/3, p=1.0000
+       matrix, 2026-09-21 vs B-gptoss-off-3: discordant 3/3, p=1.0000
+       round 1, 2026-09-19 vs B-gptoss-off-1: discordant 4/0, p=0.1250
+       round 1, 2026-09-19 vs B-gptoss-off-2: discordant 6/2, p=0.2891
+       round 1, 2026-09-19 vs B-gptoss-off-3: discordant 6/2, p=0.2891
+       B-gptoss-off-1 vs B-gptoss-off-2: discordant 3/3, p=1.0000
+       B-gptoss-off-1 vs B-gptoss-off-3: discordant 3/3, p=1.0000
+
+C  gpt-oss MMLU-off, no reasoning_effort    needs 2+ runs (have 1)
+D  incumbent MMLU-ON
+     output volume   ~44k tok/run (measured 44201-44201)
+     scores          87.14%, 87.14%, 87.14%
+     SPREAD          0.00 points
+     item-identical  YES -- fully deterministic
+
+HOW TO READ THIS:
+  Arm A is the control. If it is item-identical, the harness and rig are
+  deterministic and any spread in B/D is caused by output length, not by setup.
+  Arm C separates the two explanations for gpt-oss: if it reproduces round 1's
+  ~7,170 tokens and ~77%, the shim's reasoning_effort was the cause and there is
+  no nondeterminism to worry about. If it lands with arm B, it is nondeterminism.
+  Arm D measured a 0.00-point spread on the thinking-on column.
+  Any thinking-on gap smaller than that is not resolvable by this harness,
+  whatever its p-value -- McNemar assumes the only variation is between models.
+[09-21 18:54:00] chain3: repro rc=0
+[09-21 18:54:00] chain3: EVERYTHING DONE

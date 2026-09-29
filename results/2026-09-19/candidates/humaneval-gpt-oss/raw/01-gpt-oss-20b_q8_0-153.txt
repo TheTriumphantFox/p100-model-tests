@@ -1,0 +1,36 @@
+```python
+def Strongest_Extension(class_name, extensions):
+    """
+    Return the strongest extension for a given class name.
+
+    Parameters
+    ----------
+    class_name : str
+        The name of the class.
+    extensions : list[str]
+        A list of extension names.
+
+    Returns
+    -------
+    str
+        A string in the format "ClassName.ExtensionName" where
+        ExtensionName is the strongest extension according to the
+        rule: strength = (#uppercase letters) - (#lowercase letters).
+        If multiple extensions have the same strength, the first one
+        in the list is chosen.
+    """
+    best_extension = None
+    best_strength = None
+
+    for ext in extensions:
+        # Count uppercase and lowercase letters
+        cap = sum(1 for ch in ext if ch.isupper())
+        sm = sum(1 for ch in ext if ch.islower())
+        strength = cap - sm
+
+        if best_strength is None or strength > best_strength:
+            best_strength = strength
+            best_extension = ext
+
+    return f"{class_name}.{best_extension}"
+```

@@ -1,0 +1,21 @@
+0.00.003.941 E ggml_cuda_init: failed to initialize CUDA: no CUDA-capable device is detected
+warning: no usable GPU found, --gpu-layers option will be ignored
+warning: one possible reason is that llama.cpp was compiled without GPU support
+warning: consult docs/build.md for compilation instructions
+0.00.005.047 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.005.261 W srv  llama_server: -----------------
+0.00.005.262 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.005.262 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.005.262 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.005.262 W srv  llama_server: -----------------
+0.00.006.498 I srv    load_model: loading model '/home/hm/llama-bench-models/gpt-oss-20b_q8_0.gguf'
+0.00.562.374 W load: setting token '<|message|>' (200008) attribute to USER_DEFINED (16), old attributes: 8
+0.00.562.380 W load: setting token '<|start|>' (200006) attribute to USER_DEFINED (16), old attributes: 8
+0.00.562.380 W load: setting token '<|constrain|>' (200003) attribute to USER_DEFINED (16), old attributes: 8
+0.00.563.255 W load: setting token '<|channel|>' (200005) attribute to USER_DEFINED (16), old attributes: 8
+0.00.568.557 W load: special_eog_ids contains both '<|return|>' and '<|call|>', or '<|calls|>' and '<|flush|>' tokens, removing '<|end|>' token from EOG list
+0.08.271.871 I cmn          init: llama threadpool init, n_threads = 6
+0.08.371.828 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 512, kv_unified = 'false'
+0.08.375.474 I srv  llama_server: model loaded
+0.08.375.479 I srv  llama_server: listening on http://127.0.0.1:8093
+0.10.664.227 I srv    operator(): operator(): cleaning up before exit...

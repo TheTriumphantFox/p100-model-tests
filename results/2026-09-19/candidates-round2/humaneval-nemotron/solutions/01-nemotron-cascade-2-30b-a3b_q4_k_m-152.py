@@ -1,0 +1,30 @@
+def compare(game, guess):
+    """
+    Compare each element of `game` with the corresponding element in `guess`.
+
+    For each index i:
+        - If guess[i] == game[i], the result is 0.
+        - Otherwise, the result is the absolute difference |guess[i] - game[i]|.
+
+    Parameters
+    ----------
+    game : list of int or float
+        The actual scores of the matches.
+    guess : list of int or float
+        The guessed scores, same length as `game`.
+
+    Returns
+    -------
+    list of int or float
+        A list where each element is 0 if the guess was correct, otherwise the
+        absolute difference between the guess and the actual score.
+
+    Examples
+    --------
+    >>> compare([1,2,3,4,5,1], [1,2,3,4,2,-2])
+    [0, 0, 0, 0, 3, 3]
+
+    >>> compare([0,5,0,0,0,4], [4,1,1,0,0,-2])
+    [4, 4, 1, 0, 0, 6]
+    """
+    return [0 if g == a else abs(g - a) for a, g in zip(game, guess)]

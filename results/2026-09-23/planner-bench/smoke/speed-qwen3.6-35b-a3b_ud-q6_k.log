@@ -1,0 +1,12 @@
+[2026-09-24 07:57:57] qwen3.6-35b-a3b_ud-q6_k: load HTTP 200 in 174 s; weights 27951 MiB; GPU total 29251 MiB
+[2026-09-24 07:57:57]   GPU0: 14948 / 16384 MiB (free 1436 MiB)
+[2026-09-24 07:57:57]   GPU1: 14303 / 16384 MiB (free 2081 MiB)
+size-1000-port                  16.8s  tok=  722  reviewable        correct
+size-7500-port                  61.7s  tok= 2908  validation_failed check_sequence
+size-15500-port                127.1s  tok= 6032  reviewable        correct
+[2026-09-24 08:01:23]   after run GPU0: 14992 / 16384 MiB
+[2026-09-24 08:01:23]   after run GPU1: 14347 / 16384 MiB
+size-1000-port       1.4 KiB  prefill    368 tok/s  gen  53.5 tok/s  wall   16.8 s  correct
+size-7500-port       7.2 KiB  prefill    513 tok/s  gen  52.7 tok/s  wall   61.7 s  validation_failed
+size-15500-port     15.0 KiB  prefill    563 tok/s  gen  52.1 tok/s  wall  127.1 s  correct
+[2026-09-24 08:01:28] cleanup: router stopped, :8080 devstral restarted

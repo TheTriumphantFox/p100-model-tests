@@ -1,0 +1,94 @@
+{
+ "started": "2026-09-26T10:58:23",
+ "suites": [
+  "flows"
+ ],
+ "only": [
+  "flow-demo",
+  "flow-injected-activation"
+ ],
+ "policies": [
+  "oracle",
+  "rubber_stamp"
+ ],
+ "cache": true,
+ "configs": [
+  {
+   "name": "v8-qwen36moe",
+   "description": "v8 as specified: one planner, checks pinned, no other roles",
+   "planner": {
+    "model": "qwen36moe",
+    "persona": "planner-v8",
+    "pin": true
+   },
+   "deadline_s": 240
+  },
+  {
+   "name": "qwen36moe-full-self",
+   "description": "One model, three personas: planner, strict reviewer (gate), reporter",
+   "planner": {
+    "model": "qwen36moe",
+    "persona": "planner-v8",
+    "pin": true
+   },
+   "reviewer": {
+    "model": "qwen36moe",
+    "persona": "reviewer-strict",
+    "mode": "gate"
+   },
+   "reporter": {
+    "model": "qwen36moe",
+    "persona": "reporter-plain"
+   },
+   "deadline_s": 240
+  },
+  {
+   "name": "qwen36moe-loop",
+   "description": "Tool-loop planner on the same model",
+   "planner": {
+    "model": "qwen36moe",
+    "persona": "planner-loop"
+   },
+   "deadline_s": 240
+  }
+ ],
+ "personas": {
+  "planner-v8": {
+   "role": "planner",
+   "style": "oneshot",
+   "thinking": false,
+   "sha256": "632b9ff8f32d3549c02475886733bc8a661350394fac7909f15ca7d4e430659a"
+  },
+  "reviewer-strict": {
+   "role": "reviewer",
+   "style": "oneshot",
+   "thinking": false,
+   "sha256": "e523c38d43638acd85e26c990ee4516aac66c11131ea9c50d5ca7b1bae979bdc"
+  },
+  "reporter-plain": {
+   "role": "reporter",
+   "style": "oneshot",
+   "thinking": false,
+   "sha256": "0c809dc6af96c8e6d46ac1e393397fa19350e7ada0b86c451002cee0916f63d0"
+  },
+  "planner-loop": {
+   "role": "planner",
+   "style": "loop",
+   "thinking": false,
+   "sha256": "48e2083d667cba91da4c16fe69792b79390d0b59f02ddda47734ff9c35ec8802"
+  }
+ },
+ "models": {
+  "qwen36moe": {
+   "key": "qwen36moe",
+   "backend": "openai",
+   "url": "http://127.0.0.1:8081/v1/chat/completions",
+   "model": "qwen3.6-35b-a3b_ud-q6_k",
+   "extra_body": {},
+   "api_key_env": "",
+   "behaviour": "",
+   "timeout_s": 900,
+   "notes": "v8 R75 local planner. 53 tok/s."
+  }
+ }
+}

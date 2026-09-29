@@ -1,0 +1,5 @@
+{"slug":"incumbent","ctx":8192,"kv":"f16","weights_mib":19848,"vram_mib":20663,"tok_per_s":11.14,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 11.14, "prompt_eval_count": 32, "wall_s": 19.0}}
+{"slug":"incumbent","ctx":12288,"kv":"f16","weights_mib":19848,"vram_mib":20951,"tok_per_s":11.14,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 11.14, "prompt_eval_count": 32, "wall_s": 19.0}}
+{"slug":"incumbent","ctx":16384,"kv":"f16","weights_mib":19848,"vram_mib":21239,"tok_per_s":11.14,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 11.14, "prompt_eval_count": 32, "wall_s": 19.0}}
+{"slug":"incumbent","ctx":24576,"kv":"f16","weights_mib":19848,"vram_mib":21815,"tok_per_s":11.14,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 11.14, "prompt_eval_count": 32, "wall_s": 19.0}}
+{"slug":"incumbent","ctx":32768,"kv":"f16","weights_mib":19848,"vram_mib":22391,"tok_per_s":11.14,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 11.14, "prompt_eval_count": 32, "wall_s": 19.0}}

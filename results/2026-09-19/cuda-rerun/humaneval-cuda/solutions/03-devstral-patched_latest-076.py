@@ -1,0 +1,13 @@
+def is_simple_power(x, n):
+    if n == 1:
+        return False
+    if x == 1:
+        return True
+    if x < n:
+        return False
+    power = 0
+    current = n
+    while current < x:
+        current *= n
+        power += 1
+    return current == x

@@ -1,0 +1,39 @@
+def tri(n):
+    """Return a list of the first n+1 Tribonacci numbers.
+
+    The sequence is defined as:
+        tri(1) = 3
+        tri(n) = 1 + n/2, if n is even
+        tri(n) = tri(n-1) + tri(n-2) + tri(n+1), if n is odd
+
+    The returned list includes the value for index 0 (which is 1) followed by
+    tri(1), tri(2), ..., tri(n).
+
+    Examples
+    --------
+    >>> tri(3)
+    [1, 3, 2, 8]
+    """
+    # The value for index 0 is defined as 1.
+    if n < 0:
+        raise ValueError("n must be non‑negative")
+    if n == 0:
+        return [1]
+
+    # Initialise the list with the known base values.
+    # index 0 -> 1, index 1 -> 3
+    seq = [1, 3]
+
+    # Compute values for indices 2 .. n
+    for i in range(2, n + 1):
+        if i % 2 == 0:                     # even index
+            val = 1 + i / 2
+        else:                              # odd index
+            # tri(i) = tri(i-1) + tri(i-2) + tri(i+1)
+            # tri(i+1) is not yet known, so we compute it first.
+            # tri(i+1) for an even index (i+1) follows the even rule.
+            next_even = 1 + (i + 1) / 2
+            val = seq[i - 1] + seq[i - 2] + next_even
+        seq.append(val)
+
+    return seq

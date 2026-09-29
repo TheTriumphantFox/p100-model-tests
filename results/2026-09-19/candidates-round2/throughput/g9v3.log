@@ -1,0 +1,50 @@
+========================================================================================
+  LOCAL OLLAMA LLM BENCHMARK
+  Ollama: shim-llamacpp | API: http://127.0.0.1:11500
+  Models: 1 | Tests: 4 | Iterations: 5 | Requests: 20
+  Context: 8192 | Thinking: off | Score: generation tok/s
+  Report: /home/hm/Projects/Tests/2026-09-19/candidates-round2/throughput/g9v3.json
+========================================================================================
+   1. g9v3-39a5b:q4_k_m (Q4_K_M, 23.6 GB)
+
+Every iteration unloads the previous model before starting, then keeps the current model warm across its tests.
+
+
+========================================================================
+MODEL 1/1: g9v3-39a5b:q4_k_m
+========================================================================
+  Iteration 1/5 (cold model load)
+     1/4 speed_brief                40.10 tok/s |   33 tok |  141.73s (load 140.5s)
+     2/4 speed_medium               39.06 tok/s |  164 tok |    4.79s (load 0.0s)
+     3/4 speed_long                 38.95 tok/s |  420 tok |   11.69s (load 0.0s)
+     4/4 python_coding              39.00 tok/s |  400 tok |   10.99s (load 0.0s)
+  Iteration 2/5 (cold model load)
+     1/4 speed_brief                40.17 tok/s |   33 tok |    0.86s (load 0.0s)
+     2/4 speed_medium               39.18 tok/s |  164 tok |    4.78s (load 0.0s)
+     3/4 speed_long                 39.00 tok/s |  420 tok |   11.67s (load 0.0s)
+     4/4 python_coding              39.04 tok/s |  400 tok |   10.98s (load 0.0s)
+  Iteration 3/5 (cold model load)
+     1/4 speed_brief                40.19 tok/s |   33 tok |    0.85s (load 0.0s)
+     2/4 speed_medium               39.20 tok/s |  164 tok |    4.77s (load 0.0s)
+     3/4 speed_long                 39.01 tok/s |  420 tok |   11.66s (load 0.0s)
+     4/4 python_coding              39.05 tok/s |  400 tok |   10.97s (load 0.0s)
+  Iteration 4/5 (cold model load)
+     1/4 speed_brief                40.20 tok/s |   33 tok |    0.85s (load 0.0s)
+     2/4 speed_medium               39.20 tok/s |  164 tok |    4.77s (load 0.0s)
+     3/4 speed_long                 39.02 tok/s |  420 tok |   11.66s (load 0.0s)
+     4/4 python_coding              39.02 tok/s |  400 tok |   10.98s (load 0.0s)
+  Iteration 5/5 (cold model load)
+     1/4 speed_brief                40.19 tok/s |   33 tok |    0.85s (load 0.0s)
+     2/4 speed_medium               39.20 tok/s |  164 tok |    4.78s (load 0.0s)
+     3/4 speed_long                 39.00 tok/s |  420 tok |   11.67s (load 0.0s)
+     4/4 python_coding              39.03 tok/s |  400 tok |   10.98s (load 0.0s)
+
+========================================================================================
+  COMPLETE — ONE WORST RUN REMOVED PER MODEL/TEST
+========================================================================================
+
+  Overall ranking (retained speed-test generation throughput):
+  # 1 g9v3-39a5b:q4_k_m                                                 39.46 tok/s | 16/16 retained successful
+
+  Raw runs: 20 | Retained: 16 | Removed: 4
+  JSON report: /home/hm/Projects/Tests/2026-09-19/candidates-round2/throughput/g9v3.json

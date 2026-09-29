@@ -1,0 +1,13 @@
+```python
+def next_smallest(lst):
+    """
+    Return the second smallest distinct element in the list.
+    If it does not exist, return None.
+    """
+    # Remove duplicates and sort
+    unique_vals = sorted(set(lst))
+    # Need at least two distinct values
+    if len(unique_vals) < 2:
+        return None
+    return unique_vals[1]
+```

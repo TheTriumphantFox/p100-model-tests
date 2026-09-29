@@ -1,0 +1,7 @@
+{
+  "dataset": "t2i_compbench",
+  "category": "spatial",
+  "prompt_id": "spatial_0000",
+  "index": 0,
+  "prompt": "a giraffe next to a lamp"
+}

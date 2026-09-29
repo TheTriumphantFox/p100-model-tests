@@ -1,0 +1,3 @@
+{"name": "qwen36moe-gptoss-review", "description": "Cross-architecture reviewer: pays a model swap per reviewed transaction",
+ "planner": {"model": "qwen36moe", "persona": "planner-v8", "pin": true},
+ "reviewer": {"model": "gpt-oss", "persona": "reviewer-strict", "mode": "gate"}, "deadline_s": 240}

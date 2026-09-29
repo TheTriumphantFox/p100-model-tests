@@ -1,0 +1,178 @@
+[
+  {
+    "name": "baseline-layer-50-50",
+    "status": "ok",
+    "environment": {},
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "1,1"
+    ],
+    "ready_seconds": 6.014114391000476,
+    "generation_tok_s": 11.058119258620472,
+    "generation_trials_tok_s": [
+      11.057391343716832,
+      11.05884717352411
+    ],
+    "prompt_tok_s": 5.605589323552076,
+    "prompt_trials_tok_s": [
+      5.600902733734731,
+      5.61027591336942
+    ]
+  },
+  {
+    "name": "force-mmvq",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_FORCE_MMVQ": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "1,1"
+    ],
+    "ready_seconds": 5.5070851560003575,
+    "generation_tok_s": 9.72163030468861,
+    "generation_trials_tok_s": [
+      9.721471423543383,
+      9.721789185833837
+    ],
+    "prompt_tok_s": 5.5658688297817775,
+    "prompt_trials_tok_s": [
+      5.565358589148859,
+      5.566379070414696
+    ]
+  },
+  {
+    "name": "disable-mmvq",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_MMVQ": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "1,1"
+    ],
+    "ready_seconds": 5.507069471999785,
+    "generation_tok_s": 14.769500157012189,
+    "generation_trials_tok_s": [
+      14.769923551108297,
+      14.76907676291608
+    ],
+    "prompt_tok_s": 5.763919474106309,
+    "prompt_trials_tok_s": [
+      5.764742226160332,
+      5.763096722052286
+    ]
+  },
+  {
+    "name": "disable-fusion",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_FUSION": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "1,1"
+    ],
+    "ready_seconds": 5.5070314249996954,
+    "generation_tok_s": 10.928268233700376,
+    "generation_trials_tok_s": [
+      10.925878752512414,
+      10.930657714888339
+    ],
+    "prompt_tok_s": 5.600323516239223,
+    "prompt_trials_tok_s": [
+      5.597876231615093,
+      5.602770800863354
+    ]
+  },
+  {
+    "name": "disable-async",
+    "status": "ok",
+    "environment": {
+      "GGML_VK_DISABLE_ASYNC": "1"
+    },
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "1,1"
+    ],
+    "ready_seconds": 5.507176741999501,
+    "generation_tok_s": 11.045299863684855,
+    "generation_trials_tok_s": [
+      11.042792647482582,
+      11.047807079887129
+    ],
+    "prompt_tok_s": 5.576747123870861,
+    "prompt_trials_tok_s": [
+      5.580608109017508,
+      5.572886138724216
+    ]
+  },
+  {
+    "name": "layer-55-45",
+    "status": "ok",
+    "environment": {},
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "55,45"
+    ],
+    "ready_seconds": 5.5068752699999095,
+    "generation_tok_s": 11.054858428557033,
+    "generation_trials_tok_s": [
+      11.049796822948494,
+      11.059920034165572
+    ],
+    "prompt_tok_s": 5.605004149824037,
+    "prompt_trials_tok_s": [
+      5.604895117575863,
+      5.60511318207221
+    ]
+  },
+  {
+    "name": "layer-60-40",
+    "status": "ok",
+    "environment": {},
+    "arguments": [
+      "--split-mode",
+      "layer",
+      "--tensor-split",
+      "60,40"
+    ],
+    "ready_seconds": 5.006452202999753,
+    "generation_tok_s": 11.068719283902892,
+    "generation_trials_tok_s": [
+      11.069081527707567,
+      11.068357040098217
+    ],
+    "prompt_tok_s": 5.629152957774419,
+    "prompt_trials_tok_s": [
+      5.625253550031337,
+      5.633052365517502
+    ]
+  },
+  {
+    "name": "row-50-50",
+    "status": "failed",
+    "environment": {},
+    "arguments": [
+      "--split-mode",
+      "row",
+      "--tensor-split",
+      "1,1",
+      "--main-gpu",
+      "0"
+    ],
+    "error": "RuntimeError('server exited with status 1')"
+  }
+]

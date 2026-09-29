@@ -1,0 +1,23 @@
+MMLU-Pro: 1 model(s), 14 categories, 70 questions/model.
+Planned batches: 14; scored answers: 70.
+Results: /home/hm/Projects/Tests/2026-09-19/candidates-round2/mmlu-ornith-2048
+
+Model 1/1: ornith-1.5-35b-a3b:q4_k_m
+[##----------------------------] 1/14 (  7.1%) ornith-1.5-35b-a3b:q4_k_m / biology                        ETA 26m 36s
+[####--------------------------] 2/14 ( 14.3%) ornith-1.5-35b-a3b:q4_k_m / business                       ETA 12m 33s
+[######------------------------] 3/14 ( 21.4%) ornith-1.5-35b-a3b:q4_k_m / chemistry                      ETA 7m 54s
+[########----------------------] 4/14 ( 28.6%) ornith-1.5-35b-a3b:q4_k_m / computer science               ETA 5m 35s
+[##########--------------------] 5/14 ( 35.7%) ornith-1.5-35b-a3b:q4_k_m / economics                      ETA 4m 06s
+[############------------------] 6/14 ( 42.9%) ornith-1.5-35b-a3b:q4_k_m / engineering                    ETA 3m 06s
+[###############---------------] 7/14 ( 50.0%) ornith-1.5-35b-a3b:q4_k_m / health                         ETA 2m 22s
+[#################-------------] 8/14 ( 57.1%) ornith-1.5-35b-a3b:q4_k_m / history                        ETA 1m 49s
+[###################-----------] 9/14 ( 64.3%) ornith-1.5-35b-a3b:q4_k_m / law                            ETA 1m 23s
+[#####################---------] 10/14 ( 71.4%) ornith-1.5-35b-a3b:q4_k_m / math                           ETA 1m 01s
+[#######################-------] 11/14 ( 78.6%) ornith-1.5-35b-a3b:q4_k_m / other                          ETA 42s
+[#########################-----] 12/14 ( 85.7%) ornith-1.5-35b-a3b:q4_k_m / philosophy                     ETA 26s
+[###########################---] 13/14 ( 92.9%) ornith-1.5-35b-a3b:q4_k_m / physics                        ETA 12s
+[##############################] 14/14 (100.0%) ornith-1.5-35b-a3b:q4_k_m / psychology                     ETA 0s
+
+Finished 14/14 batches and scored 70 answers.
+HTML report: /home/hm/Projects/Tests/2026-09-19/candidates-round2/mmlu-ornith-2048/report.html
+Leader: ornith-1.5-35b-a3b:q4_k_m (61.4%)

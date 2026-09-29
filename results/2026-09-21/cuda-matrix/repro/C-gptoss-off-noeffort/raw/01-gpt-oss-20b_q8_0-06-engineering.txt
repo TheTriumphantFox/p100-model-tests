@@ -1,0 +1,47 @@
+We need to answer each question. Let's solve.
+
+Question 1: Polytropic compression n=1.30, initial P1=1 bar, T1=17°C=290 K. Final P2=5 bar. For ideal gas, polytropic relation: P V^n = constant. Also for ideal gas, PV = RT. We can find T2 via P2/P1 = (V1/V2)^n. But V1/V2 = P2/P1 * (T1/T2)? Wait: Use relation: P V^n = const. Also PV = RT. So V = RT/P. So substitute: P (RT/P)^n = const => P^(1-n) T^n = const. So T2/T1 = (P2/P1)^{(1-n)/n}. Let's compute.
+
+n=1.30. (1-n)/n = (1-1.30)/1.30 = (-0.30)/1.30 = -0.230769... So T2 = T1 * (P2/P1)^{-0.230769}. P2/P1 =5. So (5)^(-0.230769) = exp(-0.230769 ln5). ln5=1.60944. Multiply: -0.230769*1.60944 = -0.371. exp(-0.371)=0.690. So T2 ≈ 0.690 * 290 K = 200.1 K.
+
+Now compute work per kg for polytropic process: w = (P2 V2 - P1 V1)/(1-n). For ideal gas, w = (R/(1-n)) (T2 - T1). Wait sign? For compression, w positive? Let's derive: w = ∫ v dp? Actually for polytropic, w = (P2 V2 - P1 V1)/(1-n). For n≠1. For compression, P2> P1, V2< V1. Let's compute using formula.
+
+We need specific work per kg. Use R specific gas constant for air: R = 287 J/kg-K. So w = (R/(1-n)) (T2 - T1). Because P V = R T. Let's verify: P2 V2 - P1 V1 = R (T2 - T1). So w = R (T2 - T1)/(1-n). n=1.30, 1-n = -0.30. So w = 287*(200.1-290)/(-0.30) = 287*(-89.9)/(-0.30) = 287*299.667 = 86000 J/kg approx. 86 kJ/kg. Positive. But options: 62.15, 155.67, 124.78, 93.45, 31.33, etc. 86 not present. Maybe sign? Let's compute more precisely.
+
+T2 = 200.1 K. T1=290 K. ΔT = -89.9 K. 1-n = -0.30. So w = 287*(-89.9)/(-0.30) = 287*299.667 = 86000 J/kg = 86 kJ/kg. None match. Maybe they use R=8.314/0.02897=287. So same.
+
+Maybe they used n=1.30 but used formula w = (P2 V2 - P1 V1)/(1-n). Let's compute using P and V. Need V1 and V2. For 1 kg of air, mass m=1 kg. Use ideal gas: V1 = m R T1 / P1. P1=1 bar=1e5 Pa. T1=290 K. So V1 = 1*287*290/1e5 = 83330/1e5=0.8333 m^3. V2 = m R T2 / P2 = 287*200.1/(5e5)=57427/5e5=0.11485 m^3. Now compute w = (P2 V2 - P1 V1)/(1-n). P2 V2 = 5e5*0.11485=57425 Pa·m^3 = 57425 J. P1 V1 = 1e5*0.8333=83330 J. Difference = -25905 J. Divide by (1-n) = -0.30 gives w = 86350 J. Same.
+
+So 86 kJ/kg. Not in options. Maybe they want heat transferred Q = ΔU - w? For polytropic, Q = ΔU - w. ΔU = m Cv ΔT. Cv for air ~ 718 J/kg-K. ΔT = -89.9 K. ΔU = 718*(-89.9) = -64600 J. Q = ΔU - w = -64600 - 86350 = -150,000 J = -150 kJ/kg. Options: -124.78, -93.45, -62.15, -31.33. None.
+
+Maybe they used different R or Cv? Let's compute with Cp? For ideal gas, ΔU = m Cv ΔT. Cv = Cp - R. Cp for air ~ 1005 J/kg-K. So Cv = 1005-287=718. Good.
+
+Q = ΔU - w = -64600 - 86350 = -150kJ. Not match.
+
+Maybe they used n=1.30 but used formula Q = (n-1)/(n) * R (T2 - T1)? Let's derive: For polytropic, w = (P2 V2 - P1 V1)/(1-n). Q = ΔU - w. ΔU = Cv (T2 - T1). So Q = Cv ΔT - w. w = R ΔT/(1-n). So Q = Cv ΔT - R ΔT/(1-n) = ΔT [Cv - R/(1-n)]. Compute numeric: Cv=718. R/(1-n)=287/(-0.30)=-956.7. So Cv - (-956.7)=1714.7. ΔT=-89.9. Q = -89.9*1714.7 = -154,000 J. Same.
+
+So none.
+
+Maybe they used n=1.30 but used R=8.314? Wait R per mole. For 1 kg of air, moles = 1000 g / 28.97 g/mol = 34.53 mol. Use R=8.314 J/mol-K. Then specific R = R/M = 8.314/0.02897=287. So same.
+
+Maybe they used different temperature units? If T in Celsius? That would be wrong.
+
+Let's check options: -31.33, 62.15, -93.45, 155.67, 124.78, 93.45, 0, 31.33, -62.15, -124.78. Our Q negative ~ -150 kJ. Closest is -124.78 or -93.45. Which is closer? -150 vs -124.78 difference 25.22; vs -93.45 difference 56.55. So maybe answer -124.78? But why? Maybe they used different Cv? Let's compute with Cv=718? Already used. If they used Cv=718? yes. If they used Cv=718? same.
+
+Maybe they used n=1.30 but used formula Q = (n-1)/(n) * R (T2 - T1)? Let's compute: (n-1)/n = 0.30/1.30=0.23077. R=287. ΔT=-89.9. Q = 0.23077*287*(-89.9)= -5960 J. Not.
+
+Maybe they used Q = (n-1)/(n) * Cp (T2 - T1)? Cp=1005. 0.23077*1005*(-89.9)= -20800 J. Not.
+
+Maybe they used Q = (n-1)/(n) * R (T2 - T1) but with R=8.314? 0.23077*8.314*(-89.9)= -172 J. Not.
+
+So maybe the question expects heat transferred per kg of air for this process. For polytropic compression, heat transfer Q = m Cp (T2 - T1) - w? Wait first law: Q = ΔU + w. For compression, w positive (work done on system). So Q = ΔU + w. ΔU = Cv ΔT negative. w positive. So Q = Cv ΔT + w. Let's compute: Cv ΔT = -64600. w = 86350. Sum = 21750 J = 21.75 kJ. Option 31.33? 21.75 not present. Maybe they used Cp? Let's compute with Cp: Cp ΔT = 1005*(-89.9) = -90400. Q = -90400 + 86350 = -4050 J. Not.
+
+So maybe they used Q = w - ΔU? That would be 86350 - (-64600)=150kJ. Not.
+
+Thus unclear.
+
+Maybe they used n=1.30 but used formula Q = (n-1)/(n) * R (T2 - T1) but with R=8.314? That gave -172 J. Not.
+
+Let's skip for now; maybe answer is 62.15? Let's hold.
+
+Question 2: Cylinder pressure vessel

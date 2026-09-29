@@ -1,0 +1,15 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+glm-4.7-flash:q5_k_m,biology,1,5,5,5,44.528752215305424,335.5655634794327,4.632885869999882,20,,raw/01-glm-4.7-flash_q5_k_m-01-biology.txt
+glm-4.7-flash:q5_k_m,business,2,3,5,5,46.475960309529896,307.0432352176949,2.8956041769997682,20,,raw/01-glm-4.7-flash_q5_k_m-02-business.txt
+glm-4.7-flash:q5_k_m,chemistry,3,2,5,5,44.52667036238031,317.03474903474904,4.517936386000656,20,,raw/01-glm-4.7-flash_q5_k_m-03-chemistry.txt
+glm-4.7-flash:q5_k_m,computer science,4,3,5,5,44.55365039196074,310.9180949336583,7.685767671006033,20,,raw/01-glm-4.7-flash_q5_k_m-04-computer_science.txt
+glm-4.7-flash:q5_k_m,economics,5,1,5,5,46.320743355289366,315.5398924155351,2.931128890995751,20,,raw/01-glm-4.7-flash_q5_k_m-05-economics.txt
+glm-4.7-flash:q5_k_m,engineering,6,5,5,5,46.45782326514873,332.24248939205296,3.098435421998147,20,,raw/01-glm-4.7-flash_q5_k_m-06-engineering.txt
+glm-4.7-flash:q5_k_m,health,7,3,5,5,46.60451178278569,285.90459095764186,2.691429963000701,20,,raw/01-glm-4.7-flash_q5_k_m-07-health.txt
+glm-4.7-flash:q5_k_m,history,8,4,5,5,44.56923831171725,333.1078222855029,4.541001573001267,20,,raw/01-glm-4.7-flash_q5_k_m-08-history.txt
+glm-4.7-flash:q5_k_m,law,9,0,5,5,44.48121558265944,307.4852665101669,7.457151618997159,20,,raw/01-glm-4.7-flash_q5_k_m-09-law.txt
+glm-4.7-flash:q5_k_m,math,10,2,5,5,46.51130340951109,322.18832518858073,3.0041335679998156,20,,raw/01-glm-4.7-flash_q5_k_m-10-math.txt
+glm-4.7-flash:q5_k_m,other,11,4,5,5,46.66246704463265,348.50152449155246,1.6841373299976112,20,,raw/01-glm-4.7-flash_q5_k_m-11-other.txt
+glm-4.7-flash:q5_k_m,philosophy,12,3,5,5,46.51216874614821,301.04338803934434,2.7749925419993815,20,,raw/01-glm-4.7-flash_q5_k_m-12-philosophy.txt
+glm-4.7-flash:q5_k_m,physics,13,2,5,5,46.4368969008015,334.58819553319125,3.1129255010018824,20,,raw/01-glm-4.7-flash_q5_k_m-13-physics.txt
+glm-4.7-flash:q5_k_m,psychology,14,2,5,5,46.45350700751153,315.0750360229102,2.9449873529956676,20,,raw/01-glm-4.7-flash_q5_k_m-14-psychology.txt

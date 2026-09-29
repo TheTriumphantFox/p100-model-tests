@@ -1,0 +1,68 @@
+def minPath(grid, k):
+    """
+    Given a grid with N rows and N columns (N >= 2) and a positive integer k, 
+    each cell of the grid contains a value. Every integer in the range [1, N * N]
+    inclusive appears exactly once on the cells of the grid.
+
+    You have to find the minimum path of length k in the grid. You can start
+    from any cell, and in each step you can move to any of the neighbor cells,
+    in other words, you can go to cells which share an edge with you current
+    cell.
+    Please note that a path of length k means visiting exactly k cells (not
+    necessarily distinct).
+    You CANNOT go off the grid.
+    A path A (of length k) is considered less than a path B (of length k) if
+    after making the ordered lists of the values on the cells that A and B go
+    through (let's call them lst_A and lst_B), lst_A is lexicographically less
+    than lst_B, in other words, there exist an integer index i (1 <= i <= k)
+    such that lst_A[i] < lst_B[i] and for any j (1 <= j < i) we have
+    lst_A[j] = lst_B[j].
+    It is guaranteed that the answer is unique.
+    Return an ordered list of the values on the cells that the minimum path go through.
+
+    Examples:
+
+        Input: grid = [ [1,2,3], [4,5,6], [7,8,9]], k = 3
+        Output: [1, 2, 1]
+
+        Input: grid = [ [5,9,3], [4,1,6], [7,8,2]], k = 1
+        Output: [1]
+    """
+    n = len(grid)
+    
+    # Find the position of each value
+    pos = {}
+    for i in range(n):
+        for j in range(n):
+            pos[grid[i][j]] = (i, j)
+    
+    # We want to find the lexicographically smallest path of length k.
+    # The first element of the path must be the smallest possible value that can start a path of length k.
+    # Actually, since we can start anywhere, the first element should be the minimum value in the grid? 
+    # No, wait. We need to be able to extend the path to length k. But since we can revisit cells, 
+    # any cell can be the start of a path of any length k (as long as k >= 1). 
+    # So the first element should be the minimum value in the grid, which is 1.
+    
+    # Wait, let me re-read. "You can start from any cell". So the first cell can be any cell.
+    # To minimize the lexicographic order, we want the first element to be as small as possible.
+    # The smallest value in the grid is 1. So the first element must be 1.
+    
+    # Now, from the cell containing 1, we want to choose the next cell such that the path is lexicographically smallest.
+    # The next cell must be a neighbor of the current cell. We want the smallest value among the neighbors.
+    # But wait, we need to ensure that we can complete the path to length k. Since we can revisit, 
+    # any neighbor can be chosen, and then we can always continue (by going back and forth if needed).
+    
+    # So the greedy approach: 
+    # 1. Start at the cell with value 1.
+    # 2. At each step, from the current cell, look at all neighbors (including the cell we came from, since we can revisit).
+    # 3. Choose the neighbor with the smallest value.
+    # 4. If there are multiple neighbors with the same smallest value, we need to break the tie. But the problem says the answer is unique.
+    #    Actually, the values are all distinct, so there won't be ties in value.
+    
+    # Wait, but what if the smallest neighbor leads to a dead end? No, because we can revisit cells. 
+    # So from any cell, we can always move to any neighbor, and then from there to any of its neighbors, etc.
+    # So the greedy approach should work: at each step, pick the neighbor with the smallest value.
+    
+    # Let me verify with the example:
+    # grid = [[1,2,3],[4,5,6],[7,8,9]], k=3
+    # Start at 1 (position (0

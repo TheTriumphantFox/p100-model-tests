@@ -1,0 +1,4 @@
+{"name": "qwen36moe-full-self", "description": "One model, three personas: planner, strict reviewer (gate), reporter",
+ "planner": {"model": "qwen36moe", "persona": "planner-v8", "pin": true},
+ "reviewer": {"model": "qwen36moe", "persona": "reviewer-strict", "mode": "gate"},
+ "reporter": {"model": "qwen36moe", "persona": "reporter-plain"}, "deadline_s": 240}

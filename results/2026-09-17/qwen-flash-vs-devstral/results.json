@@ -1,0 +1,75 @@
+{
+  "started": "2026-09-17T15:30:27.224027-04:00",
+  "settings": {
+    "trials": 2,
+    "num_ctx": 2048,
+    "num_predict": 160,
+    "temperature": 0,
+    "seed": 42,
+    "thinking": false,
+    "endpoint": "/api/chat"
+  },
+  "models": [
+    {
+      "model": "qwen3.8-flash-next:ud-iq3_xxs",
+      "warmup_wall_seconds": 551.5795081249962,
+      "warmup_load_seconds": 294.672453018,
+      "processor": "qwen3.8-flash-next:ud-iq3_xxs    e0421fa9b35b    60 GB    48%/52% CPU/GPU    2048       9 minutes from now    ",
+      "mean_prompt_tps": 4079.78157061636,
+      "mean_generation_tps": 2.0469963972729412,
+      "trials": [
+        {
+          "prompt_tokens": 1402,
+          "prompt_seconds": 0.231387,
+          "prompt_tps": 6059.113087597833,
+          "generated_tokens": 160,
+          "generation_seconds": 104.618155,
+          "generation_tps": 1.529371264480816,
+          "done_reason": "length",
+          "response_preview": "The synthetic records provided (Records 000\u2013079) contain identical, non-semantic placeholder text (\"alpha beta gamma delta epsilon zeta eta theta\"). Consequently, they do not contain specific software defects, architectural details, or functional requirements that would allow for tailored, record-sp"
+        },
+        {
+          "prompt_tokens": 1402,
+          "prompt_seconds": 0.667476,
+          "prompt_tps": 2100.4500536348874,
+          "generated_tokens": 160,
+          "generation_seconds": 62.387373,
+          "generation_tps": 2.5646215300650663,
+          "done_reason": "length",
+          "response_preview": "The synthetic records provided (Records 000\u2013079) contain identical, non-semantic placeholder text (\"alpha beta gamma delta epsilon zeta eta theta\"). Consequently, they do not contain specific software defects, architectural details, or functional requirements that would allow for tailored, record-sp"
+        }
+      ]
+    },
+    {
+      "model": "hf.co/lmstudio-community/Devstral-Small-2-24B-Instruct-2512-GGUF:q8_0",
+      "warmup_wall_seconds": 184.83921876699605,
+      "warmup_load_seconds": 176.664101298,
+      "processor": "hf.co/lmstudio-community/Devstral-Small-2-24B-Instruct-2512-GGUF:q8_0    18917eee3e39    25 GB    100% GPU     2048       9 minutes from now    ",
+      "mean_prompt_tps": 12442.338232274093,
+      "mean_generation_tps": 9.421068853720158,
+      "trials": [
+        {
+          "prompt_tokens": 1234,
+          "prompt_seconds": 0.099177,
+          "prompt_tps": 12442.400959899976,
+          "generated_tokens": 160,
+          "generation_seconds": 18.460594,
+          "generation_tps": 8.667110061572233,
+          "done_reason": "length",
+          "response_preview": "Here is a numbered list of practical software-testing recommendations based on the synthetic records provided:\n\n1. **Verify Data Consistency**: Ensure all records follow the same format and contain the same fields (e.g., alpha, beta, gamma, etc.).\n2. **Check for Duplicates**: Identify and investigat"
+        },
+        {
+          "prompt_tokens": 1234,
+          "prompt_seconds": 0.099178,
+          "prompt_tps": 12442.275504648209,
+          "generated_tokens": 160,
+          "generation_seconds": 15.724773,
+          "generation_tps": 10.175027645868083,
+          "done_reason": "length",
+          "response_preview": "Here is a numbered list of practical software-testing recommendations based on the synthetic records provided:\n\n1. **Verify Data Consistency**: Ensure all records follow the same format and contain the same fields (e.g., alpha, beta, gamma, etc.).\n2. **Check for Duplicates**: Identify and investigat"
+        }
+      ]
+    }
+  ],
+  "finished": "2026-09-17T15:46:15.362115-04:00"
+}

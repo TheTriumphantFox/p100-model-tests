@@ -1,0 +1,39 @@
+```python
+import re
+
+def is_bored(S: str) -> int:
+    """
+    Count the number of sentences that start with the word "I".
+    Sentences are delimited by '.', '?' or '!'.
+
+    Parameters
+    ----------
+    S : str
+        A string containing one or more sentences.
+
+    Returns
+    -------
+    int
+        The number of sentences that start with "I".
+
+    Examples
+    --------
+    >>> is_bored("Hello world")
+    0
+    >>> is_bored("The sky is blue. The sun is shining. I love this weather")
+    1
+    """
+    # Split the string into sentences using the delimiters.
+    # The regex splits on any of the delimiters followed by optional whitespace.
+    sentences = re.split(r'[.!?]\s*', S)
+    count = 0
+    for sentence in sentences:
+        # Skip empty fragments that may result from trailing delimiters.
+        if not sentence:
+            continue
+        # Strip leading/trailing whitespace and split into words.
+        words = sentence.strip().split()
+        if words and words[0] == "I":
+            count += 1
+    return count
+```

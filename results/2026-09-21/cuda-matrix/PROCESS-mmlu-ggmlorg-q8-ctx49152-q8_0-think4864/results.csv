@@ -1,0 +1,11 @@
+model,category,question_id,expected_answer,predicted_answer,correct,batch,raw_output_file,error
+qwen3.8-27b-ggmlorg:q8_0,biology,3463,C,C,True,1,raw/01-qwen3.8-27b-ggmlorg_q8_0-01-biology.txt,
+qwen3.8-27b-ggmlorg:q8_0,chemistry,3577,F,F,True,2,raw/01-qwen3.8-27b-ggmlorg_q8_0-02-chemistry.txt,
+qwen3.8-27b-ggmlorg:q8_0,computer science,10743,H,H,True,3,raw/01-qwen3.8-27b-ggmlorg_q8_0-03-computer_science.txt,
+qwen3.8-27b-ggmlorg:q8_0,economics,7111,F,F,True,4,raw/01-qwen3.8-27b-ggmlorg_q8_0-04-economics.txt,
+qwen3.8-27b-ggmlorg:q8_0,engineering,11537,D,,False,5,raw/01-qwen3.8-27b-ggmlorg_q8_0-05-engineering.txt,
+qwen3.8-27b-ggmlorg:q8_0,health,6232,C,C,True,6,raw/01-qwen3.8-27b-ggmlorg_q8_0-06-health.txt,
+qwen3.8-27b-ggmlorg:q8_0,history,4740,C,C,True,7,raw/01-qwen3.8-27b-ggmlorg_q8_0-07-history.txt,
+qwen3.8-27b-ggmlorg:q8_0,law,1078,B,,False,8,raw/01-qwen3.8-27b-ggmlorg_q8_0-08-law.txt,
+qwen3.8-27b-ggmlorg:q8_0,math,8808,C,C,True,9,raw/01-qwen3.8-27b-ggmlorg_q8_0-09-math.txt,
+qwen3.8-27b-ggmlorg:q8_0,physics,9911,G,G,True,10,raw/01-qwen3.8-27b-ggmlorg_q8_0-10-physics.txt,

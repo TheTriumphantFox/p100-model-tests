@@ -1,0 +1,23 @@
+```python
+def triangle_area(a, h):
+    """Given length of a side and height return area for a triangle.
+
+    Parameters
+    ----------
+    a : float
+        Length of the base side of the triangle.
+    h : float
+        Height of the triangle.
+
+    Returns
+    -------
+    float
+        The area of the triangle.
+
+    Examples
+    --------
+    >>> triangle_area(5, 3)
+    7.5
+    """
+    return 0.5 * a * h
+```

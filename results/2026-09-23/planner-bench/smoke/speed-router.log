@@ -1,0 +1,219 @@
+0.00.015.862 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.016.848 I srv   load_models: Loaded 0 cached model presets
+0.00.214.956 I srv   load_models: Loaded 14 local model presets from /home/hm/llama-bench-models
+0.00.215.135 I srv    operator(): Available models (14) (*: custom preset)
+0.00.215.136 I srv    operator():     _dl
+0.00.215.136 I srv    operator():     devstral-patched_q8_0
+0.00.215.136 I srv    operator():     g9v3-39a5b_q4_k_m
+0.00.215.136 I srv    operator():     gemma4-e4b-abliterated_q4_k_m
+0.00.215.136 I srv    operator():     gpt-oss-20b_q8_0
+0.00.215.136 I srv    operator():     ornith-1.5-35b-a3b_q4_k_m
+0.00.215.136 I srv    operator():     qwen3.6-27b-abliterated_q5_k_m
+0.00.215.137 I srv    operator():     qwen3.6-27b-opus-distill_q4_k_m
+0.00.215.137 I srv    operator():     qwen3.6-35b-a3b-abliterated-vl_q4_k_m
+0.00.215.137 I srv    operator():     qwen3.6-35b-a3b_ud-q6_k
+0.00.215.138 I srv    operator():     qwen3.8-27b-ggmlorg_q8_0
+0.00.215.138 I srv    operator():     qwen3.8-27b-stock_q4_k_m
+0.00.215.138 I srv    operator():     qwen3.8-27b-uncensored-hauhaucs_q6_k_p
+0.00.215.138 I srv    operator():     qwen3.8-27b-unsloth_q8_0
+0.00.215.188 W srv  llama_server: -----------------
+0.00.215.188 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.215.188 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.215.188 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.215.188 W srv  llama_server: -----------------
+0.00.215.191 W srv  llama_server: -----------------
+0.00.215.191 W srv  llama_server: the following feature(s) are enabled:
+0.00.215.192 W srv  llama_server:     router mode
+0.00.215.192 W srv  llama_server: do not expose the server to untrusted environments
+0.00.215.192 W srv  llama_server: -----------------
+0.00.215.193 I srv  llama_server: starting server in router mode. models will be automatically loaded on-demand
+0.00.216.364 I srv  llama_server: listening on http://127.0.0.1:8081
+0.01.955.629 I srv  ensure_model: model name=qwen3.6-35b-a3b_ud-q6_k is not loaded, loading...
+0.01.955.663 I srv          load: spawning server instance with name=qwen3.6-35b-a3b_ud-q6_k on port 40093
+0.01.955.684 I srv          load: spawning server instance with args:
+0.01.955.685 I srv          load:   /home/hm/llama-cuda12/bin/llama-server
+0.01.955.685 I srv          load:   --host
+0.01.955.685 I srv          load:   127.0.0.1
+0.01.955.685 I srv          load:   --jinja
+0.01.955.685 I srv          load:   --port
+0.01.955.685 I srv          load:   40093
+0.01.955.685 I srv          load:   --alias
+0.01.955.685 I srv          load:   qwen3.6-35b-a3b_ud-q6_k
+0.01.955.685 I srv          load:   --batch-size
+0.01.955.685 I srv          load:   512
+0.01.955.685 I srv          load:   --ctx-size
+0.01.955.686 I srv          load:   32768
+0.01.955.686 I srv          load:   --cache-type-k
+0.01.955.686 I srv          load:   f16
+0.01.955.686 I srv          load:   --cache-type-v
+0.01.955.686 I srv          load:   f16
+0.01.955.686 I srv          load:   --flash-attn
+0.01.955.686 I srv          load:   on
+0.01.955.686 I srv          load:   --model
+0.01.955.687 I srv          load:   /home/hm/llama-bench-models/qwen3.6-35b-a3b_ud-q6_k.gguf
+0.01.955.687 I srv          load:   --parallel
+0.01.955.687 I srv          load:   1
+0.01.955.687 I srv          load:   --split-mode
+0.01.955.687 I srv          load:   layer
+0.01.955.687 I srv          load:   --ubatch-size
+0.01.955.687 I srv          load:   512
+0.01.955.847 I srv  ensure_model: waiting until model name=qwen3.6-35b-a3b_ud-q6_k is fully loaded...
+[40093] 0.00.006.232 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+[40093] 0.00.006.470 W srv  llama_server: -----------------
+[40093] 0.00.006.471 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+[40093] 0.00.006.472 W srv  llama_server: this can be a security risk (cross-origin attacks)
+[40093] 0.00.006.472 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+[40093] 0.00.006.472 W srv  llama_server: -----------------
+[40093] 
+[40093] 0.00.007.800 I srv    load_model: loading model '/home/hm/llama-bench-models/qwen3.6-35b-a3b_ud-q6_k.gguf'
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 
+[40093] 2.53.621.899 I cmn          init: llama threadpool init, n_threads = 6
+[40093] 2.53.740.655 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 32768, kv_unified = 'false'
+[40093] 2.53.745.859 W srv          init: chat template supports preserving reasoning, it is enabled by default (may use more tokens, disable via --no-reasoning-preserve)
+[40093] 2.53.746.055 I srv  llama_server: model loaded
+[40093] 2.53.746.058 I srv  llama_server: listening on http://127.0.0.1:40093
+[40093] 2.53.746.158 I srv    operator(): child server monitoring thread started, waiting for EOF on stdin...
+[40093] 
+2.55.723.268 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 40093
+[40093] 2.53.748.719 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+[40093] 2.53.748.760 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+[40093] 2.53.925.306 I slot print_timing: id  0 | task 0 | prompt eval time =     176.52 ms /    11 tokens (   16.05 ms per token,    62.32 tokens per second)
+[40093] 2.53.925.309 I slot print_timing: id  0 | task 0 |        eval time =       0.00 ms /     1 tokens (    0.00 ms per token,     0.00 tokens per second)
+[40093] 2.53.925.310 I slot print_timing: id  0 | task 0 |       total time =     176.52 ms /    12 tokens
+[40093] 2.53.925.312 I slot print_timing: id  0 | task 0 |    graphs reused =          1
+[40093] 2.53.925.337 I slot      release: id  0 | task 0 | stop processing: n_tokens = 11, truncated = 0
+2.56.485.983 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 40093
+[40093] 2.54.512.109 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 431150531959
+[40093] 2.54.543.528 I slot launch_slot_: id  0 | task 3 | processing task, is_child = 0
+[40093] 3.00.807.103 I slot print_timing: id  0 | task 3 | n_gen =    162, tg =  53.48 t/s, tg_3s =  53.81 t/s
+[40093] 3.03.815.973 I slot print_timing: id  0 | task 3 | n_gen =    323, tg =  53.49 t/s, tg_3s =  53.51 t/s
+[40093] 3.06.828.225 I slot print_timing: id  0 | task 3 | n_gen =    484, tg =  53.48 t/s, tg_3s =  53.45 t/s
+[40093] 3.09.840.674 I slot print_timing: id  0 | task 3 | n_gen =    645, tg =  53.47 t/s, tg_3s =  53.44 t/s
+[40093] 3.11.296.909 I slot print_timing: id  0 | task 3 | prompt eval time =    3253.04 ms /  1198 tokens (    2.72 ms per token,   368.27 tokens per second)
+[40093] 3.11.296.912 I slot print_timing: id  0 | task 3 |        eval time =   13500.33 ms /   722 tokens (   18.72 ms per token,    53.41 tokens per second)
+[40093] 3.11.296.913 I slot print_timing: id  0 | task 3 |       total time =   16753.36 ms /  1920 tokens
+[40093] 3.11.296.913 I slot print_timing: id  0 | task 3 |    graphs reused =        718
+[40093] 3.11.296.972 I slot      release: id  0 | task 3 | stop processing: n_tokens = 1919, truncated = 0
+3.13.532.765 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 40093
+[40093] 3.11.559.900 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.131 (> 0.100 thold), f_keep = 0.225
+[40093] 3.11.636.400 I slot launch_slot_: id  0 | task 729 | processing task, is_child = 0
+[40093] 3.14.942.204 I slot print_timing: id  0 | task 729 | prompt processing, n_tokens =   1950, progress = 0.59, t =   3.31 s / 589.88 tokens per second
+[40093] 3.15.702.553 I slot print_timing: id  0 | task 729 | prompt processing, n_tokens =   2462, progress = 0.75, t =   4.07 s / 605.49 tokens per second
+[40093] 3.16.345.561 I slot print_timing: id  0 | task 729 | prompt processing, n_tokens =   2789, progress = 0.84, t =   4.71 s / 592.25 tokens per second
+[40093] 3.17.546.582 I slot print_timing: id  0 | task 729 | prompt processing, n_tokens =   3297, progress = 1.00, t =   5.91 s / 557.85 tokens per second
+[40093] 3.21.087.294 I slot print_timing: id  0 | task 729 | n_gen =    161, tg =  53.03 t/s, tg_3s =  53.36 t/s
+[40093] 3.24.089.166 I slot print_timing: id  0 | task 729 | n_gen =    320, tg =  53.00 t/s, tg_3s =  52.97 t/s
+[40093] 3.27.107.577 I slot print_timing: id  0 | task 729 | n_gen =    479, tg =  52.89 t/s, tg_3s =  52.68 t/s
+[40093] 3.30.108.957 I slot print_timing: id  0 | task 729 | n_gen =    637, tg =  52.83 t/s, tg_3s =  52.64 t/s
+[40093] 3.33.111.925 I slot print_timing: id  0 | task 729 | n_gen =    795, tg =  52.79 t/s, tg_3s =  52.61 t/s
+[40093] 3.36.116.019 I slot print_timing: id  0 | task 729 | n_gen =    953, tg =  52.75 t/s, tg_3s =  52.59 t/s
+[40093] 3.39.117.541 I slot print_timing: id  0 | task 729 | n_gen =   1111, tg =  52.74 t/s, tg_3s =  52.64 t/s
+[40093] 3.42.118.339 I slot print_timing: id  0 | task 729 | n_gen =   1269, tg =  52.73 t/s, tg_3s =  52.65 t/s
+[40093] 3.45.122.344 I slot print_timing: id  0 | task 729 | n_gen =   1427, tg =  52.71 t/s, tg_3s =  52.60 t/s
+[40093] 3.48.126.796 I slot print_timing: id  0 | task 729 | n_gen =   1585, tg =  52.70 t/s, tg_3s =  52.59 t/s
+[40093] 3.51.129.653 I slot print_timing: id  0 | task 729 | n_gen =   1743, tg =  52.69 t/s, tg_3s =  52.62 t/s
+[40093] 3.54.134.011 I slot print_timing: id  0 | task 729 | n_gen =   1901, tg =  52.68 t/s, tg_3s =  52.59 t/s
+[40093] 3.57.138.043 I slot print_timing: id  0 | task 729 | n_gen =   2059, tg =  52.68 t/s, tg_3s =  52.60 t/s
+[40093] 4.00.144.055 I slot print_timing: id  0 | task 729 | n_gen =   2217, tg =  52.67 t/s, tg_3s =  52.56 t/s
+[40093] 4.03.148.843 I slot print_timing: id  0 | task 729 | n_gen =   2375, tg =  52.66 t/s, tg_3s =  52.58 t/s
+[40093] 4.06.151.683 I slot print_timing: id  0 | task 729 | n_gen =   2533, tg =  52.66 t/s, tg_3s =  52.62 t/s
+[40093] 4.09.156.805 I slot print_timing: id  0 | task 729 | n_gen =   2691, tg =  52.66 t/s, tg_3s =  52.58 t/s
+[40093] 4.12.162.044 I slot print_timing: id  0 | task 729 | n_gen =   2849, tg =  52.65 t/s, tg_3s =  52.57 t/s
+[40093] 4.13.293.553 I slot print_timing: id  0 | task 729 | prompt eval time =    6433.62 ms /  3301 tokens (    1.95 ms per token,   513.09 tokens per second)
+[40093] 4.13.293.556 I slot print_timing: id  0 | task 729 |        eval time =   55223.51 ms /  2908 tokens (   19.00 ms per token,    52.64 tokens per second)
+[40093] 4.13.293.557 I slot print_timing: id  0 | task 729 |       total time =   61657.14 ms /  6209 tokens
+[40093] 4.13.293.557 I slot print_timing: id  0 | task 729 |    graphs reused =       3612
+[40093] 4.13.293.637 I slot      release: id  0 | task 729 | stop processing: n_tokens = 6208, truncated = 0
+4.15.322.184 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 40093
+[40093] 4.13.350.825 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 431229900259
+[40093] 4.13.516.180 I slot launch_slot_: id  0 | task 3645 | processing task, is_child = 0
+[40093] 4.16.817.467 I slot print_timing: id  0 | task 3645 | prompt processing, n_tokens =   1950, progress = 0.31, t =   3.30 s / 590.68 tokens per second
+[40093] 4.17.571.716 I slot print_timing: id  0 | task 3645 | prompt processing, n_tokens =   2462, progress = 0.39, t =   4.06 s / 607.08 tokens per second
+[40093] 4.18.340.191 I slot print_timing: id  0 | task 3645 | prompt processing, n_tokens =   2974, progress = 0.47, t =   4.82 s / 616.50 tokens per second
+[40093] 4.19.114.186 I slot print_timing: id  0 | task 3645 | prompt processing, n_tokens =   3486, progress = 0.55, t =   5.60 s / 622.72 tokens per second
+[40093] 4.19.896.450 I slot print_timing: id  0 | task 3645 | prompt processing, n_tokens =   3998, progress = 0.64, t =   6.38 s / 626.62 tokens per second
+[40093] 4.20.685.109 I slot print_timing: id  0 | task 3645 | prompt processing, n_tokens =   4510, progress = 0.72, t =   7.17 s / 629.11 tokens per second
+[40093] 4.21.480.839 I slot print_timing: id  0 | task 3645 | prompt processing, n_tokens =   5022, progress = 0.80, t =   7.96 s / 630.54 tokens per second
+[40093] 4.22.284.055 I slot print_timing: id  0 | task 3645 | prompt processing, n_tokens =   5534, progress = 0.88, t =   8.77 s / 631.17 tokens per second
+[40093] 4.22.905.172 I slot print_timing: id  0 | task 3645 | prompt processing, n_tokens =   5770, progress = 0.92, t =   9.39 s / 614.55 tokens per second
+[40093] 4.24.125.226 I slot print_timing: id  0 | task 3645 | prompt processing, n_tokens =   6278, progress = 1.00, t =  10.61 s / 591.76 tokens per second
+[40093] 4.27.685.193 I slot print_timing: id  0 | task 3645 | n_gen =    159, tg =  52.56 t/s, tg_3s =  52.89 t/s
+[40093] 4.30.687.375 I slot print_timing: id  0 | task 3645 | n_gen =    317, tg =  52.59 t/s, tg_3s =  52.63 t/s
+[40093] 4.33.692.042 I slot print_timing: id  0 | task 3645 | n_gen =    475, tg =  52.59 t/s, tg_3s =  52.58 t/s
+[40093] 4.36.697.977 I slot print_timing: id  0 | task 3645 | n_gen =    633, tg =  52.58 t/s, tg_3s =  52.56 t/s
+[40093] 4.39.700.972 I slot print_timing: id  0 | task 3645 | n_gen =    791, tg =  52.59 t/s, tg_3s =  52.61 t/s
+[40093] 4.42.716.114 I slot print_timing: id  0 | task 3645 | n_gen =    949, tg =  52.56 t/s, tg_3s =  52.40 t/s
+[40093] 4.45.720.544 I slot print_timing: id  0 | task 3645 | n_gen =   1106, tg =  52.52 t/s, tg_3s =  52.26 t/s
+[40093] 4.48.726.722 I slot print_timing: id  0 | task 3645 | n_gen =   1263, tg =  52.48 t/s, tg_3s =  52.23 t/s
+[40093] 4.51.733.669 I slot print_timing: id  0 | task 3645 | n_gen =   1420, tg =  52.45 t/s, tg_3s =  52.21 t/s
+[40093] 4.54.741.843 I slot print_timing: id  0 | task 3645 | n_gen =   1577, tg =  52.42 t/s, tg_3s =  52.19 t/s
+[40093] 4.57.752.192 I slot print_timing: id  0 | task 3645 | n_gen =   1734, tg =  52.40 t/s, tg_3s =  52.15 t/s
+[40093] 5.00.762.105 I slot print_timing: id  0 | task 3645 | n_gen =   1891, tg =  52.38 t/s, tg_3s =  52.16 t/s
+[40093] 5.03.772.947 I slot print_timing: id  0 | task 3645 | n_gen =   2048, tg =  52.36 t/s, tg_3s =  52.14 t/s
+[40093] 5.06.784.745 I slot print_timing: id  0 | task 3645 | n_gen =   2205, tg =  52.34 t/s, tg_3s =  52.13 t/s
+[40093] 5.09.799.144 I slot print_timing: id  0 | task 3645 | n_gen =   2362, tg =  52.33 t/s, tg_3s =  52.08 t/s
+[40093] 5.12.811.658 I slot print_timing: id  0 | task 3645 | n_gen =   2519, tg =  52.31 t/s, tg_3s =  52.12 t/s
+[40093] 5.15.822.660 I slot print_timing: id  0 | task 3645 | n_gen =   2676, tg =  52.30 t/s, tg_3s =  52.14 t/s
+[40093] 5.18.834.910 I slot print_timing: id  0 | task 3645 | n_gen =   2833, tg =  52.29 t/s, tg_3s =  52.12 t/s
+[40093] 5.21.844.043 I slot print_timing: id  0 | task 3645 | n_gen =   2990, tg =  52.29 t/s, tg_3s =  52.17 t/s
+[40093] 5.24.853.284 I slot print_timing: id  0 | task 3645 | n_gen =   3147, tg =  52.28 t/s, tg_3s =  52.17 t/s
+[40093] 5.27.864.324 I slot print_timing: id  0 | task 3645 | n_gen =   3304, tg =  52.27 t/s, tg_3s =  52.14 t/s
+[40093] 5.30.875.707 I slot print_timing: id  0 | task 3645 | n_gen =   3461, tg =  52.27 t/s, tg_3s =  52.14 t/s
+[40093] 5.33.887.039 I slot print_timing: id  0 | task 3645 | n_gen =   3618, tg =  52.26 t/s, tg_3s =  52.14 t/s
+[40093] 5.36.897.917 I slot print_timing: id  0 | task 3645 | n_gen =   3775, tg =  52.26 t/s, tg_3s =  52.14 t/s
+[40093] 5.39.906.596 I slot print_timing: id  0 | task 3645 | n_gen =   3932, tg =  52.25 t/s, tg_3s =  52.18 t/s
+[40093] 5.42.917.295 I slot print_timing: id  0 | task 3645 | n_gen =   4089, tg =  52.25 t/s, tg_3s =  52.15 t/s
+[40093] 5.45.927.939 I slot print_timing: id  0 | task 3645 | n_gen =   4246, tg =  52.25 t/s, tg_3s =  52.15 t/s
+[40093] 5.48.938.479 I slot print_timing: id  0 | task 3645 | n_gen =   4403, tg =  52.24 t/s, tg_3s =  52.15 t/s
+[40093] 5.51.940.506 I slot print_timing: id  0 | task 3645 | n_gen =   4559, tg =  52.23 t/s, tg_3s =  51.96 t/s
+[40093] 5.54.953.645 I slot print_timing: id  0 | task 3645 | n_gen =   4715, tg =  52.22 t/s, tg_3s =  51.77 t/s
+[40093] 5.57.970.847 I slot print_timing: id  0 | task 3645 | n_gen =   4871, tg =  52.20 t/s, tg_3s =  51.70 t/s
+[40093] 6.00.986.974 I slot print_timing: id  0 | task 3645 | n_gen =   5027, tg =  52.19 t/s, tg_3s =  51.72 t/s
+[40093] 6.04.002.257 I slot print_timing: id  0 | task 3645 | n_gen =   5183, tg =  52.17 t/s, tg_3s =  51.74 t/s
+[40093] 6.07.019.420 I slot print_timing: id  0 | task 3645 | n_gen =   5339, tg =  52.16 t/s, tg_3s =  51.70 t/s
+[40093] 6.10.019.434 I slot print_timing: id  0 | task 3645 | n_gen =   5494, tg =  52.15 t/s, tg_3s =  51.67 t/s
+[40093] 6.13.038.004 I slot print_timing: id  0 | task 3645 | n_gen =   5650, tg =  52.13 t/s, tg_3s =  51.68 t/s
+[40093] 6.16.051.894 I slot print_timing: id  0 | task 3645 | n_gen =   5806, tg =  52.12 t/s, tg_3s =  51.76 t/s
+[40093] 6.19.065.919 I slot print_timing: id  0 | task 3645 | n_gen =   5962, tg =  52.11 t/s, tg_3s =  51.76 t/s
+[40093] 6.20.429.431 I slot print_timing: id  0 | task 3645 | prompt eval time =   11162.96 ms /  6282 tokens (    1.78 ms per token,   562.75 tokens per second)
+[40093] 6.20.429.434 I slot print_timing: id  0 | task 3645 |        eval time =  115750.28 ms /  6032 tokens (   19.19 ms per token,    52.10 tokens per second)
+[40093] 6.20.429.434 I slot print_timing: id  0 | task 3645 |       total time =  126913.23 ms / 12314 tokens
+[40093] 6.20.429.435 I slot print_timing: id  0 | task 3645 |    graphs reused =       9618
+[40093] 6.20.429.550 I slot      release: id  0 | task 3645 | stop processing: n_tokens = 12313, truncated = 0
+6.22.497.067 I srv    operator(): operator(): cleaning up before exit...
+6.22.497.104 I srv    unload_all: stopping model instance name=qwen3.6-35b-a3b_ud-q6_k
+[40093] 6.20.520.162 I srv    operator(): exit command received, exiting...
+[40093] 6.20.520.206 I srv    operator(): operator(): cleaning up before exit...
+6.23.039.284 I srv           run: instance name=qwen3.6-35b-a3b_ud-q6_k exited with status 0

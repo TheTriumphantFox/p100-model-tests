@@ -1,0 +1,56 @@
+def is_nested(string):
+    '''
+    Create a function that takes a string as input which contains only square brackets.
+    The function should return True if and only if there is a valid subsequence of brackets 
+    where at least one bracket in the subsequence is nested.
+
+    is_nested('[[]]') ➞ True
+    is_nested('[]]]]]]][[[[[]') ➞ False
+    is_nested('[][]') ➞ False
+    is_nested('[]') ➞ False
+    is_nested('[[][]]') ➞ True
+    is_nested('[[]][[') ➞ True
+    '''
+    # We need to find if there exists a valid subsequence of brackets that has at least one nested bracket.
+    # A valid bracket sequence is one where every opening bracket has a matching closing bracket in the correct order.
+    # "Nested" means there is at least one pair of brackets inside another pair, e.g., [[]]
+    
+    # Approach: Use a stack to track the depth of nesting.
+    # We iterate through the string, and for each '[' we push to stack, for each ']' we pop if stack is non-empty.
+    # We track the maximum depth reached. If at any point we have a valid closing that reduces from a depth >= 2,
+    # or more precisely, if we ever have a depth of at least 2 at some point during processing, that means there's nesting.
+    # But we need a *valid* subsequence. So we need to find a subsequence that is valid and has nesting.
+    
+    # Actually, let's think differently. We want to know if there exists a subsequence of the string that forms a valid bracket sequence with at least one nested pair.
+    # A valid bracket sequence with nesting must have at least 4 brackets: [[]] is the minimal one.
+    
+    # Key insight: If we can find two opening brackets and two closing brackets in the right order such that they form a nested structure, we're good.
+    # More precisely, we need to find indices i < j < k < l such that string[i] = '[', string[j] = '[', string[k] = ']', string[l] = ']'
+    # This would form the subsequence [[]] which is valid and nested.
+    
+    # So the problem reduces to: does the string contain a subsequence of the form [[]]?
+    # That is, are there two '[' characters followed by two ']' characters, with the first '[' before the second '[', and the first ']' before the second ']', and the second '[' before the first ']'?
+    
+    # Let's find the first occurrence of '[', then after that, find another '[', then after that, find a ']', then after that, find another ']'.
+    
+    # Find first '['
+    first_open = string.find('[')
+    if first_open == -1:
+        return False
+    
+    # Find second '[' after first_open
+    second_open = string.find('[', first_open + 1)
+    if second_open == -1:
+        return False
+    
+    # Find first ']' after second_open
+    first_close = string.find(']', second_open + 1)
+    if first_close == -1:
+        return False
+    
+    # Find second ']' after first_close
+    second_close = string.find(']', first_close + 1)
+    if second_close == -1:
+        return False
+    
+    return True

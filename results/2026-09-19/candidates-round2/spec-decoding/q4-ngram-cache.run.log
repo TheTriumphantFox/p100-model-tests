@@ -1,0 +1,9 @@
+=== q4-ngram-cache  (spec=ngram-cache draft=)  ready in 7s
+0, 9298 MiB 1, 9761 MiB 
+  prompt 0:  10.71 tok/s  (200 tok, draft 35/4 accepted)
+  prompt 1:  11.78 tok/s  (200 tok, draft 8/0 accepted)
+  prompt 2:  12.26 tok/s  (200 tok, draft 1/0 accepted)
+  prompt 3:  12.26 tok/s  (200 tok, draft 1/0 accepted)
+  prompt 4:  12.20 tok/s  (200 tok, draft 2/0 accepted)
+  prompt 5:  12.20 tok/s  (200 tok, draft 2/0 accepted)
+  MEAN  11.90 tok/s  (min 10.71, max 12.26)

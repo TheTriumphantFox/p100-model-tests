@@ -1,0 +1,27 @@
+def sum_squares(lst):
+    """Calculate the sum of transformed list elements.
+
+    For each element in the list:
+    - If its index is a multiple of 3, square the element.
+    - If its index is a multiple of 4 but not a multiple of 3, cube the element.
+    - Otherwise, leave the element unchanged.
+
+    The function returns the sum of all resulting values.
+
+    Examples:
+    >>> sum_squares([1, 2, 3])
+    6
+    >>> sum_squares([])
+    0
+    >>> sum_squares([-1, -5, 2, -1, -5])
+    -126
+    """
+    total = 0
+    for i, val in enumerate(lst):
+        if i % 3 == 0:
+            total += val ** 2
+        elif i % 4 == 0:
+            total += val ** 3
+        else:
+            total += val
+    return total

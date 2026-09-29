@@ -1,0 +1,48 @@
+def match_parens(lst):
+    """
+    Determine if two strings of parentheses can be concatenated in some order
+    to form a balanced string.
+
+    Parameters
+    ----------
+    lst : list[str]
+        A list containing exactly two strings, each composed only of '(' and ')'.
+
+    Returns
+    -------
+    str
+        'Yes' if a balanced concatenation is possible, otherwise 'No'.
+    """
+    if len(lst) != 2:
+        raise ValueError("Input must contain exactly two strings")
+
+    def analyze(s):
+        """Return (total_balance, min_prefix_balance) for string s."""
+        bal = 0
+        min_bal = 0
+        for ch in s:
+            bal += 1 if ch == '(' else -1
+            if bal < min_bal:
+                min_bal = bal
+        return bal, min_bal
+
+    a, b = lst
+    bal_a, min_a = analyze(a)
+    bal_b, min_b = analyze(b)
+
+    def can_concat(first_bal, first_min, second_bal, second_min):
+        """Check if first+second is balanced."""
+        # Total balance must be zero
+        if first_bal + second_bal != 0:
+            return False
+        # Prefixes of first must be non‑negative
+        if first_min < 0:
+            return False
+        # Prefixes of second, offset by first's balance, must be non‑negative
+        if second_min + first_bal < 0:
+            return False
+        return True
+
+    if can_concat(bal_a, min_a, bal_b, min_b) or can_concat(bal_b, min_b, bal_a, min_a):
+        return 'Yes'
+    return 'No'

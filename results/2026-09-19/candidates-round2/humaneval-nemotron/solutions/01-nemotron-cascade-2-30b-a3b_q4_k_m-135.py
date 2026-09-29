@@ -1,0 +1,22 @@
+def can_arrange(arr):
+    """
+    Returns the largest index i (0‑based) such that arr[i] is not greater than
+    the element immediately preceding it (i.e., arr[i] <= arr[i-1]).
+    If the array is strictly increasing (no such element) the function returns -1.
+
+    The input array contains no duplicate values.
+
+    Examples
+    --------
+    >>> can_arrange([1, 2, 4, 3, 5])
+    3
+    >>> can_arrange([1, 2, 3])
+    -1
+    """
+    # Iterate through the array starting from the second element.
+    # Keep track of the last index where the condition holds.
+    last_index = -1
+    for i in range(1, len(arr)):
+        if arr[i] <= arr[i - 1]:
+            last_index = i
+    return last_index

@@ -1,0 +1,22 @@
+[09:17:43] ================ QUEUE-6D START ================
+[09:17:43] shims: 127.0.0.1:11500 127.0.0.1:11501
+[09:17:43] --- PHASE B: thinking-on MMLU-Pro (ctx 16384, num_predict 12288) ---
+[09:17:43] router stopped (was pid none); GPU now 37 MiB after 1x2s
+[09:17:45] router started from /home/hm/llama-cuda12 ctx=16384 (50631b3d2c56, pid 2783061)
+[09:17:45] ornith: MMLU-Pro THINKING-ON num_predict=12288
+[09:31:36] ornith: MMLU-think@12288 -> 81.43% parsed/attempt=65/70 tok=41180 tps=53.0 wall=13.8min (thinking-off tok=280, ratio=147.1x)
+[09:31:36] !!! WARN ornith: parsed 65/70 -- num_predict=12288 may be truncating the answer after the reasoning.
+[09:31:36] ornith: think DONE
+[09:31:38] router stopped (was pid 2783061); GPU now 37 MiB after 1x2s
+[09:31:40] router started from /home/hm/llama-cuda12 ctx=16384 (50631b3d2c56, pid 2808750)
+[09:31:40] nemotron: MMLU-Pro THINKING-ON num_predict=12288
+[09:47:38] nemotron: MMLU-think@12288 -> 71.43% parsed/attempt=60/70 tok=59583 tps=68.4 wall=16.0min (thinking-off tok=280, ratio=212.8x)
+[09:47:38] !!! WARN nemotron: parsed 60/70 -- num_predict=12288 may be truncating the answer after the reasoning.
+[09:47:38] nemotron: think DONE
+[09:47:40] router stopped (was pid 2808750); GPU now 37 MiB after 1x2s
+[09:47:43] router started from /home/hm/llama-cuda12-xing ctx=16384 (510016260020, pid 2838344)
+[09:47:43] xing: MMLU-Pro THINKING-ON num_predict=12288
+[10:03:00] xing: MMLU-think@12288 -> 66.67% parsed/attempt=10/15 tok=17833 tps=30.2 wall=12.3min (thinking-off tok=294, ratio=60.7x)
+[10:03:00] !!! RIG-FAIL xing: only 15 of 70 questions ran. This is a partial/interrupted run, not a result -- delete the directory and re-run.
+[10:03:00] !!! WARN xing: parsed 10/15 -- num_predict=12288 may be truncating the answer after the reasoning.
+[10:03:00] xing: think DONE

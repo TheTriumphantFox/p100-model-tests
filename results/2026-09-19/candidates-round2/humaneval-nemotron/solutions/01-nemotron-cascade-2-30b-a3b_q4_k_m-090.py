@@ -1,0 +1,26 @@
+def next_smallest(lst):
+    """
+    You are given a list of integers.
+    Write a function next_smallest() that returns the 2nd smallest element of the list.
+    Return None if there is no such element.
+    
+    next_smallest([1, 2, 3, 4, 5]) == 2
+    next_smallest([5, 1, 4, 3, 2]) == 2
+    next_smallest([]) == None
+    next_smallest([1, 1]) == None
+    """
+    # Remove duplicates to handle cases where the smallest element appears multiple times
+    unique_vals = set(lst)
+    
+    # If there are fewer than 2 distinct values, there is no second smallest
+    if len(unique_vals) < 2:
+        return None
+    
+    # Find the smallest value
+    smallest = min(unique_vals)
+    
+    # Remove the smallest value to find the next smallest
+    unique_vals.remove(smallest)
+    
+    # The new smallest is the second smallest in the original list
+    return min(unique_vals)

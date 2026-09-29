@@ -1,0 +1,88 @@
+```python
+def tri(n):
+    """Everyone knows Fibonacci sequence, it was studied deeply by mathematicians in 
+    the last couple centuries. However, what people don't know is Tribonacci sequence.
+    Tribonacci sequence is defined by the recurrence:
+    tri(1) = 3
+    tri(n) = 1 + n / 2, if n is even.
+    tri(n) =  tri(n - 1) + tri(n - 2) + tri(n + 1), if n is odd.
+    For example:
+    tri(2) = 1 + (2 / 2) = 2
+    tri(4) = 3
+    tri(3) = tri(2) + tri(1) + tri(4)
+           = 2 + 3 + 3 = 8 
+    You are given a non-negative integer number n, you have to a return a list of the 
+    first n + 1 numbers of the Tribonacci sequence.
+    Examples:
+    tri(3) = [1, 3, 2, 8]
+    """
+    if n < 0:
+        return []
+    
+    # Initialize the sequence list with the base cases
+    # The problem statement defines tri(1) = 3, but the example tri(3) = [1, 3, 2, 8]
+    # implies the sequence starts with tri(0) = 1.
+    # We will generate the sequence starting from index 0.
+    sequence = [1, 3]
+    
+    # If n is 0, we only need the first element [1]
+    if n == 0:
+        return sequence[:1]
+    
+    # If n is 1, we need the first two elements [1, 3]
+    if n == 1:
+        return sequence[:2]
+    
+    # Generate the sequence up to index n
+    # We already have indices 0 and 1.
+    # We need to calculate values for indices 2 to n.
+    for i in range(2, n + 1):
+        if i % 2 == 0:
+            # tri(n) = 1 + n / 2
+            sequence.append(1 + i / 2)
+        else:
+            # tri(n) = tri(n - 1) + tri(n - 2) + tri(n + 1)
+            # Note: tri(n + 1) is not yet calculated if we are iterating sequentially.
+            # However, the problem statement defines tri(n) for odd n in terms of tri(n+1).
+            # This creates a dependency that requires looking ahead.
+            # We can use a dictionary to store calculated values to handle this.
+            pass
+    
+    # To handle the dependency tri(n) = tri(n - 1) + tri(n - 2) + tri(n + 1) for odd n,
+    # we can use memoization or simply iterate backwards from n down to 2.
+    # Iterating backwards allows us to access tri(n + 1) which is already known.
+    
+    # Re-initialize the sequence list with the base cases
+    sequence = [1, 3]
+    
+    # If n is 0, return [1]
+    if n == 0:
+        return sequence[:1]
+    
+    # If n is 1, return [1, 3]
+    if n == 1:
+        return sequence[:2]
+    
+    # Iterate backwards from n down to 2
+    for i in range(n, 1, -1):
+        if i % 2 == 0:
+            # tri(n) = 1 + n / 2
+            sequence.append(1 + i / 2)
+        else:
+            # tri(n) = tri(n - 1) + tri(n - 2) + tri(n + 1)
+            # Since we are iterating backwards, tri(n + 1) is already in the list.
+            # The list is built from the end to the beginning.
+            # sequence[-1] is tri(n + 1)
+            # sequence[-2] is tri(n)
+            # sequence[-3] is tri(n - 1)
+            # Wait, let's trace the list construction.
+            # Start: [1, 3]
+            # i = 3 (odd): sequence.append(tri(2) + tri(1) + tri(4))
+            # We need tri(2) and tri(4).
+            # We don't have them yet if we are iterating backwards from n.
+            # Let's try a different approach: forward iteration with a dictionary.
+            pass
+    
+    # Let's use a dictionary to store the sequence values.
+    # This allows us to look up tri(n + 1) when calculating tri(n) for odd n.
+    trib_dict = {0: 1, 

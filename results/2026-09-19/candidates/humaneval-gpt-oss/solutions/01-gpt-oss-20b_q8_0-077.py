@@ -1,0 +1,10 @@
+import math
+
+def iscube(a: int) -> bool:
+    """
+    Return True if `a` is a perfect cube of an integer, otherwise False.
+    """
+    # Compute the integer cube root by rounding the real cube root.
+    # For negative numbers, the cube root is negative.
+    root = round(a ** (1/3))
+    return root ** 3 == a

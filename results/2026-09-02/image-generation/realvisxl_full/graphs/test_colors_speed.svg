@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="288" viewBox="0 0 1800 288">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="42.0" y="47.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="29px" fill="#111827" text-anchor="start" font-weight="bold">Test: colors — Generation Speed</text>
+<text x="42.0" y="78.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#4b5563" text-anchor="start" font-weight="normal">All image-generation models</text>
+<line x1="530.0" y1="113" x2="530.0" y2="183" stroke="#dbe3ec"/>
+<text x="530.0" y="211.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="14px" fill="#4b5563" text-anchor="middle" font-weight="normal">0</text>
+<line x1="750.0" y1="113" x2="750.0" y2="183" stroke="#dbe3ec"/>
+<text x="750.0" y="211.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="14px" fill="#4b5563" text-anchor="middle" font-weight="normal">1</text>
+<line x1="970.0" y1="113" x2="970.0" y2="183" stroke="#dbe3ec"/>
+<text x="970.0" y="211.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="14px" fill="#4b5563" text-anchor="middle" font-weight="normal">2</text>
+<line x1="1190.0" y1="113" x2="1190.0" y2="183" stroke="#dbe3ec"/>
+<text x="1190.0" y="211.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="14px" fill="#4b5563" text-anchor="middle" font-weight="normal">3</text>
+<line x1="1410.0" y1="113" x2="1410.0" y2="183" stroke="#dbe3ec"/>
+<text x="1410.0" y="211.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="14px" fill="#4b5563" text-anchor="middle" font-weight="normal">4</text>
+<line x1="1630.0" y1="113" x2="1630.0" y2="183" stroke="#dbe3ec"/>
+<text x="1630.0" y="211.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="14px" fill="#4b5563" text-anchor="middle" font-weight="normal">5</text>
+<text x="1080.0" y="259.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#374151" text-anchor="middle" font-weight="normal">Images per minute (higher is better)</text>
+<text x="510.0" y="161.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#1f2937" text-anchor="end" font-weight="normal">1. realvisxl full</text>
+<rect x="530" y="138" width="415.7" height="32" rx="4" fill="#e08214"><title>realvisxl_full: 1.889523</title></rect>
+<text x="955.7" y="161.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#1f2937" text-anchor="start" font-weight="normal">1.8895  (n=94)</text>
+<text x="42.0" y="230.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="13px" fill="#6b7280" text-anchor="start" font-weight="normal">Source: manifest.jsonl. Timing includes ComfyUI queue and generation.</text>
+</svg>

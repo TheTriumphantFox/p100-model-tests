@@ -1,0 +1,17 @@
+0.00.007.433 E ggml_cuda_init: failed to initialize CUDA: no CUDA-capable device is detected
+warning: no usable GPU found, --gpu-layers option will be ignored
+warning: one possible reason is that llama.cpp was compiled without GPU support
+warning: consult docs/build.md for compilation instructions
+0.00.008.551 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.008.769 W srv  llama_server: -----------------
+0.00.008.770 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.008.770 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.008.770 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.008.770 W srv  llama_server: -----------------
+0.00.010.005 I srv    load_model: loading model '/home/hm/llama-bench-models/qwen3.6-27b-abliterated_q5_k_m.gguf'
+1.47.290.786 I cmn          init: llama threadpool init, n_threads = 6
+1.48.552.868 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 512, kv_unified = 'false'
+1.48.557.804 W srv          init: chat template supports preserving reasoning, it is enabled by default (may use more tokens, disable via --no-reasoning-preserve)
+1.48.558.079 I srv  llama_server: model loaded
+1.48.558.083 I srv  llama_server: listening on http://127.0.0.1:8093
+1.51.092.637 I srv    operator(): operator(): cleaning up before exit...

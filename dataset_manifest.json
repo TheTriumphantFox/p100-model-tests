@@ -1,0 +1,74 @@
+{
+  "workspace": "/home/hm/Projects/Tests",
+  "downloaded_at": "2026-09-02",
+  "datasets": [
+    {
+      "name": "HumanEval",
+      "path": "datasets/humaneval",
+      "purpose": "code generation",
+      "split": "test",
+      "items": 164,
+      "license": "MIT",
+      "source": "https://huggingface.co/datasets/openai/openai_humaneval"
+    },
+    {
+      "name": "MBPP",
+      "path": "datasets/mbpp",
+      "purpose": "code generation",
+      "split": "test + validation",
+      "items": 590,
+      "license": "CC BY 4.0",
+      "source": "https://huggingface.co/datasets/google-research-datasets/mbpp"
+    },
+    {
+      "name": "MMLU-Pro",
+      "path": "datasets/mmlu_pro",
+      "purpose": "general reasoning",
+      "split": "test + validation",
+      "items": 12102,
+      "license": "MIT",
+      "source": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro"
+    },
+    {
+      "name": "GenEval",
+      "path": "tools/geneval",
+      "purpose": "text-to-image compositional generation",
+      "split": "official prompts",
+      "items": 553,
+      "license": "MIT repository release",
+      "source": "https://github.com/djghosh13/geneval"
+    },
+    {
+      "name": "T2I-CompBench",
+      "path": "tools/t2i_compbench",
+      "purpose": "text-to-image compositional generation",
+      "split": "validation",
+      "items": 2400,
+      "license": "MIT repository/data mirror",
+      "source": "https://github.com/Karine-Huang/T2I-CompBench"
+    },
+    {
+      "name": "AudioCaps",
+      "path": "datasets/audiocaps",
+      "purpose": "text-to-audio prompt/reference metadata",
+      "split": "test metadata",
+      "items": 4875,
+      "license": "MIT-tagged metadata; source media terms apply",
+      "source": "https://huggingface.co/datasets/d0rj/audiocaps"
+    },
+    {
+      "name": "Clotho",
+      "path": "datasets/clotho",
+      "purpose": "text-to-audio prompt/reference evaluation",
+      "split": "test audio",
+      "items": 1045,
+      "license": "See included upstream README and source terms",
+      "source": "https://huggingface.co/datasets/gijs/clotho"
+    }
+  ],
+  "notes": [
+    "Only test/validation material was downloaded; training splits were omitted.",
+    "Image/audio generation outputs and evaluator model weights are not part of these dataset sizes.",
+    "AudioCaps metadata does not include redistributable copies of the original YouTube clips."
+  ]
+}

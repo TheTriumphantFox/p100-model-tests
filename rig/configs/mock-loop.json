@@ -1,0 +1,1 @@
+{"name": "mock-loop", "planner": {"model": "mock-oracle", "persona": "planner-loop"}}

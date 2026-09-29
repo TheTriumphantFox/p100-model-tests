@@ -1,0 +1,50 @@
+========================================================================================
+  LOCAL OLLAMA LLM BENCHMARK
+  Ollama: shim-llamacpp | API: http://127.0.0.1:11500
+  Models: 1 | Tests: 4 | Iterations: 5 | Requests: 20
+  Context: 8192 | Thinking: off | Score: generation tok/s
+  Report: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/throughput/gemma4-e4b.json
+========================================================================================
+   1. gemma4-e4b-abliterated:q4_k_m (Q4_K_M, 6.3 GB)
+
+Every iteration unloads the previous model before starting, then keeps the current model warm across its tests.
+
+
+========================================================================
+MODEL 1/1: gemma4-e4b-abliterated:q4_k_m
+========================================================================
+  Iteration 1/5 (cold model load)
+     1/4 speed_brief              FAILED: HTTP 502 from /api/generate: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=gemma4-e4b-abliter
+     2/4 speed_medium             FAILED: HTTP 502 from /api/generate: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=gemma4-e4b-abliter
+     3/4 speed_long               FAILED: HTTP 502 from /api/generate: {"error": "router 500: {\"error\":{\"code\":500,\"message\":\"model name=gemma4-e4b-abliter
+     4/4 python_coding            FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+  Iteration 2/5 (cold model load)
+     1/4 speed_brief              FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+     2/4 speed_medium             FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+     3/4 speed_long               FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+     4/4 python_coding            FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+  Iteration 3/5 (cold model load)
+     1/4 speed_brief              FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+     2/4 speed_medium             FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+     3/4 speed_long               FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+     4/4 python_coding            FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+  Iteration 4/5 (cold model load)
+     1/4 speed_brief              FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+     2/4 speed_medium             FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+     3/4 speed_long               FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+     4/4 python_coding            FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+  Iteration 5/5 (cold model load)
+     1/4 speed_brief              FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+     2/4 speed_medium             FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+     3/4 speed_long               FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+     4/4 python_coding            FAILED: HTTP 502 from /api/generate: {"error": "router: URLError(ConnectionRefusedError(111, 'Connection refused'))"}
+
+========================================================================================
+  COMPLETE — ONE WORST RUN REMOVED PER MODEL/TEST
+========================================================================================
+
+  Overall ranking (retained speed-test generation throughput):
+  # 1 gemma4-e4b-abliterated:q4_k_m                                      0.00 tok/s | 0/16 retained successful
+
+  Raw runs: 20 | Retained: 16 | Removed: 4
+  JSON report: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/throughput/gemma4-e4b.json

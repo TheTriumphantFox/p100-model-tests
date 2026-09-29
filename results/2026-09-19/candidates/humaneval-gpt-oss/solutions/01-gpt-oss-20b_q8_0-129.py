@@ -1,0 +1,36 @@
+def minPath(grid, k):
+    """
+    Return the lexicographically smallest path of length k in the grid.
+    The path is represented by the list of values visited.
+    """
+    n = len(grid)
+    # Find the position of the smallest value (which is 1)
+    pos = None
+    for i in range(n):
+        for j in range(n):
+            if grid[i][j] == 1:
+                pos = (i, j)
+                break
+        if pos:
+            break
+
+    i, j = pos
+    # Directions: up, down, left, right
+    dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    # Find the minimal neighbor value
+    min_neighbor = None
+    for di, dj in dirs:
+        ni, nj = i + di, j + dj
+        if 0 <= ni < n and 0 <= nj < n:
+            val = grid[ni][nj]
+            if min_neighbor is None or val < min_neighbor:
+                min_neighbor = val
+
+    # Build the path
+    path = []
+    for step in range(k):
+        if step % 2 == 0:
+            path.append(1)
+        else:
+            path.append(min_neighbor)
+    return path

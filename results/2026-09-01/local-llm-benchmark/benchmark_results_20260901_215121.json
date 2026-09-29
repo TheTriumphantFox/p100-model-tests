@@ -1,0 +1,6482 @@
+[
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006711244583129883
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005923748016357422
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005889177322387695
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00613093376159668
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058820247650146484
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006097555160522461
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00629115104675293
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.008249282836914062
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006776571273803711
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005795955657958984
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00658416748046875
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006199836730957031
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006500959396362305
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0056231021881103516
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005643129348754883
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006227731704711914
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0053713321685791016
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005503416061401367
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005881786346435547
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005544185638427734
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005850076675415039
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005506753921508789
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006058692932128906
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005332231521606445
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006064653396606445
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005775928497314453
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006460905075073242
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0059070587158203125
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00605463981628418
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005903720855712891
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057947635650634766
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006120204925537109
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005672454833984375
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006035566329956055
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005380392074584961
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005732297897338867
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006558656692504883
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006268501281738281
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0056955814361572266
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006101369857788086
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.007573604583740234
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005928993225097656
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005870819091796875
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005789518356323242
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00623011589050293
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005909442901611328
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005727529525756836
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0055158138275146484
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0063207149505615234
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005698680877685547
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00576019287109375
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005849599838256836
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00587773323059082
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006140232086181641
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005800485610961914
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0056340694427490234
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005938529968261719
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006811380386352539
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005617618560791016
+  },
+  {
+    "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0059359073638916016
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006947755813598633
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057370662689208984
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005854129791259766
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005872249603271484
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005906820297241211
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0056149959564208984
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006032705307006836
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00574040412902832
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006028890609741211
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005997180938720703
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00583648681640625
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005768537521362305
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0062465667724609375
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005984306335449219
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006378650665283203
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006113767623901367
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006067752838134766
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005589962005615234
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006063938140869141
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057201385498046875
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0055468082427978516
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005791902542114258
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005667686462402344
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005991697311401367
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006694316864013672
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005914211273193359
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006151437759399414
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005784511566162109
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0061876773834228516
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005605936050415039
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00568842887878418
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005640506744384766
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006043434143066406
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006087541580200195
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005627870559692383
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005749940872192383
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006609439849853516
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00529932975769043
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006342649459838867
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060160160064697266
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00603795051574707
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005989789962768555
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006104946136474609
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005743741989135742
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006169795989990234
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006087303161621094
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005599498748779297
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0053882598876953125
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006727933883666992
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006374359130859375
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005941867828369141
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005819559097290039
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005946636199951172
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006012439727783203
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005715131759643555
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.007116556167602539
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005635499954223633
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006451845169067383
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005532503128051758
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006065845489501953
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0070972442626953125
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005781412124633789
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00618290901184082
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0064694881439208984
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0055921077728271484
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005491733551025391
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005358457565307617
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00591731071472168
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006047964096069336
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005983829498291016
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005769968032836914
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005739688873291016
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006720066070556641
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006253957748413086
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005948543548583984
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006039142608642578
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005736827850341797
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006217002868652344
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006040334701538086
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005773305892944336
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005810737609863281
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0055849552154541016
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.007244110107421875
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005980968475341797
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006243467330932617
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00656437873840332
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006318569183349609
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0059528350830078125
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0061702728271484375
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005986928939819336
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005931377410888672
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0054967403411865234
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005701541900634766
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006134033203125
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005959749221801758
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057048797607421875
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006613016128540039
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006243228912353516
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006139516830444336
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005569934844970703
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006014108657836914
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0059757232666015625
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005877017974853516
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006029844284057617
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005646467208862305
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00606083869934082
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006151676177978516
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006039142608642578
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00670313835144043
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006171226501464844
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005697488784790039
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005910634994506836
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005853891372680664
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0059032440185546875
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006102561950683594
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0055348873138427734
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006244659423828125
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057065486907958984
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058155059814453125
+  },
+  {
+    "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005953788757324219
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006619930267333984
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0062406063079833984
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005999326705932617
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005364179611206055
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005803823471069336
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0064046382904052734
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00601959228515625
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0062482357025146484
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060689449310302734
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00589299201965332
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005970954895019531
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058841705322265625
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006499528884887695
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006362199783325195
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0059888362884521484
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00587153434753418
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005738973617553711
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0059435367584228516
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005799531936645508
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005565166473388672
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058405399322509766
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0056705474853515625
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005853176116943359
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005997657775878906
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006433248519897461
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006478786468505859
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005995273590087891
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00586247444152832
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005999326705932617
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00561070442199707
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005921602249145508
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006171464920043945
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0059430599212646484
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005498170852661133
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005991458892822266
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005701541900634766
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006982564926147461
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005987882614135742
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006235837936401367
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006403446197509766
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006315708160400391
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005946636199951172
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005883455276489258
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00567173957824707
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005659341812133789
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005783796310424805
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005635738372802734
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005505084991455078
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006335258483886719
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005837917327880859
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006086826324462891
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0062563419342041016
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005509853363037109
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005991935729980469
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005921363830566406
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005839347839355469
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005644559860229492
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005658626556396484
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005682229995727539
+  },
+  {
+    "model": "fredrezones55/Qwopus3.5:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005738735198974609
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006412506103515625
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005970478057861328
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006307840347290039
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005564689636230469
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005797386169433594
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005887746810913086
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005793571472167969
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005820035934448242
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058896541595458984
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0061492919921875
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005473613739013672
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005950212478637695
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006689548492431641
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006217241287231445
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057218074798583984
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006117105484008789
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006155490875244141
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005776882171630859
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0053670406341552734
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005954265594482422
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005444765090942383
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060656070709228516
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0061533451080322266
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005939960479736328
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006590604782104492
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006452083587646484
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005880832672119141
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060882568359375
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006083011627197266
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006145000457763672
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005809783935546875
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00575566291809082
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057163238525390625
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0055119991302490234
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.007429838180541992
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005578041076660156
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00665736198425293
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005984306335449219
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006755828857421875
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006737947463989258
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006848812103271484
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005807638168334961
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005688190460205078
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057582855224609375
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005639076232910156
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00610041618347168
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00606989860534668
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006157398223876953
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0067484378814697266
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006348609924316406
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006270170211791992
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005933284759521484
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0061070919036865234
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005837917327880859
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005804538726806641
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006014585494995117
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005722761154174805
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005934000015258789
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005769252777099609
+  },
+  {
+    "model": "fredrezones55/Qwopus3.6:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005814075469970703
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006882429122924805
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005850076675415039
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00610661506652832
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005698680877685547
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058596134185791016
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006228446960449219
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005473613739013672
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00561070442199707
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005759716033935547
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005841732025146484
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006007671356201172
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0056819915771484375
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0066318511962890625
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006363391876220703
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006008625030517578
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005902528762817383
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0056056976318359375
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006521701812744141
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006007671356201172
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057070255279541016
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0055506229400634766
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00603938102722168
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005979776382446289
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0056569576263427734
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006719350814819336
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006219387054443359
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006120443344116211
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005974292755126953
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0055124759674072266
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00584864616394043
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005711793899536133
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005556583404541016
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057981014251708984
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006943464279174805
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005978584289550781
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005970954895019531
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006541728973388672
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00599980354309082
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006437063217163086
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006029605865478516
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005924701690673828
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0061092376708984375
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057942867279052734
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058290958404541016
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005758047103881836
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005587577819824219
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057408809661865234
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005500078201293945
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006368398666381836
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006322145462036133
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00609898567199707
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005957603454589844
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006152629852294922
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005786895751953125
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005930662155151367
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005705595016479492
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006006717681884766
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006064414978027344
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00600743293762207
+  },
+  {
+    "model": "qwen-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005947113037109375
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006764650344848633
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00606989860534668
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006211280822753906
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005959749221801758
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006001710891723633
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006117343902587891
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006246805191040039
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006242990493774414
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0054018497467041016
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060727596282958984
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005532503128051758
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0062580108642578125
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006797075271606445
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006300926208496094
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00612330436706543
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0061626434326171875
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006058692932128906
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005871772766113281
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005513668060302734
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006013393402099609
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005752086639404297
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005758762359619141
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00578761100769043
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005697011947631836
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006476879119873047
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00586390495300293
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006360530853271484
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006045103073120117
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00690913200378418
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060138702392578125
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005974531173706055
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058269500732421875
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00595855712890625
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0056650638580322266
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00559234619140625
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005681276321411133
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006410837173461914
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005829572677612305
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006414175033569336
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006026744842529297
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0066242218017578125
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005946159362792969
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00600743293762207
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005550861358642578
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058956146240234375
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005921125411987305
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005947113037109375
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005761384963989258
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006529569625854492
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006800413131713867
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006180763244628906
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006384134292602539
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006003618240356445
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00566554069519043
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006038665771484375
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006167888641357422
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00582122802734375
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005529165267944336
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060765743255615234
+  },
+  {
+    "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005612373352050781
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0067653656005859375
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00627589225769043
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006075143814086914
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006649017333984375
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006316423416137695
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005902290344238281
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005860805511474609
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005496501922607422
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057582855224609375
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006350517272949219
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005951404571533203
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00600433349609375
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006397247314453125
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006087541580200195
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006259441375732422
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005894899368286133
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00607609748840332
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005731821060180664
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005882978439331055
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005979061126708984
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006287097930908203
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005903005599975586
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005854606628417969
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058498382568359375
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006823539733886719
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006171703338623047
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005929470062255859
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00628972053527832
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0059282779693603516
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005367755889892578
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006104230880737305
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006038188934326172
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057830810546875
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005806684494018555
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005991458892822266
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005912065505981445
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00648808479309082
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006450653076171875
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006258964538574219
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00588536262512207
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005742549896240234
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006197214126586914
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005730867385864258
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00535273551940918
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005912065505981445
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005928516387939453
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005949735641479492
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005688667297363281
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006729602813720703
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005559444427490234
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005973100662231445
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005990266799926758
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060346126556396484
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006014585494995117
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00578761100769043
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006000041961669922
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00571894645690918
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0059664249420166016
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005892276763916016
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q5-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005743265151977539
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0067141056060791016
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006139993667602539
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006490468978881836
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005890607833862305
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006138801574707031
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006150960922241211
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005978107452392578
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00587916374206543
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00615692138671875
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006405830383300781
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00558018684387207
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005515575408935547
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0067310333251953125
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006122589111328125
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006173133850097656
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006165266036987305
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006256103515625
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057830810546875
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005987405776977539
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0056874752044677734
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006041288375854492
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006094694137573242
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006226539611816406
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005906105041503906
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006375789642333984
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005913734436035156
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006287813186645508
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005970478057861328
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005854606628417969
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006121397018432617
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.010346651077270508
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0063457489013671875
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006563901901245117
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00722050666809082
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006448030471801758
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006156206130981445
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006737947463989258
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0063855648040771484
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0064983367919921875
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005554914474487305
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006071805953979492
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005986928939819336
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0056781768798828125
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0062024593353271484
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058956146240234375
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006032705307006836
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006117343902587891
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006204366683959961
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0065958499908447266
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006058216094970703
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0063190460205078125
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006134510040283203
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0056383609771728516
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005773305892944336
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005989789962768555
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005658388137817383
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057604312896728516
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005635738372802734
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058634281158447266
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q6-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005989551544189453
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0066449642181396484
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00616765022277832
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057561397552490234
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005960226058959961
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060389041900634766
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006032705307006836
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005770444869995117
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00583195686340332
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060427188873291016
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005801200866699219
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006163120269775391
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005783557891845703
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00660252571105957
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006122589111328125
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006112575531005859
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006201982498168945
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005872964859008789
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006036281585693359
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005585193634033203
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005865812301635742
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005852699279785156
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006018638610839844
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058460235595703125
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060083866119384766
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00688934326171875
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006189584732055664
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006119966506958008
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0063893795013427734
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006387233734130859
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060062408447265625
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058286190032958984
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006202220916748047
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006005764007568359
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005981922149658203
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0059168338775634766
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005762815475463867
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006597995758056641
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006018877029418945
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006652355194091797
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006324291229248047
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005827903747558594
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005777120590209961
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006162166595458984
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060656070709228516
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006179094314575195
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005532264709472656
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006057024002075195
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005754232406616211
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0067980289459228516
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006409406661987305
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006224870681762695
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006682157516479492
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00603485107421875
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006013154983520508
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006066560745239258
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006235837936401367
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005715847015380859
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005984067916870117
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005590200424194336
+  },
+  {
+    "model": "qwen3.6-35b-a3b-q8-pi:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005992412567138672
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006918668746948242
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00651860237121582
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006142854690551758
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006156206130981445
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005676984786987305
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058405399322509766
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006006002426147461
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006604433059692383
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0054318904876708984
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006064653396606445
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057566165924072266
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005815029144287109
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0066030025482177734
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006071329116821289
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060808658599853516
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005848407745361328
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00593113899230957
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005878925323486328
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006354331970214844
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005937814712524414
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005967855453491211
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00606989860534668
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005484104156494141
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006175518035888672
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00646209716796875
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006136894226074219
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0056645870208740234
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00583958625793457
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005684614181518555
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060961246490478516
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00571751594543457
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0062808990478515625
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006009340286254883
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058972835540771484
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005971431732177734
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005841732025146484
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00679326057434082
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006500720977783203
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006468296051025391
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005530118942260742
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058040618896484375
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057373046875
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005895853042602539
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005913972854614258
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057277679443359375
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005892753601074219
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006039619445800781
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005750894546508789
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006915569305419922
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00624847412109375
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006360054016113281
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060312747955322266
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057125091552734375
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005863666534423828
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006150960922241211
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0059032440185546875
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005768299102783203
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005530595779418945
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005917787551879883
+  },
+  {
+    "model": "qwen3.6-35b-a3b:latest",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005767822265625
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006463766098022461
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006159782409667969
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006335020065307617
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00590205192565918
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005869626998901367
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006009101867675781
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005856513977050781
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005952596664428711
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005736351013183594
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005941152572631836
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058863162994384766
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006161928176879883
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00666046142578125
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006237030029296875
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057523250579833984
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006067991256713867
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0061452388763427734
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0054225921630859375
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006072282791137695
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005784034729003906
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005654573440551758
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00591731071472168
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005673408508300781
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005919933319091797
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006470680236816406
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006619453430175781
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006185293197631836
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058553218841552734
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0060651302337646484
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006062746047973633
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005873918533325195
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005543231964111328
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005496501922607422
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005803108215332031
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005976676940917969
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006384134292602539
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006641864776611328
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005879640579223633
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0063741207122802734
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005995035171508789
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005916595458984375
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0057790279388427734
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005925178527832031
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005784034729003906
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005817890167236328
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006024360656738281
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006114006042480469
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005918025970458984
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_brief",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00677037239074707
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_medium",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006088972091674805
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "speed_long",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006128787994384766
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "logic_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006104230880737305
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "math_reasoning",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005709409713745117
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "factual_knowledge",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0059697628021240234
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "python_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006089448928833008
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "html_coding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005774974822998047
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "creative_writing",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.0058209896087646484
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "summarization",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.00568699836730957
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "instruction_following",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.005712270736694336
+  },
+  {
+    "model": "qwen3.8:27b-q4_K_M",
+    "test_id": "context_understanding",
+    "success": false,
+    "error": "Error: unknown flag: --keep-alive",
+    "tokens_generated": 0,
+    "tok_per_sec": 0,
+    "response_time_sec": 0.006266117095947266
+  }
+]

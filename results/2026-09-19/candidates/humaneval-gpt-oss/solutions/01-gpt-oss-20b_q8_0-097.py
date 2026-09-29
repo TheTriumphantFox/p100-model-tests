@@ -1,0 +1,19 @@
+def multiply(a, b):
+    """Return the product of the unit digits of a and b.
+
+    The unit digit is the last decimal digit of the absolute value of the
+    number.  The function works for positive and negative integers.
+
+    Examples:
+    >>> multiply(148, 412)
+    16
+    >>> multiply(19, 28)
+    72
+    >>> multiply(2020, 1851)
+    0
+    >>> multiply(14, -15)
+    20
+    """
+    unit_a = abs(a) % 10
+    unit_b = abs(b) % 10
+    return unit_a * unit_b

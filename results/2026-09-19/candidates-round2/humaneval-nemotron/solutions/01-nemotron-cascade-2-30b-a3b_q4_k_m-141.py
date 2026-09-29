@@ -1,0 +1,31 @@
+def file_name_check(file_name):
+    """
+    Returns 'Yes' if the given file name is valid according to the specified rules,
+    otherwise returns 'No'.
+
+    Validity rules:
+    1. The file name must contain exactly one dot ('.').
+    2. The part before the dot must be non‑empty and start with a Latin letter (a‑z or A‑Z).
+    3. The part after the dot must be one of ['txt', 'exe', 'dll'].
+    4. The total number of digits (0‑9) in the entire file name must not exceed three.
+    """
+    # Rule 1: exactly one dot
+    if file_name.count('.') != 1:
+        return 'No'
+
+    name, ext = file_name.split('.', 1)
+
+    # Rule 2: name part non‑empty and starts with a Latin letter
+    if not name or not name[0].isalpha():
+        return 'No'
+
+    # Rule 3: extension must be one of the allowed values
+    if ext not in ('txt', 'exe', 'dll'):
+        return 'No'
+
+    # Rule 4: at most three digits in the whole string
+    digit_count = sum(ch.isdigit() for ch in file_name)
+    if digit_count > 3:
+        return 'No'
+
+    return 'Yes'

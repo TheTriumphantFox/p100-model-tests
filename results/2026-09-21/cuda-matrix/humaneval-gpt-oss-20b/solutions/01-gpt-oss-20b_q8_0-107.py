@@ -1,0 +1,26 @@
+def even_odd_palindrome(n: int) -> tuple[int, int]:
+    """
+    Count even and odd integer palindromes in the inclusive range [1, n].
+
+    Parameters
+    ----------
+    n : int
+        Upper bound of the range (1 <= n <= 10**3).
+
+    Returns
+    -------
+    tuple[int, int]
+        (number_of_even_palindromes, number_of_odd_palindromes)
+    """
+    even_count = 0
+    odd_count = 0
+
+    for num in range(1, n + 1):
+        s = str(num)
+        if s == s[::-1]:  # palindrome check
+            if num % 2 == 0:
+                even_count += 1
+            else:
+                odd_count += 1
+
+    return even_count, odd_count

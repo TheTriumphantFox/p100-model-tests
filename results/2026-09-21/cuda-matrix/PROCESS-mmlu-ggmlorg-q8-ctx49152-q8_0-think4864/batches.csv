@@ -1,0 +1,11 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+qwen3.8-27b-ggmlorg:q8_0,biology,1,1,1,1,10.872416141439166,118.23434521618913,15.94739060199936,113,,raw/01-qwen3.8-27b-ggmlorg_q8_0-01-biology.txt
+qwen3.8-27b-ggmlorg:q8_0,chemistry,2,1,1,1,10.897108209579228,128.73960437388928,11.944974582002033,101,,raw/01-qwen3.8-27b-ggmlorg_q8_0-02-chemistry.txt
+qwen3.8-27b-ggmlorg:q8_0,computer science,3,1,1,1,10.850907594232181,104.43046236587213,17.950855777977267,174,,raw/01-qwen3.8-27b-ggmlorg_q8_0-03-computer_science.txt
+qwen3.8-27b-ggmlorg:q8_0,economics,4,1,1,1,10.915444982240572,91.65478633091371,10.0681921299838,85,,raw/01-qwen3.8-27b-ggmlorg_q8_0-04-economics.txt
+qwen3.8-27b-ggmlorg:q8_0,engineering,5,0,1,0,10.6620182838927,133.72820931411312,459.8059383799846,4864,,raw/01-qwen3.8-27b-ggmlorg_q8_0-05-engineering.txt
+qwen3.8-27b-ggmlorg:q8_0,health,6,1,1,1,10.83020497333745,137.246217742702,23.155992636980955,222,,raw/01-qwen3.8-27b-ggmlorg_q8_0-06-health.txt
+qwen3.8-27b-ggmlorg:q8_0,history,7,1,1,1,10.897298229176794,139.46661091699158,11.856523810012732,89,,raw/01-qwen3.8-27b-ggmlorg_q8_0-07-history.txt
+qwen3.8-27b-ggmlorg:q8_0,law,8,0,1,0,10.650460263012329,130.8853349621286,462.050427663984,4864,,raw/01-qwen3.8-27b-ggmlorg_q8_0-08-law.txt
+qwen3.8-27b-ggmlorg:q8_0,math,9,1,1,1,10.890712715721355,88.9410596175986,12.180911060975632,107,,raw/01-qwen3.8-27b-ggmlorg_q8_0-09-math.txt
+qwen3.8-27b-ggmlorg:q8_0,physics,10,1,1,1,10.875865375776254,103.8498084725889,13.849607654992724,126,,raw/01-qwen3.8-27b-ggmlorg_q8_0-10-physics.txt

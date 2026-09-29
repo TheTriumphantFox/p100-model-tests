@@ -1,0 +1,18 @@
+def sort_array(arr):
+    """
+    Sort an array of integers according to the number of ones in their binary
+    representation (32‑bit two's complement for negatives).  For equal counts,
+    sort by the integer value in ascending order.
+
+    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]
+    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]
+    >>> sort_array([1, 0, 2, 3, 4]) == [0, 1, 2, 3, 4]
+    """
+    def bit_count(x: int) -> int:
+        # Count bits in 32‑bit two's complement representation
+        if x >= 0:
+            return bin(x).count("1")
+        # For negative numbers, mask to 32 bits
+        return bin(x & 0xFFFFFFFF).count("1")
+
+    return sorted(arr, key=lambda x: (bit_count(x), x))

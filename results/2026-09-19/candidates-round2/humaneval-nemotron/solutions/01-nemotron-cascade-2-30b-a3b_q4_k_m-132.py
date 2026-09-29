@@ -1,0 +1,18 @@
+def is_nested(string):
+    """
+    Returns True if the input string (containing only '[' and ']') has at least one
+    nested pair of brackets, otherwise returns False.
+
+    A nested pair exists when a '[' is opened, another '[' is opened before the
+    first one is closed, and the inner '[' is closed before the outer one.
+    """
+    depth = 0
+    for ch in string:
+        if ch == '[':
+            depth += 1
+            if depth >= 2:          # we have entered a nested level
+                return True
+        elif ch == ']':
+            if depth > 0:
+                depth -= 1
+    return False

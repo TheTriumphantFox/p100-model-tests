@@ -1,0 +1,11 @@
+```python
+def multiply(a, b):
+    """Return the product of the unit digits of a and b.
+
+    The unit digit is the last decimal digit of the absolute value of the
+    number.  Negative numbers are treated the same as positive ones.
+    """
+    unit_a = abs(a) % 10
+    unit_b = abs(b) % 10
+    return unit_a * unit_b
+```

@@ -1,0 +1,29 @@
+
+=== devstral-patched_q8_0 ===
+  simple      : parsed=True name=get_order_status (8.9s)
+  irrelevance : declined=True
+  chain       : parsed=True name=issue_refund (3.4s)
+  --> USABLE
+
+=== gpt-oss-20b_q8_0 ===
+  simple      : parsed=True name=get_order_status (8.2s)
+  irrelevance : declined=True
+  chain       : parsed=True name=issue_refund (1.6s)
+  --> USABLE
+
+=== g9v3-39a5b_q4_k_m ===
+  FAILED: HTTPError: HTTP Error 500: Internal Server Error
+
+=== qwen3.6-27b-abliterated_q5_k_m ===
+  simple      : parsed=True name=get_order_status (129.1s)
+  irrelevance : declined=True
+  chain       : parsed=True name=issue_refund (10.0s)
+  --> USABLE
+
+=== qwen3.8-27b-uncensored-hauhaucs_q6_k_p ===
+  simple      : parsed=True name=get_order_status (187.7s)
+  irrelevance : declined=True
+  chain       : parsed=True name=issue_refund (11.3s)
+  --> USABLE
+
+wrote /home/hm/Projects/Tests/2026-09-22/devstral-tau-scripted/probe_models.json

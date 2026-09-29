@@ -1,0 +1,494 @@
+#!/usr/bin/env python3
+"""Run a balanced MMLU-Pro benchmark against every local Ollama model."""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import datetime as dt
+import hashlib
+import html
+import json
+import math
+import os
+import random
+import re
+import statistics
+import sys
+import time
+from collections import defaultdict
+from pathlib import Path
+from typing import Any
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
+
+import pyarrow.parquet as pq
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+TESTS_ROOT = SCRIPT_DIR.parents[1]
+DEFAULT_DATASET = TESTS_ROOT / "datasets/mmlu_pro/data/test-00000-of-00001.parquet"
+DEFAULT_OUTPUT_ROOT = SCRIPT_DIR / "runs"
+DEFAULT_BASE_URL = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")
+LETTERS = "ABCDEFGHIJ"
+
+
+def iso_now() -> str:
+    return dt.datetime.now().astimezone().isoformat()
+
+
+def normalize_url(value: str) -> str:
+    value = value.strip() or "http://127.0.0.1:11434"
+    return (value if "://" in value else "http://" + value).rstrip("/")
+
+
+def request_json(base_url: str, path: str, payload: dict[str, Any] | None = None, timeout: float = 30) -> dict[str, Any]:
+    body = None if payload is None else json.dumps(payload).encode()
+    request = Request(
+        normalize_url(base_url) + path,
+        data=body,
+        headers={"Content-Type": "application/json"},
+        method="GET" if payload is None else "POST",
+    )
+    try:
+        with urlopen(request, timeout=timeout) as response:
+            raw = response.read()
+    except HTTPError as exc:
+        detail = exc.read().decode(errors="replace")[:500]
+        raise RuntimeError(f"Ollama HTTP {exc.code}: {detail}") from exc
+    except URLError as exc:
+        raise RuntimeError(f"Could not reach Ollama at {base_url}: {exc.reason}") from exc
+    try:
+        result = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(f"Ollama returned invalid JSON for {path}") from exc
+    if not isinstance(result, dict):
+        raise RuntimeError(f"Ollama returned a non-object for {path}")
+    return result
+
+
+def discover_models(base_url: str, timeout: float) -> list[dict[str, Any]]:
+    models = request_json(base_url, "/api/tags", timeout=timeout).get("models")
+    if not isinstance(models, list):
+        raise RuntimeError("Ollama /api/tags did not return a model list")
+    return [model for model in models if isinstance(model, dict) and model.get("name")]
+
+
+def unload_model(base_url: str, model: str) -> None:
+    try:
+        request_json(base_url, "/api/generate", {"model": model, "prompt": "", "keep_alive": 0}, timeout=120)
+    except Exception as exc:
+        print(f"warning: could not unload {model}: {exc}", file=sys.stderr)
+
+
+def model_metadata(model: dict[str, Any]) -> dict[str, Any]:
+    details = model.get("details") or {}
+    return {
+        "name": model.get("name", ""),
+        "digest": model.get("digest", ""),
+        "size_bytes": model.get("size", 0),
+        "parameter_size": details.get("parameter_size", ""),
+        "quantization": details.get("quantization_level", ""),
+        "family": details.get("family", ""),
+    }
+
+
+def select_questions(dataset: Path, per_category: int, seed: int) -> list[dict[str, Any]]:
+    if not dataset.is_file():
+        raise RuntimeError(f"MMLU-Pro dataset not found: {dataset}")
+    rows = pq.read_table(dataset).to_pylist()
+    by_category: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in rows:
+        by_category[str(row["category"])].append(row)
+    rng = random.Random(seed)
+    selected: list[dict[str, Any]] = []
+    for category in sorted(by_category):
+        available = sorted(by_category[category], key=lambda row: int(row["question_id"]))
+        if len(available) < per_category:
+            raise RuntimeError(f"Only {len(available)} questions available for {category}")
+        chosen = rng.sample(available, per_category)
+        selected.extend(sorted(chosen, key=lambda row: int(row["question_id"])))
+    return selected
+
+
+def make_prompt(category: str, questions: list[dict[str, Any]]) -> str:
+    parts = [
+        f"Answer these {len(questions)} independent MMLU-Pro multiple-choice questions in the category {category!r}.",
+        "Return only one answer per line in exactly this format: `1: A`. Do not explain.",
+        f"The only valid answer letters are {', '.join(LETTERS)}.",
+    ]
+    for number, question in enumerate(questions, 1):
+        parts.append(f"\nQuestion {number}:\n{question['question']}")
+        for index, option in enumerate(question["options"]):
+            parts.append(f"{LETTERS[index]}. {option}")
+    parts.append(f"\nReturn exactly {len(questions)} numbered answer lines and nothing else.")
+    return "\n".join(parts)
+
+
+def parse_answers(text: str, count: int) -> dict[int, str]:
+    answers: dict[int, str] = {}
+    patterns = (
+        r"(?im)^\s*(\d+)\s*[\).:\-]\s*(?:answer\s*(?:is|:)?\s*)?\(?([A-J])\)?\b",
+        r"(?im)^\s*(?:question\s*)?(\d+)\s*(?:answer\s*)?(?:is|:|=|-)+\s*\(?([A-J])\)?\b",
+    )
+    for pattern in patterns:
+        for number, letter in re.findall(pattern, text):
+            index = int(number)
+            if 1 <= index <= count:
+                answers[index] = letter.upper()
+    if len(answers) < count:
+        lines = [line.strip() for line in text.splitlines() if line.strip()]
+        standalone = []
+        for line in lines:
+            match = re.fullmatch(r"(?:[-*]\s*)?\(?([A-J])\)?[\s.]*", line, re.I)
+            if match:
+                standalone.append(match.group(1).upper())
+        if len(standalone) == count:
+            answers = {index: letter for index, letter in enumerate(standalone, 1)}
+    return answers
+
+
+def ns_seconds(value: Any) -> float | None:
+    try:
+        return float(value) / 1_000_000_000
+    except (TypeError, ValueError):
+        return None
+
+
+def safe_filename(value: str) -> str:
+    return re.sub(r"[^A-Za-z0-9._-]+", "_", value).strip("._")[:100] or "model"
+
+
+def chat_batch(base_url: str, model: str, prompt: str, args: argparse.Namespace) -> tuple[dict[str, Any], str, float]:
+    payload = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": "Follow the requested multiple-choice output format exactly."},
+            {"role": "user", "content": prompt},
+        ],
+        "stream": False,
+        "think": False,
+        "keep_alive": args.keep_alive,
+        "options": {
+            "num_ctx": args.num_ctx,
+            "num_predict": args.num_predict,
+            "temperature": 0,
+            "seed": args.seed,
+        },
+    }
+    started = time.monotonic()
+    response = request_json(base_url, "/api/chat", payload, timeout=args.api_timeout)
+    elapsed = time.monotonic() - started
+    message = response.get("message") or {}
+    return response, str(message.get("content") or response.get("response") or ""), elapsed
+
+
+class Progress:
+    def __init__(self, total: int) -> None:
+        self.total = total
+        self.done = 0
+        self.started = time.monotonic()
+        self.tty = sys.stdout.isatty()
+
+    def update(self, label: str) -> None:
+        self.done += 1
+        elapsed = time.monotonic() - self.started
+        eta = elapsed / self.done * (self.total - self.done) if self.done else 0
+        width = 30
+        filled = int(width * self.done / self.total)
+        if eta >= 3600:
+            eta_text = f"{int(eta // 3600)}h {int(eta % 3600 // 60):02d}m"
+        elif eta >= 60:
+            eta_text = f"{int(eta // 60)}m {int(eta % 60):02d}s"
+        else:
+            eta_text = f"{eta:.0f}s"
+        line = f"[{'#' * filled}{'-' * (width - filled)}] {self.done}/{self.total} ({100*self.done/self.total:5.1f}%) {label[:58]:58} ETA {eta_text}"
+        print(("\r" if self.tty else "") + line, end="" if self.tty else "\n", flush=True)
+        if self.tty and self.done == self.total:
+            print()
+
+
+def aggregate(models: list[dict[str, Any]], categories: list[str], results: list[dict[str, Any]], batches: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    output = []
+    for model in models:
+        name = model["name"]
+        records = [row for row in results if row["model"] == name]
+        model_batches = [row for row in batches if row["model"] == name]
+        category_scores = {}
+        for category in categories:
+            category_rows = [row for row in records if row["category"] == category]
+            category_scores[category] = 100 * sum(bool(row["correct"]) for row in category_rows) / len(category_rows) if category_rows else 0
+        valid_tps = [row["generation_tps"] for row in model_batches if row.get("generation_tps") is not None]
+        output.append({
+            **model,
+            "accuracy": 100 * sum(bool(row["correct"]) for row in records) / len(records) if records else 0,
+            "correct": sum(bool(row["correct"]) for row in records),
+            "total": len(records),
+            "parsed": sum(bool(row["predicted_answer"]) for row in records),
+            "category_scores": category_scores,
+            "generation_tps": statistics.mean(valid_tps) if valid_tps else None,
+            "wall_seconds": sum(float(row.get("wall_seconds") or 0) for row in model_batches),
+        })
+    return sorted(output, key=lambda row: (row["accuracy"], row.get("generation_tps") or 0), reverse=True)
+
+
+def write_csv(output: Path, results: list[dict[str, Any]], batches: list[dict[str, Any]], summaries: list[dict[str, Any]]) -> None:
+    fields = ["model", "category", "question_id", "expected_answer", "predicted_answer", "correct", "batch", "raw_output_file", "error"]
+    with (output / "results.csv").open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore")
+        writer.writeheader(); writer.writerows(results)
+    fields = ["model", "category", "batch", "correct", "total", "parsed", "generation_tps", "prompt_tps", "wall_seconds", "eval_count", "error", "raw_output_file"]
+    with (output / "batches.csv").open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore")
+        writer.writeheader(); writer.writerows(batches)
+    fields = ["rank", "model", "accuracy", "correct", "total", "parsed", "generation_tps", "wall_seconds"]
+    with (output / "model-summary.csv").open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore")
+        writer.writeheader()
+        for rank, summary in enumerate(summaries, 1):
+            writer.writerow({"rank": rank, **summary})
+
+
+def svg_base(width: int, height: int, title: str, subtitle: str) -> list[str]:
+    return [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
+        '<rect width="100%" height="100%" fill="#111718"/>',
+        '<style>text{font-family:DejaVu Sans,Arial,sans-serif}.title{fill:#f7f7f7;font-size:28px;font-weight:bold}.sub{fill:#9eafb0;font-size:14px}.label{fill:#e7eeee;font-size:16px}.value{fill:#fff;font-size:15px;font-weight:bold}</style>',
+        f'<text x="36" y="42" class="title">{html.escape(title)}</text>',
+        f'<text x="36" y="68" class="sub">{html.escape(subtitle)}</text>',
+    ]
+
+
+def write_accuracy_svg(path: Path, summaries: list[dict[str, Any]]) -> None:
+    width, left, top, row_h, bottom = 1500, 450, 95, 46, 65
+    height = top + max(1, len(summaries)) * row_h + bottom
+    plot = width - left - 75
+    question_count = summaries[0]["total"] if summaries else 0
+    svg = svg_base(width, height, "MMLU-Pro accuracy by model", f"Balanced {question_count}-question test subset | Higher is better")
+    for tick in (0, 20, 40, 60, 80, 100):
+        x = left + plot * tick / 100
+        svg += [f'<line x1="{x}" y1="80" x2="{x}" y2="{height-bottom}" stroke="#293536"/>', f'<text x="{x}" y="{height-25}" text-anchor="middle" class="sub">{tick}%</text>']
+    for index, row in enumerate(summaries):
+        y = top + index * row_h
+        bar = plot * row["accuracy"] / 100
+        svg += [
+            f'<text x="{left-14}" y="{y+21}" text-anchor="end" class="label">{html.escape(row["name"][:48])}</text>',
+            f'<rect x="{left}" y="{y+3}" width="{plot}" height="26" rx="4" fill="#1c2728"/>',
+            f'<rect x="{left}" y="{y+3}" width="{bar}" height="26" rx="4" fill="#52c1a2"/>',
+            f'<text x="{left+bar+10}" y="{y+22}" class="value">{row["accuracy"]:.1f}%</text>',
+        ]
+    svg.append("</svg>")
+    path.write_text("\n".join(svg) + "\n")
+
+
+def heat_color(score: float) -> str:
+    ratio = max(0, min(100, score)) / 100
+    if ratio < .5:
+        red, green, blue = 177, int(63 + ratio * 150), 73
+    else:
+        red, green, blue = int(177 - (ratio-.5)*220), int(138 + (ratio-.5)*90), int(73 + (ratio-.5)*90)
+    return f"#{red:02x}{green:02x}{blue:02x}"
+
+
+def write_heatmap(path: Path, summaries: list[dict[str, Any]], categories: list[str]) -> None:
+    left, top, cell_w, row_h = 400, 155, 105, 44
+    width = left + len(categories) * cell_w + 30
+    height = top + max(1, len(summaries)) * row_h + 60
+    per_category = summaries[0]["total"] // len(categories) if summaries and categories else 0
+    svg = svg_base(width, height, "MMLU-Pro category accuracy", f"{per_category} deterministically selected test questions per category")
+    for col, category in enumerate(categories):
+        x = left + col * cell_w + 45
+        svg.append(f'<text x="{x}" y="{top-18}" text-anchor="middle" class="sub" transform="rotate(-40 {x} {top-18})">{html.escape(category.title())}</text>')
+    for row_index, summary in enumerate(summaries):
+        y = top + row_index * row_h
+        svg.append(f'<text x="{left-12}" y="{y+27}" text-anchor="end" class="label">{html.escape(summary["name"][:42])}</text>')
+        for col, category in enumerate(categories):
+            score = summary["category_scores"].get(category, 0)
+            x = left + col * cell_w
+            svg += [f'<rect x="{x}" y="{y+3}" width="100" height="38" rx="3" fill="{heat_color(score)}"/>', f'<text x="{x+50}" y="{y+28}" text-anchor="middle" class="value">{score:.0f}%</text>']
+    svg.append("</svg>")
+    path.write_text("\n".join(svg) + "\n")
+
+
+def write_report(output: Path, metadata: dict[str, Any], results: list[dict[str, Any]], summaries: list[dict[str, Any]]) -> None:
+    rows = []
+    for rank, row in enumerate(summaries, 1):
+        tps = "--" if row["generation_tps"] is None else f'{row["generation_tps"]:.2f}'
+        rows.append(f'<tr><td>{rank}</td><td><code>{html.escape(row["name"])}</code></td><td><strong>{row["accuracy"]:.1f}%</strong></td><td>{row["correct"]}/{row["total"]}</td><td>{row["parsed"]}/{row["total"]}</td><td>{tps}</td></tr>')
+    state = "interrupted" if metadata.get("interrupted") else ("complete" if metadata.get("finished") else "in progress")
+    body = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><title>MMLU-Pro benchmark</title><style>
+body{{background:#111718;color:#e7eeee;font:16px system-ui,sans-serif;max-width:1800px;margin:2rem auto;padding:0 1rem}}h1,h2{{color:#fff}}.card{{background:#182122;border:1px solid #293536;border-radius:8px;padding:1rem;margin:1rem 0;overflow:auto}}img{{max-width:100%;height:auto}}table{{border-collapse:collapse;width:100%}}th,td{{border-bottom:1px solid #293536;padding:.55rem;text-align:left}}th,.note{{color:#9eafb0}}code{{color:#b9e5dc}}
+</style></head><body><h1>Local LLM MMLU-Pro benchmark</h1>
+<p class="note">Started: <code>{html.escape(str(metadata.get("started")))}</code> | State: <code>{state}</code> | Answers scored: <code>{len(results)}</code></p>
+<div class="card"><h2>Overall accuracy</h2><img src="overall-accuracy.svg"></div>
+<div class="card"><h2>Category comparison</h2><img src="category-heatmap.svg"></div>
+<div class="card"><h2>Ranking</h2><table><thead><tr><th>Rank</th><th>Model</th><th>Accuracy</th><th>Correct</th><th>Parsed</th><th>Generation tok/s</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
+<div class="card"><h2>Method</h2><p>Zero-shot direct-answer evaluation on a deterministic, balanced subset of the MMLU-Pro test split. {metadata["settings"]["per_category"]} questions are selected from each of {len(metadata["categories"])} categories ({metadata["settings"]["per_category"] * len(metadata["categories"])} total). Questions are sent in category batches. Temperature is 0, seed is {metadata["settings"]["seed"]}, thinking is disabled, and malformed or missing answers score as incorrect.</p><p class="note">This compact local comparison is not directly comparable to the official full 12,032-question, normally 5-shot CoT MMLU-Pro leaderboard.</p></div>
+</body></html>'''
+    (output / "report.html").write_text(body, encoding="utf-8")
+
+
+def save(output: Path, metadata: dict[str, Any], results: list[dict[str, Any]], batches: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    models = metadata["models"]
+    categories = metadata["categories"]
+    summaries = aggregate(models, categories, results, batches)
+    metadata["updated"] = iso_now()
+    payload = {"metadata": metadata, "results": results, "batches": batches, "model_summaries": summaries}
+    (output / "results.json").write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    write_csv(output, results, batches, summaries)
+    write_accuracy_svg(output / "overall-accuracy.svg", summaries)
+    write_heatmap(output / "category-heatmap.svg", summaries, categories)
+    write_report(output, metadata, results, summaries)
+    return summaries
+
+
+def run(args: argparse.Namespace) -> int:
+    base_url = normalize_url(args.base_url)
+    discovered = discover_models(base_url, args.api_timeout)
+    if args.model:
+        lookup = {model["name"]: model for model in discovered}
+        missing = [name for name in args.model if name not in lookup]
+        if missing:
+            raise RuntimeError("Requested model(s) not installed: " + ", ".join(missing))
+        discovered = [lookup[name] for name in args.model]
+    if args.exclude:
+        discovered = [model for model in discovered if not any(re.search(pattern, model["name"]) for pattern in args.exclude)]
+    if not discovered:
+        raise RuntimeError("No models selected")
+
+    dataset = Path(args.dataset).expanduser().resolve()
+    selected = select_questions(dataset, args.per_category, args.seed)
+    by_category: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for question in selected:
+        by_category[str(question["category"])].append(question)
+    categories = sorted(by_category)
+    output = Path(args.output).expanduser().resolve() if args.output else DEFAULT_OUTPUT_ROOT / dt.datetime.now().astimezone().strftime("%Y-%m-%d_%H-%M-%S")
+    if output.exists() and any(output.iterdir()):
+        raise RuntimeError(f"Output directory is not empty: {output}")
+    raw_dir = output / "raw"
+    raw_dir.mkdir(parents=True)
+
+    metadata = {
+        "started": iso_now(), "interrupted": False, "backend": "Ollama /api/chat",
+        "dataset": str(dataset), "dataset_sha256": hashlib.sha256(dataset.read_bytes()).hexdigest(),
+        "method": "balanced deterministic zero-shot direct-answer subset",
+        "settings": {"per_category": args.per_category, "seed": args.seed, "num_ctx": args.num_ctx, "num_predict": args.num_predict, "temperature": 0, "thinking": False},
+        "categories": categories,
+        "question_ids": {category: [int(row["question_id"]) for row in by_category[category]] for category in categories},
+        "models": [model_metadata(model) for model in discovered],
+    }
+    results: list[dict[str, Any]] = []
+    batches: list[dict[str, Any]] = []
+    total_batches = len(discovered) * len(categories)
+    progress = Progress(total_batches)
+    print(f"MMLU-Pro: {len(discovered)} model(s), {len(categories)} categories, {len(selected)} questions/model.")
+    print(f"Planned batches: {total_batches}; scored answers: {len(discovered) * len(selected)}.")
+    print(f"Results: {output}")
+
+    try:
+        for model_index, model in enumerate(discovered, 1):
+            name = model["name"]
+            print(f"\nModel {model_index}/{len(discovered)}: {name}")
+            try:
+                for batch_index, category in enumerate(categories, 1):
+                    questions = by_category[category]
+                    prompt = make_prompt(category, questions)
+                    raw_name = f"{model_index:02d}-{safe_filename(name)}-{batch_index:02d}-{safe_filename(category)}.txt"
+                    raw_path = raw_dir / raw_name
+                    error = ""
+                    response: dict[str, Any] = {}
+                    text = ""
+                    elapsed: float | None = None
+                    try:
+                        response, text, elapsed = chat_batch(base_url, name, prompt, args)
+                        raw_path.write_text(text, encoding="utf-8")
+                        parsed = parse_answers(text, len(questions))
+                    except Exception as exc:
+                        error = f"{type(exc).__name__}: {exc}"
+                        raw_path.write_text("BENCHMARK ERROR\n" + error + "\n", encoding="utf-8")
+                        parsed = {}
+                    correct_count = 0
+                    for number, question in enumerate(questions, 1):
+                        expected = str(question["answer"]).upper()
+                        predicted = parsed.get(number, "")
+                        correct = predicted == expected
+                        correct_count += int(correct)
+                        results.append({
+                            "model": name, "category": category, "question_id": int(question["question_id"]),
+                            "expected_answer": expected, "predicted_answer": predicted, "correct": correct,
+                            "batch": batch_index, "raw_output_file": str(raw_path.relative_to(output)), "error": error,
+                        })
+                    eval_seconds = ns_seconds(response.get("eval_duration"))
+                    prompt_seconds = ns_seconds(response.get("prompt_eval_duration"))
+                    eval_count = response.get("eval_count")
+                    prompt_count = response.get("prompt_eval_count")
+                    batches.append({
+                        "model": name, "category": category, "batch": batch_index,
+                        "correct": correct_count, "total": len(questions), "parsed": len(parsed),
+                        "generation_tps": float(eval_count) / eval_seconds if eval_count is not None and eval_seconds else None,
+                        "prompt_tps": float(prompt_count) / prompt_seconds if prompt_count is not None and prompt_seconds else None,
+                        "wall_seconds": elapsed, "eval_count": eval_count, "error": error,
+                        "raw_output_file": str(raw_path.relative_to(output)),
+                    })
+                    progress.update(f"{name} / {category}")
+                    save(output, metadata, results, batches)
+            finally:
+                unload_model(base_url, name)
+    except KeyboardInterrupt:
+        metadata["interrupted"] = True
+        print("\nInterrupted; partial results were saved.", file=sys.stderr)
+    finally:
+        metadata["finished"] = iso_now()
+        summaries = save(output, metadata, results, batches)
+
+    print(f"\nFinished {len(batches)}/{total_batches} batches and scored {len(results)} answers.")
+    print(f"HTML report: {output / 'report.html'}")
+    if summaries:
+        print(f"Leader: {summaries[0]['name']} ({summaries[0]['accuracy']:.1f}%)")
+    return 0
+
+
+def report(args: argparse.Namespace) -> int:
+    path = Path(args.results_json).expanduser().resolve()
+    payload = json.loads(path.read_text())
+    output = Path(args.output).expanduser().resolve() if args.output else path.parent
+    summaries = save(output, payload["metadata"], payload["results"], payload["batches"])
+    print(f"Report: {output / 'report.html'} ({len(summaries)} models)")
+    return 0
+
+
+def parser() -> argparse.ArgumentParser:
+    root = argparse.ArgumentParser(description=__doc__)
+    sub = root.add_subparsers(dest="command", required=True)
+    run_parser = sub.add_parser("run")
+    run_parser.add_argument("--base-url", default=DEFAULT_BASE_URL)
+    run_parser.add_argument("--dataset", default=str(DEFAULT_DATASET))
+    run_parser.add_argument("--model", action="append")
+    run_parser.add_argument("--exclude", action="append")
+    run_parser.add_argument("--per-category", type=int, default=5)
+    run_parser.add_argument("--seed", type=int, default=42)
+    run_parser.add_argument("--num-ctx", type=int, default=32768)
+    run_parser.add_argument("--num-predict", type=int, default=96)
+    run_parser.add_argument("--keep-alive", default="10m")
+    run_parser.add_argument("--api-timeout", type=float, default=900)
+    run_parser.add_argument("--output")
+    report_parser = sub.add_parser("report")
+    report_parser.add_argument("results_json")
+    report_parser.add_argument("--output")
+    return root
+
+
+def main() -> int:
+    args = parser().parse_args()
+    if args.command == "run":
+        if args.per_category < 1 or args.num_ctx < 1 or args.num_predict < 1 or args.api_timeout <= 0:
+            raise RuntimeError("numeric options must be positive")
+        return run(args)
+    return report(args)
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except (RuntimeError, OSError, json.JSONDecodeError) as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        raise SystemExit(1)

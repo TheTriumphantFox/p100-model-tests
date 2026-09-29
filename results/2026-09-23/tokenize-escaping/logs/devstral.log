@@ -1,0 +1,17 @@
+0.00.008.063 E ggml_cuda_init: failed to initialize CUDA: no CUDA-capable device is detected
+warning: no usable GPU found, --gpu-layers option will be ignored
+warning: one possible reason is that llama.cpp was compiled without GPU support
+warning: consult docs/build.md for compilation instructions
+0.00.009.250 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.009.486 W srv  llama_server: -----------------
+0.00.009.487 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.009.487 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.009.487 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.009.487 W srv  llama_server: -----------------
+0.00.010.738 I srv    load_model: loading model '/home/hm/llama-bench-models/devstral-patched_q8_0.gguf'
+1.44.975.156 W llama_context: setting new yarn_attn_factor = 1.0000 (mscale == 1.0, mscale_all_dim = 1.0)
+1.44.981.844 I cmn          init: llama threadpool init, n_threads = 6
+1.45.559.638 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 512, kv_unified = 'false'
+1.45.561.203 I srv  llama_server: model loaded
+1.45.561.208 I srv  llama_server: listening on http://127.0.0.1:8093
+1.46.834.309 I srv    operator(): operator(): cleaning up before exit...

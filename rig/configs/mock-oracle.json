@@ -1,0 +1,2 @@
+{"name": "mock-oracle", "planner": {"model": "mock-oracle", "persona": "planner-v8"},
+ "reviewer": {"model": "mock-oracle", "persona": "reviewer-strict"}, "reporter": {"model": "mock-oracle", "persona": "reporter-plain"}}

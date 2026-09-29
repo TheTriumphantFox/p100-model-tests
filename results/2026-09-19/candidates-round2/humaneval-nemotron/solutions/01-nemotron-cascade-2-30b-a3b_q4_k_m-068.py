@@ -1,0 +1,40 @@
+def pluck(arr):
+    """
+    Given an array representing a branch of a tree that has non-negative integer nodes,
+    pluck one of the nodes and return it.
+    The plucked node should be the node with the smallest even value.
+    If multiple nodes with the same smallest even value are found return the node that has smallest index.
+
+    The plucked node should be returned in a list, [ smallest_value, its index ],
+    If there are no even values or the given array is empty, return [].
+
+    Examples
+    --------
+    >>> pluck([4, 2, 3])
+    [2, 1]
+    >>> pluck([1, 2, 3])
+    [2, 1]
+    >>> pluck([])
+    []
+    >>> pluck([5, 0, 3, 0, 4, 2])
+    [0, 1]
+    """
+    # Initialize placeholders for the best even value and its index.
+    best_val = None
+    best_idx = -1
+
+    for idx, val in enumerate(arr):
+        # Consider only even numbers.
+        if val % 2 == 0:
+            # If we haven't found any even number yet, or we found a smaller even value,
+            # or the same even value but at a smaller index, update the best.
+            if best_val is None or val < best_val or (val == best_val and idx < best_idx):
+                best_val = val
+                best_idx = idx
+
+    # If no even number was found, return an empty list.
+    if best_val is None:
+        return []
+
+    # Return the smallest even value and its index.
+    return [best_val, best_idx]

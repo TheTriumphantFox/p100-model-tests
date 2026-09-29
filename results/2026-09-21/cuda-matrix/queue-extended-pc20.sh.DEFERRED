@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+# PHASE A of the 2026-09-21 CUDA matrix: the cheap columns, across every row of the
+# brief's table, plus the incumbent as an in-set baseline.
+#
+#   filled here:  MMLU-Pro thinking-OFF (--per-category 20), and throughput for the
+#                 rows that have never had it measured on CUDA
+#   deferred:     HumanEval (~70 min per dense model)  -> queue-B.sh
+#                 MMLU thinking-ON (~4.5 h per dense)  -> queue-C.sh
+#   not here:     devstral-patched -- it is the PRODUCTION model on :8080 and the bench
+#                 router would fight the production router for VRAM if pi sent a request
+#                 mid-run. Scheduled separately once the owner says production is idle.
+#
+# WHY --per-category 20 IS NOT JUST A BIGGER SAMPLE, and what was done about it:
+#   The harness sent one request per category, so --per-category WAS the batch size.
+#   At 20 the model is asked for 20 answers in one response -- which at num_predict 96
+#   does not even fit (20 answer lines is ~100 tokens), and in thinking mode would have
+#   to reason about 20 questions inside one budget. benchmark.py gained --batch-size;
+#   every run here uses --batch-size 5, so each REQUEST is identical in shape to every
+#   round-2 request and only the number of them goes up (14 -> 56).
+#
+# WHY THE INCUMBENT IS RE-RUN: the @20 question set overlaps the old @5 set by only
+#   9 of 70 questions -- random.Random(seed).sample(rows, k) is not nested across k.
+#   So no @20 number can be paired against any round-2 number, and the @20 set needs its
+#   own baseline or it can be compared to nothing. mcnemar.py refuses mismatched sets
+#   rather than silently scoring over the 9-question intersection.
+set -uo pipefail
+HERE=$(cd "$(dirname "$0")" && pwd)
+source "$HERE/lib.sh"
+
+PC=20
+export BATCH=5
+
+# runtime | router-id | ollama tag | slug | what
+QUEUE=(
+  "$HOME/llama-cuda12|qwen3.6-27b-abliterated_q5_k_m|qwen3.6-27b-abliterated:q5_k_m|incumbent|mmlu96,mmlu2048"
+  "$HOME/llama-cuda12|qwen3.8-27b-ggmlorg_q8_0|qwen3.8-27b-ggmlorg:q8_0|ggmlorg-q8|mmlu96,mmlu2048"
+  "$HOME/llama-cuda12|qwen3.8-27b-unsloth_q8_0|qwen3.8-27b-unsloth:q8_0|unsloth-q8|mmlu96,mmlu2048"
+  "$HOME/llama-cuda12|gemma4-e4b-abliterated_q4_k_m|gemma4-e4b-abliterated:q4_k_m|gemma4-e4b|mmlu96,mmlu2048,throughput"
+  "$HOME/llama-cuda12|gpt-oss-20b_q8_0|gpt-oss-20b:q8_0|gpt-oss-20b|mmlu96,mmlu2048,throughput"
+  "$HOME/llama-cuda12|qwen3.6-35b-a3b-abliterated-vl_q4_k_m|qwen3.6-35b-a3b-abliterated-vl:q4_k_m|qwen36-vl|mmlu96,mmlu2048,throughput"
+  "$HOME/llama-cuda12|qwen3.6-27b-opus-distill_q4_k_m|qwen3.6-27b-opus-distill:q4_k_m|opus-distill|mmlu96,mmlu2048,throughput"
+  "$HOME/llama-cuda12|qwen3.8-27b-uncensored-hauhaucs_q6_k_p|qwen3.8-27b-uncensored-hauhaucs:q6_k_p|uncensored-q6kp|mmlu96,mmlu2048"
+  "$HOME/llama-cuda12|qwen3.8-27b-stock_q4_k_m|qwen3.8-27b-stock:q4_k_m|qwen38-stock|mmlu96,mmlu2048"
+  "$HOME/llama-cuda12|ornith-1.5-35b-a3b_q4_k_m|ornith-1.5-35b-a3b:q4_k_m|ornith|mmlu96,mmlu2048"
+  "$HOME/llama-cuda12-g9v3|g9v3-39a5b_q4_k_m|g9v3-39a5b:q4_k_m|g9v3|mmlu96,mmlu2048"
+)
+
+log "================ QUEUE-A START (pc=$PC batch=$BATCH) ================"
+log "prod router :$PROD_PORT pid=$PROD_PID -- asserted unchanged after every stop_router"
+
+for row in "${QUEUE[@]}"; do
+  IFS='|' read -r RT RID TAG SLUG WHAT <<<"$row"
+  log "--- PHASE A: $SLUG ($WHAT) ---"
+  if [ ! -x "$RT/bin/llama-server" ]; then
+    log "!!! SKIPPED $SLUG: no runtime at $RT"; continue
+  fi
+  if ! fresh_router "$RT" "$RID" 8192; then
+    log "!!! SKIPPED $SLUG: router preflight failed"; continue
+  fi
+  if ! assert_shim_tag "$TAG" 11500; then
+    log "!!! SKIPPED $SLUG: shim does not advertise '$TAG'"; continue
+  fi
+  "$HERE/bench_off.sh" "$TAG" "$SLUG" "$PC" "$WHAT"
+done
+
+stop_router
+start_router "$HOME/llama-cuda12" 8192
+log "================ QUEUE-A DONE ================"
+"$HOME/Projects/Tests/.venv/bin/python" "$HERE/summarise.py" "$PC" 2>&1 | tee -a "$RUN/driver.log"

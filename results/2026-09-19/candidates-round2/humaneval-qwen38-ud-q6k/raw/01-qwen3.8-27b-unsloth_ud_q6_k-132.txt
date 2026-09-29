@@ -1,0 +1,96 @@
+```python
+def is_nested(string):
+    '''
+    Create a function that takes a string as input which contains only square brackets.
+    The function should return True if and only if there is a valid subsequence of brackets 
+    where at least one bracket in the subsequence is nested.
+
+    is_nested('[[]]') ➞ True
+    is_nested('[]]]]]]][[[[[]') ➞ False
+    is_nested('[][]') ➞ False
+    is_nested('[]') ➞ False
+    is_nested('[[][]]') ➞ True
+    is_nested('[[]][[') ➞ True
+    '''
+    # We need to check if there exists a valid subsequence of brackets
+    # where at least one bracket is nested (i.e., depth >= 2 at some point)
+    
+    # A valid subsequence means we can pick a subsequence of the string that forms
+    # a properly nested bracket sequence.
+    
+    # Key insight: We can greedily check if we can form a nested structure.
+    # We track the depth. If we ever reach depth >= 2 while maintaining a valid
+    # prefix (i.e., we can close all opened brackets), then we have nesting.
+    
+    # Actually, let's think more carefully. We need a subsequence that is a valid
+    # bracket sequence AND has at least one nested bracket (depth >= 2).
+    
+    # We can use a greedy approach:
+    # - We want to find if there's a subsequence that is valid and has depth >= 2.
+    # - We can try to build such a subsequence.
+    
+    # Let's use a different approach:
+    # We scan the string and maintain a stack-like depth.
+    # We want to see if we can form a valid sequence with depth >= 2.
+    
+    # Greedy: 
+    # - We'll try to form the "deepest" valid subsequence we can.
+    # - Actually, we just need to check if there exists any valid subsequence with depth >= 2.
+    
+    # Let's think about it this way:
+    # A valid bracket subsequence with depth >= 2 must contain at least one '[' that has
+    # another '[' inside it before being closed.
+    
+    # We can use a greedy matching approach:
+    # - We want to find if we can match brackets such that at some point we have depth >= 2.
+    
+    # Let's try: 
+    # depth = 0
+    # max_depth = 0
+    # We process each character:
+    # - If it's '[', we can choose to include it, increasing depth.
+    # - If it's ']', we can choose to include it if depth > 0, decreasing depth.
+    # 
+    # But we need the final depth to be 0 (valid sequence).
+    
+    # This is getting complex. Let me think of a simpler characterization.
+    
+    # Observation: A valid subsequence with nesting exists if and only if:
+    # There exist indices i < j < k < l such that string[i] = '[', string[j] = '[', 
+    # string[k] = ']', string[l] = ']', and the subsequence string[i], string[j], string[k], string[l]
+    # is valid (which it is: [[ ] ] is valid).
+    
+    # Wait, that's not quite right. The subsequence just needs to be valid, not necessarily
+    # just those 4 characters. But if we can find such a pattern, we're done.
+    
+    # Actually, the simplest valid nested sequence is "[[]]" which has depth 2.
+    # So we need to check if we can find a subsequence that contains "[[]]" as a subsequence
+    # (not necessarily contiguous).
+    
+    # To check if "[[]]" is a subsequence of the string:
+    # We need to find indices i < j < k < l such that:
+    # string[i] = '[', string[j] = '[', string[k] = ']', string[l] = ']'
+    
+    # Let's implement this check.
+    
+    # Find first '['
+    # Then find '[' after that
+    # Then find ']' after that
+    # Then find ']' after that
+    
+    n = len(string)
+    if n < 4:
+        return False
+    
+    # Find the first '['
+    i = -1
+    for idx in range(n):
+        if string[idx] == '[':
+            i = idx
+            break
+    if i == -1:
+        return False
+    
+    # Find the second '[' after i
+    j = -1
+    for idx in range(i

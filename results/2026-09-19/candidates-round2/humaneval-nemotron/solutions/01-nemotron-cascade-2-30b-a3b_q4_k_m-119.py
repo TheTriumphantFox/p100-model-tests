@@ -1,0 +1,16 @@
+def match_parens(lst):
+    s1, s2 = lst
+    def is_good(s):
+        bal = 0
+        for ch in s:
+            if ch == '(':
+                bal += 1
+            else:
+                bal -= 1
+            if bal < 0:
+                return False
+        return bal == 0
+
+    if is_good(s1 + s2) or is_good(s2 + s1):
+        return 'Yes'
+    return 'No'

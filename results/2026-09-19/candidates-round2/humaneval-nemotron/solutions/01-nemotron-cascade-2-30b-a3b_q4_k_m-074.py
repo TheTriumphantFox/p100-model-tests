@@ -1,0 +1,19 @@
+def total_match(lst1, lst2):
+    """
+    Returns the list (from the two input lists) whose strings have the smaller total
+    number of characters. If both totals are equal, the first list is returned.
+
+    Parameters
+    ----------
+    lst1 : list of str
+    lst2 : list of str
+
+    Returns
+    -------
+    list of str
+        The list with the smaller total character count, or lst1 if the totals are equal.
+    """
+    total1 = sum(len(s) for s in lst1)
+    total2 = sum(len(s) for s in lst2)
+
+    return lst1 if total1 <= total2 else lst2

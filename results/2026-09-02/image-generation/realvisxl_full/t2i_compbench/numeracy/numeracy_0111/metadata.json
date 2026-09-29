@@ -1,0 +1,7 @@
+{
+  "dataset": "t2i_compbench",
+  "category": "numeracy",
+  "prompt_id": "numeracy_0111",
+  "index": 111,
+  "prompt": "two boats and four cakes"
+}

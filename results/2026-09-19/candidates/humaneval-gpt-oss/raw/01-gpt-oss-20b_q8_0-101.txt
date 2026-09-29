@@ -1,0 +1,26 @@
+```python
+def words_string(s: str) -> list[str]:
+    """
+    Split a string of words separated by commas or spaces into a list of words.
+
+    Parameters
+    ----------
+    s : str
+        Input string containing words separated by commas or spaces.
+
+    Returns
+    -------
+    list[str]
+        List of words in the order they appear in the input string.
+
+    Examples
+    --------
+    >>> words_string("Hi, my name is John")
+    ['Hi', 'my', 'name', 'is', 'John']
+    >>> words_string("One, two, three, four, five, six")
+    ['One', 'two', 'three', 'four', 'five', 'six']
+    """
+    # Replace commas with spaces, then split on whitespace.
+    # This handles multiple spaces or commas and ignores empty tokens.
+    return [word for word in s.replace(",", " ").split() if word]
+```

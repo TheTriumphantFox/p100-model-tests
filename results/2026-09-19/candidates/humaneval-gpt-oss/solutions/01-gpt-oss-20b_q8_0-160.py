@@ -1,0 +1,46 @@
+def do_algebra(operator, operand):
+    """
+    Evaluate an arithmetic expression defined by two lists:
+    * `operator`: a list of operators (strings) of length n-1
+    * `operand`: a list of non‑negative integers of length n
+
+    The expression is evaluated using normal Python arithmetic
+    precedence rules (exponentiation, multiplication/division,
+    addition/subtraction).  The result is returned as an integer.
+
+    Parameters
+    ----------
+    operator : list[str]
+        List of operators. Each element must be one of
+        '+', '-', '*', '//', '**'.
+    operand : list[int]
+        List of non‑negative integers.
+
+    Returns
+    -------
+    int
+        The result of evaluating the expression.
+
+    Examples
+    --------
+    >>> do_algebra(['+', '*', '-'], [2, 3, 4, 5])
+    9
+    """
+    if not operator or not operand:
+        raise ValueError("Both operator and operand lists must be non‑empty")
+
+    if len(operator) != len(operand) - 1:
+        raise ValueError("operator list must be one element shorter than operand list")
+
+    # Build a string representation of the expression
+    expr_parts = []
+    for op, val in zip(operator, operand[:-1]):
+        expr_parts.append(str(val))
+        expr_parts.append(op)
+    expr_parts.append(str(operand[-1]))
+    expr = "".join(expr_parts)
+
+    # Evaluate the expression safely
+    # Only the allowed operators are present, so eval is safe in this context
+    result = eval(expr, {"__builtins__": None}, {})
+    return int(result)

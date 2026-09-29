@@ -1,0 +1,26 @@
+```python
+def anti_shuffle(s):
+    """
+    Write a function that takes a string and returns an ordered version of it.
+    Ordered version of string, is a string where all words (separated by space)
+    are replaced by a new word where all the characters arranged in
+    ascending order based on ascii value.
+    Note: You should keep the order of words and blank spaces in the sentence.
+
+    For example:
+    anti_shuffle('Hi') returns 'Hi'
+    anti_shuffle('hello') returns 'ehllo'
+    anti_shuffle('Hello World!!!') returns 'Hello !!!Wdlor'
+    """
+    # Split the string into words using space as the delimiter.
+    # The split will preserve the number of spaces because we use split(' ') 
+    # which does not treat consecutive spaces as a single delimiter.
+    words = s.split(' ')
+    
+    # Process each word: sort its characters by ASCII value.
+    # An empty string (resulting from consecutive spaces) will remain empty.
+    processed = [''.join(sorted(word)) for word in words]
+    
+    # Rejoin the processed words with a single space to reconstruct the original spacing.
+    return ' '.join(processed)
+```

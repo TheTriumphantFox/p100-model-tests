@@ -1,0 +1,13 @@
+def any_int(x, y, z):
+    """
+    Returns True if exactly one of the three numbers equals the sum of the other two
+    and all three numbers are integers; otherwise returns False.
+    """
+    # Check that all arguments are integers (bool is a subclass of int, so we exclude it)
+    if not all(isinstance(v, int) and not isinstance(v, bool) for v in (x, y, z)):
+        return False
+
+    # Check the three possible sum conditions
+    if x == y + z or y == x + z or z == x + y:
+        return True
+    return False

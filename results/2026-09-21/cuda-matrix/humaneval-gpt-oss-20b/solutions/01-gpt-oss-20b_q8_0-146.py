@@ -1,0 +1,22 @@
+def specialFilter(nums):
+    """Return the number of elements in `nums` that are greater than 10
+    and whose first and last digits are odd (1, 3, 5, 7, 9).
+
+    Parameters
+    ----------
+    nums : list[int]
+        List of integers to filter.
+
+    Returns
+    -------
+    int
+        Count of numbers satisfying the conditions.
+    """
+    odd_digits = {'1', '3', '5', '7', '9'}
+    count = 0
+    for n in nums:
+        if n > 10:
+            s = str(abs(n))
+            if s[0] in odd_digits and s[-1] in odd_digits:
+                count += 1
+    return count

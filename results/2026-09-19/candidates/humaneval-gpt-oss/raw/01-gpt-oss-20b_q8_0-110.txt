@@ -1,0 +1,26 @@
+```python
+def exchange(lst1, lst2):
+    """
+    Determine if it is possible to exchange elements between lst1 and lst2
+    so that all elements of lst1 become even.
+
+    Since any number of elements can be swapped, we can rearrange the
+    combined multiset arbitrarily between the two lists.  Therefore
+    lst1 can be made all even iff the total number of even elements
+    in the union of the two lists is at least the length of lst1.
+
+    Parameters
+    ----------
+    lst1 : list[int]
+        First list of numbers (non‑empty).
+    lst2 : list[int]
+        Second list of numbers (non‑empty).
+
+    Returns
+    -------
+    str
+        "YES" if it is possible to make lst1 all even, otherwise "NO".
+    """
+    total_evens = sum(1 for x in lst1 + lst2 if x % 2 == 0)
+    return "YES" if total_evens >= len(lst1) else "NO"
+```

@@ -1,0 +1,14 @@
+[09-21 21:48:11] ================ QUEUE-DEVSTRAL: leg 'think' ================
+[09-21 21:48:11] prod router :8080 pid=1416288 -- asserted unchanged after every stop_router
+[09-21 21:48:11] --- devstral thinking-on (ctx 16384, num_predict 12288) ---
+[09-21 21:48:11] router stopped (was pid none, children: none); GPU 37 MiB after 1x2s
+[09-21 21:48:13] router started from /home/hm/llama-cuda12 ctx=16384  (pid 2644606)
+[09-21 21:50:37] devstral: GPU 27023 MiB with ctx 16384 loaded
+[09-21 21:50:37] devstral ctx16384: 27023 MiB resident, weights 23894 MiB -- fully offloaded
+[09-21 21:50:37] devstral: MMLU-Pro THINKING-ON num_predict=12288 ctx=16384 timeout=2400
+[09-21 21:52:07] devstral: MMLU-think@12288 -> 58.57% parsed=70/70 among-answered=58.57% tok=280 tps=13.5 wall=1.5min (off tok=280, ratio=1.0x)
+[09-21 21:52:07] !!! RIG-FAIL devstral: 280 tokens vs 280 thinking-off (1.00x). Thinking did NOT engage -- the template ignored enable_thinking, or this model has no thinking mode. Do not report this as a thinking-on result.
+[09-21 21:52:07] devstral: think DONE
+[09-21 21:52:07] devstral: bench_think rc=0
+[09-21 21:52:09] router stopped (was pid 2644606, children: 2644716); GPU 37 MiB after 1x2s
+[09-21 21:52:09] ================ QUEUE-DEVSTRAL 'think' DONE; bench router down, GPU released ================

@@ -1,0 +1,75 @@
+[17:41:45] ================ QUEUE-7 START (resumed) ================
+[17:41:45] shims: 127.0.0.1:11500 127.0.0.1:11501
+[17:41:45] --- B1: thinking-on, remaining candidates (ctx 16384, np 12288) ---
+[17:41:45] router stopped (was pid none); GPU now 37 MiB after 1x2s
+[17:41:48] router started from /home/hm/llama-cuda12-xing ctx=16384 (510016260020, pid 3705391)
+[17:41:48] xing: MMLU-Pro THINKING-ON num_predict=12288
+[18:52:52] xing: MMLU-think@12288 -> 40.00% parsed/attempt=32/70 tok=121269 tps=29.5 wall=71.1min (thinking-off tok=294, ratio=412.5x)
+[18:52:52] !!! WARN xing: parsed 32/70 -- num_predict=12288 may be truncating the answer after the reasoning.
+[18:52:52] xing: think DONE
+[18:52:54] router stopped (was pid 3705391); GPU now 37 MiB after 1x2s
+[18:52:56] router started from /home/hm/llama-cuda12-g9v3 ctx=16384 (69c86c9df4ae, pid 3835156)
+[18:52:56] g9v3: MMLU-Pro THINKING-ON num_predict=12288
+[19:20:18] g9v3: MMLU-think@12288 -> 68.57% parsed/attempt=55/70 tok=54288 tps=38.1 wall=27.4min (thinking-off tok=280, ratio=193.9x)
+[19:20:18] !!! WARN g9v3: parsed 55/70 -- num_predict=12288 may be truncating the answer after the reasoning.
+[19:20:19] g9v3: think DONE
+[19:20:19] --- B2: thinking-on, shelf baselines (ctx 16384, np 12288) ---
+[19:20:21] router stopped (was pid 3835156); GPU now 37 MiB after 1x2s
+[19:20:23] router started from /home/hm/llama-cuda12 ctx=16384 (50631b3d2c56, pid 3885366)
+[19:20:23] qwen36-rerun: MMLU-Pro THINKING-ON num_predict=12288
+[20:31:01] qwen36-rerun: MMLU-think@12288 -> 87.14% parsed/attempt=70/70 tok=44201 tps=11.0 wall=70.6min (thinking-off tok=280, ratio=157.9x)
+[20:31:01] qwen36-rerun: think DONE
+[20:31:03] router stopped (was pid 3885366); GPU now 37 MiB after 1x2s
+[20:31:05] router started from /home/hm/llama-cuda12 ctx=16384 (50631b3d2c56, pid 4014049)
+[20:31:05] qwen38-27b: MMLU-Pro THINKING-ON num_predict=12288
+Traceback (most recent call last):
+  File "<stdin>", line 20, in <module>
+TypeError: unsupported format string passed to NoneType.__format__
+[20:32:39] qwen38-27b: think DONE
+[20:32:39] --- THINKING-ON COLUMN COMPLETE ---
+model                                      off  on(scored)   delta  on(answered)   parsed      tok    tps
+qwen3.6-27b-abliterated:q5_k_m  (incumbent)   71.43      87.14%  +15.71        87.14%   70/70     44201   11.0
+Traceback (most recent call last):
+  File "/home/hm/Projects/Tests/2026-09-19/candidates-round2/summarise_think.py", line 51, in <module>
+    f"{on['parsed']:>4}/{on['total']:<3} {on['tok']:>8} {on['tps']:>6.1f}")
+                                                        ^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+[20:32:39] --- PHASE A: qwen38-ud-q6k ---
+[20:32:42] router stopped (was pid 4014049); GPU now 37 MiB after 1x2s
+[20:32:44] router started from /home/hm/llama-cuda12 ctx=8192 (50631b3d2c56, pid 4017270)
+[20:32:44] qwen38-ud-q6k: throughput
+[20:45:25] qwen38-ud-q6k: throughput rc=0 speed_brief=10.2 speed_medium=9.8 speed_long=9.8 python_coding=9.8
+[20:45:25] qwen38-ud-q6k: MMLU-Pro num_predict=96
+[20:47:43] qwen38-ud-q6k: MMLU@96 -> 70.00% parsed/attempt=70/70 n=70 tps=10.3 wall=2.3min
+[20:47:44] qwen38-ud-q6k: MMLU-Pro num_predict=2048
+[20:50:01] qwen38-ud-q6k: MMLU@2048 -> 70.00% parsed/attempt=70/70 n=70 tps=10.3 wall=2.3min
+[20:50:01] qwen38-ud-q6k: HumanEval 164 tasks
+[22:04:18] qwen38-ud-q6k: HumanEval -> 95.73% parsed/attempt=164/164 n=164 tps=9.8 wall=74.2min
+[22:04:18] qwen38-ud-q6k: DONE
+[22:04:18] --- PHASE A: qwen38-uncensored-q6kp ---
+[22:04:20] router stopped (was pid 4017270); GPU now 37 MiB after 1x2s
+[22:04:22] router started from /home/hm/llama-cuda12 ctx=8192 (50631b3d2c56, pid 4187709)
+[22:04:22] qwen38-uncensored-q6kp: throughput
+[22:16:26] qwen38-uncensored-q6kp: throughput rc=0 speed_brief=10.3 speed_medium=9.9 speed_long=9.9 python_coding=9.9
+[22:16:26] qwen38-uncensored-q6kp: MMLU-Pro num_predict=96
+[22:18:42] qwen38-uncensored-q6kp: MMLU@96 -> 68.57% parsed/attempt=70/70 n=70 tps=10.3 wall=2.2min
+[22:18:42] qwen38-uncensored-q6kp: MMLU-Pro num_predict=2048
+[22:20:56] qwen38-uncensored-q6kp: MMLU@2048 -> 68.57% parsed/attempt=70/70 n=70 tps=10.3 wall=2.2min
+[22:20:56] qwen38-uncensored-q6kp: HumanEval 164 tasks
+[23:38:15] qwen38-uncensored-q6kp: HumanEval -> 95.73% parsed/attempt=164/164 n=164 tps=9.9 wall=77.2min
+[23:38:15] qwen38-uncensored-q6kp: DONE
+[23:38:15] --- PHASE A: qwen38-unsloth-q8 ---
+[23:38:17] router stopped (was pid 4187709); GPU now 37 MiB after 1x2s
+[23:38:19] router started from /home/hm/llama-cuda12 ctx=8192 (50631b3d2c56, pid 168582)
+[23:38:19] qwen38-unsloth-q8: throughput
+[23:50:58] qwen38-unsloth-q8: throughput rc=0 speed_brief=11.2 speed_medium=10.9 speed_long=10.9 python_coding=10.9
+[23:50:58] qwen38-unsloth-q8: MMLU-Pro num_predict=96
+[23:53:10] qwen38-unsloth-q8: MMLU@96 -> 68.57% parsed/attempt=70/70 n=70 tps=11.4 wall=2.2min
+[23:53:10] qwen38-unsloth-q8: MMLU-Pro num_predict=2048
+[23:55:20] qwen38-unsloth-q8: MMLU@2048 -> 68.57% parsed/attempt=70/70 n=70 tps=11.4 wall=2.2min
+[23:55:20] qwen38-unsloth-q8: HumanEval 164 tasks
+[01:04:20] qwen38-unsloth-q8: HumanEval -> 97.56% parsed/attempt=164/164 n=164 tps=10.9 wall=68.9min
+[01:04:20] qwen38-unsloth-q8: DONE
+[01:04:22] router stopped (was pid 168582); GPU now 37 MiB after 1x2s
+[01:04:24] router started from /home/hm/llama-cuda12 ctx=8192 (50631b3d2c56, pid 329271)
+[01:04:24] ================ QUEUE-7 DONE ================

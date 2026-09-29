@@ -1,0 +1,2 @@
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.prefix, expected /home/hm/Projects/Tests/.venv, got /home/hm/Projects/Tests/2026-09-21/cuda-matrix/../../.venv
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/hm/Projects/Tests/.venv, got /home/hm/Projects/Tests/2026-09-21/cuda-matrix/../../.venv

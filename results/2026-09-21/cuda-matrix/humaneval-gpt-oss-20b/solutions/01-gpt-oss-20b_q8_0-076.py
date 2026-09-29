@@ -1,0 +1,27 @@
+def is_simple_power(x: int, n: int) -> bool:
+    """
+    Return True if x is a simple power of n, i.e. there exists an integer k
+    such that n**k == x. Otherwise return False.
+
+    Special cases:
+    - If n == 1, only 1**k == 1, so return x == 1.
+    - If n == 0, 0**k == 0 for any positive k, so return x == 0.
+    - For negative n, powers alternate sign; the algorithm works the same.
+    """
+    # Handle trivial cases
+    if n == 1:
+        return x == 1
+    if n == 0:
+        return x == 0
+
+    # For negative n, we can still use the same loop.
+    # Start with power = 1 (n**0)
+    power = 1
+    while True:
+        if power == x:
+            return True
+        # If power already exceeds x in absolute value, no need to continue
+        # For negative n, the sign alternates, so we check absolute value.
+        if abs(power) > abs(x):
+            return False
+        power *= n

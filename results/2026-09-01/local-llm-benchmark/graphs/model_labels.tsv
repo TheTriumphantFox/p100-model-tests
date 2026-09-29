@@ -1,0 +1,13 @@
+label	full_model_name
+qwen3.6 27B Q5 pi	qwen3.6-27b-uncensored-q5-pi:latest
+qwen3.6 35B-A3B Q8 pi	qwen3.6-35b-a3b-q8-pi:latest
+qwen3.6 35B-A3B Q6 pi	qwen3.6-35b-a3b-q6-pi:latest
+qwen3.6 35B-A3B Q5 pi	qwen3.6-35b-a3b-q5-pi:latest
+qwen3.6 35B-A3B Q4	qwen3.6-35b-a3b:latest
+Qwopus 3.6	fredrezones55/Qwopus3.6:latest
+Qwopus 3.5	fredrezones55/Qwopus3.5:latest
+Gemma-4 Uncensored	fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest
+HauhauCS Qwen3.6-35B-A3B [Q4]	fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4
+HauhauCS Qwen3.6-35B-A3B [latest]	fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest
+qwen3.8 27B Q4	qwen3.8:27b-q4_K_M
+qwen-pi	qwen-pi:latest

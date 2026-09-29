@@ -1,0 +1,56 @@
+import math
+from typing import List
+
+
+def poly(xs: List[float], x: float) -> float:
+    """
+    Evaluates polynomial with coefficients xs at point x.
+    return xs[0] + xs[1] * x + xs[2] * x^2 + .... xs[n] * x^n
+    """
+    return sum(coeff * math.pow(x, i) for i, coeff in enumerate(xs))
+
+
+def derivative(xs: List[float]) -> List[float]:
+    """
+    Returns coefficients of the derivative of the polynomial.
+    """
+    return [i * coeff for i, coeff in enumerate(xs) if i > 0]
+
+
+def find_zero(xs: List[float]) -> float:
+    """
+    Find a real root of the polynomial defined by coefficients xs.
+    The function assumes that xs has an even number of coefficients
+    and that the leading coefficient is non‑zero, guaranteeing at
+    least one real root.
+
+    Uses Newton–Raphson iteration starting from x = 0.
+    """
+    if len(xs) % 2 != 0:
+        raise ValueError("Coefficient list must have an even number of elements.")
+    if not xs:
+        raise ValueError("Coefficient list cannot be empty.")
+
+    # Initial guess
+    x = 0.0
+    # Derivative coefficients
+    dxs = derivative(xs)
+
+    # Tolerance and maximum iterations
+    tol = 1e-12
+    max_iter = 1000
+
+    for _ in range(max_iter):
+        fx = poly(xs, x)
+        dfx = poly(dxs, x)
+        if dfx == 0:
+            # If derivative is zero, perturb x slightly
+            x += 1e-6
+            continue
+        new_x = x - fx / dfx
+        if abs(new_x - x) < tol:
+            return new_x
+        x = new_x
+
+    # If convergence not reached, return the last estimate
+    return x

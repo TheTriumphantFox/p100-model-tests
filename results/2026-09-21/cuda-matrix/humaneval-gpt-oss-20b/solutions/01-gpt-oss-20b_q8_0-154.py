@@ -1,0 +1,43 @@
+def cycpattern_check(a: str, b: str) -> bool:
+    """
+    Return True if any rotation of string `b` is a substring of string `a`.
+
+    Parameters
+    ----------
+    a : str
+        The string to search within.
+    b : str
+        The string whose rotations are to be checked.
+
+    Returns
+    -------
+    bool
+        True if any rotation of `b` is found in `a`, False otherwise.
+
+    Examples
+    --------
+    >>> cycpattern_check("abcd", "abd")
+    False
+    >>> cycpattern_check("hello", "ell")
+    True
+    >>> cycpattern_check("whassup", "psus")
+    False
+    >>> cycpattern_check("abab", "baa")
+    True
+    >>> cycpattern_check("efef", "eeff")
+    False
+    >>> cycpattern_check("himenss", "simen")
+    True
+    """
+    if not b:
+        # Empty string is always a substring
+        return True
+
+    # Generate all rotations of b
+    rotations = {b[i:] + b[:i] for i in range(len(b))}
+
+    # Check each rotation against a
+    for rot in rotations:
+        if rot in a:
+            return True
+    return False

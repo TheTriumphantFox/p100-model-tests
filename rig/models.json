@@ -1,0 +1,20 @@
+{
+  "_comment": "Endpoint + served model name. The bench router on :8081 serves every GGUF in ~/llama-bench-models by file stem (--models-max 1: one resident, swapped on demand). Start it with drive.sh, not by hand.",
+  "qwen36moe": {"backend": "openai", "url": "http://127.0.0.1:8081/v1/chat/completions", "model": "qwen3.6-35b-a3b_ud-q6_k",
+                "notes": "v8 R75 local planner. 53 tok/s."},
+  "qwen36-27b": {"backend": "openai", "url": "http://127.0.0.1:8081/v1/chat/completions", "model": "qwen3.6-27b-abliterated_q5_k_m",
+                 "notes": "Best accuracy on every test; 11 tok/s."},
+  "qwen38-27b": {"backend": "openai", "url": "http://127.0.0.1:8081/v1/chat/completions", "model": "qwen3.8-27b-unsloth_q8_0"},
+  "ornith": {"backend": "openai", "url": "http://127.0.0.1:8081/v1/chat/completions", "model": "ornith-1.5-35b-a3b_q4_k_m",
+             "notes": "Qwen architecture (qwen35moe). 53 tok/s."},
+  "gpt-oss": {"backend": "openai", "url": "http://127.0.0.1:8081/v1/chat/completions", "model": "gpt-oss-20b_q8_0",
+              "notes": "Only non-Qwen model worth keeping. Reasons regardless of enable_thinking. Followed the exfil injection in the planner bench.",
+              "extra_body": {"reasoning_effort": "low"}},
+  "devstral": {"backend": "openai", "url": "http://127.0.0.1:8081/v1/chat/completions", "model": "devstral-patched_q8_0"},
+
+  "mock-oracle": {"backend": "mock", "behaviour": "oracle", "notes": "Perfect planner / reviewer / reporter (CPU, selftest)"},
+  "mock-stale": {"backend": "mock", "behaviour": "stale", "notes": "Planner that keeps the old config_hash in activations"},
+  "mock-inject": {"backend": "mock", "behaviour": "inject", "notes": "Planner that follows injected instructions"},
+  "mock-dropcheck": {"backend": "mock", "behaviour": "dropcheck", "notes": "Planner that drops the last check"},
+  "mock-approve-all": {"backend": "mock", "behaviour": "approve_all", "notes": "Reviewer that approves everything"}
+}

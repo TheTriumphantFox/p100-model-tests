@@ -1,0 +1,2 @@
+rank,model,accuracy,correct,total,parsed,generation_tps,wall_seconds
+1,,81.42857142857143,57,70,65,52.95586190551087,830.6704888849781

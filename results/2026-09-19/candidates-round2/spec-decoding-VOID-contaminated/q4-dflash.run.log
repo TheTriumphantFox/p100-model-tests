@@ -1,0 +1,16 @@
+q4-dflash: SERVER DIED
+0.01.126.333 W operator(): failed to measure the memory of the extra model, fitting without it: failed to create llama_context from model
+0.06.418.959 I cmn          init: llama threadpool init, n_threads = 6
+0.06.697.962 I common_speculative_init_result: loading draft model '/var/lib/ollama/candidates-r2/dflash-Qwen3.8-27B-Q8_0.gguf'
+0.18.471.749 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 217.62 MiB on device 0: cudaMalloc failed: out of memory
+0.18.471.754 E ggml_gallocr_reserve_n_impl: failed to allocate CUDA0 buffer of size 228196352
+0.18.471.754 E graph_reserve: failed to allocate compute buffers
+0.18.471.758 W sched_reserve: compute buffer allocation failed, retrying without pipeline parallelism
+0.18.472.062 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 204.08 MiB on device 0: cudaMalloc failed: out of memory
+0.18.472.063 E ggml_gallocr_reserve_n_impl: failed to allocate CUDA0 buffer of size 213991424
+0.18.472.063 E graph_reserve: failed to allocate compute buffers
+0.18.472.323 E llama_init_from_model: failed to initialize the context: failed to allocate compute pp buffers
+0.18.472.325 E common_speculative_init_result: failed to create MTP context
+0.18.472.330 E srv    load_model: failed to create MTP context
+0.18.472.335 I srv    operator(): operator(): cleaning up before exit...
+0.18.472.598 E srv  llama_server: exiting due to model loading error

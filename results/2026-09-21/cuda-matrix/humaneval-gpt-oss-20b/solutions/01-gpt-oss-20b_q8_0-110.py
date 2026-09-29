@@ -1,0 +1,12 @@
+def exchange(lst1, lst2):
+    """
+    Determine if it is possible to exchange elements between lst1 and lst2
+    so that all elements of lst1 become even.
+
+    Since any number of elements can be swapped, the only requirement is
+    that the combined lists contain at least len(lst1) even numbers.
+    """
+    even_count = sum(1 for x in lst1 if x % 2 == 0)
+    even_count += sum(1 for x in lst2 if x % 2 == 0)
+
+    return "YES" if even_count >= len(lst1) else "NO"

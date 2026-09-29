@@ -1,0 +1,32 @@
+```python
+def check_if_last_char_is_a_letter(txt):
+    '''
+    Create a function that returns True if the last character
+    of a given string is an alphabetical character and is not
+    a part of a word, and False otherwise.
+    Note: "word" is a group of characters separated by space.
+
+    Examples:
+    check_if_last_char_is_a_letter("apple pie") ➞ False
+    check_if_last_char_is_a_letter("apple pi e") ➞ True
+    check_if_last_char_is_a_letter("apple pi e ") ➞ False
+    check_if_last_char_is_a_letter("") ➞ False 
+    '''
+    if not txt:
+        return False
+    
+    # Split the string into words
+    words = txt.split()
+    
+    # If there are no words (e.g., string with only spaces), return False
+    if not words:
+        return False
+    
+    last_word = words[-1]
+    
+    # Check if the last word is a single alphabetical character
+    if len(last_word) == 1 and last_word.isalpha():
+        return True
+    
+    return False
+```

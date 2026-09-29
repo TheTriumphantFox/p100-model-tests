@@ -1,0 +1,30 @@
+[  0] fail  steps= 7   219.5s  tools=4
+[  1] fail  steps= 8    90.7s  tools=5
+[  2] fail  steps=12    80.7s  tools=9
+[  3] fail  steps=13    88.2s  tools=10
+[  4] fail  steps=11    86.3s  tools=8
+[  5] fail  steps= 9    93.2s  tools=6
+[  6] fail  steps= 7    92.0s  tools=4
+[  7] fail  steps=10    99.7s  tools=7
+[  8] PASS  steps= 9    96.2s  tools=6
+[  9] PASS  steps= 8   180.9s  tools=5
+[ 10] PASS  steps= 4    33.7s  tools=4
+[ 11] PASS  steps= 8    62.9s  tools=5
+[ 12] PASS  steps= 7   317.9s  tools=4
+[ 13] PASS  steps= 8    69.5s  tools=5
+[ 14] PASS  steps= 9   130.8s  tools=6
+[ 15] fail  steps= 7    58.9s  tools=4
+[ 16] PASS  steps=11    81.6s  tools=8
+[ 17] PASS  steps= 6    40.6s  tools=3
+[ 18] fail  steps= 8    65.8s  tools=5
+[ 19] fail  steps= 9   114.5s  tools=6
+[ 20] PASS  steps=17   312.6s  tools=14
+[ 21] PASS  steps=11    91.6s  tools=8
+[ 22] PASS  steps=11   286.5s  tools=8
+[ 23] PASS  steps=15   357.7s  tools=12
+[ 24] PASS  steps= 8   136.0s  tools=5
+[ 25] PASS  steps= 7    56.0s  tools=6
+[ 26] PASS  steps= 9    56.9s  tools=6
+[ 27] fail  steps= 8    63.7s  tools=5
+[ 28] fail  steps=15   345.6s  tools=12
+[ 29] PASS  steps=13   108.2s  tools=10

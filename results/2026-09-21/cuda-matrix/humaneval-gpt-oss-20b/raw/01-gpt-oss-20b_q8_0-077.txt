@@ -1,0 +1,29 @@
+```python
+def iscube(a: int) -> bool:
+    """
+    Return True if `a` is a perfect cube of an integer, otherwise False.
+    """
+    # Handle zero directly
+    if a == 0:
+        return True
+
+    # Compute an approximate cube root using floating point arithmetic.
+    # For negative numbers, take the cube root of the absolute value and
+    # restore the sign afterwards.
+    sign = 1
+    if a < 0:
+        sign = -1
+        a_abs = -a
+    else:
+        a_abs = a
+
+    # Use float cube root approximation
+    approx = round(a_abs ** (1.0 / 3.0))
+
+    # Because of floating point inaccuracies, check the two nearest integers.
+    for cand in (approx - 1, approx, approx + 1):
+        if cand ** 3 == a_abs:
+            return True
+
+    return False
+```

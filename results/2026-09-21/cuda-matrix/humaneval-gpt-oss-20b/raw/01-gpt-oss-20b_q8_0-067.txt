@@ -1,0 +1,46 @@
+```python
+import re
+
+def fruit_distribution(s: str, n: int) -> int:
+    """
+    Calculate the number of mangoes in a basket given a string that
+    contains the counts of apples and oranges and the total number
+    of fruits in the basket.
+
+    Parameters
+    ----------
+    s : str
+        A string containing the number of apples and oranges in the
+        format "<apples> apples and <oranges> oranges".
+    n : int
+        The total number of fruits in the basket.
+
+    Returns
+    -------
+    int
+        The number of mangoes in the basket.
+
+    Examples
+    --------
+    >>> fruit_distribution("5 apples and 6 oranges", 19)
+    8
+    >>> fruit_distribution("0 apples and 1 oranges", 3)
+    2
+    >>> fruit_distribution("2 apples and 3 oranges", 100)
+    95
+    >>> fruit_distribution("100 apples and 1 oranges", 120)
+    19
+    """
+    # Find the first integer before "apples" and the first integer before "oranges"
+    apples_match = re.search(r'(\d+)\s*apples', s, re.IGNORECASE)
+    oranges_match = re.search(r'(\d+)\s*oranges', s, re.IGNORECASE)
+
+    if not apples_match or not oranges_match:
+        raise ValueError("Input string must contain both apples and oranges counts.")
+
+    apples = int(apples_match.group(1))
+    oranges = int(oranges_match.group(1))
+
+    mangoes = n - apples - oranges
+    return mangoes
+```

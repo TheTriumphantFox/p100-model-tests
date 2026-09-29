@@ -1,0 +1,22 @@
+def sort_even(l: list):
+    """This function takes a list l and returns a list l' such that
+    l' is identical to l in the odd indicies, while its values at the even indicies are equal
+    to the values of the even indicies of l, but sorted.
+    >>> sort_even([1, 2, 3])
+    [1, 2, 3]
+    >>> sort_even([5, 6, 3, 4])
+    [3, 6, 5, 4]
+    """
+    # Extract even-indexed elements
+    even_vals = l[0::2]
+    # Sort them
+    even_vals_sorted = sorted(even_vals)
+    # Build result list
+    result = []
+    even_iter = iter(even_vals_sorted)
+    for idx, val in enumerate(l):
+        if idx % 2 == 0:
+            result.append(next(even_iter))
+        else:
+            result.append(val)
+    return result

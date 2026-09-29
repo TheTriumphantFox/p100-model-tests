@@ -1,0 +1,13 @@
+rank,model,label,parameter_size,quantization,size_gb,generation_tps_mean,generation_tps_min,generation_tps_max,prompt_tps_mean,load_seconds,tokens_per_trial,trials
+1,fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest,Gemma-4 8B Q4,8.0B,Q4_K_M,6.33,63.41,63.33,63.49,1013.77,5.03,"[160, 160]",2
+2,fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4,Hauhau Qwen3.6 A3B Q4 tag,35.1B,Q4_K_M,22.07,41.55,41.47,41.63,600.75,4.77,"[160, 160]",2
+3,qwen3.6-35b-a3b:latest,Qwen3.6 35B-A3B Q4 local,35.1B,Q4_K_M,22.07,41.50,41.33,41.67,594.06,14.03,"[160, 160]",2
+4,fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest,Hauhau Qwen3.6 A3B Q4 latest,35.1B,Q4_K_M,22.07,41.41,41.21,41.61,605.21,4.75,"[160, 160]",2
+5,qwen3.6-35b-a3b-q5-pi:latest,Qwen3.6 35B-A3B Q5 Pi,34.7B,Q5_K_M,28.03,35.08,35.05,35.11,518.86,14.98,"[160, 160]",2
+6,qwen3.6-35b-a3b-q6-pi:latest,Qwen3.6 35B-A3B Q6 Pi,34.7B,Q6_K,30.65,32.23,32.16,32.30,508.62,15.67,"[160, 160]",2
+7,qwen-pi:latest,Qwen Pi 35B-A3B Q4,35.1B,Q4_K_M,22.07,28.93,28.92,28.94,521.86,13.03,"[160, 160]",2
+8,qwen3.6-35b-a3b-q8-pi:latest,Qwen3.6 35B-A3B Q8 Pi,34.7B,Q8_0,43.61,22.91,22.73,23.09,381.41,21.73,"[160, 160]",2
+9,fredrezones55/Qwopus3.5:latest,Qwopus3.5 9B Q4,9.4B,Q4_K_M,6.54,17.70,17.63,17.76,478.50,6.23,"[160, 160]",2
+10,qwen3.8:27b-q4_K_M,Qwen3.8 27B Q4,27.3B,Q4_K_M,17.74,3.33,3.33,3.33,104.42,11.70,"[160, 160]",2
+11,fredrezones55/Qwopus3.6:latest,Qwopus3.6 27B Q4,27.4B,Q4_K_M,17.48,3.32,3.31,3.33,106.05,11.94,"[160, 160]",2
+12,qwen3.6-27b-uncensored-q5-pi:latest,Qwen3.6 27B Q5 Pi,26.9B,Q5_K_M,20.81,2.64,2.64,2.65,79.41,4.94,"[160, 160]",2

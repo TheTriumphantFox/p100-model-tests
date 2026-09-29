@@ -1,0 +1,13 @@
+gemma4-e4b-abliterated:q4_k_m              FAIL   error
+    (wall 1s)
+qwen3.8-27b-stock:q4_k_m                   ok      2 tok   23.46 tok/s  reply='ok'
+    (wall 92s)
+qwen3.6-27b-opus-distill:q4_k_m            FAIL   error
+    (wall 1s)
+qwen3.6-27b-abliterated:q5_k_m             ok      2 tok   21.57 tok/s  reply='ok'
+    (wall 114s)
+qwen3.6-35b-a3b-abliterated-vl:q4_k_m      FAIL   error
+    (wall 1s)
+devstral-patched:latest                    ok      2 tok   25.66 tok/s  reply='ok'
+    (wall 42s)
+--- done ---

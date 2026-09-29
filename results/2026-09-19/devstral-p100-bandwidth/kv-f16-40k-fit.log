@@ -1,0 +1,103 @@
+0.00.020.992 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.021.222 W srv  llama_server: -----------------
+0.00.021.223 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.021.224 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.021.224 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.021.224 W srv  llama_server: -----------------
+0.00.022.461 I srv    load_model: loading model '/var/lib/ollama/blobs/sha256-52018a575c1f167dcb3948be64afefde325934536a15b9f7913dfb3f450caac3'
+0.06.069.844 W llama_context: setting new yarn_attn_factor = 1.0000 (mscale == 1.0, mscale_all_dim = 1.0)
+0.06.128.284 I cmn          init: llama threadpool init, n_threads = 6
+0.06.336.804 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 40960, kv_unified = 'false'
+0.06.338.183 I srv  llama_server: model loaded
+0.06.338.188 I srv  llama_server: listening on http://127.0.0.1:8080
+0.06.338.188 W srv  llama_server: NOTICE: server default port will be changed to :9931 in a future release
+0.06.338.188 W srv  llama_server:         ref: https://github.com/ggml-org/llama.cpp/pull/26508
+0.07.263.970 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+0.07.264.001 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.15.594.360 I slot print_timing: id  0 | task 0 | n_gen =    100, tg =  12.87 t/s, tg_3s =  13.00 t/s
+0.18.624.151 I slot print_timing: id  0 | task 0 | n_gen =    139, tg =  12.87 t/s, tg_3s =  12.87 t/s
+0.21.653.011 I slot print_timing: id  0 | task 0 | n_gen =    178, tg =  12.87 t/s, tg_3s =  12.88 t/s
+0.23.362.086 I slot print_timing: id  0 | task 0 | prompt eval time =     638.75 ms /    48 tokens (   13.31 ms per token,    75.15 tokens per second)
+0.23.362.089 I slot print_timing: id  0 | task 0 |        eval time =   15459.31 ms /   200 tokens (   77.68 ms per token,    12.87 tokens per second)
+0.23.362.089 I slot print_timing: id  0 | task 0 |       total time =   16098.06 ms /   248 tokens
+0.23.362.093 I slot print_timing: id  0 | task 0 |    graphs reused =          0
+0.23.362.121 I slot      release: id  0 | task 0 | stop processing: n_tokens = 247, truncated = 0
+0.23.363.614 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 2360712916
+0.23.375.681 I slot launch_slot_: id  0 | task 201 | processing task, is_child = 0
+0.31.702.622 I slot print_timing: id  0 | task 201 | n_gen =    100, tg =  12.87 t/s, tg_3s =  13.00 t/s
+0.34.731.820 I slot print_timing: id  0 | task 201 | n_gen =    139, tg =  12.87 t/s, tg_3s =  12.87 t/s
+0.37.761.684 I slot print_timing: id  0 | task 201 | n_gen =    178, tg =  12.87 t/s, tg_3s =  12.87 t/s
+0.39.471.341 I slot print_timing: id  0 | task 201 | prompt eval time =     636.04 ms /    55 tokens (   11.56 ms per token,    86.47 tokens per second)
+0.39.471.344 I slot print_timing: id  0 | task 201 |        eval time =   15459.60 ms /   200 tokens (   77.69 ms per token,    12.87 tokens per second)
+0.39.471.345 I slot print_timing: id  0 | task 201 |       total time =   16095.65 ms /   255 tokens
+0.39.471.346 I slot print_timing: id  0 | task 201 |    graphs reused =          0
+0.39.471.360 I slot      release: id  0 | task 201 | stop processing: n_tokens = 254, truncated = 0
+0.39.472.433 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 2376822155
+0.39.485.009 I slot launch_slot_: id  0 | task 402 | processing task, is_child = 0
+0.47.812.748 I slot print_timing: id  0 | task 402 | n_gen =    100, tg =  12.87 t/s, tg_3s =  13.00 t/s
+0.50.842.464 I slot print_timing: id  0 | task 402 | n_gen =    139, tg =  12.87 t/s, tg_3s =  12.87 t/s
+0.53.873.413 I slot print_timing: id  0 | task 402 | n_gen =    178, tg =  12.87 t/s, tg_3s =  12.87 t/s
+0.55.582.224 I slot print_timing: id  0 | task 402 | prompt eval time =     635.67 ms /    55 tokens (   11.56 ms per token,    86.52 tokens per second)
+0.55.582.227 I slot print_timing: id  0 | task 402 |        eval time =   15461.52 ms /   200 tokens (   77.70 ms per token,    12.87 tokens per second)
+0.55.582.227 I slot print_timing: id  0 | task 402 |       total time =   16097.20 ms /   255 tokens
+0.55.582.228 I slot print_timing: id  0 | task 402 |    graphs reused =          0
+0.55.582.242 I slot      release: id  0 | task 402 | stop processing: n_tokens = 254, truncated = 0
+0.55.588.288 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 2392933037
+0.55.600.873 I slot launch_slot_: id  0 | task 603 | processing task, is_child = 0
+0.55.603.656 E CUDA error: out of memory
+0.55.603.657 E   current device: 0, in function alloc at /src/ggml/src/ggml-cuda/ggml-cuda.cu:588
+0.55.603.658 E   cuMemCreate(&handle, reserve_size, &prop, 0)
+/src/ggml/src/ggml-cuda/ggml-cuda.cu:108: CUDA error
+⚠️ warning: The current terminal doesn't support styling.  Styled output might not appear as expected.
+[New LWP 70707]
+[New LWP 70522]
+[New LWP 70521]
+[New LWP 70507]
+[New LWP 70504]
+[New LWP 70503]
+[New LWP 70501]
+[New LWP 70500]
+[New LWP 70499]
+[New LWP 70498]
+[New LWP 70496]
+[New LWP 70495]
+[New LWP 70494]
+[New LWP 70493]
+[New LWP 70492]
+[New LWP 70426]
+[New LWP 70425]
+[New LWP 70424]
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.archlinux.org>
+  <https://debuginfod.cachyos.org>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/libthread_db.so.1".
+0x00007fe3580b61f2 in ?? () from /usr/lib/libc.so.6
+#0  0x00007fe3580b61f2 in ?? () from /usr/lib/libc.so.6
+#1  0x00007fe35812ead2 in wait4 () from /usr/lib/libc.so.6
+#2  0x00007fe358747853 in ggml_print_backtrace () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#3  0x00007fe3587479fb in ggml_abort () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#4  0x00007fe350669507 in ggml_cuda_error(char const*, char const*, char const*, int, char const*) () from /home/hm/llama-cuda12/lib/libggml-cuda.so.0
+#5  0x00007fe35068493c in ggml_cuda_pool_vmm::alloc(unsigned long, unsigned long*) () from /home/hm/llama-cuda12/lib/libggml-cuda.so.0
+#6  0x00007fe350673276 in void ggml_cuda_mul_mat_cublas_impl<(ggml_type)1>(ggml_backend_cuda_context&, ggml_tensor const*, ggml_tensor const*, ggml_tensor*) () from /home/hm/llama-cuda12/lib/libggml-cuda.so.0
+#7  0x00007fe3506809b9 in ggml_backend_cuda_graph_compute(ggml_backend*, ggml_cgraph*) () from /home/hm/llama-cuda12/lib/libggml-cuda.so.0
+#8  0x00007fe358766ea7 in ggml_backend_sched_graph_compute_async () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#9  0x00007fe3577f0261 in llama_context::graph_compute(ggml_cgraph*, bool) () from /home/hm/llama-cuda12/lib/libllama.so.0
+#10 0x00007fe3577f3ed6 in llama_context::process_ubatch(llama_ubatch const&, llm_graph_type, llama_memory_context_i*, ggml_status&) () from /home/hm/llama-cuda12/lib/libllama.so.0
+#11 0x00007fe3577fbafd in llama_context::decode(llama_batch const&) () from /home/hm/llama-cuda12/lib/libllama.so.0
+#12 0x00007fe3577fcf8f in llama_decode () from /home/hm/llama-cuda12/lib/libllama.so.0
+#13 0x00007fe3589516d9 in std::_Function_handler<void (), server_context_impl::decode(int&, int, llama_batch&)::{lambda()#1}>::_M_invoke(std::_Any_data const&) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#14 0x00007fe358912076 in server_queue::yield_to_queue(std::function<void ()>&&) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#15 0x00007fe358966389 in server_context_impl::decode(int&, int, llama_batch&) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#16 0x00007fe358967e21 in server_context_impl::update_slots() () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#17 0x00007fe358912cb5 in server_queue::start_loop(long) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#18 0x00007fe3588c78c0 in llama_server(common_params&, int, char**) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#19 0x00007fe3588c8906 in llama_server(int, char**) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#20 0x00007fe358027c8e in ?? () from /usr/lib/libc.so.6
+#21 0x00007fe358027dcb in __libc_start_main () from /usr/lib/libc.so.6
+#22 0x000056468d3ba2a5 in _start ()
+[Inferior 1 (process 70419) detached]

@@ -1,0 +1,19 @@
+MMLU-Pro: 1 model(s), 10 categories, 10 questions/model, 1 per request.
+Planned batches: 10; scored answers: 10.
+Results: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/PROCESS-mmlu-ggmlorg-q8-ctx49152-q8_0-think4864
+
+Model 1/1: qwen3.8-27b-ggmlorg:q8_0
+[###---------------------------] 1/10 ( 10.0%) qwen3.8-27b-ggmlorg:q8_0 / biology                         ETA 2m 23s
+[######------------------------] 2/10 ( 20.0%) qwen3.8-27b-ggmlorg:q8_0 / chemistry                       ETA 1m 51s
+[#########---------------------] 3/10 ( 30.0%) qwen3.8-27b-ggmlorg:q8_0 / computer science                ETA 1m 47s
+[############------------------] 4/10 ( 40.0%) qwen3.8-27b-ggmlorg:q8_0 / economics                       ETA 1m 23s
+[###############---------------] 5/10 ( 50.0%) qwen3.8-27b-ggmlorg:q8_0 / engineering                     ETA 8m 35s
+[##################------------] 6/10 ( 60.0%) qwen3.8-27b-ggmlorg:q8_0 / health                          ETA 5m 59s
+[#####################---------] 7/10 ( 70.0%) qwen3.8-27b-ggmlorg:q8_0 / history                         ETA 3m 56s
+[########################------] 8/10 ( 80.0%) qwen3.8-27b-ggmlorg:q8_0 / law                             ETA 4m 13s
+[###########################---] 9/10 ( 90.0%) qwen3.8-27b-ggmlorg:q8_0 / math                            ETA 1m 53s
+[##############################] 10/10 (100.0%) qwen3.8-27b-ggmlorg:q8_0 / physics                         ETA 0s
+
+Finished 10/10 batches and scored 10 answers.
+HTML report: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/PROCESS-mmlu-ggmlorg-q8-ctx49152-q8_0-think4864/report.html
+Leader: qwen3.8-27b-ggmlorg:q8_0 (80.0%)

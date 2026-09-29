@@ -1,0 +1,15 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+ornith-1.5-35b-a3b:q4_k_m,biology,1,5,5,5,53.22989862322176,440.0399758924007,13.468763546989067,244,,raw/01-ornith-1.5-35b-a3b_q4_k_m-01-biology.txt
+ornith-1.5-35b-a3b:q4_k_m,business,2,5,5,5,53.007042877073914,383.62102036294857,27.468762895005057,1329,,raw/01-ornith-1.5-35b-a3b_q4_k_m-02-business.txt
+ornith-1.5-35b-a3b:q4_k_m,chemistry,3,5,5,5,52.843185004304544,455.7320472545462,54.269426963990554,2694,,raw/01-ornith-1.5-35b-a3b_q4_k_m-03-chemistry.txt
+ornith-1.5-35b-a3b:q4_k_m,computer science,4,5,5,5,53.04536557542601,497.012155314054,13.794554645995959,477,,raw/01-ornith-1.5-35b-a3b_q4_k_m-04-computer_science.txt
+ornith-1.5-35b-a3b:q4_k_m,economics,5,4,5,5,53.31749645319872,366.76558223278397,6.2364117309916764,202,,raw/01-ornith-1.5-35b-a3b_q4_k_m-05-economics.txt
+ornith-1.5-35b-a3b:q4_k_m,engineering,6,0,5,0,52.773394561121904,401.33893848297964,80.15897303100792,4096,,raw/01-ornith-1.5-35b-a3b_q4_k_m-06-engineering.txt
+ornith-1.5-35b-a3b:q4_k_m,health,7,4,5,5,53.11290842100542,331.10774314231486,20.512538511000457,977,,raw/01-ornith-1.5-35b-a3b_q4_k_m-07-health.txt
+ornith-1.5-35b-a3b:q4_k_m,history,8,0,5,0,52.701438284782284,455.4240691462957,80.96914500900311,4096,,raw/01-ornith-1.5-35b-a3b_q4_k_m-08-history.txt
+ornith-1.5-35b-a3b:q4_k_m,law,9,0,5,0,52.571600954646875,500.8022171334374,82.573672937011,4096,,raw/01-ornith-1.5-35b-a3b_q4_k_m-09-law.txt
+ornith-1.5-35b-a3b:q4_k_m,math,10,3,5,5,53.02035009707644,376.13406687029266,35.496027852001134,1746,,raw/01-ornith-1.5-35b-a3b_q4_k_m-10-math.txt
+ornith-1.5-35b-a3b:q4_k_m,other,11,4,5,5,53.34987593052109,383.7045097860376,5.418097037996631,215,,raw/01-ornith-1.5-35b-a3b_q4_k_m-11-other.txt
+ornith-1.5-35b-a3b:q4_k_m,philosophy,12,5,5,5,53.19596991637827,347.2619435726471,13.449172312000883,593,,raw/01-ornith-1.5-35b-a3b_q4_k_m-12-philosophy.txt
+ornith-1.5-35b-a3b:q4_k_m,physics,13,5,5,5,53.18056883311159,403.15563432792925,13.707068946998334,588,,raw/01-ornith-1.5-35b-a3b_q4_k_m-13-physics.txt
+ornith-1.5-35b-a3b:q4_k_m,psychology,14,4,5,5,53.16513426618872,373.06773116486806,17.878265146995545,823,,raw/01-ornith-1.5-35b-a3b_q4_k_m-14-psychology.txt

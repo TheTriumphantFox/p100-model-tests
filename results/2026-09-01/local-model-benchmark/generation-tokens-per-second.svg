@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="824" viewBox="0 0 1400 824">
+<rect width="100%" height="100%" fill="#111718"/>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif}.label{fill:#e7eeee;font-size:19px}.small{fill:#9eafb0;font-size:15px}.value{fill:#f7f7f7;font-size:18px;font-weight:bold}.title{fill:#f7f7f7;font-size:30px;font-weight:bold}.subtitle{fill:#9eafb0;font-size:16px}</style>
+<text x="40" y="47" class="title">Local model generation speed</text>
+<text x="40" y="76" class="subtitle">Average of 2 trials, 160 output-token cap, 4096-token context | Higher is better</text>
+<line x1="430.0" y1="90" x2="430.0" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="430.0" y="769" text-anchor="middle" class="small">0</text>
+<line x1="486.7" y1="90" x2="486.7" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="486.7" y="769" text-anchor="middle" class="small">5</text>
+<line x1="543.3" y1="90" x2="543.3" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="543.3" y="769" text-anchor="middle" class="small">10</text>
+<line x1="600.0" y1="90" x2="600.0" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="600.0" y="769" text-anchor="middle" class="small">15</text>
+<line x1="656.7" y1="90" x2="656.7" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="656.7" y="769" text-anchor="middle" class="small">20</text>
+<line x1="713.3" y1="90" x2="713.3" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="713.3" y="769" text-anchor="middle" class="small">25</text>
+<line x1="770.0" y1="90" x2="770.0" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="770.0" y="769" text-anchor="middle" class="small">30</text>
+<line x1="826.7" y1="90" x2="826.7" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="826.7" y="769" text-anchor="middle" class="small">35</text>
+<line x1="883.3" y1="90" x2="883.3" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="883.3" y="769" text-anchor="middle" class="small">40</text>
+<line x1="940.0" y1="90" x2="940.0" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="940.0" y="769" text-anchor="middle" class="small">45</text>
+<line x1="996.7" y1="90" x2="996.7" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="996.7" y="769" text-anchor="middle" class="small">50</text>
+<line x1="1053.3" y1="90" x2="1053.3" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="1053.3" y="769" text-anchor="middle" class="small">55</text>
+<line x1="1110.0" y1="90" x2="1110.0" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="1110.0" y="769" text-anchor="middle" class="small">60</text>
+<line x1="1166.7" y1="90" x2="1166.7" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="1166.7" y="769" text-anchor="middle" class="small">65</text>
+<line x1="1223.3" y1="90" x2="1223.3" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="1223.3" y="769" text-anchor="middle" class="small">70</text>
+<line x1="1280.0" y1="90" x2="1280.0" y2="742" stroke="#293536" stroke-width="1"/>
+<text x="1280.0" y="769" text-anchor="middle" class="small">75</text>
+<text x="855.0" y="806" text-anchor="middle" class="small">generated tokens per second</text>
+<text x="412" y="138" text-anchor="end" class="label">Gemma-4 8B Q4</text>
+<rect x="430" y="118" width="850" height="28" rx="4" fill="#1c2728"/>
+<rect x="430" y="118" width="718.7" height="28" rx="4" fill="#48a9b8"/>
+<text x="1160.7" y="139" class="value">63.41</text>
+<text x="412" y="190" text-anchor="end" class="label">Hauhau Qwen3.6 A3B Q4 tag</text>
+<rect x="430" y="170" width="850" height="28" rx="4" fill="#1c2728"/>
+<rect x="430" y="170" width="470.9" height="28" rx="4" fill="#48a9b8"/>
+<text x="912.9" y="191" class="value">41.55</text>
+<text x="412" y="242" text-anchor="end" class="label">Qwen3.6 35B-A3B Q4 local</text>
+<rect x="430" y="222" width="850" height="28" rx="4" fill="#1c2728"/>
+<rect x="430" y="222" width="470.4" height="28" rx="4" fill="#48a9b8"/>
+<text x="912.4" y="243" class="value">41.50</text>
+<text x="412" y="294" text-anchor="end" class="label">Hauhau Qwen3.6 A3B Q4 latest</text>
+<rect x="430" y="274" width="850" height="28" rx="4" fill="#1c2728"/>
+<rect x="430" y="274" width="469.3" height="28" rx="4" fill="#459dac"/>
+<text x="911.3" y="295" class="value">41.41</text>
+<text x="412" y="346" text-anchor="end" class="label">Qwen3.6 35B-A3B Q5 Pi</text>
+<rect x="430" y="326" width="850" height="28" rx="4" fill="#1c2728"/>
+<rect x="430" y="326" width="397.6" height="28" rx="4" fill="#459dac"/>
+<text x="839.6" y="347" class="value">35.08</text>
+<text x="412" y="398" text-anchor="end" class="label">Qwen3.6 35B-A3B Q6 Pi</text>
+<rect x="430" y="378" width="850" height="28" rx="4" fill="#1c2728"/>
+<rect x="430" y="378" width="365.2" height="28" rx="4" fill="#459dac"/>
+<text x="807.2" y="399" class="value">32.23</text>
+<text x="412" y="450" text-anchor="end" class="label">Qwen Pi 35B-A3B Q4</text>
+<rect x="430" y="430" width="850" height="28" rx="4" fill="#1c2728"/>
+<rect x="430" y="430" width="327.9" height="28" rx="4" fill="#428f9e"/>
+<text x="769.9" y="451" class="value">28.93</text>
+<text x="412" y="502" text-anchor="end" class="label">Qwen3.6 35B-A3B Q8 Pi</text>
+<rect x="430" y="482" width="850" height="28" rx="4" fill="#1c2728"/>
+<rect x="430" y="482" width="259.7" height="28" rx="4" fill="#428f9e"/>
+<text x="701.7" y="503" class="value">22.91</text>
+<text x="412" y="554" text-anchor="end" class="label">Qwopus3.5 9B Q4</text>
+<rect x="430" y="534" width="850" height="28" rx="4" fill="#1c2728"/>
+<rect x="430" y="534" width="200.6" height="28" rx="4" fill="#428f9e"/>
+<text x="642.6" y="555" class="value">17.70</text>
+<text x="412" y="606" text-anchor="end" class="label">Qwen3.8 27B Q4</text>
+<rect x="430" y="586" width="850" height="28" rx="4" fill="#1c2728"/>
+<rect x="430" y="586" width="37.8" height="28" rx="4" fill="#3e838f"/>
+<text x="479.8" y="607" class="value">3.33</text>
+<text x="412" y="658" text-anchor="end" class="label">Qwopus3.6 27B Q4</text>
+<rect x="430" y="638" width="850" height="28" rx="4" fill="#1c2728"/>
+<rect x="430" y="638" width="37.6" height="28" rx="4" fill="#3e838f"/>
+<text x="479.6" y="659" class="value">3.32</text>
+<text x="412" y="710" text-anchor="end" class="label">Qwen3.6 27B Q5 Pi</text>
+<rect x="430" y="690" width="850" height="28" rx="4" fill="#1c2728"/>
+<rect x="430" y="690" width="30.0" height="28" rx="4" fill="#3e838f"/>
+<text x="472.0" y="711" class="value">2.64</text>
+</svg>

@@ -1,0 +1,36 @@
+```python
+def right_angle_triangle(a, b, c):
+    """
+    Return True if the three side lengths a, b, c can form a right-angled triangle,
+    otherwise return False.
+
+    A right-angled triangle must satisfy:
+    1. The triangle inequality: each side must be less than the sum of the other two.
+    2. The Pythagorean theorem: the square of the longest side equals the sum of the squares
+       of the other two sides.
+
+    Parameters
+    ----------
+    a, b, c : float or int
+        Lengths of the sides of the triangle.
+
+    Returns
+    -------
+    bool
+        True if the sides form a right-angled triangle, False otherwise.
+    """
+    # Ensure all sides are positive numbers
+    if a <= 0 or b <= 0 or c <= 0:
+        return False
+
+    # Triangle inequality check
+    if not (a + b > c and a + c > b and b + c > a):
+        return False
+
+    # Identify the longest side
+    sides = sorted([a, b, c])
+    x, y, z = sides  # z is the longest side
+
+    # Check Pythagorean theorem with a tolerance for floating point arithmetic
+    return abs(z**2 - (x**2 + y**2)) < 1e-9
+```

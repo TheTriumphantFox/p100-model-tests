@@ -1,0 +1,80 @@
+```python
+import math
+
+
+def poly(xs: list, x: float):
+    """
+    Evaluates polynomial with coefficients xs at point x.
+    return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n
+    """
+    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])
+
+
+def find_zero(xs: list):
+    """ xs are coefficients of a polynomial.
+    find_zero find x such that poly(x) = 0.
+    find_zero returns only only zero point, even if there are many.
+    Moreover, find_zero only takes list xs having even number of coefficients
+    and largest non zero coefficient as it guarantees
+    a solution.
+    >>> round(find_zero([1, 2]), 2) # f(x) = 1 + 2x
+    -0.5
+    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3
+    1.0
+    """
+    # Find the largest non-zero coefficient
+    max_coeff = max(c for c in xs if c != 0)
+    # Find index of the largest non-zero coefficient
+    idx = xs.index(max_coeff)
+    # The polynomial is: max_coeff * (x^idx + xs[idx+1]/max_coeff * x^(idx+1) + ...)
+    # Factor out max_coeff: max_coeff * (x^idx + a1*x^(idx+1) + ... + an*x^(n))
+    # = max_coeff * x^idx * (1 + a1*x + ... + an*x^(n-idx))
+    # So we need to find zero of: 1 + a1*x + ... + an*x^(n-idx)
+    # where n-idx is even (since total length is even and idx has same parity as length-1 which is odd, so n-idx is even)
+    reduced = [xs[i] / max_coeff for i in range(idx, len(xs))]
+    # Now reduced has even number of coefficients starting from index 0
+    # We need to find root of: reduced[0] + reduced[1]*x + ... + reduced[m-1]*x^(m-1) where m is even
+    # Use bisection method on a wide range
+    # The polynomial has even degree, so as x -> +/- infinity, poly -> +/- infinity
+    # We need to find sign changes
+    
+    def eval_poly(coeffs, x):
+        result = 0.0
+        for c in coeffs:
+            result = result * x + c
+        return result
+    
+    # Evaluate at large positive and negative values to determine signs
+    # Since degree is even and leading coefficient (reduced[0]) determines sign at infinity
+    sign_at_pos = eval_poly(reduced, 1e6)
+    sign_at_neg = eval_poly(reduced, -1e6)
+    
+    # Bisection method
+    def bisect(a, b):
+        fa = eval_poly(reduced, a)
+        fb = eval_poly(reduced, b)
+        if fa * fb > 0:
+            return None
+        for _ in range(100):
+            mid = (a + b) / 2.0
+            fmid = eval_poly(reduced, mid)
+            if fmid == 0:
+                return mid
+            if fa * fmid < 0:
+                b = mid
+                fb = fmid
+            else:
+                a = mid
+                fa = fmid
+        return (a + b) / 2.0
+    
+    # Try a wide range of intervals
+    candidates = []
+    for i in range(len(reduced) - 1):
+        if reduced[i] * reduced[i+1] < 0:
+            root = bisect(i, i + 1)
+            if root is not None:
+                candidates.append(root)
+    
+    # Also try intervals around zero
+    for a in [-2, -1, -0.5, 0.5, 1,

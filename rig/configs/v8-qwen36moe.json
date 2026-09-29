@@ -1,0 +1,2 @@
+{"name": "v8-qwen36moe", "description": "v8 as specified: one planner, checks pinned, no other roles",
+ "planner": {"model": "qwen36moe", "persona": "planner-v8", "pin": true}, "deadline_s": 240}

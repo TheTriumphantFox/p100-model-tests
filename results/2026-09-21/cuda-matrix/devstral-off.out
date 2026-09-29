@@ -1,0 +1,20 @@
+[09-21 20:18:23] ================ QUEUE-DEVSTRAL: leg 'off' ================
+[09-21 20:18:23] prod router :8080 pid=1416288 -- asserted unchanged after every stop_router
+[09-21 20:18:23] --- devstral thinking-off (mmlu96, mmlu2048, humaneval, throughput) ---
+[09-21 20:18:25] router stopped (was pid 2315784, children: none); GPU 37 MiB after 1x2s
+[09-21 20:18:27] router started from /home/hm/llama-cuda12 ctx=8192  (pid 2476597)
+[09-21 20:20:54] devstral ctx8192: 25679 MiB resident, weights 23894 MiB -- fully offloaded
+[09-21 20:20:54] devstral: preflight -- can this model serve one token?
+[09-21 20:20:56] devstral: preflight OK -- {"ok": true, "eval_count": 16, "tok_per_s": 13.7, "prompt_eval_count": 23, "wall_s": 1.8}
+[09-21 20:20:56] devstral: MMLU-Pro per-category=5 (batch 5) num_predict=96
+[09-21 20:22:26] devstral: MMLU pc=5 np=96 -> 58.57% parsed=70/70 tps=13.5 wall=1.5min
+[09-21 20:22:26] devstral: MMLU-Pro per-category=5 (batch 5) num_predict=2048
+[09-21 20:22:50] devstral: MMLU pc=5 np=2048 -> 58.57% parsed=70/70 tps=13.5 wall=0.4min
+[09-21 20:22:50] devstral: HumanEval 164 tasks
+[09-21 21:08:52] devstral: HumanEval -> 84.76% parsed=164/164 tps=12.9 wall=45.8min
+[09-21 21:08:52] devstral: throughput
+[09-21 21:16:07] devstral: throughput -> speed_brief=13.1 speed_medium=12.9 speed_long=12.9 python_coding=12.9
+[09-21 21:16:07] devstral: bench_off DONE (pc=5 what=mmlu96,mmlu2048,humaneval,throughput)
+[09-21 21:16:07] devstral: bench_off rc=0
+[09-21 21:16:09] router stopped (was pid 2476597, children: 2476690); GPU 37 MiB after 1x2s
+[09-21 21:16:09] ================ QUEUE-DEVSTRAL 'off' DONE; bench router down, GPU released ================

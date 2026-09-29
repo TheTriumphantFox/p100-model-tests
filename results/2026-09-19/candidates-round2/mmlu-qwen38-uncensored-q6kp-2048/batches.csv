@@ -1,0 +1,15 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p,biology,1,5,5,5,10.336975049643323,168.80693397500428,10.510968205984682,20,,raw/01-qwen3.8-27b-uncensored-hauhaucs_q6_k_p-01-biology.txt
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p,business,2,3,5,5,10.359377152808065,145.58048177020643,8.1705777879979,20,,raw/01-qwen3.8-27b-uncensored-hauhaucs_q6_k_p-02-business.txt
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p,chemistry,3,3,5,5,10.341363229525006,170.21288634140603,10.524342093005544,20,,raw/01-qwen3.8-27b-uncensored-hauhaucs_q6_k_p-03-chemistry.txt
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p,computer science,4,5,5,5,10.326258125474363,179.12538777144002,15.042680837010266,20,,raw/01-qwen3.8-27b-uncensored-hauhaucs_q6_k_p-04-computer_science.txt
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p,economics,5,4,5,5,10.35791248703319,139.57098935610924,8.144194436987163,20,,raw/01-qwen3.8-27b-uncensored-hauhaucs_q6_k_p-05-economics.txt
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p,engineering,6,5,5,5,10.354341083385062,139.3992458020115,9.11544649800635,20,,raw/01-qwen3.8-27b-uncensored-hauhaucs_q6_k_p-06-engineering.txt
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p,health,7,4,5,5,10.363521234336833,126.91417228757298,7.404658785992069,20,,raw/01-qwen3.8-27b-uncensored-hauhaucs_q6_k_p-07-health.txt
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p,history,8,4,5,5,10.340678834543452,170.51003593554978,10.526505001995247,20,,raw/01-qwen3.8-27b-uncensored-hauhaucs_q6_k_p-08-history.txt
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p,law,9,2,5,5,10.334032086136224,172.918176345867,15.102297901990823,20,,raw/01-qwen3.8-27b-uncensored-hauhaucs_q6_k_p-09-law.txt
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p,math,10,0,5,5,10.359801071099833,150.09726795085405,8.186774792993674,20,,raw/01-qwen3.8-27b-uncensored-hauhaucs_q6_k_p-10-math.txt
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p,other,11,4,5,5,10.35393905257316,135.83416035084022,5.644248820986832,20,,raw/01-qwen3.8-27b-uncensored-hauhaucs_q6_k_p-11-other.txt
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p,philosophy,12,4,5,5,10.354158825548472,135.56559992971717,7.695818887994392,20,,raw/01-qwen3.8-27b-uncensored-hauhaucs_q6_k_p-12-philosophy.txt
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p,physics,13,1,5,5,10.333423406340692,141.0920385321111,9.260966625995934,20,,raw/01-qwen3.8-27b-uncensored-hauhaucs_q6_k_p-13-physics.txt
+qwen3.8-27b-uncensored-hauhaucs:q6_k_p,psychology,14,4,5,5,10.356550129586335,141.7874060431476,8.09713932298473,20,,raw/01-qwen3.8-27b-uncensored-hauhaucs_q6_k_p-14-psychology.txt

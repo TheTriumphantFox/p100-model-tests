@@ -1,0 +1,2 @@
+{"key": "geneval:0000:0", "model": "pilot_geneval", "dataset": "geneval", "test": "single_object", "prompt_id": "0000", "image": "/home/hm/Projects/Tests/2026-09-02/image-generation/pilot_geneval/geneval/0000/samples/0000.png", "clip_score": 0.290245, "status": "success"}
+{"key": "geneval:0001:0", "model": "pilot_geneval", "dataset": "geneval", "test": "single_object", "prompt_id": "0001", "image": "/home/hm/Projects/Tests/2026-09-02/image-generation/pilot_geneval/geneval/0001/samples/0000.png", "clip_score": 0.312268, "status": "success"}

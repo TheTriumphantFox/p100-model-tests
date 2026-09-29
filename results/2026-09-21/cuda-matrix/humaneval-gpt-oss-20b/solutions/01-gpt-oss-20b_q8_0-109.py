@@ -1,0 +1,26 @@
+def move_one_ball(arr):
+    """
+    Return True if the array can be sorted in non‑decreasing order by a
+    sequence of right shift operations, otherwise False.
+    """
+    n = len(arr)
+    if n <= 1:
+        return True
+
+    # Count the number of places where the order is violated
+    inv = 0
+    for i in range(n - 1):
+        if arr[i] > arr[i + 1]:
+            inv += 1
+
+    # If there are no inversions, the array is already sorted
+    if inv == 0:
+        return True
+
+    # If there is more than one inversion, it cannot be a single rotation
+    if inv > 1:
+        return False
+
+    # Exactly one inversion: check that the last element is not greater
+    # than the first element after rotation
+    return arr[-1] <= arr[0]

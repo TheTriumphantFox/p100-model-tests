@@ -1,0 +1,7 @@
+{
+  "dataset": "t2i_compbench",
+  "category": "numeracy",
+  "prompt_id": "numeracy_0203",
+  "index": 203,
+  "prompt": "three chickens, four kites, three candles, four birds and four shrimp"
+}

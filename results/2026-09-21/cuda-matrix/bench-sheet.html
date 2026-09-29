@@ -1,0 +1,797 @@
+<title>P100 Model Bench Sheet</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --ground:#F4F6F8; --surface:#FFFFFF; --surface-2:#FAFBFC; --surface-3:#EEF1F4;
+    --ink:#15181D; --ink-2:#454D59; --muted:#6B7480;
+    --rule:#DDE2E8; --rule-strong:#C3CBD4;
+    --accent:#0891B2; --accent-soft:#0891B21F; --accent-ink:#066F8A;
+    --good:#15803D; --good-bg:#15803D18;
+    --warn:#B45309; --warn-bg:#B4530918;
+    --bad:#B91C1C; --bad-bg:#B91C1C14;
+    --display:'Archivo',system-ui,sans-serif;
+    --body:'Source Sans 3',system-ui,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:#101317; --surface:#181C22; --surface-2:#1E232A; --surface-3:#232932;
+      --ink:#E9ECF0; --ink-2:#AEB6C0; --muted:#7C8693;
+      --rule:#2A3037; --rule-strong:#3A424C;
+      --accent:#0EA5C6; --accent-soft:#0EA5C629; --accent-ink:#4FC9E4;
+      --good:#4ADE80; --good-bg:#4ADE8020;
+      --warn:#FBBF24; --warn-bg:#FBBF2420;
+      --bad:#F87171; --bad-bg:#F8717120;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:#101317; --surface:#181C22; --surface-2:#1E232A; --surface-3:#232932;
+    --ink:#E9ECF0; --ink-2:#AEB6C0; --muted:#7C8693;
+    --rule:#2A3037; --rule-strong:#3A424C;
+    --accent:#0EA5C6; --accent-soft:#0EA5C629; --accent-ink:#4FC9E4;
+    --good:#4ADE80; --good-bg:#4ADE8020;
+    --warn:#FBBF24; --warn-bg:#FBBF2420;
+    --bad:#F87171; --bad-bg:#F8717120;
+  }
+
+  * { box-sizing:border-box; }
+  body {
+    background:var(--ground); color:var(--ink);
+    font-family:var(--body); font-size:15px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:1500px; margin:0 auto; padding:28px 22px 72px; }
+  @media (max-width:640px){ .wrap{ padding:18px 12px 48px; } }
+
+  h1,h2,h3 { font-family:var(--display); text-wrap:balance; margin:0; }
+  h1 { font-size:clamp(24px,3.4vw,36px); font-weight:700; letter-spacing:-0.02em; }
+  h2 { font-size:19px; font-weight:600; letter-spacing:-0.01em; }
+  h3 { font-size:14px; font-weight:600; }
+  p { margin:0; }
+  a { color:var(--accent-ink); }
+  code, .mono { font-family:var(--mono); font-variant-ligatures:none; }
+  .num { font-variant-numeric:tabular-nums; }
+
+  .eyebrow {
+    font-family:var(--mono); font-size:11px; font-weight:500;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+  }
+
+  /* ---------- header ---------- */
+  header.masthead {
+    border-top:3px solid var(--accent);
+    background:var(--surface); border:1px solid var(--rule); border-top-width:3px;
+    padding:22px 24px; display:flex; flex-direction:column; gap:14px;
+  }
+  .mast-top { display:flex; flex-wrap:wrap; gap:16px 28px; align-items:baseline; justify-content:space-between; }
+  .rig {
+    font-family:var(--mono); font-size:11.5px; color:var(--muted);
+    display:flex; flex-wrap:wrap; gap:4px 14px;
+  }
+  .verdict {
+    display:flex; gap:14px; align-items:flex-start;
+    background:var(--surface-2); border:1px solid var(--rule); border-left:3px solid var(--good);
+    padding:14px 16px;
+  }
+  .verdict .v-body { display:flex; flex-direction:column; gap:6px; }
+  .verdict strong { font-family:var(--display); font-size:16px; font-weight:600; }
+  .verdict p { color:var(--ink-2); max-width:68ch; }
+
+  .keyfind { display:grid; gap:1px; background:var(--rule); border:1px solid var(--rule);
+             grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); }
+  .keyfind > div { background:var(--surface); padding:13px 15px; display:flex; flex-direction:column; gap:5px; }
+  .keyfind .kf-h { font-family:var(--display); font-weight:600; font-size:13.5px; }
+  .keyfind .kf-b { font-size:13px; color:var(--ink-2); }
+
+  /* ---------- section frame ---------- */
+  section { margin-top:34px; }
+  .sec-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 16px; margin-bottom:12px; }
+  .sec-head p { font-size:13.5px; color:var(--muted); max-width:78ch; }
+
+  .panel { background:var(--surface); border:1px solid var(--rule); padding:18px 20px; }
+
+  /* ---------- controls ---------- */
+  .controls { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:10px; }
+  .chip {
+    font-family:var(--mono); font-size:11.5px; letter-spacing:.02em;
+    background:var(--surface); color:var(--ink-2);
+    border:1px solid var(--rule-strong); padding:5px 11px; cursor:pointer;
+    display:inline-flex; gap:7px; align-items:center;
+  }
+  .chip:hover { border-color:var(--accent); color:var(--ink); }
+  .chip[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+  :root[data-theme="dark"] .chip[aria-pressed="true"] { color:#0A1116; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .chip[aria-pressed="true"] { color:#0A1116; }
+  }
+  .chip .n { opacity:.7; font-size:10.5px; }
+  .chip:focus-visible, th button:focus-visible, tr.row:focus-visible {
+    outline:2px solid var(--accent); outline-offset:1px;
+  }
+
+  /* ---------- the sheet ---------- */
+  .sheet-scroll { overflow-x:auto; border:1px solid var(--rule); background:var(--surface); }
+  table { border-collapse:separate; border-spacing:0; width:100%; min-width:1080px; }
+  thead th {
+    position:sticky; top:0; z-index:2;
+    background:var(--surface-3); border-bottom:1px solid var(--rule-strong);
+    padding:0; text-align:left; white-space:nowrap;
+  }
+  thead th button {
+    all:unset; cursor:pointer; display:block; width:100%;
+    font-family:var(--mono); font-size:10.5px; font-weight:500;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+    padding:9px 12px;
+  }
+  thead th button:hover { color:var(--ink); }
+  thead th.right button { text-align:right; }
+  thead th button .dir { color:var(--accent); font-size:9px; }
+
+  tbody td { border-bottom:1px solid var(--rule); padding:9px 12px; vertical-align:top; }
+  tbody tr.row { cursor:pointer; }
+  tbody tr.row:hover td { background:var(--surface-2); }
+  tbody tr.row.open td { background:var(--accent-soft); }
+  td.right { text-align:right; }
+
+  /* status stripe in the first cell */
+  td.id-cell { border-left:3px solid var(--rule-strong); }
+  tr[data-status="shelf"] td.id-cell { border-left-color:var(--good); }
+  tr[data-status="production"] td.id-cell { border-left-color:var(--accent); }
+  tr[data-status="deleted"] td.id-cell { border-left-color:var(--rule-strong); }
+  tr[data-status="unrunnable"] td.id-cell { border-left-color:var(--bad); }
+
+  .m-name { font-family:var(--mono); font-size:12.5px; font-weight:500; color:var(--ink); }
+  .m-tag { font-family:var(--mono); font-size:10.5px; color:var(--muted); margin-top:2px; }
+  .m-role { font-size:11.5px; color:var(--ink-2); margin-top:3px; max-width:44ch; }
+  .incumbent-mark {
+    font-family:var(--mono); font-size:9.5px; letter-spacing:.08em; text-transform:uppercase;
+    background:var(--accent); color:#fff; padding:1px 5px; margin-left:6px; vertical-align:1px;
+  }
+  :root[data-theme="dark"] .incumbent-mark { color:#0A1116; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .incumbent-mark { color:#0A1116; }
+  }
+
+  .pill {
+    font-family:var(--mono); font-size:10px; letter-spacing:.05em; text-transform:uppercase;
+    padding:2px 7px; white-space:nowrap; border:1px solid transparent; display:inline-block;
+  }
+  .pill.shelf { background:var(--good-bg); color:var(--good); border-color:var(--good); }
+  .pill.production { background:var(--accent-soft); color:var(--accent-ink); border-color:var(--accent); }
+  .pill.deleted { background:var(--surface-3); color:var(--muted); border-color:var(--rule-strong); }
+  .pill.unrunnable { background:var(--bad-bg); color:var(--bad); border-color:var(--bad); }
+
+  /* score cell: value + magnitude bar from zero */
+  .sc { display:flex; flex-direction:column; gap:4px; align-items:flex-end; min-width:88px; }
+  .sc-v { font-family:var(--mono); font-size:13px; font-weight:500; font-variant-numeric:tabular-nums; }
+  .sc-v.lead { color:var(--accent-ink); font-weight:700; }
+  .sc-v.floor { color:var(--warn); }
+  .sc-bar { width:100%; height:5px; background:var(--surface-3); position:relative; }
+  .sc-bar i { position:absolute; inset:0 auto 0 0; background:var(--accent); border-radius:0 2px 2px 0; }
+  .sc-bar i.floorbar { background:var(--warn); }
+  .sc-p { font-family:var(--mono); font-size:10px; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .sc-p.sig { color:var(--bad); }
+  .sc-none { font-family:var(--mono); font-size:12px; color:var(--muted); }
+
+  /* expanded detail */
+  tr.detail td { background:var(--surface-2); border-bottom:2px solid var(--rule-strong); padding:0; }
+  tr.detail[hidden] { display:none; }
+  .dt { padding:16px 18px 18px; display:grid; gap:16px;
+        grid-template-columns:repeat(auto-fit,minmax(232px,1fr)); }
+  .dt-block { display:flex; flex-direction:column; gap:7px; }
+  .dt-block h3 { color:var(--muted); font-family:var(--mono); font-size:10px;
+                 letter-spacing:.11em; text-transform:uppercase; font-weight:500; }
+  .kv { display:flex; justify-content:space-between; gap:12px; font-size:12.5px;
+        border-bottom:1px dotted var(--rule); padding-bottom:3px; }
+  .kv dt { color:var(--muted); }
+  .kv dd { margin:0; font-family:var(--mono); font-size:12px; text-align:right;
+           font-variant-numeric:tabular-nums; }
+  .dt-note { font-size:12.5px; color:var(--ink-2); grid-column:1/-1;
+             border-left:2px solid var(--warn); padding-left:11px; }
+
+  /* ---------- generic small tables ---------- */
+  table.mini { min-width:0; }
+  table.mini th { position:static; background:transparent; border-bottom:1px solid var(--rule-strong);
+                  font-family:var(--mono); font-size:10px; letter-spacing:.1em;
+                  text-transform:uppercase; color:var(--muted); font-weight:500; padding:0 10px 6px; }
+  table.mini th.right, table.mini td.right { text-align:right; }
+  table.mini td { border-bottom:1px solid var(--rule); padding:8px 10px; font-size:13px; }
+  table.mini td.m { font-family:var(--mono); font-size:12px; font-variant-numeric:tabular-nums; }
+
+  .grid-2 { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); }
+
+  .legend { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); }
+  .legend div { display:flex; flex-direction:column; gap:3px; }
+  .legend .lg-t { font-family:var(--display); font-weight:600; font-size:13px; }
+  .legend .lg-d { font-size:12.5px; color:var(--ink-2); }
+
+  ol.todo { margin:0; padding-left:20px; display:flex; flex-direction:column; gap:11px; }
+  ol.todo li { font-size:13.5px; color:var(--ink-2); }
+  ol.todo strong { color:var(--ink); }
+
+  footer { margin-top:38px; padding-top:16px; border-top:1px solid var(--rule);
+           font-size:12.5px; color:var(--muted); display:flex; flex-direction:column; gap:8px; }
+  footer code { font-size:11.5px; }
+
+  .theme-toggle {
+    all:unset; cursor:pointer; font-family:var(--mono); font-size:11px;
+    border:1px solid var(--rule-strong); padding:5px 10px; color:var(--muted);
+  }
+  .theme-toggle:hover { color:var(--ink); border-color:var(--accent); }
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; animation:none !important; } }
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <div class="mast-top">
+    <div>
+      <div class="eyebrow">Local model evaluation &middot; round 3</div>
+      <h1>P100 Model Bench Sheet</h1>
+    </div>
+    <button class="theme-toggle" id="themeBtn" type="button">theme</button>
+  </div>
+  <div class="rig">
+    <span>2 &times; Tesla P100-PCIE-16GB (32 GB total, sm_60)</span>
+    <span>llama.cpp CUDA 12.6</span>
+    <span>MMLU-Pro 70 q &middot; seed 42 &middot; temp 0</span>
+    <span>HumanEval 164 tasks</span>
+    <span id="gen">generated —</span>
+  </div>
+
+  <div class="verdict">
+    <div class="v-body">
+      <strong>Keep the incumbent. Nothing displaced it.</strong>
+      <p><code>Qwen3.6-27B-Uncensored-HauhauCS-Aggressive Q5_K_M</code> holds the best score in
+      every accuracy column, and it is the only model that finishes all 14 reasoning batches
+      instead of running out of thinking budget partway through. Sixteen models have now been
+      measured on this machine; none of them beat it on any test.</p>
+    </div>
+  </div>
+
+  <div class="keyfind">
+    <div>
+      <div class="kf-h">The fast-and-accurate combination does not exist</div>
+      <div class="kf-b">The <code>ggml-org</code> Q8_0 runs at 22.7 tok/s with its matching
+      drafters &mdash; 2&times; the incumbent &mdash; but codes at 95.73 against 96.34. The speed is
+      real; the accuracy gain was wishful.</div>
+    </div>
+    <div>
+      <div class="kf-h">Our best reasoning score was a fluke</div>
+      <div class="kf-b">GPT-OSS-20B was on record at 77.14. Run five times it scores
+      <strong>71.43 in four of them</strong> &mdash; an exact tie with the incumbent. It is also
+      the only model whose answers change between identical runs.</div>
+    </div>
+    <div>
+      <div class="kf-h">The production model is finally measured &mdash; and it is the wrong
+      test for it</div>
+      <div class="kf-b"><code>devstral-patched</code> loads fine, runs at 12.9&ndash;13.1 tok/s,
+      and scores <strong>84.76 coding</strong> and <strong>58.57 quick</strong> &mdash; the
+      coding gap against the incumbent is real (p&lt;0.001). It has <strong>no thinking
+      mode</strong>. But every column here is single-turn Q&amp;A, and what production asks of
+      it is agentic tool use, which nothing here measures. Do not read this as
+      &ldquo;replace it&rdquo;.</div>
+    </div>
+    <div>
+      <div class="kf-h">Three shelf models cannot run here at all</div>
+      <div class="kf-b">Not &ldquo;scored badly&rdquo; &mdash; they fail to load on this build.
+      Including <code>opus-distill</code>, kept specifically to verify a 75.7 claim that
+      therefore cannot be checked.</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="sec-head">
+    <h2>How to read the sheet</h2>
+  </div>
+  <div class="panel legend">
+    <div>
+      <span class="lg-t">Reasoning &mdash; quick</span>
+      <span class="lg-d">MMLU-Pro, 70 questions, model answers immediately with no chain of
+      thought. Generates ~2 tokens per question.</span>
+    </div>
+    <div>
+      <span class="lg-t">Reasoning &mdash; thinking</span>
+      <span class="lg-d">The same 70 questions with thinking enabled and a 12,288-token budget
+      per batch. Generates 35,000&ndash;121,000 tokens per run.</span>
+    </div>
+    <div>
+      <span class="lg-t">Coding</span>
+      <span class="lg-d">All 164 HumanEval problems; the percentage whose generated solution
+      actually executes correctly in a sandbox.</span>
+    </div>
+    <div>
+      <span class="lg-t">&ge; means the real score is higher</span>
+      <span class="lg-d">That many thinking batches spent the whole budget and never wrote an
+      answer, which scores as wrong. A <span style="color:var(--warn)">&ge; figure is a floor</span>
+      and cannot be fairly compared against a clean one.</span>
+    </div>
+    <div>
+      <span class="lg-t">p is versus the incumbent</span>
+      <span class="lg-d">McNemar's exact test on the same questions, answer by answer.
+      <span style="color:var(--bad)">p&nbsp;&lt;&nbsp;0.05</span> means the gap is real;
+      anything above is a tie, whatever the score difference looks like.</span>
+    </div>
+    <div>
+      <span class="lg-t">Bars start at zero</span>
+      <span class="lg-d">Deliberately &mdash; it shows how tightly clustered these models
+      actually are, which is the main finding. Click any row for the full record.</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <h2>Every model tested</h2>
+    <p>All sixteen, including the ones already deleted and the ones that will not load &mdash;
+    so this doubles as the record of what has been tried. Click a row to expand it.</p>
+  </div>
+  <div class="controls" id="filters"></div>
+  <div class="sheet-scroll">
+    <table id="sheet">
+      <thead>
+        <tr>
+          <th data-sort="full"><button type="button">Model <span class="dir"></span></button></th>
+          <th class="right" data-sort="size_gb"><button type="button">Size <span class="dir"></span></button></th>
+          <th data-sort="arch"><button type="button">Runtime arch <span class="dir"></span></button></th>
+          <th class="right" data-sort="speed"><button type="button">Speed tok/s <span class="dir"></span></button></th>
+          <th class="right" data-sort="reason_quick"><button type="button">Reasoning &mdash; quick <span class="dir"></span></button></th>
+          <th class="right" data-sort="reason_think"><button type="button">Reasoning &mdash; thinking <span class="dir"></span></button></th>
+          <th class="right" data-sort="coding"><button type="button">Coding <span class="dir"></span></button></th>
+          <th data-sort="status"><button type="button">Status <span class="dir"></span></button></th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <h2>Can the numbers be trusted?</h2>
+    <p>Yes, with one named exception. The same measurement was repeated to see whether it
+    returns the same answer twice.</p>
+  </div>
+  <div class="panel">
+    <table class="mini" id="repro">
+      <thead><tr>
+        <th>What was repeated</th><th class="right">Runs</th>
+        <th class="right">Tokens per run</th><th>Scores</th>
+        <th class="right">Spread</th><th>Same answers each time?</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+    <div class="grid-2" style="margin-top:16px">
+      <div>
+        <h3 style="margin-bottom:5px">The thinking column is bit-reproducible</h3>
+        <p style="font-size:13px;color:var(--ink-2)">The incumbent's 44,201-token thinking run
+        was executed three times across two days and returned an identical score, an identical
+        token count and identical per-question answers every time. An earlier worry &mdash; that
+        long generations might carry variance exceeding the gaps being compared &mdash; is
+        refuted.</p>
+      </div>
+      <div>
+        <h3 style="margin-bottom:5px">GPT-OSS-20B is the exception</h3>
+        <p style="font-size:13px;color:var(--ink-2)">The only model that gives different answers
+        on identical repeats. Two of its runs scored the same while disagreeing on which
+        questions they got right. Its 77.14 record reproduced under no setting tried &mdash;
+        including letting it think three times harder, which made it <em>worse</em> (60.00).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <h2>How much context fits?</h2>
+    <p>The worry was that the big Q8_0 files could not hold a useful conversation. They can,
+    easily &mdash; and two numbers in the earlier notes were wrong.</p>
+  </div>
+  <div class="grid-2">
+    <div class="panel">
+      <table class="mini" id="ladder">
+        <thead><tr>
+          <th>Model</th><th class="right">KV per token</th>
+          <th class="right">Largest tested</th><th class="right">VRAM spare</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+      <p style="font-size:12.5px;color:var(--muted);margin-top:11px">Every model stayed fully
+      resident at every size tested, with decode speed flat to two decimals &mdash; context costs
+      memory here, never speed. 32,768 was the largest size <em>tried</em>, not the ceiling;
+      no spill boundary has been found.</p>
+    </div>
+    <div class="panel" style="display:flex;flex-direction:column;gap:13px">
+      <div>
+        <h3 style="margin-bottom:4px">KV is 72 KiB/token, not 260</h3>
+        <p style="font-size:13px;color:var(--ink-2)">Measured by VRAM difference across context
+        sizes. The earlier figure was wrong by 3.6&times;. On its spare memory the incumbent
+        could hold roughly <strong>180,000 tokens</strong> of context &mdash; we have been
+        running 8,192.</p>
+      </div>
+      <div>
+        <h3 style="margin-bottom:4px">G9v3's context advantage is 1.6&times;, not 7&times;</h3>
+        <p style="font-size:13px;color:var(--ink-2)">46.0 KiB/token against the dense models'
+        72.0 &mdash; not the 38-vs-256 used to justify keeping it. Still the cheapest measured,
+        but not on its own a reason to keep a model.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <h2>Why three models produce no numbers</h2>
+    <p>Each fails at model load with its own error. The file is intact in every case &mdash; the
+    runtime is what cannot handle it.</p>
+  </div>
+  <div class="panel">
+    <table class="mini">
+      <thead><tr><th>Model</th><th>Load error</th><th>Diagnosis</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="m">Gemma4-E4B-Abliterated Q4_K_M</td>
+          <td class="m" style="color:var(--bad)">wrong number of tensors; expected 2131, got 720</td>
+          <td>Header and file both hold 2131. The <code>gemma4</code> loader maps only 720 &mdash;
+          an E4B architecture support gap.</td>
+        </tr>
+        <tr>
+          <td class="m">Qwen3.6-27B Opus-Distill Q4_K_M</td>
+          <td class="m" style="color:var(--bad)">tensor 'blk.0.ssm_dt.bias' not found</td>
+          <td>Carries <code>vision.block_count 27</code> and 1292 tensors &mdash; it is a
+          <strong>vision model</strong>, not the text distill our notes describe.</td>
+        </tr>
+        <tr>
+          <td class="m">Qwen3.6-35B-A3B-Abliterated-VL Q4_K_M</td>
+          <td class="m" style="color:var(--bad)">rope.dimension_sections has wrong array length</td>
+          <td>Multimodal RoPE sections the text-only loader cannot parse.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--ink-2);margin-top:13px">The incumbent is the control:
+    same <code>qwen35</code> architecture, same <code>block_count 64</code>, same SSM keys &mdash;
+    but 851 tensors and no vision block, and it loads. Both Qwen failures carry their vision
+    tower inside the single GGUF, and their ollama manifests list exactly one model blob with no
+    separate projector, so this cannot be fixed by re-pointing a symlink.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><h2>What is still not done</h2></div>
+  <div class="panel">
+    <ol class="todo">
+      <li><strong>Nothing here measures agentic tool use &mdash; which is the entire job
+      devstral does in production.</strong> All four columns are single-turn question and
+      answer: one question in, one answer out, marked right or wrong. Devstral's own prompt
+      template carries a tool-calling section, and the local patch that gives it the
+      <code>-patched</code> name is a fix to that section for agentic clients. So its scores
+      below say little about whether it is the right model for its job, and
+      &ldquo;devstral scores under the incumbent&rdquo; is <em>not</em> an argument for
+      replacing it. Closing this needs a tool-use harness, which does not exist here.</li>
+      <li><strong>Three models need a newer or patched runtime</strong> before they can be tested
+      at all.</li>
+      <li><strong>The wider 280-question exam is built but not run</strong>, waiting on which
+      models deserve it. It will need the incumbent re-run as a fresh baseline: it draws
+      different questions &mdash; only 9 of the current 70 overlap &mdash; so its scores cannot be
+      compared with anything above.</li>
+      <li><strong>Refusal behaviour is unmeasured too.</strong> This round sharpened why &mdash;
+      the quick exam cannot even tell an uncensored model from a stock one. Three Qwen3.8
+      variants gave <em>identical</em> answers to all 70 questions, so it is no evidence
+      either way.</li>
+      <li><strong>Production can probably hold twice the context it runs, for free.</strong>
+      Devstral measured 168 KB per token of context at <code>f16</code> &mdash; about 84 KB at
+      the compressed <code>q8_0</code> production uses &mdash; which leaves roughly 4,400 MB
+      unused at its current 49,152 setting and puts the ceiling near 100,000 tokens. Raising
+      it to 65,536 costs nothing. Confirm the compressed figure with
+      <code>ctx-ladder.sh</code> first: it is the measured f16 number halved, not separately
+      measured.</li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div><strong>Settings</strong> &mdash; identical to the previous two rounds, so old and new
+  numbers are comparable. MMLU-Pro: 70 questions (5 per category &times; 14), seed 42,
+  temperature 0; quick at 8,192 context, thinking at 16,384 context with a 12,288-token budget.
+  HumanEval: all 164 problems. Comparisons are McNemar's exact test on paired per-question
+  results &mdash; every model answers the same questions, and discarding that pairing would both
+  lose power and, at 70 questions, be capable of calling a genuine 15-point gap noise.</div>
+  <div><strong>Source</strong> &mdash; <code>~/Projects/Tests/2026-09-21/cuda-matrix/</code>.
+  61 benchmark runs on disk, each storing its own settings, question set and per-question
+  results. <code>REPORT.md</code> is the technical write-up, <code>DATASET.txt</code> the raw
+  dump, <code>FINAL.md</code> the plain-text version of this page.</div>
+</footer>
+</div>
+
+<script>
+const DATA = {"models":[{"tag":"qwen3.6-27b-abliterated:q5_k_m","size_gb":20.8,"full":"Qwen3.6-27B-Uncensored-HauhauCS-Aggressive Q5_K_M","quant":"Q5_K_M","origin":"HauhauCS (abliterated)","arch":"qwen35","status":"shelf","role":"INCUMBENT \u2014 the model to beat","reason_quick":71.43,"reason_quick_floor":0,"reason_quick_tok":280,"reason_think":87.14,"reason_think_floor":0,"reason_think_tok":44201,"coding":96.34,"coding_floor":0,"coding_tok":0,"tput":"11.1\u201311.5","kv_kib":72.0,"ctx_max":32768,"vram_spare":10377},{"tag":"qwen3.6-27b-opus-distill:q4_k_m","size_gb":17.5,"full":"Qwen3.6-27B Opus-Distill Q4_K_M","quant":"Q4_K_M","origin":"Claude/GLM/Kimi distill datasets","arch":"qwen35 + vision","status":"unrunnable","role":"claims 75.7 reasoning \u2014 unverifiable here","reason_quick":null,"reason_quick_floor":0,"reason_quick_tok":null,"reason_think":null,"reason_think_floor":0,"reason_think_tok":null,"coding":null,"coding_floor":0,"coding_tok":null,"tput":null},{"tag":"qwen3.6-35b-a3b-abliterated-vl:q4_k_m","size_gb":22.1,"full":"Qwen3.6-35B-A3B-Abliterated-VL Q4_K_M","quant":"Q4_K_M","origin":"abliterated, vision-language","arch":"qwen35moe + vision","status":"unrunnable","role":"vision + the qwen worker","reason_quick":null,"reason_quick_floor":0,"reason_quick_tok":null,"reason_think":null,"reason_think_floor":0,"reason_think_tok":null,"coding":null,"coding_floor":0,"coding_tok":null,"tput":null},{"tag":"qwen3.8-27b-stock:q4_k_m","size_gb":16.8,"full":"Qwen3.8-27B (stock) Q4_K_M","quant":"Q4_K_M","origin":"stock, unmodified","arch":"qwen35","status":"shelf","role":"the only unmodified Qwen3.8","reason_quick":67.14,"reason_quick_floor":0,"reason_quick_tok":280,"reason_quick_p":0.5078,"reason_quick_disc":"6/3","reason_think":82.86,"reason_think_floor":2,"reason_think_tok":44659,"reason_think_p":0.4531,"reason_think_disc":"5/2","coding":93.29,"coding_floor":0,"coding_tok":0,"coding_p":0.1797,"coding_disc":"7/2","tput":"12.1\u201312.6"},{"tag":"qwen3.8-27b-unsloth:q8_0","size_gb":29.0,"full":"Qwen3.8-27B Q8_0 \u2014 Unsloth","quant":"Q8_0","origin":"Unsloth","arch":"qwen35","status":"shelf","role":"best coding score measured","reason_quick":68.57,"reason_quick_floor":0,"reason_quick_tok":280,"reason_quick_p":0.7266,"reason_quick_disc":"5/3","reason_think":77.14,"reason_think_floor":2,"reason_think_tok":51779,"reason_think_p":0.0391,"reason_think_disc":"8/1","coding":97.56,"coding_floor":0,"coding_tok":0,"coding_p":0.7266,"coding_disc":"3/5","tput":"10.9\u201311.2","kv_kib":72.0,"ctx_max":32768,"vram_spare":3043},{"tag":"qwen3.8-27b-unsloth:ud_q6_k","size_gb":22.0,"full":"Qwen3.8-27B UD-Q6_K \u2014 Unsloth","quant":"UD-Q6_K","origin":"Unsloth (dynamic)","arch":"qwen35","status":"deleted","role":"dominated by the Unsloth Q8_0 on both axes","reason_quick":70.0,"reason_quick_floor":0,"reason_quick_tok":280,"reason_quick_p":1.0,"reason_quick_disc":"4/3","reason_think":null,"reason_think_floor":0,"reason_think_tok":null,"coding":95.73,"coding_floor":0,"coding_tok":0,"coding_p":1.0,"coding_disc":"5/4","tput":"9.8\u201310.2"},{"tag":"qwen3.8-27b-uncensored-hauhaucs:q6_k_p","size_gb":25.9,"full":"Qwen3.8-27B-Uncensored-HauhauCS-Aggressive Q6_K_P","quant":"Q6_K_P","origin":"HauhauCS (uncensored)","arch":"qwen35","status":"shelf","role":"the uncensored Qwen3.8","reason_quick":68.57,"reason_quick_floor":0,"reason_quick_tok":280,"reason_quick_p":0.7266,"reason_quick_disc":"5/3","reason_think":82.86,"reason_think_floor":1,"reason_think_tok":48622,"reason_think_p":0.375,"reason_think_disc":"4/1","coding":95.73,"coding_floor":0,"coding_tok":0,"coding_p":1.0,"coding_disc":"4/3","tput":"9.9\u201310.3","kv_kib":72.0,"ctx_max":32768,"vram_spare":5687},{"tag":"qwen3.8-27b-ggmlorg:q8_0","size_gb":28.6,"full":"Qwen3.8-27B Q8_0 \u2014 ggml-org","quant":"Q8_0","origin":"ggml-org","arch":"qwen35","status":"shelf","role":"has matching DFlash/MTP drafters: 22.7 tok/s","reason_quick":68.57,"reason_quick_floor":0,"reason_quick_tok":280,"reason_quick_p":0.7266,"reason_quick_disc":"5/3","reason_think":78.57,"reason_think_floor":2,"reason_think_tok":51195,"reason_think_p":0.1094,"reason_think_disc":"8/2","coding":95.73,"coding_floor":0,"coding_tok":0,"coding_p":1.0,"coding_disc":"4/3","tput":"10.9\u201311.2","kv_kib":72.0,"ctx_max":32768,"vram_spare":3043},{"tag":"gpt-oss-20b:q8_0","size_gb":12.1,"full":"GPT-OSS-20B Q8_0","quant":"Q8_0 (MXFP4 experts)","origin":"stock","arch":"gpt-oss","status":"shelf","role":"fastest useful model; reasons unconditionally","reason_quick":71.43,"reason_quick_floor":0,"reason_quick_tok":5348,"reason_quick_p":1.0,"reason_quick_disc":"10/10","reason_think":72.86,"reason_think_floor":1,"reason_think_tok":35091,"reason_think_p":0.0063,"reason_think_disc":"11/1","coding":95.12,"coding_floor":0,"coding_tok":0,"coding_p":0.7266,"coding_disc":"5/3","tput":"66.0\u201367.5"},{"tag":"gemma4-e4b-abliterated:q4_k_m","size_gb":6.3,"full":"Gemma4-E4B-Abliterated Q4_K_M","quant":"Q4_K_M","origin":"abliterated","arch":"gemma4 (E4B)","status":"unrunnable","role":"only audio-in model on the shelf","reason_quick":null,"reason_quick_floor":0,"reason_quick_tok":null,"reason_think":null,"reason_think_floor":0,"reason_think_tok":null,"coding":null,"coding_floor":0,"coding_tok":null,"tput":null},{"tag":"devstral-patched:latest","size_gb":25.1,"full":"Devstral-Small-2 24B Instruct 2512 Q8_0 (patched)","quant":"Q8_0","origin":"patched local build \u2014 tool-calling fix for agentic clients","arch":"mistral3","status":"production","role":"live on :8080; measured 2026-09-21 \u2014 no thinking mode","reason_quick":58.57,"reason_quick_floor":0,"reason_quick_tok":280,"reason_quick_p":0.0636,"reason_quick_disc":"14/5","reason_think":null,"reason_think_floor":0,"reason_think_tok":280,"reason_think_nothink":true,"coding":84.76,"coding_floor":0,"coding_tok":0,"coding_p":0.0001,"coding_disc":"21/2","tput":"12.9\u201313.1"},{"tag":"ornith-1.5-35b-a3b:q4_k_m","size_gb":21.7,"full":"Ornith-1.5-35B-A3B Q4_K_M","quant":"Q4_K_M","origin":"stock","arch":"qwen35moe","status":"shelf","role":"closest MoE candidate; 4.8x speed","reason_quick":61.43,"reason_quick_floor":0,"reason_quick_tok":280,"reason_quick_p":0.0923,"reason_quick_disc":"10/3","reason_think":81.43,"reason_think_floor":1,"reason_think_tok":41180,"reason_think_p":0.2188,"reason_think_disc":"5/1","coding":92.07,"coding_floor":0,"coding_tok":0,"coding_p":0.0654,"coding_disc":"9/2","tput":"47.8\u201349.6"},{"tag":"g9v3-39a5b:q4_k_m","size_gb":23.6,"full":"G9v3-39A5B Q4_K_M","quant":"Q4_K_M","origin":"stock","arch":"g9v3 (fork runtime)","status":"shelf","role":"cheapest context measured","reason_quick":67.14,"reason_quick_floor":0,"reason_quick_tok":280,"reason_quick_p":0.5811,"reason_quick_disc":"8/5","reason_think":68.57,"reason_think_floor":3,"reason_think_tok":54288,"reason_think_p":0.0023,"reason_think_disc":"15/2","coding":93.9,"coding_floor":0,"coding_tok":0,"coding_p":0.3438,"coding_disc":"7/3","tput":"39.0\u201340.2","kv_kib":46.0,"ctx_max":32768,"vram_spare":7783},{"tag":"nemotron-cascade-2-30b-a3b:q4_k_m","size_gb":24.7,"full":"Nemotron-Cascade-2-30B-A3B Q4_K_M","quant":"Q4_K_M","origin":"stock","arch":"nemotron_h_moe","status":"deleted","role":"fastest measured, but strictly dominated","reason_quick":48.57,"reason_quick_floor":0,"reason_quick_tok":280,"reason_quick_p":0.0001,"reason_quick_disc":"17/1","reason_think":71.43,"reason_think_floor":2,"reason_think_tok":59583,"reason_think_p":0.0034,"reason_think_disc":"12/1","coding":89.02,"coding_floor":0,"coding_tok":0,"coding_p":0.0005,"coding_disc":"12/0","tput":"69.0\u201370.5"},{"tag":"xing4.0-29b-a4b:iq4_nl","size_gb":20.1,"full":"Xing4.0-29B-A4B IQ4_NL","quant":"IQ4_NL","origin":"stock (only quant published)","arch":"xing4_0 (fork runtime)","status":"deleted","role":"worst measured; never terminates thinking","reason_quick":44.29,"reason_quick_floor":0,"reason_quick_tok":294,"reason_quick_p":0.0002,"reason_quick_disc":"22/3","reason_think":40.0,"reason_think_floor":8,"reason_think_tok":121269,"reason_think_p":0.0,"reason_think_disc":"34/1","coding":83.54,"coding_floor":0,"coding_tok":0,"coding_p":0.0,"coding_disc":"22/1","tput":"31.7\u201332.4"},{"tag":"glm-4.7-flash:q5_k_m","size_gb":21.4,"full":"GLM-4.7-Flash Q5_K_M","quant":"Q5_K_M","origin":"stock","arch":"glm4","status":"deleted","role":"lost both axes decisively","reason_quick":54.29,"reason_quick_floor":0,"reason_quick_tok":280,"reason_quick_p":0.0169,"reason_quick_disc":"17/5","reason_think":null,"reason_think_floor":0,"reason_think_tok":null,"coding":84.76,"coding_floor":0,"coding_tok":0,"coding_p":0.0001,"coding_disc":"21/2","tput":null}],"repro":[{"arm":"A","label":"incumbent MMLU-off (control)","runs":3,"tok_lo":280,"tok_hi":280,"scores":[71.42857142857143,71.42857142857143,71.42857142857143],"spread":0.0,"identical":true},{"arm":"B","label":"gpt-oss MMLU-off","runs":5,"tok_lo":5348,"tok_hi":7170,"scores":[71.42857142857143,77.14285714285714,71.42857142857143,71.42857142857143,71.42857142857143],"spread":5.71,"identical":false},{"arm":"C","label":"gpt-oss MMLU-off, no `reasoning_effort`","runs":1,"tok_lo":18598,"tok_hi":18598,"scores":[60.0],"spread":0.0,"identical":true},{"arm":"D","label":"incumbent MMLU-**ON**","runs":3,"tok_lo":44201,"tok_hi":44201,"scores":[87.14285714285714,87.14285714285714,87.14285714285714],"spread":0.0,"identical":true}],"generated":"2026-09-21 21:59"};
+
+const STATUS_LABEL = { shelf:"on the shelf", production:"in production",
+                       deleted:"deleted", unrunnable:"won't load" };
+const METRICS = ["reason_quick","reason_think","coding"];
+const INCUMBENT = "qwen3.6-27b-abliterated:q5_k_m";
+
+/* Column leaders, for emphasis. A floored figure is never a leader: it is not a score. */
+const LEAD = {};
+for (const m of METRICS) {
+  LEAD[m] = Math.max(...DATA.models
+    .filter(d => d[m] != null && !d[m + "_floor"])
+    .map(d => d[m]));
+}
+const speedOf = d => d.tput ? parseFloat(d.tput.split("–")[0]) : null;
+
+let filter = "all";
+let sortKey = null, sortDir = 1;
+
+const el = (t, c, txt) => { const n = document.createElement(t);
+  if (c) n.className = c; if (txt != null) n.textContent = txt; return n; };
+
+function scoreCell(d, key) {
+  const td = el("td", "right");
+  const v = d[key];
+  if (v == null) {
+    // "no thinking mode" is not the same as "not measured": the run happened and returned
+    // the model's thinking-off answers, because its prompt template has no thinking path.
+    td.appendChild(el("span", "sc-none", d[key + "_nothink"] ? "none" : "—"));
+    if (d[key + "_nothink"]) td.title = "This model has no thinking mode.";
+    return td;
+  }
+  const box = el("div", "sc");
+  const floored = d[key + "_floor"] > 0;
+  const lead = !floored && Math.abs(v - LEAD[key]) < 1e-9;
+  const val = el("div", "sc-v" + (lead ? " lead" : floored ? " floor" : ""),
+                 (floored ? "≥" : "") + v.toFixed(2));
+  box.appendChild(val);
+  const bar = el("div", "sc-bar");
+  const fill = el("i", floored ? "floorbar" : null);
+  fill.style.width = Math.max(1.5, v) + "%";
+  bar.appendChild(fill);
+  box.appendChild(bar);
+  const p = d[key + "_p"];
+  if (d.tag === INCUMBENT) box.appendChild(el("div", "sc-p", "reference"));
+  else if (p != null) {
+    const sig = p < 0.05;
+    box.appendChild(el("div", "sc-p" + (sig ? " sig" : ""),
+      (p < 0.001 ? "p<0.001" : "p=" + p.toFixed(3)) + (sig ? " • real" : " • tie")));
+  }
+  td.appendChild(box);
+  return td;
+}
+
+function detailRow(d, cols) {
+  const tr = el("tr", "detail"); tr.hidden = true;
+  const td = el("td"); td.colSpan = cols;
+  const dt = el("div", "dt");
+
+  const block = (title, pairs) => {
+    const b = el("div", "dt-block");
+    b.appendChild(el("h3", null, title));
+    for (const [k, v] of pairs) {
+      if (v == null || v === "") continue;
+      const row = el("dl", "kv");
+      row.appendChild(el("dt", null, k));
+      row.appendChild(el("dd", null, String(v)));
+      b.appendChild(row);
+    }
+    return b;
+  };
+
+  dt.appendChild(block("File and provenance", [
+    ["full name", d.full],
+    ["ollama tag", d.tag],
+    ["quantisation", d.quant],
+    ["origin", d.origin],
+    ["size on disk", d.size_gb != null ? d.size_gb.toFixed(1) + " GB" : null],
+    ["runtime architecture", d.arch],
+    ["status", STATUS_LABEL[d.status]],
+  ]));
+
+  dt.appendChild(block("Reasoning — quick", [
+    ["score", d.reason_quick != null ? d.reason_quick.toFixed(2) + "%" : "not measured"],
+    ["tokens generated", d.reason_quick_tok != null ? d.reason_quick_tok.toLocaleString() : null],
+    ["vs incumbent", d.reason_quick_p != null ? "p=" + d.reason_quick_p : null],
+    ["disagreements", d.reason_quick_disc ? d.reason_quick_disc + " (incumbent-only / this-only)" : null],
+  ]));
+
+  dt.appendChild(block("Reasoning — thinking", [
+    ["score", d.reason_think != null
+      ? (d.reason_think_floor ? "≥ " : "") + d.reason_think.toFixed(2) + "%"
+      : d.reason_think_nothink ? "no thinking mode" : "not measured"],
+    ["batches that ran out of budget", d.reason_think != null ? (d.reason_think_floor || 0) + " of 14" : null],
+    ["tokens generated", d.reason_think_tok != null ? d.reason_think_tok.toLocaleString() : null],
+    ["vs incumbent", d.reason_think_p != null ? "p=" + d.reason_think_p : null],
+    ["disagreements", d.reason_think_disc ? d.reason_think_disc + " (incumbent-only / this-only)" : null],
+  ]));
+
+  dt.appendChild(block("Coding, speed and context", [
+    ["HumanEval", d.coding != null ? d.coding.toFixed(2) + "% of 164" : "not measured"],
+    ["vs incumbent", d.coding_p != null ? "p=" + d.coding_p : null],
+    ["disagreements", d.coding_disc ? d.coding_disc + " (incumbent-only / this-only)" : null],
+    ["speed", d.tput ? d.tput + " tok/s" : null],
+    ["KV cache", d.kv_kib != null ? d.kv_kib.toFixed(1) + " KiB/token (f16)" : null],
+    ["largest context tested", d.ctx_max != null ? d.ctx_max.toLocaleString() + " tokens" : null],
+    ["VRAM spare there", d.vram_spare != null ? d.vram_spare.toLocaleString() + " MiB" : null],
+  ]));
+
+  if (d.role) {
+    const note = el("div", "dt-note", "Why it is here — " + d.role);
+    dt.appendChild(note);
+  }
+  if (d.status === "unrunnable") {
+    dt.appendChild(el("div", "dt-note",
+      "This model fails at load on this llama.cpp build. It has no score of zero — it has no score."));
+  }
+  if (d.reason_think_nothink) {
+    dt.appendChild(el("div", "dt-note",
+      "This model has no thinking mode. Its prompt template contains no thinking path, so "
+      + "enabling thinking changes nothing: the thinking run returned this model's "
+      + "thinking-off answers exactly — same token count, identical answers to all 70 "
+      + "questions. That is an absent capability, not a low score."));
+  }
+  if (d.reason_think_floor > 0) {
+    dt.appendChild(el("div", "dt-note",
+      d.reason_think_floor + " of 14 thinking batches spent the whole 12,288-token budget and "
+      + "emitted no answer line, scoring 0 of 5 each. The thinking figure is therefore a floor, "
+      + "and is not comparable with a model that terminated on all 14."));
+  }
+  td.appendChild(dt); tr.appendChild(td);
+  return tr;
+}
+
+function render() {
+  const tbody = document.getElementById("rows");
+  tbody.textContent = "";
+  let rows = DATA.models.filter(d => filter === "all" || d.status === filter);
+
+  if (sortKey) {
+    const val = d => sortKey === "speed" ? speedOf(d)
+                   : sortKey === "status" ? STATUS_LABEL[d.status]
+                   : d[sortKey];
+    rows = rows.slice().sort((a, b) => {
+      const x = val(a), y = val(b);
+      if (x == null && y == null) return 0;
+      if (x == null) return 1;            // never-measured sinks to the bottom either way
+      if (y == null) return -1;
+      return (typeof x === "string" ? x.localeCompare(y) : x - y) * sortDir;
+    });
+  }
+
+  for (const d of rows) {
+    const tr = el("tr", "row");
+    tr.dataset.status = d.status;
+    tr.tabIndex = 0;
+
+    const id = el("td", "id-cell");
+    const nm = el("div", "m-name");
+    nm.appendChild(document.createTextNode(d.full));
+    if (d.tag === INCUMBENT) nm.appendChild(el("span", "incumbent-mark", "incumbent"));
+    id.appendChild(nm);
+    id.appendChild(el("div", "m-tag", d.tag));
+    id.appendChild(el("div", "m-role", d.role));
+    tr.appendChild(id);
+
+    const size = el("td", "right");
+    size.appendChild(el("span", "mono num", d.size_gb != null ? d.size_gb.toFixed(1) : "—"));
+    tr.appendChild(size);
+
+    const arch = el("td");
+    arch.appendChild(el("span", "mono", d.arch));
+    arch.style.fontSize = "12px";
+    tr.appendChild(arch);
+
+    const sp = el("td", "right");
+    sp.appendChild(el("span", "mono num", d.tput || "—"));
+    sp.style.fontSize = "12px";
+    tr.appendChild(sp);
+
+    for (const m of METRICS) tr.appendChild(scoreCell(d, m));
+
+    const st = el("td");
+    st.appendChild(el("span", "pill " + d.status, STATUS_LABEL[d.status]));
+    tr.appendChild(st);
+
+    const det = detailRow(d, 8);
+    const toggle = () => {
+      const open = det.hidden;
+      det.hidden = !open;
+      tr.classList.toggle("open", open);
+    };
+    tr.addEventListener("click", toggle);
+    tr.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+    });
+
+    tbody.appendChild(tr);
+    tbody.appendChild(det);
+  }
+}
+
+/* filters -- counts come from the data, so they cannot drift from it */
+(function buildFilters() {
+  const host = document.getElementById("filters");
+  const counts = { all: DATA.models.length };
+  for (const d of DATA.models) counts[d.status] = (counts[d.status] || 0) + 1;
+  const order = ["all", "shelf", "production", "deleted", "unrunnable"];
+  const label = { all: "all models", ...STATUS_LABEL };
+  for (const k of order) {
+    if (!counts[k]) continue;
+    const b = el("button", "chip");
+    b.type = "button";
+    b.setAttribute("aria-pressed", String(k === filter));
+    b.appendChild(document.createTextNode(label[k]));
+    b.appendChild(el("span", "n", String(counts[k])));
+    b.addEventListener("click", () => {
+      filter = k;
+      [...host.children].forEach(c => c.setAttribute("aria-pressed", String(c === b)));
+      render();
+    });
+    host.appendChild(b);
+  }
+})();
+
+/* sorting */
+document.querySelectorAll("#sheet thead th[data-sort]").forEach(th => {
+  th.querySelector("button").addEventListener("click", () => {
+    const k = th.dataset.sort;
+    if (sortKey === k) sortDir = -sortDir;
+    else { sortKey = k; sortDir = (k === "full" || k === "arch" || k === "status") ? 1 : -1; }
+    document.querySelectorAll("#sheet thead .dir").forEach(d => d.textContent = "");
+    th.querySelector(".dir").textContent = sortDir === 1 ? "▲" : "▼";
+    render();
+  });
+});
+
+/* repro table */
+(function repro() {
+  const tb = document.querySelector("#repro tbody");
+  const clean = s => s.replace(/`/g, "").replace(/\*\*/g, "")
+    .replace("incumbent MMLU-off (control)", "Incumbent, quick exam (control)")
+    .replace("gpt-oss MMLU-off, no reasoning_effort", "GPT-OSS, reasoning_effort removed")
+    .replace("gpt-oss MMLU-off", "GPT-OSS, quick exam")
+    .replace("incumbent MMLU-ON", "Incumbent, thinking exam");
+  for (const r of DATA.repro) {
+    const tr = el("tr");
+    tr.appendChild(el("td", null, clean(r.label)));
+    tr.appendChild(el("td", "m right", String(r.runs)));
+    tr.appendChild(el("td", "m right", r.tok_lo === r.tok_hi
+      ? r.tok_lo.toLocaleString()
+      : r.tok_lo.toLocaleString() + "–" + r.tok_hi.toLocaleString()));
+    tr.appendChild(el("td", "m", r.scores.map(s => s.toFixed(2)).join(", ")));
+    tr.appendChild(el("td", "m right", r.runs > 1 ? r.spread.toFixed(2) : "—"));
+    const v = el("td");
+    if (r.runs < 2) v.appendChild(el("span", "sc-none", "only ran once"));
+    else v.appendChild(el("span", "pill " + (r.identical ? "shelf" : "unrunnable"),
+      r.identical ? "yes, identical" : "no"));
+    tr.appendChild(v);
+    tb.appendChild(tr);
+  }
+})();
+
+/* context ladder */
+(function ladder() {
+  const tb = document.querySelector("#ladder tbody");
+  const rows = DATA.models.filter(d => d.kv_kib != null)
+    .sort((a, b) => a.kv_kib - b.kv_kib);
+  for (const d of rows) {
+    const tr = el("tr");
+    tr.appendChild(el("td", "m", d.full.replace(/ Q[0-9].*$/, "").replace(/ — .*$/, "")));
+    tr.appendChild(el("td", "m right", d.kv_kib.toFixed(1) + " KiB"));
+    tr.appendChild(el("td", "m right", d.ctx_max.toLocaleString()));
+    tr.appendChild(el("td", "m right", d.vram_spare.toLocaleString() + " MiB"));
+    tb.appendChild(tr);
+  }
+})();
+
+document.getElementById("gen").textContent = "generated " + DATA.generated;
+
+/* theme toggle: cycles through the three states the viewer can be in */
+document.getElementById("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const next = cur === "dark" ? "light" : cur === "light" ? null : "dark";
+  if (next) document.documentElement.setAttribute("data-theme", next);
+  else document.documentElement.removeAttribute("data-theme");
+});
+
+render();
+</script>

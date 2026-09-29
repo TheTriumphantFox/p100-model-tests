@@ -1,0 +1,19 @@
+def get_closest_vowel(word: str) -> str:
+    """
+    Find the closest vowel that is surrounded by consonants, scanning from the right side.
+    Vowels at the start or end of the word are ignored. If no such vowel exists, return an empty string.
+    """
+    vowels = set("aeiouAEIOU")
+    n = len(word)
+    # Scan from right to left
+    for i in range(n - 1, -1, -1):
+        ch = word[i]
+        if ch in vowels:
+            # Must not be at the boundaries
+            if i == 0 or i == n - 1:
+                continue
+            left = word[i - 1]
+            right = word[i + 1]
+            if left not in vowels and right not in vowels:
+                return ch
+    return ""

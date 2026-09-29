@@ -1,0 +1,8 @@
+def eat(number, need, remaining):
+    if remaining >= need:
+        total = number + need
+        left = remaining - need
+    else:
+        total = number + remaining
+        left = 0
+    return [total, left]

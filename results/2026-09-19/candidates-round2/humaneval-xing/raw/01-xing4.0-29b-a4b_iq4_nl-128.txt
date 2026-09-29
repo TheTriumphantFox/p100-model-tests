@@ -1,0 +1,15 @@
+```python
+def prod_signs(arr):
+    if not arr:
+        return None
+    product = 1
+    for x in arr:
+        if x == 0:
+            product *= 0
+            break
+        elif x > 0:
+            product *= 1
+        else:
+            product *= -1
+    return abs(sum(arr)) * product
+```

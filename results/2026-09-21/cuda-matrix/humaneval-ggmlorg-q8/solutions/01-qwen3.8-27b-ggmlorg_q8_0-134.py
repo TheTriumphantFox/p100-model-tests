@@ -1,0 +1,54 @@
+def check_if_last_char_is_a_letter(txt):
+    '''
+    Create a function that returns True if the last character
+    of a given string is an alphabetical character and is not
+    a part of a word, and False otherwise.
+    Note: "word" is a group of characters separated by space.
+
+    Examples:
+    check_if_last_char_is_a_letter("apple pie") ➞ False
+    check_if_last_char_is_a_letter("apple pi e") ➞ True
+    check_if_last_char_is_a_letter("apple pi e ") ➞ False
+    check_if_last_char_is_a_letter("") ➞ False 
+    '''
+    if not txt:
+        return False
+    
+    # The last character must be an alphabetical character
+    last_char = txt[-1]
+    if not last_char.isalpha():
+        return False
+    
+    # Check if the last character is not part of a word
+    # A word is a group of characters separated by space
+    # So the last character is not part of a word if it is preceded by a space
+    # or if it is the only character (but then it would be a word of length 1)
+    # Wait, let's think about this more carefully.
+    
+    # "apple pie" -> last char 'e', preceded by 'i', so it's part of the word "pie" -> False
+    # "apple pi e" -> last char 'e', preceded by ' ', so it's a standalone word "e" -> True
+    # "apple pi e " -> last char ' ', not alpha -> False
+    # "" -> False
+    
+    # So the condition is: the last character is alpha, AND the character before it is a space (or it's the first character)
+    # But wait, if it's the first character, then it's a word of length 1. Is that "part of a word"? 
+    # The problem says "not a part of a word". A single character is a word. So if the string is "a", the last char 'a' is part of the word "a".
+    # But looking at the examples, "apple pi e" returns True. The last char 'e' is a standalone word.
+    # So "not a part of a word" means it's a standalone single-character word? Or does it mean it's not part of a multi-character word?
+    
+    # Let me re-read: "returns True if the last character of a given string is an alphabetical character and is not a part of a word"
+    # "word" is a group of characters separated by space.
+    
+    # So if the last character is alpha, and it forms a word by itself (i.e., it's preceded by a space or is the first char), then it's "not a part of a word" in the sense that it IS a word, not part of a larger word.
+    
+    # Actually, I think the interpretation is: the last character should be a standalone word (a single letter word). So it should be preceded by a space (or be the first character).
+    
+    if len(txt) == 1:
+        # Single character, it's a word by itself
+        return True
+    
+    # Check if the character before the last one is a space
+    if txt[-2] == ' ':
+        return True
+    
+    return False

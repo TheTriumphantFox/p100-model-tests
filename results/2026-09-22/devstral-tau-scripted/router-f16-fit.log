@@ -1,0 +1,123 @@
+0.00.015.348 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.016.332 I srv   load_models: Loaded 0 cached model presets
+0.00.016.663 I srv   load_models: Loaded 13 local model presets from /home/hm/llama-bench-models
+0.00.016.796 I srv    operator(): Available models (13) (*: custom preset)
+0.00.016.797 I srv    operator():     _dl
+0.00.016.797 I srv    operator():     devstral-patched_q8_0
+0.00.016.797 I srv    operator():     g9v3-39a5b_q4_k_m
+0.00.016.797 I srv    operator():     gemma4-e4b-abliterated_q4_k_m
+0.00.016.797 I srv    operator():     gpt-oss-20b_q8_0
+0.00.016.797 I srv    operator():     ornith-1.5-35b-a3b_q4_k_m
+0.00.016.797 I srv    operator():     qwen3.6-27b-abliterated_q5_k_m
+0.00.016.797 I srv    operator():     qwen3.6-27b-opus-distill_q4_k_m
+0.00.016.797 I srv    operator():     qwen3.6-35b-a3b-abliterated-vl_q4_k_m
+0.00.016.798 I srv    operator():     qwen3.8-27b-ggmlorg_q8_0
+0.00.016.798 I srv    operator():     qwen3.8-27b-stock_q4_k_m
+0.00.016.798 I srv    operator():     qwen3.8-27b-uncensored-hauhaucs_q6_k_p
+0.00.016.798 I srv    operator():     qwen3.8-27b-unsloth_q8_0
+0.00.016.838 W srv  llama_server: -----------------
+0.00.016.838 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.016.838 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.016.839 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.016.839 W srv  llama_server: -----------------
+0.00.016.841 W srv  llama_server: -----------------
+0.00.016.841 W srv  llama_server: the following feature(s) are enabled:
+0.00.016.841 W srv  llama_server:     router mode
+0.00.016.841 W srv  llama_server: do not expose the server to untrusted environments
+0.00.016.842 W srv  llama_server: -----------------
+0.00.016.843 I srv  llama_server: starting server in router mode. models will be automatically loaded on-demand
+0.00.018.009 I srv  llama_server: listening on http://127.0.0.1:8081
+0.01.522.482 I srv  ensure_model: model name=qwen3.8-27b-uncensored-hauhaucs_q6_k_p is not loaded, loading...
+0.01.522.512 I srv          load: spawning server instance with name=qwen3.8-27b-uncensored-hauhaucs_q6_k_p on port 34249
+0.01.522.527 I srv          load: spawning server instance with args:
+0.01.522.527 I srv          load:   /home/hm/llama-cuda12/bin/llama-server
+0.01.522.528 I srv          load:   --host
+0.01.522.528 I srv          load:   127.0.0.1
+0.01.522.528 I srv          load:   --jinja
+0.01.522.528 I srv          load:   --port
+0.01.522.528 I srv          load:   34249
+0.01.522.528 I srv          load:   --alias
+0.01.522.528 I srv          load:   qwen3.8-27b-uncensored-hauhaucs_q6_k_p
+0.01.522.529 I srv          load:   --batch-size
+0.01.522.529 I srv          load:   512
+0.01.522.529 I srv          load:   --ctx-size
+0.01.522.529 I srv          load:   32768
+0.01.522.529 I srv          load:   --cache-type-k
+0.01.522.529 I srv          load:   f16
+0.01.522.529 I srv          load:   --cache-type-v
+0.01.522.529 I srv          load:   f16
+0.01.522.530 I srv          load:   --flash-attn
+0.01.522.530 I srv          load:   on
+0.01.522.530 I srv          load:   --model
+0.01.522.530 I srv          load:   /home/hm/llama-bench-models/qwen3.8-27b-uncensored-hauhaucs_q6_k_p.gguf
+0.01.522.530 I srv          load:   --parallel
+0.01.522.530 I srv          load:   1
+0.01.522.530 I srv          load:   --split-mode
+0.01.522.530 I srv          load:   layer
+0.01.522.531 I srv          load:   --ubatch-size
+0.01.522.531 I srv          load:   512
+0.01.522.667 I srv  ensure_model: waiting until model name=qwen3.8-27b-uncensored-hauhaucs_q6_k_p is fully loaded...
+[34249] 0.00.006.442 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+[34249] 0.00.006.659 W srv  llama_server: -----------------
+[34249] 0.00.006.660 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+[34249] 0.00.006.660 W srv  llama_server: this can be a security risk (cross-origin attacks)
+[34249] 0.00.006.660 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+[34249] 0.00.006.660 W srv  llama_server: -----------------
+[34249] 
+[34249] 0.00.007.949 I srv    load_model: loading model '/home/hm/llama-bench-models/qwen3.8-27b-uncensored-hauhaucs_q6_k_p.gguf'
+[34249] 0.00.914.924 W model has unused tensor blk.64.attn_norm.weight (size = 20480 bytes) -- ignoring
+[34249] 0.00.914.929 W model has unused tensor blk.64.post_attention_norm.weight (size = 20480 bytes) -- ignoring
+[34249] 0.00.914.933 W model has unused tensor blk.64.attn_q.weight (size = 66846720 bytes) -- ignoring
+[34249] 0.00.914.935 W model has unused tensor blk.64.attn_k.weight (size = 5570560 bytes) -- ignoring
+[34249] 0.00.914.937 W model has unused tensor blk.64.attn_v.weight (size = 5570560 bytes) -- ignoring
+[34249] 0.00.914.942 W model has unused tensor blk.64.attn_output.weight (size = 33423360 bytes) -- ignoring
+[34249] 0.00.914.944 W model has unused tensor blk.64.attn_q_norm.weight (size = 1024 bytes) -- ignoring
+[34249] 0.00.914.945 W model has unused tensor blk.64.attn_k_norm.weight (size = 1024 bytes) -- ignoring
+[34249] 0.00.914.947 W model has unused tensor blk.64.ffn_gate.weight (size = 73113600 bytes) -- ignoring
+[34249] 0.00.914.948 W model has unused tensor blk.64.ffn_down.weight (size = 94699520 bytes) -- ignoring
+[34249] 0.00.914.950 W model has unused tensor blk.64.ffn_up.weight (size = 73113600 bytes) -- ignoring
+[34249] 0.00.914.953 W model has unused tensor blk.64.nextn.eh_proj.weight (size = 55705600 bytes) -- ignoring
+[34249] 0.00.914.955 W model has unused tensor blk.64.nextn.enorm.weight (size = 20480 bytes) -- ignoring
+[34249] 0.00.914.959 W model has unused tensor blk.64.nextn.hnorm.weight (size = 20480 bytes) -- ignoring
+[34249] 0.00.914.963 W model has unused tensor blk.64.nextn.shared_head_norm.weight (size = 20480 bytes) -- ignoring
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 
+[34249] 2.57.313.567 I cmn          init: llama threadpool init, n_threads = 6
+[34249] 2.57.586.925 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 32768, kv_unified = 'false'
+[34249] 2.57.589.689 W srv          init: chat template supports preserving reasoning, it is enabled by default (may use more tokens, disable via --no-reasoning-preserve)
+[34249] 2.57.589.724 I srv  llama_server: model loaded
+[34249] 2.57.589.727 I srv  llama_server: listening on http://127.0.0.1:34249
+[34249] 
+2.59.128.161 I srv  proxy_reques: proxying request to model qwen3.8-27b-uncensored-hauhaucs_q6_k_p on port 34249
+[34249] 2.57.592.206 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+[34249] 2.57.592.319 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+[34249] 3.03.704.164 I slot print_timing: id  0 | task 0 | prompt eval time =    2859.54 ms /   282 tokens (   10.14 ms per token,    98.62 tokens per second)
+[34249] 3.03.704.167 I slot print_timing: id  0 | task 0 |        eval time =    3252.28 ms /    33 tokens (  101.63 ms per token,     9.84 tokens per second)
+[34249] 3.03.704.167 I slot print_timing: id  0 | task 0 |       total time =    6111.82 ms /   315 tokens
+[34249] 3.03.704.171 I slot print_timing: id  0 | task 0 |    graphs reused =         32
+[34249] 3.03.704.214 I slot      release: id  0 | task 0 | stop processing: n_tokens = 314, truncated = 0
+3.30.150.992 I srv    operator(): operator(): cleaning up before exit...
+3.30.151.035 I srv    unload_all: stopping model instance name=qwen3.8-27b-uncensored-hauhaucs_q6_k_p
+[34249] 3.28.612.847 I srv    operator(): exit command received, exiting...
+[34249] 3.28.612.894 I srv    operator(): operator(): cleaning up before exit...
+3.30.646.919 I srv           run: instance name=qwen3.8-27b-uncensored-hauhaucs_q6_k_p exited with status 0

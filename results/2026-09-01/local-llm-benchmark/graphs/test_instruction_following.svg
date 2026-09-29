@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="865" viewBox="0 0 1800 865">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="42.0" y="47.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="29px" fill="#111827" text-anchor="start" font-weight="bold">Complex Instruction Following</text>
+<text x="42.0" y="78.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#4b5563" text-anchor="start" font-weight="normal">All local models — retained average generation throughput (content-task performance)</text>
+<line x1="515.0" y1="113" x2="515.0" y2="773" stroke="#dbe3ec" stroke-width="1"/>
+<text x="515.0" y="800.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="14px" fill="#4b5563" text-anchor="middle" font-weight="normal">0</text>
+<line x1="741.0" y1="113" x2="741.0" y2="773" stroke="#dbe3ec" stroke-width="1"/>
+<text x="741.0" y="800.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="14px" fill="#4b5563" text-anchor="middle" font-weight="normal">10</text>
+<line x1="967.0" y1="113" x2="967.0" y2="773" stroke="#dbe3ec" stroke-width="1"/>
+<text x="967.0" y="800.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="14px" fill="#4b5563" text-anchor="middle" font-weight="normal">20</text>
+<line x1="1193.0" y1="113" x2="1193.0" y2="773" stroke="#dbe3ec" stroke-width="1"/>
+<text x="1193.0" y="800.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="14px" fill="#4b5563" text-anchor="middle" font-weight="normal">30</text>
+<line x1="1419.0" y1="113" x2="1419.0" y2="773" stroke="#dbe3ec" stroke-width="1"/>
+<text x="1419.0" y="800.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="14px" fill="#4b5563" text-anchor="middle" font-weight="normal">40</text>
+<line x1="1645.0" y1="113" x2="1645.0" y2="773" stroke="#dbe3ec" stroke-width="1"/>
+<text x="1645.0" y="800.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="14px" fill="#4b5563" text-anchor="middle" font-weight="normal">50</text>
+<text x="1080.0" y="840.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#374151" text-anchor="middle" font-weight="normal">Generation throughput (tokens/second; higher is better)</text>
+<text x="495.0" y="158.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#1f2937" text-anchor="end" font-weight="normal">1. HauhauCS Qwen3.6-35B-A3B [Q4]</text>
+<rect x="515" y="137" width="860.1" height="30" rx="4" fill="#e08214"><title>fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4: 38.06 tok/s</title></rect>
+<text x="1385.1" y="158.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#1f2937" text-anchor="start" font-weight="normal">38.06  (4/4)</text>
+<text x="495.0" y="212.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#1f2937" text-anchor="end" font-weight="normal">2. HauhauCS Qwen3.6-35B-A3B [latest]</text>
+<rect x="515" y="191" width="858.6" height="30" rx="4" fill="#e08214"><title>fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest: 37.99 tok/s</title></rect>
+<text x="1383.6" y="212.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#1f2937" text-anchor="start" font-weight="normal">37.99  (4/4)</text>
+<text x="495.0" y="266.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#1f2937" text-anchor="end" font-weight="normal">3. qwen-pi</text>
+<rect x="515" y="245" width="858.3" height="30" rx="4" fill="#e08214"><title>qwen-pi:latest: 37.98 tok/s</title></rect>
+<text x="1383.3" y="266.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#1f2937" text-anchor="start" font-weight="normal">37.98  (4/4)</text>
+<text x="495.0" y="320.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#1f2937" text-anchor="end" font-weight="normal">4. qwen3.6 35B-A3B Q4</text>
+<rect x="515" y="299" width="856.4" height="30" rx="4" fill="#e08214"><title>qwen3.6-35b-a3b:latest: 37.89 tok/s</title></rect>
+<text x="1381.4" y="320.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#1f2937" text-anchor="start" font-weight="normal">37.89  (4/4)</text>
+<text x="495.0" y="374.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#1f2937" text-anchor="end" font-weight="normal">5. Gemma-4 Uncensored</text>
+<rect x="515" y="353" width="851.5" height="30" rx="4" fill="#e08214"><title>fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest: 37.68 tok/s</title></rect>
+<text x="1376.5" y="374.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#1f2937" text-anchor="start" font-weight="normal">37.68  (4/4)</text>
+<text x="495.0" y="428.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#1f2937" text-anchor="end" font-weight="normal">6. qwen3.6 35B-A3B Q5 pi</text>
+<rect x="515" y="407" width="745.8" height="30" rx="4" fill="#e08214"><title>qwen3.6-35b-a3b-q5-pi:latest: 33.00 tok/s</title></rect>
+<text x="1270.8" y="428.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#1f2937" text-anchor="start" font-weight="normal">33.00  (4/4)</text>
+<text x="495.0" y="482.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#1f2937" text-anchor="end" font-weight="normal">7. qwen3.6 35B-A3B Q6 pi</text>
+<rect x="515" y="461" width="693.4" height="30" rx="4" fill="#e08214"><title>qwen3.6-35b-a3b-q6-pi:latest: 30.68 tok/s</title></rect>
+<text x="1218.4" y="482.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#1f2937" text-anchor="start" font-weight="normal">30.68  (4/4)</text>
+<text x="495.0" y="536.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#1f2937" text-anchor="end" font-weight="normal">8. qwen3.6 35B-A3B Q8 pi</text>
+<rect x="515" y="515" width="416.4" height="30" rx="4" fill="#e08214"><title>qwen3.6-35b-a3b-q8-pi:latest: 18.42 tok/s</title></rect>
+<text x="941.4" y="536.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#1f2937" text-anchor="start" font-weight="normal">18.42  (4/4)</text>
+<text x="495.0" y="590.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#1f2937" text-anchor="end" font-weight="normal">9. Qwopus 3.5</text>
+<rect x="515" y="569" width="306.8" height="30" rx="4" fill="#e08214"><title>fredrezones55/Qwopus3.5:latest: 13.58 tok/s</title></rect>
+<text x="831.8" y="590.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#1f2937" text-anchor="start" font-weight="normal">13.58  (4/4)</text>
+<text x="495.0" y="644.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#1f2937" text-anchor="end" font-weight="normal">10. qwen3.8 27B Q4</text>
+<rect x="515" y="623" width="71.2" height="30" rx="4" fill="#e08214"><title>qwen3.8:27b-q4_K_M: 3.15 tok/s</title></rect>
+<text x="596.2" y="644.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#1f2937" text-anchor="start" font-weight="normal">3.15  (4/4)</text>
+<text x="495.0" y="698.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#1f2937" text-anchor="end" font-weight="normal">11. Qwopus 3.6</text>
+<rect x="515" y="677" width="71.1" height="30" rx="4" fill="#e08214"><title>fredrezones55/Qwopus3.6:latest: 3.15 tok/s</title></rect>
+<text x="596.1" y="698.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#1f2937" text-anchor="start" font-weight="normal">3.15  (4/4)</text>
+<text x="495.0" y="752.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="16px" fill="#1f2937" text-anchor="end" font-weight="normal">12. qwen3.6 27B Q5 pi</text>
+<rect x="515" y="731" width="57.5" height="30" rx="4" fill="#e08214"><title>qwen3.6-27b-uncensored-q5-pi:latest: 2.54 tok/s</title></rect>
+<text x="582.5" y="752.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="15px" fill="#1f2937" text-anchor="start" font-weight="normal">2.54  (4/4)</text>
+<text x="42.0" y="811.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="13px" fill="#6b7280" text-anchor="start" font-weight="normal">Based on retained runs in benchmark_results_full_20260901_220432.json; one worst run removed independently per model/test. Thinking=off, context=65536.</text>
+</svg>

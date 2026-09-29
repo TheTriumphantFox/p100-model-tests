@@ -1,0 +1,41 @@
+def intersection(interval1, interval2):
+    """Return "YES" if the length of the intersection of two closed intervals is a prime number,
+    otherwise return "NO". If the intervals do not intersect, return "NO".
+    
+    Args:
+        interval1 (tuple): A pair of integers (start, end) representing the first interval.
+        interval2 (tuple): A pair of integers (start, end) representing the second interval.
+    
+    Returns:
+        str: "YES" if the intersection length is prime, "NO" otherwise.
+    """
+    a_start, a_end = interval1
+    b_start, b_end = interval2
+
+    # Find the intersection
+    start = max(a_start, b_start)
+    end = min(a_end, b_end)
+
+    # Check if intervals intersect
+    if start > end:
+        return "NO"
+
+    # Length of the intersection (inclusive)
+    length = end - start + 1
+
+    # Helper function to check for prime numbers
+    def is_prime(n):
+        if n <= 1:
+            return False
+        if n == 2:
+            return True
+        if n % 2 == 0:
+            return False
+        i = 3
+        while i * i <= n:
+            if n % i == 0:
+                return False
+            i += 2
+        return True
+
+    return "YES" if is_prime(length) else "NO"

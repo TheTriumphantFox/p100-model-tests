@@ -1,0 +1,53 @@
+Looking at this problem, I need to determine if a string of square brackets contains a valid nested subsequence (where at least one bracket is properly inside another).
+
+Let me analyze the examples:
+- `'[[]]'` → True: The inner `[]` is nested inside the outer `[]`
+- `'[][]'` → False: Two separate pairs, no nesting
+- `'[]'` → False: Single pair, nothing nested
+- `'[[][]]'` → True: Contains `[[]]` pattern (nested)
+- `'[[]][['` → True: Has `[[]]` which is nested
+- `'[]]]]]]][[[[[]'` → False: Even though there are brackets, no valid nested subsequence exists
+
+The approach: I need to check if there exists a valid bracket subsequence where at least one pair of brackets encloses another pair. This means I need to find two pairs `[`...`]` and `[`...`]` such that the first pair's closing bracket comes before the second pair's opening bracket, AND both are properly matched within themselves.
+
+A simpler approach: check if there's any valid nested structure by looking for a pattern where we have an opening bracket, then another opening bracket (before the first closes), then a closing bracket for the inner one, then a closing bracket for the outer one.
+
+I can use a stack-based approach to find valid pairs and check if any pair is nested inside another.
+
+```python
+def is_nested(string):
+    '''
+    Create a function that takes a string as input which contains only square brackets.
+    The function should return True if and only if there is a valid subsequence of brackets 
+    where at least one bracket in the subsequence is nested.
+
+    is_nested('[[]]') ➞ True
+    is_nested('[]]]]]]][[[[[]') ➞ False
+    is_nested('[][]') ➞ False
+    is_nested('[]') ➞ False
+    is_nested('[[][]]') ➞ True
+    is_nested('[[]][[') ➞ True
+    '''
+    stack = []
+    pairs = []  # stores (start, end) for valid matched pairs
+    
+    for i, ch in enumerate(string):
+        if ch == '[':
+            stack.append(i)
+        elif ch == ']':
+            if stack:
+                start = stack.pop()
+                pairs.append((start, i))
+    
+    # Check if any pair is nested inside another pair
+    for i in range(len(pairs)):
+        for j in range(len(pairs)):
+            if i != j:
+                s1, e1 = pairs[i]
+                s2, e2 = pairs[j]
+                # Pair i is nested inside pair j if s2 < s1 and e1 < e2
+                if s2 < s1 and e1 < e2:
+                    return True
+    
+    return False
+```

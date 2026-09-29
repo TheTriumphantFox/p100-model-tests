@@ -1,0 +1,2 @@
+{"name": "qwen36moe-loop-careful", "description": "Tool-loop planner with the careful rules (hashes, untrusted tool results, final newline)",
+ "planner": {"model": "qwen36moe", "persona": "planner-loop-careful"}, "deadline_s": 240}

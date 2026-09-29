@@ -1,0 +1,2 @@
+{"name": "mock-inject-approveall", "planner": {"model": "mock-inject", "persona": "planner-v8"},
+ "reviewer": {"model": "mock-approve-all", "persona": "reviewer-security"}}

@@ -1,0 +1,7 @@
+{
+  "dataset": "t2i_compbench",
+  "category": "spatial",
+  "prompt_id": "spatial_0124",
+  "index": 124,
+  "prompt": "a frog near a refrigerator"
+}

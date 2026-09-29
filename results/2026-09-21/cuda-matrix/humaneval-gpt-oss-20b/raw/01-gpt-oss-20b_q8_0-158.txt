@@ -1,0 +1,26 @@
+```python
+def find_max(words):
+    """
+    Return the word with the maximum number of unique characters.
+    If multiple words tie, return the lexicographically smallest one.
+    If the input list is empty, return an empty string.
+    """
+    if not words:
+        return ""
+
+    # Compute unique character counts for each word
+    max_unique = -1
+    best_word = None
+
+    for word in words:
+        unique_count = len(set(word))
+        if unique_count > max_unique:
+            max_unique = unique_count
+            best_word = word
+        elif unique_count == max_unique:
+            # tie: choose lexicographically smaller
+            if word < best_word:
+                best_word = word
+
+    return best_word
+```

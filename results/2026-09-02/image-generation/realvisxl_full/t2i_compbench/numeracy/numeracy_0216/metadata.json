@@ -1,0 +1,7 @@
+{
+  "dataset": "t2i_compbench",
+  "category": "numeracy",
+  "prompt_id": "numeracy_0216",
+  "index": 216,
+  "prompt": "three ducks, two clocks, two desks, three cows and four kites"
+}

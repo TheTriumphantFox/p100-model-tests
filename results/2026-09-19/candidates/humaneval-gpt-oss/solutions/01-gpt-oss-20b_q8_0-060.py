@@ -1,0 +1,33 @@
+def sum_to_n(n: int) -> int:
+    """
+    Return the sum of all integers from 1 to n inclusive.
+
+    The sum can be computed directly using the arithmetic series formula:
+        sum = n * (n + 1) // 2
+
+    Parameters
+    ----------
+    n : int
+        The upper bound of the summation. Must be a non‑negative integer.
+
+    Returns
+    -------
+    int
+        The sum of the integers from 1 to n.
+
+    Examples
+    --------
+    >>> sum_to_n(30)
+    465
+    >>> sum_to_n(100)
+    5050
+    >>> sum_to_n(5)
+    15
+    >>> sum_to_n(10)
+    55
+    >>> sum_to_n(1)
+    1
+    """
+    if n < 0:
+        raise ValueError("n must be a non-negative integer")
+    return n * (n + 1) // 2

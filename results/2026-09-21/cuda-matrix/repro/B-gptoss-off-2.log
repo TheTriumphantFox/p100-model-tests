@@ -1,0 +1,23 @@
+MMLU-Pro: 1 model(s), 14 categories, 70 questions/model, 5 per request.
+Planned batches: 14; scored answers: 70.
+Results: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/repro/B-gptoss-off-2
+
+Model 1/1: gpt-oss-20b:q8_0
+[##----------------------------] 1/14 (  7.1%) gpt-oss-20b:q8_0 / biology                                 ETA 30s
+[####--------------------------] 2/14 ( 14.3%) gpt-oss-20b:q8_0 / business                                ETA 45s
+[######------------------------] 3/14 ( 21.4%) gpt-oss-20b:q8_0 / chemistry                               ETA 1m 51s
+[########----------------------] 4/14 ( 28.6%) gpt-oss-20b:q8_0 / computer science                        ETA 1m 21s
+[##########--------------------] 5/14 ( 35.7%) gpt-oss-20b:q8_0 / economics                               ETA 1m 05s
+[############------------------] 6/14 ( 42.9%) gpt-oss-20b:q8_0 / engineering                             ETA 1m 20s
+[###############---------------] 7/14 ( 50.0%) gpt-oss-20b:q8_0 / health                                  ETA 1m 04s
+[#################-------------] 8/14 ( 57.1%) gpt-oss-20b:q8_0 / history                                 ETA 51s
+[###################-----------] 9/14 ( 64.3%) gpt-oss-20b:q8_0 / law                                     ETA 40s
+[#####################---------] 10/14 ( 71.4%) gpt-oss-20b:q8_0 / math                                    ETA 33s
+[#######################-------] 11/14 ( 78.6%) gpt-oss-20b:q8_0 / other                                   ETA 23s
+[#########################-----] 12/14 ( 85.7%) gpt-oss-20b:q8_0 / philosophy                              ETA 15s
+[###########################---] 13/14 ( 92.9%) gpt-oss-20b:q8_0 / physics                                 ETA 8s
+[##############################] 14/14 (100.0%) gpt-oss-20b:q8_0 / psychology                              ETA 0s
+
+Finished 14/14 batches and scored 70 answers.
+HTML report: /home/hm/Projects/Tests/2026-09-21/cuda-matrix/repro/B-gptoss-off-2/report.html
+Leader: gpt-oss-20b:q8_0 (71.4%)

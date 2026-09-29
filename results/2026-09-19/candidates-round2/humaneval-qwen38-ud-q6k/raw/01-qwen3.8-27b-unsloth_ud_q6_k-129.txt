@@ -1,0 +1,72 @@
+```python
+def minPath(grid, k):
+    """
+    Given a grid with N rows and N columns (N >= 2) and a positive integer k, 
+    each cell of the grid contains a value. Every integer in the range [1, N * N]
+    inclusive appears exactly once on the cells of the grid.
+
+    You have to find the minimum path of length k in the grid. You can start
+    from any cell, and in each step you can move to any of the neighbor cells,
+    in other words, you can go to cells which share an edge with you current
+    cell.
+    Please note that a path of length k means visiting exactly k cells (not
+    necessarily distinct).
+    You CANNOT go off the grid.
+    A path A (of length k) is considered less than a path B (of length k) if
+    after making the ordered lists of the values on the cells that A and B go
+    through (let's call them lst_A and lst_B), lst_A is lexicographically less
+    than lst_B, in other words, there exist an integer index i (1 <= i <= k)
+    such that lst_A[i] < lst_B[i] and for any j (1 <= j < i) we have
+    lst_A[j] = lst_B[j].
+    It is guaranteed that the answer is unique.
+    Return an ordered list of the values on the cells that the minimum path go through.
+
+    Examples:
+
+        Input: grid = [ [1,2,3], [4,5,6], [7,8,9]], k = 3
+        Output: [1, 2, 1]
+
+        Input: grid = [ [5,9,3], [4,1,6], [7,8,2]], k = 1
+        Output: [1]
+    """
+    n = len(grid)
+    # Find the position of each value
+    pos = {}
+    for i in range(n):
+        for j in range(n):
+            pos[grid[i][j]] = (i, j)
+    
+    # We want to find the lexicographically smallest path of length k.
+    # The first element of the path should be the smallest possible value.
+    # Since we can start anywhere, the first element is 1 (the smallest value in the grid).
+    # Then, from the cell containing 1, we can move to neighbors. We want the smallest possible next value.
+    # This is a greedy approach: at each step, choose the smallest possible value among reachable cells.
+    # But wait, is greedy always optimal? Let's think.
+    # Actually, since we want lexicographically smallest, and the path length is fixed, we should try to minimize each element in order.
+    # The first element must be 1 (since 1 is the smallest value and we can start anywhere).
+    # Then from the cell with 1, we look at all neighbors and pick the one with the smallest value.
+    # Then from that cell, we look at all neighbors (including the one we came from) and pick the smallest value.
+    # This greedy approach works because at each step, we are choosing the smallest possible value that can be reached in the next step, given the current position.
+    # Since the path is determined by the sequence of values, and we want lexicographically smallest, this greedy choice is optimal.
+    
+    # Start with value 1
+    path = [1]
+    current_pos = pos[1]
+    
+    for _ in range(k - 1):
+        i, j = current_pos
+        # Find the minimum value among all neighbors
+        min_val = float('inf')
+        min_pos = None
+        for di, dj in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+            ni, nj = i + di, j + dj
+            if 0 <= ni < n and 0 <= nj < n:
+                val = grid[ni][nj]
+                if val < min_val:
+                    min_val = val
+                    min_pos = (ni, nj)
+        path.append(min_val)
+        current_pos = min_pos
+    
+    return path
+```

@@ -1,0 +1,493 @@
+{
+  "started": "2026-09-01T20:31:09.139407-04:00",
+  "finished": "2026-09-01T20:41:07.860879-04:00",
+  "settings": {
+    "num_ctx": 4096,
+    "num_predict": 160,
+    "trials": 2,
+    "temperature": 0,
+    "warmup_tokens": 16
+  },
+  "results": [
+    {
+      "model": "qwen3.6-27b-uncensored-q5-pi:latest",
+      "label": "Qwen3.6 27B Q5 Pi",
+      "digest": "9774ba4bd9b978d6c2a8a215197a25d2d8bec78817f7d0961d667d26ef7efedf",
+      "size_bytes": 20812953320,
+      "size_gb": 20.81295332,
+      "parameter_size": "26.9B",
+      "quantization": "Q5_K_M",
+      "load_seconds": 4.940020594,
+      "generation_tps_mean": 2.643307999556466,
+      "generation_tps_min": 2.638319593569505,
+      "generation_tps_max": 2.648296405543427,
+      "prompt_tps_mean": 79.41336454356286,
+      "eval_counts": [
+        160,
+        160
+      ],
+      "trial_details": [
+        {
+          "trial": 1,
+          "eval_count": 160,
+          "eval_duration_ns": 60416198000,
+          "generation_tps": 2.648296405543427,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 572206000,
+          "prompt_tps": 76.89538383029888,
+          "total_duration_ns": 60989995817
+        },
+        {
+          "trial": 2,
+          "eval_count": 160,
+          "eval_duration_ns": 60644662000,
+          "generation_tps": 2.638319593569505,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 537035000,
+          "prompt_tps": 81.93134525682683,
+          "total_duration_ns": 61230198283
+        }
+      ]
+    },
+    {
+      "model": "qwen3.6-35b-a3b-q8-pi:latest",
+      "label": "Qwen3.6 35B-A3B Q8 Pi",
+      "digest": "ad52cf9978bd7e983c52453fd3a11dcc3156654f9092b7e5da304b0636f17e4c",
+      "size_bytes": 43605014964,
+      "size_gb": 43.605014964,
+      "parameter_size": "34.7B",
+      "quantization": "Q8_0",
+      "load_seconds": 21.727000349,
+      "generation_tps_mean": 22.91360175557579,
+      "generation_tps_min": 22.733601968729932,
+      "generation_tps_max": 23.093601542421645,
+      "prompt_tps_mean": 381.411381224014,
+      "eval_counts": [
+        160,
+        160
+      ],
+      "trial_details": [
+        {
+          "trial": 1,
+          "eval_count": 160,
+          "eval_duration_ns": 6928326000,
+          "generation_tps": 23.093601542421645,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 112800000,
+          "prompt_tps": 390.07092198581563,
+          "total_duration_ns": 7045445189
+        },
+        {
+          "trial": 2,
+          "eval_count": 160,
+          "eval_duration_ns": 7038040000,
+          "generation_tps": 22.733601968729932,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 118041000,
+          "prompt_tps": 372.75184046221233,
+          "total_duration_ns": 7180655293
+        }
+      ]
+    },
+    {
+      "model": "qwen3.6-35b-a3b-q6-pi:latest",
+      "label": "Qwen3.6 35B-A3B Q6 Pi",
+      "digest": "14bbd9c53e2b66a25c85a21cd5f60b641947aad8555678c406a4df54152d8c59",
+      "size_bytes": 30649317812,
+      "size_gb": 30.649317812,
+      "parameter_size": "34.7B",
+      "quantization": "Q6_K",
+      "load_seconds": 15.669767662,
+      "generation_tps_mean": 32.22690385740148,
+      "generation_tps_min": 32.15663496893367,
+      "generation_tps_max": 32.2971727458693,
+      "prompt_tps_mean": 508.6180139645421,
+      "eval_counts": [
+        160,
+        160
+      ],
+      "trial_details": [
+        {
+          "trial": 1,
+          "eval_count": 160,
+          "eval_duration_ns": 4975645000,
+          "generation_tps": 32.15663496893367,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 86431000,
+          "prompt_tps": 509.07660445904827,
+          "total_duration_ns": 5064014067
+        },
+        {
+          "trial": 2,
+          "eval_count": 160,
+          "eval_duration_ns": 4953994000,
+          "generation_tps": 32.2971727458693,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 86587000,
+          "prompt_tps": 508.15942347003596,
+          "total_duration_ns": 5065427197
+        }
+      ]
+    },
+    {
+      "model": "qwen3.6-35b-a3b-q5-pi:latest",
+      "label": "Qwen3.6 35B-A3B Q5 Pi",
+      "digest": "c58bb2a4e6547a532323de355918ae741ef2c43f290e1674299bbe258bd921e5",
+      "size_bytes": 28027394486,
+      "size_gb": 28.027394486,
+      "parameter_size": "34.7B",
+      "quantization": "Q5_K_M",
+      "load_seconds": 14.976664159,
+      "generation_tps_mean": 35.08072902362272,
+      "generation_tps_min": 35.052935409489486,
+      "generation_tps_max": 35.10852263775597,
+      "prompt_tps_mean": 518.8630630584246,
+      "eval_counts": [
+        160,
+        160
+      ],
+      "trial_details": [
+        {
+          "trial": 1,
+          "eval_count": 160,
+          "eval_duration_ns": 4564525000,
+          "generation_tps": 35.052935409489486,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 84933000,
+          "prompt_tps": 518.0554083807236,
+          "total_duration_ns": 4650986134
+        },
+        {
+          "trial": 2,
+          "eval_count": 160,
+          "eval_duration_ns": 4557298000,
+          "generation_tps": 35.10852263775597,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 84669000,
+          "prompt_tps": 519.6707177361254,
+          "total_duration_ns": 4669136317
+        }
+      ]
+    },
+    {
+      "model": "qwen3.6-35b-a3b:latest",
+      "label": "Qwen3.6 35B-A3B Q4 local",
+      "digest": "7ac6044c50367f1c83129196295996ca60ee30f928de92f8e0fbf1503560f878",
+      "size_bytes": 22067041507,
+      "size_gb": 22.067041507,
+      "parameter_size": "35.1B",
+      "quantization": "Q4_K_M",
+      "load_seconds": 14.031731528,
+      "generation_tps_mean": 41.501986619371735,
+      "generation_tps_min": 41.33439838299833,
+      "generation_tps_max": 41.66957485574514,
+      "prompt_tps_mean": 594.061383688218,
+      "eval_counts": [
+        160,
+        160
+      ],
+      "trial_details": [
+        {
+          "trial": 1,
+          "eval_count": 160,
+          "eval_duration_ns": 3870868000,
+          "generation_tps": 41.33439838299833,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 74461000,
+          "prompt_tps": 590.9133640429218,
+          "total_duration_ns": 3946829245
+        },
+        {
+          "trial": 2,
+          "eval_count": 160,
+          "eval_duration_ns": 3839732000,
+          "generation_tps": 41.66957485574514,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 73676000,
+          "prompt_tps": 597.2094033335143,
+          "total_duration_ns": 3941248089
+        }
+      ]
+    },
+    {
+      "model": "fredrezones55/Qwopus3.6:latest",
+      "label": "Qwopus3.6 27B Q4",
+      "digest": "2ee8f3b0aa54468c87db6c739913eaeb6cbe6c036f2ca40487b9294827506b82",
+      "size_bytes": 17475010259,
+      "size_gb": 17.475010259,
+      "parameter_size": "27.4B",
+      "quantization": "Q4_K_M",
+      "load_seconds": 11.943753289,
+      "generation_tps_mean": 3.3211913108600295,
+      "generation_tps_min": 3.312563011159528,
+      "generation_tps_max": 3.329819610560531,
+      "prompt_tps_mean": 106.04932250298845,
+      "eval_counts": [
+        160,
+        160
+      ],
+      "trial_details": [
+        {
+          "trial": 1,
+          "eval_count": 160,
+          "eval_duration_ns": 48300968000,
+          "generation_tps": 3.312563011159528,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 414192000,
+          "prompt_tps": 106.23092671997527,
+          "total_duration_ns": 48716644476
+        },
+        {
+          "trial": 2,
+          "eval_count": 160,
+          "eval_duration_ns": 48050651000,
+          "generation_tps": 3.329819610560531,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 415613000,
+          "prompt_tps": 105.86771828600163,
+          "total_duration_ns": 48516756166
+        }
+      ]
+    },
+    {
+      "model": "fredrezones55/Qwopus3.5:latest",
+      "label": "Qwopus3.5 9B Q4",
+      "digest": "df5a8cff6e4ae77c29885df654749ef54ecc9389cfbcaaa9d6f98a20508da7fd",
+      "size_bytes": 6542966581,
+      "size_gb": 6.542966581,
+      "parameter_size": "9.4B",
+      "quantization": "Q4_K_M",
+      "load_seconds": 6.226035107,
+      "generation_tps_mean": 17.695732272542237,
+      "generation_tps_min": 17.631162904121407,
+      "generation_tps_max": 17.76030164096307,
+      "prompt_tps_mean": 478.50360151503264,
+      "eval_counts": [
+        160,
+        160
+      ],
+      "trial_details": [
+        {
+          "trial": 1,
+          "eval_count": 160,
+          "eval_duration_ns": 9008856000,
+          "generation_tps": 17.76030164096307,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 89024000,
+          "prompt_tps": 494.24874191229327,
+          "total_duration_ns": 9099440617
+        },
+        {
+          "trial": 2,
+          "eval_count": 160,
+          "eval_duration_ns": 9074841000,
+          "generation_tps": 17.631162904121407,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 95082000,
+          "prompt_tps": 462.758461117772,
+          "total_duration_ns": 9190550881
+        }
+      ]
+    },
+    {
+      "model": "fredrezones55/Gemma-4-Uncensored-HauhauCS-Aggressive:latest",
+      "label": "Gemma-4 8B Q4",
+      "digest": "0810d70aa9aa19e57a63ee31039ed656d3ad2253375c4f4e57edc3a6f460bbe6",
+      "size_bytes": 6325657788,
+      "size_gb": 6.325657788,
+      "parameter_size": "8.0B",
+      "quantization": "Q4_K_M",
+      "load_seconds": 5.029742033,
+      "generation_tps_mean": 63.412750234111826,
+      "generation_tps_min": 63.33172365202384,
+      "generation_tps_max": 63.493776816199805,
+      "prompt_tps_mean": 1013.7657601134091,
+      "eval_counts": [
+        160,
+        160
+      ],
+      "trial_details": [
+        {
+          "trial": 1,
+          "eval_count": 160,
+          "eval_duration_ns": 2519932000,
+          "generation_tps": 63.493776816199805,
+          "prompt_eval_count": 45,
+          "prompt_eval_duration_ns": 44343000,
+          "prompt_tps": 1014.8163182463974,
+          "total_duration_ns": 2565773024
+        },
+        {
+          "trial": 2,
+          "eval_count": 160,
+          "eval_duration_ns": 2526380000,
+          "generation_tps": 63.33172365202384,
+          "prompt_eval_count": 45,
+          "prompt_eval_duration_ns": 44435000,
+          "prompt_tps": 1012.7152019804208,
+          "total_duration_ns": 2576947099
+        }
+      ]
+    },
+    {
+      "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:Q4",
+      "label": "Hauhau Qwen3.6 A3B Q4 tag",
+      "digest": "f9efe74933bc6357e80db08e6d0e2d36ae33c3c609bcc5e33118f5489ca95432",
+      "size_bytes": 22067041753,
+      "size_gb": 22.067041753,
+      "parameter_size": "35.1B",
+      "quantization": "Q4_K_M",
+      "load_seconds": 4.774920824,
+      "generation_tps_mean": 41.549696410955704,
+      "generation_tps_min": 41.46858935781224,
+      "generation_tps_max": 41.63080346409916,
+      "prompt_tps_mean": 600.7530135367792,
+      "eval_counts": [
+        160,
+        160
+      ],
+      "trial_details": [
+        {
+          "trial": 1,
+          "eval_count": 160,
+          "eval_duration_ns": 3843308000,
+          "generation_tps": 41.63080346409916,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 73321000,
+          "prompt_tps": 600.1009260648382,
+          "total_duration_ns": 3918261996
+        },
+        {
+          "trial": 2,
+          "eval_count": 160,
+          "eval_duration_ns": 3858342000,
+          "generation_tps": 41.46858935781224,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 73162000,
+          "prompt_tps": 601.4051010087203,
+          "total_duration_ns": 3957606797
+        }
+      ]
+    },
+    {
+      "model": "fredrezones55/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive:latest",
+      "label": "Hauhau Qwen3.6 A3B Q4 latest",
+      "digest": "f9efe74933bc6357e80db08e6d0e2d36ae33c3c609bcc5e33118f5489ca95432",
+      "size_bytes": 22067041753,
+      "size_gb": 22.067041753,
+      "parameter_size": "35.1B",
+      "quantization": "Q4_K_M",
+      "load_seconds": 4.746731339,
+      "generation_tps_mean": 41.408706313815514,
+      "generation_tps_min": 41.20580548593492,
+      "generation_tps_max": 41.611607141696105,
+      "prompt_tps_mean": 605.2060783572617,
+      "eval_counts": [
+        160,
+        160
+      ],
+      "trial_details": [
+        {
+          "trial": 1,
+          "eval_count": 160,
+          "eval_duration_ns": 3882948000,
+          "generation_tps": 41.20580548593492,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 72972000,
+          "prompt_tps": 602.9710025763306,
+          "total_duration_ns": 3957346045
+        },
+        {
+          "trial": 2,
+          "eval_count": 160,
+          "eval_duration_ns": 3845081000,
+          "generation_tps": 41.611607141696105,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 72435000,
+          "prompt_tps": 607.4411541381928,
+          "total_duration_ns": 3941835539
+        }
+      ]
+    },
+    {
+      "model": "qwen3.8:27b-q4_K_M",
+      "label": "Qwen3.8 27B Q4",
+      "digest": "25b843619e944cd0ae6069f94ff4e5e26a16e109ccbc0a66a0f05979ed70098e",
+      "size_bytes": 17741872132,
+      "size_gb": 17.741872132,
+      "parameter_size": "27.3B",
+      "quantization": "Q4_K_M",
+      "load_seconds": 11.700328622,
+      "generation_tps_mean": 3.3312720011369215,
+      "generation_tps_min": 3.3289196713166196,
+      "generation_tps_max": 3.3336243309572233,
+      "prompt_tps_mean": 104.42124315787161,
+      "eval_counts": [
+        160,
+        160
+      ],
+      "trial_details": [
+        {
+          "trial": 1,
+          "eval_count": 160,
+          "eval_duration_ns": 48063641000,
+          "generation_tps": 3.3289196713166196,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 426407000,
+          "prompt_tps": 103.18779944982143,
+          "total_duration_ns": 48498841575
+        },
+        {
+          "trial": 2,
+          "eval_count": 160,
+          "eval_duration_ns": 47995810000,
+          "generation_tps": 3.3336243309572233,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 416451000,
+          "prompt_tps": 105.6546868659218,
+          "total_duration_ns": 48476575530
+        }
+      ]
+    },
+    {
+      "model": "qwen-pi:latest",
+      "label": "Qwen Pi 35B-A3B Q4",
+      "digest": "0e219d638210619b459f6e4a0db0d85f11a9d075f95e154bb503413df2070b6d",
+      "size_bytes": 22067041507,
+      "size_gb": 22.067041507,
+      "parameter_size": "35.1B",
+      "quantization": "Q4_K_M",
+      "load_seconds": 13.031130864,
+      "generation_tps_mean": 28.929014953708155,
+      "generation_tps_min": 28.919495354806056,
+      "generation_tps_max": 28.938534552610257,
+      "prompt_tps_mean": 521.855124516799,
+      "eval_counts": [
+        160,
+        160
+      ],
+      "trial_details": [
+        {
+          "trial": 1,
+          "eval_count": 160,
+          "eval_duration_ns": 5532600000,
+          "generation_tps": 28.919495354806056,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 83971000,
+          "prompt_tps": 523.9904252658656,
+          "total_duration_ns": 5618054751
+        },
+        {
+          "trial": 2,
+          "eval_count": 160,
+          "eval_duration_ns": 5528960000,
+          "generation_tps": 28.938534552610257,
+          "prompt_eval_count": 44,
+          "prompt_eval_duration_ns": 84661000,
+          "prompt_tps": 519.7198237677325,
+          "total_duration_ns": 5639270747
+        }
+      ]
+    }
+  ]
+}

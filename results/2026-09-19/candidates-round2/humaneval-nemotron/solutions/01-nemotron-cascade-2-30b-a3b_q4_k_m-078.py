@@ -1,0 +1,10 @@
+def hex_key(num):
+    """Count the number of prime hexadecimal digits in the given string.
+
+    Prime hexadecimal digits are: 2, 3, 5, 7, B, D.
+    The input may be an empty string; in that case the result is 0.
+    """
+    if not num:
+        return 0
+    prime_digits = {'2', '3', '5', '7', 'B', 'D'}
+    return sum(1 for ch in num if ch in prime_digits)
