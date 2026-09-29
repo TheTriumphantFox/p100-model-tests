@@ -323,7 +323,7 @@ const SPEEDRANGE = {"qwen3.6-27b-abliterated":"11.1–11.5","devstral-patched":"
 /* ---------- scatter: speed (log) vs coding ---------- */
 function drawScatter() {
   const s = document.getElementById("scatter"); s.innerHTML = "";
-  const W = s.clientWidth || 800, H = 320, m = {l:48, r:24, t:16, b:42};
+  const W = s.clientWidth || 800, H = 320, m = {l:64, r:24, t:16, b:42};
   s.setAttribute("viewBox", `0 0 ${W} ${H}`); s.setAttribute("height", H);
   const x = v => m.l + (Math.log(v) - Math.log(8)) / (Math.log(80) - Math.log(8)) * (W - m.l - m.r);
   const y = v => m.t + (100 - v) / (100 - 82) * (H - m.t - m.b);
