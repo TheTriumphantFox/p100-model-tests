@@ -1,0 +1,80 @@
+def minPath(grid, k):
+    """
+    Given a grid with N rows and N columns (N >= 2) and a positive integer k, 
+    each cell of the grid contains a value. Every integer in the range [1, N * N]
+    inclusive appears exactly once on the cells of the grid.
+
+    You have to find the minimum path of length k in the grid. You can start
+    from any cell, and in each step you can move to any of the neighbor cells,
+    in other words, you can go to cells which share an edge with you current
+    cell.
+    Please note that a path of length k means visiting exactly k cells (not
+    necessarily distinct).
+    You CANNOT go off the grid.
+    A path A (of length k) is considered less than a path B (of length k) if
+    after making the ordered lists of the values on the cells that A and B go
+    through (let's call them lst_A and lst_B), lst_A is lexicographically less
+    than lst_B, in other words, there exist an integer index i (1 <= i <= k)
+    such that lst_A[i] < lst_B[i] and for any j (1 <= j < i) we have
+    lst_A[j] = lst_B[j].
+    It is guaranteed that the answer is unique.
+    Return an ordered list of the values on the cells that the minimum path go through.
+
+    Examples:
+
+        Input: grid = [ [1,2,3], [4,5,6], [7,8,9]], k = 3
+        Output: [1, 2, 1]
+
+        Input: grid = [ [5,9,3], [4,1,6], [7,8,2]], k = 1
+        Output: [1]
+    """
+    n = len(grid)
+    
+    # Find the position of the minimum value (which is 1)
+    # Since we want lexicographically smallest path, we should start from the cell with value 1
+    # because any path starting with 1 will be lexicographically smaller than any path starting with >1
+    
+    # Find position of 1
+    start_pos = None
+    for r in range(n):
+        for c in range(n):
+            if grid[r][c] == 1:
+                start_pos = (r, c)
+                break
+        if start_pos:
+            break
+    
+    # Now we need to find the lexicographically smallest path of length k starting from start_pos
+    # We can use BFS/DFS with pruning, but since k can be large, we need a smarter approach.
+    # Actually, at each step, we want to pick the neighbor with the smallest value.
+    # But we need to consider that the choice at each step affects future choices.
+    
+    # Let's think greedily: at each step, among all neighbors (including staying? no, we must move to a neighbor),
+    # we pick the one with the smallest value. But wait, we can revisit cells, so we can go back.
+    
+    # Actually, the problem says we can move to any neighbor cell. So from current cell, we can go to up, down, left, right neighbors.
+    
+    # Greedy approach: at each step, choose the neighbor with the minimum value.
+    # This should give us the lexicographically smallest path because at each position i, we minimize lst[i].
+    
+    # Let's implement this greedy approach.
+    
+    path = [grid[start_pos[0]][start_pos[1]]]
+    current_r, current_c = start_pos
+    
+    for _ in range(k - 1):
+        # Find all valid neighbors
+        neighbors = []
+        for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+            nr, nc = current_r + dr, current_c + dc
+            if 0 <= nr < n and 0 <= nc < n:
+                neighbors.append((grid[nr][nc], nr, nc))
+        
+        # Pick the neighbor with the smallest value
+        neighbors.sort(key=lambda x: x[0])
+        best_val, best_r, best_c = neighbors[0]
+        
+        path.append(best_val)
+        current_r, current_c = best_r, best_c
+    
+    return path

@@ -1,0 +1,4 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+qwen3.6-27b-abliterated:q8_k_p,biology,1,5,5,5,9.373011164193597,139.54445307416722,12.511597345001064,20,,raw/01-qwen3.6-27b-abliterated_q8_k_p-01-biology.txt
+qwen3.6-27b-abliterated:q8_k_p,business,2,3,5,5,9.410914402086963,142.6333930037681,8.50293562799925,20,,raw/01-qwen3.6-27b-abliterated_q8_k_p-02-business.txt
+qwen3.6-27b-abliterated:q8_k_p,chemistry,3,3,5,5,9.403202260529824,147.4602424107503,12.029217899005744,20,,raw/01-qwen3.6-27b-abliterated_q8_k_p-03-chemistry.txt

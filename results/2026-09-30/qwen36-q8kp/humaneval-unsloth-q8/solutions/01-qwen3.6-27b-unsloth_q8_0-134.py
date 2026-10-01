@@ -1,0 +1,49 @@
+def check_if_last_char_is_a_letter(txt):
+    '''
+    Create a function that returns True if the last character
+    of a given string is an alphabetical character and is not
+    a part of a word, and False otherwise.
+    Note: "word" is a group of characters separated by space.
+
+    Examples:
+    check_if_last_char_is_a_letter("apple pie") ➞ False
+    check_if_last_char_is_a_letter("apple pi e") ➞ True
+    check_if_last_char_is_a_letter("apple pi e ") ➞ False
+    check_if_last_char_is_a_letter("") ➞ False 
+    '''
+    if not txt:
+        return False
+    
+    # Strip trailing whitespace to find the actual last non-space character
+    stripped = txt.rstrip()
+    
+    if not stripped:
+        return False
+    
+    last_char = stripped[-1]
+    
+    # Check if the last character is an alphabetical character
+    if not last_char.isalpha():
+        return False
+    
+    # Check if it is not part of a word.
+    # A single letter that is separated by spaces from other characters is not part of a word.
+    # "word" is a group of characters separated by space.
+    # So if the last token (after splitting by spaces) is a single letter, it's not part of a word.
+    # Let's split the stripped string by spaces and check the last token.
+    tokens = stripped.split()
+    if not tokens:
+        return False
+    
+    last_token = tokens[-1]
+    
+    # If the last token is a single character, it's not part of a word (a word has more than one character? Or is a single letter considered a word?)
+    # Looking at the examples:
+    # "apple pi e" -> True. The last token is "e", which is a single letter. So a single letter is NOT considered part of a word.
+    # "apple pie" -> False. The last token is "pie", which has 3 characters. So it IS part of a word.
+    # So the condition is: the last token must be exactly one character long.
+    
+    if len(last_token) == 1:
+        return True
+    else:
+        return False

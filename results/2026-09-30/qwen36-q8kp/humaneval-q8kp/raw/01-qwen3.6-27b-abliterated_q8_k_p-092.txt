@@ -1,0 +1,37 @@
+```python
+def any_int(x, y, z):
+    '''
+    Create a function that takes 3 numbers.
+    Returns true if one of the numbers is equal to the sum of the other two, and all numbers are integers.
+    Returns false in any other cases.
+    
+    Examples
+    any_int(5, 2, 7) ➞ True
+    
+    any_int(3, 2, 2) ➞ False
+
+    any_int(3, -2, 1) ➞ True
+    
+    any_int(3.6, -2.2, 2) ➞ False
+  
+    
+    '''
+    # Check if all numbers are integers
+    if not (isinstance(x, int) and isinstance(y, int) and isinstance(z, int)):
+        # Also handle booleans since bool is a subclass of int in Python
+        # But typically we want to exclude booleans or include them? 
+        # The problem says "all numbers are integers", so let's check if they are int type
+        # However, in Python, bool is a subclass of int, so isinstance(True, int) is True.
+        # Let's assume booleans should be treated as integers (True=1, False=0) unless specified otherwise.
+        # But looking at the examples, they use plain integers. Let's keep it simple.
+        # Actually, let's also exclude booleans to be safe, since they are not typically considered "numbers" in this context.
+        if isinstance(x, bool) or isinstance(y, bool) or isinstance(z, bool):
+            return False
+        return False
+    
+    # Check if one number is the sum of the other two
+    if x == y + z or y == x + z or z == x + y:
+        return True
+    
+    return False
+```

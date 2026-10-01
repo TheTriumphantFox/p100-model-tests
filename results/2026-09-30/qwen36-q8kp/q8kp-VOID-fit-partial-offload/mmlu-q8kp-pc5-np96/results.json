@@ -1,0 +1,390 @@
+{
+  "metadata": {
+    "started": "2026-10-01T00:01:24.611672-04:00",
+    "interrupted": false,
+    "backend": "Ollama /api/chat",
+    "dataset": "/home/hm/Projects/Tests/datasets/mmlu_pro/data/test-00000-of-00001.parquet",
+    "dataset_sha256": "0e24a191921c2f453518a537a8b2117bd137e7714d4ef1565e9ba06c1ecb9ad8",
+    "method": "balanced deterministic zero-shot direct-answer subset",
+    "settings": {
+      "per_category": 5,
+      "batch_size": 5,
+      "categories_arg": "all",
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 96,
+      "temperature": 0,
+      "thinking": false
+    },
+    "categories": [
+      "biology",
+      "business",
+      "chemistry",
+      "computer science",
+      "economics",
+      "engineering",
+      "health",
+      "history",
+      "law",
+      "math",
+      "other",
+      "philosophy",
+      "physics",
+      "psychology"
+    ],
+    "question_ids": {
+      "biology": [
+        2830,
+        2920,
+        3056,
+        3087,
+        3463
+      ],
+      "business": [
+        175,
+        213,
+        300,
+        769,
+        831
+      ],
+      "chemistry": [
+        3587,
+        3591,
+        3706,
+        4397,
+        4653
+      ],
+      "computer science": [
+        10405,
+        10470,
+        10478,
+        10620,
+        10671
+      ],
+      "economics": [
+        6854,
+        7031,
+        7414,
+        7508,
+        7576
+      ],
+      "engineering": [
+        11512,
+        11716,
+        11746,
+        11845,
+        12006
+      ],
+      "health": [
+        6007,
+        6166,
+        6289,
+        6610,
+        6785
+      ],
+      "history": [
+        4748,
+        4817,
+        4850,
+        4892,
+        5034
+      ],
+      "law": [
+        1058,
+        1078,
+        1313,
+        1569,
+        1660
+      ],
+      "math": [
+        7885,
+        8230,
+        8395,
+        8426,
+        8929
+      ],
+      "other": [
+        5104,
+        5535,
+        5617,
+        5822,
+        5902
+      ],
+      "philosophy": [
+        10816,
+        10840,
+        10971,
+        11257,
+        11284
+      ],
+      "physics": [
+        9645,
+        9785,
+        10185,
+        10323,
+        10344
+      ],
+      "psychology": [
+        2034,
+        2060,
+        2186,
+        2584,
+        2723
+      ]
+    },
+    "models": [
+      {
+        "name": "qwen3.6-27b-abliterated:q8_k_p",
+        "digest": "qwen3.6-27b-abliterated_q8_k_p.gguf",
+        "size_bytes": 31963749856,
+        "parameter_size": "27B",
+        "quantization": "Q8_0",
+        "family": "qwen35"
+      }
+    ],
+    "updated": "2026-10-01T00:01:57.919128-04:00"
+  },
+  "results": [
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "biology",
+      "question_id": 2830,
+      "expected_answer": "B",
+      "predicted_answer": "B",
+      "correct": true,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-01-biology.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "biology",
+      "question_id": 2920,
+      "expected_answer": "F",
+      "predicted_answer": "F",
+      "correct": true,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-01-biology.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "biology",
+      "question_id": 3056,
+      "expected_answer": "A",
+      "predicted_answer": "A",
+      "correct": true,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-01-biology.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "biology",
+      "question_id": 3087,
+      "expected_answer": "I",
+      "predicted_answer": "I",
+      "correct": true,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-01-biology.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "biology",
+      "question_id": 3463,
+      "expected_answer": "C",
+      "predicted_answer": "C",
+      "correct": true,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-01-biology.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "business",
+      "question_id": 175,
+      "expected_answer": "J",
+      "predicted_answer": "A",
+      "correct": false,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-02-business.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "business",
+      "question_id": 213,
+      "expected_answer": "H",
+      "predicted_answer": "H",
+      "correct": true,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-02-business.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "business",
+      "question_id": 300,
+      "expected_answer": "H",
+      "predicted_answer": "H",
+      "correct": true,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-02-business.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "business",
+      "question_id": 769,
+      "expected_answer": "J",
+      "predicted_answer": "E",
+      "correct": false,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-02-business.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "business",
+      "question_id": 831,
+      "expected_answer": "B",
+      "predicted_answer": "B",
+      "correct": true,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-02-business.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "chemistry",
+      "question_id": 3587,
+      "expected_answer": "F",
+      "predicted_answer": "F",
+      "correct": true,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-03-chemistry.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "chemistry",
+      "question_id": 3591,
+      "expected_answer": "D",
+      "predicted_answer": "D",
+      "correct": true,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-03-chemistry.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "chemistry",
+      "question_id": 3706,
+      "expected_answer": "B",
+      "predicted_answer": "I",
+      "correct": false,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-03-chemistry.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "chemistry",
+      "question_id": 4397,
+      "expected_answer": "H",
+      "predicted_answer": "A",
+      "correct": false,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-03-chemistry.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "chemistry",
+      "question_id": 4653,
+      "expected_answer": "B",
+      "predicted_answer": "B",
+      "correct": true,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-03-chemistry.txt",
+      "error": ""
+    }
+  ],
+  "batches": [
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "biology",
+      "batch": 1,
+      "correct": 5,
+      "total": 5,
+      "parsed": 5,
+      "generation_tps": 9.373011164193597,
+      "prompt_tps": 139.54445307416722,
+      "wall_seconds": 12.511597345001064,
+      "eval_count": 20,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-01-biology.txt"
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "business",
+      "batch": 2,
+      "correct": 3,
+      "total": 5,
+      "parsed": 5,
+      "generation_tps": 9.410914402086963,
+      "prompt_tps": 142.6333930037681,
+      "wall_seconds": 8.50293562799925,
+      "eval_count": 20,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-02-business.txt"
+    },
+    {
+      "model": "qwen3.6-27b-abliterated:q8_k_p",
+      "category": "chemistry",
+      "batch": 3,
+      "correct": 3,
+      "total": 5,
+      "parsed": 5,
+      "generation_tps": 9.403202260529824,
+      "prompt_tps": 147.4602424107503,
+      "wall_seconds": 12.029217899005744,
+      "eval_count": 20,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.6-27b-abliterated_q8_k_p-03-chemistry.txt"
+    }
+  ],
+  "model_summaries": [
+    {
+      "name": "qwen3.6-27b-abliterated:q8_k_p",
+      "digest": "qwen3.6-27b-abliterated_q8_k_p.gguf",
+      "size_bytes": 31963749856,
+      "parameter_size": "27B",
+      "quantization": "Q8_0",
+      "family": "qwen35",
+      "accuracy": 73.33333333333333,
+      "correct": 11,
+      "total": 15,
+      "parsed": 15,
+      "category_scores": {
+        "biology": 100.0,
+        "business": 60.0,
+        "chemistry": 60.0,
+        "computer science": 0,
+        "economics": 0,
+        "engineering": 0,
+        "health": 0,
+        "history": 0,
+        "law": 0,
+        "math": 0,
+        "other": 0,
+        "philosophy": 0,
+        "physics": 0,
+        "psychology": 0
+      },
+      "generation_tps": 9.395709275603462,
+      "wall_seconds": 33.04375087200606
+    }
+  ]
+}

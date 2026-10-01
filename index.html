@@ -146,7 +146,7 @@ ul.tight{margin:8px 0 0;padding-left:20px} ul.tight li{margin:4px 0}
 <section id="scoreboard">
   <h2>Model scoreboard</h2>
   <p class="sub">Every model that loads on the CUDA build, with identical questions for each. <b>Reasoning</b> is 70 MMLU-Pro questions (5 per category × 14). <b>Coding</b> is all 164 HumanEval problems. Seed 42, temperature 0. Click a column header to sort.</p>
-  <div class="verdict"><p><b>Result (21 Sep):</b> keep the incumbent <code>qwen3.6-27b-abliterated</code>. It has the best score on every accuracy test and is the only model that finishes every thinking question. Every statistically significant gap (McNemar exact, p&lt;0.05) is in its favour. The one exception is speed, where the MoE models are 4–6× faster.</p></div>
+  <div class="verdict"><p><b>Result (21 Sep):</b> keep the incumbent <code>qwen3.6-27b-abliterated</code>. It has the best score on every accuracy test and is the only model that finishes every thinking question. Every statistically significant gap (McNemar exact, p&lt;0.05) is in its favour. The one exception is speed, where the MoE models are 4–6× faster.</p><p><b>Update (1 Oct):</b> the incumbent at higher quants, its own abliteration at Q8_K_P and Unsloth's stock Q8_0, scored up to 3 questions better on reasoning and 1–2 worse on coding. No gap is resolvable (every p ≥ 0.25). Both cost all but ~16–32k of the context headroom, so both were deleted and the Q5 stays.</p></div>
   <div class="tablewrap"><table id="score">
     <thead><tr>
       <th class="sort" data-k="name">Model</th>
@@ -155,7 +155,7 @@ ul.tight{margin:8px 0 0;padding-left:20px} ul.tight li{margin:4px 0}
       <th class="sort num" data-k="think">Reasoning, thinking</th>
       <th class="sort num" data-k="code">Coding</th>
     </tr></thead><tbody></tbody></table></div>
-  <p class="note">* = the model spent its whole 12,288-token thinking budget on some questions and never answered them. The true score is higher, so a starred value is a floor. "none" means the model has no thinking mode. <code>gpt-oss-20b</code> is non-deterministic: it scored 77.1 once and 71.4 in four of five repeats. Three shelf models do not load on llama.cpp at all: <code>qwen3.6-27b-opus-distill</code> and <code>qwen3.6-35b-a3b-abliterated-vl</code> (vision GGUFs) and <code>gemma4-e4b-abliterated</code> (tensor count). Source: <a data-md="results/2026-09-21/cuda-matrix/FINAL.md">cuda-matrix/FINAL.md</a>.</p>
+  <p class="note">* = the model spent its whole 12,288-token thinking budget on some questions and never answered them. The true score is higher, so a starred value is a floor. "none" means the model has no thinking mode. <code>gpt-oss-20b</code> is non-deterministic: it scored 77.1 once and 71.4 in four of five repeats. Three shelf models do not load on llama.cpp at all: <code>qwen3.6-27b-opus-distill</code> and <code>qwen3.6-35b-a3b-abliterated-vl</code> (vision GGUFs) and <code>gemma4-e4b-abliterated</code> (tensor count). The two <code>:q8</code> rows come from the 30 Sep quant test and were deleted afterwards. Sources: <a data-md="results/2026-09-21/cuda-matrix/FINAL.md">cuda-matrix/FINAL.md</a>, <a data-md="results/2026-09-30/qwen36-q8kp/REPORT.md">qwen36-q8kp/REPORT.md</a>.</p>
 
   <h3>Speed against coding accuracy</h3>
   <div class="card"><svg id="scatter" class="chart" role="img" aria-label="Scatter of generation speed against HumanEval score"></svg></div>
@@ -209,6 +209,8 @@ ul.tight{margin:8px 0 0;padding-left:20px} ul.tight li{margin:4px 0}
       <tr><td>Vulkan tuning (before CUDA)</td><td>Disabling the integer-dot-product path made prompt processing 14–23× faster, and <code>num_batch 256</code> added 9 % to prefill. Qwen3.8 27B went from 11.7 to 164 prefill tok/s.</td><td><a data-md="results/2026-09-15/qwen3.8-p100-tuning/REPORT.md">qwen3.8 tuning</a>, <a data-md="results/2026-09-17/devstral-p100-tuning/REPORT.md">devstral tuning</a></td></tr>
       <tr><td>Models bigger than VRAM</td><td>qwen3.8-flash-next (512-expert MoE, 70.8 GB): 12.53 tok/s warm, 0.66 cold, disk-bound at ~150 MB/s with the GPUs idle.</td><td><a data-md="results/2026-09-19/qwen3.8-flash-next/REPORT.md">flash-next</a></td></tr>
       <tr><td>Context cost</td><td>The Qwen 27B models measured 72 KB/token of KV, not the 260 KB in earlier notes. Devstral measured 168 KB/token f16 (about 84 KB at q8_0, derived from that figure rather than measured), with room for ~100k tokens.</td><td><a data-md="results/2026-09-21/cuda-matrix/FINAL.md">cuda-matrix</a></td></tr>
+      <tr><td>Higher quant of the incumbent</td><td>Q5_K_P → Q8_K_P (Q8_0 + F16) or a stock Q8_0: no resolvable accuracy gain, ~4 % slower, and the Q8_K_P tops out at ctx ~16k against the Q5's ~180k. Qwen3.8's Q4 → Q8 coding gain (p=0.016) does not carry over from a Q5 start.</td><td><a data-md="results/2026-09-30/qwen36-q8kp/REPORT.md">quant test</a></td></tr>
+      <tr><td>Silent partial offload</td><td>This llama.cpp defaults to <code>--fit on</code> with a 1024 MiB margin per card. A file that nearly fills 32 GB gets a few layers quietly left in RAM (−15 % speed, so a speed floor misses it). Check VRAM against non-embedding weights + 1082 MiB + 72 KB/token instead. Force with <code>--fit off -ngl 999</code> and split by hand (<code>-ts 36,28</code>): the last card also holds the output tensor.</td><td><a data-md="results/2026-09-30/qwen36-q8kp/REPORT.md">quant test</a></td></tr>
       <tr><td>Quant choice on GP100</td><td>No <code>dp4a</code>, so K-quants are slower per byte than Q8_0. MXFP4 (gpt-oss) works on sm_60.</td><td><a data-md="results/2026-09-19/candidates/REPORT.md">round 1</a></td></tr>
     </tbody></table></div>
 </section>
@@ -250,7 +252,7 @@ ul.tight{margin:8px 0 0;padding-left:20px} ul.tight li{margin:4px 0}
 </div>
 
 <footer><div class="wrap">
-  Built 29 September 2026 from <code>~/Projects/Tests</code>. The raw data includes model outputs, router logs and per-question results. Dataset content (HumanEval, MMLU-Pro, tau-bench, GenEval, T2I-CompBench) remains under its upstream licences, listed in <a href="dataset_manifest.json">dataset_manifest.json</a>.
+  Built 29 September 2026 from <code>~/Projects/Tests</code>, updated 1 October. The raw data includes model outputs, router logs and per-question results. Dataset content (HumanEval, MMLU-Pro, tau-bench, GenEval, T2I-CompBench) remains under its upstream licences, listed in <a href="dataset_manifest.json">dataset_manifest.json</a>.
 </div></footer>
 
 <div id="tip" role="tooltip"></div>
@@ -290,6 +292,8 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":
 /* ---------- scoreboard ---------- */
 const SCORE = [
   {name:"qwen3.6-27b-abliterated", note:"incumbent", speed:11.3, quick:71.4, think:87.1, code:96.3, hl:true},
+  {name:"qwen3.6-27b-abliterated:q8_k_p", note:"same model, Q8_K_P · deleted", speed:10.7, quick:71.4, think:91.4, code:95.7},
+  {name:"qwen3.6-27b-unsloth:q8_0", note:"stock Q8_0 · deleted", speed:11.0, quick:74.3, think:90.0, code:95.1},
   {name:"devstral-patched", note:"production :8080", speed:13.0, quick:58.6, think:null, code:84.8},
   {name:"qwen3.8-27b-unsloth", note:"Q8_0", speed:11.05, quick:68.6, think:77.1, ts:true, code:97.6},
   {name:"qwen3.8-27b-ggmlorg", note:"Q8_0 + drafters", speed:11.05, quick:68.6, think:78.6, ts:true, code:95.7},
@@ -299,7 +303,7 @@ const SCORE = [
   {name:"ornith-1.5-35b-a3b", note:"MoE Q4_K_M", speed:48.7, quick:61.4, think:81.4, ts:true, code:92.1},
   {name:"g9v3-39a5b", note:"MoE Q4_K_M", speed:39.6, quick:67.1, think:68.6, ts:true, code:93.9},
 ];
-const SPEEDRANGE = {"qwen3.6-27b-abliterated":"11.1–11.5","devstral-patched":"12.9–13.1","qwen3.8-27b-unsloth":"10.9–11.2","qwen3.8-27b-ggmlorg":"10.9–11.2","qwen3.8-27b-uncensored-hauhaucs":"9.9–10.3","qwen3.8-27b-stock":"12.1–12.6","gpt-oss-20b":"66.0–67.5","ornith-1.5-35b-a3b":"47.8–49.6","g9v3-39a5b":"39.0–40.2"};
+const SPEEDRANGE = {"qwen3.6-27b-abliterated":"11.1–11.5","qwen3.6-27b-abliterated:q8_k_p":"10.6–11.0","qwen3.6-27b-unsloth:q8_0":"10.9–11.3","devstral-patched":"12.9–13.1","qwen3.8-27b-unsloth":"10.9–11.2","qwen3.8-27b-ggmlorg":"10.9–11.2","qwen3.8-27b-uncensored-hauhaucs":"9.9–10.3","qwen3.8-27b-stock":"12.1–12.6","gpt-oss-20b":"66.0–67.5","ornith-1.5-35b-a3b":"47.8–49.6","g9v3-39a5b":"39.0–40.2"};
 (() => {
   const tb = document.querySelector("#score tbody");
   const max = {speed:70, quick:100, think:100, code:100};
@@ -446,7 +450,7 @@ let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(dra
 /* ---------- model inventory ---------- */
 const MODELS = [
   ["qwen3.6-35b-a3b UD-Q6_K","29.3","fast","AIOS local planner. 53 tok/s; 39/40 on the pinned planner bench; best rig config."],
-  ["qwen3.6-27b-abliterated Q5_K_M","20.8","fast","Best accuracy on every benchmark (71.4 / 87.1 / 96.3). ~11 tok/s."],
+  ["qwen3.6-27b-abliterated Q5_K_M","20.8","fast","HauhauCS Aggressive Q5_K_P. Best coding score of its line (71.4 / 87.1 / 96.3), ~11 tok/s, ~180k tokens of context headroom."],
   ["devstral-patched Q8_0 (+ mmproj f16 0.9 GB)","25.1","fast","Production agent on :8080, ~13 tok/s. Tool-template patch."],
   ["gpt-oss-20b Q8_0","12.1","fast","~66 tok/s. The only non-Qwen model kept; non-deterministic on repeats."],
   ["k2-horizon-7b Q8_0","9.6","fast","IFM K2 Horizon 7B. Needs the IFM fork build (:8083). Not yet benchmarked here."],
@@ -470,6 +474,8 @@ const MODELS = [
   ["nemotron-cascade-2-30b-a3b Q4_K_M","24.7","removed","Fastest (69–70 tok/s) but 89.0 / 48.6; dominated by gpt-oss."],
   ["glm-4.7-flash Q5_K_M","21.4","removed","84.8 / 55.7, lost both axes."],
   ["Qwen3.8-27B UD-Q6_K","22.0","removed","Dominated by the Unsloth Q8_0 on both accuracy and speed."],
+  ["Qwen3.6-27B-HauhauCS-Aggressive Q8_K_P","32.0","removed","The incumbent at Q8_0 + F16: 95.7 / 71.4 / 91.4, no resolvable gain; ctx capped at ~16k."],
+  ["Qwen3.6-27B Q8_0 (Unsloth, stock)","28.6","removed","95.1 / 74.3 / 90.0, no resolvable gain; not abliterated."],
 ];
 const TIERS = {all:"All", fast:"Fast tier (NVMe)", archive:"Archive (HDD)", ollama:"Ollama store", removed:"Tested, removed"};
 (() => {
@@ -502,6 +508,7 @@ const IDX = [
   ["2026-09-23","planner-bench","AIOS planner benchmark","40 one-shot grammar-constrained tasks × 9 configurations, including a size ladder and injection tasks.","RESULTS.md"],
   ["2026-09-23","tokenize-escaping","Raw vs JSON-escaped tokenization","Measures what a raw content block would save per tokenizer (22–26 % or ~4 %).","README.md"],
   ["2026-09-26","rig","Full-stack rig runs","Runs smoke, first-stack (2 h 25 min) and fixes-check. Covers planner, reviewer and reporter personas.","first-stack/REPORT.md"],
+  ["2026-09-30","qwen36-q8kp","Incumbent at Q8","Q8_K_P and a stock Q8_0 against the Q5_K_P, McNemar-paired. No resolvable gain, less context. Also: <code>--fit</code> silently offloading layers.","REPORT.md"],
 ];
 const EARLY = [
   ["2026-09-01","local-llm-benchmark","Ollama throughput (GTX 1660)","12 tags × 12 prompts, 720 requests, with graphs.","graphs/index.html"],

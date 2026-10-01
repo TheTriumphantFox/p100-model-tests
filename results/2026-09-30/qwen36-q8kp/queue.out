@@ -1,0 +1,164 @@
+[09-30 21:30:02] shim :11500 started  (pid 2702601)
+[09-30 21:30:03] shim :11501 started --force-think (pid 2702640)
+[09-30 21:30:03] ================ unsloth-q8 RUN START (prod :8080 pid=975) ================
+[09-30 21:30:03] router stopped (was pid none, children: none); GPU 35 MiB after 1x2s
+[09-30 21:30:05] router started from /home/hm/llama-cuda12 ctx=8192 --cache-type-k f16 --cache-type-v f16 (pid 2702716)
+[09-30 21:30:43] unsloth-q8 ctx=8192 kv=f16 -> resident, 27627 MiB on GPU, weights 27271 MiB, 10.89 tok/s (floor 8.0)
+[09-30 21:30:43] unsloth-q8: preflight -- can this model serve one token?
+[09-30 21:30:46] unsloth-q8: preflight OK -- {"ok": true, "eval_count": 16, "tok_per_s": 11.57, "prompt_eval_count": 32, "wall_s": 2.4}
+[09-30 21:30:46] unsloth-q8: MMLU-Pro per-category=5 (batch 5) num_predict=96
+[09-30 21:33:05] unsloth-q8: MMLU pc=5 np=96 -> 74.29% parsed=70/70 tps=11.4 wall=2.2min
+[09-30 21:33:05] unsloth-q8: MMLU-Pro per-category=5 (batch 5) num_predict=2048
+[09-30 21:35:17] unsloth-q8: MMLU pc=5 np=2048 -> 74.29% parsed=70/70 tps=11.4 wall=2.2min
+[09-30 21:35:17] unsloth-q8: HumanEval 164 tasks
+[09-30 22:43:40] unsloth-q8: HumanEval -> 95.12% parsed=164/164 tps=10.9 wall=68.3min
+[09-30 22:43:40] unsloth-q8: throughput
+[09-30 22:52:08] unsloth-q8: throughput -> speed_brief=11.3 speed_medium=10.9 speed_long=10.9 python_coding=10.9
+[09-30 22:52:08] unsloth-q8: bench_off DONE (pc=5 what=mmlu96,mmlu2048,humaneval,throughput)
+[09-30 22:52:10] router stopped (was pid 2702716, children: 2702830); GPU 35 MiB after 1x2s
+[09-30 22:52:12] router started from /home/hm/llama-cuda12 ctx=16384 --cache-type-k f16 --cache-type-v f16 (pid 2862988)
+[09-30 22:52:45] unsloth-q8 ctx=16384 kv=f16 -> resident, 28203 MiB on GPU, weights 27271 MiB, 10.92 tok/s (floor 8.0)
+[09-30 22:52:45] unsloth-q8: MMLU-Pro THINKING-ON num_predict=12288 ctx=16384 timeout=2400
+[09-30 23:59:50] unsloth-q8: MMLU-think@12288 -> 90.00% parsed=70/70 among-answered=90.00% tok=42260 tps=10.8 wall=67.0min (off tok=280, ratio=150.9x)
+[09-30 23:59:50] unsloth-q8: think DONE
+[09-30 23:59:53] router stopped (was pid 2862988, children: 2863044); GPU 35 MiB after 1x2s
+[09-30 23:59:55] router started from /home/hm/llama-cuda12 ctx=32768 --cache-type-k f16 --cache-type-v f16 (pid 2992959)
+[10-01 00:00:21] unsloth-q8 ctx=32768 kv=f16 -> resident, 29355 MiB on GPU, weights 27271 MiB, 10.92 tok/s (floor 8.0)
+# paired McNemar, incumbent q5_k_p (A) vs unsloth-q8 (B) -- 2026-10-01 00:00:21
+
+## humaneval-unsloth-q8
+n = 164 paired questions
+  incumbent-q5kp                                96.34%
+  unsloth-q8                                    95.12%
+  gap +1.22 points
+  both right 154, both wrong 4, discordant 4/2 (A-only/B-only)
+  exact McNemar p = 0.6875  ->  not resolvable at this sample size
+
+## mmlu-unsloth-q8-pc5-np96
+n = 70 paired questions
+  incumbent-q5kp                                71.43%
+  unsloth-q8                                    74.29%
+  gap -2.86 points
+  both right 50, both wrong 18, discordant 0/2 (A-only/B-only)
+  exact McNemar p = 0.5000  ->  not resolvable at this sample size
+  NOTE: only 2 discordant pairs; this test cannot reach p<0.05 below 6.
+
+## mmlu-unsloth-q8-pc5-np2048
+n = 70 paired questions
+  incumbent-q5kp                                71.43%
+  unsloth-q8                                    74.29%
+  gap -2.86 points
+  both right 50, both wrong 18, discordant 0/2 (A-only/B-only)
+  exact McNemar p = 0.5000  ->  not resolvable at this sample size
+  NOTE: only 2 discordant pairs; this test cannot reach p<0.05 below 6.
+
+## mmlu-unsloth-q8-pc5-think12288
+n = 70 paired questions
+  incumbent-q5kp                                87.14%
+  unsloth-q8                                    90.00%
+  gap -2.86 points
+  both right 61, both wrong 7, discordant 0/2 (A-only/B-only)
+  exact McNemar p = 0.5000  ->  not resolvable at this sample size
+  NOTE: only 2 discordant pairs; this test cannot reach p<0.05 below 6.
+[10-01 00:00:22] ================ unsloth-q8 RUN DONE -- see pairs-unsloth-q8.txt, ctx-ladder.jsonl ================
+[10-01 00:00:24] router stopped (was pid 2992959, children: 2993075); GPU 35 MiB after 1x2s
+[10-01 00:00:25] shim :11500 started  (pid 2994161)
+[10-01 00:00:26] shim :11501 started --force-think (pid 2994203)
+[10-01 00:00:26] ================ q8kp RUN START (prod :8080 pid=975) ================
+[10-01 00:00:26] router stopped (was pid none, children: none); GPU 35 MiB after 1x2s
+[10-01 00:00:28] router started from /home/hm/llama-cuda12 ctx=8192 --cache-type-k f16 --cache-type-v f16 (pid 2994267)
+[10-01 00:01:15] q8kp ctx=8192 kv=f16 -> resident, 29979 MiB on GPU, weights 30483 MiB, 9.02 tok/s (floor 8.0)
+[10-01 00:01:15] q8kp: preflight -- can this model serve one token?
+[10-01 00:01:18] q8kp: preflight OK -- {"ok": true, "eval_count": 16, "tok_per_s": 9.54, "prompt_eval_count": 32, "wall_s": 2.6}
+[10-01 00:01:18] q8kp: MMLU-Pro per-category=5 (batch 5) num_predict=96
+[10-01 00:03:11] shim :11500 started  (pid 2999765)
+[10-01 00:03:12] shim :11501 started --force-think (pid 2999871)
+[10-01 00:03:12] ================ q8kp RUN START (prod :8080 pid=975) router extra: --fit off -ngl 999 ================
+[10-01 00:03:12] router stopped (was pid none, children: none); GPU 35 MiB after 1x2s
+[10-01 00:03:14] router started from /home/hm/llama-cuda12 ctx=8192 --cache-type-k f16 --cache-type-v f16 --fit off -ngl 999 (pid 2999935)
+[10-01 00:03:17] q8kp ctx=8192 kv=f16 -> failed, 35 MiB on GPU, weights 30483 MiB, 0 tok/s (floor 8.0)
+[10-01 00:03:17] !!! q8kp does not run cleanly at ctx 8192 (failed). Nothing is comparable.
+[10-01 00:03:19] router stopped (was pid 2999935, children: none); GPU 35 MiB after 1x2s
+[10-01 00:03:40] shim :11500 started  (pid 3001065)
+[10-01 00:03:41] shim :11501 started --force-think (pid 3001084)
+[10-01 00:03:41] ================ q8kp RUN START (prod :8080 pid=975) router extra: --fit off -ngl 999 -ts 35,29 ================
+[10-01 00:03:41] router stopped (was pid none, children: none); GPU 35 MiB after 1x2s
+[10-01 00:03:43] router started from /home/hm/llama-cuda12 ctx=8192 --cache-type-k f16 --cache-type-v f16 --fit off -ngl 999 -ts 35,29 (pid 3001125)
+[10-01 00:04:11] q8kp ctx=8192 kv=f16 -> resident, 30841 MiB on GPU, weights 30483 MiB, 10.64 tok/s (floor 8.0)
+[10-01 00:04:11] q8kp: preflight -- can this model serve one token?
+[10-01 00:04:13] q8kp: preflight OK -- {"ok": true, "eval_count": 16, "tok_per_s": 11.28, "prompt_eval_count": 32, "wall_s": 2.3}
+[10-01 00:04:13] q8kp: MMLU-Pro per-category=5 (batch 5) num_predict=96
+[10-01 00:04:32] q8kp: MMLU pc=5 np=96 -> 7.14% parsed=5/70 tps=11.1 wall=0.2min
+[10-01 00:04:32] q8kp: MMLU-Pro per-category=5 (batch 5) num_predict=2048
+[10-01 00:04:32] q8kp: MMLU pc=5 np=2048 -> UNREADABLE [Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-30/qwen36-q8kp/mmlu-q8kp-pc5-np2048/results.json'
+[10-01 00:04:32] q8kp: HumanEval 164 tasks
+[10-01 00:04:32] q8kp: HumanEval -> UNREADABLE [Errno 2] No such file or directory: '/home/hm/Projects/Tests/2026-09-30/qwen36-q8kp/humaneval-q8kp/results.json'
+[10-01 00:04:32] q8kp: throughput
+[10-01 00:04:32] q8kp: throughput -> 
+[10-01 00:04:32] q8kp: bench_off DONE (pc=5 what=mmlu96,mmlu2048,humaneval,throughput)
+[10-01 00:04:42] router stopped (was pid 3001125, children: 3001167); GPU 35 MiB after 5x2s
+[10-01 00:04:50] shim :11500 started  (pid 3003642)
+[10-01 00:04:51] shim :11501 started --force-think (pid 3003680)
+[10-01 00:04:51] ================ q8kp RUN START (prod :8080 pid=975) router extra: --fit off -ngl 999 -ts 36,28 ================
+[10-01 00:04:51] router stopped (was pid none, children: none); GPU 35 MiB after 1x2s
+[10-01 00:04:53] router started from /home/hm/llama-cuda12 ctx=8192 --cache-type-k f16 --cache-type-v f16 --fit off -ngl 999 -ts 36,28 (pid 3003809)
+[10-01 00:05:21] q8kp ctx=8192 kv=f16 -> resident, 30841 MiB on GPU, weights 30483 MiB, 10.64 tok/s (floor 8.0)
+[10-01 00:05:21] q8kp: preflight -- can this model serve one token?
+[10-01 00:05:24] q8kp: preflight OK -- {"ok": true, "eval_count": 16, "tok_per_s": 11.28, "prompt_eval_count": 32, "wall_s": 2.3}
+[10-01 00:05:24] q8kp: MMLU-Pro per-category=5 (batch 5) num_predict=96
+[10-01 00:07:39] q8kp: MMLU pc=5 np=96 -> 71.43% parsed=70/70 tps=11.1 wall=2.2min
+[10-01 00:07:39] q8kp: MMLU-Pro per-category=5 (batch 5) num_predict=2048
+[10-01 00:09:50] q8kp: MMLU pc=5 np=2048 -> 71.43% parsed=70/70 tps=11.1 wall=2.2min
+[10-01 00:09:50] q8kp: HumanEval 164 tasks
+[10-01 01:19:33] q8kp: HumanEval -> 95.73% parsed=164/164 tps=10.6 wall=69.6min
+[10-01 01:19:33] q8kp: throughput
+[10-01 01:28:00] q8kp: throughput -> speed_brief=11.0 speed_medium=10.6 speed_long=10.6 python_coding=10.6
+[10-01 01:28:00] q8kp: bench_off DONE (pc=5 what=mmlu96,mmlu2048,humaneval,throughput)
+[10-01 01:28:02] router stopped (was pid 3003809, children: 3003856); GPU 35 MiB after 1x2s
+[10-01 01:28:04] router started from /home/hm/llama-cuda12 ctx=16384 --cache-type-k f16 --cache-type-v f16 --fit off -ngl 999 -ts 36,28 (pid 3166470)
+[10-01 01:28:35] q8kp ctx=16384 kv=f16 -> resident, 31417 MiB on GPU, weights 30483 MiB, 10.64 tok/s (floor 8.0)
+[10-01 01:28:35] q8kp: MMLU-Pro THINKING-ON num_predict=12288 ctx=16384 timeout=2400
+[10-01 02:40:30] q8kp: MMLU-think@12288 -> 91.43% parsed=70/70 among-answered=91.43% tok=44269 tps=10.5 wall=71.8min (off tok=280, ratio=158.1x)
+[10-01 02:40:30] q8kp: think DONE
+[10-01 02:40:32] router stopped (was pid 3166470, children: 3166512); GPU 35 MiB after 1x2s
+[10-01 02:40:34] router started from /home/hm/llama-cuda12 ctx=32768 --cache-type-k f16 --cache-type-v f16 --fit off -ngl 999 -ts 36,28 (pid 3306992)
+[10-01 02:40:44] q8kp ctx=32768 kv=f16 -> failed, 32297 MiB on GPU, weights 30483 MiB, 0 tok/s (floor 8.0)
+# paired McNemar, incumbent q5_k_p (A) vs q8kp (B) -- 2026-10-01 02:40:44
+
+## humaneval-q8kp
+n = 164 paired questions
+  incumbent-q5kp                                96.34%
+  q8kp                                          95.73%
+  gap +0.61 points
+  both right 156, both wrong 5, discordant 2/1 (A-only/B-only)
+  exact McNemar p = 1.0000  ->  not resolvable at this sample size
+  NOTE: only 3 discordant pairs; this test cannot reach p<0.05 below 6.
+
+## mmlu-q8kp-pc5-np96
+n = 70 paired questions
+  incumbent-q5kp                                71.43%
+  q8kp                                          71.43%
+  gap +0.00 points
+  both right 49, both wrong 19, discordant 1/1 (A-only/B-only)
+  exact McNemar p = 1.0000  ->  not resolvable at this sample size
+  NOTE: only 2 discordant pairs; this test cannot reach p<0.05 below 6.
+
+## mmlu-q8kp-pc5-np2048
+n = 70 paired questions
+  incumbent-q5kp                                71.43%
+  q8kp                                          71.43%
+  gap +0.00 points
+  both right 49, both wrong 19, discordant 1/1 (A-only/B-only)
+  exact McNemar p = 1.0000  ->  not resolvable at this sample size
+  NOTE: only 2 discordant pairs; this test cannot reach p<0.05 below 6.
+
+## mmlu-q8kp-pc5-think12288
+n = 70 paired questions
+  incumbent-q5kp                                87.14%
+  q8kp                                          91.43%
+  gap -4.29 points
+  both right 61, both wrong 6, discordant 0/3 (A-only/B-only)
+  exact McNemar p = 0.2500  ->  not resolvable at this sample size
+  NOTE: only 3 discordant pairs; this test cannot reach p<0.05 below 6.
+[10-01 02:40:44] ================ q8kp RUN DONE -- see pairs-q8kp.txt, ctx-ladder.jsonl ================
+[10-01 02:40:46] router stopped (was pid 3306992, children: none); GPU 35 MiB after 1x2s

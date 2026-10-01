@@ -1,0 +1,5 @@
+[09-30 21:30:03] watchdog: started; guarding :8080 pid=975, polling every 45s, kill rule = 12+ attempts with zero successes
+[10-01 00:00:26] watchdog: started; guarding :8080 pid=975, polling every 45s, kill rule = 12+ attempts with zero successes
+[10-01 00:03:12] watchdog: started; guarding :8080 pid=975, polling every 45s, kill rule = 12+ attempts with zero successes
+[10-01 00:03:41] watchdog: started; guarding :8080 pid=975, polling every 45s, kill rule = 12+ attempts with zero successes
+[10-01 00:04:51] watchdog: started; guarding :8080 pid=975, polling every 45s, kill rule = 12+ attempts with zero successes

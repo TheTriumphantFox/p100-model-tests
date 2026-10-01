@@ -1,0 +1,6 @@
+{"slug":"unsloth-q8","ctx":8192,"kv":"f16","weights_mib":27271,"vram_mib":27627,"tok_per_s":10.89,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 10.89, "prompt_eval_count": 32, "wall_s": 19.4}}
+{"slug":"unsloth-q8","ctx":16384,"kv":"f16","weights_mib":27271,"vram_mib":28203,"tok_per_s":10.92,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 10.92, "prompt_eval_count": 32, "wall_s": 19.2}}
+{"slug":"unsloth-q8","ctx":32768,"kv":"f16","weights_mib":27271,"vram_mib":29355,"tok_per_s":10.92,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 10.92, "prompt_eval_count": 32, "wall_s": 19.2}}
+{"slug":"q8kp","ctx":8192,"kv":"f16","weights_mib":30483,"vram_mib":30841,"tok_per_s":10.64,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 10.64, "prompt_eval_count": 32, "wall_s": 19.7}}
+{"slug":"q8kp","ctx":16384,"kv":"f16","weights_mib":30483,"vram_mib":31417,"tok_per_s":10.64,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 10.64, "prompt_eval_count": 32, "wall_s": 19.7}}
+{"slug":"q8kp","ctx":32768,"kv":"f16","weights_mib":30483,"vram_mib":32297,"tok_per_s":0,"status":"failed","probe":{"ok": false, "error": "HTTPError: HTTP Error 502: Bad Gateway", "wall_s": 2.2}}

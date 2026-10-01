@@ -1,0 +1,71 @@
+model,category,question_id,expected_answer,predicted_answer,correct,batch,raw_output_file,error
+qwen3.6-27b-abliterated:q8_k_p,biology,2830,B,B,True,1,raw/01-qwen3.6-27b-abliterated_q8_k_p-01-biology.txt,
+qwen3.6-27b-abliterated:q8_k_p,biology,2920,F,F,True,1,raw/01-qwen3.6-27b-abliterated_q8_k_p-01-biology.txt,
+qwen3.6-27b-abliterated:q8_k_p,biology,3056,A,A,True,1,raw/01-qwen3.6-27b-abliterated_q8_k_p-01-biology.txt,
+qwen3.6-27b-abliterated:q8_k_p,biology,3087,I,I,True,1,raw/01-qwen3.6-27b-abliterated_q8_k_p-01-biology.txt,
+qwen3.6-27b-abliterated:q8_k_p,biology,3463,C,C,True,1,raw/01-qwen3.6-27b-abliterated_q8_k_p-01-biology.txt,
+qwen3.6-27b-abliterated:q8_k_p,business,175,J,,False,2,raw/01-qwen3.6-27b-abliterated_q8_k_p-02-business.txt,RemoteDisconnected: Remote end closed connection without response
+qwen3.6-27b-abliterated:q8_k_p,business,213,H,,False,2,raw/01-qwen3.6-27b-abliterated_q8_k_p-02-business.txt,RemoteDisconnected: Remote end closed connection without response
+qwen3.6-27b-abliterated:q8_k_p,business,300,H,,False,2,raw/01-qwen3.6-27b-abliterated_q8_k_p-02-business.txt,RemoteDisconnected: Remote end closed connection without response
+qwen3.6-27b-abliterated:q8_k_p,business,769,J,,False,2,raw/01-qwen3.6-27b-abliterated_q8_k_p-02-business.txt,RemoteDisconnected: Remote end closed connection without response
+qwen3.6-27b-abliterated:q8_k_p,business,831,B,,False,2,raw/01-qwen3.6-27b-abliterated_q8_k_p-02-business.txt,RemoteDisconnected: Remote end closed connection without response
+qwen3.6-27b-abliterated:q8_k_p,chemistry,3587,F,,False,3,raw/01-qwen3.6-27b-abliterated_q8_k_p-03-chemistry.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,chemistry,3591,D,,False,3,raw/01-qwen3.6-27b-abliterated_q8_k_p-03-chemistry.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,chemistry,3706,B,,False,3,raw/01-qwen3.6-27b-abliterated_q8_k_p-03-chemistry.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,chemistry,4397,H,,False,3,raw/01-qwen3.6-27b-abliterated_q8_k_p-03-chemistry.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,chemistry,4653,B,,False,3,raw/01-qwen3.6-27b-abliterated_q8_k_p-03-chemistry.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,computer science,10405,B,,False,4,raw/01-qwen3.6-27b-abliterated_q8_k_p-04-computer_science.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,computer science,10470,F,,False,4,raw/01-qwen3.6-27b-abliterated_q8_k_p-04-computer_science.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,computer science,10478,G,,False,4,raw/01-qwen3.6-27b-abliterated_q8_k_p-04-computer_science.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,computer science,10620,C,,False,4,raw/01-qwen3.6-27b-abliterated_q8_k_p-04-computer_science.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,computer science,10671,A,,False,4,raw/01-qwen3.6-27b-abliterated_q8_k_p-04-computer_science.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,economics,6854,I,,False,5,raw/01-qwen3.6-27b-abliterated_q8_k_p-05-economics.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,economics,7031,G,,False,5,raw/01-qwen3.6-27b-abliterated_q8_k_p-05-economics.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,economics,7414,I,,False,5,raw/01-qwen3.6-27b-abliterated_q8_k_p-05-economics.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,economics,7508,C,,False,5,raw/01-qwen3.6-27b-abliterated_q8_k_p-05-economics.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,economics,7576,A,,False,5,raw/01-qwen3.6-27b-abliterated_q8_k_p-05-economics.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,engineering,11512,A,,False,6,raw/01-qwen3.6-27b-abliterated_q8_k_p-06-engineering.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,engineering,11716,D,,False,6,raw/01-qwen3.6-27b-abliterated_q8_k_p-06-engineering.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,engineering,11746,J,,False,6,raw/01-qwen3.6-27b-abliterated_q8_k_p-06-engineering.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,engineering,11845,I,,False,6,raw/01-qwen3.6-27b-abliterated_q8_k_p-06-engineering.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,engineering,12006,B,,False,6,raw/01-qwen3.6-27b-abliterated_q8_k_p-06-engineering.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,health,6007,D,,False,7,raw/01-qwen3.6-27b-abliterated_q8_k_p-07-health.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,health,6166,F,,False,7,raw/01-qwen3.6-27b-abliterated_q8_k_p-07-health.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,health,6289,C,,False,7,raw/01-qwen3.6-27b-abliterated_q8_k_p-07-health.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,health,6610,B,,False,7,raw/01-qwen3.6-27b-abliterated_q8_k_p-07-health.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,health,6785,B,,False,7,raw/01-qwen3.6-27b-abliterated_q8_k_p-07-health.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,history,4748,F,,False,8,raw/01-qwen3.6-27b-abliterated_q8_k_p-08-history.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,history,4817,E,,False,8,raw/01-qwen3.6-27b-abliterated_q8_k_p-08-history.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,history,4850,E,,False,8,raw/01-qwen3.6-27b-abliterated_q8_k_p-08-history.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,history,4892,H,,False,8,raw/01-qwen3.6-27b-abliterated_q8_k_p-08-history.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,history,5034,E,,False,8,raw/01-qwen3.6-27b-abliterated_q8_k_p-08-history.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,law,1058,I,,False,9,raw/01-qwen3.6-27b-abliterated_q8_k_p-09-law.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,law,1078,B,,False,9,raw/01-qwen3.6-27b-abliterated_q8_k_p-09-law.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,law,1313,H,,False,9,raw/01-qwen3.6-27b-abliterated_q8_k_p-09-law.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,law,1569,A,,False,9,raw/01-qwen3.6-27b-abliterated_q8_k_p-09-law.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,law,1660,G,,False,9,raw/01-qwen3.6-27b-abliterated_q8_k_p-09-law.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,math,7885,F,,False,10,raw/01-qwen3.6-27b-abliterated_q8_k_p-10-math.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,math,8230,E,,False,10,raw/01-qwen3.6-27b-abliterated_q8_k_p-10-math.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,math,8395,G,,False,10,raw/01-qwen3.6-27b-abliterated_q8_k_p-10-math.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,math,8426,E,,False,10,raw/01-qwen3.6-27b-abliterated_q8_k_p-10-math.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,math,8929,H,,False,10,raw/01-qwen3.6-27b-abliterated_q8_k_p-10-math.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,other,5104,I,,False,11,raw/01-qwen3.6-27b-abliterated_q8_k_p-11-other.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,other,5535,F,,False,11,raw/01-qwen3.6-27b-abliterated_q8_k_p-11-other.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,other,5617,E,,False,11,raw/01-qwen3.6-27b-abliterated_q8_k_p-11-other.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,other,5822,J,,False,11,raw/01-qwen3.6-27b-abliterated_q8_k_p-11-other.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,other,5902,I,,False,11,raw/01-qwen3.6-27b-abliterated_q8_k_p-11-other.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,philosophy,10816,B,,False,12,raw/01-qwen3.6-27b-abliterated_q8_k_p-12-philosophy.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,philosophy,10840,H,,False,12,raw/01-qwen3.6-27b-abliterated_q8_k_p-12-philosophy.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,philosophy,10971,C,,False,12,raw/01-qwen3.6-27b-abliterated_q8_k_p-12-philosophy.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,philosophy,11257,B,,False,12,raw/01-qwen3.6-27b-abliterated_q8_k_p-12-philosophy.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,philosophy,11284,D,,False,12,raw/01-qwen3.6-27b-abliterated_q8_k_p-12-philosophy.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,physics,9645,I,,False,13,raw/01-qwen3.6-27b-abliterated_q8_k_p-13-physics.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,physics,9785,H,,False,13,raw/01-qwen3.6-27b-abliterated_q8_k_p-13-physics.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,physics,10185,B,,False,13,raw/01-qwen3.6-27b-abliterated_q8_k_p-13-physics.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,physics,10323,G,,False,13,raw/01-qwen3.6-27b-abliterated_q8_k_p-13-physics.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,physics,10344,A,,False,13,raw/01-qwen3.6-27b-abliterated_q8_k_p-13-physics.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,psychology,2034,H,,False,14,raw/01-qwen3.6-27b-abliterated_q8_k_p-14-psychology.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,psychology,2060,F,,False,14,raw/01-qwen3.6-27b-abliterated_q8_k_p-14-psychology.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,psychology,2186,I,,False,14,raw/01-qwen3.6-27b-abliterated_q8_k_p-14-psychology.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,psychology,2584,I,,False,14,raw/01-qwen3.6-27b-abliterated_q8_k_p-14-psychology.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused
+qwen3.6-27b-abliterated:q8_k_p,psychology,2723,E,,False,14,raw/01-qwen3.6-27b-abliterated_q8_k_p-14-psychology.txt,RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused

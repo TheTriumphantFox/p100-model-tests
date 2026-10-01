@@ -1,0 +1,2 @@
+BENCHMARK ERROR
+RuntimeError: Could not reach Ollama at http://127.0.0.1:11500: [Errno 111] Connection refused

@@ -1,0 +1,47 @@
+```python
+def sort_array(arr):
+    """
+    In this Kata, you have to sort an array of non-negative integers according to
+    number of ones in their binary representation in ascending order.
+    For similar number of ones, sort based on decimal value.
+
+    It must be implemented like this:
+    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]
+    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]
+    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]
+    """
+    def count_ones(n):
+        # For negative numbers, use two's complement representation concept
+        # But the problem says non-negative integers, yet the test case has negatives.
+        # Let's handle negative numbers by counting ones in their absolute value's binary
+        # or using Python's bin() which gives '-0b...' for negatives.
+        # Looking at the test case: sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]
+        # -2: bin(-2) = '-0b10', ones in '10' = 1
+        # -3: bin(-3) = '-0b11', ones in '11' = 2
+        # -4: bin(-4) = '-0b100', ones in '100' = 1
+        # -5: bin(-5) = '-0b101', ones in '101' = 2
+        # -6: bin(-6) = '-0b110', ones in '110' = 2
+        # So sorted by ones: -2 (1), -4 (1), -3 (2), -5 (2), -6 (2)
+        # Then by decimal value: -4 < -2 for ones=1, so -4, -2
+        # For ones=2: -6 < -5 < -3, so -6, -5, -3
+        # Result: [-4, -2, -6, -5, -3] but expected is [-6, -5, -4, -3, -2]
+        # Hmm, let me re-examine. Maybe for negative numbers, we count ones in the binary representation of the absolute value?
+        # abs(-2)=2: bin(2)='0b10', ones=1
+        # abs(-3)=3: bin(3)='0b11', ones=2
+        # abs(-4)=4: bin(4)='0b100', ones=1
+        # abs(-5)=5: bin(5)='0b101', ones=2
+        # abs(-6)=6: bin(6)='0b110', ones=2
+        # Same result. Let me think differently.
+        # Maybe the problem expects us to use the standard binary representation for non-negative and for negative, 
+        # perhaps use a fixed-width two's complement? Or maybe just count ones in bin(abs(n))?
+        # Let's try: sort by (count_ones, value)
+        # With count_ones based on bin(abs(n)):
+        # -2: (1, -2), -3: (2, -3), -4: (1, -4), -5: (2, -5), -6: (2, -6)
+        # Sorted: (1, -4), (1, -2), (2, -6), (2, -5), (2, -3) => [-4, -2, -6, -5, -3]
+        # Expected: [-6, -5, -4, -3, -2]
+        # That doesn't match either. Let me try counting ones in bin(n) string directly:
+        # bin(-2) = '-0b10' -> count '1's = 1
+        # bin(-3) = '-0b11' -> count '1's = 2
+        # bin(-4) = '-0b100' -> count '1's = 1
+        # bin(-5) = '-0b101' -> count '1's = 2
+        # bin(-6) = '-0b110' -> count '1's = 

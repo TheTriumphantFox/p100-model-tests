@@ -1,0 +1,37 @@
+# paired McNemar, incumbent q5_k_p (A) vs q8kp (B) -- 2026-10-01 02:40:44
+
+## humaneval-q8kp
+n = 164 paired questions
+  incumbent-q5kp                                96.34%
+  q8kp                                          95.73%
+  gap +0.61 points
+  both right 156, both wrong 5, discordant 2/1 (A-only/B-only)
+  exact McNemar p = 1.0000  ->  not resolvable at this sample size
+  NOTE: only 3 discordant pairs; this test cannot reach p<0.05 below 6.
+
+## mmlu-q8kp-pc5-np96
+n = 70 paired questions
+  incumbent-q5kp                                71.43%
+  q8kp                                          71.43%
+  gap +0.00 points
+  both right 49, both wrong 19, discordant 1/1 (A-only/B-only)
+  exact McNemar p = 1.0000  ->  not resolvable at this sample size
+  NOTE: only 2 discordant pairs; this test cannot reach p<0.05 below 6.
+
+## mmlu-q8kp-pc5-np2048
+n = 70 paired questions
+  incumbent-q5kp                                71.43%
+  q8kp                                          71.43%
+  gap +0.00 points
+  both right 49, both wrong 19, discordant 1/1 (A-only/B-only)
+  exact McNemar p = 1.0000  ->  not resolvable at this sample size
+  NOTE: only 2 discordant pairs; this test cannot reach p<0.05 below 6.
+
+## mmlu-q8kp-pc5-think12288
+n = 70 paired questions
+  incumbent-q5kp                                87.14%
+  q8kp                                          91.43%
+  gap -4.29 points
+  both right 61, both wrong 6, discordant 0/3 (A-only/B-only)
+  exact McNemar p = 0.2500  ->  not resolvable at this sample size
+  NOTE: only 3 discordant pairs; this test cannot reach p<0.05 below 6.

@@ -184,6 +184,17 @@ re-issued byte-identical writes 24 times across 14 tasks — the failure class t
 most for a control plane. The retail backend's state checks rejected 20 of them; a
 backend without such guards would not have.
 
+### 2026-09-30 — the incumbent at Q8_K_P (same abliteration, higher quant)
+
+- `2026-09-30/qwen36-q8kp/README.md` — HauhauCS Q8_K_P + Unsloth stock Q8_0; `queue.sh` (both files since deleted)
+- `2026-09-30/qwen36-q8kp/REPORT.md`
+
+**Neither higher quant beats the incumbent Q5_K_P** (every paired gap p ≥ 0.25): HumanEval
+96.34 / 95.73 (Q8_K_P) / 95.12 (Unsloth stock Q8_0); MMLU-Pro thinking-on 87.14 / **91.43** /
+90.00, with neither Q8 losing a question the incumbent got — a lean, not a result. Both run within
+~4% of its speed. The Q8_K_P only fits fully on-GPU with `--fit off -ngl 999 -ts 36,28`: this
+llama.cpp's default `--fit on` silently left ~2 layers in RAM, which a tok/s floor did not catch.
+
 ## Full-stack test rig
 
 `rig/` runs requests through the whole flow instead of one model on one task:

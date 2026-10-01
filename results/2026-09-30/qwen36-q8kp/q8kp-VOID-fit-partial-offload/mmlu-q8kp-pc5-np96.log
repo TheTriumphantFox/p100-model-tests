@@ -1,0 +1,8 @@
+MMLU-Pro: 1 model(s), 14 categories, 70 questions/model, 5 per request.
+Planned batches: 14; scored answers: 70.
+Results: /home/hm/Projects/Tests/2026-09-30/qwen36-q8kp/mmlu-q8kp-pc5-np96
+
+Model 1/1: qwen3.6-27b-abliterated:q8_k_p
+[##----------------------------] 1/14 (  7.1%) qwen3.6-27b-abliterated:q8_k_p / biology                   ETA 2m 42s
+[####--------------------------] 2/14 ( 14.3%) qwen3.6-27b-abliterated:q8_k_p / business                  ETA 2m 07s
+[######------------------------] 3/14 ( 21.4%) qwen3.6-27b-abliterated:q8_k_p / chemistry                 ETA 2m 02s

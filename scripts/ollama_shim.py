@@ -49,6 +49,9 @@ TAGS = {
     # 2026-09-21 CUDA matrix: the ggml-org Qwen3.8-27B Q8_0, the file that has the
     # published dflash/mtp drafters beside it (22.72 tok/s measured) but was never scored.
     "qwen3.8-27b-ggmlorg_q8_0": "qwen3.8-27b-ggmlorg:q8_0",
+    # 2026-09-30: qwen3.6-27b-abliterated:q8_k_p and qwen3.6-27b-unsloth:q8_0 were scored
+    # and deleted 2026-10-01 -- no resolvable gain over the Q5_K_P, and less context; see
+    # 2026-09-30/qwen36-q8kp/REPORT.md
 }
 REVERSE = {v: k for k, v in TAGS.items()}
 

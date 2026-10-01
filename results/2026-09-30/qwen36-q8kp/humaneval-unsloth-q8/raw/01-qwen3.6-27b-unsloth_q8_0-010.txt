@@ -1,0 +1,36 @@
+```python
+def is_palindrome(string: str) -> bool:
+    """ Test if given string is a palindrome """
+    return string == string[::-1]
+
+
+def make_palindrome(string: str) -> str:
+    """ Find the shortest palindrome that begins with a supplied string.
+    Algorithm idea is simple:
+    - Find the longest postfix of supplied string that is a palindrome.
+    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.
+    >>> make_palindrome('')
+    ''
+    >>> make_palindrome('cat')
+    'catac'
+    >>> make_palindrome('cata')
+    'catac'
+    """
+    if not string:
+        return ''
+    
+    n = len(string)
+    # Find the longest suffix of string that is a palindrome
+    # Start from the full string and check shorter suffixes
+    for i in range(n):
+        # Check if string[i:] is a palindrome
+        suffix = string[i:]
+        if is_palindrome(suffix):
+            # The prefix before this palindromic suffix is string[:i]
+            # We need to append the reverse of this prefix to the end
+            prefix = string[:i]
+            return string + prefix[::-1]
+    
+    # Fallback: should not reach here for non-empty string
+    return string + string[:-1][::-1]
+```

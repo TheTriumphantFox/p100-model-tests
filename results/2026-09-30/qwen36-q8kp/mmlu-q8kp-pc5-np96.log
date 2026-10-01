@@ -1,0 +1,23 @@
+MMLU-Pro: 1 model(s), 14 categories, 70 questions/model, 5 per request.
+Planned batches: 14; scored answers: 70.
+Results: /home/hm/Projects/Tests/2026-09-30/qwen36-q8kp/mmlu-q8kp-pc5-np96
+
+Model 1/1: qwen3.6-27b-abliterated:q8_k_p
+[##----------------------------] 1/14 (  7.1%) qwen3.6-27b-abliterated:q8_k_p / biology                   ETA 2m 19s
+[####--------------------------] 2/14 ( 14.3%) qwen3.6-27b-abliterated:q8_k_p / business                  ETA 1m 51s
+[######------------------------] 3/14 ( 21.4%) qwen3.6-27b-abliterated:q8_k_p / chemistry                 ETA 1m 46s
+[########----------------------] 4/14 ( 28.6%) qwen3.6-27b-abliterated:q8_k_p / computer science          ETA 1m 48s
+[##########--------------------] 5/14 ( 35.7%) qwen3.6-27b-abliterated:q8_k_p / economics                 ETA 1m 32s
+[############------------------] 6/14 ( 42.9%) qwen3.6-27b-abliterated:q8_k_p / engineering               ETA 1m 20s
+[###############---------------] 7/14 ( 50.0%) qwen3.6-27b-abliterated:q8_k_p / health                    ETA 1m 07s
+[#################-------------] 8/14 ( 57.1%) qwen3.6-27b-abliterated:q8_k_p / history                   ETA 59s
+[###################-----------] 9/14 ( 64.3%) qwen3.6-27b-abliterated:q8_k_p / law                       ETA 51s
+[#####################---------] 10/14 ( 71.4%) qwen3.6-27b-abliterated:q8_k_p / math                      ETA 40s
+[#######################-------] 11/14 ( 78.6%) qwen3.6-27b-abliterated:q8_k_p / other                     ETA 29s
+[#########################-----] 12/14 ( 85.7%) qwen3.6-27b-abliterated:q8_k_p / philosophy                ETA 19s
+[###########################---] 13/14 ( 92.9%) qwen3.6-27b-abliterated:q8_k_p / physics                   ETA 9s
+[##############################] 14/14 (100.0%) qwen3.6-27b-abliterated:q8_k_p / psychology                ETA 0s
+
+Finished 14/14 batches and scored 70 answers.
+HTML report: /home/hm/Projects/Tests/2026-09-30/qwen36-q8kp/mmlu-q8kp-pc5-np96/report.html
+Leader: qwen3.6-27b-abliterated:q8_k_p (71.4%)

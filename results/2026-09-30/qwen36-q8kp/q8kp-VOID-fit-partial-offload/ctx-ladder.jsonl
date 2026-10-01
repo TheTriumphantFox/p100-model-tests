@@ -1,0 +1,1 @@
+{"slug":"q8kp","ctx":8192,"kv":"f16","weights_mib":30483,"vram_mib":29979,"tok_per_s":9.02,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 9.02, "prompt_eval_count": 32, "wall_s": 23.2}}

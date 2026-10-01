@@ -1,0 +1,2 @@
+{"slug":"q8kp","ctx":8192,"kv":"f16","weights_mib":30483,"vram_mib":35,"tok_per_s":0,"status":"failed","probe":{"ok": false, "error": "HTTPError: HTTP Error 502: Bad Gateway", "wall_s": 1.5}}
+{"slug":"q8kp","ctx":8192,"kv":"f16","weights_mib":30483,"vram_mib":30841,"tok_per_s":10.64,"status":"resident","probe":{"ok": true, "eval_count": 200, "tok_per_s": 10.64, "prompt_eval_count": 32, "wall_s": 19.7}}

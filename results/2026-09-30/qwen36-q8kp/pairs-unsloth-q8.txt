@@ -1,0 +1,36 @@
+# paired McNemar, incumbent q5_k_p (A) vs unsloth-q8 (B) -- 2026-10-01 00:00:21
+
+## humaneval-unsloth-q8
+n = 164 paired questions
+  incumbent-q5kp                                96.34%
+  unsloth-q8                                    95.12%
+  gap +1.22 points
+  both right 154, both wrong 4, discordant 4/2 (A-only/B-only)
+  exact McNemar p = 0.6875  ->  not resolvable at this sample size
+
+## mmlu-unsloth-q8-pc5-np96
+n = 70 paired questions
+  incumbent-q5kp                                71.43%
+  unsloth-q8                                    74.29%
+  gap -2.86 points
+  both right 50, both wrong 18, discordant 0/2 (A-only/B-only)
+  exact McNemar p = 0.5000  ->  not resolvable at this sample size
+  NOTE: only 2 discordant pairs; this test cannot reach p<0.05 below 6.
+
+## mmlu-unsloth-q8-pc5-np2048
+n = 70 paired questions
+  incumbent-q5kp                                71.43%
+  unsloth-q8                                    74.29%
+  gap -2.86 points
+  both right 50, both wrong 18, discordant 0/2 (A-only/B-only)
+  exact McNemar p = 0.5000  ->  not resolvable at this sample size
+  NOTE: only 2 discordant pairs; this test cannot reach p<0.05 below 6.
+
+## mmlu-unsloth-q8-pc5-think12288
+n = 70 paired questions
+  incumbent-q5kp                                87.14%
+  unsloth-q8                                    90.00%
+  gap -2.86 points
+  both right 61, both wrong 7, discordant 0/2 (A-only/B-only)
+  exact McNemar p = 0.5000  ->  not resolvable at this sample size
+  NOTE: only 2 discordant pairs; this test cannot reach p<0.05 below 6.
