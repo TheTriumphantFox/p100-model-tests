@@ -1,0 +1,952 @@
+0.00.005.933 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.006.972 I srv   load_models: Loaded 0 cached model presets
+0.00.007.354 I srv   load_models: Loaded 13 local model presets from /home/hm/llama-bench-models
+0.00.007.541 I srv    operator(): Available models (13) (*: custom preset)
+0.00.007.542 I srv    operator():     devstral-patched_q8_0
+0.00.007.543 I srv    operator():     g9v3-39a5b_q4_k_m
+0.00.007.543 I srv    operator():     gemma4-e4b-abliterated_q4_k_m
+0.00.007.543 I srv    operator():     gpt-oss-20b_q8_0
+0.00.007.543 I srv    operator():     ornith-1.5-35b-a3b_q4_k_m
+0.00.007.543 I srv    operator():     qwen3.6-27b-abliterated_q5_k_m
+0.00.007.543 I srv    operator():     qwen3.6-27b-opus-distill_q4_k_m
+0.00.007.543 I srv    operator():     qwen3.6-35b-a3b-abliterated-vl_q4_k_m
+0.00.007.544 I srv    operator():     qwen3.6-35b-a3b_ud-q6_k
+0.00.007.544 I srv    operator():     qwen3.8-27b-ggmlorg_q8_0
+0.00.007.544 I srv    operator():     qwen3.8-27b-stock_q4_k_m
+0.00.007.545 I srv    operator():     qwen3.8-27b-uncensored-hauhaucs_q6_k_p
+0.00.007.545 I srv    operator():     qwen3.8-27b-unsloth_q8_0
+0.00.007.600 W srv  llama_server: -----------------
+0.00.007.601 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.007.601 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.007.601 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.007.601 W srv  llama_server: -----------------
+0.00.007.604 W srv  llama_server: -----------------
+0.00.007.604 W srv  llama_server: the following feature(s) are enabled:
+0.00.007.604 W srv  llama_server:     router mode
+0.00.007.604 W srv  llama_server: do not expose the server to untrusted environments
+0.00.007.604 W srv  llama_server: -----------------
+0.00.007.605 I srv  llama_server: starting server in router mode. models will be automatically loaded on-demand
+0.00.008.792 I srv  llama_server: listening on http://127.0.0.1:8081
+0.02.033.305 I srv  ensure_model: model name=gpt-oss-20b_q8_0 is not loaded, loading...
+0.02.033.333 I srv          load: spawning server instance with name=gpt-oss-20b_q8_0 on port 51465
+0.02.033.347 I srv          load: spawning server instance with args:
+0.02.033.347 I srv          load:   /home/hm/llama-cuda12/bin/llama-server
+0.02.033.347 I srv          load:   --host
+0.02.033.347 I srv          load:   127.0.0.1
+0.02.033.347 I srv          load:   --jinja
+0.02.033.347 I srv          load:   --port
+0.02.033.347 I srv          load:   51465
+0.02.033.347 I srv          load:   --alias
+0.02.033.347 I srv          load:   gpt-oss-20b_q8_0
+0.02.033.348 I srv          load:   --batch-size
+0.02.033.348 I srv          load:   512
+0.02.033.348 I srv          load:   --ctx-size
+0.02.033.348 I srv          load:   16384
+0.02.033.348 I srv          load:   --cache-type-k
+0.02.033.348 I srv          load:   f16
+0.02.033.348 I srv          load:   --cache-type-v
+0.02.033.348 I srv          load:   f16
+0.02.033.348 I srv          load:   --flash-attn
+0.02.033.348 I srv          load:   on
+0.02.033.349 I srv          load:   --model
+0.02.033.349 I srv          load:   /home/hm/llama-bench-models/gpt-oss-20b_q8_0.gguf
+0.02.033.349 I srv          load:   --parallel
+0.02.033.349 I srv          load:   1
+0.02.033.349 I srv          load:   --split-mode
+0.02.033.349 I srv          load:   layer
+0.02.033.349 I srv          load:   --ubatch-size
+0.02.033.349 I srv          load:   512
+0.02.033.508 I srv  ensure_model: waiting until model name=gpt-oss-20b_q8_0 is fully loaded...
+[51465] 0.00.006.472 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+[51465] 0.00.006.686 W srv  llama_server: -----------------
+[51465] 0.00.006.687 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+[51465] 0.00.006.687 W srv  llama_server: this can be a security risk (cross-origin attacks)
+[51465] 0.00.006.687 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+[51465] 0.00.006.687 W srv  llama_server: -----------------
+[51465] 
+[51465] 0.00.007.957 I srv    load_model: loading model '/home/hm/llama-bench-models/gpt-oss-20b_q8_0.gguf'
+[51465] 0.00.609.062 W load: setting token '<|message|>' (200008) attribute to USER_DEFINED (16), old attributes: 8
+[51465] 0.00.609.065 W load: setting token '<|start|>' (200006) attribute to USER_DEFINED (16), old attributes: 8
+[51465] 0.00.609.065 W load: setting token '<|constrain|>' (200003) attribute to USER_DEFINED (16), old attributes: 8
+[51465] 0.00.609.478 W load: setting token '<|channel|>' (200005) attribute to USER_DEFINED (16), old attributes: 8
+[51465] 0.00.611.402 W load: special_eog_ids contains both '<|return|>' and '<|call|>', or '<|calls|>' and '<|flush|>' tokens, removing '<|end|>' token from EOG list
+[51465] 
+[51465] 
+[51465] 
+[51465] 
+[51465] 
+[51465] 
+[51465] 
+[51465] 
+[51465] 
+[51465] 
+[51465] 
+[51465] 0.03.122.905 I cmn          init: llama threadpool init, n_threads = 6
+[51465] 0.03.197.245 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 16384, kv_unified = 'false'
+[51465] 0.03.199.403 I srv  llama_server: model loaded
+[51465] 0.03.199.407 I srv  llama_server: listening on http://127.0.0.1:51465
+[51465] 
+0.05.249.865 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51465
+[51465] 0.03.203.907 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+[51465] 0.03.204.274 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+[51465] 0.05.169.090 I slot print_timing: id  0 | task 0 | prompt eval time =    1010.78 ms /   101 tokens (   10.01 ms per token,    99.92 tokens per second)
+[51465] 0.05.169.092 I slot print_timing: id  0 | task 0 |        eval time =     954.02 ms /    64 tokens (   15.14 ms per token,    66.04 tokens per second)
+[51465] 0.05.169.093 I slot print_timing: id  0 | task 0 |       total time =    1964.80 ms /   165 tokens
+[51465] 0.05.169.096 I slot print_timing: id  0 | task 0 |    graphs reused =         63
+[51465] 0.05.169.130 I slot      release: id  0 | task 0 | stop processing: n_tokens = 164, truncated = 0
+0.11.255.201 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51465
+[51465] 0.09.216.195 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151160100214
+[51465] 0.09.220.962 I slot launch_slot_: id  0 | task 67 | processing task, is_child = 0
+[51465] 0.15.196.104 I slot print_timing: id  0 | task 67 | n_gen =    198, tg =  65.46 t/s, tg_3s =  65.79 t/s
+[51465] 0.18.205.197 I slot print_timing: id  0 | task 67 | n_gen =    395, tg =  65.46 t/s, tg_3s =  65.47 t/s
+[51465] 0.21.217.387 I slot print_timing: id  0 | task 67 | n_gen =    592, tg =  65.44 t/s, tg_3s =  65.40 t/s
+[51465] 0.24.218.529 I slot print_timing: id  0 | task 67 | n_gen =    788, tg =  65.41 t/s, tg_3s =  65.31 t/s
+[51465] 0.25.368.581 I slot print_timing: id  0 | task 67 | prompt eval time =    2965.66 ms /  1281 tokens (    2.32 ms per token,   431.94 tokens per second)
+[51465] 0.25.368.583 I slot print_timing: id  0 | task 67 |        eval time =   13181.95 ms /   863 tokens (   15.29 ms per token,    65.39 tokens per second)
+[51465] 0.25.368.583 I slot print_timing: id  0 | task 67 |       total time =   16147.61 ms /  2144 tokens
+[51465] 0.25.368.584 I slot print_timing: id  0 | task 67 |    graphs reused =        921
+[51465] 0.25.368.641 I slot      release: id  0 | task 67 | stop processing: n_tokens = 2203, truncated = 0
+0.27.441.405 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51465
+[51465] 0.25.398.393 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151180299725
+[51465] 0.25.417.198 I slot launch_slot_: id  0 | task 935 | processing task, is_child = 0
+[51465] 0.31.191.410 I slot print_timing: id  0 | task 935 | prompt eval time =    2993.29 ms /  1407 tokens (    2.13 ms per token,   470.05 tokens per second)
+[51465] 0.31.191.413 I slot print_timing: id  0 | task 935 |        eval time =    2780.90 ms /   183 tokens (   15.28 ms per token,    65.45 tokens per second)
+[51465] 0.31.191.414 I slot print_timing: id  0 | task 935 |       total time =    5774.19 ms /  1590 tokens
+[51465] 0.31.191.414 I slot print_timing: id  0 | task 935 |    graphs reused =       1101
+[51465] 0.31.191.479 I slot      release: id  0 | task 935 | stop processing: n_tokens = 1649, truncated = 0
+0.33.249.946 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51465
+[51465] 0.31.219.838 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151186122563
+[51465] 0.31.235.504 I slot launch_slot_: id  0 | task 1123 | processing task, is_child = 0
+[51465] 0.34.600.259 I slot print_timing: id  0 | task 1123 | prompt processing, n_tokens =   3009, progress = 0.74, t =   3.36 s / 894.28 tokens per second
+[51465] 0.35.236.386 I slot print_timing: id  0 | task 1123 | prompt processing, n_tokens =   3521, progress = 0.86, t =   4.00 s / 880.06 tokens per second
+[51465] 0.35.830.690 I slot print_timing: id  0 | task 1123 | prompt processing, n_tokens =   3572, progress = 0.88, t =   4.60 s / 777.34 tokens per second
+[51465] 0.36.455.935 I slot print_timing: id  0 | task 1123 | prompt processing, n_tokens =   4080, progress = 1.00, t =   5.22 s / 781.55 tokens per second
+[51465] 0.40.597.199 I slot print_timing: id  0 | task 1123 | n_gen =    196, tg =  64.73 t/s, tg_3s =  65.06 t/s
+[51465] 0.43.612.152 I slot print_timing: id  0 | task 1123 | n_gen =    391, tg =  64.70 t/s, tg_3s =  64.68 t/s
+[51465] 0.46.626.501 I slot print_timing: id  0 | task 1123 | n_gen =    586, tg =  64.70 t/s, tg_3s =  64.69 t/s
+[51465] 0.49.626.887 I slot print_timing: id  0 | task 1123 | n_gen =    780, tg =  64.69 t/s, tg_3s =  64.66 t/s
+[51465] 0.52.628.609 I slot print_timing: id  0 | task 1123 | n_gen =    974, tg =  64.68 t/s, tg_3s =  64.63 t/s
+[51465] 0.55.629.576 I slot print_timing: id  0 | task 1123 | n_gen =   1168, tg =  64.67 t/s, tg_3s =  64.65 t/s
+[51465] 0.56.852.600 I slot print_timing: id  0 | task 1123 | prompt eval time =    6349.24 ms /  4084 tokens (    1.55 ms per token,   643.23 tokens per second)
+[51465] 0.56.852.603 I slot print_timing: id  0 | task 1123 |        eval time =   19267.85 ms /  1247 tokens (   15.46 ms per token,    64.67 tokens per second)
+[51465] 0.56.852.603 I slot print_timing: id  0 | task 1123 |       total time =   25617.08 ms /  5331 tokens
+[51465] 0.56.852.604 I slot print_timing: id  0 | task 1123 |    graphs reused =       2341
+[51465] 0.56.852.711 I slot      release: id  0 | task 1123 | stop processing: n_tokens = 5390, truncated = 0
+0.58.911.739 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51465
+[51465] 0.56.872.406 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151211783795
+[51465] 0.56.921.715 I slot launch_slot_: id  0 | task 2380 | processing task, is_child = 0
+[51465] 1.03.600.608 I slot print_timing: id  0 | task 2380 | n_gen =    196, tg =  64.87 t/s, tg_3s =  65.20 t/s
+[51465] 1.06.610.277 I slot print_timing: id  0 | task 2380 | n_gen =    391, tg =  64.83 t/s, tg_3s =  64.79 t/s
+[51465] 1.09.622.524 I slot print_timing: id  0 | task 2380 | n_gen =    586, tg =  64.80 t/s, tg_3s =  64.74 t/s
+[51465] 1.12.094.404 I slot print_timing: id  0 | task 2380 | prompt eval time =    3672.64 ms /  2234 tokens (    1.64 ms per token,   608.28 tokens per second)
+[51465] 1.12.094.406 I slot print_timing: id  0 | task 2380 |        eval time =   11500.03 ms /   746 tokens (   15.44 ms per token,    64.78 tokens per second)
+[51465] 1.12.094.407 I slot print_timing: id  0 | task 2380 |       total time =   15172.67 ms /  2980 tokens
+[51465] 1.12.094.408 I slot print_timing: id  0 | task 2380 |    graphs reused =       3082
+[51465] 1.12.094.508 I slot      release: id  0 | task 2380 | stop processing: n_tokens = 4441, truncated = 0
+1.14.148.544 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51465
+[51465] 1.12.108.943 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 1.000 (> 0.100 thold), f_keep = 0.832
+[51465] 1.12.109.313 I slot launch_slot_: id  0 | task 3132 | processing task, is_child = 0
+[51465] 1.15.158.317 I slot print_timing: id  0 | task 3132 | n_gen =    196, tg =  64.97 t/s, tg_3s =  65.31 t/s
+[51465] 1.18.168.216 I slot print_timing: id  0 | task 3132 | n_gen =    391, tg =  64.88 t/s, tg_3s =  64.79 t/s
+[51465] 1.21.179.656 I slot print_timing: id  0 | task 3132 | n_gen =    586, tg =  64.84 t/s, tg_3s =  64.75 t/s
+[51465] 1.24.194.218 I slot print_timing: id  0 | task 3132 | n_gen =    781, tg =  64.80 t/s, tg_3s =  64.69 t/s
+[51465] 1.27.196.077 I slot print_timing: id  0 | task 3132 | n_gen =    975, tg =  64.77 t/s, tg_3s =  64.63 t/s
+[51465] 1.30.196.799 I slot print_timing: id  0 | task 3132 | n_gen =   1169, tg =  64.75 t/s, tg_3s =  64.65 t/s
+[51465] 1.30.429.250 I slot print_timing: id  0 | task 3132 | prompt eval time =      47.79 ms /     5 tokens (    9.56 ms per token,   104.62 tokens per second)
+[51465] 1.30.429.253 I slot print_timing: id  0 | task 3132 |        eval time =   18272.13 ms /  1184 tokens (   15.45 ms per token,    64.74 tokens per second)
+[51465] 1.30.429.254 I slot print_timing: id  0 | task 3132 |       total time =   18319.92 ms /  1189 tokens
+[51465] 1.30.429.255 I slot print_timing: id  0 | task 3132 |    graphs reused =       4257
+[51465] 1.30.429.359 I slot      release: id  0 | task 3132 | stop processing: n_tokens = 4879, truncated = 0
+1.47.416.765 I srv          join: models_max reached, request for name=qwen3.6-35b-a3b_ud-q6_k queued at position 1
+1.47.416.768 I srv          tick: evicting idle LRU name=gpt-oss-20b_q8_0 for a queued request
+1.47.416.774 I srv  ensure_model: waiting until model name=qwen3.6-35b-a3b_ud-q6_k is fully loaded...
+[51465] 1.45.366.557 I srv    operator(): exit command received, exiting...
+[51465] 1.45.366.613 I srv    operator(): operator(): cleaning up before exit...
+1.47.701.931 I srv           run: instance name=gpt-oss-20b_q8_0 exited with status 0
+1.47.701.939 I srv  ensure_model: slot available, loading queued model name=qwen3.6-35b-a3b_ud-q6_k
+1.47.701.969 I srv          load: spawning server instance with name=qwen3.6-35b-a3b_ud-q6_k on port 52831
+1.47.701.980 I srv          load: spawning server instance with args:
+1.47.701.981 I srv          load:   /home/hm/llama-cuda12/bin/llama-server
+1.47.701.981 I srv          load:   --host
+1.47.701.981 I srv          load:   127.0.0.1
+1.47.701.981 I srv          load:   --jinja
+1.47.701.981 I srv          load:   --port
+1.47.701.981 I srv          load:   52831
+1.47.701.981 I srv          load:   --alias
+1.47.701.981 I srv          load:   qwen3.6-35b-a3b_ud-q6_k
+1.47.701.982 I srv          load:   --batch-size
+1.47.701.982 I srv          load:   512
+1.47.701.982 I srv          load:   --ctx-size
+1.47.701.982 I srv          load:   16384
+1.47.701.982 I srv          load:   --cache-type-k
+1.47.701.982 I srv          load:   f16
+1.47.701.982 I srv          load:   --cache-type-v
+1.47.701.982 I srv          load:   f16
+1.47.701.983 I srv          load:   --flash-attn
+1.47.701.983 I srv          load:   on
+1.47.701.983 I srv          load:   --model
+1.47.701.983 I srv          load:   /home/hm/llama-bench-models/qwen3.6-35b-a3b_ud-q6_k.gguf
+1.47.701.983 I srv          load:   --parallel
+1.47.701.983 I srv          load:   1
+1.47.701.983 I srv          load:   --split-mode
+1.47.701.983 I srv          load:   layer
+1.47.701.984 I srv          load:   --ubatch-size
+1.47.701.984 I srv          load:   512
+[52831] 0.00.005.997 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+[52831] 0.00.006.271 W srv  llama_server: -----------------
+[52831] 0.00.006.272 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+[52831] 0.00.006.272 W srv  llama_server: this can be a security risk (cross-origin attacks)
+[52831] 0.00.006.273 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+[52831] 0.00.006.273 W srv  llama_server: -----------------
+[52831] 
+[52831] 0.00.007.577 I srv    load_model: loading model '/home/hm/llama-bench-models/qwen3.6-35b-a3b_ud-q6_k.gguf'
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 
+[52831] 0.06.682.108 I cmn          init: llama threadpool init, n_threads = 6
+[52831] 0.06.769.650 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 16384, kv_unified = 'false'
+[52831] 0.06.772.420 W srv          init: chat template supports preserving reasoning, it is enabled by default (may use more tokens, disable via --no-reasoning-preserve)
+[52831] 0.06.772.451 I srv  llama_server: model loaded
+[52831] 0.06.772.454 I srv  llama_server: listening on http://127.0.0.1:52831
+[52831] 0.06.772.588 I srv    operator(): child server monitoring thread started, waiting for EOF on stdin...
+[52831] 
+1.54.491.820 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52831
+[52831] 0.06.773.891 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+[52831] 0.06.773.934 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+[52831] 0.08.407.385 I slot print_timing: id  0 | task 0 | prompt eval time =     455.39 ms /    51 tokens (    8.93 ms per token,   111.99 tokens per second)
+[52831] 0.08.407.387 I slot print_timing: id  0 | task 0 |        eval time =    1178.04 ms /    64 tokens (   18.70 ms per token,    53.48 tokens per second)
+[52831] 0.08.407.388 I slot print_timing: id  0 | task 0 |       total time =    1633.43 ms /   115 tokens
+[52831] 0.08.407.391 I slot print_timing: id  0 | task 0 |    graphs reused =         63
+[52831] 0.08.407.420 I slot      release: id  0 | task 0 | stop processing: n_tokens = 114, truncated = 0
+2.00.183.425 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52831
+[52831] 0.12.468.176 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151269007386
+[52831] 0.12.493.491 I slot launch_slot_: id  0 | task 66 | processing task, is_child = 0
+[52831] 0.16.346.369 I slot print_timing: id  0 | task 66 | prompt processing, n_tokens =   1390, progress = 1.00, t =   3.85 s / 360.77 tokens per second
+[52831] 0.19.869.726 I slot print_timing: id  0 | task 66 | n_gen =    162, tg =  53.36 t/s, tg_3s =  53.69 t/s
+[52831] 0.22.884.760 I slot print_timing: id  0 | task 66 | n_gen =    323, tg =  53.38 t/s, tg_3s =  53.40 t/s
+[52831] 0.25.885.515 I slot print_timing: id  0 | task 66 | n_gen =    483, tg =  53.36 t/s, tg_3s =  53.32 t/s
+[52831] 0.28.886.895 I slot print_timing: id  0 | task 66 | n_gen =    643, tg =  53.35 t/s, tg_3s =  53.31 t/s
+[52831] 0.30.653.208 I slot print_timing: id  0 | task 66 | prompt eval time =    4358.94 ms /  1394 tokens (    3.13 ms per token,   319.80 tokens per second)
+[52831] 0.30.653.211 I slot print_timing: id  0 | task 66 |        eval time =   13800.77 ms /   737 tokens (   18.75 ms per token,    53.33 tokens per second)
+[52831] 0.30.653.211 I slot print_timing: id  0 | task 66 |       total time =   18159.70 ms /  2131 tokens
+[52831] 0.30.653.212 I slot print_timing: id  0 | task 66 |    graphs reused =        795
+[52831] 0.30.653.268 I slot      release: id  0 | task 66 | stop processing: n_tokens = 2130, truncated = 0
+2.18.393.449 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52831
+[52831] 0.30.677.399 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151291253233
+[52831] 0.30.736.560 I slot launch_slot_: id  0 | task 809 | processing task, is_child = 0
+[52831] 0.33.750.260 I slot print_timing: id  0 | task 809 | prompt processing, n_tokens =   1357, progress = 1.00, t =   3.01 s / 450.28 tokens per second
+[52831] 0.37.257.393 I slot print_timing: id  0 | task 809 | n_gen =    162, tg =  53.39 t/s, tg_3s =  53.72 t/s
+[52831] 0.38.645.294 I slot print_timing: id  0 | task 809 | prompt eval time =    3505.21 ms /  1361 tokens (    2.58 ms per token,   388.28 tokens per second)
+[52831] 0.38.645.297 I slot print_timing: id  0 | task 809 |        eval time =    4403.51 ms /   236 tokens (   18.74 ms per token,    53.37 tokens per second)
+[52831] 0.38.645.297 I slot print_timing: id  0 | task 809 |       total time =    7908.72 ms /  1597 tokens
+[52831] 0.38.645.298 I slot print_timing: id  0 | task 809 |    graphs reused =       1028
+[52831] 0.38.645.355 I slot      release: id  0 | task 809 | stop processing: n_tokens = 1596, truncated = 0
+2.26.371.717 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52831
+[52831] 0.38.659.194 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151299245321
+[52831] 0.38.703.965 I slot launch_slot_: id  0 | task 1050 | processing task, is_child = 0
+[52831] 0.42.329.762 I slot print_timing: id  0 | task 1050 | prompt processing, n_tokens =   1905, progress = 0.57, t =   3.63 s / 525.41 tokens per second
+[52831] 0.42.982.198 I slot print_timing: id  0 | task 1050 | prompt processing, n_tokens =   2214, progress = 0.67, t =   4.28 s / 517.51 tokens per second
+[52831] 0.44.156.376 I slot print_timing: id  0 | task 1050 | prompt processing, n_tokens =   2726, progress = 0.82, t =   5.45 s / 499.96 tokens per second
+[52831] 0.44.675.185 I slot print_timing: id  0 | task 1050 | prompt processing, n_tokens =   2811, progress = 0.85, t =   5.97 s / 470.76 tokens per second
+[52831] 0.45.712.061 I slot print_timing: id  0 | task 1050 | prompt processing, n_tokens =   3319, progress = 1.00, t =   7.01 s / 473.60 tokens per second
+[52831] 0.49.251.185 I slot print_timing: id  0 | task 1050 | n_gen =    161, tg =  53.14 t/s, tg_3s =  53.47 t/s
+[52831] 0.52.268.257 I slot print_timing: id  0 | task 1050 | n_gen =    321, tg =  53.09 t/s, tg_3s =  53.03 t/s
+[52831] 0.55.281.548 I slot print_timing: id  0 | task 1050 | n_gen =    480, tg =  52.98 t/s, tg_3s =  52.77 t/s
+[52831] 0.58.050.282 I slot print_timing: id  0 | task 1050 | prompt eval time =    7536.27 ms /  3323 tokens (    2.27 ms per token,   440.93 tokens per second)
+[52831] 0.58.050.285 I slot print_timing: id  0 | task 1050 |        eval time =   11810.03 ms /   626 tokens (   18.90 ms per token,    52.92 tokens per second)
+[52831] 0.58.050.286 I slot print_timing: id  0 | task 1050 |       total time =   19346.30 ms /  3949 tokens
+[52831] 0.58.050.286 I slot print_timing: id  0 | task 1050 |    graphs reused =       1649
+[52831] 0.58.050.382 I slot      release: id  0 | task 1050 | stop processing: n_tokens = 3948, truncated = 0
+2.45.777.260 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52831
+[52831] 0.58.062.190 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151318650347
+[52831] 0.58.232.149 I slot launch_slot_: id  0 | task 1686 | processing task, is_child = 0
+[52831] 1.01.898.261 I slot print_timing: id  0 | task 1686 | prompt processing, n_tokens =   2054, progress = 1.00, t =   3.67 s / 560.27 tokens per second
+[52831] 1.05.418.360 I slot print_timing: id  0 | task 1686 | n_gen =    161, tg =  53.20 t/s, tg_3s =  53.54 t/s
+[52831] 1.06.696.137 I slot print_timing: id  0 | task 1686 | prompt eval time =    4178.87 ms /  2058 tokens (    2.03 ms per token,   492.48 tokens per second)
+[52831] 1.06.696.140 I slot print_timing: id  0 | task 1686 |        eval time =    4285.10 ms /   229 tokens (   18.79 ms per token,    53.21 tokens per second)
+[52831] 1.06.696.141 I slot print_timing: id  0 | task 1686 |       total time =    8463.97 ms /  2287 tokens
+[52831] 1.06.696.142 I slot print_timing: id  0 | task 1686 |    graphs reused =       1875
+[52831] 1.06.696.234 I slot      release: id  0 | task 1686 | stop processing: n_tokens = 3135, truncated = 0
+2.54.421.914 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52831
+[52831] 1.06.706.979 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 1.000 (> 0.100 thold), f_keep = 0.927
+[52831] 1.06.707.022 I slot launch_slot_: id  0 | task 1921 | processing task, is_child = 0
+[52831] 1.09.781.954 I slot print_timing: id  0 | task 1921 | n_gen =    161, tg =  53.20 t/s, tg_3s =  53.53 t/s
+[52831] 1.11.060.268 I slot print_timing: id  0 | task 1921 | prompt eval time =      67.29 ms /     4 tokens (   16.82 ms per token,    59.45 tokens per second)
+[52831] 1.11.060.271 I slot print_timing: id  0 | task 1921 |        eval time =    4285.95 ms /   229 tokens (   18.80 ms per token,    53.20 tokens per second)
+[52831] 1.11.060.271 I slot print_timing: id  0 | task 1921 |       total time =    4353.24 ms /   233 tokens
+[52831] 1.11.060.272 I slot print_timing: id  0 | task 1921 |    graphs reused =       2101
+[52831] 1.11.060.362 I slot      release: id  0 | task 1921 | stop processing: n_tokens = 3135, truncated = 0
+3.16.306.239 I srv          join: models_max reached, request for name=gpt-oss-20b_q8_0 queued at position 1
+3.16.306.242 I srv          tick: evicting idle LRU name=qwen3.6-35b-a3b_ud-q6_k for a queued request
+3.16.306.247 I srv  ensure_model: waiting until model name=gpt-oss-20b_q8_0 is fully loaded...
+[52831] 1.28.587.135 I srv    operator(): exit command received, exiting...
+[52831] 1.28.587.173 I srv    operator(): operator(): cleaning up before exit...
+3.16.885.948 I srv           run: instance name=qwen3.6-35b-a3b_ud-q6_k exited with status 0
+3.16.885.965 I srv  ensure_model: slot available, loading queued model name=gpt-oss-20b_q8_0
+3.16.886.004 I srv          load: spawning server instance with name=gpt-oss-20b_q8_0 on port 51829
+3.16.886.020 I srv          load: spawning server instance with args:
+3.16.886.020 I srv          load:   /home/hm/llama-cuda12/bin/llama-server
+3.16.886.020 I srv          load:   --host
+3.16.886.020 I srv          load:   127.0.0.1
+3.16.886.020 I srv          load:   --jinja
+3.16.886.021 I srv          load:   --port
+3.16.886.021 I srv          load:   51829
+3.16.886.021 I srv          load:   --alias
+3.16.886.021 I srv          load:   gpt-oss-20b_q8_0
+3.16.886.021 I srv          load:   --batch-size
+3.16.886.021 I srv          load:   512
+3.16.886.021 I srv          load:   --ctx-size
+3.16.886.021 I srv          load:   16384
+3.16.886.022 I srv          load:   --cache-type-k
+3.16.886.022 I srv          load:   f16
+3.16.886.022 I srv          load:   --cache-type-v
+3.16.886.022 I srv          load:   f16
+3.16.886.022 I srv          load:   --flash-attn
+3.16.886.022 I srv          load:   on
+3.16.886.022 I srv          load:   --model
+3.16.886.023 I srv          load:   /home/hm/llama-bench-models/gpt-oss-20b_q8_0.gguf
+3.16.886.023 I srv          load:   --parallel
+3.16.886.023 I srv          load:   1
+3.16.886.023 I srv          load:   --split-mode
+3.16.886.023 I srv          load:   layer
+3.16.886.023 I srv          load:   --ubatch-size
+3.16.886.024 I srv          load:   512
+[51829] 0.00.006.236 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+[51829] 0.00.006.448 W srv  llama_server: -----------------
+[51829] 0.00.006.449 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+[51829] 0.00.006.449 W srv  llama_server: this can be a security risk (cross-origin attacks)
+[51829] 0.00.006.449 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+[51829] 0.00.006.449 W srv  llama_server: -----------------
+[51829] 
+[51829] 0.00.007.751 I srv    load_model: loading model '/home/hm/llama-bench-models/gpt-oss-20b_q8_0.gguf'
+[51829] 0.00.603.568 W load: setting token '<|message|>' (200008) attribute to USER_DEFINED (16), old attributes: 8
+[51829] 0.00.603.570 W load: setting token '<|start|>' (200006) attribute to USER_DEFINED (16), old attributes: 8
+[51829] 0.00.603.571 W load: setting token '<|constrain|>' (200003) attribute to USER_DEFINED (16), old attributes: 8
+[51829] 0.00.604.467 W load: setting token '<|channel|>' (200005) attribute to USER_DEFINED (16), old attributes: 8
+[51829] 0.00.607.774 W load: special_eog_ids contains both '<|return|>' and '<|call|>', or '<|calls|>' and '<|flush|>' tokens, removing '<|end|>' token from EOG list
+[51829] 
+[51829] 
+[51829] 
+[51829] 
+[51829] 
+[51829] 
+[51829] 
+[51829] 
+[51829] 
+[51829] 
+[51829] 
+[51829] 0.03.121.271 I cmn          init: llama threadpool init, n_threads = 6
+[51829] 0.03.195.613 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 16384, kv_unified = 'false'
+[51829] 0.03.197.795 I srv  llama_server: model loaded
+[51829] 0.03.197.798 I srv  llama_server: listening on http://127.0.0.1:51829
+[51829] 
+3.20.101.608 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 0.03.202.107 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+[51829] 0.03.202.495 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+[51829] 0.05.167.943 I slot print_timing: id  0 | task 0 | prompt eval time =    1011.80 ms /   101 tokens (   10.02 ms per token,    99.82 tokens per second)
+[51829] 0.05.167.946 I slot print_timing: id  0 | task 0 |        eval time =     953.63 ms /    64 tokens (   15.14 ms per token,    66.06 tokens per second)
+[51829] 0.05.167.947 I slot print_timing: id  0 | task 0 |       total time =    1965.43 ms /   165 tokens
+[51829] 0.05.167.950 I slot print_timing: id  0 | task 0 |    graphs reused =         63
+[51829] 0.05.167.985 I slot      release: id  0 | task 0 | stop processing: n_tokens = 164, truncated = 0
+3.26.419.974 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 0.09.529.593 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151354952420
+[51829] 0.09.534.188 I slot launch_slot_: id  0 | task 67 | processing task, is_child = 0
+[51829] 0.15.834.591 I slot print_timing: id  0 | task 67 | n_gen =    197, tg =  65.33 t/s, tg_3s =  65.66 t/s
+[51829] 0.18.839.481 I slot print_timing: id  0 | task 67 | n_gen =    393, tg =  65.28 t/s, tg_3s =  65.23 t/s
+[51829] 0.21.844.238 I slot print_timing: id  0 | task 67 | n_gen =    589, tg =  65.26 t/s, tg_3s =  65.23 t/s
+[51829] 0.24.849.182 I slot print_timing: id  0 | task 67 | n_gen =    785, tg =  65.25 t/s, tg_3s =  65.23 t/s
+[51829] 0.27.860.302 I slot print_timing: id  0 | task 67 | n_gen =    981, tg =  65.22 t/s, tg_3s =  65.09 t/s
+[51829] 0.30.874.409 I slot print_timing: id  0 | task 67 | n_gen =   1177, tg =  65.19 t/s, tg_3s =  65.03 t/s
+[51829] 0.33.887.331 I slot print_timing: id  0 | task 67 | n_gen =   1373, tg =  65.17 t/s, tg_3s =  65.05 t/s
+[51829] 0.36.887.841 I slot print_timing: id  0 | task 67 | n_gen =   1568, tg =  65.15 t/s, tg_3s =  64.99 t/s
+[51829] 0.37.211.256 I slot print_timing: id  0 | task 67 | prompt eval time =    3300.10 ms /  1682 tokens (    1.96 ms per token,   509.68 tokens per second)
+[51829] 0.37.211.259 I slot print_timing: id  0 | task 67 |        eval time =   24376.96 ms /  1589 tokens (   15.35 ms per token,    65.14 tokens per second)
+[51829] 0.37.211.259 I slot print_timing: id  0 | task 67 |       total time =   27677.06 ms /  3271 tokens
+[51829] 0.37.211.259 I slot print_timing: id  0 | task 67 |    graphs reused =       1643
+[51829] 0.37.211.330 I slot      release: id  0 | task 67 | stop processing: n_tokens = 3330, truncated = 0
+3.54.143.234 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 0.37.249.050 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151386995765
+[51829] 0.37.274.758 I slot launch_slot_: id  0 | task 1661 | processing task, is_child = 0
+[51829] 0.44.095.867 I slot print_timing: id  0 | task 1661 | n_gen =    196, tg =  64.84 t/s, tg_3s =  65.18 t/s
+[51829] 0.44.467.638 I slot print_timing: id  0 | task 1661 | prompt eval time =    3813.82 ms /  2157 tokens (    1.77 ms per token,   565.57 tokens per second)
+[51829] 0.44.467.641 I slot print_timing: id  0 | task 1661 |        eval time =    3379.03 ms /   220 tokens (   15.43 ms per token,    64.81 tokens per second)
+[51829] 0.44.467.641 I slot print_timing: id  0 | task 1661 |       total time =    7192.85 ms /  2377 tokens
+[51829] 0.44.467.642 I slot print_timing: id  0 | task 1661 |    graphs reused =       1860
+[51829] 0.44.467.736 I slot      release: id  0 | task 1661 | stop processing: n_tokens = 2436, truncated = 0
+4.03.459.536 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 0.46.577.910 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151394252172
+[51829] 0.46.598.136 I slot launch_slot_: id  0 | task 1887 | processing task, is_child = 0
+[51829] 0.50.147.161 I slot print_timing: id  0 | task 1887 | prompt processing, n_tokens =   3584, progress = 0.62, t =   3.55 s / 1009.86 tokens per second
+[51829] 0.50.752.162 I slot print_timing: id  0 | task 1887 | prompt processing, n_tokens =   3826, progress = 0.66, t =   4.15 s / 921.04 tokens per second
+[51829] 0.51.551.962 I slot print_timing: id  0 | task 1887 | prompt processing, n_tokens =   4338, progress = 0.74, t =   4.95 s / 875.69 tokens per second
+[51829] 0.52.215.078 I slot print_timing: id  0 | task 1887 | prompt processing, n_tokens =   4850, progress = 0.83, t =   5.62 s / 863.46 tokens per second
+[51829] 0.52.830.607 I slot print_timing: id  0 | task 1887 | prompt processing, n_tokens =   5338, progress = 0.91, t =   6.23 s / 856.49 tokens per second
+[51829] 0.53.864.231 I slot print_timing: id  0 | task 1887 | prompt processing, n_tokens =   5846, progress = 1.00, t =   7.27 s / 804.56 tokens per second
+[51829] 0.58.051.170 I slot print_timing: id  0 | task 1887 | n_gen =    194, tg =  64.30 t/s, tg_3s =  64.63 t/s
+[51829] 1.01.053.525 I slot print_timing: id  0 | task 1887 | n_gen =    387, tg =  64.29 t/s, tg_3s =  64.28 t/s
+[51829] 1.04.055.976 I slot print_timing: id  0 | task 1887 | n_gen =    580, tg =  64.29 t/s, tg_3s =  64.28 t/s
+[51829] 1.07.061.952 I slot print_timing: id  0 | task 1887 | n_gen =    773, tg =  64.27 t/s, tg_3s =  64.21 t/s
+[51829] 1.10.071.871 I slot print_timing: id  0 | task 1887 | n_gen =    966, tg =  64.24 t/s, tg_3s =  64.12 t/s
+[51829] 1.13.085.130 I slot print_timing: id  0 | task 1887 | n_gen =   1159, tg =  64.21 t/s, tg_3s =  64.05 t/s
+[51829] 1.16.098.901 I slot print_timing: id  0 | task 1887 | n_gen =   1352, tg =  64.18 t/s, tg_3s =  64.04 t/s
+[51829] 1.19.101.155 I slot print_timing: id  0 | task 1887 | n_gen =   1544, tg =  64.15 t/s, tg_3s =  63.95 t/s
+[51829] 1.19.555.014 I slot print_timing: id  0 | task 1887 | prompt eval time =    8451.43 ms /  5850 tokens (    1.44 ms per token,   692.19 tokens per second)
+[51829] 1.19.555.016 I slot print_timing: id  0 | task 1887 |        eval time =   24505.44 ms /  1573 tokens (   15.59 ms per token,    64.15 tokens per second)
+[51829] 1.19.555.017 I slot print_timing: id  0 | task 1887 |       total time =   32956.86 ms /  7423 tokens
+[51829] 1.19.555.017 I slot print_timing: id  0 | task 1887 |    graphs reused =       3425
+[51829] 1.19.555.163 I slot      release: id  0 | task 1887 | stop processing: n_tokens = 7482, truncated = 0
+4.36.471.541 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 1.19.583.048 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151429339598
+[51829] 1.19.646.323 I slot launch_slot_: id  0 | task 3473 | processing task, is_child = 0
+4.37.538.561 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 1.22.686.972 I slot print_timing: id  0 | task 3473 | prompt processing, n_tokens =   2759, progress = 0.91, t =   3.04 s / 907.38 tokens per second
+[51829] 1.23.412.475 I slot print_timing: id  0 | task 3473 | prompt processing, n_tokens =   3267, progress = 1.00, t =   3.77 s / 867.47 tokens per second
+[51829] 1.27.590.787 I slot print_timing: id  0 | task 3473 | n_gen =    195, tg =  64.38 t/s, tg_3s =  64.72 t/s
+[51829] 1.30.592.846 I slot print_timing: id  0 | task 3473 | n_gen =    388, tg =  64.34 t/s, tg_3s =  64.29 t/s
+[51829] 1.33.593.145 I slot print_timing: id  0 | task 3473 | n_gen =    581, tg =  64.33 t/s, tg_3s =  64.33 t/s
+[51829] 1.36.593.693 I slot print_timing: id  0 | task 3473 | n_gen =    774, tg =  64.33 t/s, tg_3s =  64.32 t/s
+[51829] 1.39.596.709 I slot print_timing: id  0 | task 3473 | n_gen =    967, tg =  64.32 t/s, tg_3s =  64.27 t/s
+[51829] 1.42.599.488 I slot print_timing: id  0 | task 3473 | n_gen =   1160, tg =  64.31 t/s, tg_3s =  64.27 t/s
+[51829] 1.45.609.344 I slot print_timing: id  0 | task 3473 | n_gen =   1353, tg =  64.28 t/s, tg_3s =  64.12 t/s
+[51829] 1.48.619.080 I slot print_timing: id  0 | task 3473 | n_gen =   1546, tg =  64.26 t/s, tg_3s =  64.13 t/s
+[51829] 1.51.631.089 I slot print_timing: id  0 | task 3473 | n_gen =   1739, tg =  64.24 t/s, tg_3s =  64.08 t/s
+[51829] 1.54.645.526 I slot print_timing: id  0 | task 3473 | n_gen =   1932, tg =  64.22 t/s, tg_3s =  64.03 t/s
+[51829] 1.55.177.519 I slot print_timing: id  0 | task 3473 | prompt eval time =    4931.29 ms /  3271 tokens (    1.51 ms per token,   663.32 tokens per second)
+[51829] 1.55.177.522 I slot print_timing: id  0 | task 3473 |        eval time =   30599.89 ms /  1966 tokens (   15.57 ms per token,    64.22 tokens per second)
+[51829] 1.55.177.523 I slot print_timing: id  0 | task 3473 |       total time =   35531.18 ms /  5237 tokens
+[51829] 1.55.177.523 I slot print_timing: id  0 | task 3473 |    graphs reused =       5381
+[51829] 1.55.177.662 I slot      release: id  0 | task 3473 | stop processing: n_tokens = 7448, truncated = 0
+[51829] 1.55.177.677 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151464962098
+5.12.092.637 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 1.55.226.367 I slot launch_slot_: id  0 | task 3477 | processing task, is_child = 0
+[51829] 2.01.705.846 I slot print_timing: id  0 | task 3477 | n_gen =    198, tg =  65.34 t/s, tg_3s =  65.67 t/s
+[51829] 2.04.709.425 I slot print_timing: id  0 | task 3477 | n_gen =    394, tg =  65.30 t/s, tg_3s =  65.26 t/s
+[51829] 2.07.712.598 I slot print_timing: id  0 | task 3477 | n_gen =    590, tg =  65.29 t/s, tg_3s =  65.26 t/s
+[51829] 2.10.718.388 I slot print_timing: id  0 | task 3477 | n_gen =    786, tg =  65.27 t/s, tg_3s =  65.21 t/s
+[51829] 2.13.730.049 I slot print_timing: id  0 | task 3477 | n_gen =    982, tg =  65.23 t/s, tg_3s =  65.08 t/s
+[51829] 2.16.742.652 I slot print_timing: id  0 | task 3477 | n_gen =   1178, tg =  65.20 t/s, tg_3s =  65.06 t/s
+[51829] 2.19.756.789 I slot print_timing: id  0 | task 3477 | n_gen =   1374, tg =  65.18 t/s, tg_3s =  65.03 t/s
+[51829] 2.20.911.947 I slot print_timing: id  0 | task 3477 | prompt eval time =    3464.27 ms /  1729 tokens (    2.00 ms per token,   499.09 tokens per second)
+[51829] 2.20.911.950 I slot print_timing: id  0 | task 3477 |        eval time =   22221.29 ms /  1449 tokens (   15.35 ms per token,    65.16 tokens per second)
+[51829] 2.20.911.951 I slot print_timing: id  0 | task 3477 |       total time =   25685.56 ms /  3178 tokens
+[51829] 2.20.911.951 I slot print_timing: id  0 | task 3477 |    graphs reused =       6822
+[51829] 2.20.912.025 I slot      release: id  0 | task 3477 | stop processing: n_tokens = 3237, truncated = 0
+[51829] 2.20.912.040 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151490696461
+5.37.831.684 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 2.20.935.666 I slot launch_slot_: id  0 | task 5448 | processing task, is_child = 0
+[51829] 2.27.478.179 I slot print_timing: id  0 | task 5448 | n_gen =    197, tg =  65.32 t/s, tg_3s =  65.65 t/s
+[51829] 2.27.877.213 I slot print_timing: id  0 | task 5448 | prompt eval time =    3541.79 ms /  1821 tokens (    1.94 ms per token,   514.15 tokens per second)
+[51829] 2.27.877.215 I slot print_timing: id  0 | task 5448 |        eval time =    3399.74 ms /   223 tokens (   15.31 ms per token,    65.30 tokens per second)
+[51829] 2.27.877.216 I slot print_timing: id  0 | task 5448 |       total time =    6941.53 ms /  2044 tokens
+[51829] 2.27.877.217 I slot print_timing: id  0 | task 5448 |    graphs reused =       7042
+[51829] 2.27.877.289 I slot      release: id  0 | task 5448 | stop processing: n_tokens = 2103, truncated = 0
+[51829] 2.27.877.300 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.115 (> 0.100 thold), f_keep = 0.118
+[51829] 2.27.893.944 I slot launch_slot_: id  0 | task 6903 | processing task, is_child = 0
+[51829] 2.34.065.857 I slot print_timing: id  0 | task 6903 | n_gen =    197, tg =  65.20 t/s, tg_3s =  65.54 t/s
+[51829] 2.34.816.514 I slot print_timing: id  0 | task 6903 | prompt eval time =    3165.99 ms /  1922 tokens (    1.65 ms per token,   607.08 tokens per second)
+[51829] 2.34.816.517 I slot print_timing: id  0 | task 6903 |        eval time =    3756.57 ms /   246 tokens (   15.33 ms per token,    65.22 tokens per second)
+[51829] 2.34.816.517 I slot print_timing: id  0 | task 6903 |       total time =    6922.55 ms /  2168 tokens
+[51829] 2.34.816.518 I slot print_timing: id  0 | task 6903 |    graphs reused =       7285
+[51829] 2.34.816.605 I slot      release: id  0 | task 6903 | stop processing: n_tokens = 2409, truncated = 0
+5.51.735.831 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 2.34.859.931 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151504601040
+[51829] 2.34.879.435 I slot launch_slot_: id  0 | task 7382 | processing task, is_child = 0
+[51829] 2.38.426.645 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =   3520, progress = 0.25, t =   3.55 s / 992.34 tokens per second
+[51829] 2.39.419.124 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =   4032, progress = 0.28, t =   4.54 s / 888.17 tokens per second
+[51829] 2.40.077.459 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =   4544, progress = 0.32, t =   5.20 s / 874.18 tokens per second
+[51829] 2.40.676.268 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =   5056, progress = 0.35, t =   5.80 s / 872.20 tokens per second
+[51829] 2.41.271.898 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =   5568, progress = 0.39, t =   6.39 s / 871.03 tokens per second
+[51829] 2.41.878.196 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =   6080, progress = 0.42, t =   7.00 s / 868.73 tokens per second
+[51829] 2.42.489.823 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =   6592, progress = 0.46, t =   7.61 s / 866.19 tokens per second
+[51829] 2.43.101.250 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =   7104, progress = 0.49, t =   8.22 s / 864.05 tokens per second
+[51829] 2.43.733.387 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =   7616, progress = 0.53, t =   8.85 s / 860.18 tokens per second
+[51829] 2.44.364.157 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =   8128, progress = 0.56, t =   9.48 s / 856.96 tokens per second
+[51829] 2.44.992.200 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =   8640, progress = 0.60, t =  10.11 s / 854.37 tokens per second
+[51829] 2.45.630.423 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =   9152, progress = 0.63, t =  10.75 s / 851.27 tokens per second
+[51829] 2.46.266.818 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =   9664, progress = 0.67, t =  11.39 s / 848.66 tokens per second
+[51829] 2.46.923.164 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =  10176, progress = 0.70, t =  12.04 s / 844.92 tokens per second
+[51829] 2.47.586.450 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =  10688, progress = 0.74, t =  12.71 s / 841.11 tokens per second
+[51829] 2.48.261.654 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =  11200, progress = 0.77, t =  13.38 s / 836.93 tokens per second
+[51829] 2.48.938.904 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =  11712, progress = 0.81, t =  14.06 s / 833.03 tokens per second
+[51829] 2.49.625.046 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =  12224, progress = 0.84, t =  14.75 s / 828.99 tokens per second
+[51829] 2.50.319.283 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =  12736, progress = 0.88, t =  15.44 s / 824.88 tokens per second
+[51829] 2.51.003.321 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =  13248, progress = 0.91, t =  16.12 s / 821.64 tokens per second
+[51829] 2.51.699.941 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =  13760, progress = 0.95, t =  16.82 s / 818.05 tokens per second
+[51829] 2.52.403.088 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =  14004, progress = 0.96, t =  17.52 s / 799.15 tokens per second
+[51829] 2.53.264.346 I slot print_timing: id  0 | task 7382 | prompt processing, n_tokens =  14512, progress = 1.00, t =  18.38 s / 789.34 tokens per second
+[51829] 2.57.631.563 I slot print_timing: id  0 | task 7382 | n_gen =    188, tg =  62.31 t/s, tg_3s =  62.64 t/s
+[51829] 3.00.632.818 I slot print_timing: id  0 | task 7382 | n_gen =    375, tg =  62.31 t/s, tg_3s =  62.31 t/s
+[51829] 3.03.635.799 I slot print_timing: id  0 | task 7382 | n_gen =    562, tg =  62.30 t/s, tg_3s =  62.27 t/s
+[51829] 3.06.641.612 I slot print_timing: id  0 | task 7382 | n_gen =    749, tg =  62.28 t/s, tg_3s =  62.21 t/s
+[51829] 3.09.651.227 I slot print_timing: id  0 | task 7382 | n_gen =    936, tg =  62.25 t/s, tg_3s =  62.13 t/s
+[51829] 3.12.660.152 I slot print_timing: id  0 | task 7382 | n_gen =   1123, tg =  62.23 t/s, tg_3s =  62.15 t/s
+[51829] 3.13.644.300 I slot print_timing: id  0 | task 7382 | prompt eval time =   19751.02 ms / 14516 tokens (    1.36 ms per token,   734.95 tokens per second)
+[51829] 3.13.644.303 I slot print_timing: id  0 | task 7382 |        eval time =   19013.83 ms /  1184 tokens (   16.07 ms per token,    62.22 tokens per second)
+[51829] 3.13.644.303 I slot print_timing: id  0 | task 7382 |       total time =   38764.85 ms / 15700 tokens
+[51829] 3.13.644.304 I slot print_timing: id  0 | task 7382 |    graphs reused =       8462
+[51829] 3.13.644.555 I slot      release: id  0 | task 7382 | stop processing: n_tokens = 15759, truncated = 0
+6.30.562.550 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 3.13.668.928 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151543428990
+[51829] 3.13.789.912 I slot launch_slot_: id  0 | task 8596 | processing task, is_child = 0
+6.30.732.800 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 3.16.962.314 I slot print_timing: id  0 | task 8596 | n_gen =    197, tg =  65.33 t/s, tg_3s =  65.66 t/s
+[51829] 3.18.019.097 I slot print_timing: id  0 | task 8596 | prompt eval time =     172.27 ms /    20 tokens (    8.61 ms per token,   116.10 tokens per second)
+[51829] 3.18.019.099 I slot print_timing: id  0 | task 8596 |        eval time =    4056.90 ms /   266 tokens (   15.31 ms per token,    65.32 tokens per second)
+[51829] 3.18.019.100 I slot print_timing: id  0 | task 8596 |       total time =    4229.17 ms /   286 tokens
+[51829] 3.18.019.101 I slot print_timing: id  0 | task 8596 |    graphs reused =       8724
+[51829] 3.18.019.184 I slot      release: id  0 | task 8596 | stop processing: n_tokens = 2444, truncated = 0
+[51829] 3.18.019.197 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151547803619
+[51829] 3.18.040.747 I slot launch_slot_: id  0 | task 8598 | processing task, is_child = 0
+[51829] 3.24.981.092 I slot print_timing: id  0 | task 8598 | n_gen =    197, tg =  65.20 t/s, tg_3s =  65.53 t/s
+[51829] 3.27.985.449 I slot print_timing: id  0 | task 8598 | n_gen =    393, tg =  65.22 t/s, tg_3s =  65.24 t/s
+[51829] 3.30.997.211 I slot print_timing: id  0 | task 8598 | n_gen =    589, tg =  65.17 t/s, tg_3s =  65.08 t/s
+[51829] 3.34.011.293 I slot print_timing: id  0 | task 8598 | n_gen =    785, tg =  65.14 t/s, tg_3s =  65.03 t/s
+[51829] 3.36.917.061 I slot print_timing: id  0 | task 8598 | prompt eval time =    3934.12 ms /  2088 tokens (    1.88 ms per token,   530.74 tokens per second)
+[51829] 3.36.917.064 I slot print_timing: id  0 | task 8598 |        eval time =   14942.18 ms /   974 tokens (   15.36 ms per token,    65.12 tokens per second)
+[51829] 3.36.917.065 I slot print_timing: id  0 | task 8598 |       total time =   18876.30 ms /  3062 tokens
+[51829] 3.36.917.066 I slot print_timing: id  0 | task 8598 |    graphs reused =       9692
+[51829] 3.36.917.153 I slot      release: id  0 | task 8598 | stop processing: n_tokens = 3121, truncated = 0
+6.53.836.629 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 3.36.942.748 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151566701590
+[51829] 3.36.966.920 I slot launch_slot_: id  0 | task 9844 | processing task, is_child = 0
+[51829] 3.40.048.949 I slot print_timing: id  0 | task 9844 | prompt processing, n_tokens =   2408, progress = 1.00, t =   3.08 s / 781.31 tokens per second
+[51829] 3.44.166.453 I slot print_timing: id  0 | task 9844 | n_gen =    197, tg =  65.11 t/s, tg_3s =  65.45 t/s
+[51829] 3.44.382.022 I slot print_timing: id  0 | task 9844 | prompt eval time =    4189.38 ms /  2412 tokens (    1.74 ms per token,   575.74 tokens per second)
+[51829] 3.44.382.025 I slot print_timing: id  0 | task 9844 |        eval time =    3225.70 ms /   211 tokens (   15.36 ms per token,    65.10 tokens per second)
+[51829] 3.44.382.026 I slot print_timing: id  0 | task 9844 |       total time =    7415.09 ms /  2623 tokens
+[51829] 3.44.382.026 I slot print_timing: id  0 | task 9844 |    graphs reused =       9900
+[51829] 3.44.382.119 I slot      release: id  0 | task 9844 | stop processing: n_tokens = 2682, truncated = 0
+7.01.295.171 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 3.44.415.230 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151574166554
+[51829] 3.44.437.412 I slot launch_slot_: id  0 | task 10062 | processing task, is_child = 0
+[51829] 3.47.969.688 I slot print_timing: id  0 | task 10062 | prompt processing, n_tokens =   3584, progress = 0.48, t =   3.53 s / 1014.65 tokens per second
+[51829] 3.48.577.652 I slot print_timing: id  0 | task 10062 | prompt processing, n_tokens =   3645, progress = 0.49, t =   4.14 s / 880.39 tokens per second
+[51829] 3.49.268.844 I slot print_timing: id  0 | task 10062 | prompt processing, n_tokens =   4157, progress = 0.55, t =   4.83 s / 860.41 tokens per second
+[51829] 3.49.921.483 I slot print_timing: id  0 | task 10062 | prompt processing, n_tokens =   4669, progress = 0.62, t =   5.48 s / 851.38 tokens per second
+[51829] 3.50.537.777 I slot print_timing: id  0 | task 10062 | prompt processing, n_tokens =   5181, progress = 0.69, t =   6.10 s / 849.30 tokens per second
+[51829] 3.51.165.955 I slot print_timing: id  0 | task 10062 | prompt processing, n_tokens =   5693, progress = 0.76, t =   6.73 s / 846.10 tokens per second
+[51829] 3.51.785.161 I slot print_timing: id  0 | task 10062 | prompt processing, n_tokens =   6205, progress = 0.82, t =   7.35 s / 844.48 tokens per second
+[51829] 3.52.415.560 I slot print_timing: id  0 | task 10062 | prompt processing, n_tokens =   6717, progress = 0.89, t =   7.98 s / 841.93 tokens per second
+[51829] 3.53.041.177 I slot print_timing: id  0 | task 10062 | prompt processing, n_tokens =   7035, progress = 0.93, t =   8.60 s / 817.67 tokens per second
+[51829] 3.53.891.718 I slot print_timing: id  0 | task 10062 | prompt processing, n_tokens =   7543, progress = 1.00, t =   9.45 s / 797.84 tokens per second
+[51829] 3.58.108.733 I slot print_timing: id  0 | task 10062 | n_gen =    193, tg =  63.96 t/s, tg_3s =  64.30 t/s
+[51829] 4.01.114.556 I slot print_timing: id  0 | task 10062 | n_gen =    385, tg =  63.92 t/s, tg_3s =  63.88 t/s
+[51829] 4.04.124.189 I slot print_timing: id  0 | task 10062 | n_gen =    577, tg =  63.88 t/s, tg_3s =  63.80 t/s
+[51829] 4.07.135.987 I slot print_timing: id  0 | task 10062 | n_gen =    769, tg =  63.85 t/s, tg_3s =  63.75 t/s
+[51829] 4.10.149.394 I slot print_timing: id  0 | task 10062 | n_gen =    961, tg =  63.82 t/s, tg_3s =  63.72 t/s
+[51829] 4.13.100.774 I slot print_timing: id  0 | task 10062 | prompt eval time =   10669.62 ms /  7547 tokens (    1.41 ms per token,   707.34 tokens per second)
+[51829] 4.13.100.777 I slot print_timing: id  0 | task 10062 |        eval time =   17993.73 ms /  1149 tokens (   15.67 ms per token,    63.80 tokens per second)
+[51829] 4.13.100.778 I slot print_timing: id  0 | task 10062 |       total time =   28663.35 ms /  8696 tokens
+[51829] 4.13.100.778 I slot print_timing: id  0 | task 10062 |    graphs reused =      11042
+[51829] 4.13.100.957 I slot      release: id  0 | task 10062 | stop processing: n_tokens = 8755, truncated = 0
+7.30.016.129 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 4.13.128.531 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151602885392
+[51829] 4.13.203.534 I slot launch_slot_: id  0 | task 11228 | processing task, is_child = 0
+[51829] 4.16.289.184 I slot print_timing: id  0 | task 11228 | prompt processing, n_tokens =   3072, progress = 0.76, t =   3.09 s / 995.58 tokens per second
+[51829] 4.16.904.049 I slot print_timing: id  0 | task 11228 | prompt processing, n_tokens =   3584, progress = 0.83, t =   3.70 s / 968.52 tokens per second
+[51829] 4.17.516.966 I slot print_timing: id  0 | task 11228 | prompt processing, n_tokens =   4096, progress = 0.90, t =   4.31 s / 949.60 tokens per second
+[51829] 4.18.138.391 I slot print_timing: id  0 | task 11228 | prompt processing, n_tokens =   4277, progress = 0.93, t =   4.93 s / 866.70 tokens per second
+[51829] 4.18.929.703 I slot print_timing: id  0 | task 11228 | prompt processing, n_tokens =   4785, progress = 1.00, t =   5.73 s / 835.64 tokens per second
+[51829] 4.23.133.824 I slot print_timing: id  0 | task 11228 | n_gen =    193, tg =  63.95 t/s, tg_3s =  64.28 t/s
+[51829] 4.26.137.285 I slot print_timing: id  0 | task 11228 | n_gen =    385, tg =  63.94 t/s, tg_3s =  63.93 t/s
+[51829] 4.29.140.503 I slot print_timing: id  0 | task 11228 | n_gen =    577, tg =  63.94 t/s, tg_3s =  63.93 t/s
+[51829] 4.32.148.303 I slot print_timing: id  0 | task 11228 | n_gen =    769, tg =  63.91 t/s, tg_3s =  63.83 t/s
+[51829] 4.35.160.396 I slot print_timing: id  0 | task 11228 | n_gen =    961, tg =  63.88 t/s, tg_3s =  63.74 t/s
+[51829] 4.38.171.955 I slot print_timing: id  0 | task 11228 | n_gen =   1153, tg =  63.86 t/s, tg_3s =  63.75 t/s
+[51829] 4.41.172.939 I slot print_timing: id  0 | task 11228 | n_gen =   1344, tg =  63.83 t/s, tg_3s =  63.65 t/s
+[51829] 4.44.173.901 I slot print_timing: id  0 | task 11228 | n_gen =   1535, tg =  63.80 t/s, tg_3s =  63.65 t/s
+[51829] 4.47.175.583 I slot print_timing: id  0 | task 11228 | n_gen =   1726, tg =  63.78 t/s, tg_3s =  63.63 t/s
+[51829] 4.50.178.023 I slot print_timing: id  0 | task 11228 | n_gen =   1917, tg =  63.77 t/s, tg_3s =  63.61 t/s
+[51829] 4.51.609.981 I slot print_timing: id  0 | task 11228 | prompt eval time =    6927.89 ms /  4789 tokens (    1.45 ms per token,   691.26 tokens per second)
+[51829] 4.51.609.984 I slot print_timing: id  0 | task 11228 |        eval time =   31478.55 ms /  2008 tokens (   15.68 ms per token,    63.76 tokens per second)
+[51829] 4.51.609.984 I slot print_timing: id  0 | task 11228 |       total time =   38406.43 ms /  6797 tokens
+[51829] 4.51.609.985 I slot print_timing: id  0 | task 11228 |    graphs reused =      13040
+[51829] 4.51.610.161 I slot      release: id  0 | task 11228 | stop processing: n_tokens = 9263, truncated = 0
+8.08.517.624 I srv  proxy_reques: proxying request to model gpt-oss-20b_q8_0 on port 51829
+[51829] 4.51.631.246 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 1.000 (> 0.100 thold), f_keep = 0.783
+[51829] 4.51.631.625 I slot launch_slot_: id  0 | task 13247 | processing task, is_child = 0
+[51829] 4.54.692.105 I slot print_timing: id  0 | task 13247 | n_gen =    194, tg =  64.08 t/s, tg_3s =  64.41 t/s
+[51829] 4.57.694.287 I slot print_timing: id  0 | task 13247 | n_gen =    386, tg =  64.02 t/s, tg_3s =  63.95 t/s
+[51829] 5.00.699.737 I slot print_timing: id  0 | task 13247 | n_gen =    578, tg =  63.97 t/s, tg_3s =  63.88 t/s
+[51829] 5.03.707.217 I slot print_timing: id  0 | task 13247 | n_gen =    770, tg =  63.94 t/s, tg_3s =  63.84 t/s
+[51829] 5.06.717.554 I slot print_timing: id  0 | task 13247 | n_gen =    962, tg =  63.91 t/s, tg_3s =  63.78 t/s
+[51829] 5.09.728.509 I slot print_timing: id  0 | task 13247 | n_gen =   1154, tg =  63.88 t/s, tg_3s =  63.77 t/s
+[51829] 5.12.729.311 I slot print_timing: id  0 | task 13247 | n_gen =   1345, tg =  63.85 t/s, tg_3s =  63.65 t/s
+[51829] 5.15.730.199 I slot print_timing: id  0 | task 13247 | n_gen =   1536, tg =  63.83 t/s, tg_3s =  63.65 t/s
+[51829] 5.15.887.300 I slot print_timing: id  0 | task 13247 | prompt eval time =      48.51 ms /     5 tokens (    9.70 ms per token,   103.08 tokens per second)
+[51829] 5.15.887.303 I slot print_timing: id  0 | task 13247 |        eval time =   24207.16 ms /  1546 tokens (   15.67 ms per token,    63.82 tokens per second)
+[51829] 5.15.887.303 I slot print_timing: id  0 | task 13247 |       total time =   24255.67 ms /  1551 tokens
+[51829] 5.15.887.304 I slot print_timing: id  0 | task 13247 |    graphs reused =      14576
+[51829] 5.15.887.482 I slot      release: id  0 | task 13247 | stop processing: n_tokens = 8801, truncated = 0
+8.42.482.276 I srv          join: models_max reached, request for name=qwen3.6-35b-a3b_ud-q6_k queued at position 1
+8.42.482.279 I srv          tick: evicting idle LRU name=gpt-oss-20b_q8_0 for a queued request
+8.42.482.283 I srv  ensure_model: waiting until model name=qwen3.6-35b-a3b_ud-q6_k is fully loaded...
+[51829] 5.25.578.703 I srv    operator(): exit command received, exiting...
+[51829] 5.25.578.742 I srv    operator(): operator(): cleaning up before exit...
+8.42.769.093 I srv           run: instance name=gpt-oss-20b_q8_0 exited with status 0
+8.42.769.102 I srv  ensure_model: slot available, loading queued model name=qwen3.6-35b-a3b_ud-q6_k
+8.42.769.144 I srv          load: spawning server instance with name=qwen3.6-35b-a3b_ud-q6_k on port 52051
+8.42.769.160 I srv          load: spawning server instance with args:
+8.42.769.160 I srv          load:   /home/hm/llama-cuda12/bin/llama-server
+8.42.769.160 I srv          load:   --host
+8.42.769.160 I srv          load:   127.0.0.1
+8.42.769.161 I srv          load:   --jinja
+8.42.769.161 I srv          load:   --port
+8.42.769.161 I srv          load:   52051
+8.42.769.161 I srv          load:   --alias
+8.42.769.161 I srv          load:   qwen3.6-35b-a3b_ud-q6_k
+8.42.769.161 I srv          load:   --batch-size
+8.42.769.161 I srv          load:   512
+8.42.769.161 I srv          load:   --ctx-size
+8.42.769.161 I srv          load:   16384
+8.42.769.161 I srv          load:   --cache-type-k
+8.42.769.161 I srv          load:   f16
+8.42.769.161 I srv          load:   --cache-type-v
+8.42.769.162 I srv          load:   f16
+8.42.769.162 I srv          load:   --flash-attn
+8.42.769.162 I srv          load:   on
+8.42.769.162 I srv          load:   --model
+8.42.769.162 I srv          load:   /home/hm/llama-bench-models/qwen3.6-35b-a3b_ud-q6_k.gguf
+8.42.769.162 I srv          load:   --parallel
+8.42.769.162 I srv          load:   1
+8.42.769.162 I srv          load:   --split-mode
+8.42.769.162 I srv          load:   layer
+8.42.769.162 I srv          load:   --ubatch-size
+8.42.769.162 I srv          load:   512
+[52051] 0.00.005.742 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+[52051] 0.00.005.953 W srv  llama_server: -----------------
+[52051] 0.00.005.954 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+[52051] 0.00.005.954 W srv  llama_server: this can be a security risk (cross-origin attacks)
+[52051] 0.00.005.954 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+[52051] 0.00.005.954 W srv  llama_server: -----------------
+[52051] 
+[52051] 0.00.007.224 I srv    load_model: loading model '/home/hm/llama-bench-models/qwen3.6-35b-a3b_ud-q6_k.gguf'
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 
+[52051] 0.06.706.457 I cmn          init: llama threadpool init, n_threads = 6
+[52051] 0.06.794.984 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 16384, kv_unified = 'false'
+[52051] 0.06.797.700 W srv          init: chat template supports preserving reasoning, it is enabled by default (may use more tokens, disable via --no-reasoning-preserve)
+[52051] 0.06.797.731 I srv  llama_server: model loaded
+[52051] 0.06.797.735 I srv  llama_server: listening on http://127.0.0.1:52051
+[52051] 
+8.49.585.451 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52051
+[52051] 0.06.799.129 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+[52051] 0.06.799.172 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+[52051] 0.08.432.883 I slot print_timing: id  0 | task 0 | prompt eval time =     456.25 ms /    51 tokens (    8.95 ms per token,   111.78 tokens per second)
+[52051] 0.08.432.886 I slot print_timing: id  0 | task 0 |        eval time =    1177.44 ms /    64 tokens (   18.69 ms per token,    53.51 tokens per second)
+[52051] 0.08.432.886 I slot print_timing: id  0 | task 0 |       total time =    1633.69 ms /   115 tokens
+[52051] 0.08.432.891 I slot print_timing: id  0 | task 0 |    graphs reused =         63
+[52051] 0.08.432.922 I slot      release: id  0 | task 0 | stop processing: n_tokens = 114, truncated = 0
+8.55.312.191 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52051
+[52051] 0.12.529.803 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151684101268
+[52051] 0.12.554.297 I slot launch_slot_: id  0 | task 66 | processing task, is_child = 0
+[52051] 0.16.047.429 I slot print_timing: id  0 | task 66 | prompt processing, n_tokens =   1311, progress = 0.72, t =   3.49 s / 375.31 tokens per second
+[52051] 0.17.222.496 I slot print_timing: id  0 | task 66 | prompt processing, n_tokens =   1819, progress = 1.00, t =   4.67 s / 389.66 tokens per second
+[52051] 0.20.732.483 I slot print_timing: id  0 | task 66 | n_gen =    161, tg =  53.31 t/s, tg_3s =  53.65 t/s
+[52051] 0.23.733.430 I slot print_timing: id  0 | task 66 | n_gen =    321, tg =  53.31 t/s, tg_3s =  53.32 t/s
+[52051] 0.26.733.896 I slot print_timing: id  0 | task 66 | n_gen =    481, tg =  53.32 t/s, tg_3s =  53.33 t/s
+[52051] 0.29.736.008 I slot print_timing: id  0 | task 66 | n_gen =    641, tg =  53.31 t/s, tg_3s =  53.30 t/s
+[52051] 0.32.739.065 I slot print_timing: id  0 | task 66 | n_gen =    801, tg =  53.31 t/s, tg_3s =  53.28 t/s
+[52051] 0.35.743.272 I slot print_timing: id  0 | task 66 | n_gen =    961, tg =  53.30 t/s, tg_3s =  53.26 t/s
+[52051] 0.38.747.212 I slot print_timing: id  0 | task 66 | n_gen =   1121, tg =  53.29 t/s, tg_3s =  53.26 t/s
+[52051] 0.41.754.493 I slot print_timing: id  0 | task 66 | n_gen =   1281, tg =  53.28 t/s, tg_3s =  53.20 t/s
+[52051] 0.44.760.395 I slot print_timing: id  0 | task 66 | n_gen =   1441, tg =  53.28 t/s, tg_3s =  53.23 t/s
+[52051] 0.47.767.957 I slot print_timing: id  0 | task 66 | n_gen =   1601, tg =  53.27 t/s, tg_3s =  53.20 t/s
+[52051] 0.50.775.594 I slot print_timing: id  0 | task 66 | n_gen =   1761, tg =  53.26 t/s, tg_3s =  53.20 t/s
+[52051] 0.53.790.201 I slot print_timing: id  0 | task 66 | n_gen =   1920, tg =  53.22 t/s, tg_3s =  52.74 t/s
+[52051] 0.56.804.068 I slot print_timing: id  0 | task 66 | n_gen =   2079, tg =  53.18 t/s, tg_3s =  52.76 t/s
+[52051] 0.59.116.798 I slot print_timing: id  0 | task 66 | prompt eval time =    5176.98 ms /  1823 tokens (    2.84 ms per token,   352.14 tokens per second)
+[52051] 0.59.116.801 I slot print_timing: id  0 | task 66 |        eval time =   41385.51 ms /  2201 tokens (   18.81 ms per token,    53.16 tokens per second)
+[52051] 0.59.116.801 I slot print_timing: id  0 | task 66 |       total time =   46562.49 ms /  4024 tokens
+[52051] 0.59.116.802 I slot print_timing: id  0 | task 66 |    graphs reused =       2254
+[52051] 0.59.116.873 I slot      release: id  0 | task 66 | stop processing: n_tokens = 4023, truncated = 0
+9.41.931.161 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52051
+[52051] 0.59.148.762 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151734785219
+[52051] 0.59.215.536 I slot launch_slot_: id  0 | task 2274 | processing task, is_child = 0
+[52051] 1.02.240.151 I slot print_timing: id  0 | task 2274 | prompt processing, n_tokens =   1724, progress = 0.57, t =   3.02 s / 570.00 tokens per second
+[52051] 1.03.014.663 I slot print_timing: id  0 | task 2274 | prompt processing, n_tokens =   2236, progress = 0.74, t =   3.80 s / 588.56 tokens per second
+[52051] 1.03.596.836 I slot print_timing: id  0 | task 2274 | prompt processing, n_tokens =   2499, progress = 0.83, t =   4.38 s / 570.38 tokens per second
+[52051] 1.04.716.986 I slot print_timing: id  0 | task 2274 | prompt processing, n_tokens =   3007, progress = 1.00, t =   5.50 s / 546.59 tokens per second
+[52051] 1.08.233.703 I slot print_timing: id  0 | task 2274 | n_gen =    161, tg =  53.18 t/s, tg_3s =  53.51 t/s
+[52051] 1.10.280.788 I slot print_timing: id  0 | task 2274 | prompt eval time =    6009.23 ms /  3011 tokens (    2.00 ms per token,   501.06 tokens per second)
+[52051] 1.10.280.791 I slot print_timing: id  0 | task 2274 |        eval time =    5056.00 ms /   270 tokens (   18.80 ms per token,    53.20 tokens per second)
+[52051] 1.10.280.791 I slot print_timing: id  0 | task 2274 |       total time =   11065.23 ms /  3281 tokens
+[52051] 1.10.280.792 I slot print_timing: id  0 | task 2274 |    graphs reused =       2521
+[52051] 1.10.280.889 I slot      release: id  0 | task 2274 | stop processing: n_tokens = 3280, truncated = 0
+9.53.076.995 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52051
+[52051] 1.10.299.524 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151745949234
+[52051] 1.10.352.600 I slot launch_slot_: id  0 | task 2552 | processing task, is_child = 0
+[52051] 1.13.925.425 I slot print_timing: id  0 | task 2552 | prompt processing, n_tokens =   1905, progress = 0.32, t =   3.57 s / 533.20 tokens per second
+[52051] 1.14.710.589 I slot print_timing: id  0 | task 2552 | prompt processing, n_tokens =   2417, progress = 0.40, t =   4.36 s / 554.62 tokens per second
+[52051] 1.15.501.260 I slot print_timing: id  0 | task 2552 | prompt processing, n_tokens =   2929, progress = 0.49, t =   5.15 s / 568.89 tokens per second
+[52051] 1.16.319.304 I slot print_timing: id  0 | task 2552 | prompt processing, n_tokens =   3441, progress = 0.57, t =   5.97 s / 576.70 tokens per second
+[52051] 1.17.120.623 I slot print_timing: id  0 | task 2552 | prompt processing, n_tokens =   3953, progress = 0.65, t =   6.77 s / 584.07 tokens per second
+[52051] 1.17.941.720 I slot print_timing: id  0 | task 2552 | prompt processing, n_tokens =   4465, progress = 0.74, t =   7.59 s / 588.34 tokens per second
+[52051] 1.18.756.072 I slot print_timing: id  0 | task 2552 | prompt processing, n_tokens =   4977, progress = 0.82, t =   8.40 s / 592.26 tokens per second
+[52051] 1.19.393.324 I slot print_timing: id  0 | task 2552 | prompt processing, n_tokens =   5223, progress = 0.87, t =   9.04 s / 577.72 tokens per second
+[52051] 1.20.423.425 I slot print_timing: id  0 | task 2552 | prompt processing, n_tokens =   5524, progress = 0.92, t =  10.07 s / 548.52 tokens per second
+[52051] 1.21.663.313 I slot print_timing: id  0 | task 2552 | prompt processing, n_tokens =   6032, progress = 1.00, t =  11.31 s / 533.30 tokens per second
+[52051] 1.25.222.797 I slot print_timing: id  0 | task 2552 | n_gen =    160, tg =  52.70 t/s, tg_3s =  53.04 t/s
+[52051] 1.28.241.205 I slot print_timing: id  0 | task 2552 | n_gen =    319, tg =  52.69 t/s, tg_3s =  52.68 t/s
+[52051] 1.31.241.295 I slot print_timing: id  0 | task 2552 | n_gen =    477, tg =  52.68 t/s, tg_3s =  52.67 t/s
+[52051] 1.34.259.940 I slot print_timing: id  0 | task 2552 | n_gen =    636, tg =  52.68 t/s, tg_3s =  52.67 t/s
+[52051] 1.37.277.193 I slot print_timing: id  0 | task 2552 | n_gen =    795, tg =  52.68 t/s, tg_3s =  52.70 t/s
+[52051] 1.40.277.525 I slot print_timing: id  0 | task 2552 | n_gen =    953, tg =  52.68 t/s, tg_3s =  52.66 t/s
+[52051] 1.43.296.368 I slot print_timing: id  0 | task 2552 | n_gen =   1112, tg =  52.68 t/s, tg_3s =  52.67 t/s
+[52051] 1.46.315.146 I slot print_timing: id  0 | task 2552 | n_gen =   1270, tg =  52.64 t/s, tg_3s =  52.34 t/s
+[52051] 1.49.323.786 I slot print_timing: id  0 | task 2552 | n_gen =   1427, tg =  52.59 t/s, tg_3s =  52.18 t/s
+[52051] 1.52.324.075 I slot print_timing: id  0 | task 2552 | n_gen =   1584, tg =  52.56 t/s, tg_3s =  52.33 t/s
+[52051] 1.55.328.284 I slot print_timing: id  0 | task 2552 | n_gen =   1741, tg =  52.53 t/s, tg_3s =  52.26 t/s
+[52051] 1.58.331.404 I slot print_timing: id  0 | task 2552 | n_gen =   1898, tg =  52.51 t/s, tg_3s =  52.28 t/s
+[52051] 2.01.335.900 I slot print_timing: id  0 | task 2552 | n_gen =   2055, tg =  52.49 t/s, tg_3s =  52.26 t/s
+[52051] 2.03.978.419 I slot print_timing: id  0 | task 2552 | prompt eval time =   11853.35 ms /  6036 tokens (    1.96 ms per token,   509.22 tokens per second)
+[52051] 2.03.978.422 I slot print_timing: id  0 | task 2552 |        eval time =   41772.44 ms /  2193 tokens (   19.06 ms per token,    52.47 tokens per second)
+[52051] 2.03.978.422 I slot print_timing: id  0 | task 2552 |       total time =   53625.80 ms /  8229 tokens
+[52051] 2.03.978.423 I slot print_timing: id  0 | task 2552 |    graphs reused =       4703
+[52051] 2.03.978.595 I slot      release: id  0 | task 2552 | stop processing: n_tokens = 8228, truncated = 0
+10.46.779.418 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52051
+[52051] 2.03.999.772 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151799646940
+[52051] 2.04.116.266 I slot launch_slot_: id  0 | task 4760 | processing task, is_child = 0
+10.47.235.779 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52051
+[52051] 2.07.288.799 I slot print_timing: id  0 | task 4760 | prompt processing, n_tokens =   2048, progress = 0.78, t =   3.17 s / 645.55 tokens per second
+[52051] 2.08.087.700 I slot print_timing: id  0 | task 4760 | prompt processing, n_tokens =   2560, progress = 0.87, t =   3.97 s / 644.61 tokens per second
+[52051] 2.08.690.208 I slot print_timing: id  0 | task 4760 | prompt processing, n_tokens =   2817, progress = 0.91, t =   4.57 s / 615.88 tokens per second
+[52051] 2.09.833.339 I slot print_timing: id  0 | task 4760 | prompt processing, n_tokens =   3325, progress = 1.00, t =   5.72 s / 581.59 tokens per second
+[52051] 2.13.363.897 I slot print_timing: id  0 | task 4760 | n_gen =    160, tg =  52.71 t/s, tg_3s =  53.04 t/s
+[52051] 2.14.559.052 I slot print_timing: id  0 | task 4760 | prompt eval time =    6231.17 ms /  3329 tokens (    1.87 ms per token,   534.25 tokens per second)
+[52051] 2.14.559.055 I slot print_timing: id  0 | task 4760 |        eval time =    4211.60 ms /   223 tokens (   18.97 ms per token,    52.71 tokens per second)
+[52051] 2.14.559.056 I slot print_timing: id  0 | task 4760 |       total time =   10442.77 ms /  3552 tokens
+[52051] 2.14.559.057 I slot print_timing: id  0 | task 4760 |    graphs reused =       4923
+[52051] 2.14.559.198 I slot      release: id  0 | task 4760 | stop processing: n_tokens = 6050, truncated = 0
+[52051] 2.14.559.207 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151810227543
+[52051] 2.14.632.689 I slot launch_slot_: id  0 | task 4762 | processing task, is_child = 0
+[52051] 2.17.854.125 I slot print_timing: id  0 | task 4762 | prompt processing, n_tokens =   1360, progress = 0.73, t =   3.22 s / 422.18 tokens per second
+[52051] 2.19.102.184 I slot print_timing: id  0 | task 4762 | prompt processing, n_tokens =   1868, progress = 1.00, t =   4.47 s / 417.95 tokens per second
+[52051] 2.22.612.964 I slot print_timing: id  0 | task 4762 | n_gen =    161, tg =  53.31 t/s, tg_3s =  53.65 t/s
+[52051] 2.25.614.606 I slot print_timing: id  0 | task 4762 | n_gen =    321, tg =  53.31 t/s, tg_3s =  53.30 t/s
+[52051] 2.28.616.792 I slot print_timing: id  0 | task 4762 | n_gen =    481, tg =  53.30 t/s, tg_3s =  53.29 t/s
+[52051] 2.31.618.579 I slot print_timing: id  0 | task 4762 | n_gen =    641, tg =  53.30 t/s, tg_3s =  53.30 t/s
+[52051] 2.34.624.175 I slot print_timing: id  0 | task 4762 | n_gen =    801, tg =  53.29 t/s, tg_3s =  53.23 t/s
+[52051] 2.37.627.340 I slot print_timing: id  0 | task 4762 | n_gen =    961, tg =  53.29 t/s, tg_3s =  53.28 t/s
+[52051] 2.40.632.319 I slot print_timing: id  0 | task 4762 | n_gen =   1121, tg =  53.28 t/s, tg_3s =  53.24 t/s
+[52051] 2.43.637.895 I slot print_timing: id  0 | task 4762 | n_gen =   1281, tg =  53.28 t/s, tg_3s =  53.23 t/s
+[52051] 2.46.645.297 I slot print_timing: id  0 | task 4762 | n_gen =   1441, tg =  53.27 t/s, tg_3s =  53.20 t/s
+[52051] 2.49.653.214 I slot print_timing: id  0 | task 4762 | n_gen =   1601, tg =  53.26 t/s, tg_3s =  53.19 t/s
+[52051] 2.52.668.502 I slot print_timing: id  0 | task 4762 | n_gen =   1761, tg =  53.24 t/s, tg_3s =  53.06 t/s
+[52051] 2.55.453.948 I slot print_timing: id  0 | task 4762 | prompt eval time =    4979.17 ms /  1872 tokens (    2.66 ms per token,   375.97 tokens per second)
+[52051] 2.55.453.951 I slot print_timing: id  0 | task 4762 |        eval time =   35842.08 ms /  1908 tokens (   18.80 ms per token,    53.21 tokens per second)
+[52051] 2.55.453.952 I slot print_timing: id  0 | task 4762 |       total time =   40821.24 ms /  3780 tokens
+[52051] 2.55.453.952 I slot print_timing: id  0 | task 4762 |    graphs reused =       6822
+[52051] 2.55.454.026 I slot      release: id  0 | task 4762 | stop processing: n_tokens = 3779, truncated = 0
+11.38.254.233 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52051
+[52051] 2.55.471.085 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151851122374
+[52051] 2.55.559.103 I slot launch_slot_: id  0 | task 6905 | processing task, is_child = 0
+[52051] 2.58.560.151 I slot print_timing: id  0 | task 6905 | prompt processing, n_tokens =   1724, progress = 0.59, t =   3.00 s / 574.47 tokens per second
+[52051] 2.59.325.402 I slot print_timing: id  0 | task 6905 | prompt processing, n_tokens =   2236, progress = 0.76, t =   3.77 s / 593.69 tokens per second
+[52051] 2.59.846.543 I slot print_timing: id  0 | task 6905 | prompt processing, n_tokens =   2411, progress = 0.82, t =   4.29 s / 562.34 tokens per second
+[52051] 3.00.933.659 I slot print_timing: id  0 | task 6905 | prompt processing, n_tokens =   2919, progress = 1.00, t =   5.37 s / 543.12 tokens per second
+[52051] 3.04.454.612 I slot print_timing: id  0 | task 6905 | n_gen =    161, tg =  53.23 t/s, tg_3s =  53.56 t/s
+[52051] 3.07.404.286 I slot print_timing: id  0 | task 6905 | prompt eval time =    5889.73 ms /  2923 tokens (    2.01 ms per token,   496.29 tokens per second)
+[52051] 3.07.404.289 I slot print_timing: id  0 | task 6905 |        eval time =    5955.44 ms /   318 tokens (   18.79 ms per token,    53.23 tokens per second)
+[52051] 3.07.404.290 I slot print_timing: id  0 | task 6905 |       total time =   11845.17 ms /  3241 tokens
+[52051] 3.07.404.290 I slot print_timing: id  0 | task 6905 |    graphs reused =       7137
+[52051] 3.07.404.384 I slot      release: id  0 | task 6905 | stop processing: n_tokens = 3240, truncated = 0
+11.50.199.480 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52051
+[52051] 3.07.419.231 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151863072730
+[52051] 3.07.517.285 I slot launch_slot_: id  0 | task 7231 | processing task, is_child = 0
+[52051] 3.11.044.714 I slot print_timing: id  0 | task 7231 | prompt processing, n_tokens =   1905, progress = 0.36, t =   3.53 s / 540.06 tokens per second
+[52051] 3.11.810.099 I slot print_timing: id  0 | task 7231 | prompt processing, n_tokens =   2417, progress = 0.46, t =   4.29 s / 563.04 tokens per second
+[52051] 3.12.589.589 I slot print_timing: id  0 | task 7231 | prompt processing, n_tokens =   2929, progress = 0.56, t =   5.07 s / 577.45 tokens per second
+[52051] 3.13.411.915 I slot print_timing: id  0 | task 7231 | prompt processing, n_tokens =   3441, progress = 0.65, t =   5.89 s / 583.75 tokens per second
+[52051] 3.14.236.302 I slot print_timing: id  0 | task 7231 | prompt processing, n_tokens =   3953, progress = 0.75, t =   6.72 s / 588.33 tokens per second
+[52051] 3.15.048.009 I slot print_timing: id  0 | task 7231 | prompt processing, n_tokens =   4465, progress = 0.85, t =   7.53 s / 592.91 tokens per second
+[52051] 3.15.702.874 I slot print_timing: id  0 | task 7231 | prompt processing, n_tokens =   4742, progress = 0.90, t =   8.19 s / 579.31 tokens per second
+[52051] 3.16.706.011 I slot print_timing: id  0 | task 7231 | prompt processing, n_tokens =   4938, progress = 0.94, t =   9.19 s / 537.40 tokens per second
+[52051] 3.17.716.427 I slot print_timing: id  0 | task 7231 | prompt processing, n_tokens =   5250, progress = 1.00, t =  10.20 s / 514.75 tokens per second
+[52051] 3.21.143.709 I slot print_timing: id  0 | task 7231 | n_gen =    159, tg =  52.65 t/s, tg_3s =  52.98 t/s
+[52051] 3.24.161.580 I slot print_timing: id  0 | task 7231 | n_gen =    318, tg =  52.67 t/s, tg_3s =  52.69 t/s
+[52051] 3.27.164.628 I slot print_timing: id  0 | task 7231 | n_gen =    476, tg =  52.65 t/s, tg_3s =  52.61 t/s
+[52051] 3.30.181.962 I slot print_timing: id  0 | task 7231 | n_gen =    635, tg =  52.66 t/s, tg_3s =  52.70 t/s
+[52051] 3.33.199.830 I slot print_timing: id  0 | task 7231 | n_gen =    794, tg =  52.67 t/s, tg_3s =  52.69 t/s
+[52051] 3.36.216.096 I slot print_timing: id  0 | task 7231 | n_gen =    953, tg =  52.67 t/s, tg_3s =  52.71 t/s
+[52051] 3.39.231.160 I slot print_timing: id  0 | task 7231 | n_gen =   1112, tg =  52.68 t/s, tg_3s =  52.74 t/s
+[52051] 3.42.247.666 I slot print_timing: id  0 | task 7231 | n_gen =   1271, tg =  52.69 t/s, tg_3s =  52.71 t/s
+[52051] 3.45.247.722 I slot print_timing: id  0 | task 7231 | n_gen =   1429, tg =  52.68 t/s, tg_3s =  52.67 t/s
+[52051] 3.48.265.094 I slot print_timing: id  0 | task 7231 | n_gen =   1588, tg =  52.68 t/s, tg_3s =  52.69 t/s
+[52051] 3.50.294.989 I slot print_timing: id  0 | task 7231 | prompt eval time =   10625.34 ms /  5254 tokens (    2.02 ms per token,   494.48 tokens per second)
+[52051] 3.50.294.992 I slot print_timing: id  0 | task 7231 |        eval time =   32152.35 ms /  1695 tokens (   18.98 ms per token,    52.69 tokens per second)
+[52051] 3.50.294.992 I slot print_timing: id  0 | task 7231 |       total time =   42777.69 ms /  6949 tokens
+[52051] 3.50.294.993 I slot print_timing: id  0 | task 7231 |    graphs reused =       8823
+[52051] 3.50.295.121 I slot      release: id  0 | task 7231 | stop processing: n_tokens = 6948, truncated = 0
+12.33.091.093 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52051
+[52051] 3.50.308.941 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151905963467
+12.33.151.767 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52051
+[52051] 3.50.533.582 I slot launch_slot_: id  0 | task 8940 | processing task, is_child = 0
+[52051] 3.53.570.058 I slot print_timing: id  0 | task 8940 | prompt processing, n_tokens =   1822, progress = 0.89, t =   3.04 s / 600.04 tokens per second
+[52051] 3.54.739.448 I slot print_timing: id  0 | task 8940 | prompt processing, n_tokens =   2330, progress = 1.00, t =   4.21 s / 553.99 tokens per second
+[52051] 3.58.274.597 I slot print_timing: id  0 | task 8940 | n_gen =    160, tg =  52.69 t/s, tg_3s =  53.02 t/s
+[52051] 3.58.843.524 I slot print_timing: id  0 | task 8940 | prompt eval time =    4723.33 ms /  2334 tokens (    2.02 ms per token,   494.14 tokens per second)
+[52051] 3.58.843.526 I slot print_timing: id  0 | task 8940 |        eval time =    3586.59 ms /   190 tokens (   18.98 ms per token,    52.70 tokens per second)
+[52051] 3.58.843.527 I slot print_timing: id  0 | task 8940 |       total time =    8309.92 ms /  2524 tokens
+[52051] 3.58.843.528 I slot print_timing: id  0 | task 8940 |    graphs reused =       9010
+[52051] 3.58.843.664 I slot      release: id  0 | task 8940 | stop processing: n_tokens = 4934, truncated = 0
+[52051] 3.58.843.680 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151914512014
+[52051] 3.58.951.340 I slot launch_slot_: id  0 | task 8941 | processing task, is_child = 0
+[52051] 4.01.995.611 I slot print_timing: id  0 | task 8941 | prompt processing, n_tokens =   1199, progress = 0.54, t =   3.04 s / 393.86 tokens per second
+[52051] 4.02.757.662 I slot print_timing: id  0 | task 8941 | prompt processing, n_tokens =   1691, progress = 0.77, t =   3.81 s / 444.26 tokens per second
+[52051] 4.04.009.396 I slot print_timing: id  0 | task 8941 | prompt processing, n_tokens =   2199, progress = 1.00, t =   5.06 s / 434.75 tokens per second
+[52051] 4.07.519.052 I slot print_timing: id  0 | task 8941 | n_gen =    161, tg =  53.29 t/s, tg_3s =  53.62 t/s
+[52051] 4.10.521.273 I slot print_timing: id  0 | task 8941 | n_gen =    321, tg =  53.29 t/s, tg_3s =  53.29 t/s
+[52051] 4.13.524.492 I slot print_timing: id  0 | task 8941 | n_gen =    481, tg =  53.29 t/s, tg_3s =  53.28 t/s
+[52051] 4.16.527.975 I slot print_timing: id  0 | task 8941 | n_gen =    641, tg =  53.28 t/s, tg_3s =  53.27 t/s
+[52051] 4.19.531.929 I slot print_timing: id  0 | task 8941 | n_gen =    801, tg =  53.28 t/s, tg_3s =  53.26 t/s
+[52051] 4.22.537.634 I slot print_timing: id  0 | task 8941 | n_gen =    961, tg =  53.27 t/s, tg_3s =  53.23 t/s
+[52051] 4.25.542.337 I slot print_timing: id  0 | task 8941 | n_gen =   1121, tg =  53.27 t/s, tg_3s =  53.25 t/s
+[52051] 4.28.550.259 I slot print_timing: id  0 | task 8941 | n_gen =   1281, tg =  53.26 t/s, tg_3s =  53.19 t/s
+[52051] 4.31.567.605 I slot print_timing: id  0 | task 8941 | n_gen =   1441, tg =  53.23 t/s, tg_3s =  53.03 t/s
+[52051] 4.34.580.848 I slot print_timing: id  0 | task 8941 | n_gen =   1600, tg =  53.19 t/s, tg_3s =  52.77 t/s
+[52051] 4.34.997.552 I slot print_timing: id  0 | task 8941 | prompt eval time =    5564.99 ms /  2203 tokens (    2.53 ms per token,   395.87 tokens per second)
+[52051] 4.34.997.555 I slot print_timing: id  0 | task 8941 |        eval time =   30481.21 ms /  1622 tokens (   18.80 ms per token,    53.18 tokens per second)
+[52051] 4.34.997.556 I slot print_timing: id  0 | task 8941 |       total time =   36046.19 ms /  3825 tokens
+[52051] 4.34.997.556 I slot print_timing: id  0 | task 8941 |    graphs reused =      10624
+[52051] 4.34.997.649 I slot      release: id  0 | task 8941 | stop processing: n_tokens = 3824, truncated = 0
+13.17.799.215 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52051
+[52051] 4.35.016.970 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151950665995
+[52051] 4.35.164.357 I slot launch_slot_: id  0 | task 10765 | processing task, is_child = 0
+[52051] 4.38.188.473 I slot print_timing: id  0 | task 10765 | prompt processing, n_tokens =   1724, progress = 0.55, t =   3.02 s / 570.09 tokens per second
+[52051] 4.38.959.808 I slot print_timing: id  0 | task 10765 | prompt processing, n_tokens =   2236, progress = 0.71, t =   3.80 s / 589.13 tokens per second
+[52051] 4.39.631.415 I slot print_timing: id  0 | task 10765 | prompt processing, n_tokens =   2620, progress = 0.84, t =   4.47 s / 586.52 tokens per second
+[52051] 4.40.828.801 I slot print_timing: id  0 | task 10765 | prompt processing, n_tokens =   3128, progress = 1.00, t =   5.66 s / 552.22 tokens per second
+[52051] 4.44.345.686 I slot print_timing: id  0 | task 10765 | n_gen =    161, tg =  53.22 t/s, tg_3s =  53.55 t/s
+[52051] 4.46.564.417 I slot print_timing: id  0 | task 10765 | prompt eval time =    6175.04 ms /  3132 tokens (    1.97 ms per token,   507.20 tokens per second)
+[52051] 4.46.564.420 I slot print_timing: id  0 | task 10765 |        eval time =    5225.00 ms /   279 tokens (   18.79 ms per token,    53.21 tokens per second)
+[52051] 4.46.564.420 I slot print_timing: id  0 | task 10765 |       total time =   11400.04 ms /  3411 tokens
+[52051] 4.46.564.421 I slot print_timing: id  0 | task 10765 |    graphs reused =      10900
+[52051] 4.46.564.529 I slot      release: id  0 | task 10765 | stop processing: n_tokens = 3410, truncated = 0
+13.29.360.075 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52051
+[52051] 4.46.581.950 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 151962232874
+[52051] 4.46.667.020 I slot launch_slot_: id  0 | task 11052 | processing task, is_child = 0
+[52051] 4.50.243.996 I slot print_timing: id  0 | task 11052 | prompt processing, n_tokens =   1905, progress = 0.35, t =   3.58 s / 532.58 tokens per second
+[52051] 4.51.018.588 I slot print_timing: id  0 | task 11052 | prompt processing, n_tokens =   2417, progress = 0.44, t =   4.35 s / 555.44 tokens per second
+[52051] 4.51.806.727 I slot print_timing: id  0 | task 11052 | prompt processing, n_tokens =   2929, progress = 0.54, t =   5.14 s / 569.88 tokens per second
+[52051] 4.52.611.988 I slot print_timing: id  0 | task 11052 | prompt processing, n_tokens =   3441, progress = 0.63, t =   5.94 s / 578.81 tokens per second
+[52051] 4.53.426.009 I slot print_timing: id  0 | task 11052 | prompt processing, n_tokens =   3953, progress = 0.73, t =   6.76 s / 584.85 tokens per second
+[52051] 4.54.248.613 I slot print_timing: id  0 | task 11052 | prompt processing, n_tokens =   4465, progress = 0.82, t =   7.58 s / 588.93 tokens per second
+[52051] 4.55.047.373 I slot print_timing: id  0 | task 11052 | prompt processing, n_tokens =   4919, progress = 0.90, t =   8.38 s / 586.97 tokens per second
+[52051] 4.55.627.581 I slot print_timing: id  0 | task 11052 | prompt processing, n_tokens =   4931, progress = 0.91, t =   8.96 s / 550.30 tokens per second
+[52051] 4.56.503.634 I slot print_timing: id  0 | task 11052 | prompt processing, n_tokens =   5439, progress = 1.00, t =   9.84 s / 552.94 tokens per second
+[52051] 5.00.047.339 I slot print_timing: id  0 | task 11052 | n_gen =    160, tg =  52.67 t/s, tg_3s =  53.00 t/s
+[52051] 5.03.065.730 I slot print_timing: id  0 | task 11052 | n_gen =    319, tg =  52.67 t/s, tg_3s =  52.68 t/s
+[52051] 5.06.082.591 I slot print_timing: id  0 | task 11052 | n_gen =    478, tg =  52.68 t/s, tg_3s =  52.70 t/s
+[52051] 5.09.100.146 I slot print_timing: id  0 | task 11052 | n_gen =    637, tg =  52.68 t/s, tg_3s =  52.69 t/s
+[52051] 5.12.102.307 I slot print_timing: id  0 | task 11052 | n_gen =    795, tg =  52.67 t/s, tg_3s =  52.63 t/s
+[52051] 5.15.118.346 I slot print_timing: id  0 | task 11052 | n_gen =    954, tg =  52.68 t/s, tg_3s =  52.72 t/s
+[52051] 5.18.134.166 I slot print_timing: id  0 | task 11052 | n_gen =   1113, tg =  52.69 t/s, tg_3s =  52.72 t/s
+[52051] 5.21.150.451 I slot print_timing: id  0 | task 11052 | n_gen =   1272, tg =  52.69 t/s, tg_3s =  52.71 t/s
+[52051] 5.24.167.990 I slot print_timing: id  0 | task 11052 | n_gen =   1431, tg =  52.69 t/s, tg_3s =  52.69 t/s
+[52051] 5.25.496.520 I slot print_timing: id  0 | task 11052 | prompt eval time =   10361.35 ms /  5443 tokens (    1.90 ms per token,   525.32 tokens per second)
+[52051] 5.25.496.523 I slot print_timing: id  0 | task 11052 |        eval time =   28468.13 ms /  1501 tokens (   18.98 ms per token,    52.69 tokens per second)
+[52051] 5.25.496.523 I slot print_timing: id  0 | task 11052 |       total time =   38829.48 ms /  6944 tokens
+[52051] 5.25.496.524 I slot print_timing: id  0 | task 11052 |    graphs reused =      12393
+[52051] 5.25.496.689 I slot      release: id  0 | task 11052 | stop processing: n_tokens = 6943, truncated = 0
+14.08.316.473 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52051
+[52051] 5.25.535.780 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 152001165034
+[52051] 5.25.656.491 I slot launch_slot_: id  0 | task 12567 | processing task, is_child = 0
+[52051] 5.28.661.615 I slot print_timing: id  0 | task 12567 | prompt processing, n_tokens =   1836, progress = 0.90, t =   3.01 s / 610.96 tokens per second
+[52051] 5.29.842.743 I slot print_timing: id  0 | task 12567 | prompt processing, n_tokens =   2344, progress = 1.00, t =   4.19 s / 559.93 tokens per second
+[52051] 5.33.355.888 I slot print_timing: id  0 | task 12567 | n_gen =    159, tg =  52.66 t/s, tg_3s =  53.00 t/s
+[52051] 5.33.962.290 I slot print_timing: id  0 | task 12567 | prompt eval time =    4699.22 ms /  2348 tokens (    2.00 ms per token,   499.66 tokens per second)
+[52051] 5.33.962.293 I slot print_timing: id  0 | task 12567 |        eval time =    3606.56 ms /   191 tokens (   18.98 ms per token,    52.68 tokens per second)
+[52051] 5.33.962.293 I slot print_timing: id  0 | task 12567 |       total time =    8305.78 ms /  2539 tokens
+[52051] 5.33.962.294 I slot print_timing: id  0 | task 12567 |    graphs reused =      12581
+[52051] 5.33.962.428 I slot      release: id  0 | task 12567 | stop processing: n_tokens = 5158, truncated = 0
+14.16.760.579 I srv  proxy_reques: proxying request to model qwen3.6-35b-a3b_ud-q6_k on port 52051
+[52051] 5.33.985.823 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 152009630773
+[52051] 5.34.103.955 I slot launch_slot_: id  0 | task 12764 | processing task, is_child = 0
+[52051] 5.37.226.596 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   2048, progress = 0.26, t =   3.12 s / 655.86 tokens per second
+[52051] 5.38.007.849 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   2560, progress = 0.31, t =   3.90 s / 655.76 tokens per second
+[52051] 5.38.804.028 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   3072, progress = 0.37, t =   4.70 s / 653.61 tokens per second
+[52051] 5.39.617.852 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   3584, progress = 0.43, t =   5.51 s / 650.00 tokens per second
+[52051] 5.40.433.262 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   4096, progress = 0.48, t =   6.33 s / 647.15 tokens per second
+[52051] 5.41.248.473 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   4608, progress = 0.54, t =   7.14 s / 644.97 tokens per second
+[52051] 5.42.095.721 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   5120, progress = 0.60, t =   7.99 s / 640.66 tokens per second
+[52051] 5.42.926.182 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   5632, progress = 0.65, t =   8.82 s / 638.39 tokens per second
+[52051] 5.43.761.996 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   6144, progress = 0.71, t =   9.66 s / 636.16 tokens per second
+[52051] 5.44.490.100 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   6481, progress = 0.75, t =  10.39 s / 624.01 tokens per second
+[52051] 5.45.749.676 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   6993, progress = 0.80, t =  11.65 s / 600.48 tokens per second
+[52051] 5.46.596.246 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   7505, progress = 0.86, t =  12.49 s / 600.77 tokens per second
+[52051] 5.47.445.713 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   8017, progress = 0.92, t =  13.34 s / 600.90 tokens per second
+[52051] 5.48.085.487 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   8273, progress = 0.94, t =  13.98 s / 591.71 tokens per second
+[52051] 5.49.326.218 I slot print_timing: id  0 | task 12764 | prompt processing, n_tokens =   8781, progress = 1.00, t =  15.22 s / 576.85 tokens per second
+[52051] 5.52.883.209 I slot print_timing: id  0 | task 12764 | n_gen =    158, tg =  52.24 t/s, tg_3s =  52.57 t/s
+[52051] 5.55.887.680 I slot print_timing: id  0 | task 12764 | n_gen =    315, tg =  52.25 t/s, tg_3s =  52.26 t/s
+[52051] 5.58.891.242 I slot print_timing: id  0 | task 12764 | n_gen =    472, tg =  52.26 t/s, tg_3s =  52.27 t/s
+[52051] 6.01.892.593 I slot print_timing: id  0 | task 12764 | n_gen =    629, tg =  52.27 t/s, tg_3s =  52.31 t/s
+[52051] 6.04.895.871 I slot print_timing: id  0 | task 12764 | n_gen =    786, tg =  52.27 t/s, tg_3s =  52.28 t/s
+[52051] 6.07.899.024 I slot print_timing: id  0 | task 12764 | n_gen =    943, tg =  52.27 t/s, tg_3s =  52.28 t/s
+[52051] 6.10.904.799 I slot print_timing: id  0 | task 12764 | n_gen =   1100, tg =  52.27 t/s, tg_3s =  52.23 t/s
+[52051] 6.13.907.532 I slot print_timing: id  0 | task 12764 | n_gen =   1257, tg =  52.27 t/s, tg_3s =  52.29 t/s
+[52051] 6.16.910.240 I slot print_timing: id  0 | task 12764 | n_gen =   1414, tg =  52.27 t/s, tg_3s =  52.29 t/s
+[52051] 6.19.914.894 I slot print_timing: id  0 | task 12764 | n_gen =   1571, tg =  52.27 t/s, tg_3s =  52.25 t/s
+[52051] 6.22.926.268 I slot print_timing: id  0 | task 12764 | n_gen =   1728, tg =  52.26 t/s, tg_3s =  52.14 t/s
+[52051] 6.25.931.631 I slot print_timing: id  0 | task 12764 | n_gen =   1884, tg =  52.23 t/s, tg_3s =  51.91 t/s
+[52051] 6.28.939.215 I slot print_timing: id  0 | task 12764 | n_gen =   2040, tg =  52.20 t/s, tg_3s =  51.87 t/s
+[52051] 6.31.949.380 I slot print_timing: id  0 | task 12764 | n_gen =   2196, tg =  52.17 t/s, tg_3s =  51.82 t/s
+[52051] 6.34.961.778 I slot print_timing: id  0 | task 12764 | n_gen =   2352, tg =  52.15 t/s, tg_3s =  51.79 t/s
+[52051] 6.37.970.289 I slot print_timing: id  0 | task 12764 | n_gen =   2508, tg =  52.13 t/s, tg_3s =  51.85 t/s
+15.22.268.913 I srv    operator(): operator(): cleaning up before exit...
+15.22.268.970 I srv    unload_all: stopping model instance name=qwen3.6-35b-a3b_ud-q6_k
+[52051] 6.39.481.479 I srv    operator(): exit command received, exiting...
+[52051] 6.39.496.320 I srv    operator(): operator(): cleaning up before exit...
+15.32.278.857 W srv           run: force-killing model instance name=qwen3.6-35b-a3b_ud-q6_k after timeout
+15.32.362.174 E srv    operator(): http client error: Failed to read connection
+15.32.418.428 I srv           run: instance name=qwen3.6-35b-a3b_ud-q6_k exited with status 1

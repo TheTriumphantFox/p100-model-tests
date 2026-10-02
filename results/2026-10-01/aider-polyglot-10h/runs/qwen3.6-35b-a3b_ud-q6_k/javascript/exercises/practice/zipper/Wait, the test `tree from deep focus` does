@@ -1,0 +1,1 @@
+expect(zipper.left().right().toTree()).toEqual(t1);

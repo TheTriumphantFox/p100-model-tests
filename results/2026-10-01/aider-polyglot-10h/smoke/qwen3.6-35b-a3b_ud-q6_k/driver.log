@@ -1,0 +1,4 @@
+[2026-10-01 18:05:21] model=openai/qwen3.6-35b-a3b_ud-q6_k range=[2,4) deadline=18:35:19 est=60s/exercise
+[2026-10-01 18:07:18] #  2 fail [False, False] go/exercises/practice/pov 117s tok=3603
+[2026-10-01 18:09:53] #  3 fail [False, False] python/exercises/practice/sgf-parsing 155s tok=4916
+[2026-10-01 18:09:53] done

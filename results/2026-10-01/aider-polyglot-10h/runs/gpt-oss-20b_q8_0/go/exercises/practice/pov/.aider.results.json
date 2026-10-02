@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/gpt-oss-20b_q8_0/go/exercises/practice/pov",
+    "testcase": "pov",
+    "model": "openai/gpt-oss-20b_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 78.29985475540161,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 1,
+    "num_user_asks": 1,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 16380,
+    "completion_tokens": 2845,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "a9828ccfeaf14a84d5ac1620c5f61ef628c2fa4b"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "c672f51b676634748fe5606b83defd54a68596b4"
+        ]
+    ]
+}

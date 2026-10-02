@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.8-27b-unsloth_q8_0/go/exercises/practice/protein-translation",
+    "testcase": "protein-translation",
+    "model": "openai/qwen3.8-27b-unsloth_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 235.422847032547,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 3715,
+    "completion_tokens": 1730,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "b470c70a0aea0524b232c1216895495154fd4b94"
+        ],
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "f6229a85cae45f0e5f5a089b836ea600e938319c"
+        ]
+    ]
+}

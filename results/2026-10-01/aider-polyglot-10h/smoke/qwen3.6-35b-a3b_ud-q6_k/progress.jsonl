@@ -1,0 +1,2 @@
+{"idx": 2, "exercise": "go/exercises/practice/pov", "wall_s": 117.1, "outcomes": [false, false], "pass": false, "exception": false, "completion_tokens": 3603, "prompt_tokens": 7126, "malformed": 0, "error_outputs": 0, "test_timeouts": 0}
+{"idx": 3, "exercise": "python/exercises/practice/sgf-parsing", "wall_s": 154.6, "outcomes": [false, false], "pass": false, "exception": false, "completion_tokens": 4916, "prompt_tokens": 16702, "malformed": 0, "error_outputs": 0, "test_timeouts": 0}

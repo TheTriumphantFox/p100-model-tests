@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.6-27b-abliterated_q5_k_m/rust/exercises/practice/say",
+    "testcase": "say",
+    "model": "openai/qwen3.6-27b-abliterated_q5_k_m",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        true
+    ],
+    "cost": 0.0,
+    "duration": 159.69807958602905,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 4087,
+    "completion_tokens": 1162,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "bb0cdae40aa27171762d5a7139c2cc317815b678",
+            "c208ff31732f811ae49b4f0f112400799a44c85e"
+        ],
+        [
+            "bb0cdae40aa27171762d5a7139c2cc317815b678",
+            "aba352595bc42782ca0743bae0c8d9db99803585"
+        ]
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.8-27b-unsloth_q8_0/go/exercises/practice/ledger",
+    "testcase": "ledger",
+    "model": "openai/qwen3.8-27b-unsloth_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 511.9102692604065,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 8258,
+    "completion_tokens": 4699,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "48ba982310a9c7a81cdbb346e0e2014c5111566e"
+        ],
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "df4709d8a709ca4176b03c5a9c9fb931a18c360c"
+        ]
+    ]
+}

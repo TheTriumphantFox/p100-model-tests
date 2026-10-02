@@ -1,0 +1,55 @@
+{
+    "testdir": "/run/runs/gpt-oss-20b_q8_0/cpp/exercises/practice/diamond",
+    "testcase": "diamond",
+    "model": "openai/gpt-oss-20b_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 123.4812524318695,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 5,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 25584,
+    "completion_tokens": 2981,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "2514a44be89472e4b7b873212ab1fa55c0e6ad8a"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "29ea3bfa27df103c84f05ba486064ae86b95bce1"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "1fd56d7f00eedc1c222d6587680e6fec71a204c1"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "7a8687bc93cdc49a2a50380723654741867eed2b"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "489842ad55ed9bc0d213b077542c14318b530ffb"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "f0023d925ae149865fb21e23e7c8bfe27854ce09"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "8fe432e8fda4513df26b5b31a72a651c63738ae7"
+        ]
+    ]
+}

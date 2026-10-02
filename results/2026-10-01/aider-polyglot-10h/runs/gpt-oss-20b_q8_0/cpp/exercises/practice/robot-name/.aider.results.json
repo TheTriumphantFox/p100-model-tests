@@ -1,0 +1,51 @@
+{
+    "testdir": "/run/runs/gpt-oss-20b_q8_0/cpp/exercises/practice/robot-name",
+    "testcase": "robot-name",
+    "model": "openai/gpt-oss-20b_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 207.35154819488525,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 5,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 23525,
+    "completion_tokens": 7925,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "e745bcfa943038e662775b147e223304b3e4dc1e"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "05a77a19d8adf96deeec84d3c153bb89c1bc585f"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "05a77a19d8adf96deeec84d3c153bb89c1bc585f"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "05a77a19d8adf96deeec84d3c153bb89c1bc585f"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "04c2fcd45a37c3372c9adac2de60f1098fd2be02"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "454ed57686296e1c81753e390d92147a8f6d4549"
+        ]
+    ]
+}

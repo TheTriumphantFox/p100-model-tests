@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/devstral-patched_q8_0/javascript/exercises/practice/two-bucket",
+    "testcase": "two-bucket",
+    "model": "openai/devstral-patched_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 231.60769987106323,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 6431,
+    "completion_tokens": 1957,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "3d63eeb8c68b14dbf8b3249b6bb8dc501a95298e"
+        ],
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "94753c2f8b03badff966c4f29d9c63e826ab9f52"
+        ]
+    ]
+}

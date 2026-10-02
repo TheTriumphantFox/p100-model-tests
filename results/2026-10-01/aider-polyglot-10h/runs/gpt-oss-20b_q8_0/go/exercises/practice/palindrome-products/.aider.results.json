@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/gpt-oss-20b_q8_0/go/exercises/practice/palindrome-products",
+    "testcase": "palindrome-products",
+    "model": "openai/gpt-oss-20b_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 31.99352502822876,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 3387,
+    "completion_tokens": 1004,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "9310aadb2d31a92af9f487ee2c786a34cd7008f7"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "1fb9539b91bda55b30f1047959ec8549350c9208"
+        ]
+    ]
+}

@@ -1,0 +1,4 @@
+{"idx": 0, "exercise": "javascript/exercises/practice/zipper", "wall_s": 50.2, "outcomes": [false, false], "pass": false, "exception": false, "completion_tokens": 2110, "prompt_tokens": 5485, "malformed": 0, "error_outputs": 0, "test_timeouts": 0}
+{"idx": 1, "exercise": "java/exercises/practice/rest-api", "wall_s": 73.1, "outcomes": [false, false], "pass": false, "exception": false, "completion_tokens": 3162, "prompt_tokens": 7652, "malformed": 0, "error_outputs": 0, "test_timeouts": 0}
+{"idx": 2, "exercise": "go/exercises/practice/pov", "wall_s": 113.2, "outcomes": [false, false], "pass": false, "exception": false, "completion_tokens": 2633, "prompt_tokens": 16365, "malformed": 0, "error_outputs": 1, "test_timeouts": 0}
+{"idx": 3, "exercise": "python/exercises/practice/sgf-parsing", "wall_s": 59.5, "outcomes": [false, false], "pass": false, "exception": false, "completion_tokens": 2123, "prompt_tokens": 9755, "malformed": 0, "error_outputs": 0, "test_timeouts": 0}

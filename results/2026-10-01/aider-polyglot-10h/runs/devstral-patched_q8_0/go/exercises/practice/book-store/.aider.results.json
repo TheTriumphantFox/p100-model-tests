@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/devstral-patched_q8_0/go/exercises/practice/book-store",
+    "testcase": "book-store",
+    "model": "openai/devstral-patched_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 293.24092507362366,
+    "test_timeouts": 1,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 4706,
+    "completion_tokens": 3512,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "9599959a8c132a5c9eb384275265b342093ed052"
+        ],
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "f305586e4644848ad621b0fc236ceade3d958c07"
+        ]
+    ]
+}

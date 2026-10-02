@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/devstral-patched_q8_0/python/exercises/practice/dominoes",
+    "testcase": "dominoes",
+    "model": "openai/devstral-patched_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 84.5945770740509,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 7083,
+    "completion_tokens": 542,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "b54e0a67d8c9d54fa859839eb5475f7d1ed70755"
+        ],
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "03ab2a20060207e8e1d62ff380d2a8d4c2178efc"
+        ]
+    ]
+}

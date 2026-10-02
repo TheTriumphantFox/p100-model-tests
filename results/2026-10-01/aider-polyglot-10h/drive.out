@@ -1,0 +1,71 @@
+[2026-10-01 14:32:23] === start: budget 36000s, hard end 2026-10-02 00:32:23, K=6
+[2026-10-01 14:32:25] router started (pid 516960)
+[2026-10-01 14:32:31] gpt-oss-20b_q8_0: preflight OK (5s incl. load)
+[2026-10-01 14:39:22] gpt-oss-20b_q8_0: rc=0, 6 exercises scored
+[2026-10-01 14:39:22] gpt-oss-20b_q8_0: phase A mean 68s/exercise
+[2026-10-01 14:39:32] qwen3.6-35b-a3b_ud-q6_k: preflight OK (9s incl. load)
+[2026-10-01 14:53:15] qwen3.6-35b-a3b_ud-q6_k: rc=0, 6 exercises scored
+[2026-10-01 14:53:15] qwen3.6-35b-a3b_ud-q6_k: phase A mean 135s/exercise
+[2026-10-01 14:53:36] devstral-patched_q8_0: preflight OK (21s incl. load)
+[2026-10-01 15:16:01] devstral-patched_q8_0: rc=0, 6 exercises scored
+[2026-10-01 15:16:01] devstral-patched_q8_0: phase A mean 223s/exercise
+[2026-10-01 15:16:23] qwen3.6-27b-abliterated_q5_k_m: preflight OK (21s incl. load)
+[2026-10-01 16:03:24] qwen3.6-27b-abliterated_q5_k_m: rc=0, 6 exercises scored
+[2026-10-01 16:03:24] qwen3.6-27b-abliterated_q5_k_m: phase A mean 460s/exercise
+[2026-10-01 16:06:11] qwen3.8-27b-unsloth_q8_0: preflight OK (167s incl. load)
+[2026-10-01 16:55:37] qwen3.8-27b-unsloth_q8_0: rc=0, 6 exercises scored
+[2026-10-01 16:55:37] qwen3.8-27b-unsloth_q8_0: phase A mean 479s/exercise
+[2026-10-01 16:55:37] === phase B plan: 5 models, 26883s usable, sum of means 1365s -> +19 each, target end index 25
+[2026-10-01 16:55:37] gpt-oss-20b_q8_0: phase B [6,25) deadline 17:38:02
+[2026-10-01 16:55:48] gpt-oss-20b_q8_0: preflight OK (10s incl. load)
+[2026-10-01 17:13:47] gpt-oss-20b_q8_0: rc=0, 25 exercises scored
+[2026-10-01 17:13:47] qwen3.6-35b-a3b_ud-q6_k: phase B [6,25) deadline 18:20:56
+[2026-10-01 17:14:07] qwen3.6-35b-a3b_ud-q6_k: preflight OK (20s incl. load)
+[2026-10-01 17:37:43] qwen3.6-35b-a3b_ud-q6_k: rc=0, 25 exercises scored
+[2026-10-01 17:37:43] devstral-patched_q8_0: phase B [6,25) deadline 19:31:54
+[2026-10-01 17:38:05] devstral-patched_q8_0: preflight OK (22s incl. load)
+[2026-10-01 18:32:47] devstral-patched_q8_0: rc=0, 25 exercises scored
+[2026-10-01 18:32:47] qwen3.6-27b-abliterated_q5_k_m: phase B [6,25) deadline 21:57:55
+[2026-10-01 18:33:08] qwen3.6-27b-abliterated_q5_k_m: preflight OK (20s incl. load)
+[2026-10-01 21:30:00] === start: budget 36000s, hard end 2026-10-02 02:28:10, K=6
+[2026-10-01 21:30:02] router started (pid 1449332)
+[2026-10-01 21:30:02] === RESUME: target end index 25, new hard end 2026-10-02 02:28:10
+[2026-10-01 21:30:03] qwen3.6-27b-abliterated_q5_k_m: resume at 22/25, mean 270s, deadline 23:53:42
+[2026-10-01 21:30:15] qwen3.6-27b-abliterated_q5_k_m: preflight OK (12s incl. load)
+[2026-10-01 21:48:39] qwen3.6-27b-abliterated_q5_k_m: rc=0, 25 exercises scored
+[2026-10-01 21:48:39] qwen3.8-27b-unsloth_q8_0: resume at 6/25, mean 479s, deadline 02:28:10
+[2026-10-01 21:51:25] qwen3.8-27b-unsloth_q8_0: preflight OK (165s incl. load)
+[2026-10-02 00:09:01] qwen3.8-27b-unsloth_q8_0: rc=0, 25 exercises scored
+[2026-10-02 00:09:04] router stopped (was 1449332); GPU 35 MiB
+[2026-10-02 00:09:04] === finished at 2026-10-02 00:09:04 (resumed run)
+[2026-10-02 00:09:04]   gpt-oss-20b_q8_0: 25 exercises
+[2026-10-02 00:09:04]   qwen3.6-35b-a3b_ud-q6_k: 25 exercises
+[2026-10-02 00:09:04]   devstral-patched_q8_0: 25 exercises
+[2026-10-02 00:09:04]   qwen3.6-27b-abliterated_q5_k_m: 25 exercises
+[2026-10-02 00:09:04]   qwen3.8-27b-unsloth_q8_0: 25 exercises
+[2026-10-02 00:10:11] === start: budget 36000s, hard end 2026-10-02 06:00:00, K=6
+[2026-10-02 00:10:13] router started (pid 1843094)
+[2026-10-02 00:10:13] === RESUME: target end index 50, new hard end 2026-10-02 06:00:00
+[2026-10-02 00:10:13] qwen3.6-35b-a3b_ud-q6_k: resume at 25/50, mean 88s, deadline 00:57:03
+[2026-10-02 00:10:35] qwen3.6-35b-a3b_ud-q6_k: preflight OK (21s incl. load)
+[2026-10-02 00:42:53] qwen3.6-35b-a3b_ud-q6_k: rc=0, 50 exercises scored
+[2026-10-02 00:42:54] qwen3.6-27b-abliterated_q5_k_m: resume at 25/50, mean 278s, deadline 02:53:05
+[2026-10-02 00:43:15] qwen3.6-27b-abliterated_q5_k_m: preflight OK (20s incl. load)
+[2026-10-02 02:47:36] qwen3.6-27b-abliterated_q5_k_m: rc=0, 49 exercises scored
+[2026-10-02 02:47:36] qwen3.8-27b-unsloth_q8_0: resume at 25/50, mean 442s, deadline 06:00:00
+[2026-10-02 02:50:24] qwen3.8-27b-unsloth_q8_0: preflight OK (167s incl. load)
+[2026-10-02 05:41:14] qwen3.8-27b-unsloth_q8_0: rc=0, 50 exercises scored
+[2026-10-02 05:41:16] router stopped (was 1843094); GPU 35 MiB
+[2026-10-02 05:41:16] === finished at 2026-10-02 05:41:16 (resumed run, extension to 50)
+[2026-10-02 05:41:16]   qwen3.6-35b-a3b_ud-q6_k: 50 exercises
+[2026-10-02 05:41:16]   qwen3.6-27b-abliterated_q5_k_m: 49 exercises
+[2026-10-02 05:41:16]   qwen3.8-27b-unsloth_q8_0: 50 exercises
+[2026-10-02 05:42:19] === start: budget 36000s, hard end 2026-10-02 06:00:00, K=6
+[2026-10-02 05:42:21] router started (pid 2662637)
+[2026-10-02 05:42:21] === RESUME: target end index 50, new hard end 2026-10-02 06:00:00
+[2026-10-02 05:42:21] qwen3.6-27b-abliterated_q5_k_m: resume at 49/50, mean 293s, deadline 06:00:00
+[2026-10-02 05:42:39] qwen3.6-27b-abliterated_q5_k_m: preflight OK (17s incl. load)
+[2026-10-02 05:48:05] qwen3.6-27b-abliterated_q5_k_m: rc=0, 50 exercises scored
+[2026-10-02 05:48:07] router stopped (was 2662637); GPU 35 MiB
+[2026-10-02 05:48:07] === finished at 2026-10-02 05:48:07 (resumed run, extension to 50)
+[2026-10-02 05:48:07]   qwen3.6-27b-abliterated_q5_k_m: 50 exercises

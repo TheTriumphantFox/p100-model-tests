@@ -1,0 +1,43 @@
+{
+    "testdir": "/run/runs/devstral-patched_q8_0/cpp/exercises/practice/robot-name",
+    "testcase": "robot-name",
+    "model": "openai/devstral-patched_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 205.67079877853394,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 2,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 11001,
+    "completion_tokens": 1631,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "c1b36106484da454bda651698a28030d8a21bb69"
+        ],
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "6597397fa5e49609146e32cb6b68dae754e55a18"
+        ],
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "6a39e9bd37f81b7b7f98d3727ddea2e400fee79e"
+        ],
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "1624f9dcf4dd8888ad657831d46f11b2fefbf585"
+        ]
+    ]
+}

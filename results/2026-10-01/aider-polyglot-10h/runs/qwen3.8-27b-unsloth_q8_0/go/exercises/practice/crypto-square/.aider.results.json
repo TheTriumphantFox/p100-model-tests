@@ -1,0 +1,30 @@
+{
+    "testdir": "/run/runs/qwen3.8-27b-unsloth_q8_0/go/exercises/practice/crypto-square",
+    "testcase": "crypto-square",
+    "model": "openai/qwen3.8-27b-unsloth_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        true
+    ],
+    "cost": 0.0,
+    "duration": 134.80949783325195,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 1328,
+    "completion_tokens": 879,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "e548aa6b12f7373d2710a8270b8e1a91000a4ca3"
+        ]
+    ]
+}

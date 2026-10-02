@@ -1,0 +1,1 @@
+const palindromes = Palindromes.generate({ maxFactor: 1, minFactor: 2 });

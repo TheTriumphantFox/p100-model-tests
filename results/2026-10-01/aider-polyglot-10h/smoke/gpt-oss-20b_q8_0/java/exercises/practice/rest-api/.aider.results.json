@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/smoke/gpt-oss-20b_q8_0/java/exercises/practice/rest-api",
+    "testcase": "rest-api",
+    "model": "openai/gpt-oss-20b_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 69.02273058891296,
+    "test_timeouts": 0,
+    "commit_hash": "unknown",
+    "num_error_outputs": 0,
+    "num_user_asks": 1,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 6401,
+    "completion_tokens": 3091,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "630044e120c02a302e2e9be89934395eec671be3"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "053c147c7e38db9e6d60b356f8c62bbc28e22792"
+        ]
+    ]
+}

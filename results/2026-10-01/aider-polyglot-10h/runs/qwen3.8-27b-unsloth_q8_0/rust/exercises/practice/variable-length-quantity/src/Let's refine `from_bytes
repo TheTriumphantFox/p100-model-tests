@@ -1,0 +1,20 @@
+pub fn from_bytes(bytes: &[u8]) -> Result<Vec<u32>, Error> {
+    let mut numbers = Vec::new();
+    let mut current = 0u32;
+    
+    for &byte in bytes {
+        current = (current << 7) | (byte & 0x7f) as u32;
+        if byte & 0x80 == 0 {
+            numbers.push(current);
+            current = 0;
+        }
+    }
+    
+    // If the last byte had the continuation bit set, the number is incomplete.
+    // This also handles the case where the stream ends in the middle of a number.
+    if !bytes.is_empty() && bytes[bytes.len() - 1] & 0x80 != 0 {
+        return Err(Error::IncompleteNumber);
+    }
+    
+    Ok(numbers)
+}

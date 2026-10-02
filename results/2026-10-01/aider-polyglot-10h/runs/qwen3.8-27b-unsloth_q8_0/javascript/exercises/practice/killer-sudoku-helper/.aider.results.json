@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.8-27b-unsloth_q8_0/javascript/exercises/practice/killer-sudoku-helper",
+    "testcase": "killer-sudoku-helper",
+    "model": "openai/qwen3.8-27b-unsloth_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 181.62934398651123,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 7443,
+    "completion_tokens": 1183,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "35876d7ffdb34f4eabfca8324434fe642ac4ba59"
+        ],
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "a6ede8b636c9b5ac08c71b19f2dbaba1c5e0d61d"
+        ]
+    ]
+}

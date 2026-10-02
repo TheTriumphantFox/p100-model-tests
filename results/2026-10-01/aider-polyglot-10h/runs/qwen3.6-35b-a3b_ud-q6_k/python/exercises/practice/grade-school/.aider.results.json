@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.6-35b-a3b_ud-q6_k/python/exercises/practice/grade-school",
+    "testcase": "grade-school",
+    "model": "openai/qwen3.6-35b-a3b_ud-q6_k",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        true
+    ],
+    "cost": 0.0,
+    "duration": 28.09830117225647,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 5676,
+    "completion_tokens": 773,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "98854cd5665f907f54f50b88f85c83e142521076"
+        ],
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "3b93536da674c431afdf42802b3c8f014785a938"
+        ]
+    ]
+}

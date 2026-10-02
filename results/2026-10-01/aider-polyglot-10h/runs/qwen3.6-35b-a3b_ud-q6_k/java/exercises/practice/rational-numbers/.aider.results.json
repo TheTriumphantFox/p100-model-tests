@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.6-35b-a3b_ud-q6_k/java/exercises/practice/rational-numbers",
+    "testcase": "rational-numbers",
+    "model": "openai/qwen3.6-35b-a3b_ud-q6_k",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 66.51928496360779,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 6973,
+    "completion_tokens": 2365,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "090bb4270ff90e1db042146f21d047fbcf9d3b42"
+        ],
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "d18944d884d9c2281cc5dba117f77db38dfda7c1"
+        ]
+    ]
+}

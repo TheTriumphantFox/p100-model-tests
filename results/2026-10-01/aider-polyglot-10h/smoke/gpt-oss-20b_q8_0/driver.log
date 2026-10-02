@@ -1,0 +1,4 @@
+[2026-10-01 18:03:10] model=openai/gpt-oss-20b_q8_0 range=[0,2) deadline=18:33:08 est=60s/exercise
+[2026-10-01 18:03:40] #  0 PASS [True] javascript/exercises/practice/zipper 30s tok=960
+[2026-10-01 18:04:53] #  1 fail [False, False] java/exercises/practice/rest-api 73s tok=3091
+[2026-10-01 18:04:53] done

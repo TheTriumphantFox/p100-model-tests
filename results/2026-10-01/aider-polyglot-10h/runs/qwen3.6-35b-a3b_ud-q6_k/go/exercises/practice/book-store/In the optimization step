@@ -1,0 +1,18 @@
+	replacements := count5
+	if count3 < count5 {
+		replacements = count3
+	}
+	
+	// Adjust groups
+	finalGroups := make([]int, 0)
+	for _, g := range groups {
+		if g == 5 && replacements > 0 {
+			finalGroups = append(finalGroups, 4)
+			replacements--
+		} else if g == 3 && replacements > 0 {
+			finalGroups = append(finalGroups, 4)
+			replacements--
+		} else {
+			finalGroups = append(finalGroups, g)
+		}
+	}

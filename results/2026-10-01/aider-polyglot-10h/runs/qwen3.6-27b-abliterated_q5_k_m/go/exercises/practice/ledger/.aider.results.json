@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.6-27b-abliterated_q5_k_m/go/exercises/practice/ledger",
+    "testcase": "ledger",
+    "model": "openai/qwen3.6-27b-abliterated_q5_k_m",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        true
+    ],
+    "cost": 0.0,
+    "duration": 265.6929349899292,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 7175,
+    "completion_tokens": 2131,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "bb0cdae40aa27171762d5a7139c2cc317815b678",
+            "e29eaf1e07d6463af464438ed2d38673d563cd51"
+        ],
+        [
+            "bb0cdae40aa27171762d5a7139c2cc317815b678",
+            "16b59f6e46c184a93866bc0be11271a7521695cc"
+        ]
+    ]
+}

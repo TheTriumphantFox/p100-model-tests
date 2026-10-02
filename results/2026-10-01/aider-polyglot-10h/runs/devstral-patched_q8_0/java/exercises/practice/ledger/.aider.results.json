@@ -1,0 +1,30 @@
+{
+    "testdir": "/run/runs/devstral-patched_q8_0/java/exercises/practice/ledger",
+    "testcase": "ledger",
+    "model": "openai/devstral-patched_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        true
+    ],
+    "cost": 0.0,
+    "duration": 269.78717017173767,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 2048,
+    "completion_tokens": 3003,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "a7127e79e154b35fa800700b67c77b7291c7a12e"
+        ]
+    ]
+}

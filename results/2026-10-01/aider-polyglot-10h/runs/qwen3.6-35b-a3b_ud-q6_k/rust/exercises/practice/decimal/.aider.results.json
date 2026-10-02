@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.6-35b-a3b_ud-q6_k/rust/exercises/practice/decimal",
+    "testcase": "decimal",
+    "model": "openai/qwen3.6-35b-a3b_ud-q6_k",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 131.9054036140442,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 8967,
+    "completion_tokens": 5058,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "ae4f49816066fe7b4748dfc00b6274b28087f9b2"
+        ],
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "86318cac0e690d29c133e53fc70dfe37f5443f63"
+        ]
+    ]
+}

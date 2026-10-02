@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.8-27b-unsloth_q8_0/java/exercises/practice/mazy-mice",
+    "testcase": "mazy-mice",
+    "model": "openai/qwen3.8-27b-unsloth_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        true
+    ],
+    "cost": 0.0,
+    "duration": 724.2372875213623,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 1,
+    "num_user_asks": 1,
+    "num_exhausted_context_windows": 1,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 7173,
+    "completion_tokens": 2626,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "4081d90ff845c2d740059a48b3cf90b64f83af6f"
+        ],
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "b6719bee23e2e55e6290693e6a16c8b8f82ba07c"
+        ]
+    ]
+}

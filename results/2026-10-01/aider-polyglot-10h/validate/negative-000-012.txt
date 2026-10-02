@@ -1,0 +1,12 @@
+NEG   0 stub FAILS (good)   0.5s javascript/exercises/practice/zipper :: Time:        0.302 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./zipper.js|./zipper.spec.js.
+NEG   1 stub FAILS (good)   3.2s java/exercises/practice/rest-api :: BUILD FAILED in 2s | 3 actionable tasks: 3 executed
+NEG   2 stub FAILS (good)   1.9s go/exercises/practice/pov :: FAIL	pov	0.003s | FAIL
+NEG   3 stub FAILS (good)   0.3s python/exercises/practice/sgf-parsing :: FAILED sgf_parsing_test.py::SgfParsingTest::test_within_property_values_whitespace_characters_such_as_tab_are_converted_to_spaces | ============================
+NEG   4 stub FAILS (good)   0.1s rust/exercises/practice/wordy ::  | error: test failed, to rerun pass `--test wordy`
+NEG   5 stub FAILS (good)   0.4s cpp/exercises/practice/queen-attack :: make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/queen-attack.dir/all] Error 2 | make: *** [Makefile:91: all] Error 2
+NEG   6 stub FAILS (good)   0.5s javascript/exercises/practice/triangle :: Time:        0.292 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./triangle.js|./triangle.spec.
+NEG   7 stub FAILS (good)   0.8s java/exercises/practice/bowling :: BUILD FAILED in 782ms | 3 actionable tasks: 3 executed
+NEG   8 stub FAILS (good)   0.0s go/exercises/practice/palindrome-products :: FAIL	palindrome [build failed] | FAIL
+NEG   9 stub FAILS (good)   0.2s python/exercises/practice/dominoes :: FAILED dominoes_test.py::DominoesTest::test_three_elements - AssertionError: ... | ========================= 7 failed, 6 passed  ==========================
+NEG  10 stub FAILS (good)   0.1s rust/exercises/practice/doubly-linked-list ::  | error: test failed, to rerun pass `--test doubly-linked-list`
+NEG  11 stub FAILS (good)   0.5s javascript/exercises/practice/transpose :: Time:        0.281 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./transpose.js|./transpose.spe

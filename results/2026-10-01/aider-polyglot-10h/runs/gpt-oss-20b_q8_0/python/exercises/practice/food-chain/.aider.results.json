@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/gpt-oss-20b_q8_0/python/exercises/practice/food-chain",
+    "testcase": "food-chain",
+    "model": "openai/gpt-oss-20b_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 66.26855659484863,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 7213,
+    "completion_tokens": 1793,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "a9bdcc6508d0ffcb21a351d61341ec5243d1eb93"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "e69804df696ae996b18532b85ff9a1cab8729825"
+        ]
+    ]
+}

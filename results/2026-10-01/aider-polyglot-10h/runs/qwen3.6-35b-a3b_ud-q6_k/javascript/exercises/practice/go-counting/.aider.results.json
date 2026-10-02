@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.6-35b-a3b_ud-q6_k/javascript/exercises/practice/go-counting",
+    "testcase": "go-counting",
+    "model": "openai/qwen3.6-35b-a3b_ud-q6_k",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 66.09725666046143,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 6851,
+    "completion_tokens": 1920,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "eed8dac1f2f102cb2e4da879c2f8694806b315eb"
+        ],
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "2365375d219f2661e1148786208b49ab9666a879"
+        ]
+    ]
+}

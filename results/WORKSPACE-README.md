@@ -195,6 +195,18 @@ backend without such guards would not have.
 ~4% of its speed. The Q8_K_P only fits fully on-GPU with `--fit off -ngl 999 -ts 36,28`: this
 llama.cpp's default `--fit on` silently left ~2 layers in RAM, which a tok/s floor did not catch.
 
+### 2026-10-01/02 — Aider Polyglot: five models on 25, top 3 on 50
+
+- `2026-10-01/aider-polyglot-10h/REPORT.md` — results, setup, caveats
+- `drive.sh` (driver, resume + extension modes), `extend.sh`, `ctr.sh` (podman wrapper), `models.yml`, `order.txt`, `summarise.py`, `validate/`
+
+The first test here that edits existing files across six languages with test feedback for a
+second try (aider's own harness, thinking off, one run). **Incumbent qwen3.6-27b-abliterated
+28/50, qwen3.6-35b-a3b MoE 24/50 at 3.6x the speed (not separable, p=0.45), qwen3.8-27b Q8
+17/50 (worse than the incumbent, p=0.01).** On the first 25: devstral and gpt-oss-20b 4/25
+each — devstral lost 12–0 to the incumbent. Runner validated both ways first (96/100 references
+pass, 99/100 stubs fail). Resumable: a later run continues from exercise 50 of `order.txt`.
+
 ## Full-stack test rig
 
 `rig/` runs requests through the whole flow instead of one model on one task:
@@ -217,6 +229,7 @@ Training splits were intentionally not downloaded.
 | Text-to-audio support | `datasets/audiocaps/` | AudioCaps: 4,875 test caption prompts/metadata; original clips are external YouTube media |
 | Text-to-audio support | `datasets/clotho/` | Clotho: 1,045 test audio clips and five captions per clip |
 | Agent / tool calling | `tools/tau_bench/` | tau-bench: retail 115 test tasks + 16 tools, airline domain, MIT |
+| Code editing (6 languages) | `tools/polyglot-benchmark/` + `tools/aider/` | Aider Polyglot: 225 Exercism exercises; harness = aider `benchmark/` at 5dc9490, run in the `aider-benchmark` podman image. Gradle/Cargo caches in `tools/polyglot-cache/` |
 
 The local Python environment is `.venv/`; it includes `pyarrow` for reading the
 Parquet datasets. Current workspace size is approximately 2 GB for the
@@ -236,6 +249,8 @@ in dated folders.
 - `scripts/build_llama_cuda12.sh` — rebuilds the sm_60 / CUDA 12.6 llama.cpp in `~/llama-cuda12` (rootless container; `OUT=` overrides the destination, `REPO=`/`REF=` build an out-of-tree architecture branch such as an open PR). Needed because the host CUDA dropped Pascal.
 - `scripts/spec_ab.sh` + `scripts/spec_ab.py` — serve one model on :8082 under one `--spec-type` config and measure generation on six distinct realistic prompts, reporting draft acceptance. Stop the bench router first: `--models-max 1` leaves its model resident and the A/B then measures a GPU that is already half full.
 - `scripts/hbm_bandwidth.cu` — raw HBM2 read/copy ceiling per GPU. Build for Pascal in the CUDA 12.6 container: `nvcc -O3 -arch=sm_60 -cudart static -o hbm_bandwidth hbm_bandwidth.cu`.
+- `scripts/polyglot_order.py` — fixed, language-stratified order of all 225 Aider Polyglot exercises, so any prefix is a miniature of the suite.
+- `scripts/polyglot_run.py` — runs Polyglot exercises in that order against the :8081 router inside the podman image, calling aider's own `run_test()` unmodified; stops before an exercise it cannot finish by `--deadline`. `validate` mode runs the reference solutions instead, to prove the test runner first.
 - `scripts/think_probe_openai.py` — A/B `enable_thinking: false` on llama-server's OpenAI endpoint, over a tool call, and say whether thinking actually stopped. Companion to `think_probe.py`, which asks the same question through `ollama_shim.py` and the Ollama-shaped `"think": False` body; the two flags are not interchangeable and neither probe covers the other's path. Reads `reasoning_content`, which the shim does not surface. Qualify a reasoning model with this before committing to a long thinking-off run.
 
 The dated copy `scripts/llm_benchmark_2026-09-01.py` is retained for historical

@@ -1,0 +1,39 @@
+{
+    "testdir": "/run/smoke/qwen3.6-35b-a3b_ud-q6_k/python/exercises/practice/sgf-parsing",
+    "testcase": "sgf-parsing",
+    "model": "openai/qwen3.6-35b-a3b_ud-q6_k",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 153.1254734992981,
+    "test_timeouts": 0,
+    "commit_hash": "unknown",
+    "num_error_outputs": 0,
+    "num_user_asks": 1,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 16702,
+    "completion_tokens": 4916,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "312dae0f7e9ac2db33588c72e40402d207eecea3"
+        ],
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "b0672b80742b01c2bccf6659e158f076f3fdd230"
+        ],
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "0a00c0dd7f1f52a73d8056191aa04eaf695f5f36"
+        ]
+    ]
+}

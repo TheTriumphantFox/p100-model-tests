@@ -1,0 +1,8 @@
+[2026-10-01 18:16:31] model=openai/gpt-oss-20b_q8_0 range=[0,1) deadline=18:19:29 est=90s/exercise
+[2026-10-01 18:17:21] #  0 fail [False, False] javascript/exercises/practice/zipper 50s tok=2110
+[2026-10-01 18:17:21] done
+[2026-10-01 18:19:46] model=openai/gpt-oss-20b_q8_0 range=[1,4) deadline=18:28:50 est=50s/exercise
+[2026-10-01 18:20:59] #  1 fail [False, False] java/exercises/practice/rest-api 73s tok=3162
+[2026-10-01 18:22:53] #  2 fail [False, False] go/exercises/practice/pov 113s tok=2633
+[2026-10-01 18:23:52] #  3 fail [False, False] python/exercises/practice/sgf-parsing 60s tok=2123
+[2026-10-01 18:23:52] done

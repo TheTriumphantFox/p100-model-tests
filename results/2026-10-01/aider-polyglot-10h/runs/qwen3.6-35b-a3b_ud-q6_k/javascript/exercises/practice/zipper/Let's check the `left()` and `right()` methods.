@@ -1,0 +1,6 @@
+  left() {
+    if (!this._focus.left) {
+      return null;
+    }
+    return new Zipper(this._focus.left, [{ parent: this._focus, direction: 'left' }, ...this._path]);
+  }

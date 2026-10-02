@@ -1,0 +1,100 @@
+{"idx": 0, "exercise": "javascript/exercises/practice/zipper", "ref_passes": true, "placed": ["zipper.js"], "secs": 0.5, "detail": ""}
+{"idx": 1, "exercise": "java/exercises/practice/rest-api", "ref_passes": true, "placed": ["src/main/java/RestApi.java", "src/main/java/User.java"], "secs": 4.4, "detail": ""}
+{"idx": 2, "exercise": "go/exercises/practice/pov", "ref_passes": true, "placed": ["pov.go"], "secs": 2.4, "detail": ""}
+{"idx": 3, "exercise": "python/exercises/practice/sgf-parsing", "ref_passes": true, "placed": ["sgf_parsing.py"], "secs": 0.3, "detail": ""}
+{"idx": 4, "exercise": "rust/exercises/practice/wordy", "ref_passes": true, "placed": ["src/lib.rs"], "secs": 0.2, "detail": ""}
+{"idx": 5, "exercise": "cpp/exercises/practice/queen-attack", "ref_passes": true, "placed": ["queen_attack.cpp", "queen_attack.h"], "secs": 5.4, "detail": ""}
+{"idx": 6, "exercise": "javascript/exercises/practice/triangle", "ref_passes": true, "placed": ["triangle.js"], "secs": 0.5, "detail": ""}
+{"idx": 7, "exercise": "java/exercises/practice/bowling", "ref_passes": true, "placed": ["src/main/java/BowlingGame.java", "src/main/java/Frame.java"], "secs": 0.9, "detail": ""}
+{"idx": 8, "exercise": "go/exercises/practice/palindrome-products", "ref_passes": true, "placed": ["palindrome_products.go"], "secs": 0.1, "detail": ""}
+{"idx": 9, "exercise": "python/exercises/practice/dominoes", "ref_passes": true, "placed": ["dominoes.py"], "secs": 0.1, "detail": ""}
+{"idx": 10, "exercise": "rust/exercises/practice/doubly-linked-list", "ref_passes": true, "placed": ["src/lib.rs"], "secs": 0.3, "detail": ""}
+{"idx": 11, "exercise": "javascript/exercises/practice/transpose", "ref_passes": true, "placed": ["transpose.js"], "secs": 0.5, "detail": ""}
+{"idx": 12, "exercise": "java/exercises/practice/react", "ref_passes": true, "placed": ["src/main/java/React.java"], "secs": 0.9, "detail": ""}
+{"idx": 13, "exercise": "cpp/exercises/practice/robot-name", "ref_passes": true, "placed": ["robot_name.cpp", "robot_name.h"], "secs": 5.5, "detail": ""}
+{"idx": 14, "exercise": "go/exercises/practice/crypto-square", "ref_passes": true, "placed": ["crypto_square.go"], "secs": 0.1, "detail": ""}
+{"idx": 15, "exercise": "javascript/exercises/practice/resistor-color-trio", "ref_passes": false, "placed": ["resistor-color-trio.js"], "secs": 0.5, "detail": "    |       ^\n      43 |   });\n      44 | });\n      45 |\n\n      at Object.toThrowError (resistor-color-trio.spec.js:42:7)\n\nTest Suites: 1 failed, 1 total\nTests:       1 failed, 5 passed, 6 total\nSnapshots:   0 total\nTime:        0.286 s\nRan all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./resistor-color-trio.js|./resistor-color-trio.spec.js.\n"}
+{"idx": 16, "exercise": "python/exercises/practice/food-chain", "ref_passes": true, "placed": ["food_chain.py"], "secs": 0.1, "detail": ""}
+{"idx": 17, "exercise": "java/exercises/practice/bottle-song", "ref_passes": true, "placed": ["src/main/java/BottleSong.java"], "secs": 0.8, "detail": ""}
+{"idx": 18, "exercise": "rust/exercises/practice/accumulate", "ref_passes": true, "placed": ["src/lib.rs"], "secs": 0.2, "detail": ""}
+{"idx": 19, "exercise": "go/exercises/practice/book-store", "ref_passes": true, "placed": ["book_store.go"], "secs": 0.2, "detail": ""}
+{"idx": 20, "exercise": "javascript/exercises/practice/two-bucket", "ref_passes": true, "placed": ["two-bucket.js"], "secs": 0.5, "detail": ""}
+{"idx": 21, "exercise": "java/exercises/practice/ledger", "ref_passes": true, "placed": ["src/main/java/Ledger.java"], "secs": 0.9, "detail": ""}
+{"idx": 22, "exercise": "cpp/exercises/practice/diamond", "ref_passes": true, "placed": ["diamond.cpp", "diamond.h"], "secs": 5.4, "detail": ""}
+{"idx": 23, "exercise": "python/exercises/practice/grade-school", "ref_passes": true, "placed": ["grade_school.py"], "secs": 0.2, "detail": ""}
+{"idx": 24, "exercise": "javascript/exercises/practice/palindrome-products", "ref_passes": true, "placed": ["palindrome-products.js"], "secs": 0.5, "detail": ""}
+{"idx": 25, "exercise": "go/exercises/practice/connect", "ref_passes": true, "placed": ["connect.go"], "secs": 0.1, "detail": ""}
+{"idx": 26, "exercise": "java/exercises/practice/mazy-mice", "ref_passes": true, "placed": ["src/main/java/MazeGenerator.java", "src/main/java/Dimensions.java"], "secs": 0.8, "detail": ""}
+{"idx": 27, "exercise": "rust/exercises/practice/variable-length-quantity", "ref_passes": true, "placed": ["src/lib.rs"], "secs": 0.2, "detail": ""}
+{"idx": 28, "exercise": "python/exercises/practice/rest-api", "ref_passes": true, "placed": ["rest_api.py"], "secs": 0.1, "detail": ""}
+{"idx": 29, "exercise": "javascript/exercises/practice/sum-of-multiples", "ref_passes": true, "placed": ["sum-of-multiples.js"], "secs": 0.6, "detail": ""}
+{"idx": 30, "exercise": "cpp/exercises/practice/meetup", "ref_passes": true, "placed": ["meetup.h"], "secs": 6.7, "detail": ""}
+{"idx": 31, "exercise": "java/exercises/practice/rational-numbers", "ref_passes": true, "placed": ["src/main/java/Rational.java"], "secs": 0.9, "detail": ""}
+{"idx": 32, "exercise": "go/exercises/practice/scale-generator", "ref_passes": true, "placed": ["scale_generator.go"], "secs": 0.1, "detail": ""}
+{"idx": 33, "exercise": "rust/exercises/practice/pig-latin", "ref_passes": false, "placed": ["src/lib.rs"], "secs": 0.1, "detail": "nlinked crate `regex`\n  |\n  = help: if you wanted to use a crate named `regex`, use `cargo add regex` to add it to your `Cargo.toml`\n\nFor more information about this error, try `rustc --explain E0432`.\nerror: could not compile `pig-latin` (lib) due to 1 previous error\nwarning: build failed, waiting for other jobs to finish...\nerror: could not compile `pig-latin` (lib test) due to 1 previous error\n"}
+{"idx": 34, "exercise": "javascript/exercises/practice/pig-latin", "ref_passes": true, "placed": ["pig-latin.js"], "secs": 0.5, "detail": ""}
+{"idx": 35, "exercise": "java/exercises/practice/house", "ref_passes": true, "placed": ["src/main/java/House.java"], "secs": 0.9, "detail": ""}
+{"idx": 36, "exercise": "python/exercises/practice/wordy", "ref_passes": true, "placed": ["wordy.py"], "secs": 0.2, "detail": ""}
+{"idx": 37, "exercise": "go/exercises/practice/octal", "ref_passes": true, "placed": ["octal.go"], "secs": 0.1, "detail": ""}
+{"idx": 38, "exercise": "cpp/exercises/practice/binary-search-tree", "ref_passes": true, "placed": ["binary_search_tree.h"], "secs": 5.4, "detail": ""}
+{"idx": 39, "exercise": "javascript/exercises/practice/say", "ref_passes": true, "placed": ["say.js"], "secs": 0.5, "detail": ""}
+{"idx": 40, "exercise": "java/exercises/practice/phone-number", "ref_passes": true, "placed": ["src/main/java/PhoneNumber.java"], "secs": 0.7, "detail": ""}
+{"idx": 41, "exercise": "rust/exercises/practice/say", "ref_passes": true, "placed": ["src/lib.rs"], "secs": 0.1, "detail": ""}
+{"idx": 42, "exercise": "python/exercises/practice/go-counting", "ref_passes": true, "placed": ["go_counting.py"], "secs": 0.1, "detail": ""}
+{"idx": 43, "exercise": "go/exercises/practice/protein-translation", "ref_passes": true, "placed": ["protein_translation.go"], "secs": 0.1, "detail": ""}
+{"idx": 44, "exercise": "javascript/exercises/practice/go-counting", "ref_passes": true, "placed": ["go-counting.js"], "secs": 0.5, "detail": ""}
+{"idx": 45, "exercise": "java/exercises/practice/dominoes", "ref_passes": true, "placed": ["src/main/java/Dominoes.java"], "secs": 0.7, "detail": ""}
+{"idx": 46, "exercise": "cpp/exercises/practice/zebra-puzzle", "ref_passes": true, "placed": ["zebra_puzzle.cpp", "zebra_puzzle.h"], "secs": 5.4, "detail": ""}
+{"idx": 47, "exercise": "javascript/exercises/practice/killer-sudoku-helper", "ref_passes": true, "placed": ["killer-sudoku-helper.js"], "secs": 0.5, "detail": ""}
+{"idx": 48, "exercise": "rust/exercises/practice/decimal", "ref_passes": false, "placed": ["src/lib.rs"], "secs": 0.0, "detail": ": can't find crate for `num_traits`\n --> src/lib.rs:7:1\n  |\n7 | extern crate num_traits;\n  | ^^^^^^^^^^^^^^^^^^^^^^^^ can't find crate\n\nFor more information about this error, try `rustc --explain E0463`.\nerror: could not compile `decimal` (lib) due to 2 previous errors\nwarning: build failed, waiting for other jobs to finish...\nerror: could not compile `decimal` (lib test) due to 2 previous errors\n"}
+{"idx": 49, "exercise": "go/exercises/practice/ledger", "ref_passes": true, "placed": ["ledger.go"], "secs": 0.1, "detail": ""}
+{"idx": 50, "exercise": "python/exercises/practice/affine-cipher", "ref_passes": true, "placed": ["affine_cipher.py"], "secs": 0.1, "detail": ""}
+{"idx": 51, "exercise": "java/exercises/practice/ocr-numbers", "ref_passes": true, "placed": ["src/main/java/OpticalCharacterReader.java", "src/main/java/Digit.java"], "secs": 0.7, "detail": ""}
+{"idx": 52, "exercise": "javascript/exercises/practice/rectangles", "ref_passes": true, "placed": ["rectangles.js"], "secs": 0.5, "detail": ""}
+{"idx": 53, "exercise": "go/exercises/practice/two-bucket", "ref_passes": true, "placed": ["two_bucket.go"], "secs": 0.1, "detail": ""}
+{"idx": 54, "exercise": "java/exercises/practice/sgf-parsing", "ref_passes": true, "placed": ["src/main/java/SgfParsing.java"], "secs": 0.7, "detail": ""}
+{"idx": 55, "exercise": "cpp/exercises/practice/yacht", "ref_passes": true, "placed": ["yacht.cpp", "yacht.h"], "secs": 5.2, "detail": ""}
+{"idx": 56, "exercise": "python/exercises/practice/variable-length-quantity", "ref_passes": true, "placed": ["variable_length_quantity.py"], "secs": 0.1, "detail": ""}
+{"idx": 57, "exercise": "rust/exercises/practice/luhn-from", "ref_passes": true, "placed": ["src/lib.rs"], "secs": 0.1, "detail": ""}
+{"idx": 58, "exercise": "javascript/exercises/practice/bottle-song", "ref_passes": true, "placed": ["bottle-song.js"], "secs": 0.5, "detail": ""}
+{"idx": 59, "exercise": "java/exercises/practice/satellite", "ref_passes": true, "placed": ["src/main/java/Satellite.java"], "secs": 0.7, "detail": ""}
+{"idx": 60, "exercise": "go/exercises/practice/error-handling", "ref_passes": true, "placed": ["error_handling.go"], "secs": 0.1, "detail": ""}
+{"idx": 61, "exercise": "javascript/exercises/practice/react", "ref_passes": true, "placed": ["react.js"], "secs": 0.5, "detail": ""}
+{"idx": 62, "exercise": "python/exercises/practice/pig-latin", "ref_passes": true, "placed": ["pig_latin.py"], "secs": 0.1, "detail": ""}
+{"idx": 63, "exercise": "rust/exercises/practice/ocr-numbers", "ref_passes": true, "placed": ["src/lib.rs"], "secs": 0.2, "detail": ""}
+{"idx": 64, "exercise": "java/exercises/practice/kindergarten-garden", "ref_passes": true, "placed": ["src/main/java/KindergartenGarden.java"], "secs": 0.7, "detail": ""}
+{"idx": 65, "exercise": "cpp/exercises/practice/linked-list", "ref_passes": true, "placed": ["linked_list.cpp", "linked_list.h"], "secs": 5.2, "detail": ""}
+{"idx": 66, "exercise": "go/exercises/practice/dominoes", "ref_passes": true, "placed": ["dominoes.go"], "secs": 0.1, "detail": ""}
+{"idx": 67, "exercise": "javascript/exercises/practice/list-ops", "ref_passes": true, "placed": ["list-ops.js"], "secs": 0.5, "detail": ""}
+{"idx": 68, "exercise": "python/exercises/practice/phone-number", "ref_passes": true, "placed": ["phone_number.py"], "secs": 0.1, "detail": ""}
+{"idx": 69, "exercise": "java/exercises/practice/food-chain", "ref_passes": true, "placed": ["src/main/java/FoodChain.java"], "secs": 0.7, "detail": ""}
+{"idx": 70, "exercise": "rust/exercises/practice/parallel-letter-frequency", "ref_passes": true, "placed": ["src/lib.rs"], "secs": 0.2, "detail": ""}
+{"idx": 71, "exercise": "javascript/exercises/practice/grade-school", "ref_passes": true, "placed": ["grade-school.js"], "secs": 0.5, "detail": ""}
+{"idx": 72, "exercise": "go/exercises/practice/wordy", "ref_passes": true, "placed": ["wordy.go"], "secs": 0.1, "detail": ""}
+{"idx": 73, "exercise": "cpp/exercises/practice/parallel-letter-frequency", "ref_passes": true, "placed": ["parallel_letter_frequency.cpp", "parallel_letter_frequency.h"], "secs": 8.5, "detail": ""}
+{"idx": 74, "exercise": "java/exercises/practice/pig-latin", "ref_passes": true, "placed": ["src/main/java/PigLatinTranslator.java"], "secs": 1.0, "detail": ""}
+{"idx": 75, "exercise": "javascript/exercises/practice/connect", "ref_passes": true, "placed": ["connect.js"], "secs": 0.5, "detail": ""}
+{"idx": 76, "exercise": "python/exercises/practice/scale-generator", "ref_passes": true, "placed": ["scale_generator.py"], "secs": 0.1, "detail": ""}
+{"idx": 77, "exercise": "go/exercises/practice/sublist", "ref_passes": true, "placed": ["sublist.go"], "secs": 0.1, "detail": ""}
+{"idx": 78, "exercise": "rust/exercises/practice/macros", "ref_passes": true, "placed": ["src/lib.rs"], "secs": 0.4, "detail": ""}
+{"idx": 79, "exercise": "java/exercises/practice/alphametics", "ref_passes": true, "placed": ["src/main/java/Alphametics.java"], "secs": 5.6, "detail": ""}
+{"idx": 80, "exercise": "javascript/exercises/practice/phone-number", "ref_passes": true, "placed": ["phone-number.js"], "secs": 0.5, "detail": ""}
+{"idx": 81, "exercise": "cpp/exercises/practice/allergies", "ref_passes": true, "placed": ["allergies.cpp", "allergies.h"], "secs": 5.5, "detail": ""}
+{"idx": 82, "exercise": "python/exercises/practice/tree-building", "ref_passes": true, "placed": ["tree_building.py"], "secs": 0.1, "detail": ""}
+{"idx": 83, "exercise": "go/exercises/practice/say", "ref_passes": true, "placed": ["say.go"], "secs": 0.1, "detail": ""}
+{"idx": 84, "exercise": "java/exercises/practice/pythagorean-triplet", "ref_passes": true, "placed": ["src/main/java/PythagoreanTriplet.java"], "secs": 1.2, "detail": ""}
+{"idx": 85, "exercise": "javascript/exercises/practice/house", "ref_passes": true, "placed": ["house.js"], "secs": 0.5, "detail": ""}
+{"idx": 86, "exercise": "rust/exercises/practice/alphametics", "ref_passes": false, "placed": ["src/lib.rs"], "secs": 0.0, "detail": "e for `permutohedron`\n --> src/lib.rs:4:1\n  |\n4 | extern crate permutohedron;\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^ can't find crate\n\nFor more information about this error, try `rustc --explain E0463`.\nerror: could not compile `alphametics` (lib) due to 2 previous errors\nwarning: build failed, waiting for other jobs to finish...\nerror: could not compile `alphametics` (lib test) due to 2 previous errors\n"}
+{"idx": 87, "exercise": "java/exercises/practice/series", "ref_passes": true, "placed": ["src/main/java/Series.java"], "secs": 0.7, "detail": ""}
+{"idx": 88, "exercise": "python/exercises/practice/two-bucket", "ref_passes": true, "placed": ["two_bucket.py"], "secs": 0.1, "detail": ""}
+{"idx": 89, "exercise": "javascript/exercises/practice/poker", "ref_passes": true, "placed": ["poker.js"], "secs": 0.5, "detail": ""}
+{"idx": 90, "exercise": "go/exercises/practice/react", "ref_passes": true, "placed": ["react.go"], "secs": 0.1, "detail": ""}
+{"idx": 91, "exercise": "cpp/exercises/practice/all-your-base", "ref_passes": true, "placed": ["all_your_base.cpp", "all_your_base.h"], "secs": 5.2, "detail": ""}
+{"idx": 92, "exercise": "java/exercises/practice/zebra-puzzle", "ref_passes": true, "placed": ["src/main/java/ZebraPuzzle.java"], "secs": 0.7, "detail": ""}
+{"idx": 93, "exercise": "rust/exercises/practice/xorcism", "ref_passes": true, "placed": ["src/lib.rs"], "secs": 0.2, "detail": ""}
+{"idx": 94, "exercise": "javascript/exercises/practice/parallel-letter-frequency", "ref_passes": true, "placed": ["parallel-letter-frequency.js"], "secs": 0.8, "detail": ""}
+{"idx": 95, "exercise": "go/exercises/practice/alphametics", "ref_passes": true, "placed": ["alphametics.go"], "secs": 0.4, "detail": ""}
+{"idx": 96, "exercise": "python/exercises/practice/zipper", "ref_passes": true, "placed": ["zipper.py"], "secs": 0.1, "detail": ""}
+{"idx": 97, "exercise": "java/exercises/practice/transpose", "ref_passes": true, "placed": ["src/main/java/Transpose.java"], "secs": 0.7, "detail": ""}
+{"idx": 98, "exercise": "javascript/exercises/practice/twelve-days", "ref_passes": true, "placed": ["twelve-days.js"], "secs": 0.5, "detail": ""}
+{"idx": 99, "exercise": "cpp/exercises/practice/spiral-matrix", "ref_passes": true, "placed": ["spiral_matrix.cpp", "spiral_matrix.h"], "secs": 5.1, "detail": ""}

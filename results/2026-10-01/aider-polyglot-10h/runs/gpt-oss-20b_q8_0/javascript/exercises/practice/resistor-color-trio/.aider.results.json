@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/gpt-oss-20b_q8_0/javascript/exercises/practice/resistor-color-trio",
+    "testcase": "resistor-color-trio",
+    "model": "openai/gpt-oss-20b_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 54.981157541275024,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 4901,
+    "completion_tokens": 1234,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "481c6d2ed720eaebe5031d2b3e5584ff699b0b7a"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "0accc51be11e1014a9dd1736927ee5c83977400a"
+        ]
+    ]
+}

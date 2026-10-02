@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/gpt-oss-20b_q8_0/javascript/exercises/practice/two-bucket",
+    "testcase": "two-bucket",
+    "model": "openai/gpt-oss-20b_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 47.304338216781616,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 6081,
+    "completion_tokens": 1887,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "b7286dc70e60a1b7e5fa1f3430991cc9a33d2efb"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "ae8f3fca91db30ed00d09d6e7c99a190c6d3191c"
+        ]
+    ]
+}

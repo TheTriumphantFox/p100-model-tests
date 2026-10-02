@@ -1,0 +1,5 @@
+{"model": "gpt-oss-20b_q8_0", "ok": true, "wall_s": 11.8, "completion_tokens": 162, "reasoning_chars": 133, "content_chars": 394, "gen_tok_s": 66.01, "prefill_tok_s": 97.59, "finish": "stop"}
+{"model": "qwen3.6-35b-a3b_ud-q6_k", "ok": true, "wall_s": 22.8, "completion_tokens": 161, "reasoning_chars": 0, "content_chars": 476, "gen_tok_s": 53.09, "prefill_tok_s": 108.67, "finish": "stop"}
+{"model": "devstral-patched_q8_0", "ok": true, "wall_s": 29.4, "completion_tokens": 132, "reasoning_chars": 0, "content_chars": 506, "gen_tok_s": 12.83, "prefill_tok_s": 50.33, "finish": "stop"}
+{"model": "qwen3.6-27b-abliterated_q5_k_m", "ok": true, "wall_s": 30.7, "completion_tokens": 160, "reasoning_chars": 0, "content_chars": 507, "gen_tok_s": 11.06, "prefill_tok_s": 50.49, "finish": "stop"}
+{"model": "qwen3.8-27b-unsloth_q8_0", "ok": true, "wall_s": 186.0, "completion_tokens": 160, "reasoning_chars": 0, "content_chars": 487, "gen_tok_s": 10.87, "prefill_tok_s": 57.27, "finish": "stop"}

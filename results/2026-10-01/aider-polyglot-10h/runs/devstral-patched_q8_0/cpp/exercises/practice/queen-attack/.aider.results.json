@@ -1,0 +1,43 @@
+{
+    "testdir": "/run/runs/devstral-patched_q8_0/cpp/exercises/practice/queen-attack",
+    "testcase": "queen-attack",
+    "model": "openai/devstral-patched_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        true
+    ],
+    "cost": 0.0,
+    "duration": 190.8602635860443,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 2,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 14110,
+    "completion_tokens": 1252,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "27f54b00180464feb74fa14bce7e1f8db492a65f"
+        ],
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "c167ca2f76e64bd580cb2452a543753b2cc421c3"
+        ],
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "5041420a81328d341801114a4e84d2d859bff86f"
+        ],
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "63cf84a0b0abb84c69e181f2df2165eb97260125"
+        ]
+    ]
+}

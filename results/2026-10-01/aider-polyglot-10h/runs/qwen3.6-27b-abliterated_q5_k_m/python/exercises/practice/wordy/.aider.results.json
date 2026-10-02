@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.6-27b-abliterated_q5_k_m/python/exercises/practice/wordy",
+    "testcase": "wordy",
+    "model": "openai/qwen3.6-27b-abliterated_q5_k_m",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        true
+    ],
+    "cost": 0.0,
+    "duration": 348.5643062591553,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 4961,
+    "completion_tokens": 2716,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "bb0cdae40aa27171762d5a7139c2cc317815b678",
+            "f4bb05aca019da9c3a3834200055fe789f183328"
+        ],
+        [
+            "bb0cdae40aa27171762d5a7139c2cc317815b678",
+            "971e3ad58518d51d00c77a9905ec959b7874b705"
+        ]
+    ]
+}

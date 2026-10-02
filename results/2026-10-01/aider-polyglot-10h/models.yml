@@ -1,0 +1,34 @@
+- name: openai/gpt-oss-20b_q8_0
+  edit_format: whole
+  use_temperature: true
+  extra_params:
+    max_tokens: 4096
+    extra_body: {"chat_template_kwargs": {"enable_thinking": false}, "reasoning_effort": "low"}
+
+- name: openai/qwen3.6-35b-a3b_ud-q6_k
+  edit_format: whole
+  use_temperature: true
+  extra_params:
+    max_tokens: 4096
+    extra_body: {"chat_template_kwargs": {"enable_thinking": false}}
+
+- name: openai/devstral-patched_q8_0
+  edit_format: whole
+  use_temperature: true
+  extra_params:
+    max_tokens: 4096
+    extra_body: {"chat_template_kwargs": {"enable_thinking": false}}
+
+- name: openai/qwen3.6-27b-abliterated_q5_k_m
+  edit_format: whole
+  use_temperature: true
+  extra_params:
+    max_tokens: 4096
+    extra_body: {"chat_template_kwargs": {"enable_thinking": false}}
+
+- name: openai/qwen3.8-27b-unsloth_q8_0
+  edit_format: whole
+  use_temperature: true
+  extra_params:
+    max_tokens: 4096
+    extra_body: {"chat_template_kwargs": {"enable_thinking": false}}

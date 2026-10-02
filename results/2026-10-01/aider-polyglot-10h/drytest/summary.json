@@ -1,0 +1,93 @@
+{
+  "common": [
+    "javascript/exercises/practice/zipper",
+    "java/exercises/practice/rest-api",
+    "go/exercises/practice/pov"
+  ],
+  "models": {
+    "gpt-oss-20b_q8_0": {
+      "pass1": 0,
+      "pass2": 0,
+      "n": 3,
+      "malformed": 0,
+      "exceptions": 0,
+      "tok_per_ex": 2635,
+      "wall_per_ex": 79,
+      "scored_total": 4,
+      "by_lang": {
+        "cpp": [
+          0,
+          0
+        ],
+        "go": [
+          0,
+          1
+        ],
+        "java": [
+          0,
+          1
+        ],
+        "javascript": [
+          0,
+          1
+        ],
+        "python": [
+          0,
+          0
+        ],
+        "rust": [
+          0,
+          0
+        ]
+      }
+    },
+    "qwen3.6-35b-a3b_ud-q6_k": {
+      "pass1": 0,
+      "pass2": 0,
+      "n": 3,
+      "malformed": 0,
+      "exceptions": 0,
+      "tok_per_ex": 3120,
+      "wall_per_ex": 89,
+      "scored_total": 3,
+      "by_lang": {
+        "cpp": [
+          0,
+          0
+        ],
+        "go": [
+          0,
+          1
+        ],
+        "java": [
+          0,
+          1
+        ],
+        "javascript": [
+          0,
+          1
+        ],
+        "python": [
+          0,
+          0
+        ],
+        "rust": [
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "pairs": {
+    "gpt-oss-20b_q8_0|qwen3.6-35b-a3b_ud-q6_k": [
+      0,
+      0,
+      1.0
+    ],
+    "qwen3.6-35b-a3b_ud-q6_k|gpt-oss-20b_q8_0": [
+      0,
+      0,
+      1.0
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+[2026-10-01 18:18:20] model=openai/qwen3.6-35b-a3b_ud-q6_k range=[0,1) deadline=18:22:58 est=140s/exercise
+[2026-10-01 18:19:08] #  0 fail [False, False] javascript/exercises/practice/zipper 48s tok=1363
+[2026-10-01 18:19:08] done
+[2026-10-01 18:25:15] model=openai/qwen3.6-35b-a3b_ud-q6_k range=[1,4) deadline=18:31:22 est=48s/exercise
+[2026-10-01 18:27:09] #  1 fail [False, False] java/exercises/practice/rest-api 114s tok=4394
+[2026-10-01 18:28:55] #  2 fail [False, False] go/exercises/practice/pov 106s tok=3603

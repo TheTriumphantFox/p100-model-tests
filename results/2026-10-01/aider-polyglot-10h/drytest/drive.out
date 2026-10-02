@@ -1,0 +1,20 @@
+[2026-10-01 14:16:22] === start: budget 900s, hard end 2026-10-01 14:31:22, K=1
+[2026-10-01 14:16:24] router started (pid 480683)
+[2026-10-01 14:16:29] gpt-oss-20b_q8_0: preflight OK (5s incl. load)
+[2026-10-01 14:18:09] gpt-oss-20b_q8_0: rc=0, 1 exercises scored
+[2026-10-01 14:18:09] gpt-oss-20b_q8_0: phase A mean 50s/exercise
+[2026-10-01 14:18:18] qwen3.6-35b-a3b_ud-q6_k: preflight OK (8s incl. load)
+[2026-10-01 14:19:38] qwen3.6-35b-a3b_ud-q6_k: rc=0, 1 exercises scored
+[2026-10-01 14:19:38] qwen3.6-35b-a3b_ud-q6_k: phase A mean 48s/exercise
+[2026-10-01 14:19:38] === phase B plan: 2 models, 391s usable, sum of means 98s -> +3 each, target end index 4
+[2026-10-01 14:19:38] gpt-oss-20b_q8_0: phase B [1,4) deadline 14:28:50
+[2026-10-01 14:19:44] gpt-oss-20b_q8_0: preflight OK (5s incl. load)
+[2026-10-01 14:25:04] gpt-oss-20b_q8_0: rc=0, 4 exercises scored
+[2026-10-01 14:25:04] qwen3.6-35b-a3b_ud-q6_k: phase B [1,4) deadline 14:31:22
+[2026-10-01 14:25:13] qwen3.6-35b-a3b_ud-q6_k: preflight OK (8s incl. load)
+[2026-10-01 14:31:34] !!! HARD CAP reached -- stopping qwen3.6-35b-a3b_ud-q6_k mid-exercise (that exercise is not scored)
+[2026-10-01 14:31:44] qwen3.6-35b-a3b_ud-q6_k: rc=137, 3 exercises scored
+[2026-10-01 14:31:46] router stopped (was 480683); GPU 28901 MiB
+[2026-10-01 14:31:46] === finished at 2026-10-01 14:31:46, 15 min of 900s budget
+[2026-10-01 14:31:46]   gpt-oss-20b_q8_0: 4 exercises
+[2026-10-01 14:31:46]   qwen3.6-35b-a3b_ud-q6_k: 3 exercises

@@ -1,0 +1,51 @@
+{
+    "testdir": "/run/runs/qwen3.6-27b-abliterated_q5_k_m/cpp/exercises/practice/binary-search-tree",
+    "testcase": "binary-search-tree",
+    "model": "openai/qwen3.6-27b-abliterated_q5_k_m",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 774.4618754386902,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 2,
+    "num_user_asks": 7,
+    "num_exhausted_context_windows": 1,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 26385,
+    "completion_tokens": 3130,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "bb0cdae40aa27171762d5a7139c2cc317815b678",
+            "393175b0799dcc4aa37bf72ef1d15e73176a14ba"
+        ],
+        [
+            "bb0cdae40aa27171762d5a7139c2cc317815b678",
+            "60b3c425293f55a447ee03520bdda5a89ea0ee7d"
+        ],
+        [
+            "bb0cdae40aa27171762d5a7139c2cc317815b678",
+            "5ee24078e6ef2295c2e34739538c0612bbf4e328"
+        ],
+        [
+            "bb0cdae40aa27171762d5a7139c2cc317815b678",
+            "b3d5aa2f53d7cf01bee634a814bb564613a657df"
+        ],
+        [
+            "bb0cdae40aa27171762d5a7139c2cc317815b678",
+            "5262bda3728eb91511c428415c35bd8856b454f3"
+        ],
+        [
+            "bb0cdae40aa27171762d5a7139c2cc317815b678",
+            "2a646249d7ad85570ffb9128cdca531e492c0f2a"
+        ]
+    ]
+}

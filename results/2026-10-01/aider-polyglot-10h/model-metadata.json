@@ -1,0 +1,47 @@
+{
+  "openai/gpt-oss-20b_q8_0": {
+    "max_input_tokens": 12288,
+    "max_output_tokens": 4096,
+    "max_tokens": 4096,
+    "input_cost_per_token": 0,
+    "output_cost_per_token": 0,
+    "litellm_provider": "openai",
+    "mode": "chat"
+  },
+  "openai/qwen3.6-35b-a3b_ud-q6_k": {
+    "max_input_tokens": 12288,
+    "max_output_tokens": 4096,
+    "max_tokens": 4096,
+    "input_cost_per_token": 0,
+    "output_cost_per_token": 0,
+    "litellm_provider": "openai",
+    "mode": "chat"
+  },
+  "openai/devstral-patched_q8_0": {
+    "max_input_tokens": 12288,
+    "max_output_tokens": 4096,
+    "max_tokens": 4096,
+    "input_cost_per_token": 0,
+    "output_cost_per_token": 0,
+    "litellm_provider": "openai",
+    "mode": "chat"
+  },
+  "openai/qwen3.6-27b-abliterated_q5_k_m": {
+    "max_input_tokens": 12288,
+    "max_output_tokens": 4096,
+    "max_tokens": 4096,
+    "input_cost_per_token": 0,
+    "output_cost_per_token": 0,
+    "litellm_provider": "openai",
+    "mode": "chat"
+  },
+  "openai/qwen3.8-27b-unsloth_q8_0": {
+    "max_input_tokens": 12288,
+    "max_output_tokens": 4096,
+    "max_tokens": 4096,
+    "input_cost_per_token": 0,
+    "output_cost_per_token": 0,
+    "litellm_provider": "openai",
+    "mode": "chat"
+  }
+}

@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.6-27b-abliterated_q5_k_m/rust/exercises/practice/doubly-linked-list",
+    "testcase": "doubly-linked-list",
+    "model": "openai/qwen3.6-27b-abliterated_q5_k_m",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        true
+    ],
+    "cost": 0.0,
+    "duration": 554.619861125946,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 9413,
+    "completion_tokens": 5003,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "bb0cdae40aa27171762d5a7139c2cc317815b678",
+            "0a00e6a675708268cd0c25ec3746c1f983181714"
+        ],
+        [
+            "bb0cdae40aa27171762d5a7139c2cc317815b678",
+            "d9aedb98ba608e65c8e4ee5a2e628e55830e4eac"
+        ]
+    ]
+}

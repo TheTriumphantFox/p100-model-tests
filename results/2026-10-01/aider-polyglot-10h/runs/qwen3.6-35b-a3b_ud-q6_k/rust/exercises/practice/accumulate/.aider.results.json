@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.6-35b-a3b_ud-q6_k/rust/exercises/practice/accumulate",
+    "testcase": "accumulate",
+    "model": "openai/qwen3.6-35b-a3b_ud-q6_k",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 45.527976989746094,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 3304,
+    "completion_tokens": 1182,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "d1fccb10dd345bae50736db01b4b88679658ba92"
+        ],
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "b43bb489d8587a1e04ee57c8237a43c2fef2c603"
+        ]
+    ]
+}

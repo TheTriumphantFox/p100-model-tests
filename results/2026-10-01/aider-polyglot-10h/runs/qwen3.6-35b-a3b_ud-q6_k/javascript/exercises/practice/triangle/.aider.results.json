@@ -1,0 +1,30 @@
+{
+    "testdir": "/run/runs/qwen3.6-35b-a3b_ud-q6_k/javascript/exercises/practice/triangle",
+    "testcase": "triangle",
+    "model": "openai/qwen3.6-35b-a3b_ud-q6_k",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        true
+    ],
+    "cost": 0.0,
+    "duration": 14.640084266662598,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 1137,
+    "completion_tokens": 472,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "4c877d48ae2d8141187d12030542269c10941def"
+        ]
+    ]
+}

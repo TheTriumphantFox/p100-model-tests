@@ -1,0 +1,59 @@
+{
+    "testdir": "/run/runs/qwen3.8-27b-unsloth_q8_0/cpp/exercises/practice/robot-name",
+    "testcase": "robot-name",
+    "model": "openai/qwen3.8-27b-unsloth_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        true
+    ],
+    "cost": 0.0,
+    "duration": 1046.8356864452362,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 8,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 38667,
+    "completion_tokens": 5834,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "461ddc175e95ef73a6e16cc671f7dd21b648fbc9"
+        ],
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "d1c21b6cdcc1eb6044ecd4f7ce5f892cf21a996d"
+        ],
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "820b933058defd6583f70eb3e58d799214fbe6c1"
+        ],
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "a057823bd93f18cfb37ec573c005bfcdd8d7e667"
+        ],
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "631cf65eb2da2274d5f034e29e88b6ee1afc5bf0"
+        ],
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "4143dd88908f2809253d892445ff065a95c48607"
+        ],
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "e6e96f88a9078aec2b2442a2e6fd5a537b84d291"
+        ],
+        [
+            "3f515c28f9e3960e90bc1c9425c1753c14e7d929",
+            "aaed1826bd30013c6365f8e9679c37b6fa50ab67"
+        ]
+    ]
+}

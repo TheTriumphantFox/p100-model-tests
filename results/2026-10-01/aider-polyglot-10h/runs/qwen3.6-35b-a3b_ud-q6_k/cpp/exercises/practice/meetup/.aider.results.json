@@ -1,0 +1,43 @@
+{
+    "testdir": "/run/runs/qwen3.6-35b-a3b_ud-q6_k/cpp/exercises/practice/meetup",
+    "testcase": "meetup",
+    "model": "openai/qwen3.6-35b-a3b_ud-q6_k",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 127.92857503890991,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 2,
+    "num_user_asks": 4,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 16097,
+    "completion_tokens": 3644,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "eba650dc42c4dffbad039c0c24cfe760a637dd52"
+        ],
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "bafd6cd66f9740e6140178e6bab9a6da17c2735b"
+        ],
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "e76b70d7e01f9cc11aa74761b1170af74b927417"
+        ],
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "e85c1bbaff765b4742d98e637a6aa14dd067e603"
+        ]
+    ]
+}

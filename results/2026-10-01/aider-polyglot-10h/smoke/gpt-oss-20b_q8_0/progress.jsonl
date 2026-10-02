@@ -1,0 +1,2 @@
+{"idx": 0, "exercise": "javascript/exercises/practice/zipper", "wall_s": 29.6, "outcomes": [true], "pass": true, "exception": false, "completion_tokens": 960, "prompt_tokens": 1341, "malformed": 0, "error_outputs": 0, "test_timeouts": 0}
+{"idx": 1, "exercise": "java/exercises/practice/rest-api", "wall_s": 72.7, "outcomes": [false, false], "pass": false, "exception": false, "completion_tokens": 3091, "prompt_tokens": 6401, "malformed": 0, "error_outputs": 0, "test_timeouts": 0}

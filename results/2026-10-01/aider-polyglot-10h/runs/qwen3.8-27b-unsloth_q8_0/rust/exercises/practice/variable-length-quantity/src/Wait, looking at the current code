@@ -1,0 +1,11 @@
+        loop {
+            let mut byte = (v & 0x7f) as u8;
+            v >>= 7;
+            if v != 0 {
+                byte |= 0x80;
+            }
+            bytes.push(byte);
+            if v == 0 {
+                break;
+            }
+        }

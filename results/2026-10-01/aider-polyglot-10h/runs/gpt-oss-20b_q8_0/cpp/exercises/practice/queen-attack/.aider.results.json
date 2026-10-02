@@ -1,0 +1,43 @@
+{
+    "testdir": "/run/runs/gpt-oss-20b_q8_0/cpp/exercises/practice/queen-attack",
+    "testcase": "queen-attack",
+    "model": "openai/gpt-oss-20b_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 75.68500828742981,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 2,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 18944,
+    "completion_tokens": 1829,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "df684ddac2037e076048492bf22d9fc990076fcb"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "9c3384763d007827f092bffb0a6e0e77d9394dff"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "9c3384763d007827f092bffb0a6e0e77d9394dff"
+        ],
+        [
+            "7ff82b53f4ece2a57e20d06620f7475cadeaf074",
+            "332d1e0e31be189e9e116ff240ca1b64f2f8da04"
+        ]
+    ]
+}

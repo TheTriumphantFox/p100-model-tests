@@ -1,0 +1,100 @@
+NEG   0 stub FAILS (good)   0.6s javascript/exercises/practice/zipper :: Time:        0.313 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./zipper.js|./zipper.spec.js.
+NEG   1 stub FAILS (good)   4.1s java/exercises/practice/rest-api :: BUILD FAILED in 3s | 3 actionable tasks: 3 executed
+NEG   2 stub FAILS (good)   2.4s go/exercises/practice/pov :: FAIL	pov	0.003s | FAIL
+NEG   3 stub FAILS (good)   0.4s python/exercises/practice/sgf-parsing :: FAILED sgf_parsing_test.py::SgfParsingTest::test_within_property_values_whitespace_characters_such_as_tab_are_converted_to_spaces | ============================
+NEG   4 stub FAILS (good)   0.1s rust/exercises/practice/wordy ::  | error: test failed, to rerun pass `--test wordy`
+NEG   5 stub FAILS (good)   0.4s cpp/exercises/practice/queen-attack :: make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/queen-attack.dir/all] Error 2 | make: *** [Makefile:91: all] Error 2
+NEG   6 stub FAILS (good)   0.5s javascript/exercises/practice/triangle :: Time:        0.301 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./triangle.js|./triangle.spec.
+NEG   7 stub FAILS (good)   0.3s java/exercises/practice/bowling :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG   8 stub FAILS (good)   0.0s go/exercises/practice/palindrome-products :: FAIL	palindrome [build failed] | FAIL
+NEG   9 stub FAILS (good)   0.2s python/exercises/practice/dominoes :: FAILED dominoes_test.py::DominoesTest::test_three_elements - AssertionError: ... | ========================= 7 failed, 6 passed  ==========================
+NEG  10 stub FAILS (good)   0.2s rust/exercises/practice/doubly-linked-list ::  | error: test failed, to rerun pass `--test doubly-linked-list`
+NEG  11 stub FAILS (good)   0.5s javascript/exercises/practice/transpose :: Time:        0.292 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./transpose.js|./transpose.spe
+NEG  12 stub FAILS (good)   0.3s java/exercises/practice/react :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  13 stub FAILS (good)   0.4s cpp/exercises/practice/robot-name :: make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/robot-name.dir/all] Error 2 | make: *** [Makefile:91: all] Error 2
+NEG  14 stub FAILS (good)   0.1s go/exercises/practice/crypto-square :: FAIL	cryptosquare	0.003s | FAIL
+NEG  15 stub FAILS (good)   0.5s javascript/exercises/practice/resistor-color-trio :: Time:        0.278 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./resistor-color-trio.js|./res
+NEG  16 stub FAILS (good)   0.1s python/exercises/practice/food-chain :: FAILED food_chain_test.py::FoodChainTest::test_spider - AssertionError: None ... | ============================== 10 failed  ==============================
+NEG  17 stub FAILS (good)   0.3s java/exercises/practice/bottle-song :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  18 stub FAILS (good)   0.0s rust/exercises/practice/accumulate :: warning: build failed, waiting for other jobs to finish... | error: could not compile `accumulate` (lib test) due to 1 previous error
+NEG  19 stub FAILS (good)   0.1s go/exercises/practice/book-store :: FAIL	bookstore	0.003s | FAIL
+NEG  20 stub FAILS (good)   0.5s javascript/exercises/practice/two-bucket :: Time:        0.292 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./two-bucket.js|./two-bucket.s
+NEG  21 stub FAILS (good)   0.3s java/exercises/practice/ledger :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  22 stub FAILS (good)   0.4s cpp/exercises/practice/diamond :: make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/diamond.dir/all] Error 2 | make: *** [Makefile:91: all] Error 2
+NEG  23 stub FAILS (good)   0.2s python/exercises/practice/grade-school :: FAILED grade_school_test.py::GradeSchoolTest::test_students_in_multiple_grades_are_added_to_the_roster | ============================== 20 failed  =============
+NEG  24 stub FAILS (good)   0.6s javascript/exercises/practice/palindrome-products :: Time:        0.346 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./palindrome-products.js|./pal
+NEG  25 stub FAILS (good)   0.1s go/exercises/practice/connect :: FAIL	connect	0.003s | FAIL
+NEG  26 stub FAILS (good)   0.3s java/exercises/practice/mazy-mice :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  27 stub FAILS (good)   0.1s rust/exercises/practice/variable-length-quantity ::  | error: test failed, to rerun pass `--test variable-length-quantity`
+NEG  28 stub FAILS (good)   0.2s python/exercises/practice/rest-api :: FAILED rest_api_test.py::RestApiTest::test_no_users - TypeError: the JSON obj... | ============================== 9 failed  ===============================
+NEG  29 stub FAILS (good)   0.6s javascript/exercises/practice/sum-of-multiples :: Time:        0.319 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./sum-of-multiples.js|./sum-of
+NEG  30 stub FAILS (good)   0.8s cpp/exercises/practice/meetup :: make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/meetup.dir/all] Error 2 | make: *** [Makefile:91: all] Error 2
+NEG  31 stub FAILS (good)   0.3s java/exercises/practice/rational-numbers :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  32 stub FAILS (good)   0.1s go/exercises/practice/scale-generator :: FAIL	scale	0.003s | FAIL
+NEG  33 stub FAILS (good)   0.1s rust/exercises/practice/pig-latin ::  | error: test failed, to rerun pass `--test pig-latin`
+NEG  34 stub FAILS (good)   0.5s javascript/exercises/practice/pig-latin :: Time:        0.302 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./pig-latin.js|./pig-latin.spe
+NEG  35 stub FAILS (good)   0.3s java/exercises/practice/house :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  36 stub FAILS (good)   0.2s python/exercises/practice/wordy :: FAILED wordy_test.py::WordyTest::test_unknown_operation - AssertionError: Val... | ============================== 25 failed  ==============================
+NEG  37 stub FAILS (good)   0.0s go/exercises/practice/octal :: FAIL	octal [build failed] | FAIL
+NEG  38 stub FAILS (good)   0.4s cpp/exercises/practice/binary-search-tree :: make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/binary-search-tree.dir/all] Error 2 | make: *** [Makefile:91: all] Error 2
+NEG  39 stub FAILS (good)   0.5s javascript/exercises/practice/say :: Time:        0.295 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./say.js|./say.spec.js.
+NEG  40 stub FAILS (good)   0.3s java/exercises/practice/phone-number :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  41 stub FAILS (good)   0.1s rust/exercises/practice/say ::  | error: test failed, to rerun pass `--test say`
+NEG  42 stub FAILS (good)   0.2s python/exercises/practice/go-counting :: !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!! | =============================== 1 error  ===============================
+NEG  43 stub FAILS (good)   0.0s go/exercises/practice/protein-translation :: FAIL	protein [build failed] | FAIL
+NEG  44 stub FAILS (good)   0.5s javascript/exercises/practice/go-counting :: Time:        0.304 s | Ran all test suites matching ./LICENSE|./babel.config.js|./go-counting.js|./go-counting.spec.js|./node_modules|./package-lock.json|./pack
+NEG  45 stub FAILS (good)   0.3s java/exercises/practice/dominoes :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  46 stub FAILS (good)   0.4s cpp/exercises/practice/zebra-puzzle :: make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/zebra-puzzle.dir/all] Error 2 | make: *** [Makefile:91: all] Error 2
+NEG  47 stub FAILS (good)   0.6s javascript/exercises/practice/killer-sudoku-helper :: Time:        0.324 s | Ran all test suites matching ./LICENSE|./babel.config.js|./killer-sudoku-helper.js|./killer-sudoku-helper.spec.js|./node_modules|./packag
+NEG  48 stub FAILS (good)   0.1s rust/exercises/practice/decimal :: For more information about an error, try `rustc --explain E0277`. | error: could not compile `decimal` (test "decimal") due to 119 previous errors
+NEG  49 stub PASSES (BAD)   0.1s go/exercises/practice/ledger :: 
+NEG  50 stub FAILS (good)   0.2s python/exercises/practice/affine-cipher :: FAILED affine_cipher_test.py::AffineCipherTest::test_encode_yes - AssertionEr... | ============================== 16 failed  ==============================
+NEG  51 stub FAILS (good)   0.3s java/exercises/practice/ocr-numbers :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  52 stub FAILS (good)   0.5s javascript/exercises/practice/rectangles :: Time:        0.309 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./rectangles.js|./rectangles.s
+NEG  53 stub FAILS (good)   0.1s go/exercises/practice/two-bucket :: FAIL	twobucket	0.003s | FAIL
+NEG  54 stub FAILS (good)   0.3s java/exercises/practice/sgf-parsing :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  55 stub FAILS (good)   0.4s cpp/exercises/practice/yacht :: make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/yacht.dir/all] Error 2 | make: *** [Makefile:91: all] Error 2
+NEG  56 stub FAILS (good)   0.2s python/exercises/practice/variable-length-quantity :: FAILED variable_length_quantity_test.py::VariableLengthQuantityTest::test_zero | ============================== 26 failed  ==============================
+NEG  57 stub FAILS (good)   0.1s rust/exercises/practice/luhn-from :: For more information about this error, try `rustc --explain E0277`. | error: could not compile `luhn-from` (test "luhn-from") due to 12 previous errors
+NEG  58 stub FAILS (good)   0.5s javascript/exercises/practice/bottle-song :: Time:        0.288 s | Ran all test suites matching ./LICENSE|./babel.config.js|./bottle-song.js|./bottle-song.spec.js|./node_modules|./package-lock.json|./pack
+NEG  59 stub FAILS (good)   0.3s java/exercises/practice/satellite :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  60 stub FAILS (good)   0.1s go/exercises/practice/error-handling :: FAIL	erratum	0.003s | FAIL
+NEG  61 stub FAILS (good)   0.5s javascript/exercises/practice/react :: Time:        0.319 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./react.js|./react.spec.js.
+NEG  62 stub FAILS (good)   0.2s python/exercises/practice/pig-latin :: FAILED pig_latin_test.py::PigLatinTest::test_y_is_treated_like_a_vowel_at_the_end_of_a_consonant_cluster | ============================== 22 failed  ===========
+NEG  63 stub FAILS (good)   0.1s rust/exercises/practice/ocr-numbers ::  | error: test failed, to rerun pass `--test ocr-numbers`
+NEG  64 stub FAILS (good)   0.3s java/exercises/practice/kindergarten-garden :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  65 stub FAILS (good)   0.4s cpp/exercises/practice/linked-list :: make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/linked-list.dir/all] Error 2 | make: *** [Makefile:91: all] Error 2
+NEG  66 stub FAILS (good)   0.0s go/exercises/practice/dominoes :: FAIL	dominoes [build failed] | FAIL
+NEG  67 stub FAILS (good)   0.5s javascript/exercises/practice/list-ops :: Time:        0.321 s | Ran all test suites matching ./LICENSE|./babel.config.js|./list-ops.js|./list-ops.spec.js|./node_modules|./package-lock.json|./package.js
+NEG  68 stub FAILS (good)   0.2s python/exercises/practice/phone-number :: FAILED phone_number_test.py::PhoneNumberTest::test_valid_when_11_digits_and_starting_with_1_even_with_punctuation | ============================== 21 failed  ==
+NEG  69 stub FAILS (good)   0.3s java/exercises/practice/food-chain :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  70 stub FAILS (good)   0.2s rust/exercises/practice/parallel-letter-frequency ::  | error: test failed, to rerun pass `--test parallel-letter-frequency`
+NEG  71 stub FAILS (good)   0.5s javascript/exercises/practice/grade-school :: Time:        0.313 s | Ran all test suites matching ./LICENSE|./babel.config.js|./grade-school.js|./grade-school.spec.js|./node_modules|./package-lock.json|./pa
+NEG  72 stub FAILS (good)   0.1s go/exercises/practice/wordy :: FAIL	wordy	0.003s | FAIL
+NEG  73 stub FAILS (good)   0.4s cpp/exercises/practice/parallel-letter-frequency :: make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/parallel-letter-frequency.dir/all] Error 2 | make: *** [Makefile:91: all] Error 2
+NEG  74 stub FAILS (good)   3.5s java/exercises/practice/pig-latin :: BUILD FAILED in 3s | 3 actionable tasks: 3 executed
+NEG  75 stub FAILS (good)   0.5s javascript/exercises/practice/connect :: Time:        0.29 s | Ran all test suites matching ./LICENSE|./babel.config.js|./connect.js|./connect.spec.js|./node_modules|./package-lock.json|./package.json.
+NEG  76 stub FAILS (good)   0.2s python/exercises/practice/scale-generator :: FAILED scale_generator_test.py::ScaleGeneratorTest::test_simple_major_scale | ============================== 17 failed  ==============================
+NEG  77 stub FAILS (good)   0.1s go/exercises/practice/sublist :: FAIL	sublist	0.003s | FAIL
+NEG  78 stub FAILS (good)   0.1s rust/exercises/practice/macros :: error: could not compile `macros` (test "macros") due to 10 previous errors | warning: build failed, waiting for other jobs to finish...
+NEG  79 stub FAILS (good)   0.3s java/exercises/practice/alphametics :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  80 stub FAILS (good)   0.6s javascript/exercises/practice/phone-number :: Time:        0.32 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./phone-number.js|./phone-numbe
+NEG  81 stub FAILS (good)   0.4s cpp/exercises/practice/allergies :: make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/allergies.dir/all] Error 2 | make: *** [Makefile:91: all] Error 2
+NEG  82 stub FAILS (good)   0.2s python/exercises/practice/tree-building :: FAILED tree_building_test.py::TreeBuildingTest::test_root_node_has_parent - A... | ========================= 6 failed, 7 passed  ==========================
+NEG  83 stub FAILS (good)   0.1s go/exercises/practice/say :: FAIL	say	0.003s | FAIL
+NEG  84 stub FAILS (good)   0.3s java/exercises/practice/pythagorean-triplet :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  85 stub FAILS (good)   0.5s javascript/exercises/practice/house :: Time:        0.302 s | Ran all test suites matching ./LICENSE|./babel.config.js|./house.js|./house.spec.js|./node_modules|./package-lock.json|./package.json.
+NEG  86 stub FAILS (good)   0.1s rust/exercises/practice/alphametics ::  | error: test failed, to rerun pass `--test alphametics`
+NEG  87 stub FAILS (good)   0.3s java/exercises/practice/series :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  88 stub FAILS (good)   0.2s python/exercises/practice/two-bucket :: FAILED two_bucket_test.py::TwoBucketTest::test_with_the_same_buckets_but_a_different_goal_then_it_is_possible | ============================== 9 failed  =======
+NEG  89 stub FAILS (good)   0.6s javascript/exercises/practice/poker :: Time:        0.327 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./poker.js|./poker.spec.js.
+NEG  90 stub FAILS (good)   0.0s go/exercises/practice/react :: FAIL	react [build failed] | FAIL
+NEG  91 stub FAILS (good)   0.4s cpp/exercises/practice/all-your-base :: make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/all-your-base.dir/all] Error 2 | make: *** [Makefile:91: all] Error 2
+NEG  92 stub FAILS (good)   0.3s java/exercises/practice/zebra-puzzle :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  93 stub FAILS (good)   0.1s rust/exercises/practice/xorcism :: For more information about this error, try `rustc --explain E0277`. | error: could not compile `xorcism` (test "xorcism") due to 72 previous errors
+NEG  94 stub FAILS (good)   0.5s javascript/exercises/practice/parallel-letter-frequency :: Time:        0.311 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./parallel-letter-frequency.js
+NEG  95 stub FAILS (good)   0.1s go/exercises/practice/alphametics :: FAIL	alphametics	0.003s | FAIL
+NEG  96 stub FAILS (good)   0.2s python/exercises/practice/zipper :: FAILED zipper_test.py::ZipperTest::test_tree_from_deep_focus - AttributeError... | ============================== 14 failed  ==============================
+NEG  97 stub FAILS (good)   0.3s java/exercises/practice/transpose :: > Run with --scan to get full insights. | > Get more help at https://help.gradle.org.
+NEG  98 stub FAILS (good)   0.5s javascript/exercises/practice/twelve-days :: Time:        0.295 s | Ran all test suites matching ./LICENSE|./babel.config.js|./node_modules|./package-lock.json|./package.json|./twelve-days.js|./twelve-days
+NEG  99 stub FAILS (good)   0.4s cpp/exercises/practice/spiral-matrix :: make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/spiral-matrix.dir/all] Error 2 | make: *** [Makefile:91: all] Error 2

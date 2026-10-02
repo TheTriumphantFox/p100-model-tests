@@ -1,0 +1,12 @@
+String verse(int verse) {
+    StringBuilder sb = new StringBuilder("This is ");
+    for (int i = verse; i >= 1; i--) {
+        sb.append(SUBJECTS[i - 1]);
+        if (i > 1) {
+            sb.append(ACTIONS[i - 1]);
+        } else {
+            sb.append(".");
+        }
+    }
+    return sb.toString();
+}

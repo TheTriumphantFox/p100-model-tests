@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/devstral-patched_q8_0/python/exercises/practice/sgf-parsing",
+    "testcase": "sgf-parsing",
+    "model": "openai/devstral-patched_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 250.37475991249084,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 9941,
+    "completion_tokens": 2062,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "99971da8bbb01f5c82a520df9be9b6a0d0b0c9a4"
+        ],
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "4e260963af5c8fea6b0bc696b1bcda5aa47b8b8a"
+        ]
+    ]
+}

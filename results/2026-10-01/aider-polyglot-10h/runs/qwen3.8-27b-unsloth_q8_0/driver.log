@@ -1,0 +1,56 @@
+[2026-10-01 20:06:14] model=openai/qwen3.8-27b-unsloth_q8_0 range=[0,6) deadline=21:38:11 est=460s/exercise
+[2026-10-01 20:09:00] #  0 PASS [True] javascript/exercises/practice/zipper 167s tok=1667
+[2026-10-01 20:19:58] #  1 fail [False, False] java/exercises/practice/rest-api 657s tok=2082
+[2026-10-01 20:30:04] #  2 fail [False, False] go/exercises/practice/pov 607s tok=1179
+[2026-10-01 20:38:21] #  3 fail [False, False] python/exercises/practice/sgf-parsing 497s tok=1450
+[2026-10-01 20:41:37] #  4 PASS [False, True] rust/exercises/practice/wordy 195s tok=1439
+[2026-10-01 20:54:07] #  5 fail [False, False] cpp/exercises/practice/queen-attack 750s tok=4012
+[2026-10-01 20:54:07] done
+[2026-10-02 01:51:27] model=openai/qwen3.8-27b-unsloth_q8_0 range=[0,25) deadline=06:28:10 est=479s/exercise
+[2026-10-02 01:52:17] #  6 PASS [True] javascript/exercises/practice/triangle 49s tok=410
+[2026-10-02 01:58:56] #  7 fail [False, False] java/exercises/practice/bowling 400s tok=2091
+[2026-10-02 02:01:38] #  8 fail [False, False] go/exercises/practice/palindrome-products 162s tok=1141
+[2026-10-02 02:04:14] #  9 PASS [True] python/exercises/practice/dominoes 156s tok=1312
+[2026-10-02 02:18:10] # 10 fail [False, False] rust/exercises/practice/doubly-linked-list 836s tok=5610
+[2026-10-02 02:23:19] # 11 fail [False, False] javascript/exercises/practice/transpose 308s tok=2993
+[2026-10-02 02:29:55] # 12 fail [False, False] java/exercises/practice/react 396s tok=3087
+[2026-10-02 02:47:30] # 13 PASS [False, True] cpp/exercises/practice/robot-name 1055s tok=5834
+[2026-10-02 02:49:45] # 14 PASS [True] go/exercises/practice/crypto-square 135s tok=879
+[2026-10-02 02:52:48] # 15 fail [False, False] javascript/exercises/practice/resistor-color-trio 184s tok=1026
+[2026-10-02 02:58:08] # 16 fail [False, False] python/exercises/practice/food-chain 319s tok=2239
+[2026-10-02 03:01:55] # 17 PASS [True] java/exercises/practice/bottle-song 227s tok=1404
+[2026-10-02 03:04:12] # 18 fail [False, False] rust/exercises/practice/accumulate 137s tok=832
+[2026-10-02 03:18:32] # 19 fail [False, False] go/exercises/practice/book-store 861s tok=0
+[2026-10-02 03:33:40] # 20 fail [False, False] javascript/exercises/practice/two-bucket 908s tok=1447
+[2026-10-02 03:40:45] # 21 fail [False, False] java/exercises/practice/ledger 424s tok=3679
+[2026-10-02 04:00:53] # 22 PASS [False, True] cpp/exercises/practice/diamond 1208s tok=7140
+[2026-10-02 04:04:23] # 23 PASS [False, True] python/exercises/practice/grade-school 209s tok=1288
+[2026-10-02 04:07:56] # 24 PASS [False, True] javascript/exercises/practice/palindrome-products 213s tok=1163
+[2026-10-02 04:07:56] done
+[2026-10-02 06:50:26] model=openai/qwen3.8-27b-unsloth_q8_0 range=[0,50) deadline=10:00:00 est=442s/exercise
+[2026-10-02 06:59:44] # 25 fail [False, False] go/exercises/practice/connect 558s tok=5163
+[2026-10-02 07:11:55] # 26 PASS [False, True] java/exercises/practice/mazy-mice 731s tok=2626
+[2026-10-02 07:21:38] # 27 PASS [False, True] rust/exercises/practice/variable-length-quantity 583s tok=4681
+[2026-10-02 07:27:51] # 28 fail [False, False] python/exercises/practice/rest-api 373s tok=2356
+[2026-10-02 07:29:30] # 29 PASS [True] javascript/exercises/practice/sum-of-multiples 98s tok=267
+[2026-10-02 07:40:09] # 30 fail [False, False] cpp/exercises/practice/meetup 639s tok=4740
+[2026-10-02 07:44:44] # 31 fail [False, False] java/exercises/practice/rational-numbers 275s tok=2167
+[2026-10-02 07:52:44] # 32 fail [False, False] go/exercises/practice/scale-generator 479s tok=3632
+[2026-10-02 07:55:08] # 33 PASS [True] rust/exercises/practice/pig-latin 144s tok=852
+[2026-10-02 07:57:19] # 34 PASS [True] javascript/exercises/practice/pig-latin 131s tok=977
+[2026-10-02 08:01:57] # 35 fail [False, False] java/exercises/practice/house 278s tok=1921
+[2026-10-02 08:06:32] # 36 fail [False, False] python/exercises/practice/wordy 275s tok=1528
+[2026-10-02 08:10:48] # 37 PASS [False, True] go/exercises/practice/octal 255s tok=2029
+[2026-10-02 08:25:31] # 38 fail [False, False] cpp/exercises/practice/binary-search-tree 883s tok=4614
+[2026-10-02 08:29:13] # 39 PASS [False, True] javascript/exercises/practice/say 222s tok=1687
+[2026-10-02 08:31:47] # 40 fail [False, False] java/exercises/practice/phone-number 154s tok=876
+[2026-10-02 08:35:17] # 41 fail [False, False] rust/exercises/practice/say 210s tok=1560
+[2026-10-02 08:39:29] # 42 fail [False, False] python/exercises/practice/go-counting 253s tok=1667
+[2026-10-02 08:43:25] # 43 fail [False, False] go/exercises/practice/protein-translation 236s tok=1730
+[2026-10-02 08:48:23] # 44 fail [False, False] javascript/exercises/practice/go-counting 298s tok=2044
+[2026-10-02 08:52:04] # 45 fail [False, False] java/exercises/practice/dominoes 221s tok=1335
+[2026-10-02 09:17:24] # 46 fail [False, False] cpp/exercises/practice/zebra-puzzle 1520s tok=10631
+[2026-10-02 09:20:27] # 47 fail [False, False] javascript/exercises/practice/killer-sudoku-helper 183s tok=1183
+[2026-10-02 09:31:17] # 48 fail [False, False] rust/exercises/practice/decimal 650s tok=1582
+[2026-10-02 09:39:49] # 49 fail [False, False] go/exercises/practice/ledger 512s tok=4699
+[2026-10-02 09:39:49] done

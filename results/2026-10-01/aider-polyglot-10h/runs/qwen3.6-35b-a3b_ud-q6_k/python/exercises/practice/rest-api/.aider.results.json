@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.6-35b-a3b_ud-q6_k/python/exercises/practice/rest-api",
+    "testcase": "rest-api",
+    "model": "openai/qwen3.6-35b-a3b_ud-q6_k",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 89.14074945449829,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 8758,
+    "completion_tokens": 2869,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "5e9e4ce40f57442e0b5322dd4605bd79e9f87c42"
+        ],
+        [
+            "19fb495840b602527894a92f2c6f1be3120dd77c",
+            "d0213fc3e965e78bc9adb4583f9573720a94cb84"
+        ]
+    ]
+}

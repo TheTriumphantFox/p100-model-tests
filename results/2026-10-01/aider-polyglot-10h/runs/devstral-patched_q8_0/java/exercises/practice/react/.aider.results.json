@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/devstral-patched_q8_0/java/exercises/practice/react",
+    "testcase": "react",
+    "model": "openai/devstral-patched_q8_0",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 129.53188514709473,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 4604,
+    "completion_tokens": 1261,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "d6cf03dee7b5bd4e69fa789e1f1f59c5e90362d7"
+        ],
+        [
+            "6051a6059e972196bf73a79354ef21980458aa13",
+            "f025424ab771f386f4741bd1fbd3879477beb9f1"
+        ]
+    ]
+}
