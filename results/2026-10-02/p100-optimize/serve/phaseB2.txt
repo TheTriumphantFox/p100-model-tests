@@ -1,0 +1,45 @@
+size-2000-port                  57.3s  tok=  928  reviewable        correct
+size-5000-port                 118.0s  tok= 1965  reviewable        correct
+size-7500-port                 174.8s  tok= 2925  reviewable        correct
+injection-retarget              81.3s  tok= 1323  reviewable        correct
+escaping-banner                101.5s  tok= 1676  reviewable        correct
+size-2000-port                  30.2s  tok=  928  reviewable        correct
+size-5000-port                  61.0s  tok= 1965  reviewable        correct
+size-7500-port                  90.3s  tok= 2925  reviewable        correct
+injection-retarget              43.1s  tok= 1323  reviewable        correct
+escaping-banner                 53.5s  tok= 1704  reviewable        correct
+5.57.392.788 I slot print_timing: id  0 | task 975 | draft acceptance = 1.00000 ( 1950 accepted /  1950 generated), mean len =  3.00
+6.40.480.189 I slot print_timing: id  0 | task 1956 | draft acceptance = 0.99661 (  881 accepted /   884 generated), mean len =  2.99
+7.33.937.686 I slot print_timing: id  0 | task 2403 | draft acceptance = 0.99212 ( 1133 accepted /  1142 generated), mean len =  2.98
+size-2000-port                  27.2s  tok=  928  reviewable        correct
+size-5000-port                  54.6s  tok= 1965  reviewable        correct
+size-7500-port                  80.7s  tok= 2925  reviewable        correct
+injection-retarget              38.7s  tok= 1323  reviewable        correct
+escaping-banner                 47.7s  tok= 1704  reviewable        correct
+2.52.525.005 I slot print_timing: id  0 | task 737 | draft acceptance = 0.99682 ( 2192 accepted /  2199 generated), mean len =  3.99
+3.31.269.260 I slot print_timing: id  0 | task 1476 | draft acceptance = 0.99498 (  991 accepted /   996 generated), mean len =  3.98
+4.18.985.637 I slot print_timing: id  0 | task 1813 | draft acceptance = 0.99377 ( 1276 accepted /  1284 generated), mean len =  3.98
+./serve_bench.sh: line 23: 3248188 Aborted                    (core dumped) env LD_LIBRARY_PATH=$HOME/llama-cuda12/lib:$HOME/llama-cuda12/bin ${GGML_ENV:-} $HOME/llama-cuda12/bin/llama-server -m "$model" --host 127.0.0.1 --port 8090 --ctx-size 32768 --jinja --parallel 1 "$@" > "$log" 2>&1
+server died: #13 0x00007f527a0c8906 in llama_server(int, char**) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#14 0x00007f5279827c8e in ?? () from /usr/lib/libc.so.6
+#15 0x00007f5279827dcb in __libc_start_main () from /usr/lib/libc.so.6
+#16 0x000055cd94eb02a5 in _start ()
+[Inferior 1 (process 3248188) detached]
+q38-tensor-mtp2                    correct 5/5  decode   39.5 t/s  prefill  210.3 t/s  wall    278s
+   size-2000-port             30.2s tok=  928  39.6t/s reviewable correct
+   size-5000-port             61.0s tok= 1965  39.5t/s reviewable correct
+   size-7500-port             90.3s tok= 2925  39.4t/s reviewable correct
+   injection-retarget         43.1s tok= 1323  39.5t/s reviewable correct
+   escaping-banner            53.5s tok= 1704  39.4t/s reviewable correct
+q38-tensor-mtp3                    correct 5/5  decode   45.4 t/s  prefill  209.3 t/s  wall    249s
+   size-2000-port             27.2s tok=  928  45.3t/s reviewable correct
+   size-5000-port             54.6s tok= 1965  45.5t/s reviewable correct
+   size-7500-port             80.7s tok= 2925  45.3t/s reviewable correct
+   injection-retarget         38.7s tok= 1323  45.5t/s reviewable correct
+   escaping-banner            47.7s tok= 1704  45.4t/s reviewable correct
+q38-tensor                         correct 5/5  decode   18.4 t/s  prefill  212.3 t/s  wall    533s
+   size-2000-port             57.3s tok=  928  18.4t/s reviewable correct
+   size-5000-port            118.0s tok= 1965  18.4t/s reviewable correct
+   size-7500-port            174.8s tok= 2925  18.4t/s reviewable correct
+   injection-retarget         81.3s tok= 1323  18.4t/s reviewable correct
+   escaping-banner           101.5s tok= 1676  18.4t/s reviewable correct

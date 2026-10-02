@@ -1,0 +1,8 @@
+qwen35 27B Q8_0              sm=tensor fa=1 kv=f16/f16 ub=512 pp512            217.46 ± 0.48
+qwen35 27B Q8_0              sm=tensor fa=1 kv=f16/f16 ub=512 tg128             18.59 ± 0.01
+qwen35 27B Q8_0              sm=tensor fa=1 kv=f16/f16 ub=512 pp512@d8192      210.42 ± 0.68
+qwen35 27B Q8_0              sm=tensor fa=1 kv=f16/f16 ub=512 tg128@d8192       18.30 ± 0.02
+qwen35 27B Q8_0              sm=tensor fa=1 kv=f16/f16 ub=512 pp512            217.45 ± 1.00
+qwen35 27B Q8_0              sm=tensor fa=1 kv=f16/f16 ub=512 tg128             18.57 ± 0.01
+qwen35 27B Q8_0              sm=layer  fa=1 kv=f16/f16 ub=512 pp512@d8192      136.69 ± 0.17
+qwen35 27B Q8_0              sm=layer  fa=1 kv=f16/f16 ub=512 tg128@d8192       10.72 ± 0.00

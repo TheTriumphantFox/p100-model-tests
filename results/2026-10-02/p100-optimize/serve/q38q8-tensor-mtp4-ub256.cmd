@@ -1,0 +1,1 @@
+# 2026-10-02T10:10:46-04:00 NCCL_P2P_DISABLE=1 llama-server -m /var/lib/ollama/candidates-r2/Qwen3.8-27B-Q8_0.gguf -fa on -sm tensor -ub 256 -md /var/lib/ollama/candidates-r2/mtp-Qwen3.8-27B-Q8_0.gguf --spec-type draft-mtp --spec-draft-n-max 4

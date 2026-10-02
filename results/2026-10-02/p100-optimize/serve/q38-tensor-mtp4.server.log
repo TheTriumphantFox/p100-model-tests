@@ -1,0 +1,87 @@
+0.00.007.520 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.007.785 W srv  llama_server: -----------------
+0.00.007.786 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.007.787 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.007.787 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.007.787 W srv  llama_server: -----------------
+0.00.009.107 I srv    load_model: loading model '/var/lib/ollama/candidates-r2/Qwen3.8-27B-Q8_0.gguf'
+0.00.009.214 W common_fit_params: failed to fit params to free device memory: llama_params_fit is not implemented for SPLIT_MODE_TENSOR, abort
+0.07.190.197 I cmn          init: llama threadpool init, n_threads = 6
+0.07.315.773 I common_speculative_init_result: loading draft model '/var/lib/ollama/candidates-r2/mtp-Qwen3.8-27B-Q8_0.gguf'
+0.08.006.551 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 32768, kv_unified = 'false'
+0.08.006.628 W set_sampler: backend sampling not supported with SPLIT_MODE_TENSOR; using CPU
+0.08.006.628 W spec common_specu: backend offload failed for seq_id=0; using CPU sampler
+0.08.027.746 W srv          init: chat template supports preserving reasoning, it is enabled by default (may use more tokens, disable via --no-reasoning-preserve)
+0.08.027.780 I srv  llama_server: model loaded
+0.08.027.783 I srv  llama_server: listening on http://127.0.0.1:8090
+0.10.077.445 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+0.10.077.662 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.11.832.012 E CUDA error: out of memory
+0.11.832.016 E   current device: 0, in function alloc at /src/ggml/src/ggml-cuda/ggml-cuda.cu:588
+0.11.832.016 E   cuMemCreate(&handle, reserve_size, &prop, 0)
+/src/ggml/src/ggml-cuda/ggml-cuda.cu:108: CUDA error
+⚠️ warning: The current terminal doesn't support styling.  Styled output might not appear as expected.
+[New LWP 3264050 (id 2)]
+[New LWP 3264045 (id 3)]
+[New LWP 3264044 (id 4)]
+[New LWP 3264043 (id 5)]
+[New LWP 3264042 (id 6)]
+[New LWP 3264036 (id 7)]
+[New LWP 3264035 (id 8)]
+[New LWP 3264034 (id 9)]
+[New LWP 3264033 (id 10)]
+[New LWP 3263826 (id 11)]
+[New LWP 3263824 (id 12)]
+[New LWP 3263817 (id 13)]
+[New LWP 3263816 (id 14)]
+[New LWP 3263815 (id 15)]
+[New LWP 3263814 (id 16)]
+[New LWP 3263813 (id 17)]
+[New LWP 3263812 (id 18)]
+[New LWP 3263811 (id 19)]
+[New LWP 3263810 (id 20)]
+[New LWP 3263809 (id 21)]
+[New LWP 3263808 (id 22)]
+[New LWP 3263807 (id 23)]
+[New LWP 3263806 (id 24)]
+[New LWP 3263805 (id 25)]
+[New LWP 3263804 (id 26)]
+[New LWP 3263803 (id 27)]
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.archlinux.org>
+  <https://debuginfod.cachyos.org>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/libthread_db.so.1".
+[Switching to thread 1 (Thread 0x7f659cb27000 (LWP 3263798))]
+0x00007f659ccb6132 in ?? () from /usr/lib/libc.so.6
+#0  0x00007f659ccb6132 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f659cd2e512 in wait4 () from /usr/lib/libc.so.6
+#2  0x00007f659cb47853 in ggml_print_backtrace () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#3  0x00007f659cb479fb in ggml_abort () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#4  0x00007f6595269507 in ggml_cuda_error(char const*, char const*, char const*, int, char const*) () from /home/hm/llama-cuda12/lib/libggml-cuda.so.0
+#5  0x00007f659528493c in ggml_cuda_pool_vmm::alloc(unsigned long, unsigned long*) () from /home/hm/llama-cuda12/lib/libggml-cuda.so.0
+#6  0x00007f6595273276 in void ggml_cuda_mul_mat_cublas_impl<(ggml_type)1>(ggml_backend_cuda_context&, ggml_tensor const*, ggml_tensor const*, ggml_tensor*) () from /home/hm/llama-cuda12/lib/libggml-cuda.so.0
+#7  0x00007f65952809b9 in ggml_backend_cuda_graph_compute(ggml_backend*, ggml_cgraph*) () from /home/hm/llama-cuda12/lib/libggml-cuda.so.0
+#8  0x00007f659cb7a15d in ggml_backend_meta_graph_compute(ggml_backend*, ggml_cgraph*) () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#9  0x00007f659cb66ea7 in ggml_backend_sched_graph_compute_async () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#10 0x00007f659c3f0261 in llama_context::graph_compute(ggml_cgraph*, bool) () from /home/hm/llama-cuda12/lib/libllama.so.0
+#11 0x00007f659c3f3ed6 in llama_context::process_ubatch(llama_ubatch const&, llm_graph_type, llama_memory_context_i*, ggml_status&) () from /home/hm/llama-cuda12/lib/libllama.so.0
+#12 0x00007f659c3fbafd in llama_context::decode(llama_batch const&) () from /home/hm/llama-cuda12/lib/libllama.so.0
+#13 0x00007f659c3fcf8f in llama_decode () from /home/hm/llama-cuda12/lib/libllama.so.0
+#14 0x00007f659c8fc1e6 in common_speculative_impl_draft_mtp::process(llama_batch const&) () from /home/hm/llama-cuda12/lib/libllama-common.so.0
+#15 0x00007f659c8edd78 in common_speculative_process(common_speculative*, llama_batch const&) () from /home/hm/llama-cuda12/lib/libllama-common.so.0
+#16 0x00007f659d55162f in std::_Function_handler<void (), server_context_impl::decode(int&, int, llama_batch&)::{lambda()#2}>::_M_invoke(std::_Any_data const&) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#17 0x00007f659d512076 in server_queue::yield_to_queue(std::function<void ()>&&) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#18 0x00007f659d566862 in server_context_impl::decode(int&, int, llama_batch&) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#19 0x00007f659d567e21 in server_context_impl::update_slots() () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#20 0x00007f659d512cb5 in server_queue::start_loop(long) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#21 0x00007f659d4c78c0 in llama_server(common_params&, int, char**) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#22 0x00007f659d4c8906 in llama_server(int, char**) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#23 0x00007f659cc27c8e in ?? () from /usr/lib/libc.so.6
+#24 0x00007f659cc27dcb in __libc_start_main () from /usr/lib/libc.so.6
+#25 0x000055773bc8e2a5 in _start ()
+[Inferior 1 (process 3263798) detached]

@@ -207,6 +207,17 @@ second try (aider's own harness, thinking off, one run). **Incumbent qwen3.6-27b
 each — devstral lost 12–0 to the incumbent. Runner validated both ways first (96/100 references
 pass, 99/100 stubs fail). Resumable: a later run continues from exercise 50 of `order.txt`.
 
+### 2026-10-02 — tensor split and MTP on planner edits
+
+- `2026-10-02/p100-optimize/REPORT.md` — results and caveats
+- `bench.sh` (guarded llama-bench wrapper), `serve_bench.sh` (single-model server on :8090 + planner-bench subset), `summ.py`, `phaseB4.sh`, `phaseB5.sh`; raw output in `raw/` and `serve/`
+
+`-sm tensor` hangs on these cards (the 09-18 "deadlock") until `NCCL_P2P_DISABLE=1`; then it
+beats layer split everywhere: **planner 35B-A3B 54 → 68 tok/s, dense 27Bs ~11 → 19, gpt-oss
+67 → 100**, prefill +50–60 %, same VRAM. **Qwen3.8-27B Q8_0 + tensor + MTP n-max 4 (`-ub 256`)
+decodes at ~49 tok/s on planner edits, 9/9 correct, ~99 % acceptance** (15.5 KiB in 151 s, was
+598 s). Speculation of any kind slows the MoE planner. q8_0 KV costs the planner 12 % at 16k.
+
 ## Full-stack test rig
 
 `rig/` runs requests through the whole flow instead of one model on one task:

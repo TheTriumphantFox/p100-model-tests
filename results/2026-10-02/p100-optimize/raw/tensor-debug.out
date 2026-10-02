@@ -1,0 +1,37 @@
+| model                          |       size |     params | backend    | ngl |     sm |  fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -----: | --: | --------------: | -------------------: |
+cachyos-x8664:3045411:3045411 [1] NCCL INFO cudaDriverVersion 13000
+cachyos-x8664:3045411:3045411 [1] NCCL INFO Bootstrap : Using enp6s0:<lan-ip><0>
+cachyos-x8664:3045411:3045411 [0] NCCL INFO NCCL version 2.23.4+cuda12.6
+cachyos-x8664:3045411:3045729 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal network plugin.
+cachyos-x8664:3045411:3045729 [0] NCCL INFO NET/IB : No device found.
+cachyos-x8664:3045411:3045729 [0] NCCL INFO NET/Socket : Using [0]enp6s0:<lan-ip><0> [1]tailscale0:<tailscale-ip><0> [2]proton0:<vpn-ip><0> [3]ipv6leakintrf0:<ipv6><0>
+cachyos-x8664:3045411:3045729 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so.
+cachyos-x8664:3045411:3045729 [0] NCCL INFO Using network Socket
+cachyos-x8664:3045411:3045730 [1] NCCL INFO Using network Socket
+cachyos-x8664:3045411:3045730 [1] NCCL INFO ncclCommInitAll comm 0x559fc87ee360 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId 16000 commId 0xaca20f41953be5dd - Init START
+cachyos-x8664:3045411:3045729 [0] NCCL INFO ncclCommInitAll comm 0x559fc86fbb70 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 1000 commId 0xaca20f41953be5dd - Init START
+cachyos-x8664:3045411:3045730 [1] NCCL INFO Bootstrap timings total 0.007079 (create 0.006673, send 0.000109, recv 0.000131, ring 0.000017, delay 0.000000)
+cachyos-x8664:3045411:3045729 [0] NCCL INFO Bootstrap timings total 0.007070 (create 0.006672, send 0.000100, recv 0.000192, ring 0.000017, delay 0.000000)
+cachyos-x8664:3045411:3045730 [1] NCCL INFO comm 0x559fc87ee360 rank 1 nRanks 2 nNodes 1 localRanks 2 localRank 1 MNNVL 0
+cachyos-x8664:3045411:3045729 [0] NCCL INFO comm 0x559fc86fbb70 rank 0 nRanks 2 nNodes 1 localRanks 2 localRank 0 MNNVL 0
+cachyos-x8664:3045411:3045730 [1] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] -1/-1/-1->1->0
+cachyos-x8664:3045411:3045729 [0] NCCL INFO Channel 00/02 : 0 1
+cachyos-x8664:3045411:3045730 [1] NCCL INFO P2P Chunksize set to 131072
+cachyos-x8664:3045411:3045729 [0] NCCL INFO Channel 01/02 : 0 1
+cachyos-x8664:3045411:3045729 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1
+cachyos-x8664:3045411:3045729 [0] NCCL INFO P2P Chunksize set to 131072
+cachyos-x8664:3045411:3045731 [1] NCCL INFO [Proxy Service] Device 1 CPU core 4
+cachyos-x8664:3045411:3045732 [0] NCCL INFO [Proxy Service] Device 0 CPU core 3
+cachyos-x8664:3045411:3045733 [1] NCCL INFO [Proxy Service UDS] Device 1 CPU core 2
+cachyos-x8664:3045411:3045734 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 4
+cachyos-x8664:3045411:3045730 [1] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+cachyos-x8664:3045411:3045730 [1] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+cachyos-x8664:3045411:3045729 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+cachyos-x8664:3045411:3045729 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+cachyos-x8664:3045411:3045729 [0] NCCL INFO CC Off, Multi-GPU CC Off, workFifoBytes 1048576
+cachyos-x8664:3045411:3045730 [1] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so libnccl-net.so. Using internal tuner plugin.
+cachyos-x8664:3045411:3045730 [1] NCCL INFO ncclCommInitAll comm 0x559fc87ee360 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId 16000 commId 0xaca20f41953be5dd - Init COMPLETE
+cachyos-x8664:3045411:3045730 [1] NCCL INFO Init timings - ncclCommInitAll: rank 1 nranks 2 total 0.09 (kernels 0.08, alloc 0.01, bootstrap 0.01, allgathers 0.00, topo 0.00, graphs 0.00, connections 0.00, rest 0.00)
+cachyos-x8664:3045411:3045729 [0] NCCL INFO ncclCommInitAll comm 0x559fc86fbb70 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 1000 commId 0xaca20f41953be5dd - Init COMPLETE
+cachyos-x8664:3045411:3045729 [0] NCCL INFO Init timings - ncclCommInitAll: rank 0 nranks

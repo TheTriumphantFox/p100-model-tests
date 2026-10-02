@@ -1,0 +1,1 @@
+# 2026-10-02T10:34:37-04:00  llama-server -m /var/lib/ollama/candidates-r2/Qwen3.8-27B-Q4_K_M.gguf -fa on -sm layer -md /var/lib/ollama/candidates-r2/dflash-Qwen3.8-27B-Q8_0.gguf --spec-type draft-dflash --spec-draft-n-max 8

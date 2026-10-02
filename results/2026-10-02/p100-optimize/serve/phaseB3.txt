@@ -1,0 +1,21 @@
+ABORT size-2000-port: router unreachable (Remote end closed connection without response)
+ABORT size-2000-port: router unreachable (Remote end closed connection without response)
+ABORT size-2000-port: router unreachable (Remote end closed connection without response)
+q38-tensor-mtp2                    correct 5/5  decode   39.5 t/s  prefill  210.3 t/s  wall    278s
+   size-2000-port             30.2s tok=  928  39.6t/s reviewable correct
+   size-5000-port             61.0s tok= 1965  39.5t/s reviewable correct
+   size-7500-port             90.3s tok= 2925  39.4t/s reviewable correct
+   injection-retarget         43.1s tok= 1323  39.5t/s reviewable correct
+   escaping-banner            53.5s tok= 1704  39.4t/s reviewable correct
+q38-tensor-mtp3                    correct 5/5  decode   45.4 t/s  prefill  209.3 t/s  wall    249s
+   size-2000-port             27.2s tok=  928  45.3t/s reviewable correct
+   size-5000-port             54.6s tok= 1965  45.5t/s reviewable correct
+   size-7500-port             80.7s tok= 2925  45.3t/s reviewable correct
+   injection-retarget         38.7s tok= 1323  45.5t/s reviewable correct
+   escaping-banner            47.7s tok= 1704  45.4t/s reviewable correct
+q38-tensor                         correct 5/5  decode   18.4 t/s  prefill  212.3 t/s  wall    533s
+   size-2000-port             57.3s tok=  928  18.4t/s reviewable correct
+   size-5000-port            118.0s tok= 1965  18.4t/s reviewable correct
+   size-7500-port            174.8s tok= 2925  18.4t/s reviewable correct
+   injection-retarget         81.3s tok= 1323  18.4t/s reviewable correct
+   escaping-banner           101.5s tok= 1676  18.4t/s reviewable correct

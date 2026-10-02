@@ -1,0 +1,24 @@
+qwen35moe 35B.A3B Q6_K       sm=layer  fa=1 kv=f16/f16 ub=512 pp512            467.75 ± 3.20
+qwen35moe 35B.A3B Q6_K       sm=layer  fa=1 kv=f16/f16 ub=512 tg128             54.05 ± 0.02
+qwen35moe 35B.A3B Q6_K       sm=layer  fa=1 kv=f16/f16 ub=512 pp512@d16384     372.90 ± 1.50
+qwen35moe 35B.A3B Q6_K       sm=layer  fa=1 kv=f16/f16 ub=512 tg128@d16384      51.92 ± 0.01
+qwen35moe 35B.A3B Q6_K       sm=layer  fa=1 kv=q8_0/q8_0 ub=512 pp512            467.53 ± 3.71
+qwen35moe 35B.A3B Q6_K       sm=layer  fa=1 kv=q8_0/q8_0 ub=512 tg128             52.64 ± 0.01
+qwen35moe 35B.A3B Q6_K       sm=layer  fa=1 kv=q8_0/q8_0 ub=512 pp512@d16384     372.17 ± 1.58
+qwen35moe 35B.A3B Q6_K       sm=layer  fa=1 kv=q8_0/q8_0 ub=512 tg128@d16384      45.84 ± 0.03
+qwen35moe 35B.A3B Q6_K       sm=tensor fa=1 kv=f16/f16 ub=512 pp512            731.79 ± 3.77
+qwen35moe 35B.A3B Q6_K       sm=tensor fa=1 kv=f16/f16 ub=512 tg128             67.69 ± 0.11
+qwen35moe 35B.A3B Q6_K       sm=tensor fa=1 kv=f16/f16 ub=512 pp512@d16384     599.89 ± 4.57
+qwen35moe 35B.A3B Q6_K       sm=tensor fa=1 kv=f16/f16 ub=512 tg128@d16384      65.23 ± 0.23
+qwen35 27B Q5_K - Medium     sm=layer  fa=1 kv=f16/f16 ub=512 pp512            143.32 ± 0.10
+qwen35 27B Q5_K - Medium     sm=layer  fa=1 kv=f16/f16 ub=512 tg128             11.11 ± 0.00
+qwen35 27B Q5_K - Medium     sm=tensor fa=1 kv=f16/f16 ub=512 pp512            218.04 ± 0.32
+qwen35 27B Q5_K - Medium     sm=tensor fa=1 kv=f16/f16 ub=512 tg128             18.79 ± 0.01
+gpt-oss 20B Q8_0             sm=layer  fa=1 kv=f16/f16 ub=512 pp512            506.16 ± 7.67
+gpt-oss 20B Q8_0             sm=layer  fa=1 kv=f16/f16 ub=512 tg128             67.03 ± 0.01
+gpt-oss 20B Q8_0             sm=tensor fa=1 kv=f16/f16 ub=512 pp512            842.29 ± 3.23
+gpt-oss 20B Q8_0             sm=tensor fa=1 kv=f16/f16 ub=512 tg128            100.38 ± 0.04
+qwen35 27B Q4_K - Medium     sm=layer  fa=1 kv=f16/f16 ub=512 pp512            140.50 ± 0.25
+qwen35 27B Q4_K - Medium     sm=layer  fa=1 kv=f16/f16 ub=512 tg128             12.36 ± 0.00
+qwen35 27B Q4_K - Medium     sm=tensor fa=1 kv=f16/f16 ub=512 pp512            204.96 ± 0.42
+qwen35 27B Q4_K - Medium     sm=tensor fa=1 kv=f16/f16 ub=512 tg128             20.51 ± 0.01

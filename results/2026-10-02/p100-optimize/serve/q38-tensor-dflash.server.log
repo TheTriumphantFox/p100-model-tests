@@ -1,0 +1,64 @@
+0.00.006.390 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.006.612 W srv  llama_server: -----------------
+0.00.006.614 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.006.614 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.006.614 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.006.614 W srv  llama_server: -----------------
+0.00.007.832 I srv    load_model: loading model '/var/lib/ollama/candidates-r2/Qwen3.8-27B-Q8_0.gguf'
+0.00.007.924 W common_fit_params: failed to fit params to free device memory: llama_params_fit is not implemented for SPLIT_MODE_TENSOR, abort
+0.07.212.608 I cmn          init: llama threadpool init, n_threads = 6
+0.07.342.989 I common_speculative_init_result: loading draft model '/var/lib/ollama/candidates-r2/dflash-Qwen3.8-27B-Q8_0.gguf'
+0.19.166.555 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 1140.55 MiB on device 0: cudaMalloc failed: out of memory
+0.19.166.560 E alloc_tensor_range: failed to allocate CUDA0 buffer of size 1195955968
+/src/ggml/src/ggml-backend-meta.cpp:1760: GGML_ASSERT(meta_buf_ctx->bufs[i]) failed
+⚠️ warning: The current terminal doesn't support styling.  Styled output might not appear as expected.
+[New LWP 3248519 (id 2)]
+[New LWP 3248518 (id 3)]
+[New LWP 3248517 (id 4)]
+[New LWP 3248516 (id 5)]
+[New LWP 3248216 (id 6)]
+[New LWP 3248214 (id 7)]
+[New LWP 3248208 (id 8)]
+[New LWP 3248207 (id 9)]
+[New LWP 3248206 (id 10)]
+[New LWP 3248205 (id 11)]
+[New LWP 3248204 (id 12)]
+[New LWP 3248203 (id 13)]
+[New LWP 3248202 (id 14)]
+[New LWP 3248201 (id 15)]
+[New LWP 3248200 (id 16)]
+[New LWP 3248199 (id 17)]
+[New LWP 3248198 (id 18)]
+[New LWP 3248197 (id 19)]
+[New LWP 3248196 (id 20)]
+[New LWP 3248195 (id 21)]
+[New LWP 3248194 (id 22)]
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.archlinux.org>
+  <https://debuginfod.cachyos.org>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/libthread_db.so.1".
+[Switching to thread 1 (Thread 0x7f5279f6f000 (LWP 3248188))]
+0x00007f52798b6132 in ?? () from /usr/lib/libc.so.6
+#0  0x00007f52798b6132 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f527992e512 in wait4 () from /usr/lib/libc.so.6
+#2  0x00007f5279b47853 in ggml_print_backtrace () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#3  0x00007f5279b479fb in ggml_abort () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#4  0x00007f5279b7650c in ggml_backend_meta_alloc_ctx_tensors_from_buft () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#5  0x00007f52790cab1f in llama_model_base::load_tensors(llama_model_loader&) () from /home/hm/llama-cuda12/lib/libllama.so.0
+#6  0x00007f5278fcf11c in llama_model_load(gguf_context*, void (*)(ggml_tensor*, void*), void*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, _IO_FILE*, llama_model_params&) () from /home/hm/llama-cuda12/lib/libllama.so.0
+#7  0x00007f5278fd0215 in llama_model_load_from_file_impl(gguf_context*, void (*)(ggml_tensor*, void*), void*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, _IO_FILE*, llama_model_params) () from /home/hm/llama-cuda12/lib/libllama.so.0
+#8  0x00007f5278fd05bd in llama_model_load_from_file () from /home/hm/llama-cuda12/lib/libllama.so.0
+#9  0x00007f52794ed7af in common_speculative_init_result::common_speculative_init_result(common_params&, llama_model*, llama_context*) () from /home/hm/llama-cuda12/lib/libllama-common.so.0
+#10 0x00007f52794edaf6 in common_speculative_init_from_params(common_params&, llama_model*, llama_context*) () from /home/hm/llama-cuda12/lib/libllama-common.so.0
+#11 0x00007f527a16dca5 in server_context_impl::load_model(common_params&) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#12 0x00007f527a0c7497 in llama_server(common_params&, int, char**) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#13 0x00007f527a0c8906 in llama_server(int, char**) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#14 0x00007f5279827c8e in ?? () from /usr/lib/libc.so.6
+#15 0x00007f5279827dcb in __libc_start_main () from /usr/lib/libc.so.6
+#16 0x000055cd94eb02a5 in _start ()
+[Inferior 1 (process 3248188) detached]

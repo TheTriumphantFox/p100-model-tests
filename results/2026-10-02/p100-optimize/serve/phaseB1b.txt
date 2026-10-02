@@ -1,0 +1,12 @@
+size-5000-port                  62.9s  tok= 1965  reviewable        correct
+size-15500-port                171.9s  tok= 6035  reviewable        correct
+escaping-banner                 55.2s  tok= 1676  reviewable        correct
+1.10.942.371 I slot print_timing: id  0 | task 0 | draft acceptance = 0.45398 ( 1174 accepted /  2586 generated), mean len =  4.60
+4.02.874.602 I slot print_timing: id  0 | task 796 | draft acceptance = 0.54863 ( 4225 accepted /  7701 generated), mean len =  5.37
+4.58.034.768 I slot print_timing: id  0 | task 2613 | draft acceptance = 0.41733 (  896 accepted /  2147 generated), mean len =  4.31
+size-5000-port                  61.9s  tok= 1965  reviewable        correct
+size-15500-port                162.8s  tok= 6035  reviewable        correct
+escaping-banner                 54.9s  tok= 1676  reviewable        correct
+1.10.007.800 I slot print_timing: id  0 | task 0 | draft acceptance = 0.35135 ( 1196 accepted /  3404 generated), mean len =  6.49
+3.52.808.109 I slot print_timing: id  0 | task 773 | draft acceptance = 0.48468 ( 4573 accepted /  9435 generated), mean len =  8.67
+4.47.691.615 I slot print_timing: id  0 | task 2241 | draft acceptance = 0.29840 (  877 accepted /  2939 generated), mean len =  5.59

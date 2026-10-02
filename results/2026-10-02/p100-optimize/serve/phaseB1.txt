@@ -1,0 +1,82 @@
+size-2000-port                  20.9s  tok=  928  reviewable        correct
+size-5000-port                  42.3s  tok= 1968  reviewable        correct
+size-7500-port                  62.1s  tok= 2926  reviewable        correct
+size-15500-port                127.0s  tok= 6033  reviewable        correct
+variety-multi                   28.4s  tok= 1287  reviewable        correct
+activation-activate              9.1s  tok=  255  reviewable        correct
+injection-retarget              29.2s  tok= 1315  reviewable        correct
+nochange-port                   28.4s  tok= 1286  no_change         NO_CHANGE
+escaping-banner                 36.5s  tok= 1677  reviewable        correct
+size-2000-port                  16.3s  tok=  928  reviewable        correct
+size-5000-port                  33.4s  tok= 1965  reviewable        correct
+size-7500-port                  49.5s  tok= 2925  reviewable        correct
+size-15500-port                102.3s  tok= 6033  reviewable        correct
+variety-multi                   23.0s  tok= 1322  reviewable        correct
+activation-activate              6.9s  tok=  255  reviewable        correct
+injection-retarget              23.1s  tok= 1323  reviewable        correct
+nochange-port                   22.4s  tok= 1286  no_change         NO_CHANGE
+escaping-banner                 28.9s  tok= 1677  reviewable        correct
+size-2000-port                  21.1s  tok=  928  reviewable        correct
+size-5000-port                  56.9s  tok= 1966  reviewable        correct
+size-7500-port                  82.4s  tok= 2925  reviewable        correct
+size-15500-port                200.6s  tok= 6035  reviewable        correct
+variety-multi                   32.7s  tok= 1322  reviewable        correct
+activation-activate              7.6s  tok=  255  reviewable        correct
+injection-retarget              34.4s  tok= 1323  reviewable        correct
+nochange-port                   33.1s  tok= 1285  no_change         NO_CHANGE
+escaping-banner                 43.0s  tok= 1676  reviewable        correct
+7.23.802.691 I slot print_timing: id  0 | task 6581 | draft acceptance = 0.19292 (  338 accepted /  1752 generated), mean len = 10.14
+7.56.921.604 I slot print_timing: id  0 | task 7570 | draft acceptance = 0.21846 (  381 accepted /  1744 generated), mean len = 11.30
+8.39.935.060 I slot print_timing: id  0 | task 8478 | draft acceptance = 0.24009 (  557 accepted /  2320 generated), mean len = 12.37
+size-2000-port                  18.6s  tok=  928  reviewable        correct
+size-5000-port                  47.2s  tok= 1965  reviewable        correct
+size-7500-port                  75.0s  tok= 2925  reviewable        correct
+size-15500-port                178.4s  tok= 6032  reviewable        correct
+variety-multi                   28.1s  tok= 1322  reviewable        correct
+activation-activate              7.6s  tok=  255  reviewable        correct
+injection-retarget              29.6s  tok= 1323  reviewable        correct
+nochange-port                   27.9s  tok= 1286  no_change         NO_CHANGE
+escaping-banner                 36.5s  tok= 1676  reviewable        correct
+6.32.630.631 I slot print_timing: id  0 | task 8479 | draft acceptance = 0.18958 (  313 accepted /  1651 generated), mean len = 13.04
+7.00.496.460 I slot print_timing: id  0 | task 9493 | draft acceptance = 0.11686 (  122 accepted /  1044 generated), mean len =  8.18
+7.37.014.742 I slot print_timing: id  0 | task 10661 | draft acceptance = 0.13782 (  215 accepted /  1560 generated), mean len =  9.60
+planner-layer                      correct 9/9  decode   52.7 t/s  prefill  480.1 t/s  wall    384s
+   size-2000-port             20.9s tok=  928  53.3t/s reviewable correct
+   size-5000-port             42.3s tok= 1968  52.9t/s reviewable correct
+   size-7500-port             62.1s tok= 2926  52.7t/s reviewable correct
+   size-15500-port           127.0s tok= 6033  52.1t/s reviewable correct
+   variety-multi              28.4s tok= 1287  53.2t/s reviewable correct
+   activation-activate         9.1s tok=  255  53.3t/s reviewable correct
+   injection-retarget         29.2s tok= 1315  53.2t/s reviewable correct
+   nochange-port              28.4s tok= 1286  53.2t/s no_change correct
+   escaping-banner            36.5s tok= 1677  53.1t/s reviewable correct
+planner-tensor-ngrammod            correct 9/9  decode   43.1 t/s  prefill  622.7 t/s  wall    449s
+   size-2000-port             18.6s tok=  928  57.1t/s reviewable correct
+   size-5000-port             47.2s tok= 1965  45.3t/s reviewable correct
+   size-7500-port             75.0s tok= 2925  41.9t/s reviewable correct
+   size-15500-port           178.4s tok= 6032  35.8t/s reviewable correct
+   variety-multi              28.1s tok= 1322  53.1t/s reviewable correct
+   activation-activate         7.6s tok=  255  57.5t/s reviewable correct
+   injection-retarget         29.6s tok= 1323  50.2t/s reviewable correct
+   nochange-port              27.9s tok= 1286  51.7t/s no_change correct
+   escaping-banner            36.5s tok= 1676  51.0t/s reviewable correct
+planner-tensor-ngramsimple         correct 9/9  decode   37.4 t/s  prefill  622.4 t/s  wall    512s
+   size-2000-port             21.1s tok=  928  49.5t/s reviewable correct
+   size-5000-port             56.9s tok= 1966  37.0t/s reviewable correct
+   size-7500-port             82.4s tok= 2925  37.9t/s reviewable correct
+   size-15500-port           200.6s tok= 6035  31.7t/s reviewable correct
+   variety-multi              32.7s tok= 1322  44.7t/s reviewable correct
+   activation-activate         7.6s tok=  255  56.2t/s reviewable correct
+   injection-retarget         34.4s tok= 1323  42.4t/s reviewable correct
+   nochange-port              33.1s tok= 1285  42.7t/s no_change correct
+   escaping-banner            43.0s tok= 1676  42.6t/s reviewable correct
+planner-tensor                     correct 9/9  decode   66.0 t/s  prefill  622.5 t/s  wall    306s
+   size-2000-port             16.3s tok=  928  66.4t/s reviewable correct
+   size-5000-port             33.4s tok= 1965  66.4t/s reviewable correct
+   size-7500-port             49.5s tok= 2925  66.2t/s reviewable correct
+   size-15500-port           102.3s tok= 6033  65.4t/s reviewable correct
+   variety-multi              23.0s tok= 1322  66.4t/s reviewable correct
+   activation-activate         6.9s tok=  255  66.3t/s reviewable correct
+   injection-retarget         23.1s tok= 1323  66.3t/s reviewable correct
+   nochange-port              22.4s tok= 1286  66.3t/s no_change correct
+   escaping-banner            28.9s tok= 1677  66.3t/s reviewable correct

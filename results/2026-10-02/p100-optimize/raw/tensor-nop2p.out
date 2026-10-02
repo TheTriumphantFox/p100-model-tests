@@ -1,0 +1,49 @@
+| model                          |       size |     params | backend    | ngl |     sm |  fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -----: | --: | --------------: | -------------------: |
+cachyos-x8664:3055373:3055373 [1] NCCL INFO cudaDriverVersion 13000
+cachyos-x8664:3055373:3055373 [1] NCCL INFO Bootstrap : Using enp6s0:<lan-ip><0>
+cachyos-x8664:3055373:3055373 [0] NCCL INFO NCCL version 2.23.4+cuda12.6
+cachyos-x8664:3055373:3055558 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal network plugin.
+cachyos-x8664:3055373:3055558 [0] NCCL INFO NET/IB : No device found.
+cachyos-x8664:3055373:3055558 [0] NCCL INFO NET/Socket : Using [0]enp6s0:<lan-ip><0> [1]tailscale0:<tailscale-ip><0> [2]proton0:<vpn-ip><0> [3]ipv6leakintrf0:<ipv6><0>
+cachyos-x8664:3055373:3055558 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so.
+cachyos-x8664:3055373:3055558 [0] NCCL INFO Using network Socket
+cachyos-x8664:3055373:3055559 [1] NCCL INFO Using network Socket
+cachyos-x8664:3055373:3055559 [1] NCCL INFO ncclCommInitAll comm 0x55e722193360 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId 16000 commId 0x6c4e0e810be4cd - Init START
+cachyos-x8664:3055373:3055558 [0] NCCL INFO ncclCommInitAll comm 0x55e7220a0b70 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 1000 commId 0x6c4e0e810be4cd - Init START
+cachyos-x8664:3055373:3055559 [1] NCCL INFO Bootstrap timings total 0.003559 (create 0.003137, send 0.000115, recv 0.000143, ring 0.000015, delay 0.000000)
+cachyos-x8664:3055373:3055558 [0] NCCL INFO Bootstrap timings total 0.003528 (create 0.003117, send 0.000104, recv 0.000202, ring 0.000015, delay 0.000000)
+cachyos-x8664:3055373:3055558 [0] NCCL INFO NCCL_P2P_DISABLE set by environment to 1
+cachyos-x8664:3055373:3055558 [0] NCCL INFO comm 0x55e7220a0b70 rank 0 nRanks 2 nNodes 1 localRanks 2 localRank 0 MNNVL 0
+cachyos-x8664:3055373:3055559 [1] NCCL INFO comm 0x55e722193360 rank 1 nRanks 2 nNodes 1 localRanks 2 localRank 1 MNNVL 0
+cachyos-x8664:3055373:3055558 [0] NCCL INFO Channel 00/02 : 0 1
+cachyos-x8664:3055373:3055558 [0] NCCL INFO Channel 01/02 : 0 1
+cachyos-x8664:3055373:3055558 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1
+cachyos-x8664:3055373:3055559 [1] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] -1/-1/-1->1->0
+cachyos-x8664:3055373:3055558 [0] NCCL INFO P2P Chunksize set to 131072
+cachyos-x8664:3055373:3055559 [1] NCCL INFO P2P Chunksize set to 131072
+cachyos-x8664:3055373:3055560 [0] NCCL INFO [Proxy Service] Device 0 CPU core 10
+cachyos-x8664:3055373:3055561 [1] NCCL INFO [Proxy Service] Device 1 CPU core 11
+cachyos-x8664:3055373:3055562 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 11
+cachyos-x8664:3055373:3055563 [1] NCCL INFO [Proxy Service UDS] Device 1 CPU core 11
+cachyos-x8664:3055373:3055558 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+cachyos-x8664:3055373:3055558 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+cachyos-x8664:3055373:3055559 [1] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+cachyos-x8664:3055373:3055559 [1] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+cachyos-x8664:3055373:3055558 [0] NCCL INFO CC Off, Multi-GPU CC Off, workFifoBytes 1048576
+cachyos-x8664:3055373:3055559 [1] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so libnccl-net.so. Using internal tuner plugin.
+cachyos-x8664:3055373:3055559 [1] NCCL INFO ncclCommInitAll comm 0x55e722193360 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId 16000 commId 0x6c4e0e810be4cd - Init COMPLETE
+cachyos-x8664:3055373:3055559 [1] NCCL INFO Init timings - ncclCommInitAll: rank 1 nranks 2 total 0.09 (kernels 0.08, alloc 0.01, bootstrap 0.00, allgathers 0.00, topo 0.00, graphs 0.00, connections 0.00, rest 0.00)
+cachyos-x8664:3055373:3055558 [0] NCCL INFO ncclCommInitAll comm 0x55e7220a0b70 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 1000 commId 0x6c4e0e810be4cd - Init COMPLETE
+cachyos-x8664:3055373:3055558 [0] NCCL INFO Init timings - ncclCommInitAll: rank 0 nranks 2 total 0.09 (kernels 0.07, alloc 0.01, bootstrap 0.00, allgathers 0.00, topo 0.00, graphs 0.00, connections 0.00, rest 0.00)
+cachyos-x8664:3055373:3055565 [0] NCCL INFO Channel 00 : 0[0] -> 1[1] via SHM/direct/direct
+cachyos-x8664:3055373:3055564 [1] NCCL INFO Channel 00 : 1[1] -> 0[0] via SHM/direct/direct
+cachyos-x8664:3055373:3055565 [0] NCCL INFO Channel 01 : 0[0] -> 1[1] via SHM/direct/direct
+cachyos-x8664:3055373:3055564 [1] NCCL INFO Channel 01 : 1[1] -> 0[0] via SHM/direct/direct
+cachyos-x8664:3055373:3055565 [0] NCCL INFO Connected all rings
+cachyos-x8664:3055373:3055564 [1] NCCL INFO Connected all rings
+| qwen35 27B Q8_0                |  26.62 GiB |    26.90 B | CUDA       |  -1 | tensor |   1 |            tg32 |         17.93 ± 0.00 |
+cachyos-x8664:3055373:3055373 [0] NCCL INFO comm 0x55e7220a0b70 rank 0 nranks 2 cudaDev 0 busId 1000 - Destroy COMPLETE
+cachyos-x8664:3055373:3055373 [1] NCCL INFO comm 0x55e722193360 rank 1 nranks 2 cudaDev 1 busId 16000 - Destroy COMPLETE
+
+build: 50631b3 (1)
