@@ -1,0 +1,53 @@
+[2026-10-02 13:03:05] :8080 devstral stopped
+[2026-10-02 13:03:08] START qwen3.6-35b-a3b UD-Q6_K (planner) layer
+[2026-10-02 13:03:38] END   qwen3.6-35b-a3b UD-Q6_K (planner) layer rc=0 pp=467.5 tg=54.0
+[2026-10-02 13:03:40] START qwen3.6-35b-a3b UD-Q6_K (planner) tensor
+[2026-10-02 13:03:57] END   qwen3.6-35b-a3b UD-Q6_K (planner) tensor rc=0 pp=731.7 tg=67.7
+[2026-10-02 13:03:59] START qwen3.6-27b-abliterated Q5_K_M layer
+[2026-10-02 13:05:03] END   qwen3.6-27b-abliterated Q5_K_M layer rc=0 pp=143.2 tg=11.1
+[2026-10-02 13:05:05] START qwen3.6-27b-abliterated Q5_K_M tensor
+[2026-10-02 13:05:42] END   qwen3.6-27b-abliterated Q5_K_M tensor rc=0 pp=210.5 tg=18.8
+[2026-10-02 13:05:44] START devstral-patched Q8_0 layer
+[2026-10-02 13:06:41] END   devstral-patched Q8_0 layer rc=0 pp=174.7 tg=12.9
+[2026-10-02 13:06:44] START devstral-patched Q8_0 tensor
+[2026-10-02 13:07:13] END   devstral-patched Q8_0 tensor rc=0 pp=391.1 tg=22.3
+[2026-10-02 13:07:15] START gpt-oss-20b Q8_0 layer
+[2026-10-02 13:07:33] END   gpt-oss-20b Q8_0 layer rc=0 pp=504.8 tg=67.0
+[2026-10-02 13:07:35] START gpt-oss-20b Q8_0 tensor
+[2026-10-02 13:07:46] END   gpt-oss-20b Q8_0 tensor rc=0 pp=842.2 tg=100.4
+[2026-10-02 13:07:48] START k2-horizon-7b Q8_0 layer
+[2026-10-02 13:08:09] END   k2-horizon-7b Q8_0 layer rc=0 pp=703.1 tg=35.0
+[2026-10-02 13:08:11] START k2-horizon-7b Q8_0 tensor
+[2026-10-02 13:08:23] END   k2-horizon-7b Q8_0 tensor rc=0 pp=873.0 tg=55.9
+[2026-10-02 13:08:25] START qwen3.8-27b Q8_0 (ggml-org) layer
+[2026-10-02 13:11:59] END   qwen3.8-27b Q8_0 (ggml-org) layer rc=0 pp=142.4 tg=10.8
+[2026-10-02 13:12:01] START qwen3.8-27b Q8_0 (ggml-org) tensor
+[2026-10-02 13:12:40] END   qwen3.8-27b Q8_0 (ggml-org) tensor rc=0 pp=218.0 tg=18.6
+[2026-10-02 13:12:42] START qwen3.8-27b Q8_0 (unsloth) layer
+[2026-10-02 13:16:13] END   qwen3.8-27b Q8_0 (unsloth) layer rc=0 pp=143.0 tg=10.9
+[2026-10-02 13:16:15] START qwen3.8-27b Q8_0 (unsloth) tensor
+[2026-10-02 13:16:54] END   qwen3.8-27b Q8_0 (unsloth) tensor rc=0 pp=217.6 tg=18.6
+[2026-10-02 13:16:56] START qwen3.8-27b Q6_K_P (HauhauCS) layer
+[2026-10-02 13:20:20] END   qwen3.8-27b Q6_K_P (HauhauCS) layer rc=0 pp=145.9 tg=9.9
+[2026-10-02 13:20:23] START qwen3.8-27b Q6_K_P (HauhauCS) tensor
+[2026-10-02 13:21:03] END   qwen3.8-27b Q6_K_P (HauhauCS) tensor rc=0 pp=222.4 tg=17.1
+[2026-10-02 13:21:05] START qwen3.8-27b Q4_K_M layer
+[2026-10-02 13:23:37] END   qwen3.8-27b Q4_K_M layer rc=0 pp=140.3 tg=12.4
+[2026-10-02 13:23:40] START qwen3.8-27b Q4_K_M tensor
+[2026-10-02 13:24:14] END   qwen3.8-27b Q4_K_M tensor rc=0 pp=207.3 tg=20.5
+[2026-10-02 13:24:16] START qwen3.8-27b-stock Q4_K_M layer
+[2026-10-02 13:26:34] END   qwen3.8-27b-stock Q4_K_M layer rc=0 pp=140.2 tg=12.1
+[2026-10-02 13:26:36] START qwen3.8-27b-stock Q4_K_M tensor
+[2026-10-02 13:27:11] END   qwen3.8-27b-stock Q4_K_M tensor rc=0 pp=212.3 tg=20.2
+[2026-10-02 13:27:13] START ornith-1.5-35b-a3b Q4_K_M layer
+[2026-10-02 13:29:22] END   ornith-1.5-35b-a3b Q4_K_M layer rc=0 pp=457.6 tg=54.3
+[2026-10-02 13:29:24] START ornith-1.5-35b-a3b Q4_K_M tensor
+[2026-10-02 13:29:40] END   ornith-1.5-35b-a3b Q4_K_M tensor rc=0 pp=716.1 tg=67.1
+[2026-10-02 13:29:42] START g9v3-39a5b Q4_K_M layer
+[2026-10-02 13:29:42] END   g9v3-39a5b Q4_K_M layer rc=1 
+[2026-10-02 13:29:44] START g9v3-39a5b Q4_K_M tensor
+[2026-10-02 13:29:44] END   g9v3-39a5b Q4_K_M tensor rc=1 
+[2026-10-02 13:29:46] START qwen3.8-flash-next IQ2_XXS layer (server probe, default --fit)
+[2026-10-02 13:35:54] END   qwen3.8-flash-next IQ2_XXS MEASURE n=24  gen median 19.28  pp median 26.83 tok/s
+[2026-10-02 13:35:54] SWEEP_DONE
+[2026-10-02 13:35:54] cleanup: :8080 devstral restarted

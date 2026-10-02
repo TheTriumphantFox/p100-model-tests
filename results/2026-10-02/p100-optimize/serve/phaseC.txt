@@ -1,0 +1,82 @@
+size-2000-port                  16.8s  tok=  929  reviewable        correct
+size-5000-port                  34.4s  tok= 1967  reviewable        correct
+size-7500-port                  50.9s  tok= 2927  reviewable        correct
+injection-retarget              23.3s  tok= 1288  reviewable        correct
+escaping-banner                 29.7s  tok= 1678  reviewable        correct
+size-2000-port                  11.5s  tok=  929  reviewable        correct
+size-5000-port                  24.1s  tok= 1967  reviewable        correct
+size-7500-port                  35.1s  tok= 2927  reviewable        correct
+injection-retarget              16.3s  tok= 1288  reviewable        correct
+escaping-banner                 20.8s  tok= 1677  reviewable        correct
+1.18.805.270 I slot print_timing: id  0 | task 830 | draft acceptance = 0.84217 ( 2097 accepted /  2490 generated), mean len =  3.53
+1.35.092.128 I slot print_timing: id  0 | task 1666 | draft acceptance = 0.85267 (  926 accepted /  1086 generated), mean len =  3.56
+1.55.908.645 I slot print_timing: id  0 | task 2033 | draft acceptance = 0.83368 ( 1198 accepted /  1437 generated), mean len =  3.50
+size-2000-port                  25.5s  tok=  928  reviewable        correct
+size-5000-port                  51.1s  tok= 1965  reviewable        correct
+size-7500-port                  75.7s  tok= 2925  reviewable        correct
+injection-retarget              36.7s  tok= 1323  reviewable        correct
+escaping-banner                 45.4s  tok= 1676  reviewable        correct
+5.17.237.439 I slot print_timing: id  0 | task 592 | draft acceptance = 0.99362 ( 2337 accepted /  2352 generated), mean len =  4.97
+5.53.975.227 I slot print_timing: id  0 | task 1186 | draft acceptance = 0.99342 ( 1057 accepted /  1064 generated), mean len =  4.97
+6.39.434.641 I slot print_timing: id  0 | task 1457 | draft acceptance = 0.98599 ( 1337 accepted /  1356 generated), mean len =  4.94
+size-2000-port                  28.7s  tok=  964  reviewable        correct
+size-5000-port                  56.8s  tok= 2001  reviewable        correct
+size-7500-port                  83.7s  tok= 2961  reviewable        correct
+injection-retarget              39.6s  tok= 1323  reviewable        correct
+escaping-banner                 49.1s  tok= 1710  reviewable        equivalent
+5.20.057.760 I slot print_timing: id  0 | task 607 | draft acceptance = 0.99621 ( 2367 accepted /  2376 generated), mean len =  4.98
+5.59.634.917 I slot print_timing: id  0 | task 1207 | draft acceptance = 0.99811 ( 1058 accepted /  1060 generated), mean len =  4.99
+6.48.748.487 I slot print_timing: id  0 | task 1477 | draft acceptance = 0.99273 ( 1366 accepted /  1376 generated), mean len =  4.97
+size-2000-port                  28.4s  tok=  928  reviewable        correct
+size-5000-port                  56.9s  tok= 1965  reviewable        correct
+size-7500-port                  84.6s  tok= 2925  reviewable        correct
+injection-retarget              40.4s  tok= 1323  reviewable        correct
+escaping-banner                 50.5s  tok= 1712  reviewable        correct
+4.22.722.852 I slot print_timing: id  0 | task 592 | draft acceptance = 0.99362 ( 2337 accepted /  2352 generated), mean len =  4.97
+5.03.117.473 I slot print_timing: id  0 | task 1186 | draft acceptance = 0.99342 ( 1057 accepted /  1064 generated), mean len =  4.97
+5.53.616.372 I slot print_timing: id  0 | task 1457 | draft acceptance = 0.98343 ( 1365 accepted /  1388 generated), mean len =  4.93
+size-2000-port                  31.3s  tok=  964  reviewable        correct
+size-5000-port                  61.1s  tok= 2001  reviewable        correct
+size-7500-port                  89.8s  tok= 2953  reviewable        correct
+injection-retarget              43.3s  tok= 1323  reviewable        correct
+escaping-banner                 53.7s  tok= 1712  reviewable        correct
+3.35.102.584 I slot print_timing: id  0 | task 766 | draft acceptance = 0.98262 ( 2205 accepted /  2244 generated), mean len =  3.95
+4.18.405.274 I slot print_timing: id  0 | task 1520 | draft acceptance = 0.95614 (  981 accepted /  1026 generated), mean len =  3.87
+5.12.145.954 I slot print_timing: id  0 | task 1867 | draft acceptance = 0.95485 ( 1269 accepted /  1329 generated), mean len =  3.86
+c-ornith-tensor-mtp3               correct 5/5  decode   99.7 t/s  prefill  579.5 t/s  wall    108s
+   size-2000-port             11.5s tok=  929 103.3t/s reviewable correct
+   size-5000-port             24.1s tok= 1967  98.3t/s reviewable correct
+   size-7500-port             35.1s tok= 2927  99.5t/s reviewable correct
+   injection-retarget         16.3s tok= 1288 100.6t/s reviewable correct
+   escaping-banner            20.8s tok= 1677  99.1t/s reviewable correct
+c-ornith-tensor                    correct 5/5  decode   64.5 t/s  prefill  600.5 t/s  wall    155s
+   size-2000-port             16.8s tok=  929  64.6t/s reviewable correct
+   size-5000-port             34.4s tok= 1967  64.6t/s reviewable correct
+   size-7500-port             50.9s tok= 2927  64.4t/s reviewable correct
+   injection-retarget         23.3s tok= 1288  64.6t/s reviewable correct
+   escaping-banner            29.7s tok= 1678  64.6t/s reviewable correct
+c-q36abl-tensor-mtp38file          correct 5/5  decode   40.0 t/s  prefill  205.8 t/s  wall    279s
+   size-2000-port             31.3s tok=  964  39.6t/s reviewable correct
+   size-5000-port             61.1s tok= 2001  40.5t/s reviewable correct
+   size-7500-port             89.8s tok= 2953  40.3t/s reviewable correct
+   injection-retarget         43.3s tok= 1323  39.7t/s reviewable correct
+   escaping-banner            53.7s tok= 1712  39.6t/s reviewable correct
+c-q38hauhau-tensor-mtp4            correct 4/5  decode   43.8 t/s  prefill  212.1 t/s  wall    258s
+   size-2000-port             28.7s tok=  964  43.7t/s reviewable correct
+   size-5000-port             56.8s tok= 2001  43.8t/s reviewable correct
+   size-7500-port             83.7s tok= 2961  43.7t/s reviewable correct
+   injection-retarget         39.6s tok= 1323  44.1t/s reviewable correct
+   escaping-banner            49.1s tok= 1710  43.9t/s reviewable equivalent
+c-q38stockq4-tensor-mtp4           correct 5/5  decode   43.1 t/s  prefill  206.0 t/s  wall    261s
+   size-2000-port             28.4s tok=  928  43.0t/s reviewable correct
+   size-5000-port             56.9s tok= 1965  43.3t/s reviewable correct
+   size-7500-port             84.6s tok= 2925  43.0t/s reviewable correct
+   injection-retarget         40.4s tok= 1323  43.3t/s reviewable correct
+   escaping-banner            50.5s tok= 1712  42.9t/s reviewable correct
+c-q38unsloth-tensor-mtp4           correct 5/5  decode   48.8 t/s  prefill  211.7 t/s  wall    234s
+   size-2000-port             25.5s tok=  928  49.2t/s reviewable correct
+   size-5000-port             51.1s tok= 1965  49.1t/s reviewable correct
+   size-7500-port             75.7s tok= 2925  48.9t/s reviewable correct
+   injection-retarget         36.7s tok= 1323  48.8t/s reviewable correct
+   escaping-banner            45.4s tok= 1676  48.0t/s reviewable correct
+PHASE_DONE

@@ -1,0 +1,1 @@
+# 2026-10-02T14:05:07-04:00 NCCL_P2P_DISABLE=1 llama-server -m /var/lib/ollama/blobs/sha256-f5f1dd8920d417aac2718b0bda3403da274301efdd6760b4f0f4b864ff2ad57d -fa on -sm tensor --spec-type draft-mtp --spec-draft-n-max 4

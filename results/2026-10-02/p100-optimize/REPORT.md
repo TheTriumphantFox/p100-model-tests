@@ -114,10 +114,46 @@ Acceptance is limited because the file sits raw in the prompt but JSON-escaped i
 output, so matches break at every newline and quote. Even at 55% acceptance, verifying
 multi-token batches on the MoE costs more than it saves — the same pattern gavinbrow saw.
 
+## 4. MTP across the shelf (afternoon)
+
+Every GGUF was scanned for an MTP (`nextn`) layer. Built in: qwen3.8-27b unsloth Q8_0,
+HauhauCS Q6_K_P, stock Q4_K_M, and Ornith. None in the planner, the qwen3.6-27b incumbent,
+devstral, gpt-oss, K2, g9v3 or Flash-Next. Unsloth publishes MTP-preserving versions of both
+Qwen3.6 models; two were downloaded and SHA-256 verified into `~/models/_mtp-dl/`:
+`Qwen3.6-35B-A3B-UD-Q6_K.gguf` (the planner's exact quant + MTP, 30.0 GB) and the stock
+`Qwen3.6-27B-Q5_K_M.gguf` (19.8 GB). Same 5 planner tasks, tensor split, temp 0:
+
+| model | no MTP | best MTP | n-max | acceptance | correct |
+|---|---:|---:|---:|---:|---|
+| **qwen3.6-35b-a3b UD-Q6_K, MTP twin (planner)** | 66.2 | **111.4** (+68%) | 3 | 99% | 5/5 |
+| ornith-1.5-35b-a3b Q4_K_M (built-in) | 64.5 | **99.7** (+55%) | 3 | 84% | 5/5 |
+| qwen3.8-27b Q8_0 unsloth (built-in) | ~18.6 | **48.8** | 4 | 99% | 5/5 |
+| qwen3.8-27b Q8_0 ggml-org + MTP file | 18.4 | 49.1 | 4 (`-ub 256`) | 98% | 5/5 |
+| qwen3.8-27b Q6_K_P HauhauCS (built-in) | ~17.1 | 43.8 | 4 | 99% | 5/5 (1 "equivalent") |
+| qwen3.8-27b-stock Q4_K_M (built-in) | ~20.2 | 43.1 | 4 | 98% | 5/5 |
+| qwen3.6-27b stock Q5_K_M, MTP version | 18.6 | 40.8 | 4 | 99% | 5/5 |
+| **qwen3.6-27b abliterated (incumbent) + the Qwen3.8 MTP file** | ~18.8 | **40.0** | 3 | 95% | 5/5 |
+
+(~ = from the llama-bench sweep, not this task set.)
+
+- **MTP helps the MoE models**, unlike n-gram drafting (section 3): the planner +68%, Ornith
+  +55%. On the MoE n-max 3 is the peak; n-max 4 falls back to 84 t/s despite 98% acceptance.
+  The dense 27Bs peak at n-max 4.
+- **The built-in head is cheaper on VRAM than the separate file**, which carries its own
+  copy of the embeddings: unsloth Q8_0 runs n-max 4 at the default `-ub` (15.4 GB per card)
+  where ggml-org Q8_0 + file needs `-ub 256`.
+- **A borrowed head works**: the Qwen3.8 MTP file on the Qwen3.6 abliterated incumbent accepts
+  95% and doubles its speed, about the same as the stock Qwen3.6-27B with its own head.
+- The planner twin's MTP outputs are byte-identical to its non-MTP outputs on 4 of 5 tasks;
+  the fifth differs and is also correct.
+- "Equivalent" (HauhauCS, escaping-banner) means the written file parses to the same data as
+  the expected one, with different formatting, so it is a right answer.
+
 ## What this means for the planner choice
 
 - Tensor split is a free +25% for the chosen MoE planner: the 15.5 KiB rewrite goes from
-  127 s to 102 s, inside the 120 s deadline.
+  127 s to 102 s, inside the 120 s deadline. Its MTP twin adds another +68% (111 t/s).
+  Swapping the file changes the planner's SHA-256, which the AIOS spec pins.
 - Dense qwen3.8-27b, ruled out on 09-23 at ~11 t/s (31/40 within 240 s), now decodes at
   ~49 t/s with tensor split + MTP: the 15.5 KiB rewrite takes 151 s instead of 598 s.
   That is MoE-class speed from the model that scored 40/40 correct with 0 injections

@@ -1,0 +1,1 @@
+# 2026-10-02T14:11:02-04:00 NCCL_P2P_DISABLE=1 llama-server -m /home/hm/models/qwen3.6-27b-abliterated_q5_k_m.gguf -fa on -sm tensor -md /var/lib/ollama/candidates-r2/mtp-Qwen3.8-27B-Q8_0.gguf --spec-type draft-mtp --spec-draft-n-max 3

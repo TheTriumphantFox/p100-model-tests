@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>P100 Model Tests</title>
-<meta name="description" content="Local LLM benchmarks, tuning studies and planner tests on two Tesla P100 16 GB cards, September 2026.">
+<meta name="description" content="Which local LLM is the best all-around model on two Tesla P100 16 GB cards: accuracy, editing, tool use, speed and tuning, September–October 2026.">
 <style>
 :root{
   color-scheme:light;
@@ -113,6 +113,8 @@ tr.hl td{background:color-mix(in srgb,var(--s1) 7%,transparent)}
 footer{padding:36px 0 60px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
 ul.tight{margin:8px 0 0;padding-left:20px} ul.tight li{margin:4px 0}
 @media (max-width:640px){ th,td{padding:8px 9px} .cellbar{min-width:90px} .cellbar .track{max-width:50px} }
+tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var(--text-2);text-transform:uppercase;letter-spacing:.05em;padding:7px 12px}
+.verdict ul{margin:6px 0 0;padding-left:20px} .verdict li{margin:3px 0}
 </style>
 </head>
 <body>
@@ -120,10 +122,10 @@ ul.tight{margin:8px 0 0;padding-left:20px} ul.tight li{margin:4px 0}
   <b>P100 Model Tests</b>
   <a href="#scoreboard">Scoreboard</a>
   <a href="#coding">Coding</a>
-  <a href="#planner">Planner</a>
-  <a href="#rig">Full stack</a>
-  <a href="#hardware">Hardware</a>
   <a href="#agent">Tool use</a>
+  <a href="#speed">Speed</a>
+  <a href="#planner">AIOS planner</a>
+  <a href="#rig">Full stack</a>
   <a href="#models">Models</a>
   <a href="#index">All tests</a>
   <a href="#early">Early runs</a>
@@ -134,21 +136,35 @@ ul.tight{margin:8px 0 0;padding-left:20px} ul.tight li{margin:4px 0}
 <header class="hero">
   <div class="eyebrow">September–October 2026 · 2× Tesla P100-PCIE-16GB · 32 GB VRAM · llama.cpp CUDA 12.6 sm_60</div>
   <h1>What runs well on two Pascal P100 cards</h1>
-  <p class="lede">A month of local-model benchmarks: accuracy, speed, memory bandwidth, tool use, multi-language coding with test feedback, and an end-to-end planner rig. These tests pick the local planner for the AIOS control-plane prototype. All raw data is in this repository.</p>
+  <p class="lede">Which local model is the best all-around choice on this box? A month of benchmarks on accuracy, file editing with test feedback, tool use, speed and tuning. One strand also picks the local planner for the AIOS control-plane prototype. All raw data is in this repository.</p>
   <div class="tiles">
-    <div class="tile"><div class="v">54/54</div><div class="l">transactions right for the best full-stack configuration (qwen3.6-35b-a3b, careful planner persona)</div></div>
-    <div class="tile"><div class="v">39/40</div><div class="l">planner tasks correct within 240 s once the check list is pinned in the grammar</div></div>
-    <div class="tile"><div class="v">4.3–6.6×</div><div class="l">CUDA sm_60 build over Ollama/Vulkan in generation speed. Accuracy is unchanged.</div></div>
+    <div class="tile"><div class="v">28/50</div><div class="l">Aider Polyglot exercises solved by the incumbent qwen3.6-27b, the best editor tested; devstral, the production agent, solved 4/25</div></div>
+    <div class="tile"><div class="v">111 <small>tok/s</small></div><div class="l">qwen3.6-35b-a3b with tensor split and its MTP head, on planner edits (68 without MTP, 54 as first measured)</div></div>
+    <div class="tile"><div class="v">+24–73 %</div><div class="l">decode speed from tensor split, on every model on the shelf, once NCCL peer-to-peer is disabled</div></div>
+    <div class="tile"><div class="v">0 <small>/ 375</small></div><div class="l">tau-bench tasks with a tool-call parse failure, across ~4,000 calls on four architectures</div></div>
+    <div class="tile"><div class="v">39/40</div><div class="l">AIOS planner tasks correct within 240 s for the MoE planner, with the check list pinned in the grammar</div></div>
     <div class="tile"><div class="v">599 <small>GB/s</small></div><div class="l">measured HBM2 read ceiling per card, against 732 on the spec sheet</div></div>
-    <div class="tile"><div class="v">28/50</div><div class="l">Aider Polyglot exercises solved by the incumbent qwen3.6-27b; devstral, the production coding agent, solved 4/25</div></div>
-    <div class="tile"><div class="v">49 <small>tok/s</small></div><div class="l">Qwen3.8-27B Q8_0 on planner edits with tensor split + its MTP head, 4.5× the layer-split speed</div></div>
   </div>
 </header>
 
+<section id="standing">
+  <h2>Where things stand (2 Oct)</h2>
+  <p class="sub">The default question for these tests is now the best all-around model: accuracy, editing, tool use, speed and context together. Only tests that name another goal (like the AIOS planner) are judged differently.</p>
+  <div class="verdict">
+    <ul>
+      <li><b>Most capable:</b> <code>qwen3.6-27b-abliterated</code>, the incumbent. It has the best reasoning scores (and finishes every thinking question), the best editing (28/50 Aider Polyglot) and the best tool use (66 % tau-bench). On HumanEval it is within noise of the top score, and every significant gap is in its favour. It is slow as a dense 27B: 18.8 tok/s with tensor split, about 40 on planner edits with a borrowed MTP head.</li>
+      <li><b>Best balance:</b> <code>qwen3.6-35b-a3b</code>, the MoE. On editing it is statistically level with the incumbent (24 vs 28 of 50, p=0.45) at 3.6× the speed: 68 tok/s, 111 on planner edits with its MTP version. <b>It has never been scored on MMLU-Pro, HumanEval or tau-bench</b>, so that is the gap to close before it can be called the best all-around model.</li>
+      <li><b>Fastest:</b> <code>gpt-oss-20b</code> at 100 tok/s. It came last on editing (4/25) and on tool use (45 % tau-bench), and does not repeat itself reliably.</li>
+      <li><b>Production :8080:</b> <code>devstral</code> is the weakest coder on the shelf (4/25 Aider, 84.8 HumanEval). Tensor split would take it from 12.9 to 22.3 tok/s.</li>
+      <li><b>Still to measure:</b> accuracy for the MoE and K2 Horizon; MTP speed on general text (the planner-edit figures are inflated by ~99 % draft acceptance on copied content); MTP and tensor split on the full 40-task planner bench.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="scoreboard">
   <h2>Model scoreboard</h2>
-  <p class="sub">Every model that loads on the CUDA build, with identical questions for each. <b>Reasoning</b> is 70 MMLU-Pro questions (5 per category × 14). <b>Coding</b> is all 164 HumanEval problems. Seed 42, temperature 0. Click a column header to sort.</p>
-  <div class="verdict"><p><b>Result (21 Sep):</b> keep the incumbent <code>qwen3.6-27b-abliterated</code>. It has the best score on every accuracy test and is the only model that finishes every thinking question. Every statistically significant gap (McNemar exact, p&lt;0.05) is in its favour. The one exception is speed, where the MoE models are 4–6× faster.</p><p><b>Update (1 Oct):</b> the incumbent at higher quants, its own abliteration at Q8_K_P and Unsloth's stock Q8_0, scored up to 3 questions better on reasoning and 1–2 worse on coding. No gap is resolvable (every p ≥ 0.25). Both cost all but ~16–32k of the context headroom, so both were deleted and the Q5 stays.</p><p><b>Update (2 Oct):</b> HumanEval is saturated (92–97.6 % across the shelf) and its ranking does not hold when models have to edit files with test feedback. On Aider Polyglot the incumbent is still first, but qwen3.8-27b Q8 drops from first to third. See <a href="#coding">Coding</a>.</p><p><b>Speed note (2 Oct):</b> the speed column is layer split. Tensor split, which works once NCCL peer-to-peer is disabled, adds ~25 % to the MoE models and ~70 % to the dense 27Bs. See <a href="#hardware">Getting the most out of Pascal</a>.</p></div>
+  <p class="sub">Every model that loads on the CUDA build. <b>Speed</b> is decode tok/s with tensor split (llama-bench tg128, 2 Oct sweep; hover for layer split). <b>Reasoning</b> is 70 MMLU-Pro questions (5 per category × 14). <b>Coding</b> is all 164 HumanEval problems. <b>Editing</b> is Aider Polyglot pass@2 as a percentage (of 50 exercises for the top three, of 25 for the rest). Seed 42, temperature 0. Click a column header to sort.</p>
+  <div class="verdict"><p><b>Result (21 Sep, still standing):</b> keep the incumbent <code>qwen3.6-27b-abliterated</code>. It has the best reasoning scores and is the only model that finishes every thinking question. Its HumanEval is within noise of the top score (96.3 vs 97.6), and every statistically significant gap (McNemar exact, p&lt;0.05) is in its favour. Its own Q8_K_P and a stock Q8_0 gave no resolvable gain and cost most of the context headroom, so both were deleted (30 Sep).</p><p><b>Update (2 Oct):</b> HumanEval is saturated (92–97.6 %) and does not predict editing. qwen3.8-27b Q8 tops HumanEval but drops to third on Aider Polyglot. See <a href="#coding">Coding</a>.</p></div>
   <div class="tablewrap"><table id="score">
     <thead><tr>
       <th class="sort" data-k="name">Model</th>
@@ -156,11 +172,12 @@ ul.tight{margin:8px 0 0;padding-left:20px} ul.tight li{margin:4px 0}
       <th class="sort num" data-k="quick">Reasoning, quick</th>
       <th class="sort num" data-k="think">Reasoning, thinking</th>
       <th class="sort num" data-k="code">Coding (HumanEval)</th>
+      <th class="sort num" data-k="edit">Editing (Aider)</th>
     </tr></thead><tbody></tbody></table></div>
-  <p class="note">* = the model spent its whole 12,288-token thinking budget on some questions and never answered them. The true score is higher, so a starred value is a floor. "none" means the model has no thinking mode. <code>gpt-oss-20b</code> is non-deterministic: it scored 77.1 once and 71.4 in four of five repeats. Three shelf models do not load on llama.cpp at all: <code>qwen3.6-27b-opus-distill</code> and <code>qwen3.6-35b-a3b-abliterated-vl</code> (vision GGUFs) and <code>gemma4-e4b-abliterated</code> (tensor count). The two <code>:q8</code> rows come from the 30 Sep quant test and were deleted afterwards. Sources: <a data-md="results/2026-09-21/cuda-matrix/FINAL.md">cuda-matrix/FINAL.md</a>, <a data-md="results/2026-09-30/qwen36-q8kp/REPORT.md">qwen36-q8kp/REPORT.md</a>.</p>
+  <p class="note">* = the model spent its whole 12,288-token thinking budget on some questions and never answered them. The true score is higher, so a starred value is a floor. "none" = no thinking mode; "not run" = never tested. <code>gpt-oss-20b</code> is non-deterministic: it scored 77.1 once and 71.4 in four of five repeats. Flash-Next's speed is from 48 distinct prompts on a server, with part of the model in RAM. Three shelf models do not load on llama.cpp: <code>qwen3.6-27b-opus-distill</code> and <code>qwen3.6-35b-a3b-abliterated-vl</code> (vision GGUFs) and <code>gemma4-e4b-abliterated</code>. Sources: <a data-md="results/2026-09-21/cuda-matrix/FINAL.md">cuda-matrix</a>, <a data-md="results/2026-10-01/aider-polyglot-10h/REPORT.md">aider-polyglot</a>, <a data-md="results/2026-10-02/speed-sweep/REPORT.md">speed-sweep</a>.</p>
 
   <h3>Speed against coding accuracy</h3>
-  <div class="card"><svg id="scatter" class="chart" role="img" aria-label="Scatter of generation speed against HumanEval score"></svg></div>
+  <div class="card"><svg id="scatter" class="chart" role="img" aria-label="Scatter of tensor-split decode speed against HumanEval score"></svg></div>
 </section>
 
 <section id="coding">
@@ -190,13 +207,76 @@ ul.tight{margin:8px 0 0;padding-left:20px} ul.tight li{margin:4px 0}
       <tr><td><code>qwen3.6-27b-abliterated</code> vs <code>qwen3.6-35b-a3b</code></td><td class="num">50</td><td class="num">10 / 6</td><td class="num">0.45</td></tr>
       <tr><td><code>devstral-patched</code> vs <code>gpt-oss-20b</code></td><td class="num">25</td><td class="num">3 / 3</td><td class="num">1.00</td></tr>
     </tbody></table></div>
-  <p class="note">Every model at least doubled from pass@1 to pass@2, so the feedback try is where most of the points are, and HumanEval never measures it. Devstral's misses are genuine wrong code: zero malformed replies, and the tests ran and failed on logic. The test runner was validated in both directions before any model ran: 96/100 reference solutions pass and 99/100 unsolved stubs fail. Caveats: one run per model, and the same exercise flipped between identical runs even at temperature 0. This is aider's loop, not pi's tool loop. Thinking was off throughout. These are 50 of the 225 exercises. Sources: <a data-md="results/2026-10-01/aider-polyglot-10h/REPORT.md">aider-polyglot-10h/REPORT.md</a>.</p>
+  <p class="note">Every model at least doubled from pass@1 to pass@2, so the feedback try is where most of the points are, and HumanEval never measures it. Devstral's misses are genuine wrong code: zero malformed replies, and the tests ran and failed on logic. The test runner was validated in both directions before any model ran: 96/100 reference solutions pass and 99/100 unsolved stubs fail. Caveats: one run per model, and the same exercise flipped between identical runs even at temperature 0. Thinking was off throughout. These are 50 of the 225 exercises. Source: <a data-md="results/2026-10-01/aider-polyglot-10h/REPORT.md">aider-polyglot-10h/REPORT.md</a>.</p>
+</section>
+
+<section id="agent">
+  <h2>Tool use: tau-bench retail</h2>
+  <p class="sub">A multi-turn tool-calling agent loop against the retail domain. There were <b>0 parse failures across 375 tasks and ~4,000 model calls</b> on four architectures, so tool-call emission is solid and every failure was reasoning or policy.</p>
+  <div class="legend"><span><i style="background:var(--s1)"></i>Pass</span><span><i style="background:var(--s1-soft)"></i>Ceiling: stalls where the model had found the right order and then asked a question</span></div>
+  <div class="card"><svg id="tau" class="chart" role="img" aria-label="tau-bench pass rate and ceiling"></svg></div>
+  <p class="note">The customer is scripted, so a model that asks a question never gets an answer and scores zero. These scores are <b>not comparable</b> to published tau-bench numbers. g9v3 is a partial run (30 of 115 tasks). The MoE <code>qwen3.6-35b-a3b</code> has not been run. <a href="results/2026-09-22/devstral-tau-scripted/REPORT.html">Full report</a></p>
+</section>
+
+<section id="speed">
+  <h2>Speed and tuning</h2>
+  <p class="sub">GP100 has no tensor cores and no <code>dp4a</code>, CUDA 13 dropped it, and Ollama's Vulkan path hides a lot of performance. Most of the speed here came from configuration, not from model choice.</p>
+  <div class="verdict"><p><b>Recipe (2 Oct):</b> CUDA 12.6 sm_60 llama.cpp, <code>-sm tensor -fa on</code> with an f16 KV cache, and <code>NCCL_P2P_DISABLE=1</code> in the environment (without it tensor split hangs on the first token). Add the model's MTP head where one exists (<code>--spec-type draft-mtp</code>, n-max 3 on MoE models, 4 on dense ones). Do not use n-gram drafting on MoE models.</p></div>
+  <div class="card">
+    <h3 style="margin-top:0">Split mode: layer vs tensor, every model (2 Oct sweep)</h3>
+    <div class="legend"><span><i style="background:var(--s2)"></i>layer tok/s</span><span><i style="background:var(--s1)"></i>tensor tok/s</span></div>
+    <svg id="split" class="chart" role="img" aria-label="Decode tok/s with layer and tensor split for every local model"></svg>
+    <p class="note">llama-bench tg128, f16 KV, flash attention on, 3 reps, one session. Gains: +24–30 % on the MoE models, +50–60 % on gpt-oss and K2 Horizon, +66–73 % on every dense 24–27B. Prefill gains 24–124 % too (devstral 175 → 391), and VRAM is unchanged. The driver reports P2P as OK, but GPU1 sits in a Gen3 x4 slot behind the Ryzen root complex, so NCCL has to go through host memory. g9v3 needs its own build. Sources: <a data-md="results/2026-10-02/speed-sweep/REPORT.md">speed-sweep</a>, <a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a>.</p>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3 style="margin-top:0">MTP speculative decoding, every model with a head (planner edits)</h3>
+    <div class="legend"><span><i style="background:var(--s2)"></i>tensor split, no MTP</span><span><i style="background:var(--s1)"></i>tensor split + MTP</span></div>
+    <svg id="mtp" class="chart" role="img" aria-label="Decode tok/s with and without MTP for every model that has an MTP head"></svg>
+    <p class="note">Decode tok/s on 5 planner-bench tasks, temperature 0, grammar on, all answers correct. About 99 % of drafts are accepted here because a plan is mostly a copy of the input file; on general prompts round 2 saw 77 %, so expect less in everyday use. The planner twin and the stock Qwen3.6-27B are unsloth's MTP-preserving GGUFs. The incumbent has no head of its own; Qwen3.8's MTP file works on it with 95 % acceptance. A built-in head needs less VRAM than the separate file, which carries its own copy of the embeddings. Baselines for the unsloth, HauhauCS, stock-Q4 and incumbent rows come from the llama-bench sweep. <a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize §3–4</a></p>
+  </div>
+  <div class="grid2" style="margin-top:16px">
+    <div class="card">
+      <h3 style="margin-top:0">Backend: CUDA sm_60 vs Ollama/Vulkan</h3>
+      <div class="legend"><span><i style="background:var(--s1)"></i>CUDA 12.6 llama.cpp</span><span><i style="background:var(--s2)"></i>Ollama Vulkan</span></div>
+      <svg id="backend" class="chart" role="img" aria-label="Generation tok/s CUDA vs Vulkan"></svg>
+      <p class="note">Generation tok/s at ctx 8192, layer split (19 Sep). The backend also inverts the ranking: devstral is slowest on Vulkan and fastest on CUDA. MMLU-Pro moved by one question in total, so accuracy does not depend on the backend. <a data-md="results/2026-09-19/cuda-rerun/REPORT.md">cuda-rerun</a></p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">KV cache: f16 vs q8_0 (devstral Q8_0)</h3>
+      <div class="legend"><span><i style="background:var(--s1)"></i>f16 @ ctx 32768</span><span><i style="background:var(--s2)"></i>q8_0 @ ctx 49152</span></div>
+      <svg id="kv" class="chart" role="img" aria-label="Generation tok/s by context depth for two KV types"></svg>
+      <p class="note">f16 reads KV at 546 GB/s (91 % of the ceiling). q8_0 reads it at 104 GB/s, because any q8_0 in the cache puts flash attention on its slow path. Production :8080 still runs q8_0 @ 49k for the context room; tensor split would need f16. <a data-md="results/2026-09-19/devstral-p100-bandwidth/REPORT.md">bandwidth report</a></p>
+    </div>
+  </div>
+  <h3>Findings</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Finding</th><th>Measurement</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr class="grp"><td colspan="3">Hardware and runtime</td></tr>
+      <tr><td>HBM2 ceiling</td><td>599 GB/s read, 520 copy, per card (82 % of nameplate). Devstral generation streams at 309 GB/s, 52 % of that.</td><td><a data-md="results/2026-09-19/devstral-p100-bandwidth/REPORT.md">bandwidth</a></td></tr>
+      <tr><td>Multi-GPU split</td><td><code>tensor</code> is the fastest mode for every model once <code>NCCL_P2P_DISABLE=1</code> is set. Without it, it hangs with both cards at 100 % and 37 W; this was the 18 Sep "deadlock". <code>layer</code> is the default and works. <code>row</code> fails to load. <code>--parallel 2</code> gives 23.4 tok/s aggregate at −1.2 % per stream (devstral, layer), so decode is weight-streaming-bound.</td><td><a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a>, <a data-md="results/2026-09-19/devstral-p100-bandwidth/REPORT.md">bandwidth</a></td></tr>
+      <tr><td>KV cache type</td><td>q8_0 KV costs devstral 17 % at 28k depth (9.75 vs 11.68 tok/s) and the MoE planner 12 % at 16k (45.8 vs 51.9), with no prefill difference. Tensor split requires f16 anyway.</td><td><a data-md="results/2026-09-19/devstral-p100-bandwidth/REPORT.md">bandwidth</a>, <a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a></td></tr>
+      <tr><td>Clocks</td><td>Under load both cards boost to their 1328 MHz maximum on their own, so raising application clocks gains nothing.</td><td><a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a></td></tr>
+      <tr><td>Silent partial offload</td><td>llama.cpp defaults to <code>--fit on</code> with a 1024 MiB margin per card. A file that nearly fills 32 GB gets a few layers quietly left in RAM (−15 % speed, so a speed floor misses it). Check VRAM against non-embedding weights + 1082 MiB + 72 KB/token. Force with <code>--fit off -ngl 999</code> and split by hand (<code>-ts 36,28</code>): the last card also holds the output tensor.</td><td><a data-md="results/2026-09-30/qwen36-q8kp/REPORT.md">quant test</a></td></tr>
+      <tr><td>Vulkan tuning (before CUDA)</td><td>Disabling the integer-dot-product path made prompt processing 14–23× faster, and <code>num_batch 256</code> added 9 % to prefill. Superseded by the CUDA build.</td><td><a data-md="results/2026-09-15/qwen3.8-p100-tuning/REPORT.md">qwen3.8 tuning</a>, <a data-md="results/2026-09-17/devstral-p100-tuning/REPORT.md">devstral tuning</a></td></tr>
+      <tr class="grp"><td colspan="3">Speculative decoding</td></tr>
+      <tr><td>MTP heads</td><td>Every model with a head speeds up: the MoE planner 66 → 111 tok/s (n-max 3; n-max 4 falls back to 84), Ornith 65 → 100, the dense 27Bs 17–20 → 40–49 (n-max 4). Outputs match the non-MTP run byte for byte on 4 of 5 tasks, and the fifth is also correct. Measured on planner edits only.</td><td><a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a></td></tr>
+      <tr><td>DFlash</td><td>Qwen3.8-27B Q8_0 + DFlash: 22.72 tok/s, 2.09× layer split, 76–79 % accepted on general prompts (MTP was 1.79× there). On planner edits, Q4_K_M + DFlash reaches 28.8. It crashes under tensor split (<code>ggml-backend-meta</code> assert).</td><td><a data-md="results/2026-09-19/candidates-round2/REPORT.md">round 2</a>, <a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a></td></tr>
+      <tr><td>Draft-free n-gram</td><td>A net loss in every test: <code>ngram-cache</code> accepts 11 % on general prompts. On the MoE planner, <code>ngram-simple</code>/<code>ngram-mod</code> give 35–43 tok/s against 66 without, even at 55 % acceptance.</td><td><a data-md="results/2026-09-19/candidates-round2/REPORT.md">round 2</a>, <a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a></td></tr>
+      <tr class="grp"><td colspan="3">Models and quants</td></tr>
+      <tr><td>Quant choice on GP100</td><td>No <code>dp4a</code>, so K-quants are slower per byte than Q8_0: Q4_K_M + MTP is slower than Q8_0 + MTP. MXFP4 (gpt-oss) works on sm_60.</td><td><a data-md="results/2026-09-19/candidates/REPORT.md">round 1</a>, <a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a></td></tr>
+      <tr><td>Higher quant of the incumbent</td><td>Q5_K_P → Q8_K_P (Q8_0 + F16) or a stock Q8_0: no resolvable accuracy gain, ~4 % slower, and the Q8_K_P tops out at ctx ~16k against the Q5's ~180k. Qwen3.8's Q4 → Q8 coding gain (p=0.016) does not carry over from a Q5 start.</td><td><a data-md="results/2026-09-30/qwen36-q8kp/REPORT.md">quant test</a></td></tr>
+      <tr><td>Context cost</td><td>The Qwen 27B models measured 72 KB/token of KV, not the 260 KB in earlier notes. Devstral measured 168 KB/token f16 (about 84 KB at q8_0, derived rather than measured), with room for ~100k tokens.</td><td><a data-md="results/2026-09-21/cuda-matrix/FINAL.md">cuda-matrix</a></td></tr>
+      <tr><td>Models bigger than VRAM</td><td>qwen3.8-flash-next (512-expert MoE): the 82 GB UD-IQ3_XXS ran at 5.3 tok/s steady through Ollama (MMLU-Pro 70.0). The 75 GB IQ2_XXS runs at 19.3 tok/s on llama.cpp with <code>--fit</code> putting experts in RAM. The quant and the runtime both changed, so the two causes are not separated. A sparse MoE must get distinct prompts: repeating one gave a bogus 12.53 tok/s on 19 Sep.</td><td><a data-md="results/2026-09-19/qwen3.8-flash-next/REPORT.md">flash-next</a>, <a data-md="results/2026-10-02/flash-next-iq2/REPORT.md">flash-next IQ2</a></td></tr>
+      <tr class="grp"><td colspan="3">Benchmarks</td></tr>
+      <tr><td>HumanEval vs editing</td><td>HumanEval ranked qwen3.8-27b Q8 first (97.6). On Aider Polyglot it came third and was significantly worse than the incumbent (17 vs 28 of 50, p=0.01). A score on single functions from a docstring does not predict editing.</td><td><a data-md="results/2026-10-01/aider-polyglot-10h/REPORT.md">polyglot</a></td></tr>
+    </tbody></table></div>
 </section>
 
 <section id="planner">
-  <h2>Planner benchmark</h2>
-  <p class="sub">The AIOS contract is one-shot and grammar-constrained. The planner emits a single <code>write_lab_file</code> with the <b>full replacement content</b> and the fixed check sequence, with a 120 s initial and 240 s maximum deadline. That makes generation throughput × output size the binding constraint on these cards. 40 tasks per configuration.</p>
-  <div class="verdict"><p><b>Result:</b> the dense 27B models are always right but too slow (only files up to ~4.7 KiB fit in 240 s). The MoE <code>qwen3.6-35b-a3b</code> drops a check in over half its plans on its own, but with the check list <b>pinned in the grammar</b> it scores 39/40, all within 240 s, and follows 0/5 injections.</p><p><b>Update (2 Oct):</b> with tensor split the pinned MoE planner decodes at 66 tok/s instead of 53 (the 15.0 KiB edit: 127 → 102 s). Dense <code>qwen3.8-27b q8_0</code> with tensor split + its MTP head decodes at ~49 tok/s with ~99 % of drafts accepted, so every size up to 15.0 KiB now fits in 240 s (151 s for the largest). That run covers 9 of the 40 tasks (9/9 correct); a full 40-task run is still to do. <a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a></p></div>
+  <h2>AIOS planner benchmark</h2>
+  <p class="sub">A purpose-specific test, not part of the all-around ranking. The AIOS contract is one-shot and grammar-constrained: the planner emits a single <code>write_lab_file</code> with the <b>full replacement content</b> and the fixed check sequence, with a 120 s initial and 240 s maximum deadline. That makes generation throughput × output size the binding constraint on these cards. 40 tasks per configuration.</p>
+  <div class="verdict"><p><b>Result (23 Sep):</b> the dense 27B models are always right but too slow (only files up to ~4.7 KiB fit in 240 s). The MoE <code>qwen3.6-35b-a3b</code> drops a check in over half its plans on its own, but with the check list <b>pinned in the grammar</b> it scores 39/40, all within 240 s, and follows 0/5 injections.</p><p><b>Update (2 Oct):</b> tensor split takes the pinned MoE from 53 to 66 tok/s (the 15.0 KiB edit: 127 → 102 s). Its MTP version reaches 111 tok/s, 5/5 correct on a 5-task subset. Dense <code>qwen3.8-27b q8_0</code> with tensor split + MTP decodes at ~49 tok/s, so every size up to 15.0 KiB fits in 240 s (151 s for the largest; 9/9 correct). Swapping the planner file changes the SHA-256 the AIOS spec pins, and neither configuration has had the full 40-task run yet. <a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a></p></div>
   <div class="legend"><span><i style="background:var(--s1)"></i>Correct ≤ 240 s</span><span><i style="background:var(--s1-soft)"></i>Correct only with no deadline</span></div>
   <div class="card"><svg id="plannerChart" class="chart" role="img" aria-label="Planner tasks correct by model"></svg></div>
 
@@ -207,80 +287,23 @@ ul.tight{margin:8px 0 0;padding-left:20px} ul.tight li{margin:4px 0}
 </section>
 
 <section id="rig">
-  <h2>Full-stack rig</h2>
+  <h2>Full-stack rig (AIOS)</h2>
   <p class="sub">The rig runs multi-transaction scenarios through the whole flow: planner, strict validation, optional reviewer and reporter, a simulated human, checks, commit. Mistakes carry forward. Every configuration runs under an <b>oracle</b> human and a <b>rubber-stamp</b> human. Under the rubber stamp, <i>committed wrong</i> is the number that matters.</p>
   <div class="verdict"><p><b>Result (26–27 Sep):</b> use one model and no reviewer. The careful-hash planner persona went 54/54 with 0 wrong commits. Both model reviewers were net negative: they blocked 4 and 8 correct plans, and injected text steered them. Do the stale-hash check deterministically in the controller instead.</p></div>
   <div class="tablewrap"><table id="rigT"></table></div>
   <p class="note">Fix check (27 Sep): with reporter <code>from</code>/<code>to</code> typed as any JSON value, the 27B's reports went from 5/13 to 13/13 complete and exact. The new tool-loop-careful persona followed 0/6 injections. Sources: <a data-md="results/2026-09-26/rig/first-stack/REPORT.md">first-stack</a>, <a data-md="results/2026-09-26/rig/fixes-check/REPORT.md">fixes-check</a>, <a data-tree="rig">rig source</a>.</p>
 </section>
 
-<section id="hardware">
-  <h2>Getting the most out of Pascal</h2>
-  <p class="sub">GP100 has no <code>dp4a</code>, current CUDA dropped it, and Ollama's Vulkan path hides a lot of performance. Most of the wins here came from configuration, not from model choice.</p>
-  <div class="grid2">
-    <div class="card">
-      <h3 style="margin-top:0">Backend: CUDA sm_60 vs Ollama/Vulkan</h3>
-      <div class="legend"><span><i style="background:var(--s1)"></i>CUDA 12.6 llama.cpp</span><span><i style="background:var(--s2)"></i>Ollama Vulkan</span></div>
-      <svg id="backend" class="chart" role="img" aria-label="Generation tok/s CUDA vs Vulkan"></svg>
-      <p class="note">Generation tok/s at ctx 8192. The backend also inverts the ranking: devstral is slowest on Vulkan and fastest on CUDA. MMLU-Pro moved by one question in total, so accuracy does not depend on the backend. <a data-md="results/2026-09-19/cuda-rerun/REPORT.md">cuda-rerun</a></p>
-    </div>
-    <div class="card">
-      <h3 style="margin-top:0">KV cache: f16 vs q8_0 (devstral Q8_0)</h3>
-      <div class="legend"><span><i style="background:var(--s1)"></i>f16 @ ctx 32768</span><span><i style="background:var(--s2)"></i>q8_0 @ ctx 49152</span></div>
-      <svg id="kv" class="chart" role="img" aria-label="Generation tok/s by context depth for two KV types"></svg>
-      <p class="note">f16 reads KV at 546 GB/s (91 % of the ceiling). q8_0 reads it at 104 GB/s, because any q8_0 in the cache puts flash attention on its slow path. Production stays on q8_0 @ 49k for the context room. <a data-md="results/2026-09-19/devstral-p100-bandwidth/REPORT.md">bandwidth report</a></p>
-    </div>
-  </div>
-  <div class="grid2" style="margin-top:16px">
-    <div class="card">
-      <h3 style="margin-top:0">Split mode: layer vs tensor (2 Oct)</h3>
-      <div class="legend"><span><i style="background:var(--s2)"></i>layer tok/s</span><span><i style="background:var(--s1)"></i>tensor tok/s</span></div>
-      <svg id="split" class="chart" role="img" aria-label="Generation tok/s with layer and tensor split"></svg>
-      <p class="note">llama-bench tg128, f16 KV, flash attention on, 3 reps. Tensor split hangs (both cards at 100 % and 37 W) until <code>NCCL_P2P_DISABLE=1</code> sends the all-reduce through host memory. The driver reports P2P as OK, but GPU1 sits in a Gen3 x4 slot behind the Ryzen root complex. Prefill gains 50–60 % too, and VRAM is unchanged. <a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a></p>
-    </div>
-    <div class="card">
-      <h3 style="margin-top:0">Speculative decoding on planner edits (qwen3.8-27b)</h3>
-      <svg id="specplan" class="chart" role="img" aria-label="Decode tok/s on planner tasks by speculative configuration"></svg>
-      <p class="note">Decode tok/s on 5 planner-bench tasks, temperature 0, grammar on, all correct. MTP accepts ~99 % of drafts here against 77 % on general prompts in round 2, because the plan is mostly a copy of the input file. "MTP 4" = up to 4 drafted tokens; it only fits 2×16 GB with <code>-ub 256</code>. DFlash crashes under tensor split. On the MoE planner every speculative mode tried, n-gram included, is slower (35–43 against 66 tok/s).</p>
-    </div>
-  </div>
-  <h3>Other findings</h3>
-  <div class="tablewrap"><table>
-    <thead><tr><th>Finding</th><th>Measurement</th><th>Source</th></tr></thead>
-    <tbody>
-      <tr><td>HBM2 ceiling</td><td>599 GB/s read, 520 copy, per card (82 % of nameplate). Devstral generation streams at 309 GB/s, 52 % of that.</td><td><a data-md="results/2026-09-19/devstral-p100-bandwidth/REPORT.md">bandwidth</a></td></tr>
-      <tr><td>Multi-GPU split</td><td><code>layer</code> works. <code>row</code> fails to load. <code>tensor</code> deadlocked on 18 Sep; on 2 Oct it was traced to NCCL peer-to-peer, and with <code>NCCL_P2P_DISABLE=1</code> it is the fastest mode for every model (see the chart above). <code>--parallel 2</code> gives 23.4 tok/s aggregate at −1.2 % per stream, which shows decode is weight-streaming-bound.</td><td><a data-md="results/2026-09-19/devstral-p100-bandwidth/REPORT.md">bandwidth</a></td></tr>
-      <tr><td>Speculative decoding</td><td>Qwen3.8-27B Q8_0 + DFlash: <b>22.72 tok/s, 2.09×</b>, 76–79 % of drafts accepted. Draft-free <code>ngram-cache</code> accepts 11 % and is a net loss. On planner edits (2 Oct) MTP + tensor split reaches <b>49 tok/s</b> with ~99 % acceptance; n-gram drafting on the MoE planner loses at every setting tried.</td><td><a data-md="results/2026-09-19/candidates-round2/REPORT.md">round 2</a>, <a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a></td></tr>
-      <tr><td>q8_0 KV on the MoE planner</td><td>At 16k depth the planner decodes at 45.8 tok/s with a q8_0 KV cache against 51.9 with f16 (−12 %), with no prefill difference. Tensor split needs f16 KV anyway.</td><td><a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a></td></tr>
-      <tr><td>Clocks</td><td>Under load both cards boost to their 1328 MHz maximum without any application-clock change, so raising clocks gains nothing.</td><td><a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a></td></tr>
-      <tr><td>Vulkan tuning (before CUDA)</td><td>Disabling the integer-dot-product path made prompt processing 14–23× faster, and <code>num_batch 256</code> added 9 % to prefill. Qwen3.8 27B went from 11.7 to 164 prefill tok/s.</td><td><a data-md="results/2026-09-15/qwen3.8-p100-tuning/REPORT.md">qwen3.8 tuning</a>, <a data-md="results/2026-09-17/devstral-p100-tuning/REPORT.md">devstral tuning</a></td></tr>
-      <tr><td>Models bigger than VRAM</td><td>qwen3.8-flash-next (512-expert MoE, 70.8 GB): 12.53 tok/s warm, 0.66 cold, disk-bound at ~150 MB/s with the GPUs idle.</td><td><a data-md="results/2026-09-19/qwen3.8-flash-next/REPORT.md">flash-next</a></td></tr>
-      <tr><td>Context cost</td><td>The Qwen 27B models measured 72 KB/token of KV, not the 260 KB in earlier notes. Devstral measured 168 KB/token f16 (about 84 KB at q8_0, derived from that figure rather than measured), with room for ~100k tokens.</td><td><a data-md="results/2026-09-21/cuda-matrix/FINAL.md">cuda-matrix</a></td></tr>
-      <tr><td>Higher quant of the incumbent</td><td>Q5_K_P → Q8_K_P (Q8_0 + F16) or a stock Q8_0: no resolvable accuracy gain, ~4 % slower, and the Q8_K_P tops out at ctx ~16k against the Q5's ~180k. Qwen3.8's Q4 → Q8 coding gain (p=0.016) does not carry over from a Q5 start.</td><td><a data-md="results/2026-09-30/qwen36-q8kp/REPORT.md">quant test</a></td></tr>
-      <tr><td>Silent partial offload</td><td>This llama.cpp defaults to <code>--fit on</code> with a 1024 MiB margin per card. A file that nearly fills 32 GB gets a few layers quietly left in RAM (−15 % speed, so a speed floor misses it). Check VRAM against non-embedding weights + 1082 MiB + 72 KB/token instead. Force with <code>--fit off -ngl 999</code> and split by hand (<code>-ts 36,28</code>): the last card also holds the output tensor.</td><td><a data-md="results/2026-09-30/qwen36-q8kp/REPORT.md">quant test</a></td></tr>
-      <tr><td>HumanEval vs editing</td><td>HumanEval ranked qwen3.8-27b Q8 first (97.6). On Aider Polyglot, editing files with test feedback, it came third and was significantly worse than the incumbent (17 vs 28 of 50, p=0.01). A score on single functions from a docstring does not predict editing.</td><td><a data-md="results/2026-10-01/aider-polyglot-10h/REPORT.md">polyglot</a></td></tr>
-      <tr><td>Quant choice on GP100</td><td>No <code>dp4a</code>, so K-quants are slower per byte than Q8_0. MXFP4 (gpt-oss) works on sm_60.</td><td><a data-md="results/2026-09-19/candidates/REPORT.md">round 1</a></td></tr>
-    </tbody></table></div>
-</section>
-
-<section id="agent">
-  <h2>Tool use: tau-bench retail</h2>
-  <p class="sub">A multi-turn tool-calling agent loop against the retail domain. There were <b>0 parse failures across 375 tasks and ~4,000 model calls</b> on four architectures, so tool-call emission is solid and every failure was reasoning or policy.</p>
-  <div class="legend"><span><i style="background:var(--s1)"></i>Pass</span><span><i style="background:var(--s1-soft)"></i>Ceiling: stalls where the model had found the right order and then asked a question</span></div>
-  <div class="card"><svg id="tau" class="chart" role="img" aria-label="tau-bench pass rate and ceiling"></svg></div>
-  <p class="note">The customer is scripted, so a model that asks a question never gets an answer and scores zero. These scores are <b>not comparable</b> to published tau-bench numbers. g9v3 is a partial run (30 of 115 tasks). <a href="results/2026-09-22/devstral-tau-scripted/REPORT.html">Full report</a></p>
-</section>
-
 <section id="models">
   <h2>Models on the shelf</h2>
-  <p class="sub">GGUF weights (9–29 GB each) are too big for a Git repo, so this is the inventory: the files, their sizes, and where each one lives. The fast tier sits on NVMe (13 s cold load). The archive sits on an 8 TB HDD (~160 s cold load).</p>
+  <p class="sub">GGUF weights (2–82 GB each) are too big for a Git repo, so this is the inventory: the files, their sizes, and where each one lives. The fast tier sits on NVMe (13 s cold load for 29 GB). The archive sits on an 8 TB HDD (~160 s). Speeds are decode tok/s, layer → tensor split, from the 2 Oct sweep.</p>
   <div class="filters" id="mfilt"></div>
   <div class="tablewrap"><table id="modelsT"></table></div>
 </section>
 
 <section id="index">
   <h2>Every test in this repository</h2>
-  <p class="sub">P100 runs from 15 September onward. Each card links to the write-up and the raw folder (logs, per-run JSON, drivers).</p>
+  <p class="sub">P100 runs from 15 September onward, oldest first. Each card links to the write-up and the raw folder (logs, per-run JSON, drivers).</p>
   <div class="idx" id="idxP"></div>
   <h3>Reusable code</h3>
   <div class="idx" id="idxC"></div>
@@ -300,11 +323,10 @@ ul.tight{margin:8px 0 0;padding-left:20px} ul.tight li{margin:4px 0}
 </div>
 
 <footer><div class="wrap">
-  Built 29 September 2026 from <code>~/Projects/Tests</code>, updated 2 October. The raw data includes model outputs, router logs and per-question results. Dataset content (HumanEval, MMLU-Pro, tau-bench, GenEval, T2I-CompBench, the Exercism exercises in Aider Polyglot) remains under its upstream licences, listed in <a href="dataset_manifest.json">dataset_manifest.json</a>.
+  Built 29 September 2026 from <code>~/Projects/Tests</code>, reorganised 2 October around the best all-around model. The raw data includes model outputs, router logs and per-question results. Dataset content (HumanEval, MMLU-Pro, tau-bench, GenEval, T2I-CompBench, the Exercism exercises in Aider Polyglot) remains under its upstream licences, listed in <a href="dataset_manifest.json">dataset_manifest.json</a>.
 </div></footer>
 
 <div id="tip" role="tooltip"></div>
-
 <script>
 const REPO = "https://github.com/TheTriumphantFox/p100-model-tests";
 const md = p => `${REPO}/blob/main/${p}`, tree = p => `${REPO}/tree/main/${p}`;
@@ -338,37 +360,45 @@ const svgEl = (tag, attrs, parent) => { const e = document.createElementNS(NS, t
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 /* ---------- scoreboard ---------- */
+// speed = tensor split, layer = layer split (llama-bench tg128, 2 Oct sweep); NR = not run;
+// null = no thinking mode; edit = Aider Polyglot pass@2 % (of 50 for the top three, of 25 otherwise).
+const NR = "nr";
 const SCORE = [
-  {name:"qwen3.6-27b-abliterated", note:"incumbent", speed:11.3, quick:71.4, think:87.1, code:96.3, hl:true},
-  {name:"qwen3.6-27b-abliterated:q8_k_p", note:"same model, Q8_K_P · deleted", speed:10.7, quick:71.4, think:91.4, code:95.7},
-  {name:"qwen3.6-27b-unsloth:q8_0", note:"stock Q8_0 · deleted", speed:11.0, quick:74.3, think:90.0, code:95.1},
-  {name:"devstral-patched", note:"production :8080", speed:13.0, quick:58.6, think:null, code:84.8},
-  {name:"qwen3.8-27b-unsloth", note:"Q8_0", speed:11.05, quick:68.6, think:77.1, ts:true, code:97.6},
-  {name:"qwen3.8-27b-ggmlorg", note:"Q8_0 + drafters", speed:11.05, quick:68.6, think:78.6, ts:true, code:95.7},
-  {name:"qwen3.8-27b-uncensored-hauhaucs", note:"Q6_K_P", speed:10.1, quick:68.6, think:82.9, ts:true, code:95.7},
-  {name:"qwen3.8-27b-stock", note:"Q4_K_M", speed:12.35, quick:67.1, think:82.9, ts:true, code:93.3},
-  {name:"gpt-oss-20b", note:"Q8_0 / MXFP4", speed:66.75, quick:71.4, think:72.9, ts:true, code:95.1},
-  {name:"ornith-1.5-35b-a3b", note:"MoE Q4_K_M", speed:48.7, quick:61.4, think:81.4, ts:true, code:92.1},
-  {name:"g9v3-39a5b", note:"MoE Q4_K_M", speed:39.6, quick:67.1, think:68.6, ts:true, code:93.9},
+  {name:"qwen3.6-27b-abliterated", note:"incumbent · Q5_K_P", speed:18.8, layer:11.1, quick:71.4, think:87.1, code:96.3, edit:56, editN:"28/50", hl:true},
+  {name:"qwen3.6-35b-a3b", note:"MoE · UD-Q6_K · AIOS planner", speed:67.7, layer:54.0, quick:NR, think:NR, code:NR, edit:48, editN:"24/50"},
+  {name:"devstral-patched", note:"production :8080 · Q8_0", speed:22.3, layer:12.9, quick:58.6, think:null, code:84.8, edit:16, editN:"4/25"},
+  {name:"qwen3.8-27b-unsloth", note:"Q8_0", speed:18.6, layer:10.9, quick:68.6, think:77.1, ts:true, code:97.6, edit:34, editN:"17/50"},
+  {name:"qwen3.8-27b-ggmlorg", note:"Q8_0 + drafters", speed:18.6, layer:10.8, quick:68.6, think:78.6, ts:true, code:95.7, edit:NR},
+  {name:"qwen3.8-27b-uncensored-hauhaucs", note:"Q6_K_P", speed:17.1, layer:9.9, quick:68.6, think:82.9, ts:true, code:95.7, edit:NR},
+  {name:"qwen3.8-27b-stock", note:"Q4_K_M", speed:20.2, layer:12.1, quick:67.1, think:82.9, ts:true, code:93.3, edit:NR},
+  {name:"gpt-oss-20b", note:"Q8_0 / MXFP4", speed:100.4, layer:67.0, quick:71.4, think:72.9, ts:true, code:95.1, edit:16, editN:"4/25"},
+  {name:"ornith-1.5-35b-a3b", note:"MoE · Q4_K_M", speed:67.1, layer:54.3, quick:61.4, think:81.4, ts:true, code:92.1, edit:NR},
+  {name:"g9v3-39a5b", note:"MoE · Q4_K_M · own build", speed:51.1, layer:39.2, quick:67.1, think:68.6, ts:true, code:93.9, edit:NR},
+  {name:"k2-horizon-7b", note:"Q8_0 · IFM fork build", speed:55.9, layer:35.0, quick:NR, think:NR, code:NR, edit:NR},
+  {name:"qwen3.8-flash-next", note:"512-expert MoE · IQ2_XXS · part in RAM", speed:19.3, layer:19.3, quick:NR, think:NR, code:NR, edit:NR},
 ];
-const SPEEDRANGE = {"qwen3.6-27b-abliterated":"11.1–11.5","qwen3.6-27b-abliterated:q8_k_p":"10.6–11.0","qwen3.6-27b-unsloth:q8_0":"10.9–11.3","devstral-patched":"12.9–13.1","qwen3.8-27b-unsloth":"10.9–11.2","qwen3.8-27b-ggmlorg":"10.9–11.2","qwen3.8-27b-uncensored-hauhaucs":"9.9–10.3","qwen3.8-27b-stock":"12.1–12.6","gpt-oss-20b":"66.0–67.5","ornith-1.5-35b-a3b":"47.8–49.6","g9v3-39a5b":"39.0–40.2"};
+const num = v => typeof v === "number" ? v : -1;
 (() => {
   const tb = document.querySelector("#score tbody");
-  const max = {speed:70, quick:100, think:100, code:100};
-  const best = {}; ["speed","quick","think","code"].forEach(k => best[k] = Math.max(...SCORE.map(r => r[k] ?? -1)));
+  const keys = ["speed","quick","think","code","edit"];
+  const max = {speed:110, quick:100, think:100, code:100, edit:100};
+  const best = {}; keys.forEach(k => best[k] = Math.max(...SCORE.map(r => num(r[k]))));
   const cell = (r, k) => {
     const v = r[k];
+    if (v === NR) return `<td class="num"><span class="na">not run</span></td>`;
     if (v == null) return `<td class="num"><span class="na">none</span></td>`;
-    const lbl = k === "speed" ? SPEEDRANGE[r.name] : v.toFixed(1) + (k === "think" && r.ts ? "*" : "");
-    return `<td class="num"><div class="cellbar ${v === best[k] ? "best" : ""}"><div class="track"><div class="fill" style="width:${100 * v / max[k]}%"></div></div><span>${lbl}</span></div></td>`;
+    const lbl = k === "speed" ? v.toFixed(1) : k === "edit" ? `${v}%` : v.toFixed(1) + (k === "think" && r.ts ? "*" : "");
+    const tipTxt = k === "speed" ? `${esc(r.name)}: ${r.speed} tok/s tensor split, ${r.layer} layer split`
+                 : k === "edit" ? `${esc(r.name)}: ${r.editN} solved within two tries` : "";
+    return `<td class="num"${tipTxt ? ` data-tip="${tipTxt}"` : ""}><div class="cellbar ${v === best[k] ? "best" : ""}"><div class="track"><div class="fill" style="width:${100 * v / max[k]}%"></div></div><span>${lbl}</span></div></td>`;
   };
-  const render = rows => tb.innerHTML = rows.map(r => `<tr class="${r.hl ? "hl" : ""}"><td><code>${r.name}</code><span class="tag">${r.note}</span></td>${cell(r,"speed")}${cell(r,"quick")}${cell(r,"think")}${cell(r,"code")}</tr>`).join("");
+  const render = rows => tb.innerHTML = rows.map(r => `<tr class="${r.hl ? "hl" : ""}"><td><code>${r.name}</code><span class="tag">${r.note}</span></td>${keys.map(k => cell(r, k)).join("")}</tr>`).join("");
   render(SCORE);
   document.querySelectorAll("#score th.sort").forEach(th => th.onclick = () => {
     const k = th.dataset.k, dir = th.getAttribute("aria-sort") === "descending" ? 1 : -1;
     document.querySelectorAll("#score th").forEach(t => t.removeAttribute("aria-sort"));
     th.setAttribute("aria-sort", dir < 0 ? "descending" : "ascending");
-    render([...SCORE].sort((a, b) => k === "name" ? dir * -a.name.localeCompare(b.name) : dir * ((a[k] ?? -1) - (b[k] ?? -1))));
+    render([...SCORE].sort((a, b) => k === "name" ? dir * -a.name.localeCompare(b.name) : dir * (num(a[k]) - num(b[k]))));
   });
 })();
 
@@ -377,16 +407,16 @@ function drawScatter() {
   const s = document.getElementById("scatter"); s.innerHTML = "";
   const W = s.clientWidth || 800, H = 320, m = {l:64, r:24, t:16, b:42};
   s.setAttribute("viewBox", `0 0 ${W} ${H}`); s.setAttribute("height", H);
-  const x = v => m.l + (Math.log(v) - Math.log(8)) / (Math.log(80) - Math.log(8)) * (W - m.l - m.r);
+  const x = v => m.l + (Math.log(v) - Math.log(12)) / (Math.log(130) - Math.log(12)) * (W - m.l - m.r);
   const y = v => m.t + (100 - v) / (100 - 82) * (H - m.t - m.b);
-  [8,10,20,40,80].forEach(t => { svgEl("line",{x1:x(t),x2:x(t),y1:m.t,y2:H-m.b,class:"grid"},s); svgEl("text",{x:x(t),y:H-m.b+16,"text-anchor":"middle"},s).textContent=t; });
+  [15,20,30,50,70,100].forEach(t => { svgEl("line",{x1:x(t),x2:x(t),y1:m.t,y2:H-m.b,class:"grid"},s); svgEl("text",{x:x(t),y:H-m.b+16,"text-anchor":"middle"},s).textContent=t; });
   [84,88,92,96,100].forEach(t => { svgEl("line",{x1:m.l,x2:W-m.r,y1:y(t),y2:y(t),class:"grid"},s); svgEl("text",{x:m.l-8,y:y(t)+4,"text-anchor":"end"},s).textContent=t+"%"; });
-  svgEl("text",{x:(W+m.l)/2,y:H-6,"text-anchor":"middle"},s).textContent="Generation tok/s (log scale) →";
+  svgEl("text",{x:(W+m.l)/2,y:H-6,"text-anchor":"middle"},s).textContent="Decode tok/s, tensor split (log scale) →";
   svgEl("text",{x:12,y:m.t+4,transform:`rotate(-90 12 ${m.t+4})`,"text-anchor":"end"},s).textContent="HumanEval pass@1";
-  const lab = {"qwen3.6-27b-abliterated":[10,18,"start"],"devstral-patched":[10,4,"start"],"gpt-oss-20b":[-10,-10,"end"],"ornith-1.5-35b-a3b":[-10,4,"end"],"g9v3-39a5b":[-10,-10,"end"],"qwen3.8-27b-unsloth":[-8,-10,"start"]};
-  SCORE.forEach(r => {
+  const lab = {"qwen3.6-27b-abliterated":[12,18,"start"],"devstral-patched":[10,4,"start"],"gpt-oss-20b":[-10,-10,"end"],"ornith-1.5-35b-a3b":[-10,16,"end"],"g9v3-39a5b":[-10,-10,"end"],"qwen3.8-27b-unsloth":[-8,-10,"start"]};
+  SCORE.filter(r => typeof r.code === "number").forEach(r => {
     const cx = x(r.speed), cy = y(r.code);
-    const tipTxt = `<b>${esc(r.name)}</b><br>${SPEEDRANGE[r.name]} tok/s · HumanEval ${r.code}%`;
+    const tipTxt = `<b>${esc(r.name)}</b><br>${r.speed} tok/s tensor split (${r.layer} layer) · HumanEval ${r.code}%`;
     svgEl("circle",{cx,cy,r:14,fill:"transparent","data-tip":tipTxt},s);
     svgEl("circle",{cx,cy,r:r.hl?7:5.5,fill:r.hl?"var(--s2)":"var(--s1)",stroke:"var(--surface)","stroke-width":2,"pointer-events":"none"},s);
     if (lab[r.name]) { const [dx,dy,a] = lab[r.name]; svgEl("text",{x:cx+dx,y:cy+dy,"text-anchor":a,class:"lab","pointer-events":"none"},s).textContent = r.name; }
@@ -495,10 +525,18 @@ function drawAll() {
     {max:14, unit:"", series:[{name:"CUDA tok/s",color:"var(--s1)"},{name:"Vulkan tok/s",color:"var(--s2)"}]});
   groupBars("kv", [{label:"depth ~0",v:[12.88,12.72]},{label:"depth 13.4k",v:[12.26,11.13]},{label:"depth 27.8k",v:[11.68,9.75]}],
     {max:14, unit:"", series:[{name:"f16 tok/s",color:"var(--s1)"},{name:"q8_0 tok/s",color:"var(--s2)"}], labelW:110});
-  groupBars("split", [{label:"35b-a3b Q6_K",v:[54.0,67.7]},{label:"gpt-oss-20b",v:[67.0,100.4]},{label:"qwen3.8 Q8_0",v:[10.9,18.6]},{label:"qwen3.8 Q4_K_M",v:[12.4,20.5]},{label:"qwen3.6 Q5_K_M",v:[11.1,18.8]}],
-    {max:110, unit:"", series:[{name:"layer tok/s",color:"var(--s2)"},{name:"tensor tok/s",color:"var(--s1)"}], labelW:150});
-  hbars("specplan", [["layer (23 Sep)",10.8],["tensor",18.4],["layer + DFlash (Q4)",28.8],["tensor + MTP 2",39.5],["tensor + MTP 3",45.4],["tensor + MTP 4",49.1]]
-    .map(([l,v]) => ({label:l, v, tip:`<b>${l}</b><br>${v} tok/s`})), {max:50, unit:"", labelW:150});
+  groupBars("split", [
+    {label:"gpt-oss-20b",v:[67.0,100.4]},{label:"qwen3.6-35b-a3b",v:[54.0,67.7]},{label:"ornith 35b-a3b",v:[54.3,67.1]},
+    {label:"k2-horizon-7b",v:[35.0,55.9]},{label:"g9v3-39a5b",v:[39.2,51.1]},{label:"devstral Q8_0",v:[12.9,22.3]},
+    {label:"qwen3.8 Q4_K_M",v:[12.4,20.5]},{label:"qwen3.8 stock Q4",v:[12.1,20.2]},{label:"qwen3.6-27b incumbent",v:[11.1,18.8]},
+    {label:"qwen3.8 Q8_0 ggml-org",v:[10.8,18.6]},{label:"qwen3.8 Q8_0 unsloth",v:[10.9,18.6]},{label:"qwen3.8 Q6_K_P",v:[9.9,17.1]}],
+    {max:110, unit:"", series:[{name:"layer tok/s",color:"var(--s2)"},{name:"tensor tok/s",color:"var(--s1)"}], labelW:190});
+  groupBars("mtp", [
+    {label:"qwen3.6-35b-a3b (MTP twin)",v:[66.2,111.4]},{label:"ornith 35b-a3b",v:[64.5,99.7]},
+    {label:"qwen3.8 Q8_0 + MTP file",v:[18.4,49.1]},{label:"qwen3.8 Q8_0 unsloth",v:[18.6,48.8]},{label:"qwen3.8 Q4_K_M + MTP file",v:[20.4,47.1]},
+    {label:"qwen3.8 Q6_K_P",v:[17.1,43.8]},{label:"qwen3.8 stock Q4",v:[20.2,43.1]},{label:"qwen3.6-27b stock (MTP)",v:[18.6,40.8]},
+    {label:"incumbent + Qwen3.8 head",v:[18.8,40.0]}],
+    {max:120, unit:"", series:[{name:"no MTP tok/s",color:"var(--s2)"},{name:"with MTP tok/s",color:"var(--s1)"}], labelW:190});
   hbars("tau", [
     {label:"qwen3.6-27b q5_k_m", v:66.1, soft:71.3, tip:"<b>qwen3.6-27b q5_k_m</b><br>Pass 66.1 % · ceiling 71.3 %<br>115 tasks · 7.80 h"},
     {label:"g9v3-39a5b (partial)", v:56.7, soft:86.7, tip:"<b>g9v3-39a5b q4_k_m</b><br>Pass 56.7 % · ceiling 86.7 %<br>30 tasks only · 1.09 h"},
@@ -511,33 +549,36 @@ let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(dra
 
 /* ---------- model inventory ---------- */
 const MODELS = [
-  ["qwen3.6-35b-a3b UD-Q6_K","29.3","fast","AIOS local planner. 53 tok/s; 39/40 on the pinned planner bench; best rig config; 24/50 Aider Polyglot, level with the incumbent at 3.6× its speed."],
-  ["qwen3.6-27b-abliterated Q5_K_M","20.8","fast","HauhauCS Aggressive Q5_K_P. Best coding score of its line (71.4 / 87.1 / 96.3) and best on Aider Polyglot (28/50), ~11 tok/s, ~180k tokens of context headroom."],
-  ["devstral-patched Q8_0 (+ mmproj f16 0.9 GB)","25.1","fast","Production agent on :8080, ~13 tok/s. Tool-template patch. 4/25 on Aider Polyglot, tied for last."],
-  ["gpt-oss-20b Q8_0","12.1","fast","~66 tok/s. The only non-Qwen model kept; non-deterministic on repeats. 4/25 on Aider Polyglot."],
-  ["k2-horizon-7b Q8_0","9.6","fast","IFM K2 Horizon 7B. Needs the IFM fork build (:8083). Not yet benchmarked here."],
-  ["Qwen3.8-27B Q8_0 (ggml-org)","28.6","archive","18.6 tok/s tensor split, 49 with MTP on planner edits (22.72 with DFlash, layer split); 95.7 HumanEval."],
-  ["dflash-Qwen3.8-27B Q8_0","2.1","archive","DFlash draft module, 76–79 % acceptance."],
-  ["mtp-Qwen3.8-27B Q8_0","3.2","archive","MTP draft module. With tensor split: 49 tok/s on planner edits, ~99 % acceptance."],
-  ["Qwen3.8-27B Q4_K_M","19.0","archive","Q4 spec-decoding base."],
-  ["Ornith-1.5-35B-A3B Q4_K_M","21.7","archive","MoE, 53 tok/s; 37/40 pinned planner."],
-  ["G9v3-39A5B Q4_K_M","23.6","archive","MoE, ~39 tok/s; cheapest KV (1.6× cheaper). Drops checks unpinned."],
+  ["qwen3.6-35b-a3b UD-Q6_K","29.3","fast","AIOS local planner (MoE). 54 → 68 tok/s; 39/40 on the pinned planner bench; best rig config; 24/50 Aider Polyglot, level with the incumbent. Not yet scored on MMLU-Pro or HumanEval."],
+  ["qwen3.6-35b-a3b UD-Q6_K, MTP version","30.0","fast","unsloth's MTP-preserving twin of the planner (<code>~/models/_mtp-dl/</code>, 2 Oct). 111 tok/s on planner edits at n-max 3."],
+  ["qwen3.6-27b-abliterated Q5_K_M","20.8","fast","The incumbent (HauhauCS Aggressive Q5_K_P). Best reasoning, editing (28/50) and tool use; 11.1 → 18.8 tok/s, ~40 with the Qwen3.8 MTP file; ~180k tokens of context headroom."],
+  ["qwen3.6-27b Q5_K_M, MTP version","19.8","fast","Stock (not abliterated) Qwen3.6-27B with its MTP head (2 Oct). 18.6 → 40.8 tok/s with MTP on planner edits. Accuracy not scored."],
+  ["devstral-patched Q8_0 (+ mmproj f16 0.9 GB)","25.1","fast","Production agent on :8080. 12.9 → 22.3 tok/s, prefill 175 → 391. Tool-template patch. 4/25 on Aider Polyglot, tied for last."],
+  ["gpt-oss-20b Q8_0","12.1","fast","67 → 100 tok/s, the fastest model here. Non-deterministic on repeats. 4/25 on Aider Polyglot."],
+  ["k2-horizon-7b Q8_0","9.6","fast","IFM K2 Horizon 7B. Needs the IFM fork build (:8083). 35 → 56 tok/s; accuracy not scored."],
+  ["qwen3.8-flash-next IQ2_XXS (2 splits)","75.2","fast","512-expert MoE, bartowski (2 Oct). 19.3 tok/s with experts in RAM via <code>--fit</code>; needs the whole machine. Accuracy not scored."],
+  ["Qwen3.8-27B Q8_0 (ggml-org)","28.6","archive","10.8 → 18.6 tok/s, 49 with the MTP file on planner edits (22.72 with DFlash, layer split); 95.7 HumanEval."],
+  ["mtp-Qwen3.8-27B Q8_0","3.2","archive","MTP draft file. Works on any Qwen3.8-27B and on the Qwen3.6-27B incumbent (95 % acceptance)."],
+  ["dflash-Qwen3.8-27B Q8_0","2.1","archive","DFlash draft module, 76–79 % acceptance; crashes under tensor split."],
+  ["Qwen3.8-27B Q8_0 (Unsloth)","29.0","archive","Built-in MTP head: 48.8 tok/s on planner edits. Best HumanEval (97.6), but 17/50 on Aider Polyglot, behind the incumbent (p=0.01)."],
+  ["Qwen3.8-27B-Uncensored-HauhauCS Q6_K_P","25.9","archive","9.9 → 17.1 tok/s, 43.8 with its built-in MTP head. 95.7 HumanEval / 68.6 MMLU-Pro."],
+  ["Qwen3.8-27B Q4_K_M","19.0","archive","12.4 → 20.5 tok/s, 47.1 with the MTP file (slower than Q8_0 + MTP)."],
+  ["Ornith-1.5-35B-A3B Q4_K_M","21.7","archive","MoE, 54 → 67 tok/s, 99.7 with its built-in MTP head; 37/40 pinned planner."],
+  ["G9v3-39A5B Q4_K_M","23.6","archive","MoE, 39 → 51 tok/s; needs <code>~/llama-cuda12-g9v3</code>. Cheapest KV (1.6×). Drops checks unpinned."],
   ["Qwen3.6-35B-A3B UD-Q6_K (original)","29.3","archive","Original of the fast-tier planner copy."],
-  ["Qwen3.8-27B Q8_0 (Unsloth)","29.0","archive","Best HumanEval measured: 97.6, but 17/50 on Aider Polyglot, behind the incumbent (p=0.01)."],
-  ["Qwen3.8-27B-Uncensored-HauhauCS Q6_K_P","25.9","archive","95.7 / 68.6; Q6_K speed penalty."],
   ["ollama: devstral-patched:latest","25.9","ollama","Original blob of the fast-tier devstral."],
   ["ollama: qwen3.6-27b-abliterated:q5_k_m","20.8","ollama","Original blob of the incumbent."],
+  ["ollama: qwen3.8-27b-stock:q4_k_m (+128k tag)","17.7","ollama","The only unmodified Qwen3.8. 12.1 → 20.2 tok/s, 43.1 with its built-in MTP head; 93.3 HumanEval."],
   ["ollama: qwen3.6-35b-a3b-abliterated-vl:q4_k_m","22.1","ollama","Vision + the qwen worker. Does not load on llama.cpp."],
   ["ollama: qwen3.6-27b-opus-distill:q4_k_m","17.5","ollama","Vision GGUF. Does not load on llama.cpp."],
   ["ollama: gemma4-e4b-abliterated:q4_k_m","6.3","ollama","Only audio-in model. Does not load on llama.cpp."],
-  ["ollama: qwen3.8-27b-stock:q4_k_m (+128k tag)","17.7","ollama","Only unmodified Qwen3.8; 93.3 HumanEval."],
-  ["qwen3.8-flash-next UD-IQ3_XXS","82.0","removed","Exceeds VRAM; 5.3 tok/s steady, 70.0 MMLU."],
-  ["xing4.0-29b-a4b IQ4_NL","21.2","removed","Worst measured: 83.5 HE / 44.3 MMLU; needed a fork runtime."],
-  ["nemotron-cascade-2-30b-a3b Q4_K_M","24.7","removed","Fastest (69–70 tok/s) but 89.0 / 48.6; dominated by gpt-oss."],
-  ["glm-4.7-flash Q5_K_M","21.4","removed","84.8 / 55.7, lost both axes."],
-  ["Qwen3.8-27B UD-Q6_K","22.0","removed","Dominated by the Unsloth Q8_0 on both accuracy and speed."],
+  ["qwen3.8-flash-next UD-IQ3_XXS","82.0","removed","Exceeds VRAM; 5.3 tok/s steady through Ollama, 70.0 MMLU-Pro."],
   ["Qwen3.6-27B-HauhauCS-Aggressive Q8_K_P","32.0","removed","The incumbent at Q8_0 + F16: 95.7 / 71.4 / 91.4, no resolvable gain; ctx capped at ~16k."],
   ["Qwen3.6-27B Q8_0 (Unsloth, stock)","28.6","removed","95.1 / 74.3 / 90.0, no resolvable gain; not abliterated."],
+  ["Qwen3.8-27B UD-Q6_K","22.0","removed","Dominated by the Unsloth Q8_0 on both accuracy and speed."],
+  ["nemotron-cascade-2-30b-a3b Q4_K_M","24.7","removed","69–70 tok/s (layer) but 89.0 HumanEval / 48.6 MMLU-Pro; dominated by gpt-oss."],
+  ["glm-4.7-flash Q5_K_M","21.4","removed","84.8 / 55.7, lost both axes."],
+  ["xing4.0-29b-a4b IQ4_NL","21.2","removed","Worst measured: 83.5 HumanEval / 44.3 MMLU-Pro; needed a fork runtime."],
 ];
 const TIERS = {all:"All", fast:"Fast tier (NVMe)", archive:"Archive (HDD)", ollama:"Ollama store", removed:"Tested, removed"};
 (() => {
@@ -564,7 +605,7 @@ const IDX = [
   ["2026-09-19","cuda-rerun","CUDA sm_60 rerun","CUDA is 4.3–6.6× faster than Vulkan; accuracy is backend-invariant; 3 tags cannot load.","REPORT.md"],
   ["2026-09-19","candidates","Candidates round 1","gpt-oss-20b and GLM-4.7-Flash. MXFP4 works on sm_60; gpt-oss cannot be told not to reason.","REPORT.md"],
   ["2026-09-19","candidates-round2","Candidates round 2 + spec decoding","Ornith, Nemotron, Xing, g9v3 and Qwen3.8 quants. DFlash gives 2.09×. Includes the shelf keep/toss review.","REPORT.md"],
-  ["2026-09-19","qwen3.8-flash-next","Qwen3.8 Flash Next viability","A 70.8 GB MoE on 32 GB VRAM: 12.5 tok/s warm, 0.66 cold.","REPORT.md"],
+  ["2026-09-19","qwen3.8-flash-next","Qwen3.8 Flash Next viability","An 82 GB MoE on 32 GB VRAM: 5.3 tok/s steady on distinct prompts, 0.66 cold, 70.0 MMLU-Pro. The first \"12.5 tok/s warm\" figure came from a repeated prompt and was withdrawn.","REPORT.md"],
   ["2026-09-21","cuda-matrix","Final model matrix","65 runs, McNemar-paired comparisons, repeatability, and a context ladder. The scoreboard above comes from here.","FINAL.md"],
   ["2026-09-22","devstral-tau-scripted","tau-bench retail tool use","375 tasks, ~4,000 calls, 0 parse failures, with a scripted customer.","REPORT.html"],
   ["2026-09-23","planner-bench","AIOS planner benchmark","40 one-shot grammar-constrained tasks × 9 configurations, including a size ladder and injection tasks.","RESULTS.md"],
@@ -572,7 +613,9 @@ const IDX = [
   ["2026-09-26","rig","Full-stack rig runs","Runs smoke, first-stack (2 h 25 min) and fixes-check. Covers planner, reviewer and reporter personas.","first-stack/REPORT.md"],
   ["2026-09-30","qwen36-q8kp","Incumbent at Q8","Q8_K_P and a stock Q8_0 against the Q5_K_P, McNemar-paired. No resolvable gain, less context. Also: <code>--fit</code> silently offloading layers.","REPORT.md"],
   ["2026-10-01","aider-polyglot-10h","Aider Polyglot coding","Edit files to spec in 6 languages and get the test failures back for a second try. Five models on 25 exercises, the top 3 on 50. The incumbent scored 28/50, the MoE 24/50 at 3.6× the speed, devstral 4/25.","REPORT.md"],
-  ["2026-10-02","p100-optimize","Tensor split and MTP on planner edits","Tensor split works with NCCL P2P off: +25 % on the MoE planner, ~70 % on dense 27Bs. Qwen3.8-27B + MTP reaches 49 tok/s on planner edits, 9/9 correct. n-gram drafting loses on the MoE.","REPORT.md"],
+  ["2026-10-02","p100-optimize","Tensor split and MTP","Tensor split works with NCCL P2P off. MTP on every model with a head: the planner twin 66 → 111 tok/s, Ornith 65 → 100, dense 27Bs to 40–49, all correct. n-gram drafting loses on MoE models.","REPORT.md"],
+  ["2026-10-02","speed-sweep","Speed sweep, all local models","12 models, layer vs tensor split, one session: +24–30 % MoE, +50–60 % gpt-oss/K2, +66–73 % dense. Devstral 12.9 → 22.3 tok/s.","REPORT.md"],
+  ["2026-10-02","flash-next-iq2","Flash-Next at IQ2_XXS","The 75 GB IQ2_XXS of the 512-expert MoE on llama.cpp: 19.3 tok/s on distinct prompts, against 5.3 for the IQ3_XXS through Ollama.","REPORT.md"],
 ];
 const EARLY = [
   ["2026-09-01","local-llm-benchmark","Ollama throughput (GTX 1660)","12 tags × 12 prompts, 720 requests, with graphs.","graphs/index.html"],
@@ -591,7 +634,7 @@ document.getElementById("idxP").innerHTML = IDX.map(card).join("");
 document.getElementById("idxE").innerHTML = EARLY.map(card).join("");
 document.getElementById("idxC").innerHTML = [
   ["rig","Full-stack rig","Controller, flow, roles, personas and scenario generator. Swappable models per config."],
-  ["scripts","Benchmark scripts","Throughput, KV A/B, spec-decoding A/B, the HBM bandwidth kernel, the CUDA 12.6 sm_60 build script, the Ollama→llama.cpp shim, and the Aider Polyglot order + runner."],
+  ["scripts","Benchmark scripts","Throughput, KV A/B, spec-decoding A/B, the HBM bandwidth kernel, the CUDA 12.6 sm_60 build script, the Ollama→llama.cpp shim, and the Aider Polyglot order + runner. Per-run drivers (sweeps, server probes) live in each result folder."],
 ].map(([p, t, s]) => `<div class="card"><div class="t">${t}</div><div class="s">${s}</div><div class="links"><a href="${tree(p)}">${p}/</a></div></div>`).join("");
 
 /* ---------- early accuracy table ---------- */

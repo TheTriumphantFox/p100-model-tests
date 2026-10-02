@@ -216,7 +216,26 @@ pass, 99/100 stubs fail). Resumable: a later run continues from exercise 50 of `
 beats layer split everywhere: **planner 35B-A3B 54 → 68 tok/s, dense 27Bs ~11 → 19, gpt-oss
 67 → 100**, prefill +50–60 %, same VRAM. **Qwen3.8-27B Q8_0 + tensor + MTP n-max 4 (`-ub 256`)
 decodes at ~49 tok/s on planner edits, 9/9 correct, ~99 % acceptance** (15.5 KiB in 151 s, was
-598 s). Speculation of any kind slows the MoE planner. q8_0 KV costs the planner 12 % at 16k.
+598 s). N-gram speculation slows the MoE planner. q8_0 KV costs the planner 12 % at 16k.
+Afternoon (REPORT §4): **MTP works on MoE too**. The planner's unsloth MTP twin
+(`~/models/_mtp-dl/`) goes 66 → 111 tok/s at n-max 3, Ornith 65 → 100, and the dense 27Bs reach
+40–49. Qwen3.8's MTP file works on the Qwen3.6 incumbent (40 tok/s, 95 % acceptance). All correct.
+
+### 2026-10-02 — speed sweep, all local models
+
+- `2026-10-02/speed-sweep/REPORT.md`; `sweep.sh` reruns it (stops/restarts :8080), `table.py`
+
+12 models, layer vs tensor split, one session: +24–30 % MoE, +50–60 % gpt-oss/K2, +66–73 % dense.
+Devstral 12.9 → 22.3 tok/s. g9v3 needs `~/llama-cuda12-g9v3`; K2's fork build supports tensor.
+
+### 2026-10-02 — qwen3.8-flash-next IQ2_XXS
+
+- `2026-10-02/flash-next-iq2/REPORT.md`, `probe.py` (48 distinct prompts against a server)
+
+bartowski IQ2_XXS (75 GB) on llama.cpp with default `--fit`: 19.3 tok/s steady, against 5.3 for
+the 82 GB IQ3_XXS through Ollama. Quant and runtime both changed. Weights in `~/models/`.
+
+**From 2026-10-02 on, a test with no stated goal is judged on the best all-around model.**
 
 ## Full-stack test rig
 

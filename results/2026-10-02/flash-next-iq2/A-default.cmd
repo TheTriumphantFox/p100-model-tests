@@ -1,0 +1,1 @@
+# 2026-10-02T12:24:36-04:00 llama-server -m /home/hm/models/qwen3.8-flash-next_iq2_xxs/Qwen3.8-Flash-Next-IQ2_XXS/Qwen3.8-Flash-Next-IQ2_XXS-00001-of-00002.gguf -c 8192 -fa on (defaults: fit on, layer split)

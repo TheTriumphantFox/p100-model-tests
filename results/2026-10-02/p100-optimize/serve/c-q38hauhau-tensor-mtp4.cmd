@@ -1,0 +1,1 @@
+# 2026-10-02T13:58:17-04:00 NCCL_P2P_DISABLE=1 llama-server -m /home/hm/Downloads/Models/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-Q6_K_P.gguf -fa on -sm tensor --spec-type draft-mtp --spec-draft-n-max 4

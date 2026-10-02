@@ -1,7 +1,9 @@
 # P100 model tests
 
-Local LLM benchmarks, tuning studies and planner tests run on two Tesla P100-PCIE-16GB cards
-(32 GB VRAM, llama.cpp CUDA 12.6 sm_60 build) in September 2026.
+Which local LLM is the best all-around model on two Tesla P100-PCIE-16GB cards (32 GB VRAM,
+llama.cpp CUDA 12.6 sm_60 build)? Accuracy, editing, tool use, speed and tuning, plus the AIOS
+planner tests, September–October 2026. Unless a test says otherwise, it is judged on
+all-around usefulness.
 
 **Browse the results:** https://thetriumphantfox.github.io/p100-model-tests/
 
@@ -18,7 +20,7 @@ Local LLM benchmarks, tuning studies and planner tests run on two Tesla P100-PCI
 
 ## Not included
 
-- **Model weights** (GGUF, 9–29 GB each). They are too big for Git. The results page has the full inventory.
+- **Model weights** (GGUF, 2–82 GB each). They are too big for Git. The results page has the full inventory.
 - **Datasets.** Download them with `scripts/download_benchmarks.py`; sources are in `dataset_manifest.json`.
 - **Most generated images** from the 2 September RealVisXL run (2,953 PNGs, 1.1 GB). Their CLIP
   scores and manifests are kept, and a best/worst sample per category is in `site/gallery/`.
