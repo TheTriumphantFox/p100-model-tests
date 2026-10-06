@@ -1,0 +1,47 @@
+```python
+def sort_array(arr):
+    """
+    In this Kata, you have to sort an array of non-negative integers according to
+    number of ones in their binary representation in ascending order.
+    For similar number of ones, sort based on decimal value.
+
+    It must be implemented like this:
+    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]
+    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]
+    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]
+    """
+    def count_ones(n):
+        # For negative numbers, we consider the absolute value's binary representation
+        # or just use the absolute value for counting ones in binary representation
+        # Actually, the problem says "non-negative integers" but the example includes negatives.
+        # Let's interpret: for negative numbers, we count ones in the binary representation of their absolute value.
+        # But actually, looking at the example: [-2, -3, -4, -5, -6] -> [-6, -5, -4, -3, -2]
+        # Let's check: 
+        # -2: abs=2 -> bin '10' -> 1 one
+        # -3: abs=3 -> bin '11' -> 2 ones
+        # -4: abs=4 -> bin '100' -> 1 one
+        # -5: abs=5 -> bin '101' -> 2 ones
+        # -6: abs=6 -> bin '110' -> 2 ones
+        # Sorting by number of ones: 
+        # 1 one: -2, -4 -> sorted by decimal value: -4, -2? But expected output is [-6, -5, -4, -3, -2]
+        # Wait, let's re-read: "sort an array of non-negative integers according to number of ones in their binary representation in ascending order. For similar number of ones, sort based on decimal value."
+        # The example with negatives might be a trick or misdirection. Let's check the expected output for [-2, -3, -4, -5, -6]:
+        # If we take absolute values:
+        # 2: 1 one, 3: 2 ones, 4: 1 one, 5: 2 ones, 6: 2 ones
+        # Group by number of ones:
+        # 1 one: 2, 4 -> sorted by decimal value: 2, 4
+        # 2 ones: 3, 5, 6 -> sorted by decimal value: 3, 5, 6
+        # So sorted by number of ones then decimal value: 2, 4, 3, 5, 6
+        # But the expected output is [-6, -5, -4, -3, -2] which is just sorted by decimal value ascending.
+        # This suggests that for negative numbers, the sorting is just by decimal value? Or maybe the problem statement is slightly misleading.
+        # Actually, looking at the first example: [1, 5, 2, 3, 4] -> [1, 2, 3, 4, 5]
+        # 1: 1 one, 5: 2 ones, 2: 1 one, 3: 2 ones, 4: 1 one
+        # Group by number of ones:
+        # 1 one: 1, 2, 4 -> sorted by decimal value: 1, 2, 4
+        # 2 ones: 3, 5 -> sorted by decimal value: 3, 5
+        # So sorted: 1, 2, 4, 3, 5 -> but expected is [1, 2, 3, 4, 5]
+        # Wait, 1 (1 one), 2 (1 one), 3 (2 ones), 4 (1 one), 5 (2 ones)
+        # If sorted by number of ones then decimal value:
+        # 1 one: 1, 2, 4 -> sorted: 1, 2, 4
+        # 2 ones: 3, 5 -> sorted: 3, 5
+        # Result: [1, 2, 4, 3, 5] but expected is [

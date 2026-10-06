@@ -1,0 +1,23 @@
+0.00.053.718 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.053.957 W srv  llama_server: -----------------
+0.00.053.957 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.053.957 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.053.957 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.053.957 W srv  llama_server: -----------------
+0.00.055.195 I srv    load_model: loading model '/home/hm/models/devstral-patched_q8_0.gguf'
+0.15.234.483 W llama_context: setting new yarn_attn_factor = 1.0000 (mscale == 1.0, mscale_all_dim = 1.0)
+0.15.319.639 I cmn          init: llama threadpool init, n_threads = 6
+0.15.963.215 W warmup: *****************************************************************
+0.15.963.218 W warmup: WARNING: the CLIP graph uses unsupported operators by the backend
+0.15.963.218 W warmup:          the performance will be suboptimal                      
+0.15.963.219 W warmup:          list of unsupported ops (backend=CUDA0):
+0.15.963.221 W warmup:           IM2COL: type = f32, ne = [4096 16 16 1]
+0.15.963.221 W warmup: flash attention is enabled
+0.15.963.221 W warmup: please report this on github as an issue
+0.15.963.221 W warmup: ref: https://github.com/ggml-org/llama.cpp/pull/16837#issuecomment-3461676118
+0.15.963.221 W warmup: *****************************************************************
+0.15.963.230 I srv    load_model: loaded multimodal model, '/home/hm/models/devstral-patched_mmproj-f16.gguf'
+0.16.055.336 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 57344, kv_unified = 'false'
+0.16.058.854 I srv  llama_server: model loaded
+0.16.058.857 I srv  llama_server: listening on http://127.0.0.1:8090
+0.16.698.159 I srv    operator(): operator(): cleaning up before exit...

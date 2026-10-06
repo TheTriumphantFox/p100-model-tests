@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # kv-ab.sh <label> <cache-type> <ctx> -- serve devstral with one KV type, measure, stop.
-# Stop llama-devstral.service first; both cannot hold the model at once.
+# Stop llama-router.service first; both cannot hold the model at once.
 set -uo pipefail
 ROOT=/home/hm/llama-cuda12
 # Results default to a dated run folder; override with KV_AB_OUT.

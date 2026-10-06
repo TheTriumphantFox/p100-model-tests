@@ -1,0 +1,34 @@
+def iscube(a):
+    '''
+    Write a function that takes an integer a and returns True 
+    if this ingeger is a cube of some integer number.
+    Note: you may assume the input is always valid.
+    Examples:
+    iscube(1) ==> True
+    iscube(2) ==> False
+    iscube(-1) ==> True
+    iscube(64) ==> True
+    iscube(0) ==> True
+    iscube(180) ==> False
+    '''
+    if a == 0:
+        return True
+    # Handle negative numbers by taking absolute value for cube root estimation
+    abs_a = abs(a)
+    # Estimate the cube root
+    if abs_a == 0:
+        return True
+    # Find the integer cube root
+    # We can use round to get the nearest integer cube root
+    import math
+    # Calculate cube root using exponentiation
+    cube_root = round(abs_a ** (1/3))
+    # Check if the cube of this integer equals abs_a
+    if cube_root ** 3 == abs_a:
+        return True
+    # Also check cube_root + 1 and cube_root - 1 in case of rounding issues
+    if (cube_root + 1) ** 3 == abs_a:
+        return True
+    if (cube_root - 1) ** 3 == abs_a:
+        return True
+    return False

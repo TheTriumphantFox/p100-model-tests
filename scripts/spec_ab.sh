@@ -13,6 +13,8 @@ ARGS=(--model "$MODEL" --host 127.0.0.1 --port "$PORT" --ctx-size "${CTX:-8192}"
       --parallel 1 --batch-size 512 --ubatch-size 512)
 [ "$STYPE" != "none" ] && ARGS+=(--spec-type "$STYPE")
 [ -n "$DRAFT" ] && ARGS+=(--spec-draft-model "$DRAFT")
+# EXTRA: further llama-server flags, e.g. EXTRA="--spec-draft-n-max 3" (word-split).
+read -r -a EXTRA_ARGS <<< "${EXTRA:-}"; ARGS+=("${EXTRA_ARGS[@]}")
 export LD_LIBRARY_PATH="$ROOT/lib:${LD_LIBRARY_PATH:-}"
 "$ROOT/bin/llama-server" "${ARGS[@]}" > "$OUT/$LABEL.log" 2>&1 &
 PID=$!

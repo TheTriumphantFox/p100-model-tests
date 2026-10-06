@@ -1,0 +1,83 @@
+=== base-warmup  (spec=none draft=)  ready in 24s
+0, 15197 MiB 1, 15160 MiB 
+  prompt 0:  19.02 tok/s  (400 tok)
+  prompt 1:  19.21 tok/s  (400 tok)
+  prompt 2:  19.00 tok/s  (400 tok)
+  prompt 3:  18.96 tok/s  (400 tok)
+  prompt 4:  18.88 tok/s  (319 tok)
+  prompt 5:  19.02 tok/s  (400 tok)
+  MEAN  19.01 tok/s  (min 18.88, max 19.21)
+=== base  (spec=none draft=)  ready in 13s
+0, 15197 MiB 1, 15160 MiB 
+  prompt 0:  19.74 tok/s  (400 tok)
+  prompt 1:  19.50 tok/s  (400 tok)
+  prompt 2:  18.84 tok/s  (400 tok)
+  prompt 3:  18.62 tok/s  (400 tok)
+  prompt 4:  18.84 tok/s  (319 tok)
+  prompt 5:  18.73 tok/s  (400 tok)
+  MEAN  19.05 tok/s  (min 18.62, max 19.74)
+ggml-q4_0-n2: SERVER DIED
+0.00.006.170 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.006.170 W srv  llama_server: -----------------
+0.00.007.386 I srv    load_model: loading model '/home/hm/models/qwen3.8-flash-next_iq2_xxs/Qwen3.8-Flash-Next-IQ2_XXS/Qwen3.8-Flash-Next-IQ2_XXS-00001-of-00002.gguf'
+0.00.613.238 E llama_model_load: error loading model: check_tensor_dims: tensor 'output_hc_norm.weight' not found
+0.00.613.245 E llama_model_load_from_file_impl: failed to load model
+0.00.613.273 W operator(): failed to measure the memory of the extra model, fitting without it: failed to load model
+0.04.473.415 W llama_model_loader: tensor overrides to CPU are used with mmap enabled - consider using --load-mode none for better performance
+0.11.828.325 I cmn          init: llama threadpool init, n_threads = 6
+0.11.959.966 I common_speculative_init_result: loading draft model '/home/hm/models/flash-next-mtp-heads/mtp-Qwen3.8-Flash-Next-Q4_0.gguf'
+0.12.196.559 E llama_model_load: error loading model: check_tensor_dims: tensor 'output_hc_norm.weight' not found
+0.12.196.563 E llama_model_load_from_file_impl: failed to load model
+0.12.196.565 E common_speculative_init_result: failed to load draft model, '/home/hm/models/flash-next-mtp-heads/mtp-Qwen3.8-Flash-Next-Q4_0.gguf'
+0.12.196.573 E srv    load_model: failed to load draft model, '/home/hm/models/flash-next-mtp-heads/mtp-Qwen3.8-Flash-Next-Q4_0.gguf'
+0.12.196.579 I srv    operator(): operator(): cleaning up before exit...
+0.12.196.919 E srv  llama_server: exiting due to model loading error
+ggml-q4_0-n3: SERVER DIED
+0.00.006.446 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.006.446 W srv  llama_server: -----------------
+0.00.007.669 I srv    load_model: loading model '/home/hm/models/qwen3.8-flash-next_iq2_xxs/Qwen3.8-Flash-Next-IQ2_XXS/Qwen3.8-Flash-Next-IQ2_XXS-00001-of-00002.gguf'
+0.00.573.247 E llama_model_load: error loading model: check_tensor_dims: tensor 'output_hc_norm.weight' not found
+0.00.573.253 E llama_model_load_from_file_impl: failed to load model
+0.00.573.281 W operator(): failed to measure the memory of the extra model, fitting without it: failed to load model
+0.04.436.945 W llama_model_loader: tensor overrides to CPU are used with mmap enabled - consider using --load-mode none for better performance
+0.11.137.949 I cmn          init: llama threadpool init, n_threads = 6
+0.11.262.029 I common_speculative_init_result: loading draft model '/home/hm/models/flash-next-mtp-heads/mtp-Qwen3.8-Flash-Next-Q4_0.gguf'
+0.11.494.749 E llama_model_load: error loading model: check_tensor_dims: tensor 'output_hc_norm.weight' not found
+0.11.494.753 E llama_model_load_from_file_impl: failed to load model
+0.11.494.754 E common_speculative_init_result: failed to load draft model, '/home/hm/models/flash-next-mtp-heads/mtp-Qwen3.8-Flash-Next-Q4_0.gguf'
+0.11.494.761 E srv    load_model: failed to load draft model, '/home/hm/models/flash-next-mtp-heads/mtp-Qwen3.8-Flash-Next-Q4_0.gguf'
+0.11.494.768 I srv    operator(): operator(): cleaning up before exit...
+0.11.495.091 E srv  llama_server: exiting due to model loading error
+ggml-q4_0-n4: SERVER DIED
+0.00.006.288 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.006.288 W srv  llama_server: -----------------
+0.00.007.499 I srv    load_model: loading model '/home/hm/models/qwen3.8-flash-next_iq2_xxs/Qwen3.8-Flash-Next-IQ2_XXS/Qwen3.8-Flash-Next-IQ2_XXS-00001-of-00002.gguf'
+0.00.575.383 E llama_model_load: error loading model: check_tensor_dims: tensor 'output_hc_norm.weight' not found
+0.00.575.388 E llama_model_load_from_file_impl: failed to load model
+0.00.575.418 W operator(): failed to measure the memory of the extra model, fitting without it: failed to load model
+0.04.511.701 W llama_model_loader: tensor overrides to CPU are used with mmap enabled - consider using --load-mode none for better performance
+0.11.207.201 I cmn          init: llama threadpool init, n_threads = 6
+0.11.328.336 I common_speculative_init_result: loading draft model '/home/hm/models/flash-next-mtp-heads/mtp-Qwen3.8-Flash-Next-Q4_0.gguf'
+0.11.558.557 E llama_model_load: error loading model: check_tensor_dims: tensor 'output_hc_norm.weight' not found
+0.11.558.562 E llama_model_load_from_file_impl: failed to load model
+0.11.558.563 E common_speculative_init_result: failed to load draft model, '/home/hm/models/flash-next-mtp-heads/mtp-Qwen3.8-Flash-Next-Q4_0.gguf'
+0.11.558.571 E srv    load_model: failed to load draft model, '/home/hm/models/flash-next-mtp-heads/mtp-Qwen3.8-Flash-Next-Q4_0.gguf'
+0.11.558.577 I srv    operator(): operator(): cleaning up before exit...
+0.11.558.888 E srv  llama_server: exiting due to model loading error
+unsloth-shared-q4km-n3: SERVER DIED
+0.00.006.601 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.006.602 W srv  llama_server: -----------------
+0.00.007.822 I srv    load_model: loading model '/home/hm/models/qwen3.8-flash-next_iq2_xxs/Qwen3.8-Flash-Next-IQ2_XXS/Qwen3.8-Flash-Next-IQ2_XXS-00001-of-00002.gguf'
+0.00.609.678 E llama_model_load: error loading model: check_tensor_dims: tensor 'token_embd.weight' not found
+0.00.609.683 E llama_model_load_from_file_impl: failed to load model
+0.00.609.709 W operator(): failed to measure the memory of the extra model, fitting without it: failed to load model
+0.04.490.790 W llama_model_loader: tensor overrides to CPU are used with mmap enabled - consider using --load-mode none for better performance
+0.11.193.721 I cmn          init: llama threadpool init, n_threads = 6
+0.11.313.530 I common_speculative_init_result: loading draft model '/home/hm/models/flash-next-mtp-heads/MTP/mtp-Qwen3.8-Flash-Next-shared-Q4_K_M.gguf'
+0.11.535.681 E llama_model_load: error loading model: check_tensor_dims: tensor 'token_embd.weight' not found
+0.11.535.685 E llama_model_load_from_file_impl: failed to load model
+0.11.535.686 E common_speculative_init_result: failed to load draft model, '/home/hm/models/flash-next-mtp-heads/MTP/mtp-Qwen3.8-Flash-Next-shared-Q4_K_M.gguf'
+0.11.535.694 E srv    load_model: failed to load draft model, '/home/hm/models/flash-next-mtp-heads/MTP/mtp-Qwen3.8-Flash-Next-shared-Q4_K_M.gguf'
+0.11.535.703 I srv    operator(): operator(): cleaning up before exit...
+0.11.536.046 E srv  llama_server: exiting due to model loading error
+AB_DONE

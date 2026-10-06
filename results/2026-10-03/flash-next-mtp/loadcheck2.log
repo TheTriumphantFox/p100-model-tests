@@ -1,0 +1,25 @@
+0.00.011.875 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.012.116 W srv  llama_server: -----------------
+0.00.012.117 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.012.117 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.012.117 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.012.117 W srv  llama_server: -----------------
+0.00.013.380 I srv    load_model: loading model '/home/hm/models/qwen3.8-flash-next_iq2_xxs-mtp/Qwen3.8-Flash-Next-IQ2_XXS-MTP-00001-of-00002.gguf'
+0.05.172.629 W llama_model_loader: tensor overrides to CPU are used with mmap enabled - consider using --load-mode none for better performance
+0.27.606.103 I cmn          init: llama threadpool init, n_threads = 6
+0.27.805.802 I common_speculative_init_result: creating MTP draft context against the target model '/home/hm/models/qwen3.8-flash-next_iq2_xxs-mtp/Qwen3.8-Flash-Next-IQ2_XXS-MTP-00001-of-00002.gguf'
+0.27.904.953 I srv    load_model: initializing, n_slots = 4, n_ctx_slot = 8192, kv_unified = 'true'
+0.28.081.905 I srv          init: chat template supports preserving reasoning, consider enabling it via --reasoning-preserve
+0.28.082.233 I srv  llama_server: model loaded
+0.28.082.238 I srv  llama_server: listening on http://127.0.0.1:8082
+0.28.302.412 I slot get_availabl: id  3 | task -1 | selected slot by LRU, t_last = -1
+0.28.302.448 I slot launch_slot_: id  3 | task 0 | processing task, is_child = 0
+0.36.745.310 I slot print_timing: id  3 | task 0 | n_gen =    103, tg =  13.93 t/s, tg_3s =  14.07 t/s
+0.39.813.656 I slot print_timing: id  3 | task 0 | n_gen =    162, tg =  15.50 t/s, tg_3s =  19.23 t/s
+0.41.853.745 I slot print_timing: id  3 | task 0 | prompt eval time =    1120.85 ms /    24 tokens (   46.70 ms per token,    21.41 tokens per second)
+0.41.853.773 I slot print_timing: id  3 | task 0 |        eval time =   12430.38 ms /   200 tokens (   62.46 ms per token,    16.01 tokens per second)
+0.41.853.774 I slot print_timing: id  3 | task 0 |       total time =   13551.23 ms /   224 tokens
+0.41.853.778 I slot print_timing: id  3 | task 0 |    graphs reused =         43
+0.41.853.781 I slot print_timing: id  3 | task 0 | draft acceptance = 0.72024 (  121 accepted /   168 generated), mean len =  3.16
+0.41.853.849 I slot      release: id  3 | task 0 | stop processing: n_tokens = 223, truncated = 0
+Received second interrupt, terminating immediately.

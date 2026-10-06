@@ -1,0 +1,6 @@
+- name: openai/qwen3.8-flash-next_iq2_xxs
+  edit_format: whole
+  use_temperature: true
+  extra_params:
+    max_tokens: 4096
+    extra_body: {"chat_template_kwargs": {"enable_thinking": false}}

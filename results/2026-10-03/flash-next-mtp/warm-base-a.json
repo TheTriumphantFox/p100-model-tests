@@ -1,0 +1,51 @@
+{
+ "label": "warm-base-a",
+ "n_predict": 400,
+ "runs": [
+  {
+   "i": 0,
+   "gen_tps": 18.155937387407025,
+   "predicted_n": 400,
+   "prompt_n": 31,
+   "prompt_tps": 31.34859639187768
+  },
+  {
+   "i": 1,
+   "gen_tps": 18.574739304232164,
+   "predicted_n": 400,
+   "prompt_n": 53,
+   "prompt_tps": 29.196871197176385
+  },
+  {
+   "i": 2,
+   "gen_tps": 18.42272054270472,
+   "predicted_n": 400,
+   "prompt_n": 37,
+   "prompt_tps": 28.971866751337597
+  },
+  {
+   "i": 3,
+   "gen_tps": 18.8694610683293,
+   "predicted_n": 400,
+   "prompt_n": 49,
+   "prompt_tps": 31.514739894059023
+  },
+  {
+   "i": 4,
+   "gen_tps": 18.350543471382856,
+   "predicted_n": 175,
+   "prompt_n": 31,
+   "prompt_tps": 31.38960781216459
+  },
+  {
+   "i": 5,
+   "gen_tps": 18.753324132454306,
+   "predicted_n": 400,
+   "prompt_n": 57,
+   "prompt_tps": 31.284285793476514
+  }
+ ],
+ "mean_gen_tps": 18.521120984418395,
+ "min_gen_tps": 18.155937387407025,
+ "max_gen_tps": 18.8694610683293
+}

@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.8-flash-next_iq2_xxs/python/exercises/practice/sgf-parsing",
+    "testcase": "sgf-parsing",
+    "model": "openai/qwen3.8-flash-next_iq2_xxs",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 371.7282347679138,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 14087,
+    "completion_tokens": 2663,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "675fb7041d53ef48db7e8068b9b8fabfd867df34"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "bec86d1c2fc87cc0e2443acb8b759b50416bc8ee"
+        ]
+    ]
+}

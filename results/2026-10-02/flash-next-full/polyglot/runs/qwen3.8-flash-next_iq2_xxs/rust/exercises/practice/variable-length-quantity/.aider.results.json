@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.8-flash-next_iq2_xxs/rust/exercises/practice/variable-length-quantity",
+    "testcase": "variable-length-quantity",
+    "model": "openai/qwen3.8-flash-next_iq2_xxs",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 145.16406846046448,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 4862,
+    "completion_tokens": 632,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "1b62cec6af57d06fc31dfabae4e34eeca9082bac"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "d00b3402cba3f75d3d0e7cb374c3e84153d173cc"
+        ]
+    ]
+}

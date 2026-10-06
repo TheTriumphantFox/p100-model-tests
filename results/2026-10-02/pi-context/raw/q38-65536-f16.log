@@ -1,0 +1,68 @@
+0.00.014.815 W DEPRECATED: argument '-sm' specified multiple times, use comma-separated values instead (only last value will be used)
+0.00.015.043 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.015.307 W srv  llama_server: -----------------
+0.00.015.309 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.015.309 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.015.309 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.015.309 W srv  llama_server: -----------------
+0.00.016.543 I srv    load_model: loading model '/home/hm/models/qwen3.8-27b-unsloth_q8_0.gguf'
+0.06.749.970 I cmn          init: llama threadpool init, n_threads = 6
+0.06.904.700 I common_speculative_init_result: creating MTP draft context against the target model '/home/hm/models/qwen3.8-27b-unsloth_q8_0.gguf'
+0.06.913.789 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 128.00 MiB on device 0: cudaMalloc failed: out of memory
+0.06.913.794 E alloc_tensor_range: failed to allocate CUDA0 buffer of size 134217728
+/src/ggml/src/ggml-backend-meta.cpp:1760: GGML_ASSERT(meta_buf_ctx->bufs[i]) failed
+⚠️ warning: The current terminal doesn't support styling.  Styled output might not appear as expected.
+[New LWP 799423 (id 2)]
+[New LWP 799422 (id 3)]
+[New LWP 799421 (id 4)]
+[New LWP 799420 (id 5)]
+[New LWP 799409 (id 6)]
+[New LWP 799408 (id 7)]
+[New LWP 799407 (id 8)]
+[New LWP 799406 (id 9)]
+[New LWP 799134 (id 10)]
+[New LWP 799133 (id 11)]
+[New LWP 799132 (id 12)]
+[New LWP 799131 (id 13)]
+[New LWP 799130 (id 14)]
+[New LWP 799129 (id 15)]
+[New LWP 799128 (id 16)]
+[New LWP 799127 (id 17)]
+[New LWP 799126 (id 18)]
+[New LWP 799125 (id 19)]
+[New LWP 799124 (id 20)]
+[New LWP 799123 (id 21)]
+[New LWP 799122 (id 22)]
+[New LWP 799121 (id 23)]
+[New LWP 799120 (id 24)]
+[New LWP 799119 (id 25)]
+[New LWP 799118 (id 26)]
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.archlinux.org>
+  <https://debuginfod.cachyos.org>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/libthread_db.so.1".
+[Switching to thread 1 (Thread 0x7f3761727000 (LWP 799112))]
+0x00007f37618b6132 in ?? () from /usr/lib/libc.so.6
+#0  0x00007f37618b6132 in ?? () from /usr/lib/libc.so.6
+#1  0x00007f376192e512 in wait4 () from /usr/lib/libc.so.6
+#2  0x00007f3761747853 in ggml_print_backtrace () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#3  0x00007f37617479fb in ggml_abort () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#4  0x00007f376177650c in ggml_backend_meta_alloc_ctx_tensors_from_buft () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#5  0x00007f3761048944 in llama_kv_cache::llama_kv_cache(llama_model const&, llama_hparams const&, ggml_type, ggml_type, bool, bool, bool, unsigned int, unsigned int, unsigned int, unsigned int, llama_swa_type, llama_memory_i*, std::function<bool (int)> const&, std::function<int (int)> const&, std::function<int (int)> const&, char const*) () from /home/hm/llama-cuda12/lib/libllama.so.0
+#6  0x00007f37610c0c2e in llama_model::create_memory(llama_memory_params const&, llama_cparams const&) const () from /home/hm/llama-cuda12/lib/libllama.so.0
+#7  0x00007f3760ff8aca in llama_context::llama_context(llama_model const&, llama_context_params) () from /home/hm/llama-cuda12/lib/libllama.so.0
+#8  0x00007f3760ff9af4 in llama_init_from_model () from /home/hm/llama-cuda12/lib/libllama.so.0
+#9  0x00007f37614ed6b6 in common_speculative_init_result::common_speculative_init_result(common_params&, llama_model*, llama_context*) () from /home/hm/llama-cuda12/lib/libllama-common.so.0
+#10 0x00007f37614edaf6 in common_speculative_init_from_params(common_params&, llama_model*, llama_context*) () from /home/hm/llama-cuda12/lib/libllama-common.so.0
+#11 0x00007f376216dca5 in server_context_impl::load_model(common_params&) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#12 0x00007f37620c7497 in llama_server(common_params&, int, char**) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#13 0x00007f37620c8906 in llama_server(int, char**) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#14 0x00007f3761827c8e in ?? () from /usr/lib/libc.so.6
+#15 0x00007f3761827dcb in __libc_start_main () from /usr/lib/libc.so.6
+#16 0x00005578203e52a5 in _start ()
+[Inferior 1 (process 799112) detached]

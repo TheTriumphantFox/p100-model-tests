@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.8-flash-next_iq2_xxs/java/exercises/practice/bottle-song",
+    "testcase": "bottle-song",
+    "model": "openai/qwen3.8-flash-next_iq2_xxs",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 173.76966190338135,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 0,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 6295,
+    "completion_tokens": 1294,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "1e3ee81ea7a92afcb91bc405a52759da0d1ffe90"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "57ac76a98b57509eddbac48c1f7031b4081153f8"
+        ]
+    ]
+}

@@ -1,0 +1,27 @@
+[10-05 21:00:00] ================ NIGHT START: models qwen3.8-27b-q6-mtp:qwen3.8-27b:ud-q6k-prod:q6k qwen3.8-flash-next-iq2:qwen3.8-flash-next:iq2-prod:flashnext
+[10-05 21:00:00] :8080 idle; starting shims 11504 (temp 0) / 11505 (server sampling)
+[10-05 21:00:04] ---- q6k (qwen3.8-27b-q6-mtp as qwen3.8-27b:ud-q6k-prod): preflight, RAM avail 57020 MiB
+model: qwen3.8-27b:ud-q6k-prod   (expected answers 1:C 2:E)
+thinking-off answers this in ~8 tokens; thinking-on in 80+ and is likelier to
+get Q1 right. The model loads on the first call, so that one is slow.
+
+  port 11504: eval_count=164    REASONED        answers={1: 'C', 2: 'E'} correct=2/2 wall=11.9s
+  port 11505: eval_count=159    REASONED        answers={1: 'C', 2: 'E'} correct=2/2 wall=4.5s
+[10-05 21:00:20] q6k leg A via :11504 start
+[10-05 21:14:45] q6k leg A rc=0 14 min: 88.57% (62/70), parsed 70, 25130 gen tokens, 0 batches at the 12288 cap
+[10-05 21:14:45] q6k leg B via :11505 start
+[10-05 21:29:57] q6k leg B rc=0 15 min: 87.14% (61/70), parsed 70, 25922 gen tokens, 0 batches at the 12288 cap
+[10-05 21:29:57] q6k RAM [21:27:51] min MemAvailable 45662 MiB
+[10-05 21:29:57] ---- flashnext (qwen3.8-flash-next-iq2 as qwen3.8-flash-next:iq2-prod): preflight, RAM avail 46620 MiB
+model: qwen3.8-flash-next:iq2-prod   (expected answers 1:C 2:E)
+thinking-off answers this in ~8 tokens; thinking-on in 80+ and is likelier to
+get Q1 right. The model loads on the first call, so that one is slow.
+
+  port 11504: eval_count=170    REASONED        answers={1: 'C', 2: 'E'} correct=2/2 wall=44.3s
+  port 11505: eval_count=202    REASONED        answers={1: 'C', 2: 'E'} correct=2/2 wall=11.0s
+[10-05 21:30:53] flashnext leg A via :11504 start
+[10-05 21:53:37] flashnext leg A rc=0 22 min: 87.14% (61/70), parsed 70, 21023 gen tokens, 0 batches at the 12288 cap
+[10-05 21:53:37] flashnext leg B via :11505 start
+[10-05 22:17:01] flashnext leg B rc=0 23 min: 84.29% (59/70), parsed 70, 24115 gen tokens, 0 batches at the 12288 cap
+[10-05 22:17:01] flashnext RAM [21:29:57] min MemAvailable 46619 MiB
+[10-05 22:17:01] ================ NIGHT DONE -- summary.md

@@ -1,0 +1,41 @@
+[qwen3.8-27b-mtp] ctx-size = 81920, override-tensor = -, cache-type-k = q8_0, cache-type-v = q8_0
+router args: --batch-size 512 --ctx-size 81920 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on --fit off --model /home/hm/models/qwen3.8-27b-unsloth_q8_0.gguf --n-gpu-layers 999 --parallel 1 --split-mode tensor --ubatch-size 512
+[10-05 15:27:14] B-80k-q8kv start, RAM avail 56630 MiB
+Traceback (most recent call last):
+  File "/home/hm/Projects/Tests/2026-10-05/qwen38-27b-spill/./check.py", line 54, in <module>
+    code, r = post("/completion", {"model": model, "prompt": p, "n_predict": 512, "temperature": 0,
+              ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                   "cache_prompt": False})
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hm/Projects/Tests/2026-10-05/qwen38-27b-spill/./check.py", line 19, in post
+    return e.code, json.loads(e.read() or b"{}")
+                   ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[10-05 15:27:36] B-80k-q8kv ctx=81920 rc=1 Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import json;r=json.load(open('last-B-80k-q8kv.json'));print('load_s',r.get('load_s'),'peak',r.get('peak_mib'),'free',r.get('free_mib'),'decode',r.get('decode_mean'),'deep',r.get('deep_decode_tps'),'prefill',r.get('prefill_tps'),'fill_s',r.get('fill_wall_s'),'http',r.get('fill_http'),r.get('error',''))
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/__init__.py", line 298, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/usr/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[10-05 15:27:36] B-80k-q8kv RAM min [15:27:28] min MemAvailable 55157 MiB
+[10-05 15:27:36] B-80k-q8kv DONE

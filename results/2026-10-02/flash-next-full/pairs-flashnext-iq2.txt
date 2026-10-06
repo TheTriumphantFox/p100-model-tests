@@ -1,0 +1,33 @@
+# paired McNemar, incumbent q5_k_p (A) vs flashnext-iq2 (B) -- 2026-10-03 00:38:07
+
+## humaneval-flashnext-iq2
+n = 164 paired questions
+  incumbent-q5kp                                96.34%
+  flashnext-iq2                                 97.56%
+  gap -1.22 points
+  both right 156, both wrong 2, discordant 2/4 (A-only/B-only)
+  exact McNemar p = 0.6875  ->  not resolvable at this sample size
+
+## mmlu-flashnext-iq2-pc5-np96
+n = 70 paired questions
+  incumbent-q5kp                                71.43%
+  flashnext-iq2                                 68.57%
+  gap +2.86 points
+  both right 42, both wrong 14, discordant 8/6 (A-only/B-only)
+  exact McNemar p = 0.7905  ->  not resolvable at this sample size
+
+## mmlu-flashnext-iq2-pc5-np2048
+n = 70 paired questions
+  incumbent-q5kp                                71.43%
+  flashnext-iq2                                 68.57%
+  gap +2.86 points
+  both right 42, both wrong 14, discordant 8/6 (A-only/B-only)
+  exact McNemar p = 0.7905  ->  not resolvable at this sample size
+
+## mmlu-flashnext-iq2-pc5-think12288
+n = 70 paired questions
+  incumbent-q5kp                                87.14%
+  flashnext-iq2                                 78.57%
+  gap +8.57 points
+  both right 54, both wrong 8, discordant 7/1 (A-only/B-only)
+  exact McNemar p = 0.0703  ->  not resolvable at this sample size

@@ -1,0 +1,5 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+qwen3.8-flash-next:iq2-prod,economics,1,4,5,5,18.404179487832657,21.94931902237733,42.7979302869644,781,,raw/01-qwen3.8-flash-next_iq2-prod-01-economics.txt
+qwen3.8-flash-next:iq2-prod,engineering,2,4,5,5,17.859215052879023,22.625970088467543,346.09266608097823,6175,,raw/01-qwen3.8-flash-next_iq2-prod-02-engineering.txt
+qwen3.8-flash-next:iq2-prod,history,3,4,5,5,18.182746292535445,112.4837239165229,90.38858368899673,1407,,raw/01-qwen3.8-flash-next_iq2-prod-03-history.txt
+qwen3.8-flash-next:iq2-prod,law,4,2,5,5,17.892243494692107,22.392028437876117,159.27491675602505,2843,,raw/01-qwen3.8-flash-next_iq2-prod-04-law.txt

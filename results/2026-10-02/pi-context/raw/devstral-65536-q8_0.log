@@ -1,0 +1,57 @@
+0.00.012.716 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.012.952 W srv  llama_server: -----------------
+0.00.012.952 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.012.953 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.012.953 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.012.953 W srv  llama_server: -----------------
+0.00.014.167 I srv    load_model: loading model '/home/hm/models/devstral-patched_q8_0.gguf'
+0.15.710.417 W llama_context: setting new yarn_attn_factor = 1.0000 (mscale == 1.0, mscale_all_dim = 1.0)
+0.15.795.248 I cmn          init: llama threadpool init, n_threads = 6
+/src/ggml/src/ggml-backend.cpp:188: GGML_ASSERT(buffer) failed
+0.15.932.261 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 837.36 MiB on device 0: cudaMalloc failed: out of memory
+0.15.932.264 E alloc_tensor_range: failed to allocate CUDA0 buffer of size 878039040
+⚠️ warning: The current terminal doesn't support styling.  Styled output might not appear as expected.
+[New LWP 409712 (id 2)]
+[New LWP 409711 (id 3)]
+[New LWP 409710 (id 4)]
+[New LWP 409709 (id 5)]
+[New LWP 409708 (id 6)]
+[New LWP 409707 (id 7)]
+[New LWP 409706 (id 8)]
+[New LWP 409705 (id 9)]
+[New LWP 409704 (id 10)]
+[New LWP 409703 (id 11)]
+[New LWP 409702 (id 12)]
+[New LWP 409701 (id 13)]
+[New LWP 409700 (id 14)]
+[New LWP 409699 (id 15)]
+[New LWP 409698 (id 16)]
+[New LWP 409697 (id 17)]
+[New LWP 409696 (id 18)]
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.archlinux.org>
+  <https://debuginfod.cachyos.org>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/libthread_db.so.1".
+[Switching to thread 1 (Thread 0x7fc4e9127000 (LWP 409691))]
+0x00007fc4e92b6132 in ?? () from /usr/lib/libc.so.6
+#0  0x00007fc4e92b6132 in ?? () from /usr/lib/libc.so.6
+#1  0x00007fc4e932e512 in wait4 () from /usr/lib/libc.so.6
+#2  0x00007fc4e9147853 in ggml_print_backtrace () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#3  0x00007fc4e91479fb in ggml_abort () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#4  0x00007fc4e9161d11 in ggml_backend_buffer_set_usage () from /home/hm/llama-cuda12/lib/libggml-base.so.0
+#5  0x00007fc4e9575a00 in clip_model_loader::load_tensors(clip_ctx&) () from /home/hm/llama-cuda12/lib/libmtmd.so.0
+#6  0x00007fc4e955d555 in clip_init(char const*, clip_context_params) () from /home/hm/llama-cuda12/lib/libmtmd.so.0
+#7  0x00007fc4e94b2d0e in mtmd_context::mtmd_context(char const*, llama_model const*, mtmd_context_params const&, bool) () from /home/hm/llama-cuda12/lib/libmtmd.so.0
+#8  0x00007fc4e94aa281 in mtmd_init_from_file () from /home/hm/llama-cuda12/lib/libmtmd.so.0
+#9  0x00007fc4e9b6c7ba in server_context_impl::load_model(common_params&) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#10 0x00007fc4e9ac7497 in llama_server(common_params&, int, char**) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#11 0x00007fc4e9ac8906 in llama_server(int, char**) () from /home/hm/llama-cuda12/lib/libllama-server-impl.so
+#12 0x00007fc4e9227c8e in ?? () from /usr/lib/libc.so.6
+#13 0x00007fc4e9227dcb in __libc_start_main () from /usr/lib/libc.so.6
+#14 0x00005591214d52a5 in _start ()
+[Inferior 1 (process 409691) detached]

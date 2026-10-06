@@ -1,0 +1,6 @@
+[qwen3.8-27b-mtp] ctx-size = 65536, cache-type-k = f16, cache-type-v = f16, override-tensor = blk\.(5[6-9]|6[0-3])\.ffn_(up|gate|down)\.weight=CPU, load-mode = none
+router args: --batch-size 512 --ctx-size 65536 --cache-type-k f16 --cache-type-v f16 --flash-attn on --fit off --load-mode none --model /home/hm/models/qwen3.8-27b-unsloth_q8_0.gguf --n-gpu-layers 999 --parallel 1 --override-tensor blk\.(5[6-9]|6[0-3])\.ffn_(up|gate|down)\.weight=CPU --split-mode tensor --ubatch-size 512
+[10-05 15:38:02] C-64k-8L-nommap start, RAM avail 56822 MiB
+[10-05 15:51:41] C-64k-8L-nommap ctx=65536 rc=0 load_s 15.2 peak [15660, 15657] free [724, 727] decode 16.5 deep 22.2 prefill 94.7 fill_s 704.1 http 200 
+[10-05 15:51:41] C-64k-8L-nommap RAM min [15:51:20] min MemAvailable 50029 MiB
+[10-05 15:51:41] C-64k-8L-nommap DONE

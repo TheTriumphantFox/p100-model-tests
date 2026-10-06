@@ -1,0 +1,370 @@
+{
+  "metadata": {
+    "started": "2026-10-04T20:44:22.119382-04:00",
+    "interrupted": false,
+    "backend": "Ollama /api/chat",
+    "dataset": "/home/hm/Projects/Tests/datasets/mmlu_pro/data/test-00000-of-00001.parquet",
+    "dataset_sha256": "0e24a191921c2f453518a537a8b2117bd137e7714d4ef1565e9ba06c1ecb9ad8",
+    "method": "balanced deterministic zero-shot direct-answer subset",
+    "settings": {
+      "per_category": 5,
+      "batch_size": 5,
+      "categories_arg": "economics,engineering,history,law",
+      "seed": 42,
+      "num_ctx": 16384,
+      "num_predict": 12288,
+      "temperature": 0,
+      "thinking": false
+    },
+    "categories": [
+      "economics",
+      "engineering",
+      "history",
+      "law"
+    ],
+    "question_ids": {
+      "economics": [
+        6854,
+        7031,
+        7414,
+        7508,
+        7576
+      ],
+      "engineering": [
+        11512,
+        11716,
+        11746,
+        11845,
+        12006
+      ],
+      "history": [
+        4748,
+        4817,
+        4850,
+        4892,
+        5034
+      ],
+      "law": [
+        1058,
+        1078,
+        1313,
+        1569,
+        1660
+      ]
+    },
+    "models": [
+      {
+        "name": "qwen3.8-flash-next:iq2-prod",
+        "digest": "",
+        "size_bytes": 0,
+        "parameter_size": "",
+        "quantization": "unknown",
+        "family": ""
+      }
+    ],
+    "updated": "2026-10-04T20:55:22.343194-04:00",
+    "finished": "2026-10-04T20:55:22.343156-04:00"
+  },
+  "results": [
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "economics",
+      "question_id": 6854,
+      "expected_answer": "I",
+      "predicted_answer": "C",
+      "correct": false,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-01-economics.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "economics",
+      "question_id": 7031,
+      "expected_answer": "G",
+      "predicted_answer": "G",
+      "correct": true,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-01-economics.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "economics",
+      "question_id": 7414,
+      "expected_answer": "I",
+      "predicted_answer": "I",
+      "correct": true,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-01-economics.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "economics",
+      "question_id": 7508,
+      "expected_answer": "C",
+      "predicted_answer": "C",
+      "correct": true,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-01-economics.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "economics",
+      "question_id": 7576,
+      "expected_answer": "A",
+      "predicted_answer": "A",
+      "correct": true,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-01-economics.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "engineering",
+      "question_id": 11512,
+      "expected_answer": "A",
+      "predicted_answer": "A",
+      "correct": true,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-02-engineering.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "engineering",
+      "question_id": 11716,
+      "expected_answer": "D",
+      "predicted_answer": "D",
+      "correct": true,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-02-engineering.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "engineering",
+      "question_id": 11746,
+      "expected_answer": "J",
+      "predicted_answer": "J",
+      "correct": true,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-02-engineering.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "engineering",
+      "question_id": 11845,
+      "expected_answer": "I",
+      "predicted_answer": "I",
+      "correct": true,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-02-engineering.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "engineering",
+      "question_id": 12006,
+      "expected_answer": "B",
+      "predicted_answer": "B",
+      "correct": true,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-02-engineering.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "history",
+      "question_id": 4748,
+      "expected_answer": "F",
+      "predicted_answer": "F",
+      "correct": true,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-03-history.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "history",
+      "question_id": 4817,
+      "expected_answer": "E",
+      "predicted_answer": "E",
+      "correct": true,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-03-history.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "history",
+      "question_id": 4850,
+      "expected_answer": "E",
+      "predicted_answer": "E",
+      "correct": true,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-03-history.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "history",
+      "question_id": 4892,
+      "expected_answer": "H",
+      "predicted_answer": "J",
+      "correct": false,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-03-history.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "history",
+      "question_id": 5034,
+      "expected_answer": "E",
+      "predicted_answer": "E",
+      "correct": true,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-03-history.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "law",
+      "question_id": 1058,
+      "expected_answer": "I",
+      "predicted_answer": "D",
+      "correct": false,
+      "batch": 4,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-04-law.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "law",
+      "question_id": 1078,
+      "expected_answer": "B",
+      "predicted_answer": "C",
+      "correct": false,
+      "batch": 4,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-04-law.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "law",
+      "question_id": 1313,
+      "expected_answer": "H",
+      "predicted_answer": "H",
+      "correct": true,
+      "batch": 4,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-04-law.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "law",
+      "question_id": 1569,
+      "expected_answer": "A",
+      "predicted_answer": "A",
+      "correct": true,
+      "batch": 4,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-04-law.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "law",
+      "question_id": 1660,
+      "expected_answer": "G",
+      "predicted_answer": "A",
+      "correct": false,
+      "batch": 4,
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-04-law.txt",
+      "error": ""
+    }
+  ],
+  "batches": [
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "economics",
+      "batch": 1,
+      "correct": 4,
+      "total": 5,
+      "parsed": 5,
+      "generation_tps": 18.185044613328078,
+      "prompt_tps": 77.68180881505377,
+      "wall_seconds": 75.36609195900382,
+      "eval_count": 608,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-01-economics.txt"
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "engineering",
+      "batch": 2,
+      "correct": 5,
+      "total": 5,
+      "parsed": 5,
+      "generation_tps": 18.365633077049946,
+      "prompt_tps": 95.06929479162288,
+      "wall_seconds": 96.08160557999508,
+      "eval_count": 1571,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-02-engineering.txt"
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "history",
+      "batch": 3,
+      "correct": 4,
+      "total": 5,
+      "parsed": 5,
+      "generation_tps": 17.818116081728117,
+      "prompt_tps": 92.59800393307619,
+      "wall_seconds": 362.31037985300645,
+      "eval_count": 6175,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-03-history.txt"
+    },
+    {
+      "model": "qwen3.8-flash-next:iq2-prod",
+      "category": "law",
+      "batch": 4,
+      "correct": 2,
+      "total": 5,
+      "parsed": 5,
+      "generation_tps": 18.032828093865042,
+      "prompt_tps": 97.13526000884436,
+      "wall_seconds": 126.4055681679747,
+      "eval_count": 1858,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-flash-next_iq2-prod-04-law.txt"
+    }
+  ],
+  "model_summaries": [
+    {
+      "name": "qwen3.8-flash-next:iq2-prod",
+      "digest": "",
+      "size_bytes": 0,
+      "parameter_size": "",
+      "quantization": "unknown",
+      "family": "",
+      "accuracy": 75.0,
+      "correct": 15,
+      "total": 20,
+      "parsed": 20,
+      "category_scores": {
+        "economics": 80.0,
+        "engineering": 100.0,
+        "history": 80.0,
+        "law": 40.0
+      },
+      "generation_tps": 18.100405466492795,
+      "wall_seconds": 660.1636455599801
+    }
+  ]
+}

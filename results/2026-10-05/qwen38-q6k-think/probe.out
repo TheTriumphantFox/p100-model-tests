@@ -1,0 +1,4 @@
+[10-05 19:02:48] probe qwen3.8-27b-q6-mtp ctx 131072 start, RAM avail 57657 MiB
+[10-05 19:19:42] probe rc=0 load_s 7.0 peak [15814, 15811] free [570, 573] decode 28.2 [{'tps': 28.0, 'n': 512, 'draft_n': 612, 'draft_acc': 357}, {'tps': 24.6, 'n': 512, 'draft_n': 698, 'draft_acc': 336}, {'tps': 32.0, 'n': 512, 'draft_n': 534, 'draft_acc': 376}] deep 29.6 prefill 139.7 fill_s 948.6 http 200 
+[10-05 19:19:42] probe RAM [19:08:04] min MemAvailable 52195 MiB
+[10-05 19:19:42] probe DONE

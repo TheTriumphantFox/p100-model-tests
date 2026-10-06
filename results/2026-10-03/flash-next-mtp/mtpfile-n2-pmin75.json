@@ -1,0 +1,63 @@
+{
+ "label": "mtpfile-n2-pmin75",
+ "n_predict": 400,
+ "runs": [
+  {
+   "i": 0,
+   "gen_tps": 19.763366623626446,
+   "predicted_n": 400,
+   "prompt_n": 31,
+   "prompt_tps": 28.31076082886602,
+   "draft_n": 248,
+   "draft_n_accepted": 231
+  },
+  {
+   "i": 1,
+   "gen_tps": 19.771250104926374,
+   "predicted_n": 400,
+   "prompt_n": 53,
+   "prompt_tps": 26.90751430413614,
+   "draft_n": 219,
+   "draft_n_accepted": 210
+  },
+  {
+   "i": 2,
+   "gen_tps": 18.118038064408672,
+   "predicted_n": 400,
+   "prompt_n": 37,
+   "prompt_tps": 25.070043669305797,
+   "draft_n": 225,
+   "draft_n_accepted": 197
+  },
+  {
+   "i": 3,
+   "gen_tps": 19.97931564985303,
+   "predicted_n": 400,
+   "prompt_n": 49,
+   "prompt_tps": 28.580460997003136,
+   "draft_n": 226,
+   "draft_n_accepted": 214
+  },
+  {
+   "i": 4,
+   "gen_tps": 17.672688003936578,
+   "predicted_n": 372,
+   "prompt_n": 31,
+   "prompt_tps": 28.970067378769617,
+   "draft_n": 171,
+   "draft_n_accepted": 148
+  },
+  {
+   "i": 5,
+   "gen_tps": 19.50871386774725,
+   "predicted_n": 400,
+   "prompt_n": 57,
+   "prompt_tps": 30.952220631772835,
+   "draft_n": 235,
+   "draft_n_accepted": 213
+  }
+ ],
+ "mean_gen_tps": 19.135562052416393,
+ "min_gen_tps": 17.672688003936578,
+ "max_gen_tps": 19.97931564985303
+}

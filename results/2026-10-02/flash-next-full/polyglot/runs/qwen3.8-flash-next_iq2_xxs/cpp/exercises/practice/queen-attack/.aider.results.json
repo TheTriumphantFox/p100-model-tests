@@ -1,0 +1,59 @@
+{
+    "testdir": "/run/runs/qwen3.8-flash-next_iq2_xxs/cpp/exercises/practice/queen-attack",
+    "testcase": "queen-attack",
+    "model": "openai/qwen3.8-flash-next_iq2_xxs",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        true
+    ],
+    "cost": 0.0,
+    "duration": 985.7502784729004,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 8,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 48842,
+    "completion_tokens": 5961,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "37fd86eadadc3e30e07dbc14ed88d59811d5b891"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "53ad2c9188c3ce0d02e2856f8a5b6154358e2606"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "53ad2c9188c3ce0d02e2856f8a5b6154358e2606"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "53ad2c9188c3ce0d02e2856f8a5b6154358e2606"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "b2e9c0f095baee53a0a5af13931e059106b27493"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "b3896f211e048e9fd905cabd18bb5906dcf4cf96"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "bf50128bad798221acad03bd1b8a0d286a96d6be"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "bf50128bad798221acad03bd1b8a0d286a96d6be"
+        ]
+    ]
+}

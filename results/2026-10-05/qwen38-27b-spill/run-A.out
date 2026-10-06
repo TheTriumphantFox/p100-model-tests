@@ -1,0 +1,3 @@
+[qwen3.8-27b-mtp] ctx-size = 131072, override-tensor = blk\.(4[0-9]|5[0-9]|6[0-3])\.ffn_(up|gate|down)\.weight=CPU
+router args: ctx 131072 | ot blk\.(4[0-9]|5[0-9]|6[0-3])\.ffn_(up|gate|down)\.weight=CPU
+[10-05 15:21:59] A-128k-24L start, RAM avail 56898 MiB

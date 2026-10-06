@@ -1,0 +1,8 @@
+[qwen3.6-35b-a3b-planner-mtp] ctx-size = 55296
+RAM used 13968 MiB, avail 49467
+[10-05 07:14:54] qwen3.6-35b-a3b-planner-mtp ctx=55296 rc=0 ok=1 peak [15611, 15608] free [773, 776] decode 83.7 deep 100.1 prefill 527.9 fill_s 108.0
+[qwen3.6-27b-abliterated] ctx-size = 120832
+RAM used 13960 MiB, avail 49475
+[10-05 07:32:22] qwen3.6-27b-abliterated ctx=120832 rc=0 ok=1 peak [15765, 15762] free [619, 622] decode 29.5 deep 29.9 prefill 143.9 fill_s 849.8
+[qwen3.8-flash-next-iq2] ctx-size = 262144
+RAM used 13955 MiB, avail 49480

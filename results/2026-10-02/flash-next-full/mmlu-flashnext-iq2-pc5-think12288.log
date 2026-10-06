@@ -1,0 +1,23 @@
+MMLU-Pro: 1 model(s), 14 categories, 70 questions/model, 5 per request.
+Planned batches: 14; scored answers: 70.
+Results: /home/hm/Projects/Tests/2026-10-02/flash-next-full/mmlu-flashnext-iq2-pc5-think12288
+
+Model 1/1: qwen3.8-flash-next:iq2_xxs
+[##----------------------------] 1/14 (  7.1%) qwen3.8-flash-next:iq2_xxs / biology                       ETA 8m 57s
+[####--------------------------] 2/14 ( 14.3%) qwen3.8-flash-next:iq2_xxs / business                      ETA 13m 03s
+[######------------------------] 3/14 ( 21.4%) qwen3.8-flash-next:iq2_xxs / chemistry                     ETA 17m 18s
+[########----------------------] 4/14 ( 28.6%) qwen3.8-flash-next:iq2_xxs / computer science              ETA 19m 00s
+[##########--------------------] 5/14 ( 35.7%) qwen3.8-flash-next:iq2_xxs / economics                     ETA 34m 23s
+[############------------------] 6/14 ( 42.9%) qwen3.8-flash-next:iq2_xxs / engineering                   ETA 40m 25s
+[###############---------------] 7/14 ( 50.0%) qwen3.8-flash-next:iq2_xxs / health                        ETA 32m 15s
+[#################-------------] 8/14 ( 57.1%) qwen3.8-flash-next:iq2_xxs / history                       ETA 32m 58s
+[###################-----------] 9/14 ( 64.3%) qwen3.8-flash-next:iq2_xxs / law                           ETA 31m 06s
+[#####################---------] 10/14 ( 71.4%) qwen3.8-flash-next:iq2_xxs / math                          ETA 23m 30s
+[#######################-------] 11/14 ( 78.6%) qwen3.8-flash-next:iq2_xxs / other                         ETA 16m 12s
+[#########################-----] 12/14 ( 85.7%) qwen3.8-flash-next:iq2_xxs / philosophy                    ETA 10m 05s
+[###########################---] 13/14 ( 92.9%) qwen3.8-flash-next:iq2_xxs / physics                       ETA 4m 43s
+[##############################] 14/14 (100.0%) qwen3.8-flash-next:iq2_xxs / psychology                    ETA 0s
+
+Finished 14/14 batches and scored 70 answers.
+HTML report: /home/hm/Projects/Tests/2026-10-02/flash-next-full/mmlu-flashnext-iq2-pc5-think12288/report.html
+Leader: qwen3.8-flash-next:iq2_xxs (78.6%)

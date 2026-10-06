@@ -1,0 +1,15 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+qwen3.8-27b:ud-q6k-prod,biology,1,5,5,5,35.97286902658957,205.24882179558512,29.21974796900031,794,,raw/01-qwen3.8-27b_ud-q6k-prod-01-biology.txt
+qwen3.8-27b:ud-q6k-prod,business,2,5,5,5,36.272743149856844,203.07204653954966,24.20434977200057,713,,raw/01-qwen3.8-27b_ud-q6k-prod-02-business.txt
+qwen3.8-27b:ud-q6k-prod,chemistry,3,5,5,5,35.00045364144689,209.21233586733675,72.27109163599744,2283,,raw/01-qwen3.8-27b_ud-q6k-prod-03-chemistry.txt
+qwen3.8-27b:ud-q6k-prod,computer science,4,5,5,5,31.900289260233134,208.73321829813747,46.89276283000072,1134,,raw/01-qwen3.8-27b_ud-q6k-prod-04-computer_science.txt
+qwen3.8-27b:ud-q6k-prod,economics,5,4,5,5,29.196858418034218,190.77307014007295,47.1445832740028,1241,,raw/01-qwen3.8-27b_ud-q6k-prod-05-economics.txt
+qwen3.8-27b:ud-q6k-prod,engineering,6,4,5,5,34.976703306542895,200.81362169407515,181.60962101199766,6175,,raw/01-qwen3.8-27b_ud-q6k-prod-06-engineering.txt
+qwen3.8-27b:ud-q6k-prod,health,7,5,5,5,27.894796237800282,195.1893163889459,32.84304292700108,811,,raw/01-qwen3.8-27b_ud-q6k-prod-07-health.txt
+qwen3.8-27b:ud-q6k-prod,history,8,4,5,5,27.19667737405147,210.1740226362513,84.49528032500166,2107,,raw/01-qwen3.8-27b_ud-q6k-prod-08-history.txt
+qwen3.8-27b:ud-q6k-prod,law,9,2,5,5,27.92193674970972,208.2027638015884,232.4583436369976,6183,,raw/01-qwen3.8-27b_ud-q6k-prod-09-law.txt
+qwen3.8-27b:ud-q6k-prod,math,10,4,5,5,33.536075707491634,203.6507690437448,39.930159430998174,1178,,raw/01-qwen3.8-27b_ud-q6k-prod-10-math.txt
+qwen3.8-27b:ud-q6k-prod,other,11,4,5,5,28.074096799933756,192.17274124176672,16.09494829400137,376,,raw/01-qwen3.8-27b_ud-q6k-prod-11-other.txt
+qwen3.8-27b:ud-q6k-prod,philosophy,12,5,5,5,32.79571714628258,207.74341956488576,24.791431731999182,688,,raw/01-qwen3.8-27b_ud-q6k-prod-12-philosophy.txt
+qwen3.8-27b:ud-q6k-prod,physics,13,5,5,5,35.41461366873382,202.07619882152022,32.565168876000826,970,,raw/01-qwen3.8-27b_ud-q6k-prod-13-physics.txt
+qwen3.8-27b:ud-q6k-prod,psychology,14,4,5,5,29.860360108413108,195.32986130896077,47.04869153300024,1269,,raw/01-qwen3.8-27b_ud-q6k-prod-14-psychology.txt

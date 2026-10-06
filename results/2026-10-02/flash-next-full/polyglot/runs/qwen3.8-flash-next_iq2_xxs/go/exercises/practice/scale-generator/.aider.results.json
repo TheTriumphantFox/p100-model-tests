@@ -1,0 +1,51 @@
+{
+    "testdir": "/run/runs/qwen3.8-flash-next_iq2_xxs/go/exercises/practice/scale-generator",
+    "testcase": "scale-generator",
+    "model": "openai/qwen3.8-flash-next_iq2_xxs",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 1279.7782480716705,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 3,
+    "num_user_asks": 8,
+    "num_exhausted_context_windows": 1,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 47701,
+    "completion_tokens": 11001,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "4c9e4e73ad6b5d2715a4597d746b77c1f0ca5544"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "44d11b01017d85b5684441957035a9739b4c3ba9"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "7c64cf109f04627addddae614e4350095bfbcdcf"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "d2e8ea72d1467d0ac0c3c390ee6ddc99659adad2"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "d2e8ea72d1467d0ac0c3c390ee6ddc99659adad2"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "aceb9e800c5eed23fa99818ec94260446c54c883"
+        ]
+    ]
+}

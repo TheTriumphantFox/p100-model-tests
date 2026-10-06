@@ -1,0 +1,31 @@
+{
+    "testdir": "/run/runs/qwen3.8-flash-next_iq2_xxs/rust/exercises/practice/decimal",
+    "testcase": "decimal",
+    "model": "openai/qwen3.8-flash-next_iq2_xxs",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 265.00099205970764,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 3,
+    "num_user_asks": 2,
+    "num_exhausted_context_windows": 1,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "93b72af0fd833bce0e3338ec18176556016aeed9"
+        ]
+    ]
+}

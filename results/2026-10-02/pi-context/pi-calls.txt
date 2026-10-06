@@ -1,0 +1,15 @@
+qwen3.6-27b-abliterated | answer: 42  | 46s | router: loaded ctx-size 131072 split-mode layer  | vram 15257/14452MiB
+qwen3.6-35b-a3b-planner | answer: 42  | 30s | router: loaded ctx-size 81920 split-mode layer  | vram 15659/15014MiB
+qwen3.6-35b-a3b-planner-mtp | answer: 42  | 35s | router: loaded ctx-size 49152 split-mode layer  | vram 15311/15796MiB
+qwen3.8-27b-mtp | answer: 42  | 48s | router: loaded ctx-size 40960 split-mode tensor  | vram 15903/15900MiB
+qwen3.8-flash-next-iq2 | answer: 42  | 91s | router: loaded ctx-size 131072 split-mode layer  | vram 15195/15236MiB
+qwen3.8-flash-next-iq2 | TOOL-42  | 7s
+qwen3.8-27b-mtp | TOOL-42  | 49s
+qwen3.6-35b-a3b-planner-mtp | TOOL-42  | 36s
+qwen3.6-35b-a3b-planner | TOOL-42  | 31s
+qwen3.6-27b-abliterated | TOOL-42  | 52s
+qwen3.6-27b-abliterated | expected 3d42c807441a | got: 3d42c807441a  | match=YES | 12s
+qwen3.6-35b-a3b-planner | expected 9c33306f5d7d | got: 9c33306f5d7d  | match=YES | 34s
+qwen3.6-35b-a3b-planner-mtp | expected 423d261ef813 | got: 423d261ef813  | match=YES | 39s
+qwen3.8-27b-mtp | expected 563e170dc2b3 | got: 563e170dc2b3  | match=YES | 52s
+qwen3.8-flash-next-iq2 | expected 4cd5a9ef0d68 | got: 4cd5a9ef0d68  | match=YES | 103s

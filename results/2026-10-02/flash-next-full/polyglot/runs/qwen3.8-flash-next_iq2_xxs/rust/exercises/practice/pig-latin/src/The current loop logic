@@ -1,0 +1,11 @@
+    for i in 1..chars.len() {
+        let c = chars[i];
+        
+        // Check for "qu" rule (Rule 3)
+        // If we see 'q' and next is 'u', we split after 'u'.
+        if c == 'q' && i + 1 < chars.len() && chars[i + 1] == 'u' {
+            split_index = i + 2; // Move up to and including 'u'
+            found_vowel = true;
+            break;
+        }
+        // ...

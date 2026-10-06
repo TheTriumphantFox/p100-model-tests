@@ -1,0 +1,370 @@
+{
+  "metadata": {
+    "started": "2026-10-04T22:19:39.927688-04:00",
+    "interrupted": false,
+    "backend": "Ollama /api/chat",
+    "dataset": "/home/hm/Projects/Tests/datasets/mmlu_pro/data/test-00000-of-00001.parquet",
+    "dataset_sha256": "0e24a191921c2f453518a537a8b2117bd137e7714d4ef1565e9ba06c1ecb9ad8",
+    "method": "balanced deterministic zero-shot direct-answer subset",
+    "settings": {
+      "per_category": 5,
+      "batch_size": 5,
+      "categories_arg": "economics,engineering,history,law",
+      "seed": 42,
+      "num_ctx": 16384,
+      "num_predict": 12288,
+      "temperature": 0,
+      "thinking": false
+    },
+    "categories": [
+      "economics",
+      "engineering",
+      "history",
+      "law"
+    ],
+    "question_ids": {
+      "economics": [
+        6854,
+        7031,
+        7414,
+        7508,
+        7576
+      ],
+      "engineering": [
+        11512,
+        11716,
+        11746,
+        11845,
+        12006
+      ],
+      "history": [
+        4748,
+        4817,
+        4850,
+        4892,
+        5034
+      ],
+      "law": [
+        1058,
+        1078,
+        1313,
+        1569,
+        1660
+      ]
+    },
+    "models": [
+      {
+        "name": "qwen3.8-27b:mtp-prod",
+        "digest": "",
+        "size_bytes": 0,
+        "parameter_size": "",
+        "quantization": "unknown",
+        "family": ""
+      }
+    ],
+    "updated": "2026-10-04T22:25:38.325423-04:00",
+    "finished": "2026-10-04T22:25:38.325374-04:00"
+  },
+  "results": [
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "economics",
+      "question_id": 6854,
+      "expected_answer": "I",
+      "predicted_answer": "C",
+      "correct": false,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-01-economics.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "economics",
+      "question_id": 7031,
+      "expected_answer": "G",
+      "predicted_answer": "G",
+      "correct": true,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-01-economics.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "economics",
+      "question_id": 7414,
+      "expected_answer": "I",
+      "predicted_answer": "I",
+      "correct": true,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-01-economics.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "economics",
+      "question_id": 7508,
+      "expected_answer": "C",
+      "predicted_answer": "C",
+      "correct": true,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-01-economics.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "economics",
+      "question_id": 7576,
+      "expected_answer": "A",
+      "predicted_answer": "A",
+      "correct": true,
+      "batch": 1,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-01-economics.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "engineering",
+      "question_id": 11512,
+      "expected_answer": "A",
+      "predicted_answer": "A",
+      "correct": true,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-02-engineering.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "engineering",
+      "question_id": 11716,
+      "expected_answer": "D",
+      "predicted_answer": "D",
+      "correct": true,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-02-engineering.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "engineering",
+      "question_id": 11746,
+      "expected_answer": "J",
+      "predicted_answer": "A",
+      "correct": false,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-02-engineering.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "engineering",
+      "question_id": 11845,
+      "expected_answer": "I",
+      "predicted_answer": "I",
+      "correct": true,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-02-engineering.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "engineering",
+      "question_id": 12006,
+      "expected_answer": "B",
+      "predicted_answer": "B",
+      "correct": true,
+      "batch": 2,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-02-engineering.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "history",
+      "question_id": 4748,
+      "expected_answer": "F",
+      "predicted_answer": "F",
+      "correct": true,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-03-history.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "history",
+      "question_id": 4817,
+      "expected_answer": "E",
+      "predicted_answer": "E",
+      "correct": true,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-03-history.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "history",
+      "question_id": 4850,
+      "expected_answer": "E",
+      "predicted_answer": "E",
+      "correct": true,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-03-history.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "history",
+      "question_id": 4892,
+      "expected_answer": "H",
+      "predicted_answer": "J",
+      "correct": false,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-03-history.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "history",
+      "question_id": 5034,
+      "expected_answer": "E",
+      "predicted_answer": "E",
+      "correct": true,
+      "batch": 3,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-03-history.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "law",
+      "question_id": 1058,
+      "expected_answer": "I",
+      "predicted_answer": "I",
+      "correct": true,
+      "batch": 4,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-04-law.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "law",
+      "question_id": 1078,
+      "expected_answer": "B",
+      "predicted_answer": "B",
+      "correct": true,
+      "batch": 4,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-04-law.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "law",
+      "question_id": 1313,
+      "expected_answer": "H",
+      "predicted_answer": "H",
+      "correct": true,
+      "batch": 4,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-04-law.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "law",
+      "question_id": 1569,
+      "expected_answer": "A",
+      "predicted_answer": "A",
+      "correct": true,
+      "batch": 4,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-04-law.txt",
+      "error": ""
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "law",
+      "question_id": 1660,
+      "expected_answer": "G",
+      "predicted_answer": "A",
+      "correct": false,
+      "batch": 4,
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-04-law.txt",
+      "error": ""
+    }
+  ],
+  "batches": [
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "economics",
+      "batch": 1,
+      "correct": 4,
+      "total": 5,
+      "parsed": 5,
+      "generation_tps": 36.74025288907928,
+      "prompt_tps": 189.08934702243573,
+      "wall_seconds": 48.30019294901285,
+      "eval_count": 1316,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-01-economics.txt"
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "engineering",
+      "batch": 2,
+      "correct": 4,
+      "total": 5,
+      "parsed": 5,
+      "generation_tps": 41.95649724828396,
+      "prompt_tps": 205.29442642322863,
+      "wall_seconds": 77.31683656497626,
+      "eval_count": 3036,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-02-engineering.txt"
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "history",
+      "batch": 3,
+      "correct": 4,
+      "total": 5,
+      "parsed": 5,
+      "generation_tps": 34.53345554118006,
+      "prompt_tps": 216.18587377168646,
+      "wall_seconds": 44.511286429013126,
+      "eval_count": 1299,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-03-history.txt"
+    },
+    {
+      "model": "qwen3.8-27b:mtp-prod",
+      "category": "law",
+      "batch": 4,
+      "correct": 4,
+      "total": 5,
+      "parsed": 5,
+      "generation_tps": 34.797415476767874,
+      "prompt_tps": 213.89070612128998,
+      "wall_seconds": 188.2364892429905,
+      "eval_count": 6175,
+      "error": "",
+      "raw_output_file": "raw/01-qwen3.8-27b_mtp-prod-04-law.txt"
+    }
+  ],
+  "model_summaries": [
+    {
+      "name": "qwen3.8-27b:mtp-prod",
+      "digest": "",
+      "size_bytes": 0,
+      "parameter_size": "",
+      "quantization": "unknown",
+      "family": "",
+      "accuracy": 80.0,
+      "correct": 16,
+      "total": 20,
+      "parsed": 20,
+      "category_scores": {
+        "economics": 80.0,
+        "engineering": 80.0,
+        "history": 80.0,
+        "law": 80.0
+      },
+      "generation_tps": 37.006905288827795,
+      "wall_seconds": 358.36480518599274
+    }
+  ]
+}

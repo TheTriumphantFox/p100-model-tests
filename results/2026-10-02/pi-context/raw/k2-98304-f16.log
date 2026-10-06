@@ -1,0 +1,14 @@
+0.00.046.757 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.046.989 W srv  llama_server: -----------------
+0.00.046.990 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.046.990 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.046.990 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.046.990 W srv  llama_server: -----------------
+0.00.048.215 I srv    load_model: loading model '/home/hm/models/k2-horizon-7b_q8_0.gguf'
+0.00.316.824 W load: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+0.02.475.301 I cmn          init: llama threadpool init, n_threads = 6
+0.02.620.415 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 98304, kv_unified = 'false'
+0.02.691.888 I srv          init: chat template supports preserving reasoning, consider enabling it via --reasoning-preserve
+0.02.691.925 I srv  llama_server: model loaded
+0.02.691.929 I srv  llama_server: listening on http://127.0.0.1:8090
+0.03.047.317 I srv    operator(): operator(): cleaning up before exit...

@@ -1,0 +1,18 @@
+0.00.005.931 W DEPRECATED: argument '-sm' specified multiple times, use comma-separated values instead (only last value will be used)
+0.00.005.992 W DEPRECATED: argument '-ub' specified multiple times, use comma-separated values instead (only last value will be used)
+0.00.006.167 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.006.397 W srv  llama_server: -----------------
+0.00.006.398 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.006.399 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.006.399 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.006.399 W srv  llama_server: -----------------
+0.00.007.622 I srv    load_model: loading model '/home/hm/models/qwen3.8-27b-unsloth_q8_0.gguf'
+0.06.665.515 I cmn          init: llama threadpool init, n_threads = 6
+0.06.802.670 I common_speculative_init_result: creating MTP draft context against the target model '/home/hm/models/qwen3.8-27b-unsloth_q8_0.gguf'
+0.06.823.567 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 49152, kv_unified = 'false'
+0.06.823.622 W set_sampler: backend sampling not supported with SPLIT_MODE_TENSOR; using CPU
+0.06.823.622 W spec common_specu: backend offload failed for seq_id=0; using CPU sampler
+0.06.852.561 W srv          init: chat template supports preserving reasoning, it is enabled by default (may use more tokens, disable via --no-reasoning-preserve)
+0.06.852.599 I srv  llama_server: model loaded
+0.06.852.603 I srv  llama_server: listening on http://127.0.0.1:8090
+0.07.048.937 I srv    operator(): operator(): cleaning up before exit...

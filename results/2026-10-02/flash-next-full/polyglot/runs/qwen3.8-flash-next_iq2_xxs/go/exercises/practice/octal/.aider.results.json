@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.8-flash-next_iq2_xxs/go/exercises/practice/octal",
+    "testcase": "octal",
+    "model": "openai/qwen3.8-flash-next_iq2_xxs",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 258.6368556022644,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 1,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 4837,
+    "completion_tokens": 2306,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "cc33859027352253bd163c6518590a672a3ea0f4"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "b3bcb67ba09f40cd22f66eb7fca8bdc9f442a733"
+        ]
+    ]
+}

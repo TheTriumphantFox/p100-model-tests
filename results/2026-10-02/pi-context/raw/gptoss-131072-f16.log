@@ -1,0 +1,17 @@
+0.00.052.144 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.052.433 W srv  llama_server: -----------------
+0.00.052.434 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.052.434 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.052.434 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.052.434 W srv  llama_server: -----------------
+0.00.053.691 I srv    load_model: loading model '/home/hm/models/gpt-oss-20b_q8_0.gguf'
+0.00.374.057 W load: setting token '<|message|>' (200008) attribute to USER_DEFINED (16), old attributes: 8
+0.00.374.060 W load: setting token '<|start|>' (200006) attribute to USER_DEFINED (16), old attributes: 8
+0.00.374.060 W load: setting token '<|constrain|>' (200003) attribute to USER_DEFINED (16), old attributes: 8
+0.00.374.962 W load: setting token '<|channel|>' (200005) attribute to USER_DEFINED (16), old attributes: 8
+0.00.378.640 W load: special_eog_ids contains both '<|return|>' and '<|call|>', or '<|calls|>' and '<|flush|>' tokens, removing '<|end|>' token from EOG list
+0.07.585.881 I cmn          init: llama threadpool init, n_threads = 6
+0.07.670.407 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 131072, kv_unified = 'false'
+0.07.672.626 I srv  llama_server: model loaded
+0.07.672.632 I srv  llama_server: listening on http://127.0.0.1:8090
+0.08.213.674 I srv    operator(): operator(): cleaning up before exit...

@@ -148,7 +148,7 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
 </header>
 
 <section id="standing">
-  <h2>Where things stand (2 Oct)</h2>
+  <h2>Where things stand (6 Oct)</h2>
   <p class="sub">The default question for these tests is now the best all-around model: accuracy, editing, tool use, speed and context together. Only tests that name another goal (like the AIOS planner) are judged differently.</p>
   <div class="verdict">
     <ul>
@@ -156,7 +156,9 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
       <li><b>Best balance:</b> <code>qwen3.6-35b-a3b</code>, the MoE. On editing it is statistically level with the incumbent (24 vs 28 of 50, p=0.45) at 3.6× the speed: 68 tok/s, 111 on planner edits with its MTP version. <b>It has never been scored on MMLU-Pro, HumanEval or tau-bench</b>, so that is the gap to close before it can be called the best all-around model.</li>
       <li><b>Fastest:</b> <code>gpt-oss-20b</code> at 100 tok/s. It came last on editing (4/25) and on tool use (45 % tau-bench), and does not repeat itself reliably.</li>
       <li><b>Production :8080:</b> <code>devstral</code> is the weakest coder on the shelf (4/25 Aider, 84.8 HumanEval). Tensor split would take it from 12.9 to 22.3 tok/s.</li>
-      <li><b>Still to measure:</b> accuracy for the MoE and K2 Horizon; MTP speed on general text (the planner-edit figures are inflated by ~99 % draft acceptance on copied content); MTP and tensor split on the full 40-task planner bench.</li>
+      <li><b>Qwen3.8 vs 3.6 (5 Oct):</b> with the anti-loop thinking budget, Flash-Next and the Qwen3.8-27B UD-Q6_K tie the incumbent on thinking-on MMLU-Pro (87.1 / 88.6 vs 87.1, all p ≥ 0.11). On editing the incumbent leads both 3.8s that were run: Flash-Next 21/50 (p=0.09) and the 27B Q8 17/50 (p=0.01). Every Polyglot run so far had thinking off.</li>
+      <li><b>Context:</b> the UD-Q6_K runs at 126k with nothing on CPU, at 28 tok/s. The Q8_0 needed 8 layers' FFN on CPU to reach 64k, at 16.5 tok/s. Flash-Next at 256k froze the host (RAM exhausted with <code>--fit</code>), so 128k is its ceiling.</li>
+      <li><b>Still to measure:</b> accuracy for the MoE and K2 Horizon; Aider Polyglot with thinking on; MTP and tensor split on the full 40-task planner bench; pi's tool-call loops.</li>
     </ul>
   </div>
 </section>
@@ -164,7 +166,7 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
 <section id="scoreboard">
   <h2>Model scoreboard</h2>
   <p class="sub">Every model that loads on the CUDA build. <b>Speed</b> is decode tok/s with tensor split (llama-bench tg128, 2 Oct sweep; hover for layer split). <b>Reasoning</b> is 70 MMLU-Pro questions (5 per category × 14). <b>Coding</b> is all 164 HumanEval problems. <b>Editing</b> is Aider Polyglot pass@2 as a percentage (of 50 exercises for the top three, of 25 for the rest). Seed 42, temperature 0. Click a column header to sort.</p>
-  <div class="verdict"><p><b>Result (21 Sep, still standing):</b> keep the incumbent <code>qwen3.6-27b-abliterated</code>. It has the best reasoning scores and is the only model that finishes every thinking question. Its HumanEval is within noise of the top score (96.3 vs 97.6), and every statistically significant gap (McNemar exact, p&lt;0.05) is in its favour. Its own Q8_K_P and a stock Q8_0 gave no resolvable gain and cost most of the context headroom, so both were deleted (30 Sep).</p><p><b>Update (2 Oct):</b> HumanEval is saturated (92–97.6 %) and does not predict editing. qwen3.8-27b Q8 tops HumanEval but drops to third on Aider Polyglot. See <a href="#coding">Coding</a>.</p></div>
+  <div class="verdict"><p><b>Result (21 Sep, still standing):</b> keep the incumbent <code>qwen3.6-27b-abliterated</code>. It has the best reasoning scores and is the only model that finishes every thinking question. Its HumanEval is within noise of the top score (96.3 vs 97.6), and every statistically significant gap (McNemar exact, p&lt;0.05) is in its favour. Its own Q8_K_P and a stock Q8_0 gave no resolvable gain and cost most of the context headroom, so both were deleted (30 Sep).</p><p><b>Update (2 Oct):</b> HumanEval is saturated (92–97.6 %) and does not predict editing. qwen3.8-27b Q8 tops HumanEval but drops to third on Aider Polyglot. See <a href="#coding">Coding</a>.</p><p><b>Update (5 Oct):</b> with a 6,144-token thinking budget no model runs away on thinking questions any more. Flash-Next (87.1) and the Qwen3.8-27B UD-Q6_K (88.6) both tie the incumbent (87.1): every gap is p ≥ 0.11, so neither 3.8 shows a gain over 3.6 on reasoning. On editing the incumbent still leads.</p></div>
   <div class="tablewrap"><table id="score">
     <thead><tr>
       <th class="sort" data-k="name">Model</th>
@@ -174,7 +176,7 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
       <th class="sort num" data-k="code">Coding (HumanEval)</th>
       <th class="sort num" data-k="edit">Editing (Aider)</th>
     </tr></thead><tbody></tbody></table></div>
-  <p class="note">* = the model spent its whole 12,288-token thinking budget on some questions and never answered them. The true score is higher, so a starred value is a floor. "none" = no thinking mode; "not run" = never tested. <code>gpt-oss-20b</code> is non-deterministic: it scored 77.1 once and 71.4 in four of five repeats. Flash-Next's speed is from 48 distinct prompts on a server, with part of the model in RAM. Three shelf models do not load on llama.cpp: <code>qwen3.6-27b-opus-distill</code> and <code>qwen3.6-35b-a3b-abliterated-vl</code> (vision GGUFs) and <code>gemma4-e4b-abliterated</code>. Sources: <a data-md="results/2026-09-21/cuda-matrix/FINAL.md">cuda-matrix</a>, <a data-md="results/2026-10-01/aider-polyglot-10h/REPORT.md">aider-polyglot</a>, <a data-md="results/2026-10-02/speed-sweep/REPORT.md">speed-sweep</a>.</p>
+  <p class="note">* = the model spent its whole 12,288-token thinking budget on some questions and never answered them. The true score is higher, so a starred value is a floor. † = run on 5 Oct through the :8080 preset with the anti-loop fix (6,144-token thinking budget, medium effort), at temperature 0; every question was answered. Without the fix Flash-Next scored 78.6* (59 of 70 answered). The UD-Q6_K's quick and HumanEval scores are from its 21 Sep run (Ollama); it has no llama-bench speed (28 tok/s with MTP through the router at 40k and 128k alike, against 33 for the Q8_0 on the same prompts). "none" = no thinking mode; "not run" = never tested. <code>gpt-oss-20b</code> is non-deterministic: it scored 77.1 once and 71.4 in four of five repeats. Flash-Next's speed is from 48 distinct prompts on a server, with part of the model in RAM. Three shelf models do not load on llama.cpp: <code>qwen3.6-27b-opus-distill</code> and <code>qwen3.6-35b-a3b-abliterated-vl</code> (vision GGUFs) and <code>gemma4-e4b-abliterated</code>. Sources: <a data-md="results/2026-09-21/cuda-matrix/FINAL.md">cuda-matrix</a>, <a data-md="results/2026-10-01/aider-polyglot-10h/REPORT.md">aider-polyglot</a>, <a data-md="results/2026-10-02/speed-sweep/REPORT.md">speed-sweep</a>, <a data-md="results/2026-10-02/flash-next-full/REPORT.md">flash-next-full</a>, <a data-md="results/2026-10-05/think-fix-full/REPORT.md">think-fix-full</a>.</p>
 
   <h3>Speed against coding accuracy</h3>
   <div class="card"><svg id="scatter" class="chart" role="img" aria-label="Scatter of tensor-split decode speed against HumanEval score"></svg></div>
@@ -187,8 +189,8 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
   <div class="legend"><span><i style="background:var(--s1)"></i>Solved on the first try (pass@1)</span><span><i style="background:var(--s1-soft)"></i>Solved within two tries, after seeing the test failures (pass@2)</span></div>
   <div class="grid2">
     <div class="card">
-      <h3 style="margin-top:0">Top 3, 50 exercises</h3>
-      <svg id="poly50" class="chart" role="img" aria-label="Aider Polyglot pass rates for the top three models on 50 exercises"></svg>
+      <h3 style="margin-top:0">Top 4, 50 exercises</h3>
+      <svg id="poly50" class="chart" role="img" aria-label="Aider Polyglot pass rates for four models on 50 exercises"></svg>
     </div>
     <div class="card">
       <h3 style="margin-top:0">All five, first 25 exercises</h3>
@@ -204,10 +206,12 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
       <tr><td><code>qwen3.6-35b-a3b</code> vs <code>devstral-patched</code></td><td class="num">25</td><td class="num">10 / 1</td><td class="num">0.01</td></tr>
       <tr><td><code>qwen3.6-27b-abliterated</code> vs <code>qwen3.8-27b-unsloth</code></td><td class="num">50</td><td class="num">13 / 2</td><td class="num">0.01</td></tr>
       <tr><td><code>qwen3.6-35b-a3b</code> vs <code>qwen3.8-27b-unsloth</code></td><td class="num">50</td><td class="num">9 / 2</td><td class="num">0.07</td></tr>
+      <tr><td><code>qwen3.6-27b-abliterated</code> vs <code>qwen3.8-flash-next</code></td><td class="num">50</td><td class="num">10 / 3</td><td class="num">0.09</td></tr>
+      <tr><td><code>qwen3.6-35b-a3b</code> vs <code>qwen3.8-flash-next</code></td><td class="num">50</td><td class="num">8 / 5</td><td class="num">0.58</td></tr>
       <tr><td><code>qwen3.6-27b-abliterated</code> vs <code>qwen3.6-35b-a3b</code></td><td class="num">50</td><td class="num">10 / 6</td><td class="num">0.45</td></tr>
       <tr><td><code>devstral-patched</code> vs <code>gpt-oss-20b</code></td><td class="num">25</td><td class="num">3 / 3</td><td class="num">1.00</td></tr>
     </tbody></table></div>
-  <p class="note">Every model at least doubled from pass@1 to pass@2, so the feedback try is where most of the points are, and HumanEval never measures it. Devstral's misses are genuine wrong code: zero malformed replies, and the tests ran and failed on logic. The test runner was validated in both directions before any model ran: 96/100 reference solutions pass and 99/100 unsolved stubs fail. Caveats: one run per model, and the same exercise flipped between identical runs even at temperature 0. Thinking was off throughout. These are 50 of the 225 exercises. Source: <a data-md="results/2026-10-01/aider-polyglot-10h/REPORT.md">aider-polyglot-10h/REPORT.md</a>.</p>
+  <p class="note">Every model at least doubled from pass@1 to pass@2, so the feedback try is where most of the points are, and HumanEval never measures it. Devstral's misses are genuine wrong code: zero malformed replies, and the tests ran and failed on logic. The test runner was validated in both directions before any model ran: 96/100 reference solutions pass and 99/100 unsolved stubs fail. Caveats: one run per model, and the same exercise flipped between identical runs even at temperature 0. Thinking was off throughout. These are 50 of the 225 exercises. Flash-Next ran the same 50 on 2–3 Oct with <code>--fit</code> on (experts in RAM). Sources: <a data-md="results/2026-10-01/aider-polyglot-10h/REPORT.md">aider-polyglot-10h/REPORT.md</a>, <a data-md="results/2026-10-02/flash-next-full/REPORT.md">flash-next-full</a>.</p>
 </section>
 
 <section id="agent">
@@ -266,9 +270,15 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
       <tr class="grp"><td colspan="3">Models and quants</td></tr>
       <tr><td>Quant choice on GP100</td><td>No <code>dp4a</code>, so K-quants are slower per byte than Q8_0: Q4_K_M + MTP is slower than Q8_0 + MTP. MXFP4 (gpt-oss) works on sm_60.</td><td><a data-md="results/2026-09-19/candidates/REPORT.md">round 1</a>, <a data-md="results/2026-10-02/p100-optimize/REPORT.md">p100-optimize</a></td></tr>
       <tr><td>Higher quant of the incumbent</td><td>Q5_K_P → Q8_K_P (Q8_0 + F16) or a stock Q8_0: no resolvable accuracy gain, ~4 % slower, and the Q8_K_P tops out at ctx ~16k against the Q5's ~180k. Qwen3.8's Q4 → Q8 coding gain (p=0.016) does not carry over from a Q5 start.</td><td><a data-md="results/2026-09-30/qwen36-q8kp/REPORT.md">quant test</a></td></tr>
+      <tr><td>Context by spilling to CPU</td><td>Qwen3.8-27B Q8_0 (29 GB): each FFN block moved to CPU frees ~135 MiB per card and costs ~4–5 ms per pass. 64k took 8 blocks: 32.9 → 16.5 tok/s, prefill 188 → 95. 128k took 24 blocks: 8 tok/s. With mmap the CPU tensors made prefill CPU-bound (52 tok/s); <code>load-mode = none</code> roughly doubled it. A smaller quant is the better route: the UD-Q6_K fits 126k with nothing on CPU at 28 tok/s.</td><td><a data-md="results/2026-10-05/qwen38-27b-spill/REPORT.md">spill</a>, <a data-md="results/2026-10-05/qwen38-q6k-think/REPORT.md">Q6_K</a></td></tr>
+      <tr><td>q8_0 KV under tensor split</td><td>Qwen3.8-27B at 80k with a q8_0 cache ran out of VRAM on the first prompt (cuBLAS pool alloc), although its cache is the size of the 40k f16 one. Halving the KV is not a free 2× context here.</td><td><a data-md="results/2026-10-05/qwen38-27b-spill/REPORT.md">spill</a></td></tr>
+      <tr><td>Flash-Next at 256k</td><td>Loading the 75 GB IQ2_XXS at ctx 262144 with <code>--fit</code> froze the host, screen on, with no kernel log: <code>--fit</code> pushes more experts into RAM to make room for the cache, on 61 GB of RAM with zram swap. 131072 is the working ceiling. Probes since then run under a host-RAM watchdog.</td><td><a data-md="results/2026-10-05/max-context/run.sh">max-context</a></td></tr>
+      <tr><td>Router presets</td><td>Command-line <code>--ctx-size</code>, <code>--cache-type-*</code>, <code>--split-mode</code> and <code>--ubatch-size</code> on the router override every per-model preset, so they live in <code>[*]</code> of <code>models.ini</code>. Every preset keeps ≥0.6 GB free per card at a full fill: devstral loaded at 64k and then OOMed in warmup.</td><td><a data-md="results/2026-10-02/pi-context/REPORT.md">pi-context</a></td></tr>
       <tr><td>Context cost</td><td>The Qwen 27B models measured 72 KB/token of KV, not the 260 KB in earlier notes. Devstral measured 168 KB/token f16 (about 84 KB at q8_0, derived rather than measured), with room for ~100k tokens.</td><td><a data-md="results/2026-09-21/cuda-matrix/FINAL.md">cuda-matrix</a></td></tr>
       <tr><td>Models bigger than VRAM</td><td>qwen3.8-flash-next (512-expert MoE): the 82 GB UD-IQ3_XXS ran at 5.3 tok/s steady through Ollama (MMLU-Pro 70.0). The 75 GB IQ2_XXS runs at 19.3 tok/s on llama.cpp with <code>--fit</code> putting experts in RAM. The quant and the runtime both changed, so the two causes are not separated. A sparse MoE must get distinct prompts: repeating one gave a bogus 12.53 tok/s on 19 Sep.</td><td><a data-md="results/2026-09-19/qwen3.8-flash-next/REPORT.md">flash-next</a>, <a data-md="results/2026-10-02/flash-next-iq2/REPORT.md">flash-next IQ2</a></td></tr>
       <tr class="grp"><td colspan="3">Benchmarks</td></tr>
+      <tr><td>Thinking budget (anti-loop)</td><td>Qwen3.8 models could think until the 12,288-token cap and give no answer (Flash-Next: 3 of 14 MMLU batches, 0/5 on history and law). Preset <code>reasoning-budget = 6144</code> + <code>reasoning-effort = medium</code> + Qwen's thinking-mode sampling: 70/70 answered on both 3.8s, with 1.8–3.2× fewer thinking tokens than their no-fix runs; a batch that reaches the budget is cut off and still answers. The budget does the work on the 27B; medium effort alone fixes most of Flash-Next.</td><td><a data-md="results/2026-10-05/think-fix-full/REPORT.md">think-fix-full</a>, <a data-md="results/2026-10-04/qwen38-antiloop/REPORT.md">27B</a>, <a data-md="results/2026-10-04/flash-next-antiloop/REPORT.md">Flash-Next</a></td></tr>
+      <tr><td>Flash-Next + MTP</td><td>Works only on a PR build with the head appended to the GGUF: 18.6 → 20.7 tok/s at n-max 3 with p-min 0.75 (92 % accepted). Ungated drafting is slower than none, because a rejected draft costs a pass over experts in RAM.</td><td><a data-md="results/2026-10-03/flash-next-mtp/REPORT.md">flash-next-mtp</a></td></tr>
       <tr><td>HumanEval vs editing</td><td>HumanEval ranked qwen3.8-27b Q8 first (97.6). On Aider Polyglot it came third and was significantly worse than the incumbent (17 vs 28 of 50, p=0.01). A score on single functions from a docstring does not predict editing.</td><td><a data-md="results/2026-10-01/aider-polyglot-10h/REPORT.md">polyglot</a></td></tr>
     </tbody></table></div>
 </section>
@@ -323,7 +333,7 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
 </div>
 
 <footer><div class="wrap">
-  Built 29 September 2026 from <code>~/Projects/Tests</code>, reorganised 2 October around the best all-around model. The raw data includes model outputs, router logs and per-question results. Dataset content (HumanEval, MMLU-Pro, tau-bench, GenEval, T2I-CompBench, the Exercism exercises in Aider Polyglot) remains under its upstream licences, listed in <a href="dataset_manifest.json">dataset_manifest.json</a>.
+  Built 29 September 2026 from <code>~/Projects/Tests</code>, reorganised 2 October around the best all-around model, updated 6 October. The raw data includes model outputs, router logs and per-question results. Dataset content (HumanEval, MMLU-Pro, tau-bench, GenEval, T2I-CompBench, the Exercism exercises in Aider Polyglot) remains under its upstream licences, listed in <a href="dataset_manifest.json">dataset_manifest.json</a>.
 </div></footer>
 
 <div id="tip" role="tooltip"></div>
@@ -375,7 +385,8 @@ const SCORE = [
   {name:"ornith-1.5-35b-a3b", note:"MoE · Q4_K_M", speed:67.1, layer:54.3, quick:61.4, think:81.4, ts:true, code:92.1, edit:NR},
   {name:"g9v3-39a5b", note:"MoE · Q4_K_M · own build", speed:51.1, layer:39.2, quick:67.1, think:68.6, ts:true, code:93.9, edit:NR},
   {name:"k2-horizon-7b", note:"Q8_0 · IFM fork build", speed:55.9, layer:35.0, quick:NR, think:NR, code:NR, edit:NR},
-  {name:"qwen3.8-flash-next", note:"512-expert MoE · IQ2_XXS · part in RAM", speed:19.3, layer:19.3, quick:NR, think:NR, code:NR, edit:NR},
+  {name:"qwen3.8-flash-next", note:"512-expert MoE · IQ2_XXS · part in RAM", speed:19.3, layer:19.3, quick:68.6, think:87.1, fx:true, code:97.6, edit:42, editN:"21/50"},
+  {name:"qwen3.8-27b-unsloth UD-Q6_K", note:"MTP · 126k on :8080 (5 Oct)", speed:NR, layer:NR, quick:70.0, think:88.6, fx:true, code:95.7, edit:NR},
 ];
 const num = v => typeof v === "number" ? v : -1;
 (() => {
@@ -387,7 +398,7 @@ const num = v => typeof v === "number" ? v : -1;
     const v = r[k];
     if (v === NR) return `<td class="num"><span class="na">not run</span></td>`;
     if (v == null) return `<td class="num"><span class="na">none</span></td>`;
-    const lbl = k === "speed" ? v.toFixed(1) : k === "edit" ? `${v}%` : v.toFixed(1) + (k === "think" && r.ts ? "*" : "");
+    const lbl = k === "speed" ? v.toFixed(1) : k === "edit" ? `${v}%` : v.toFixed(1) + (k === "think" && r.ts ? "*" : "") + (k === "think" && r.fx ? "†" : "");
     const tipTxt = k === "speed" ? `${esc(r.name)}: ${r.speed} tok/s tensor split, ${r.layer} layer split`
                  : k === "edit" ? `${esc(r.name)}: ${r.editN} solved within two tries` : "";
     return `<td class="num"${tipTxt ? ` data-tip="${tipTxt}"` : ""}><div class="cellbar ${v === best[k] ? "best" : ""}"><div class="track"><div class="fill" style="width:${100 * v / max[k]}%"></div></div><span>${lbl}</span></div></td>`;
@@ -414,7 +425,7 @@ function drawScatter() {
   svgEl("text",{x:(W+m.l)/2,y:H-6,"text-anchor":"middle"},s).textContent="Decode tok/s, tensor split (log scale) →";
   svgEl("text",{x:12,y:m.t+4,transform:`rotate(-90 12 ${m.t+4})`,"text-anchor":"end"},s).textContent="HumanEval pass@1";
   const lab = {"qwen3.6-27b-abliterated":[12,18,"start"],"devstral-patched":[10,4,"start"],"gpt-oss-20b":[-10,-10,"end"],"ornith-1.5-35b-a3b":[-10,16,"end"],"g9v3-39a5b":[-10,-10,"end"],"qwen3.8-27b-unsloth":[-8,-10,"start"]};
-  SCORE.filter(r => typeof r.code === "number").forEach(r => {
+  SCORE.filter(r => typeof r.code === "number" && typeof r.speed === "number").forEach(r => {
     const cx = x(r.speed), cy = y(r.code);
     const tipTxt = `<b>${esc(r.name)}</b><br>${r.speed} tok/s tensor split (${r.layer} layer) · HumanEval ${r.code}%`;
     svgEl("circle",{cx,cy,r:14,fill:"transparent","data-tip":tipTxt},s);
@@ -516,7 +527,7 @@ function drawPolyglot() {
   const mk = (id, n, rows) => hbars(id, rows.map(([l, p1, p2, s]) => ({label:l, v:100*p1/n, soft:100*p2/n,
     valLabel:`${p2}/${n} (${p1})`, tip:`<b>${l}</b><br>First try: ${p1}/${n}<br>Within two tries: ${p2}/${n}<br>${s} s per exercise`})),
     {max:100, unit:"%", labelW:170, soft:true, fmt:v => Math.round(v)});
-  mk("poly50", 50, [["qwen3.6-27b-abliterated",12,28,293],["qwen3.6-35b-a3b",10,24,82],["qwen3.8-27b Q8",8,17,424]]);
+  mk("poly50", 50, [["qwen3.6-27b-abliterated",12,28,293],["qwen3.6-35b-a3b",10,24,82],["qwen3.8-flash-next",12,21,306],["qwen3.8-27b Q8",8,17,424]]);
   mk("poly25", 25, [["qwen3.6-27b-abliterated",6,16,278],["qwen3.6-35b-a3b",4,13,88],["qwen3.8-27b Q8",5,10,442],["devstral Q8_0",1,4,183],["gpt-oss-20b",2,4,58]]);
 }
 function drawAll() {
@@ -556,11 +567,13 @@ const MODELS = [
   ["devstral-patched Q8_0 (+ mmproj f16 0.9 GB)","25.1","fast","Production agent on :8080. 12.9 → 22.3 tok/s, prefill 175 → 391. Tool-template patch. 4/25 on Aider Polyglot, tied for last."],
   ["gpt-oss-20b Q8_0","12.1","fast","67 → 100 tok/s, the fastest model here. Non-deterministic on repeats. 4/25 on Aider Polyglot."],
   ["k2-horizon-7b Q8_0","9.6","fast","IFM K2 Horizon 7B. Needs the IFM fork build (:8083). 35 → 56 tok/s; accuracy not scored."],
-  ["qwen3.8-flash-next IQ2_XXS (2 splits)","75.2","fast","512-expert MoE, bartowski (2 Oct). 19.3 tok/s with experts in RAM via <code>--fit</code>; needs the whole machine. Accuracy not scored."],
+  ["qwen3.8-flash-next IQ2_XXS (2 splits)","75.2","fast","512-expert MoE, bartowski (2 Oct). 19.3 tok/s with experts in RAM via <code>--fit</code>; needs the whole machine; 128k max (256k froze the host). 97.6 HumanEval, 68.6 MMLU-Pro quick, 87.1 thinking with the anti-loop budget (78.6 without), 21/50 Aider Polyglot."],
+  ["qwen3.8-flash-next IQ2_XXS + MTP head (shard 1)","41.5","fast","The same model with ggml-org's MTP head appended (3 Oct); shard 2 is a hard link to the original. Needs the PR build <code>~/llama-cuda12-mtp</code>: 18.6 → 20.7 tok/s gated at p-min 0.75."],
+  ["Qwen3.8-27B UD-Q6_K (Unsloth, built-in MTP)","22.0","fast","Re-downloaded 5 Oct for context: 126k on :8080 with nothing on CPU, 28 tok/s with MTP. 88.6 thinking-on MMLU-Pro with the anti-loop budget. First tested 21 Sep (95.7 HumanEval / 70.0 quick) and removed as dominated by the Q8_0 on speed: Q6_K decodes ~15 % slower on GP100."],
   ["Qwen3.8-27B Q8_0 (ggml-org)","28.6","archive","10.8 → 18.6 tok/s, 49 with the MTP file on planner edits (22.72 with DFlash, layer split); 95.7 HumanEval."],
-  ["mtp-Qwen3.8-27B Q8_0","3.2","archive","MTP draft file. Works on any Qwen3.8-27B and on the Qwen3.6-27B incumbent (95 % acceptance)."],
+  ["mtp-Qwen3.8-27B Q8_0","3.2","fast","MTP draft file. Works on any Qwen3.8-27B and on the Qwen3.6-27B incumbent (95 % acceptance); the incumbent's :8080 preset uses it (4 Oct)."],
   ["dflash-Qwen3.8-27B Q8_0","2.1","archive","DFlash draft module, 76–79 % acceptance; crashes under tensor split."],
-  ["Qwen3.8-27B Q8_0 (Unsloth)","29.0","archive","Built-in MTP head: 48.8 tok/s on planner edits. Best HumanEval (97.6), but 17/50 on Aider Polyglot, behind the incumbent (p=0.01)."],
+  ["Qwen3.8-27B Q8_0 (Unsloth)","29.0","fast","Built-in MTP head: 48.8 tok/s on planner edits. Best HumanEval (97.6), but 17/50 on Aider Polyglot, behind the incumbent (p=0.01). Copied to NVMe 2 Oct (the HDD original stays); on :8080 at 64k with 8 FFN blocks on CPU, 16.5 tok/s."],
   ["Qwen3.8-27B-Uncensored-HauhauCS Q6_K_P","25.9","archive","9.9 → 17.1 tok/s, 43.8 with its built-in MTP head. 95.7 HumanEval / 68.6 MMLU-Pro."],
   ["Qwen3.8-27B Q4_K_M","19.0","archive","12.4 → 20.5 tok/s, 47.1 with the MTP file (slower than Q8_0 + MTP)."],
   ["Ornith-1.5-35B-A3B Q4_K_M","21.7","archive","MoE, 54 → 67 tok/s, 99.7 with its built-in MTP head; 37/40 pinned planner."],
@@ -575,7 +588,6 @@ const MODELS = [
   ["qwen3.8-flash-next UD-IQ3_XXS","82.0","removed","Exceeds VRAM; 5.3 tok/s steady through Ollama, 70.0 MMLU-Pro."],
   ["Qwen3.6-27B-HauhauCS-Aggressive Q8_K_P","32.0","removed","The incumbent at Q8_0 + F16: 95.7 / 71.4 / 91.4, no resolvable gain; ctx capped at ~16k."],
   ["Qwen3.6-27B Q8_0 (Unsloth, stock)","28.6","removed","95.1 / 74.3 / 90.0, no resolvable gain; not abliterated."],
-  ["Qwen3.8-27B UD-Q6_K","22.0","removed","Dominated by the Unsloth Q8_0 on both accuracy and speed."],
   ["nemotron-cascade-2-30b-a3b Q4_K_M","24.7","removed","69–70 tok/s (layer) but 89.0 HumanEval / 48.6 MMLU-Pro; dominated by gpt-oss."],
   ["glm-4.7-flash Q5_K_M","21.4","removed","84.8 / 55.7, lost both axes."],
   ["xing4.0-29b-a4b IQ4_NL","21.2","removed","Worst measured: 83.5 HumanEval / 44.3 MMLU-Pro; needed a fork runtime."],
@@ -616,6 +628,16 @@ const IDX = [
   ["2026-10-02","p100-optimize","Tensor split and MTP","Tensor split works with NCCL P2P off. MTP on every model with a head: the planner twin 66 → 111 tok/s, Ornith 65 → 100, dense 27Bs to 40–49, all correct. n-gram drafting loses on MoE models.","REPORT.md"],
   ["2026-10-02","speed-sweep","Speed sweep, all local models","12 models, layer vs tensor split, one session: +24–30 % MoE, +50–60 % gpt-oss/K2, +66–73 % dense. Devstral 12.9 → 22.3 tok/s.","REPORT.md"],
   ["2026-10-02","flash-next-iq2","Flash-Next at IQ2_XXS","The 75 GB IQ2_XXS of the 512-expert MoE on llama.cpp: 19.3 tok/s on distinct prompts, against 5.3 for the IQ3_XXS through Ollama.","REPORT.md"],
+  ["2026-10-02","flash-next-full","Flash-Next full test","MMLU-Pro, HumanEval, throughput, a context ladder and 50 Aider Polyglot exercises, paired with the incumbent. 97.6 HumanEval and 68.6 MMLU-Pro quick tie it; 21/50 on editing trails 28/50 (p=0.09). Thinking ran into the 12,288 cap on 3 batches.","REPORT.md"],
+  ["2026-10-02","pi-context","pi context and truncation","Every pi model sized by a full fill (ctx−1024 + 512 generated, ≥0.6 GB free per card) and checked for truncation: pi's compaction reserve raised to cover maxTokens, and router CLI flags moved out of the way of the presets.","REPORT.md"],
+  ["2026-10-03","flash-next-mtp","Flash-Next + MTP head","A PR build with ggml-org's head appended to the GGUF: +11 % (18.6 → 20.7 tok/s) gated at p-min 0.75; ungated drafting is slower than none with experts in RAM.","REPORT.md"],
+  ["2026-10-04","fastest-presets","Fastest presets on :8080","Tensor split on every fast-tier preset and the Qwen3.8 MTP file on the incumbent: 9.3 → 29.6 tok/s at 112k. MTP accepts 62–65 % on general prompts, against 95–99 % on planner edits.","REPORT.md"],
+  ["2026-10-04","flash-next-antiloop","Flash-Next anti-loop preset","Qwen thinking sampling, medium effort and a 6,144-token budget on the 4 MMLU batches that looped: 0 of 8 batches at the cap (3 of 4 before), 15/20 vs 8/20, 46 → 11 min.","REPORT.md"],
+  ["2026-10-04","qwen38-antiloop","Qwen3.8-27B anti-loop preset","The same fix on the dense 27B: law went from no answers to 4/5 at temp 0; the budget, not the lower effort, does the work here.","REPORT.md"],
+  ["2026-10-05","max-context","Max context per pi model","Each :8080 preset filled to ctx−1024 at a raised size: planner-MTP 54k, the incumbent 118k. The Flash-Next 256k probe froze the host and was reverted to 128k.","run.sh"],
+  ["2026-10-05","qwen38-27b-spill","Qwen3.8-27B Q8: context by CPU spill","FFN blocks on CPU buy 64k at 16.5 tok/s (from 32.9 at 40k); 128k needs 24 blocks and runs at 8. q8_0 KV at 80k OOMs at the first prompt.","REPORT.md"],
+  ["2026-10-05","qwen38-q6k-think","Qwen3.8-27B UD-Q6_K at 126k","22 GB instead of 29: a full 128k fill with nothing on CPU, 28 tok/s at 40k and 128k alike (Q8_0: 33 on the same prompts). Production at 126k for the 0.6 GB floor.","REPORT.md"],
+  ["2026-10-05","think-fix-full","Thinking-on with the anti-loop fix","All 70 MMLU-Pro thinking questions, both 3.8s through the :8080 presets, at temp 0 and with preset sampling. UD-Q6_K 88.6 / 87.1, Flash-Next 87.1 / 84.3 (78.6 before): 70/70 answered everywhere, ties with the incumbent.","REPORT.md"],
 ];
 const EARLY = [
   ["2026-09-01","local-llm-benchmark","Ollama throughput (GTX 1660)","12 tags × 12 prompts, 720 requests, with graphs.","graphs/index.html"],

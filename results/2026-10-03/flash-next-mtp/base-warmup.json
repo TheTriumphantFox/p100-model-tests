@@ -1,0 +1,51 @@
+{
+ "label": "base-warmup",
+ "n_predict": 400,
+ "runs": [
+  {
+   "i": 0,
+   "gen_tps": 19.015046334520985,
+   "predicted_n": 400,
+   "prompt_n": 31,
+   "prompt_tps": 27.61026068539355
+  },
+  {
+   "i": 1,
+   "gen_tps": 19.205838112690905,
+   "predicted_n": 400,
+   "prompt_n": 53,
+   "prompt_tps": 27.884830389203834
+  },
+  {
+   "i": 2,
+   "gen_tps": 19.00490235981348,
+   "predicted_n": 400,
+   "prompt_n": 37,
+   "prompt_tps": 26.615679656557027
+  },
+  {
+   "i": 3,
+   "gen_tps": 18.955918462945814,
+   "predicted_n": 400,
+   "prompt_n": 49,
+   "prompt_tps": 28.85253469517297
+  },
+  {
+   "i": 4,
+   "gen_tps": 18.87775319118623,
+   "predicted_n": 319,
+   "prompt_n": 31,
+   "prompt_tps": 27.534849348845224
+  },
+  {
+   "i": 5,
+   "gen_tps": 19.02413075099115,
+   "predicted_n": 400,
+   "prompt_n": 57,
+   "prompt_tps": 29.613758656179584
+  }
+ ],
+ "mean_gen_tps": 19.013931535358093,
+ "min_gen_tps": 18.87775319118623,
+ "max_gen_tps": 19.205838112690905
+}

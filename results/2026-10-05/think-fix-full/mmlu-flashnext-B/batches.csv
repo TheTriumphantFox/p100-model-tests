@@ -1,0 +1,15 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+qwen3.8-flash-next:iq2-prod,biology,1,5,5,5,18.035835200561827,22.26712759620791,22.87199314499958,405,,raw/01-qwen3.8-flash-next_iq2-prod-01-biology.txt
+qwen3.8-flash-next:iq2-prod,business,2,5,5,5,17.597038319591046,23.03351376252447,111.5795632119989,1958,,raw/01-qwen3.8-flash-next_iq2-prod-02-business.txt
+qwen3.8-flash-next:iq2-prod,chemistry,3,4,5,5,17.40177348750362,15.627624952628763,205.48684132799826,3568,,raw/01-qwen3.8-flash-next_iq2-prod-03-chemistry.txt
+qwen3.8-flash-next:iq2-prod,computer science,4,5,5,5,17.50711681805771,22.765689828858928,43.195885613997234,750,,raw/01-qwen3.8-flash-next_iq2-prod-04-computer_science.txt
+qwen3.8-flash-next:iq2-prod,economics,5,4,5,5,17.91306219807402,22.17848132849103,43.92633084699992,781,,raw/01-qwen3.8-flash-next_iq2-prod-05-economics.txt
+qwen3.8-flash-next:iq2-prod,engineering,6,4,5,5,16.98094196571274,15.39237077142714,364.11309865399744,6175,,raw/01-qwen3.8-flash-next_iq2-prod-06-engineering.txt
+qwen3.8-flash-next:iq2-prod,health,7,5,5,5,18.00516301926287,21.061166893951757,58.42859332200169,1045,,raw/01-qwen3.8-flash-next_iq2-prod-07-health.txt
+qwen3.8-flash-next:iq2-prod,history,8,4,5,5,17.72116878249487,91.56404312343264,95.28467900299802,1407,,raw/01-qwen3.8-flash-next_iq2-prod-08-history.txt
+qwen3.8-flash-next:iq2-prod,law,9,2,5,5,17.293234998999115,16.086869093102756,164.84445665900057,2843,,raw/01-qwen3.8-flash-next_iq2-prod-09-law.txt
+qwen3.8-flash-next:iq2-prod,math,10,4,5,5,17.503850614508707,21.28825899295891,97.11732879400006,1693,,raw/01-qwen3.8-flash-next_iq2-prod-10-math.txt
+qwen3.8-flash-next:iq2-prod,other,11,4,5,5,17.892648207668767,22.921585256836362,48.15259103200151,856,,raw/01-qwen3.8-flash-next_iq2-prod-11-other.txt
+qwen3.8-flash-next:iq2-prod,philosophy,12,5,5,5,17.806582722997938,22.66931141966563,49.94206892099828,884,,raw/01-qwen3.8-flash-next_iq2-prod-12-philosophy.txt
+qwen3.8-flash-next:iq2-prod,physics,13,5,5,5,17.59755076792706,22.412730430884743,32.593204523996974,568,,raw/01-qwen3.8-flash-next_iq2-prod-13-physics.txt
+qwen3.8-flash-next:iq2-prod,psychology,14,3,5,5,17.968840024997803,15.122072933757758,66.22793397200076,1182,,raw/01-qwen3.8-flash-next_iq2-prod-14-psychology.txt

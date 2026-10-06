@@ -1,0 +1,21 @@
+0.00.021.686 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.021.914 W srv  llama_server: -----------------
+0.00.021.914 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.021.914 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.021.914 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.021.914 W srv  llama_server: -----------------
+0.00.023.127 I srv    load_model: loading model '/home/hm/models/_mtp-dl/planner/Qwen3.6-35B-A3B-UD-Q6_K.gguf'
+0.19.065.920 I cmn          init: llama threadpool init, n_threads = 6
+0.19.156.824 I common_speculative_init_result: creating MTP draft context against the target model '/home/hm/models/_mtp-dl/planner/Qwen3.6-35B-A3B-UD-Q6_K.gguf'
+0.19.164.512 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 513.06 MiB on device 1: cudaMalloc failed: out of memory
+0.19.164.516 E ggml_gallocr_reserve_n_impl: failed to allocate CUDA1 buffer of size 537985536
+0.19.164.516 E graph_reserve: failed to allocate compute buffers
+0.19.164.519 W sched_reserve: compute buffer allocation failed, retrying without pipeline parallelism
+0.19.165.043 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 136.02 MiB on device 1: cudaMalloc failed: out of memory
+0.19.165.043 E ggml_gallocr_reserve_n_impl: failed to allocate CUDA1 buffer of size 142622848
+0.19.165.044 E graph_reserve: failed to allocate compute buffers
+0.19.166.307 E llama_init_from_model: failed to initialize the context: failed to allocate compute pp buffers
+0.19.166.308 E common_speculative_init_result: failed to create MTP context
+0.19.166.313 E srv    load_model: failed to create MTP context
+0.19.166.317 I srv    operator(): operator(): cleaning up before exit...
+0.19.166.574 E srv  llama_server: exiting due to model loading error

@@ -1,0 +1,13 @@
+MMLU-Pro: 1 model(s), 4 categories, 20 questions/model, 5 per request.
+Planned batches: 4; scored answers: 20.
+Results: /home/hm/Projects/Tests/2026-10-04/flash-next-antiloop/mmlu-A
+
+Model 1/1: qwen3.8-flash-next:iq2-prod
+[#######-----------------------] 1/4 ( 25.0%) qwen3.8-flash-next:iq2-prod / economics                    ETA 3m 46s
+[###############---------------] 2/4 ( 50.0%) qwen3.8-flash-next:iq2-prod / engineering                  ETA 2m 51s
+[######################--------] 3/4 ( 75.0%) qwen3.8-flash-next:iq2-prod / history                      ETA 2m 57s
+[##############################] 4/4 (100.0%) qwen3.8-flash-next:iq2-prod / law                          ETA 0s
+
+Finished 4/4 batches and scored 20 answers.
+HTML report: /home/hm/Projects/Tests/2026-10-04/flash-next-antiloop/mmlu-A/report.html
+Leader: qwen3.8-flash-next:iq2-prod (75.0%)

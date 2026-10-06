@@ -1,0 +1,6 @@
+model: qwen3.8-flash-next:iq2-prod   (expected answers 1:C 2:E)
+thinking-off answers this in ~8 tokens; thinking-on in 80+ and is likelier to
+get Q1 right. The model loads on the first call, so that one is slow.
+
+  port 11504: eval_count=170    REASONED        answers={1: 'C', 2: 'E'} correct=2/2 wall=44.3s
+  port 11505: eval_count=202    REASONED        answers={1: 'C', 2: 'E'} correct=2/2 wall=11.0s

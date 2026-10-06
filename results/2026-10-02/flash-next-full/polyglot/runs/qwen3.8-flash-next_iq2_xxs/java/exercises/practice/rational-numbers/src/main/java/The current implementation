@@ -1,0 +1,3 @@
+double exp(double exponent) {
+    return Math.pow(this.numerator, exponent) / Math.pow(this.denominator, exponent);
+}

@@ -1,0 +1,35 @@
+{
+    "testdir": "/run/runs/qwen3.8-flash-next_iq2_xxs/java/exercises/practice/rational-numbers",
+    "testcase": "rational-numbers",
+    "model": "openai/qwen3.8-flash-next_iq2_xxs",
+    "edit_format": "whole",
+    "tests_outcomes": [
+        false,
+        false
+    ],
+    "cost": 0.0,
+    "duration": 240.28009009361267,
+    "test_timeouts": 0,
+    "commit_hash": "5dc9490",
+    "num_error_outputs": 0,
+    "num_user_asks": 1,
+    "num_exhausted_context_windows": 0,
+    "num_malformed_responses": 0,
+    "syntax_errors": 0,
+    "indentation_errors": 0,
+    "lazy_comments": 0,
+    "reasoning_effort": null,
+    "prompt_tokens": 6768,
+    "completion_tokens": 2705,
+    "thinking_tokens": null,
+    "chat_hashes": [
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "7eca262ae1a7d5fafda5b98b4a9d1eac9544eaf6"
+        ],
+        [
+            "a859b8a0b06153175e7b0eadf6af5b9a6e854795",
+            "2013bc5ff0b577f8fa7482e70452ce5ccb1ac60f"
+        ]
+    ]
+}

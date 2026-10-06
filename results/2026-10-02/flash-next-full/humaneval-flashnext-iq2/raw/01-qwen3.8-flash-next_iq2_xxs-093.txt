@@ -1,0 +1,50 @@
+```python
+def encode(message):
+    """
+    Write a function that takes a message, and encodes in such a 
+    way that it swaps case of all letters, replaces all vowels in 
+    the message with the letter that appears 2 places ahead of that 
+    vowel in the english alphabet. 
+    Assume only letters. 
+    
+    Examples:
+    >>> encode('test')
+    'TGST'
+    >>> encode('This is a message')
+    'tHKS KS C MGSSCGG'
+    """
+    vowels = set('aeiouAEIOU')
+    result = []
+    for char in message:
+        if char.isalpha():
+            # Swap case
+            if char.islower():
+                new_char = char.upper()
+            else:
+                new_char = char.lower()
+            
+            # Check if original char was a vowel
+            if char.lower() in 'aeiou':
+                # Find the letter 2 places ahead in the alphabet
+                # We need to find the position of the vowel in the alphabet
+                # and add 2 to get the new letter
+                # But the example shows: 'a' -> 'c', 'e' -> 'g', 'i' -> 'k', 'o' -> 'q', 'u' -> 'w'
+                # Let's check: a(1) -> c(3), e(5) -> g(7), i(9) -> k(11), o(15) -> q(17), u(21) -> w(23)
+                # So we take the vowel's position, add 2, and get that letter
+                # But we need to handle case: if original was lowercase, the replacement should be... 
+                # Looking at examples: 'test' -> 'TGST'. t->T (swap case), e->G (e is vowel, e+2=g, but output is G which is uppercase), s->S (swap case), t->T (swap case)
+                # Wait, let me re-read: "swaps case of all letters, replaces all vowels in the message with the letter that appears 2 places ahead of that vowel in the english alphabet"
+                # So for each letter: first swap its case, then if it was a vowel, replace with the letter 2 ahead.
+                # But what case should the replacement letter have? Looking at 'test' -> 'TGST': 
+                # t -> T (swapped case), e -> G (e is vowel, e+2=g, but output is G which is uppercase), s -> S (swapped case), t -> T (swapped case)
+                # Hmm, 'e' is lowercase in input, swapped case would be 'E', but output is 'G'. So it seems the replacement letter's case might follow the original case? 
+                # Let's check 'This is a message' -> 'tHKS KS C MGSSCGG'
+                # T -> t (swap case), h -> H (not vowel, swap case), i -> K (i is vowel, i+2=k, output K which is uppercase matching original i's case? No, i is lowercase in "This"? Wait "This" has T uppercase, h lowercase, i lowercase, s lowercase. Output: t H K S. So T->t (swap), h->H (swap), i->K (i is lowercase vowel, replacement K is uppercase? That doesn't match case swap for i which would be I, but we replace with K. Hmm.
+                # Let me re-examine: maybe the replacement letter takes the same case as the original vowel? 
+                # In "This": T is uppercase consonant -> t (lowercase). h is lowercase consonant -> H (uppercase). i is lowercase vowel -> K (uppercase? K is uppercase). s is lowercase consonant -> S (uppercase).
+                # So for vowel i (lowercase), replacement is K (uppercase). That doesn't match "same case". 
+                # Let me check another vowel: 'a' in "a" -> output 'C'. 'a' is lowercase, 'c' is lowercase but output is 'C' uppercase. 
+                # Hmm, maybe the replacement letter is always uppercase? Let's check: 'e' in "test" -> 'G' (uppercase). 'i' in "This" -> 'K' (uppercase). 'a' in "a" -> 'C' (uppercase). 
+                # Yes, it seems the replacement letter is always uppercase.
+                # So algorithm: for each character, if it's a vowel, replace with the uppercase letter that is 2 positions ahead in alphabet. Otherwise, swap case.
+                # Let's verify: 'a' -> 'c' -> '

@@ -1,0 +1,37 @@
+=== warm-base-a  (spec=none draft=)  ready in 13s
+0, 15195 MiB 1, 15108 MiB 
+  prompt 0:  18.16 tok/s  (400 tok)
+  prompt 1:  18.57 tok/s  (400 tok)
+  prompt 2:  18.42 tok/s  (400 tok)
+  prompt 3:  18.87 tok/s  (400 tok)
+  prompt 4:  18.35 tok/s  (175 tok)
+  prompt 5:  18.75 tok/s  (400 tok)
+  MEAN  18.52 tok/s  (min 18.16, max 18.87)
+=== warm-n2-pmin75  (spec=draft-mtp draft=)  ready in 13s
+0, 15197 MiB 1, 14908 MiB 
+  prompt 0:  20.84 tok/s  (400 tok, draft 248/231 accepted)
+  prompt 1:  20.72 tok/s  (400 tok, draft 219/210 accepted)
+  prompt 2:  18.78 tok/s  (400 tok, draft 225/197 accepted)
+  prompt 3:  20.70 tok/s  (400 tok, draft 226/214 accepted)
+  prompt 4:  18.27 tok/s  (372 tok, draft 171/148 accepted)
+  prompt 5:  20.18 tok/s  (400 tok, draft 235/213 accepted)
+  MEAN  19.91 tok/s  (min 18.27, max 20.84)
+=== warm-n3-pmin75  (spec=draft-mtp draft=)  ready in 13s
+0, 15197 MiB 1, 14908 MiB 
+  prompt 0:  23.52 tok/s  (400 tok, draft 283/275 accepted)
+  prompt 1:  20.49 tok/s  (400 tok, draft 264/239 accepted)
+  prompt 2:  20.17 tok/s  (400 tok, draft 256/233 accepted)
+  prompt 3:  20.13 tok/s  (400 tok, draft 262/234 accepted)
+  prompt 4:  18.97 tok/s  (342 tok, draft 180/157 accepted)
+  prompt 5:  20.95 tok/s  (400 tok, draft 260/240 accepted)
+  MEAN  20.70 tok/s  (min 18.97, max 23.52)
+=== warm-base-b  (spec=none draft=)  ready in 13s
+0, 15195 MiB 1, 15108 MiB 
+  prompt 0:  18.57 tok/s  (400 tok)
+  prompt 1:  18.42 tok/s  (400 tok)
+  prompt 2:  18.84 tok/s  (400 tok)
+  prompt 3:  18.73 tok/s  (400 tok)
+  prompt 4:  18.70 tok/s  (175 tok)
+  prompt 5:  18.78 tok/s  (400 tok)
+  MEAN  18.67 tok/s  (min 18.42, max 18.84)
+AB_DONE

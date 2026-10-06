@@ -1,0 +1,34 @@
+[qwen3.8-27b-mtp] ctx-size = 131072, override-tensor = blk\.(4[0-9]|5[0-9]|6[0-3])\.ffn_(up|gate|down)\.weight=CPU
+router args: ctx 131072 | ot blk\.(4[0-9]|5[0-9]|6[0-3])\.ffn_(up|gate|down)\.weight=CPU
+[10-05 15:21:59] A-128k-24L start, RAM avail 56898 MiB
+[10-05 15:26:32] A-128k-24L ABORTED during fill: decode 8.3/7.1/9.5 t/s (MTP acc 0.59/0.47/0.71), prefill 52 t/s CPU-bound (540% CPU), load VRAM 15740/15737 MiB
+[qwen3.8-27b-mtp] ctx-size = 81920, override-tensor = -, cache-type-k = q8_0, cache-type-v = q8_0
+router args: --batch-size 512 --ctx-size 81920 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on --fit off --model /home/hm/models/qwen3.8-27b-unsloth_q8_0.gguf --n-gpu-layers 999 --parallel 1 --split-mode tensor --ubatch-size 512
+[10-05 15:27:14] B-80k-q8kv start, RAM avail 56630 MiB
+[10-05 15:27:36] B-80k-q8kv ctx=81920 rc=1 Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import json;r=json.load(open('last-B-80k-q8kv.json'));print('load_s',r.get('load_s'),'peak',r.get('peak_mib'),'free',r.get('free_mib'),'decode',r.get('decode_mean'),'deep',r.get('deep_decode_tps'),'prefill',r.get('prefill_tps'),'fill_s',r.get('fill_wall_s'),'http',r.get('fill_http'),r.get('error',''))
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/__init__.py", line 298, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/usr/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[10-05 15:27:36] B-80k-q8kv RAM min [15:27:28] min MemAvailable 55157 MiB
+[10-05 15:27:36] B-80k-q8kv DONE
+[10-05 15:37:56] B-80k-q8kv FAILED: CUDA OOM on device 0 at first prompt (ggml_cuda_pool_vmm::alloc in mul_mat_cublas); q8_0 KV not viable at 80k
+[qwen3.8-27b-mtp] ctx-size = 65536, cache-type-k = f16, cache-type-v = f16, override-tensor = blk\.(5[6-9]|6[0-3])\.ffn_(up|gate|down)\.weight=CPU, load-mode = none
+router args: --batch-size 512 --ctx-size 65536 --cache-type-k f16 --cache-type-v f16 --flash-attn on --fit off --load-mode none --model /home/hm/models/qwen3.8-27b-unsloth_q8_0.gguf --n-gpu-layers 999 --parallel 1 --override-tensor blk\.(5[6-9]|6[0-3])\.ffn_(up|gate|down)\.weight=CPU --split-mode tensor --ubatch-size 512
+[10-05 15:38:02] C-64k-8L-nommap start, RAM avail 56822 MiB
+[10-05 15:51:41] C-64k-8L-nommap ctx=65536 rc=0 load_s 15.2 peak [15660, 15657] free [724, 727] decode 16.5 deep 22.2 prefill 94.7 fill_s 704.1 http 200 
+[10-05 15:51:41] C-64k-8L-nommap RAM min [15:51:20] min MemAvailable 50029 MiB
+[10-05 15:51:41] C-64k-8L-nommap DONE

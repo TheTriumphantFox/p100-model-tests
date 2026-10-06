@@ -1,0 +1,46 @@
+=== mtpfile-base  (spec=none draft=)  ready in 13s
+0, 15195 MiB 1, 15108 MiB 
+  prompt 0:  17.76 tok/s  (400 tok)
+  prompt 1:  17.66 tok/s  (400 tok)
+  prompt 2:  17.46 tok/s  (400 tok)
+  prompt 3:  17.57 tok/s  (400 tok)
+  prompt 4:  17.41 tok/s  (175 tok)
+  prompt 5:  18.01 tok/s  (400 tok)
+  MEAN  17.64 tok/s  (min 17.41, max 18.01)
+=== mtpfile-n1  (spec=draft-mtp draft=)  ready in 14s
+0, 15197 MiB 1, 14908 MiB 
+  prompt 0:  17.21 tok/s  (400 tok, draft 199/183 accepted)
+  prompt 1:  16.52 tok/s  (400 tok, draft 199/178 accepted)
+  prompt 2:  16.29 tok/s  (400 tok, draft 199/172 accepted)
+  prompt 3:  15.49 tok/s  (400 tok, draft 199/167 accepted)
+  prompt 4:  15.66 tok/s  (317 tok, draft 158/124 accepted)
+  prompt 5:  14.94 tok/s  (400 tok, draft 199/159 accepted)
+  MEAN  16.02 tok/s  (min 14.94, max 17.21)
+=== mtpfile-n2  (spec=draft-mtp draft=)  ready in 13s
+0, 15197 MiB 1, 14908 MiB 
+  prompt 0:  16.48 tok/s  (400 tok, draft 272/226 accepted)
+  prompt 1:  18.37 tok/s  (400 tok, draft 272/235 accepted)
+  prompt 2:  16.65 tok/s  (400 tok, draft 276/223 accepted)
+  prompt 3:  14.99 tok/s  (400 tok, draft 282/209 accepted)
+  prompt 4:  12.81 tok/s  (314 tok, draft 230/141 accepted)
+  prompt 5:  15.61 tok/s  (400 tok, draft 288/190 accepted)
+  MEAN  15.82 tok/s  (min 12.81, max 18.37)
+=== mtpfile-n3  (spec=draft-mtp draft=)  ready in 13s
+0, 15197 MiB 1, 14908 MiB 
+  prompt 0:  19.54 tok/s  (400 tok, draft 320/264 accepted)
+  prompt 1:  17.26 tok/s  (400 tok, draft 327/246 accepted)
+  prompt 2:  19.68 tok/s  (400 tok, draft 315/266 accepted)
+  prompt 3:  16.77 tok/s  (400 tok, draft 331/241 accepted)
+  prompt 4:  13.71 tok/s  (333 tok, draft 300/169 accepted)
+  prompt 5:  16.93 tok/s  (400 tok, draft 339/241 accepted)
+  MEAN  17.31 tok/s  (min 13.71, max 19.68)
+=== mtpfile-n2-pmin75  (spec=draft-mtp draft=)  ready in 13s
+0, 15197 MiB 1, 14908 MiB 
+  prompt 0:  19.76 tok/s  (400 tok, draft 248/231 accepted)
+  prompt 1:  19.77 tok/s  (400 tok, draft 219/210 accepted)
+  prompt 2:  18.12 tok/s  (400 tok, draft 225/197 accepted)
+  prompt 3:  19.98 tok/s  (400 tok, draft 226/214 accepted)
+  prompt 4:  17.67 tok/s  (372 tok, draft 171/148 accepted)
+  prompt 5:  19.51 tok/s  (400 tok, draft 235/213 accepted)
+  MEAN  19.14 tok/s  (min 17.67, max 19.98)
+AB_DONE

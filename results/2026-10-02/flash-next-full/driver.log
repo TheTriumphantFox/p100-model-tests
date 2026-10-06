@@ -1,0 +1,62 @@
+[10-02 22:40:44] shim :11500 started  (pid 880732)
+[10-02 22:40:45] shim :11501 started --force-think (pid 880774)
+[10-02 22:40:45] ================ flashnext-iq2 RUN START (prod :8080 pid=813937) router extra: none ================
+[10-02 22:40:46] router stopped (was pid none, children: none); GPU 35 MiB after 1x2s
+[10-02 22:40:48] router started from /home/hm/llama-cuda12 ctx=8192 --cache-type-k f16 --cache-type-v f16 (pid 880910)
+[10-02 22:41:12] flashnext-iq2 ctx=8192 kv=f16 -> resident, 30479 MiB on GPU, weights 71709 MiB, 19.59 tok/s (floor 10.0)
+[10-02 22:41:12] flashnext-iq2: preflight -- can this model serve one token?
+[10-02 22:41:15] flashnext-iq2: preflight OK -- {"ok": true, "eval_count": 16, "tok_per_s": 21.24, "prompt_eval_count": 32, "wall_s": 1.9}
+[10-02 22:41:15] flashnext-iq2: MMLU-Pro per-category=5 (batch 5) num_predict=96
+[10-02 22:44:16] flashnext-iq2: MMLU pc=5 np=96 -> 68.57% parsed=70/70 tps=20.9 wall=2.9min
+[10-02 22:44:16] flashnext-iq2: MMLU-Pro per-category=5 (batch 5) num_predict=2048
+[10-02 22:44:35] flashnext-iq2: MMLU pc=5 np=2048 -> 68.57% parsed=70/70 tps=20.5 wall=0.3min
+[10-02 22:44:35] flashnext-iq2: HumanEval 164 tasks
+[10-02 23:27:10] flashnext-iq2: HumanEval -> 97.56% parsed=164/164 tps=20.5 wall=42.5min
+[10-02 23:27:10] flashnext-iq2: throughput
+[10-02 23:31:45] flashnext-iq2: throughput -> speed_brief=21.5 speed_medium=20.9 speed_long=20.7 python_coding=20.8
+[10-02 23:31:45] flashnext-iq2: bench_off DONE (pc=5 what=mmlu96,mmlu2048,humaneval,throughput)
+[10-02 23:31:47] router stopped (was pid 880910, children: 880960); GPU 35 MiB after 1x2s
+[10-02 23:31:49] router started from /home/hm/llama-cuda12 ctx=16384 --cache-type-k f16 --cache-type-v f16 (pid 1008653)
+[10-02 23:32:25] flashnext-iq2 ctx=16384 kv=f16 -> resident, 30265 MiB on GPU, weights 71709 MiB, 19.73 tok/s (floor 10.0)
+[10-02 23:32:25] flashnext-iq2: MMLU-Pro THINKING-ON num_predict=12288 ctx=16384 timeout=2400
+[10-03 00:37:36] flashnext-iq2: MMLU-think@12288 -> 78.57% parsed=59/70 among-answered=93.22% tok=67919 tps=18.8 wall=65.1min (off tok=280, ratio=242.6x)
+[10-03 00:37:36] !!! WARN flashnext-iq2: 3 batch(es) hit the 12288-token cap (economics, history, law). Those score 0/5, so 78.57% is a FLOOR, not a score.
+[10-03 00:37:36] flashnext-iq2: think DONE
+[10-03 00:37:38] router stopped (was pid 1008653, children: 1008809); GPU 35 MiB after 1x2s
+[10-03 00:37:40] router started from /home/hm/llama-cuda12 ctx=32768 --cache-type-k f16 --cache-type-v f16 (pid 1169988)
+[10-03 00:38:07] flashnext-iq2 ctx=32768 kv=f16 -> resident, 30359 MiB on GPU, weights 71709 MiB, 19.62 tok/s (floor 10.0)
+# paired McNemar, incumbent q5_k_p (A) vs flashnext-iq2 (B) -- 2026-10-03 00:38:07
+
+## humaneval-flashnext-iq2
+n = 164 paired questions
+  incumbent-q5kp                                96.34%
+  flashnext-iq2                                 97.56%
+  gap -1.22 points
+  both right 156, both wrong 2, discordant 2/4 (A-only/B-only)
+  exact McNemar p = 0.6875  ->  not resolvable at this sample size
+
+## mmlu-flashnext-iq2-pc5-np96
+n = 70 paired questions
+  incumbent-q5kp                                71.43%
+  flashnext-iq2                                 68.57%
+  gap +2.86 points
+  both right 42, both wrong 14, discordant 8/6 (A-only/B-only)
+  exact McNemar p = 0.7905  ->  not resolvable at this sample size
+
+## mmlu-flashnext-iq2-pc5-np2048
+n = 70 paired questions
+  incumbent-q5kp                                71.43%
+  flashnext-iq2                                 68.57%
+  gap +2.86 points
+  both right 42, both wrong 14, discordant 8/6 (A-only/B-only)
+  exact McNemar p = 0.7905  ->  not resolvable at this sample size
+
+## mmlu-flashnext-iq2-pc5-think12288
+n = 70 paired questions
+  incumbent-q5kp                                87.14%
+  flashnext-iq2                                 78.57%
+  gap +8.57 points
+  both right 54, both wrong 8, discordant 7/1 (A-only/B-only)
+  exact McNemar p = 0.0703  ->  not resolvable at this sample size
+[10-03 00:38:08] ================ flashnext-iq2 RUN DONE -- see pairs-flashnext-iq2.txt, ctx-ladder.jsonl ================
+[10-03 00:38:10] router stopped (was pid 1169988, children: 1170073); GPU 35 MiB after 1x2s

@@ -1,0 +1,16 @@
+0.00.052.073 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.052.310 W srv  llama_server: -----------------
+0.00.052.310 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.052.310 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.052.311 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.052.311 W srv  llama_server: -----------------
+0.00.053.545 I srv    load_model: loading model '/home/hm/models/devstral-patched_q8_0.gguf'
+0.07.715.303 W llama_context: setting new yarn_attn_factor = 1.0000 (mscale == 1.0, mscale_all_dim = 1.0)
+0.07.722.822 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 3570.00 MiB on device 1: cudaMalloc failed: out of memory
+0.07.722.823 E alloc_tensor_range: failed to allocate CUDA1 buffer of size 3743416320
+0.07.732.260 E llama_init_from_model: failed to initialize the context: failed to allocate buffer for kv cache
+0.07.732.264 E cmn  common_init_: failed to create context with model '/home/hm/models/devstral-patched_q8_0.gguf'
+0.07.732.267 E cmn  common_init_: failed to create context with model '/home/hm/models/devstral-patched_q8_0.gguf'
+0.07.732.271 E srv    load_model: failed to create_context with model '/home/hm/models/devstral-patched_q8_0.gguf'
+0.07.732.272 I srv    operator(): operator(): cleaning up before exit...
+0.07.732.515 E srv  llama_server: exiting due to model loading error

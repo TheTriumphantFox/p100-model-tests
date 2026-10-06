@@ -49,6 +49,13 @@ TAGS = {
     # 2026-09-21 CUDA matrix: the ggml-org Qwen3.8-27B Q8_0, the file that has the
     # published dflash/mtp drafters beside it (22.72 tok/s measured) but was never scored.
     "qwen3.8-27b-ggmlorg_q8_0": "qwen3.8-27b-ggmlorg:q8_0",
+    # 2026-10-02: bartowski IQ2_XXS, split GGUF in its own subdir of the models dir; experts on CPU via --fit
+    "qwen3.8-flash-next_iq2_xxs": "qwen3.8-flash-next:iq2_xxs",
+    # 2026-10-04: the same file as served by the :8080 production router (anti-loop preset)
+    "qwen3.8-flash-next-iq2": "qwen3.8-flash-next:iq2-prod",
+    "qwen3.8-27b-mtp": "qwen3.8-27b:mtp-prod",
+    # 2026-10-05: unsloth UD-Q6_K on :8080 (same preset as mtp-prod, 128k, nothing on CPU)
+    "qwen3.8-27b-q6-mtp": "qwen3.8-27b:ud-q6k-prod",
     # 2026-09-30: qwen3.6-27b-abliterated:q8_k_p and qwen3.6-27b-unsloth:q8_0 were scored
     # and deleted 2026-10-01 -- no resolvable gain over the Q5_K_P, and less context; see
     # 2026-09-30/qwen36-q8kp/REPORT.md
@@ -111,6 +118,7 @@ class Shim(BaseHTTPRequestHandler):
     verbose = False
     force_think = False
     omit_effort = False
+    server_sampling = False
     _meta_cache: dict = {}
     _lock = threading.Lock()
 
@@ -228,11 +236,13 @@ class Shim(BaseHTTPRequestHandler):
         }
         if "num_predict" in opts:
             req["max_tokens"] = opts["num_predict"]
-        if "temperature" in opts:
+        # --server-sampling: forward no temperature/top_p, so the router preset's sampling
+        # applies the way it does for pi (which sends none). The harnesses hard-code temp 0.
+        if "temperature" in opts and not Shim.server_sampling:
             req["temperature"] = opts["temperature"]
         if "seed" in opts:
             req["seed"] = opts["seed"]
-        if "top_p" in opts:
+        if "top_p" in opts and not Shim.server_sampling:
             req["top_p"] = opts["top_p"]
         # Ollama's think:false -> Qwen/Jinja template switch + hard reasoning budget.
         # Both are needed: the kwarg drives the template, the budget stops a model
@@ -325,12 +335,15 @@ def main():
     ap.add_argument("--force-think", action="store_true",
                     help="ignore the harness's think:False and enable thinking instead "
                          "(separate thinking-on column only -- never the baseline)")
+    ap.add_argument("--server-sampling", action="store_true",
+                    help="do not forward the caller's temperature/top_p; use the router preset's")
     a = ap.parse_args()
     Shim.router = a.router
     Shim.models_dir = Path(a.models_dir)
     Shim.verbose = a.verbose
     Shim.force_think = a.force_think
     Shim.omit_effort = a.omit_effort
+    Shim.server_sampling = a.server_sampling
     srv = ThreadingHTTPServer((a.host, a.port), Shim)
     mode = "THINKING FORCED ON" if a.force_think else "thinking as requested by caller"
     print(f"shim: ollama API on http://{a.host}:{a.port} -> router {a.router} [{mode}]", flush=True)

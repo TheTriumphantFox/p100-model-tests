@@ -1,0 +1,3 @@
+func ParseOctal(octal string) (int64, error) {
+    // implementation
+}

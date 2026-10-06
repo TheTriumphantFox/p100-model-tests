@@ -1,0 +1,6 @@
+[2026-10-02 22:41:41] === phase 2 armed; deadline 2026-10-03 06:15:00
+[2026-10-03 00:38:12] phase 1 finished; waiting for its router to release the GPU
+[2026-10-03 00:38:14] router started (pid 1171544)
+[2026-10-03 00:38:30] preflight OK: {"model": "qwen3.8-flash-next_iq2_xxs", "ok": true, "wall_s": 16.1, "completion_tokens": 64, "reasoning_chars": 0, "content_chars": 192, "gen_tok_s": 19.75, "prefill_tok_s": 27.72, "finish": "length"}
+[2026-10-03 04:54:02] polyglot rc=0, 50 exercises scored
+[2026-10-03 04:54:03] === phase 2 done

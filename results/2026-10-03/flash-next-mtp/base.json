@@ -1,0 +1,51 @@
+{
+ "label": "base",
+ "n_predict": 400,
+ "runs": [
+  {
+   "i": 0,
+   "gen_tps": 19.73941205641732,
+   "predicted_n": 400,
+   "prompt_n": 31,
+   "prompt_tps": 30.685382770454527
+  },
+  {
+   "i": 1,
+   "gen_tps": 19.504861990147067,
+   "predicted_n": 400,
+   "prompt_n": 53,
+   "prompt_tps": 29.930025858412908
+  },
+  {
+   "i": 2,
+   "gen_tps": 18.838930730620948,
+   "predicted_n": 400,
+   "prompt_n": 37,
+   "prompt_tps": 26.591176472702003
+  },
+  {
+   "i": 3,
+   "gen_tps": 18.61848768230719,
+   "predicted_n": 400,
+   "prompt_n": 49,
+   "prompt_tps": 29.517663309484266
+  },
+  {
+   "i": 4,
+   "gen_tps": 18.844036854906545,
+   "predicted_n": 319,
+   "prompt_n": 31,
+   "prompt_tps": 27.852275126570618
+  },
+  {
+   "i": 5,
+   "gen_tps": 18.73266876021846,
+   "predicted_n": 400,
+   "prompt_n": 57,
+   "prompt_tps": 29.844072574501542
+  }
+ ],
+ "mean_gen_tps": 19.046399679102922,
+ "min_gen_tps": 18.61848768230719,
+ "max_gen_tps": 19.73941205641732
+}

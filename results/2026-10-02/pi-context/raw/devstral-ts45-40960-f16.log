@@ -1,0 +1,21 @@
+0.00.007.247 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.007.462 W srv  llama_server: -----------------
+0.00.007.462 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.007.462 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.007.462 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.007.462 W srv  llama_server: -----------------
+0.00.008.680 I srv    load_model: loading model '/home/hm/models/devstral-patched_q8_0.gguf'
+0.06.006.354 W llama_context: setting new yarn_attn_factor = 1.0000 (mscale == 1.0, mscale_all_dim = 1.0)
+0.06.024.092 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 420.05 MiB on device 1: cudaMalloc failed: out of memory
+0.06.024.095 E ggml_gallocr_reserve_n_impl: failed to allocate CUDA1 buffer of size 440451584
+0.06.024.096 E graph_reserve: failed to allocate compute buffers
+0.06.024.098 W sched_reserve: compute buffer allocation failed, retrying without pipeline parallelism
+0.06.030.836 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 260.01 MiB on device 1: cudaMalloc failed: out of memory
+0.06.030.836 E ggml_gallocr_reserve_n_impl: failed to allocate CUDA1 buffer of size 272642176
+0.06.030.837 E graph_reserve: failed to allocate compute buffers
+0.06.047.477 E llama_init_from_model: failed to initialize the context: failed to allocate compute pp buffers
+0.06.047.481 E cmn  common_init_: failed to create context with model '/home/hm/models/devstral-patched_q8_0.gguf'
+0.06.047.485 E cmn  common_init_: failed to create context with model '/home/hm/models/devstral-patched_q8_0.gguf'
+0.06.047.489 E srv    load_model: failed to create_context with model '/home/hm/models/devstral-patched_q8_0.gguf'
+0.06.047.491 I srv    operator(): operator(): cleaning up before exit...
+0.06.047.772 E srv  llama_server: exiting due to model loading error

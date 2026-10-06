@@ -237,6 +237,14 @@ the 82 GB IQ3_XXS through Ollama. Quant and runtime both changed. Weights in `~/
 
 **From 2026-10-02 on, a test with no stated goal is judged on the best all-around model.**
 
+### 2026-10-02/03 — qwen3.8-flash-next IQ2_XXS, full run
+
+- `2026-10-02/flash-next-full/REPORT.md`; the 09-30 harness (`run.sh`) + Aider Polyglot first 50 (`polyglot/phase2.sh`, `polyglot/compare.py`)
+
+HumanEval 97.56% (shelf best, tied), MMLU-Pro thinking-off 68.6%, thinking-on tied with the incumbent
+55/60 once two token-capped categories are excluded, 21 tok/s decode. Polyglot 21/50 against the incumbent's 28 (p=0.09) and the MoE
+planner's 24 at 3.7x the time per exercise. Not the all-around pick: incumbent ≈ planner MoE > Flash-Next > Qwen3.8-27B.
+
 ## Full-stack test rig
 
 `rig/` runs requests through the whole flow instead of one model on one task:

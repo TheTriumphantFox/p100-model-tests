@@ -1,0 +1,13 @@
+MMLU-Pro: 1 model(s), 4 categories, 20 questions/model, 5 per request.
+Planned batches: 4; scored answers: 20.
+Results: /home/hm/Projects/Tests/2026-10-04/qwen38-antiloop/mmlu-B
+
+Model 1/1: qwen3.8-27b:mtp-prod
+[#######-----------------------] 1/4 ( 25.0%) qwen3.8-27b:mtp-prod / economics                           ETA 1m 54s
+[###############---------------] 2/4 ( 50.0%) qwen3.8-27b:mtp-prod / engineering                         ETA 2m 52s
+[######################--------] 3/4 ( 75.0%) qwen3.8-27b:mtp-prod / history                             ETA 1m 17s
+[##############################] 4/4 (100.0%) qwen3.8-27b:mtp-prod / law                                 ETA 0s
+
+Finished 4/4 batches and scored 20 answers.
+HTML report: /home/hm/Projects/Tests/2026-10-04/qwen38-antiloop/mmlu-B/report.html
+Leader: qwen3.8-27b:mtp-prod (70.0%)

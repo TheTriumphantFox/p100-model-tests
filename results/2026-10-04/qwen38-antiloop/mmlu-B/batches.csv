@@ -1,0 +1,5 @@
+model,category,batch,correct,total,parsed,generation_tps,prompt_tps,wall_seconds,eval_count,error,raw_output_file
+qwen3.8-27b:mtp-prod,economics,1,4,5,5,36.010760143740804,21.14444297608035,38.09139262000099,1344,,raw/01-qwen3.8-27b_mtp-prod-01-economics.txt
+qwen3.8-27b:mtp-prod,engineering,2,4,5,5,40.70715682160373,207.94067097636386,134.41079632297624,5272,,raw/01-qwen3.8-27b_mtp-prod-02-engineering.txt
+qwen3.8-27b:mtp-prod,history,3,4,5,5,33.67844211113969,20.294575767261804,60.98557764600264,2033,,raw/01-qwen3.8-27b_mtp-prod-03-history.txt
+qwen3.8-27b:mtp-prod,law,4,2,5,5,32.12546894015237,20.592974706678817,192.82497607398545,6175,,raw/01-qwen3.8-27b_mtp-prod-04-law.txt

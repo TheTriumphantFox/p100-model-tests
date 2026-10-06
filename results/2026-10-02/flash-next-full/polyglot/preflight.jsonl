@@ -1,0 +1,1 @@
+{"model": "qwen3.8-flash-next_iq2_xxs", "ok": true, "wall_s": 16.1, "completion_tokens": 64, "reasoning_chars": 0, "content_chars": 192, "gen_tok_s": 19.75, "prefill_tok_s": 27.72, "finish": "length"}

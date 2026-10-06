@@ -1,0 +1,104 @@
+version = 1
+
+; Per-model settings for the :8080 router (serve-devstral.sh --models-preset).
+; Values here lose to the router's own command line, so ctx/KV defaults live in
+; [*] and NOT on the command line. Sizes measured 2026-10-02 on 2x P100 16 GB,
+; layer split: Tests/2026-10-02/pi-context/REPORT.md. Each GPU-resident model sets
+; fit = off: --fit keeps a 1 GiB margin per card and would quietly move layers to
+; CPU at these sizes. Keep pi's contextWindow in ~/.pi/agent/models.json equal to
+; ctx-size here.
+
+[*]
+ctx-size = 49152
+split-mode = layer
+cache-type-k = q8_0
+cache-type-v = q8_0
+
+; devstral-cuda removed from the router 2026-10-03 (symlinks moved to ~/llama-models-archive/;
+; weights remain in ollama as devstral-patched). Move the dir back to re-enable it.
+
+; Planner, ~/llama-models/qwen3.6-35b-a3b-planner. f16 KV is 12% faster than q8_0.
+; 80k: peak 15.66/15.01 GB at a full context (layer). 96k loads, but leaves 0.5 GB; 128k OOMs.
+; Tensor split since 2026-10-04: 54 -> 68 tok/s decode, prefill +56% (p100-optimize).
+[qwen3.6-35b-a3b-planner]
+split-mode = tensor
+ctx-size = 81920
+cache-type-k = f16
+cache-type-v = f16
+fit = off
+n-gpu-layers = 999
+
+; The planner's unsloth MTP twin (built-in nextn head). 48k: peak 15.31/15.80 GB full.
+; 64k loads, but leaves 0.4 GB on card 1. Tensor + MTP n-max 3: 111 tok/s (2026-10-02).
+[qwen3.6-35b-a3b-planner-mtp]
+split-mode = tensor
+model = /home/hm/models/_mtp-dl/planner/Qwen3.6-35B-A3B-UD-Q6_K.gguf
+ctx-size = 55296
+cache-type-k = f16
+cache-type-v = f16
+spec-type = draft-mtp
+spec-draft-n-max = 3
+fit = off
+n-gpu-layers = 999
+
+; Abliterated incumbent. Hybrid attention: only 16 of 64 layers keep KV, 64 KiB/token.
+; Since 2026-10-04: tensor split + the borrowed Qwen3.8 MTP head (95% acceptance on
+; planner tasks), 9-11 -> ~40 tok/s. Tensor split balances the cards by itself, so the old
+; layer-split -ts 54,46 is gone. Draft file copied from candidates-r2, SHA 6447a4e9…
+; 128k with MTP filled fine but peaked at 16.12/16.12 GB (0.26 GB free), so 112k.
+[qwen3.6-27b-abliterated]
+model = /home/hm/models/qwen3.6-27b-abliterated_q5_k_m.gguf
+ctx-size = 120832
+cache-type-k = f16
+cache-type-v = f16
+split-mode = tensor
+spec-draft-model = /home/hm/models/mtp-Qwen3.8-27B-Q8_0.gguf
+spec-type = draft-mtp
+spec-draft-n-max = 3
+fit = off
+n-gpu-layers = 999
+
+; Qwen3.8 Flash-Next IQ2_XXS, 75 GB: bigger than VRAM, so --fit (left on) puts experts
+; on CPU. 128k: 17.0 tok/s decode, 131 tok/s prefill on an 8k prompt (64k: 17.5).
+; The full 128k depth was not filled (~17 min of prefill); fit reserves the KV at load.
+; Already at its fastest on this build: tensor split cannot be combined with --fit, and its
+; gated MTP (+11%) needs the PR build ~/llama-cuda12-mtp, which this router does not run.
+[qwen3.8-flash-next-iq2]
+model = /home/hm/models/qwen3.8-flash-next_iq2_xxs/Qwen3.8-Flash-Next-IQ2_XXS/Qwen3.8-Flash-Next-IQ2_XXS-00001-of-00002.gguf
+ctx-size = 131072
+cache-type-k = f16
+cache-type-v = f16
+; Anti-loop, 2026-10-04: Qwen thinking-mode sampling (Unsloth card) plus a thinking cap.
+; Uncapped xhigh thinking looped to 12288 tokens on MMLU history/law/economics (10-02 run).
+; Request-level sampling (e.g. temperature 0 from the harness) still overrides these.
+temp = 1.0
+top-p = 0.95
+top-k = 20
+min-p = 0.0
+reasoning-effort = medium
+reasoning-budget = 6144
+reasoning-budget-message = ... reasoning budget exceeded, need to answer.
+
+; Qwen3.8-27B unsloth Q8_0 (built-in MTP head), copied from ~/Downloads/Models 2026-10-02,
+; SHA-256 a680f44a…b67e348 = HF. Tensor split (needs NCCL_P2P_DISABLE=1, exported by
+; serve-devstral.sh) + MTP n-max 4: 43 tok/s decode, 180 prefill at a full 40k. Peak at
+; full context 15.90/15.90 GB; 48k leaves 0.45 GB at load and 64k OOMs.
+[qwen3.8-27b-mtp]
+model = /home/hm/models/qwen3.8-27b-unsloth_q8_0.gguf
+ctx-size = 40960
+cache-type-k = f16
+cache-type-v = f16
+split-mode = tensor
+spec-type = draft-mtp
+spec-draft-n-max = 4
+fit = off
+n-gpu-layers = 999
+; Anti-loop, 2026-10-04 (same fix as Flash-Next): Qwen thinking-mode sampling + thinking cap.
+; Before: MMLU law looped to the 12288 cap, 0/5 (2026-10-04/qwen38-antiloop leg 0).
+temp = 1.0
+top-p = 0.95
+top-k = 20
+min-p = 0.0
+reasoning-effort = medium
+reasoning-budget = 6144
+reasoning-budget-message = ... reasoning budget exceeded, need to answer.
