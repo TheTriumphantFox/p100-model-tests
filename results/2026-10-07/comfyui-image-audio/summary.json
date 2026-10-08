@@ -1,0 +1,340 @@
+{
+  "generated": "2026-10-08T04:30:53",
+  "common_image_prompts": 80,
+  "units": {
+    "stable-audio-open-1.0": {
+      "kind": "sfx",
+      "n": 100,
+      "failed_attempts": 0,
+      "errors": [],
+      "precision": "fp32",
+      "missing": [],
+      "median_s": 11.27,
+      "first_item_s": 19.56,
+      "stop_reason": "complete",
+      "minutes": 19.02,
+      "audio_s_mean": 10.03,
+      "rtf_median": 1.124,
+      "clap_mean": 0.1037,
+      "silent": 0
+    },
+    "z-image-turbo-q8": {
+      "kind": "image",
+      "n": 56,
+      "failed_attempts": 0,
+      "errors": [],
+      "precision": "fp32",
+      "missing": [],
+      "median_s": 65.23,
+      "first_item_s": 76.3,
+      "stop_reason": null,
+      "minutes": null,
+      "clip_mean": 0.3347,
+      "clip_common": 0.3347,
+      "blank": 0,
+      "images_per_min": 0.92,
+      "clip_by_tag_common": {
+        "color_attr": 0.3788,
+        "colors": 0.3326,
+        "counting": 0.3158,
+        "position": 0.3362,
+        "single_object": 0.3023,
+        "two_object": 0.345
+      }
+    },
+    "stable-audio-3-medium": {
+      "kind": "sfx",
+      "n": 100,
+      "failed_attempts": 0,
+      "errors": [],
+      "precision": "fp32",
+      "missing": [],
+      "median_s": 2.0,
+      "first_item_s": 8.63,
+      "stop_reason": "complete",
+      "minutes": 3.51,
+      "audio_s_mean": 10.03,
+      "rtf_median": 0.2,
+      "clap_mean": 0.1905,
+      "silent": 0
+    },
+    "chatterbox": {
+      "kind": "tts",
+      "n": 40,
+      "failed_attempts": 0,
+      "errors": [],
+      "precision": "fp32",
+      "missing": [],
+      "median_s": 2.0,
+      "first_item_s": 8.55,
+      "stop_reason": "complete",
+      "minutes": 1.56,
+      "audio_s_mean": 3.781,
+      "rtf_median": 0.569,
+      "wer_mean": 0.0,
+      "wer_median": 0.0,
+      "wer_sentences": 0.0,
+      "wer_dialogs": null
+    },
+    "chatterbox-turbo": {
+      "kind": "tts",
+      "n": 40,
+      "failed_attempts": 0,
+      "errors": [],
+      "precision": "fp32",
+      "missing": [],
+      "median_s": 1.5,
+      "first_item_s": 7.54,
+      "stop_reason": "complete",
+      "minutes": 1.24,
+      "audio_s_mean": 4.209,
+      "rtf_median": 0.4,
+      "wer_mean": 0.0054,
+      "wer_median": 0.0,
+      "wer_sentences": 0.0054,
+      "wer_dialogs": null
+    },
+    "flux1-dev-q8": {
+      "kind": "image",
+      "n": 6,
+      "failed_attempts": 0,
+      "errors": [],
+      "precision": "fp32",
+      "missing": [],
+      "median_s": 316.28,
+      "first_item_s": 327.54,
+      "stop_reason": null,
+      "minutes": null,
+      "clip_mean": 0.3223,
+      "clip_common": 0.3223,
+      "blank": 0,
+      "images_per_min": 0.19,
+      "clip_by_tag_common": {
+        "color_attr": 0.3827,
+        "colors": 0.3175,
+        "counting": 0.3111,
+        "position": 0.3053,
+        "single_object": 0.3074,
+        "two_object": 0.3098
+      }
+    },
+    "z-image-turbo-q8-fp16": {
+      "kind": "image",
+      "n": 80,
+      "failed_attempts": 0,
+      "errors": [],
+      "precision": "fp16",
+      "missing": [],
+      "median_s": 68.62,
+      "first_item_s": 77.22,
+      "stop_reason": "reached prompt 80",
+      "minutes": 12.77,
+      "clip_mean": 0.3336,
+      "clip_common": 0.3336,
+      "blank": 0,
+      "images_per_min": 0.87,
+      "clip_by_tag_common": {
+        "color_attr": 0.3704,
+        "colors": 0.3385,
+        "counting": 0.3155,
+        "position": 0.3288,
+        "single_object": 0.3027,
+        "two_object": 0.3473
+      }
+    },
+    "vibevoice-1.5b": {
+      "kind": "tts",
+      "n": 45,
+      "failed_attempts": 3,
+      "errors": [
+        "VibeVoiceTTS: ValueError: No valid voice samples provided. Please connect at least one audio input as a voice sample for the speaker(s)."
+      ],
+      "precision": "fp16",
+      "missing": [],
+      "median_s": 3.78,
+      "first_item_s": 8.93,
+      "stop_reason": "complete",
+      "minutes": 2.12,
+      "audio_s_mean": 5.1918,
+      "rtf_median": 0.858,
+      "wer_mean": 0.0051,
+      "wer_median": 0.0,
+      "wer_sentences": 0.0058,
+      "wer_dialogs": 0.0
+    },
+    "ace-step-1.5-turbo": {
+      "kind": "music",
+      "n": 17,
+      "failed_attempts": 8,
+      "errors": [
+        "TextEncodeAceStepAudio1.5: torch.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)"
+      ],
+      "precision": "fp32 (gpu-only)",
+      "missing": [
+        "music_10",
+        "music_14",
+        "music_15"
+      ],
+      "median_s": 52.26,
+      "first_item_s": 50.68,
+      "stop_reason": "complete",
+      "minutes": 16.9,
+      "audio_s_mean": 60.0,
+      "rtf_median": 0.871,
+      "clap_mean": 0.2652,
+      "silent": 0,
+      "clap_instrumental": 0.2228,
+      "clap_vocal": 0.3258
+    },
+    "flux1-dev-q8-fp16": {
+      "kind": "image",
+      "n": 80,
+      "failed_attempts": 0,
+      "errors": [],
+      "precision": "fp16",
+      "missing": [],
+      "median_s": 228.89,
+      "first_item_s": 239.63,
+      "stop_reason": "reached prompt 80",
+      "minutes": 64.59,
+      "clip_mean": 0.3287,
+      "clip_common": 0.3287,
+      "blank": 0,
+      "images_per_min": 0.26,
+      "clip_by_tag_common": {
+        "color_attr": 0.3558,
+        "colors": 0.3313,
+        "counting": 0.31,
+        "position": 0.3269,
+        "single_object": 0.3089,
+        "two_object": 0.34
+      }
+    },
+    "flux2-klein-4b-fp16": {
+      "kind": "image",
+      "n": 195,
+      "failed_attempts": 0,
+      "errors": [],
+      "precision": "fp16",
+      "missing": [],
+      "median_s": 23.04,
+      "first_item_s": 29.06,
+      "stop_reason": "budget",
+      "minutes": 75.1,
+      "clip_mean": 0.3332,
+      "clip_common": 0.3375,
+      "blank": 0,
+      "images_per_min": 2.6,
+      "clip_by_tag_common": {
+        "color_attr": 0.3709,
+        "colors": 0.3314,
+        "counting": 0.3205,
+        "position": 0.3488,
+        "single_object": 0.3094,
+        "two_object": 0.3456
+      }
+    },
+    "flux1-schnell-q8-fp16": {
+      "kind": "image",
+      "n": 93,
+      "failed_attempts": 0,
+      "errors": [],
+      "precision": "fp16",
+      "missing": [],
+      "median_s": 48.26,
+      "first_item_s": 57.6,
+      "stop_reason": "budget",
+      "minutes": 75.07,
+      "clip_mean": 0.3245,
+      "clip_common": 0.3263,
+      "blank": 0,
+      "images_per_min": 1.24,
+      "clip_by_tag_common": {
+        "color_attr": 0.3554,
+        "colors": 0.3207,
+        "counting": 0.3081,
+        "position": 0.3281,
+        "single_object": 0.3016,
+        "two_object": 0.3442
+      }
+    },
+    "realvisxl-v5-fp16": {
+      "kind": "image",
+      "n": 80,
+      "failed_attempts": 0,
+      "errors": [],
+      "precision": "fp16",
+      "missing": [],
+      "median_s": 48.19,
+      "first_item_s": 52.53,
+      "stop_reason": "reached prompt 80",
+      "minutes": 19.37,
+      "clip_mean": 0.3359,
+      "clip_common": 0.3359,
+      "blank": 0,
+      "images_per_min": 1.25,
+      "clip_by_tag_common": {
+        "color_attr": 0.376,
+        "colors": 0.3403,
+        "counting": 0.316,
+        "position": 0.3367,
+        "single_object": 0.3122,
+        "two_object": 0.3359
+      }
+    },
+    "qwen-image-2512-q4km-lightning4-fp16": {
+      "kind": "image",
+      "n": 86,
+      "failed_attempts": 1,
+      "errors": [
+        "blank image (likely fp16 overflow)"
+      ],
+      "precision": "fp32",
+      "missing": [],
+      "median_s": 76.19,
+      "first_item_s": null,
+      "stop_reason": "budget",
+      "minutes": 110.92,
+      "clip_mean": 0.3303,
+      "clip_common": 0.3307,
+      "blank": 0,
+      "images_per_min": 0.79,
+      "clip_by_tag_common": {
+        "color_attr": 0.3634,
+        "colors": 0.3306,
+        "counting": 0.3037,
+        "position": 0.3388,
+        "single_object": 0.3028,
+        "two_object": 0.346
+      }
+    },
+    "ace-step-1.5-turbo-fp16vae": {
+      "kind": "?",
+      "n": 0,
+      "failed_attempts": 23,
+      "errors": [
+        "fp16 audio VAE: output saturated at full scale (all samples \u00b11)"
+      ],
+      "missing": [],
+      "stop_reason": null
+    }
+  },
+  "fp32_vs_fp16": {
+    "z-image-turbo-q8": {
+      "fp16_unit": "z-image-turbo-q8-fp16",
+      "shared": 56,
+      "fp32_median_s": 65.23,
+      "fp16_median_s": 68.62,
+      "fp32_clip": 0.3347,
+      "fp16_clip": 0.3349
+    },
+    "flux1-dev-q8": {
+      "fp16_unit": "flux1-dev-q8-fp16",
+      "shared": 6,
+      "fp32_median_s": 316.28,
+      "fp16_median_s": 228.38,
+      "fp32_clip": 0.3223,
+      "fp16_clip": 0.3224
+    }
+  }
+}

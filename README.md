@@ -2,7 +2,7 @@
 
 Which local LLM is the best all-around model on two Tesla P100-PCIE-16GB cards (32 GB VRAM,
 llama.cpp CUDA 12.6 sm_60 build)? Accuracy, editing, tool use, speed and tuning, plus the AIOS
-planner tests, September–October 2026. Unless a test says otherwise, it is judged on
+planner tests and one overnight run of ComfyUI image and audio models, September–October 2026. Unless a test says otherwise, it is judged on
 all-around usefulness.
 
 **Browse the results:** https://thetriumphantfox.github.io/p100-model-tests/
@@ -24,6 +24,8 @@ all-around usefulness.
 - **Datasets.** Download them with `scripts/download_benchmarks.py`; sources are in `dataset_manifest.json`.
 - **Most generated images** from the 2 September RealVisXL run (2,953 PNGs, 1.1 GB). Their CLIP
   scores and manifests are kept, and a best/worst sample per category is in `site/gallery/`.
+- **Raw outputs of the 7 October ComfyUI run** (676 PNGs and 342 audio clips, 1.1 GB). Per-item
+  results, scores and downscaled samples are in `results/2026-10-07/comfyui-image-audio/`.
 
 The 1–6 September runs predate the P100s. Their speed figures are not comparable with the later ones.
 
