@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>P100 Model Tests</title>
-<meta name="description" content="Which local LLM is the best all-around model on two Tesla P100 16 GB cards: accuracy, editing, tool use, speed and tuning, September–October 2026.">
+<meta name="description" content="Which local LLM is the best all-around model on two Tesla P100 16 GB cards: accuracy, editing, tool use, speed and tuning, plus ComfyUI image and audio models, September–October 2026.">
 <style>
 :root{
   color-scheme:light;
@@ -62,7 +62,7 @@ section{padding:44px 0;border-top:1px solid var(--line)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
 .verdict{border-left:3px solid var(--s1);background:var(--surface);padding:14px 18px;border-radius:0 10px 10px 0;margin:0 0 22px;max-width:860px}
 .verdict p{margin:0}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:16px}
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
 table{border-collapse:collapse;width:100%;font-size:14px}
 th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
@@ -93,7 +93,7 @@ tr.hl td{background:color-mix(in srgb,var(--s1) 7%,transparent)}
 .ladder td:first-child{text-align:left;white-space:nowrap;padding-left:12px}
 .ok{background:var(--good-bg);color:var(--good)} .vf{background:var(--warn-bg);color:var(--warn)} .wr{background:var(--bad-bg);color:var(--bad)}
 .late{font-weight:700;text-decoration:underline dotted}
-.idx{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.idx{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:12px}
 .idx .card{display:flex;flex-direction:column;gap:6px}
 .idx .d{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
 .idx .t{font-weight:620}
@@ -112,6 +112,8 @@ tr.hl td{background:color-mix(in srgb,var(--s1) 7%,transparent)}
 .note{font-size:13px;color:var(--muted);margin-top:10px}
 footer{padding:36px 0 60px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
 ul.tight{margin:8px 0 0;padding-left:20px} ul.tight li{margin:4px 0}
+.shot{margin:0} .shot img{width:100%;height:auto;display:block;border-radius:8px;background:var(--surface-2)}
+.shot figcaption{font-size:13px;color:var(--text-2);margin-top:8px}
 @media (max-width:640px){ th,td{padding:8px 9px} .cellbar{min-width:90px} .cellbar .track{max-width:50px} }
 tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var(--text-2);text-transform:uppercase;letter-spacing:.05em;padding:7px 12px}
 .verdict ul{margin:6px 0 0;padding-left:20px} .verdict li{margin:3px 0}
@@ -126,6 +128,7 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
   <a href="#speed">Speed</a>
   <a href="#planner">AIOS planner</a>
   <a href="#rig">Full stack</a>
+  <a href="#comfy">Image &amp; audio</a>
   <a href="#models">Models</a>
   <a href="#index">All tests</a>
   <a href="#early">Early runs</a>
@@ -148,7 +151,7 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
 </header>
 
 <section id="standing">
-  <h2>Where things stand (6 Oct)</h2>
+  <h2>Where things stand (8 Oct)</h2>
   <p class="sub">The default question for these tests is now the best all-around model: accuracy, editing, tool use, speed and context together. Only tests that name another goal (like the AIOS planner) are judged differently.</p>
   <div class="verdict">
     <ul>
@@ -158,6 +161,7 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
       <li><b>Production :8080:</b> <code>devstral</code> is the weakest coder on the shelf (4/25 Aider, 84.8 HumanEval). Tensor split would take it from 12.9 to 22.3 tok/s.</li>
       <li><b>Qwen3.8 vs 3.6 (5 Oct):</b> with the anti-loop thinking budget, Flash-Next and the Qwen3.8-27B UD-Q6_K tie the incumbent on thinking-on MMLU-Pro (87.1 / 88.6 vs 87.1, all p ≥ 0.11). On editing the incumbent leads both 3.8s that were run: Flash-Next 21/50 (p=0.09) and the 27B Q8 17/50 (p=0.01). Every Polyglot run so far had thinking off.</li>
       <li><b>Context:</b> the UD-Q6_K runs at 126k with nothing on CPU, at 28 tok/s. The Q8_0 needed 8 layers' FFN on CPU to reach 64k, at 16.5 tok/s. Flash-Next at 256k froze the host (RAM exhausted with <code>--fit</code>), so 128k is its ceiling.</li>
+      <li><b>Image and audio (8 Oct, ComfyUI):</b> <code>FLUX.2 klein 4B</code> for images (23 s at 1024², twice as fast as anything else, top CLIP score), <code>Stable Audio 3 Medium</code> for sound effects (2 s per 10 s clip), Chatterbox or VibeVoice for speech. ComfyUI needs a cu126 PyTorch on these cards. <a href="#comfy">Details</a></li>
       <li><b>Still to measure:</b> accuracy for the MoE and K2 Horizon; Aider Polyglot with thinking on; MTP and tensor split on the full 40-task planner bench; pi's tool-call loops.</li>
     </ul>
   </div>
@@ -304,6 +308,76 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
   <p class="note">Fix check (27 Sep): with reporter <code>from</code>/<code>to</code> typed as any JSON value, the 27B's reports went from 5/13 to 13/13 complete and exact. The new tool-loop-careful persona followed 0/6 injections. Sources: <a data-md="results/2026-09-26/rig/first-stack/REPORT.md">first-stack</a>, <a data-md="results/2026-09-26/rig/fixes-check/REPORT.md">fixes-check</a>, <a data-tree="rig">rig source</a>.</p>
 </section>
 
+<section id="comfy">
+  <h2>Image and audio generation: ComfyUI</h2>
+  <p class="sub">One night (7–8 Oct) of text-to-image and text-to-audio models in ComfyUI 0.35, one server per card. Every model got the same prompts in the same order with fixed seeds. Images are 1024×1024 from GenEval prompts, scored by CLIP; sound effects use AudioCaps captions and music uses 20 prompts, both scored by CLAP; speech is scored by a Whisper round trip.</p>
+  <div class="verdict"><ul>
+    <li><b>Images:</b> <code>FLUX.2 klein 4B</code>. At 23 s an image it is twice as fast as anything else, it has the top CLIP score, and it gets counts and positions right in the grid below. Z-Image Turbo is the runner-up on looks at 69 s. FLUX.1 dev (229 s) is not worth it on Pascal.</li>
+    <li><b>Sound effects:</b> <code>Stable Audio 3 Medium</code>: 2 s for a 10 s clip and CLAP 0.191, against 11 s and 0.104 for Stable Audio Open 1.0.</li>
+    <li><b>Speech:</b> Chatterbox, Chatterbox Turbo and VibeVoice 1.5B all come back through Whisper at under 1 % word error rate, faster than real time. VibeVoice does two-speaker dialogue but needs a reference voice.</li>
+    <li><b>Music:</b> ACE-Step 1.5 turbo only works in fp32 with <code>--gpu-only</code> and a fresh server per song; 3 of 20 vocal songs still ran out of memory.</li>
+  </ul></div>
+
+  <div class="tablewrap"><table>
+    <thead><tr><th>Image model</th><th>Setup</th><th class="num">s / image</th><th class="num">CLIP, 80 shared prompts</th></tr></thead>
+    <tbody>
+      <tr class="hl"><td>FLUX.2 klein 4B</td><td>bf16, 4 steps, fp16 compute</td><td class="num">23.0</td><td class="num">0.338</td></tr>
+      <tr><td>RealVisXL V5 (SDXL)</td><td>25 steps, cfg 6.8, fp16</td><td class="num">48.2</td><td class="num">0.336</td></tr>
+      <tr><td>Z-Image Turbo 6B</td><td>GGUF Q8_0, 8 steps, fp16</td><td class="num">68.6</td><td class="num">0.334</td></tr>
+      <tr><td>Qwen-Image-2512 20B</td><td>GGUF Q4_K_M + Lightning 4-step LoRA, fp32</td><td class="num">76.2</td><td class="num">0.331</td></tr>
+      <tr><td>FLUX.1 dev 12B</td><td>GGUF Q8_0, 20 steps, fp16</td><td class="num">228.9</td><td class="num">0.329</td></tr>
+      <tr><td>FLUX.1 schnell 12B</td><td>GGUF Q8_0, 4 steps, fp16</td><td class="num">48.3</td><td class="num">0.326</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">The CLIP spread is 0.012, too small to rank by; it mostly shows the objects are there. Judge quality from the grid.</p>
+
+  <div class="card" style="margin-top:16px">
+    <figure class="shot">
+      <img src="results/2026-10-07/comfyui-image-audio/samples/grid.jpg" alt="Six image models, one per row, each drawing the same six GenEval prompts with the same seeds" loading="lazy" width="1726" height="1596">
+      <figcaption>Same prompt and seed down each column. On “four bowls”, Z-Image and klein draw four plain bowls, FLUX.1 dev six; on “a tv remote below a cow”, Qwen-Image puts the cow on the TV.</figcaption>
+    </figure>
+  </div>
+
+  <div class="grid2" style="margin-top:16px">
+    <div class="card">
+      <h3 style="margin-top:0">Sound effects and music</h3>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Model</th><th class="num">s / clip</th><th class="num">RTF</th><th class="num">CLAP</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td>Stable Audio 3 Medium <span class="tag">100 × 10 s</span></td><td class="num">2.0</td><td class="num">0.20</td><td class="num">0.191</td></tr>
+          <tr><td>Stable Audio Open 1.0 <span class="tag">100 × 10 s</span></td><td class="num">11.3</td><td class="num">1.12</td><td class="num">0.104</td></tr>
+          <tr><td>ACE-Step 1.5 turbo <span class="tag">17 × 60 s</span></td><td class="num">52.3</td><td class="num">0.87</td><td class="num">0.265</td></tr>
+        </tbody>
+      </table></div>
+      <p class="note">RTF is generation seconds per second of audio. ACE-Step's time includes reloading its 10 GB checkpoint for every song, and its CLAP is against style tags, so it does not compare with the AudioCaps rows.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Speech (40 sentences)</h3>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Model</th><th class="num">s / clip</th><th class="num">RTF</th><th class="num">WER</th></tr></thead>
+        <tbody>
+          <tr><td>Chatterbox</td><td class="num">2.0</td><td class="num">0.57</td><td class="num">0.000</td></tr>
+          <tr><td>Chatterbox Turbo</td><td class="num">1.5</td><td class="num">0.40</td><td class="num">0.005</td></tr>
+          <tr><td>VibeVoice 1.5B <span class="tag">+5 dialogues</span></td><td class="num">3.8</td><td class="num">0.86</td><td class="num">0.006</td></tr>
+        </tbody>
+      </table></div>
+      <p class="note">Word error rate from Whisper large-v3-turbo transcribing the output; VibeVoice's five two-speaker dialogues scored 0.000.</p>
+    </div>
+  </div>
+
+  <h3>What Pascal changes in ComfyUI</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Finding</th><th>Detail</th></tr></thead>
+    <tbody>
+      <tr><td>PyTorch build</td><td>The CUDA 13 wheels dropped sm_60, so ComfyUI needs a cu126 build (2.14.1+cu126 here) in its own venv.</td></tr>
+      <tr><td>fp16 is off by default</td><td>On Linux ComfyUI runs Pascal in fp32 and keeps text encoders on the CPU. With <code>--force-fp16</code>, FLUX.1 dev went from 316 to 228 s an image (−28 %), Z-Image from 65 to 69 s (+5 %), with the same CLIP score; Qwen-Image produced blank images and ran in fp32.</td></tr>
+      <tr><td>ACE-Step 1.5</td><td>Its lyrics / audio-code model must run on CUDA, so it fails with the encoder on the CPU. <code>--force-fp16</code> also makes the audio VAE fp16, which saturates every song. <code>--gpu-only</code> (fp32) works but never offloads, so the server has to restart between songs.</td></tr>
+      <tr><td>VibeVoice node</td><td>Refuses to run without at least one reference voice clip.</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Sources: <a data-md="results/2026-10-07/comfyui-image-audio/REPORT.md">REPORT.md</a>, <a data-tree="results/2026-10-07/comfyui-image-audio">raw data</a>, <a data-md="scripts/overnight_comfy_av.py">runner</a>, <a data-md="scripts/overnight_comfy_score.py">scorer</a>.</p>
+</section>
+
 <section id="models">
   <h2>Models on the shelf</h2>
   <p class="sub">GGUF weights (2–82 GB each) are too big for a Git repo, so this is the inventory: the files, their sizes, and where each one lives. The fast tier sits on NVMe (13 s cold load for 29 GB). The archive sits on an 8 TB HDD (~160 s). Speeds are decode tok/s, layer → tensor split, from the 2 Oct sweep.</p>
@@ -333,7 +407,7 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
 </div>
 
 <footer><div class="wrap">
-  Built 29 September 2026 from <code>~/Projects/Tests</code>, reorganised 2 October around the best all-around model, updated 6 October. The raw data includes model outputs, router logs and per-question results. Dataset content (HumanEval, MMLU-Pro, tau-bench, GenEval, T2I-CompBench, the Exercism exercises in Aider Polyglot) remains under its upstream licences, listed in <a href="dataset_manifest.json">dataset_manifest.json</a>.
+  Built 29 September 2026 from <code>~/Projects/Tests</code>, reorganised 2 October around the best all-around model, updated 8 October with the ComfyUI image and audio run. The raw data includes model outputs, router logs and per-question results. Dataset content (HumanEval, MMLU-Pro, tau-bench, GenEval, T2I-CompBench, the Exercism exercises in Aider Polyglot) remains under its upstream licences, listed in <a href="dataset_manifest.json">dataset_manifest.json</a>.
 </div></footer>
 
 <div id="tip" role="tooltip"></div>
@@ -638,6 +712,7 @@ const IDX = [
   ["2026-10-05","qwen38-27b-spill","Qwen3.8-27B Q8: context by CPU spill","FFN blocks on CPU buy 64k at 16.5 tok/s (from 32.9 at 40k); 128k needs 24 blocks and runs at 8. q8_0 KV at 80k OOMs at the first prompt.","REPORT.md"],
   ["2026-10-05","qwen38-q6k-think","Qwen3.8-27B UD-Q6_K at 126k","22 GB instead of 29: a full 128k fill with nothing on CPU, 28 tok/s at 40k and 128k alike (Q8_0: 33 on the same prompts). Production at 126k for the 0.6 GB floor.","REPORT.md"],
   ["2026-10-05","think-fix-full","Thinking-on with the anti-loop fix","All 70 MMLU-Pro thinking questions, both 3.8s through the :8080 presets, at temp 0 and with preset sampling. UD-Q6_K 88.6 / 87.1, Flash-Next 87.1 / 84.3 (78.6 before): 70/70 answered everywhere, ties with the incumbent.","REPORT.md"],
+  ["2026-10-07","comfyui-image-audio","ComfyUI image and audio overnight","Six image, two sound-effect, one music and three speech models through ComfyUI on a cu126 venv. FLUX.2 klein 4B leads images at 23 s; Stable Audio 3 Medium makes a 10 s clip in 2 s; fp16 helps FLUX.1 dev and breaks Qwen-Image and ACE-Step.","REPORT.md"],
 ];
 const EARLY = [
   ["2026-09-01","local-llm-benchmark","Ollama throughput (GTX 1660)","12 tags × 12 prompts, 720 requests, with graphs.","graphs/index.html"],
@@ -656,7 +731,7 @@ document.getElementById("idxP").innerHTML = IDX.map(card).join("");
 document.getElementById("idxE").innerHTML = EARLY.map(card).join("");
 document.getElementById("idxC").innerHTML = [
   ["rig","Full-stack rig","Controller, flow, roles, personas and scenario generator. Swappable models per config."],
-  ["scripts","Benchmark scripts","Throughput, KV A/B, spec-decoding A/B, the HBM bandwidth kernel, the CUDA 12.6 sm_60 build script, the Ollama→llama.cpp shim, and the Aider Polyglot order + runner. Per-run drivers (sweeps, server probes) live in each result folder."],
+  ["scripts","Benchmark scripts","Throughput, KV A/B, spec-decoding A/B, the HBM bandwidth kernel, the CUDA 12.6 sm_60 build script, the Ollama→llama.cpp shim, the Aider Polyglot order + runner, and the overnight ComfyUI image/audio runner and scorer. Per-run drivers (sweeps, server probes) live in each result folder."],
 ].map(([p, t, s]) => `<div class="card"><div class="t">${t}</div><div class="s">${s}</div><div class="links"><a href="${tree(p)}">${p}/</a></div></div>`).join("");
 
 /* ---------- early accuracy table ---------- */

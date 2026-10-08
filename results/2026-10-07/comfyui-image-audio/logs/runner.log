@@ -1,0 +1,259 @@
+[21:00:01] runner start; gen deadline 2026-10-08T04:50; units: ['z-image-turbo-q8', 'flux2-klein-4b', 'flux1-schnell-q8', 'realvisxl-v5', 'qwen-image-2512-q4km-lightning4', 'stable-audio-open-1.0', 'stable-audio-3-medium', 'ace-step-1.5-turbo', 'chatterbox', 'chatterbox-turbo', 'vibevoice-1.5b', 'flux1-dev-q8']; 0 items already done
+[21:00:14] gpu1: server up on :8191
+[21:00:14] gpu1: START stable-audio-open-1.0 (100 items, budget 50 min, ends 21:50)
+[21:00:14] gpu0: server up on :8190
+[21:00:14] gpu0: START z-image-turbo-q8 (553 items, budget 110 min, ends 22:50)
+[21:05:06] gpu1: stable-audio-open-1.0 25 ok, last 11.3s
+[21:09:48] gpu1: stable-audio-open-1.0 50 ok, last 11.3s
+[21:14:32] gpu1: stable-audio-open-1.0 75 ok, last 11.3s
+[21:19:15] gpu1: stable-audio-open-1.0 100 ok, last 11.3s
+[21:19:15] gpu1: END stable-audio-open-1.0: 100 ok, 0 failed, 19.0 min, reason=complete
+[21:19:18] gpu1: START stable-audio-3-medium (100 items, budget 40 min, ends 21:59)
+[21:20:15] gpu1: stable-audio-3-medium 25 ok, last 2.0s
+[21:21:06] gpu1: stable-audio-3-medium 50 ok, last 2.5s
+[21:21:57] gpu1: stable-audio-3-medium 75 ok, last 2.0s
+[21:22:48] gpu1: stable-audio-3-medium 100 ok, last 2.0s
+[21:22:48] gpu1: END stable-audio-3-medium: 100 ok, 0 failed, 3.5 min, reason=complete
+[21:22:51] gpu1: START ace-step-1.5-turbo (20 items, budget 45 min, ends 22:07)
+[21:22:55] gpu1: ace-step-1.5-turbo D minor FAILED (4s): TextEncodeAceStepAudio1.5: ValueError: Expected a cuda device, but got: cpu
+
+[21:22:56] gpu1: ace-step-1.5-turbo C minor FAILED (1s): TextEncodeAceStepAudio1.5: ValueError: Expected a cuda device, but got: cpu
+
+[21:22:56] gpu1: ace-step-1.5-turbo G major FAILED (1s): TextEncodeAceStepAudio1.5: ValueError: Expected a cuda device, but got: cpu
+
+[21:22:56] gpu1: END ace-step-1.5-turbo: 0 ok, 3 failed, 0.1 min, reason=3 consecutive failures
+[21:22:59] gpu1: START chatterbox (40 items, budget 25 min, ends 21:47)
+[21:24:02] gpu1: chatterbox 25 ok, last 2.0s
+[21:24:33] gpu1: END chatterbox: 40 ok, 0 failed, 1.6 min, reason=complete
+[21:24:36] gpu1: START chatterbox-turbo (40 items, budget 20 min, ends 21:44)
+[21:25:24] gpu1: chatterbox-turbo 25 ok, last 1.5s
+[21:25:51] gpu1: END chatterbox-turbo: 40 ok, 0 failed, 1.2 min, reason=complete
+[21:25:54] gpu1: START vibevoice-1.5b (45 items, budget 45 min, ends 22:10)
+[21:26:00] gpu1: vibevoice-1.5b tts_00 FAILED (6s): VibeVoiceTTS: ValueError: No valid voice samples provided. Please connect at least one audio input as a voice sample for the speaker(s).
+
+[21:26:00] gpu1: vibevoice-1.5b switching to variant {'dtype': 'fp32'}
+[21:26:05] gpu1: vibevoice-1.5b tts_00 FAILED (2s): VibeVoiceTTS: ValueError: No valid voice samples provided. Please connect at least one audio input as a voice sample for the speaker(s).
+
+[21:26:06] gpu1: vibevoice-1.5b tts_01 FAILED (1s): VibeVoiceTTS: ValueError: No valid voice samples provided. Please connect at least one audio input as a voice sample for the speaker(s).
+
+[21:26:06] gpu1: END vibevoice-1.5b: 0 ok, 3 failed, 0.2 min, reason=3 consecutive failures
+[21:26:09] gpu1: START flux1-dev-q8 (553 items, budget 180 min, ends 00:26)
+[21:27:38] gpu0: z-image-turbo-q8 25 ok, last 66.8s
+[21:54:50] gpu0: z-image-turbo-q8 50 ok, last 65.3s
+[22:02:22] runner start; gen deadline 2026-10-08T04:50; units: ['z-image-turbo-q8-fp16', 'flux2-klein-4b-fp16', 'flux1-schnell-q8-fp16', 'realvisxl-v5-fp16', 'qwen-image-2512-q4km-lightning4-fp16', 'stable-audio-open-1.0', 'stable-audio-3-medium', 'chatterbox', 'chatterbox-turbo', 'ace-step-1.5-turbo', 'vibevoice-1.5b', 'flux1-dev-q8-fp16']; 342 items already done
+[22:02:30] gpu0: server up on :8190
+[22:02:30] gpu0: START z-image-turbo-q8-fp16 (553 items, budget 80 min, 0 spent, ends 23:22)
+[22:02:34] gpu1: server up on :8191
+[22:02:34] gpu1: SKIP stable-audio-open-1.0: all items already done
+[22:02:34] gpu1: SKIP stable-audio-3-medium: all items already done
+[22:02:34] gpu1: SKIP chatterbox: all items already done
+[22:02:34] gpu1: SKIP chatterbox-turbo: all items already done
+[22:02:34] gpu1: START ace-step-1.5-turbo (20 items, budget 45 min, 0 spent, ends 22:47)
+[22:11:04] gpu1: END ace-step-1.5-turbo: 20 ok, 0 failed, 8.5 min, reason=complete
+[22:11:07] gpu1: START vibevoice-1.5b (45 items, budget 45 min, 0 spent, ends 22:55)
+[22:12:21] runner start; gen deadline 2026-10-08T04:50; units: ['z-image-turbo-q8-fp16', 'flux2-klein-4b-fp16', 'flux1-schnell-q8-fp16', 'realvisxl-v5-fp16', 'qwen-image-2512-q4km-lightning4-fp16', 'stable-audio-open-1.0', 'stable-audio-3-medium', 'chatterbox', 'chatterbox-turbo', 'ace-step-1.5-turbo', 'vibevoice-1.5b', 'flux1-dev-q8-fp16']; 381 items already done
+[22:12:27] gpu1: server up on :8191
+[22:12:27] gpu1: SKIP stable-audio-open-1.0: all items already done
+[22:12:27] gpu1: SKIP stable-audio-3-medium: all items already done
+[22:12:27] gpu1: SKIP chatterbox: all items already done
+[22:12:27] gpu1: SKIP chatterbox-turbo: all items already done
+[22:12:27] gpu1: server flags ['--force-fp16'] -> ['--gpu-only']
+[22:12:27] gpu0: server up on :8190
+[22:12:27] gpu0: START z-image-turbo-q8-fp16 (553 items, budget 80 min, 9 spent, ends 23:23)
+[22:12:35] gpu1: server up on :8191
+[22:12:35] gpu1: START ace-step-1.5-turbo (20 items, budget 45 min, 9 spent, ends 22:48)
+[22:13:30] gpu1: ace-step-1.5-turbo music_01 FAILED (1s): TextEncodeAceStepAudio1.5: torch.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
+Currently allocated     : 14.47 GiB
+Requested               : 1.66 GiB
+Device limit            : 15.89 GiB
+Free (according to CUDA): 31.19 MiB
+PyTorch limit (set by user-supplied memory fraction)
+                        : 17179869184.00 GiB
+This error means you ran out of memory on your GPU.
+
+TIPS: If the workflow worked before you might have accidentally set the batch_size to a large number.
+[22:13:30] gpu1: ace-step-1.5-turbo music_02 FAILED (1s): TextEncodeAceStepAudio1.5: torch.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
+Currently allocated     : 14.47 GiB
+Requested               : 1.66 GiB
+Device limit            : 15.89 GiB
+Free (according to CUDA): 31.19 MiB
+PyTorch limit (set by user-supplied memory fraction)
+                        : 17179869184.00 GiB
+This error means you ran out of memory on your GPU.
+
+TIPS: If the workflow worked before you might have accidentally set the batch_size to a large number.
+[22:13:31] gpu1: ace-step-1.5-turbo music_03 FAILED (1s): TextEncodeAceStepAudio1.5: torch.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
+Currently allocated     : 14.47 GiB
+Requested               : 1.66 GiB
+Device limit            : 15.89 GiB
+Free (according to CUDA): 31.19 MiB
+PyTorch limit (set by user-supplied memory fraction)
+                        : 17179869184.00 GiB
+This error means you ran out of memory on your GPU.
+
+TIPS: If the workflow worked before you might have accidentally set the batch_size to a large number.
+[22:13:31] gpu1: END ace-step-1.5-turbo: 1 ok, 3 failed, 1.1 min, reason=3 consecutive failures
+[22:13:34] gpu1: server flags ['--gpu-only'] -> ['--force-fp16']
+[22:13:42] gpu1: server up on :8191
+[22:13:42] gpu1: START vibevoice-1.5b (45 items, budget 45 min, 1 spent, ends 22:57)
+[22:14:12] runner start; gen deadline 2026-10-08T04:50; units: ['z-image-turbo-q8-fp16', 'flux2-klein-4b-fp16', 'flux1-schnell-q8-fp16', 'realvisxl-v5-fp16', 'qwen-image-2512-q4km-lightning4-fp16', 'stable-audio-open-1.0', 'stable-audio-3-medium', 'chatterbox', 'chatterbox-turbo', 'ace-step-1.5-turbo', 'vibevoice-1.5b', 'flux1-dev-q8-fp16']; 387 items already done
+[22:14:17] gpu1: server up on :8191
+[22:14:17] gpu1: SKIP stable-audio-open-1.0: all items already done
+[22:14:17] gpu1: SKIP stable-audio-3-medium: all items already done
+[22:14:17] gpu1: SKIP chatterbox: all items already done
+[22:14:17] gpu1: SKIP chatterbox-turbo: all items already done
+[22:14:17] gpu1: server flags ['--force-fp16'] -> ['--gpu-only']
+[22:14:17] gpu0: server up on :8190
+[22:14:17] gpu0: START z-image-turbo-q8-fp16 (553 items, budget 80 min, 11 spent, ends 23:23)
+[22:14:26] gpu1: server up on :8191
+[22:14:26] gpu1: START ace-step-1.5-turbo (20 items, budget 60 min, 10 spent, ends 23:04)
+[22:15:43] gpu1: ace-step-1.5-turbo music_02 FAILED (20s): TextEncodeAceStepAudio1.5: torch.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
+Currently allocated     : 13.81 GiB
+Requested               : 1.66 GiB
+Device limit            : 15.89 GiB
+Free (according to CUDA): 31.19 MiB
+PyTorch limit (set by user-supplied memory fraction)
+                        : 17179869184.00 GiB
+This error means you ran out of memory on your GPU.
+
+TIPS: If the workflow worked before you might have accidentally set the batch_size to a large number.
+[22:15:59] gpu1: ace-step-1.5-turbo music_03 FAILED (14s): TextEncodeAceStepAudio1.5: torch.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
+Currently allocated     : 13.82 GiB
+Requested               : 1.66 GiB
+Device limit            : 15.89 GiB
+Free (according to CUDA): 31.19 MiB
+PyTorch limit (set by user-supplied memory fraction)
+                        : 17179869184.00 GiB
+This error means you ran out of memory on your GPU.
+
+TIPS: If the workflow worked before you might have accidentally set the batch_size to a large number.
+[22:16:20] runner start; gen deadline 2026-10-08T04:50; units: ['z-image-turbo-q8-fp16', 'flux2-klein-4b-fp16', 'flux1-schnell-q8-fp16', 'realvisxl-v5-fp16', 'qwen-image-2512-q4km-lightning4-fp16', 'stable-audio-open-1.0', 'stable-audio-3-medium', 'chatterbox', 'chatterbox-turbo', 'ace-step-1.5-turbo', 'vibevoice-1.5b', 'flux1-dev-q8-fp16']; 389 items already done
+[22:16:25] gpu1: server up on :8191
+[22:16:25] gpu1: SKIP stable-audio-open-1.0: all items already done
+[22:16:25] gpu1: SKIP stable-audio-3-medium: all items already done
+[22:16:25] gpu1: SKIP chatterbox: all items already done
+[22:16:25] gpu1: SKIP chatterbox-turbo: all items already done
+[22:16:25] gpu1: server flags ['--force-fp16'] -> ['--gpu-only']
+[22:16:25] gpu0: server up on :8190
+[22:16:25] gpu0: START z-image-turbo-q8-fp16 (553 items, budget 80 min, 12 spent, ends 23:24)
+[22:16:34] gpu1: server up on :8191
+[22:16:34] gpu1: START ace-step-1.5-turbo (20 items, budget 60 min, 11 spent, ends 23:05)
+[22:17:21] gpu1: restarting server
+[22:17:31] gpu1: server up on :8191
+[22:18:22] gpu1: restarting server
+[22:18:32] gpu1: server up on :8191
+[22:19:20] gpu1: restarting server
+[22:19:31] gpu1: server up on :8191
+[22:20:18] gpu1: restarting server
+[22:20:28] gpu1: server up on :8191
+[22:21:20] gpu1: restarting server
+[22:21:30] gpu1: server up on :8191
+[22:22:18] gpu1: restarting server
+[22:22:28] gpu1: server up on :8191
+[22:23:18] gpu1: restarting server
+[22:23:28] gpu1: server up on :8191
+[22:24:16] gpu1: restarting server
+[22:24:26] gpu1: server up on :8191
+[22:24:48] gpu1: ace-step-1.5-turbo music_10 FAILED (22s): TextEncodeAceStepAudio1.5: torch.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
+Currently allocated     : 13.84 GiB
+Requested               : 1.66 GiB
+Device limit            : 15.89 GiB
+Free (according to CUDA): 3.19 MiB
+PyTorch limit (set by user-supplied memory fraction)
+                        : 17179869184.00 GiB
+This error means you ran out of memory on your GPU.
+
+TIPS: If the workflow worked before you might have accidentally set the batch_size to a large number.
+[22:24:48] gpu1: restarting server
+[22:24:58] gpu1: server up on :8191
+[22:25:52] gpu1: restarting server
+[22:26:02] gpu1: server up on :8191
+[22:26:55] gpu1: restarting server
+[22:27:05] gpu1: server up on :8191
+[22:27:59] gpu1: restarting server
+[22:28:09] gpu1: server up on :8191
+[22:28:31] gpu1: ace-step-1.5-turbo music_14 FAILED (22s): TextEncodeAceStepAudio1.5: torch.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
+Currently allocated     : 13.84 GiB
+Requested               : 1.66 GiB
+Device limit            : 15.89 GiB
+Free (according to CUDA): 3.19 MiB
+PyTorch limit (set by user-supplied memory fraction)
+                        : 17179869184.00 GiB
+This error means you ran out of memory on your GPU.
+
+TIPS: If the workflow worked before you might have accidentally set the batch_size to a large number.
+[22:28:31] gpu1: restarting server
+[22:28:41] gpu1: server up on :8191
+[22:29:03] gpu1: ace-step-1.5-turbo music_15 FAILED (22s): TextEncodeAceStepAudio1.5: torch.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
+Currently allocated     : 13.84 GiB
+Requested               : 1.66 GiB
+Device limit            : 15.89 GiB
+Free (according to CUDA): 3.19 MiB
+PyTorch limit (set by user-supplied memory fraction)
+                        : 17179869184.00 GiB
+This error means you ran out of memory on your GPU.
+
+TIPS: If the workflow worked before you might have accidentally set the batch_size to a large number.
+[22:29:03] gpu1: restarting server
+[22:29:13] gpu1: server up on :8191
+[22:30:08] gpu1: restarting server
+[22:30:18] gpu1: server up on :8191
+[22:31:11] gpu1: restarting server
+[22:31:22] gpu1: server up on :8191
+[22:32:15] gpu1: restarting server
+[22:32:25] gpu1: server up on :8191
+[22:33:18] gpu1: END ace-step-1.5-turbo: 15 ok, 3 failed, 16.9 min, reason=complete
+[22:33:21] gpu1: server flags ['--gpu-only'] -> ['--force-fp16']
+[22:33:30] gpu1: server up on :8191
+[22:33:30] gpu1: START vibevoice-1.5b (45 items, budget 45 min, 2 spent, ends 23:16)
+[22:35:29] gpu1: vibevoice-1.5b 25 ok, last 10.7s
+[22:35:29] gpu1: END vibevoice-1.5b: 25 ok, 0 failed, 2.1 min, reason=complete
+[22:35:32] gpu1: START flux1-dev-q8-fp16 (553 items, budget 240 min, 0 spent, ends 02:35)
+[22:46:09] gpu0: z-image-turbo-q8-fp16 25 ok, last 68.3s
+[23:14:42] gpu0: z-image-turbo-q8-fp16 50 ok, last 68.8s
+[23:25:00] gpu0: END z-image-turbo-q8-fp16: 59 ok, 0 failed, 68.6 min, reason=budget
+[23:25:03] gpu0: START flux2-klein-4b-fp16 (553 items, budget 75 min, 0 spent, ends 00:40)
+[23:34:46] gpu0: flux2-klein-4b-fp16 25 ok, last 23.0s
+[23:44:23] gpu0: flux2-klein-4b-fp16 50 ok, last 23.0s
+[23:53:59] gpu0: flux2-klein-4b-fp16 75 ok, last 23.0s
+[00:03:36] gpu0: flux2-klein-4b-fp16 100 ok, last 23.0s
+[00:11:02] gpu1: flux1-dev-q8-fp16 25 ok, last 229.1s
+[00:13:13] gpu0: flux2-klein-4b-fp16 125 ok, last 23.0s
+[00:22:49] gpu0: flux2-klein-4b-fp16 150 ok, last 23.0s
+[00:32:26] gpu0: flux2-klein-4b-fp16 175 ok, last 23.0s
+[00:40:09] gpu0: END flux2-klein-4b-fp16: 195 ok, 0 failed, 75.1 min, reason=budget
+[00:40:12] gpu0: START flux1-schnell-q8-fp16 (553 items, budget 75 min, 0 spent, ends 01:55)
+[01:00:32] gpu0: flux1-schnell-q8-fp16 25 ok, last 48.6s
+[01:20:39] gpu0: flux1-schnell-q8-fp16 50 ok, last 48.3s
+[01:40:46] gpu0: flux1-schnell-q8-fp16 75 ok, last 48.2s
+[01:46:30] gpu1: flux1-dev-q8-fp16 50 ok, last 229.4s
+[01:55:16] gpu0: END flux1-schnell-q8-fp16: 93 ok, 0 failed, 75.1 min, reason=budget
+[01:55:19] gpu0: START realvisxl-v5-fp16 (553 items, budget 45 min, 0 spent, ends 02:40)
+[02:15:29] gpu0: realvisxl-v5-fp16 25 ok, last 48.2s
+[02:35:35] gpu0: realvisxl-v5-fp16 50 ok, last 48.2s
+[02:36:12] gpu1: END flux1-dev-q8-fp16: 63 ok, 0 failed, 240.7 min, reason=budget
+[02:36:15] gpu1: START qwen-image-2512-q4km-lightning4-fp16 (553 items, budget 110 min, 0 spent, ends 04:26)
+[02:37:29] gpu1: qwen-image-2512-q4km-lightning4-fp16 geneval_0000 FAILED (73s): blank image (likely fp16 overflow)
+[02:37:29] gpu1: qwen-image-2512-q4km-lightning4-fp16 switching to variant {'server_args': []}
+[02:37:32] gpu1: server flags ['--force-fp16'] -> []
+[02:37:43] gpu1: server up on :8191
+[02:40:30] gpu0: END realvisxl-v5-fp16: 56 ok, 0 failed, 45.2 min, reason=budget
+[02:40:33] gpu0: worker finished
+[02:41:04] runner start; gen deadline 2026-10-08T04:20; units: ['z-image-turbo-q8-fp16', 'realvisxl-v5-fp16', 'flux1-dev-q8-fp16']; 897 items already done
+[02:41:09] gpu0: server up on :8190
+[02:41:09] gpu0: START z-image-turbo-q8-fp16 (553 items, budget 80 min, 0 spent, ends 04:01)
+[02:53:55] gpu0: END z-image-turbo-q8-fp16: 11 ok, 0 failed, 12.8 min, reason=reached prompt 80
+[02:53:58] gpu0: START realvisxl-v5-fp16 (553 items, budget 45 min, 0 spent, ends 03:38)
+[03:09:33] gpu1: qwen-image-2512-q4km-lightning4-fp16 25 ok, last 76.2s
+[03:13:20] gpu0: END realvisxl-v5-fp16: 24 ok, 0 failed, 19.4 min, reason=reached prompt 80
+[03:13:23] gpu0: START flux1-dev-q8-fp16 (553 items, budget 240 min, 0 spent, ends 04:20)
+[03:41:29] gpu1: qwen-image-2512-q4km-lightning4-fp16 50 ok, last 76.2s
+[04:13:16] gpu1: qwen-image-2512-q4km-lightning4-fp16 75 ok, last 76.2s
+[04:17:59] gpu0: END flux1-dev-q8-fp16: 17 ok, 0 failed, 64.6 min, reason=reached prompt 80
+[04:18:02] gpu0: worker finished
+[04:18:02] generation finished
+[04:27:10] gpu1: END qwen-image-2512-q4km-lightning4-fp16: 86 ok, 1 failed, 110.9 min, reason=budget
+[04:27:14] gpu1: worker finished
+[04:27:14] generation finished
+[04:27:14] scoring start
+[04:29:25] scoring finished rc=0
