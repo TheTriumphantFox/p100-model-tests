@@ -218,10 +218,19 @@ class BridgeTests(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertIn(b'data: [DONE]', body)
 
+    def raw_status(self, method, path, body=b'{}'):
+        # One write: the bridge may reject and close after the request line, so
+        # http.client's separate body write could hit a closed socket.
+        with socket.socket(socket.AF_UNIX) as c:
+            c.connect(str(self.socket))
+            c.sendall(f'{method} {path} HTTP/1.0\r\nContent-Type: application/json\r\n'
+                      f'Content-Length: {len(body)}\r\n\r\n'.encode() + body)
+            return int(c.recv(4096).split(b' ', 2)[1])
+
     def test_management_and_arbitrary_paths_never_reach_upstream(self):
         for path in ('/models', '/v1/models?secret=1', '/models/fake/unload', '/../../etc/passwd', 'http://example.com/'):
             with self.subTest(path=path):
-                self.assertEqual(self.request('POST', path, {})[0], 403)
+                self.assertEqual(self.raw_status('POST', path), 403)
         self.assertEqual(self.upstream.requests, [])
 
     def test_invalid_chat_and_oversized_budget_are_blocked(self):
