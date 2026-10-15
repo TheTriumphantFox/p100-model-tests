@@ -23,11 +23,20 @@ BENCHMARKS = [
 ]
 
 
-def sandbox_function(path):
+class FakeWhich:
+    """Stands in for shutil so the static policy test runs where bubblewrap isn't installed."""
+    def __init__(self, found):
+        self.found = found
+
+    def which(self, name):
+        return f'/usr/bin/{name}' if self.found else None
+
+
+def sandbox_function(path, which=shutil):
     """Load just the pure sandbox builder, not benchmark imports or entry points."""
     tree = ast.parse(path.read_text())
     node = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == 'sandbox_command')
-    scope = {'Path': Path, 'shutil': shutil, 'sys': sys}
+    scope = {'Path': Path, 'shutil': which, 'sys': sys}
     exec(compile(ast.Module(body=[node], type_ignores=[]), str(path), 'exec'), scope)
     return scope['sandbox_command']
 
@@ -36,9 +45,14 @@ class SandboxTests(unittest.TestCase):
     def test_commands_clear_secrets_and_omit_etc(self):
         for path in BENCHMARKS:
             with self.subTest(path=path.name):
-                cmd = sandbox_function(path)(Path('/tmp/fake-work'))
+                cmd = sandbox_function(path, FakeWhich(True))(Path('/tmp/fake-work'))
                 self.assertIn('--clearenv', cmd)
                 self.assertNotIn('/etc', cmd)
+
+    def test_missing_bubblewrap_refuses_instead_of_running_unsandboxed(self):
+        for path in BENCHMARKS:
+            with self.subTest(path=path.name), self.assertRaises(RuntimeError):
+                sandbox_function(path, FakeWhich(False))(Path('/tmp/fake-work'))
 
     @unittest.skipUnless(shutil.which('bwrap'), 'bubblewrap unavailable')
     def test_real_sandbox_has_no_fake_secret_host_etc_or_host_network(self):
