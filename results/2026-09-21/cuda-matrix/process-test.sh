@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # PROCESS TEST -- thinking-on MMLU-Pro at a context size anyone would actually want to
 # use, over 10 questions. The point is the PROCESS, not the score: 10 questions resolves
 # nothing statistically and no number from this run belongs in the matrix.

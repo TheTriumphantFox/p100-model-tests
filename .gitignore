@@ -1,2 +1,36 @@
 __pycache__/
 *.pyc
+
+# Credentials and machine-private files must never be exported with results.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.kdbx
+id_rsa*
+id_ed25519*
+**/.ssh/
+**/.aws/
+**/.config/rclone/
+rclone.conf
+auth.json
+credentials.json
+credentials*.json
+client_secret*.json
+cookies*.json
+cookies*.txt
+*.sqlite
+*.sqlite3
+.netrc
+.pypirc
+.npmrc
+
+# Transient build caches and local audit reports; curated benchmark logs remain tracked.
+.gradle/
+node_modules/
+.venv/
+gitleaks-report*.json

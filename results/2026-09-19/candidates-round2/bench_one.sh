@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Score one model through the shim: MMLU-Pro at the 96-token baseline, escalated to
 # 2048 only if the answer parser came up short (the gpt-oss failure mode documented in
 # ../candidates/REPORT.md), then HumanEval 164-task pass@1.

@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # serve_bench.sh <tag> <model.gguf> "<task ids>" [extra llama-server args...]
 # Starts a single-model llama-server on :8090, runs the given planner-bench tasks
 # (pinned checks, thinking off, temp 0 -- same as drive_pinned.sh), then stops it.

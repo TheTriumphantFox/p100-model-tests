@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Phase 2 of the Flash-Next full run: Aider Polyglot, first 50 exercises in the fixed
 # 2026-10-01 order (comparable with the top-3 table there), whole edit format, thinking off,
 # 2 tries, :8081 bench router at ctx 16384 f16 exactly as aider-polyglot-10h/drive.sh ran it,

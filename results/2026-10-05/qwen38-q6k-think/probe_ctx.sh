@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Full-context probe of the Q6_K preset through :8080 (check.py: 3 decode prompts + fill to ctx-1024).
 cd "$(dirname "$0")"
 M=qwen3.8-27b-q6-mtp

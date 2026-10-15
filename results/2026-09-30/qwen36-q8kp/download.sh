@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Fetch HauhauCS Qwen3.6-27B-Uncensored-Aggressive Q8_K_P onto the NVMe and verify it.
 #
 # Pinned to revision f2db94d0 (2026-04-24, "Upgraded coherence") -- the v2 upload.

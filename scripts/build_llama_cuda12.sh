@@ -4,23 +4,32 @@
 # CUDA 12 toolkit and a gcc nvcc accepts. No GPU needed to compile.
 set -euo pipefail
 
-OUT=${OUT:-/home/hm/llama-cuda12}
-# REPO/REF let one script build an out-of-tree architecture branch (e.g. an open
-# PR adding a model arch) into its own OUT without touching the production build.
+# Defaults pin the locally validated Pascal build and its CUDA image.
+# Override only with another reviewed full commit and registry digest, never a branch/tag.
 REPO=${REPO:-https://github.com/ggml-org/llama.cpp}
-REF=${REF:-}
-IMG=docker.io/nvidia/cuda:12.6.3-devel-ubuntu24.04
+LLAMA_COMMIT=${LLAMA_COMMIT:-50631b3d2c569ad8e5c112090cd28570b1268ee0}
+IMG=${CUDA_IMAGE:-docker.io/nvidia/cuda@sha256:392c0df7b577ecae17a17f6ba7f2009c217bb4422f8431c053ae9af61a8c148a}
+[[ "$REPO" == https://github.com/* && "$REPO" != *'@'* && "$REPO" != *'?'* && "$REPO" != *'#'* ]] || { echo 'REPO must be a credential-free GitHub HTTPS URL' >&2; exit 2; }
+[[ "$LLAMA_COMMIT" =~ ^[0-9a-f]{40}$ && "$IMG" =~ ^docker.io/nvidia/cuda@sha256:[0-9a-f]{64}$ ]] || { echo 'Immutable source and image pins required' >&2; exit 2; }
+[[ -z "${REF:-}" ]] || { echo 'REF is no longer supported; use a reviewed LLAMA_COMMIT' >&2; exit 2; }
+OUT=${OUT:-$HOME/Projects/Tests/tools/llama-cuda12-$LLAMA_COMMIT}
 mkdir -p "$OUT"
+[[ -z "$(find "$OUT" -mindepth 1 -maxdepth 1 -print -quit)" ]] || { echo 'OUT must be a new empty build directory; existing builds are never overwritten' >&2; exit 2; }
 
-podman run --rm -v "$OUT":/out:Z -e REPO="$REPO" -e REF="$REF" "$IMG" bash -euxc '
+podman run --rm --http-proxy=false --security-opt=no-new-privileges -v "$OUT":/out:Z -e REPO="$REPO" -e LLAMA_COMMIT="$LLAMA_COMMIT" "$IMG" bash -euxc '
   export DEBIAN_FRONTEND=noninteractive
   apt-get update -qq
   apt-get install -y -qq git cmake ninja-build build-essential
 
-  if [ -n "$REF" ]; then git clone --depth 1 -b "$REF" "$REPO" /src
-  else git clone --depth 1 "$REPO" /src; fi
+  git init /src
+  git -C /src remote add origin "$REPO"
+  git -C /src fetch --depth 1 origin "$LLAMA_COMMIT"
+  git -C /src checkout --detach FETCH_HEAD
+  test "$(git -C /src rev-parse HEAD)" = "$LLAMA_COMMIT"
   git -C /src rev-parse HEAD > /out/LLAMA_COMMIT
-  echo "$REPO ${REF:-default}" > /out/LLAMA_SOURCE
+  echo "$REPO $LLAMA_COMMIT" > /out/LLAMA_SOURCE
+  # Apt repositories still move: preserve the installed package manifest for provenance.
+  dpkg-query -W > /out/BUILD_PACKAGES
 
   # libcuda.so.1 is the DRIVER lib, absent without --gpus. Link against the
   # toolkit stub; the host supplies the real one at runtime.

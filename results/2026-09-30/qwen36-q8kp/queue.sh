@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Run every candidate in turn against the incumbent. Detach it:
 #   nohup ./queue.sh > queue.out 2>&1 &
 # Order: the Unsloth Q8_0 first -- a plain Q8_0 is known to fit and run here (the Qwen3.8

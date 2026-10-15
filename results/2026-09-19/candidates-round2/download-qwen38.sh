@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Qwen3.8-27B from ggml-org's own repo: Q8_0 (fast kernel path on Pascal), Q4_K_M from the
 # same conversion, and the two matched draft modules - MTP and DFlash. A drafter published
 # with the model has the model's vocabulary by construction, which is what made

@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Build llama.cpp against CUDA 12.6 with sm_60 (Pascal / Tesla P100).
 # Host has CUDA 13.x, which dropped Pascal; the container supplies both a
 # CUDA 12 toolkit and a gcc nvcc accepts. No GPU needed to compile.

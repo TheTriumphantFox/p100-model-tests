@@ -152,11 +152,12 @@ def sandbox_command(work: Path) -> list[str]:
     bwrap = shutil.which("bwrap")
     if not bwrap:
         raise RuntimeError("bubblewrap (bwrap) is required")
-    command = [bwrap, "--die-with-parent", "--new-session", "--unshare-all"]
-    for root in ("/usr", "/usr/local", "/bin", "/lib", "/lib64", "/etc"):
+    command = [bwrap, "--die-with-parent", "--new-session", "--unshare-all", "--clearenv"]
+    # Do not expose host /etc or inherit secrets from the launching shell.
+    for root in ("/usr", "/bin", "/lib", "/lib64"):
         if Path(root).exists():
             command += ["--ro-bind", root, root]
-    command += ["--proc", "/proc", "--dev", "/dev", "--tmpfs", "/tmp", "--dir", "/benchmark", "--bind", str(work), "/benchmark", "--chdir", "/benchmark", "--setenv", "HOME", "/tmp", "--setenv", "PATH", "/usr/local/bin:/usr/bin:/bin", "--setenv", "PYTHONDONTWRITEBYTECODE", "1", "/usr/bin/python3", "-B", "runner.py"]
+    command += ["--proc", "/proc", "--dev", "/dev", "--tmpfs", "/tmp", "--dir", "/benchmark", "--bind", str(work), "/benchmark", "--chdir", "/benchmark", "--setenv", "HOME", "/tmp", "--setenv", "PATH", "/usr/local/bin:/usr/bin:/bin", "--setenv", "PYTHONDONTWRITEBYTECODE", "1", "--setenv", "LANG", "C.UTF-8", "/usr/bin/python3", "-B", "runner.py"]
     return command
 
 
@@ -193,7 +194,7 @@ def check_solution(source: str, task: dict[str, Any], work_root: Path, timeout: 
             f"print({MARKER!r} + json.dumps(result))\n"
         )
         (work / "runner.py").write_text(runner, encoding="utf-8")
-        process = subprocess.Popen(sandbox_command(work), stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, errors="replace", start_new_session=True)
+        process = subprocess.Popen(sandbox_command(work), stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, errors="replace", start_new_session=True, env={"PATH": "/usr/bin:/bin"})
         try:
             stdout, stderr = process.communicate(timeout=timeout)
         except subprocess.TimeoutExpired:

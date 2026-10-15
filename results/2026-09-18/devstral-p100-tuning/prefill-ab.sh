@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 set -uo pipefail
 SP=/tmp/claude-1000/-home-hm/7fab0db3-e628-42a7-832f-2c8826781c04/scratchpad
 BLOB=$(cat "$SP/qwen_blob.txt"); MODEL=qwen3.6-27b-abliterated:q5_k_m; CTX=32768

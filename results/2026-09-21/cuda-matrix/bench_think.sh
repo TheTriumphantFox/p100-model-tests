@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # MMLU-Pro thinking-ON, through the --force-think shim on :11501.
 # Settings match candidates-round2/bench_think.sh exactly (per_category 5, seed 42,
 # ctx 16384, num_predict 12288, api_timeout 2400) so every number produced here is

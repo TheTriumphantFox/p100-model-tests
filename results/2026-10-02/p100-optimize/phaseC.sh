@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # MTP on every model that has a head (built-in nextn layer), plus the Qwen3.8 MTP file
 # on the Qwen3.6-27B incumbent as a long shot. Tensor split, planner tasks.
 cd "$(dirname "$0")"

@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Pinned-checks pass: the same 40 tasks, with the check sequence fixed in the grammar
 # (bench.response_schema(pin_checks=True)) -- the proposed spec variant. Everything else
 # is identical to drive.sh: prompt, router config, sampling, no token or time cap.

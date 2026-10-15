@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # 2026-10-05 21:00: MMLU-Pro thinking-on, full 70 questions (seed 42, per-category 5, np 12288,
 # ctx 16384, timeout 2400 -- the 10-02 settings), for both models WITH the anti-loop preset
 # (temp 1.0/top-p 0.95/top-k 20, reasoning-effort medium, reasoning-budget 6144), served by

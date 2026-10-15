@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Two of the four candidates declare architectures that are not upstream yet:
 #   xing4_0 -> open PR ggml-org/llama.cpp#29141 (fairydreaming:xing4_0-port)
 #   g9v3    -> linuxid10t/llama.cpp:feature/g9v3-support

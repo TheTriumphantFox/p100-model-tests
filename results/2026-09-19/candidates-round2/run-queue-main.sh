@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Everything that runs on the PRODUCTION ~/llama-cuda12 build (router :8081 already up):
 # the two candidates whose architectures are already upstream, plus a reproducibility
 # re-run of the incumbent. xing4_0 and g9v3 need their own fork builds - separate queue.

@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # tau-bench retail, 115 tasks, qwen3.8-27b-unsloth_q8_0 (stock Qwen3.8-27B, Q8_0).
 #
 # Pulled out of the 2026-09-22 overnight run to be scheduled on its own. Writes

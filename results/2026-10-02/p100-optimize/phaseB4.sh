@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # MTP draft depth and DFlash, with footprints that fit 2x16 GB.
 cd "$(dirname "$0")"
 M8=/var/lib/ollama/candidates-r2/Qwen3.8-27B-Q8_0.gguf

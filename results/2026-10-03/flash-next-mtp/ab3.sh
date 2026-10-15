@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Warm-cache rerun, interleaved to expose drift: base, n2/p-min .75, n3, base.
 cd "$(dirname "$0")"
 export ROOT=$HOME/llama-cuda12-mtp SPEC_AB_OUT=$PWD NPRED=400

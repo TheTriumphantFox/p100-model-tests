@@ -7,6 +7,14 @@ all-around usefulness.
 
 **Browse the results:** https://thetriumphantfox.github.io/p100-model-tests/
 
+## Safe use and publication
+
+See [SECURITY.md](SECURITY.md) before running benchmark code or publishing new results.
+Python sandboxes clear inherited secrets; Aider uses network-disabled rootless
+containers and a restricted inference bridge. Archived drivers are disabled by
+default. Publication checks, CSP refresh instructions, and security tests are
+documented there. Historical scores and raw outputs are unchanged.
+
 ## Layout
 
 | Path | What |

@@ -1,0 +1,9 @@
+title = "P100 publication secret scanning"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Deliberately fake local inference placeholder; never a real credential"
+regexTarget = "secret"
+regexes = ['''^sk-local$''']

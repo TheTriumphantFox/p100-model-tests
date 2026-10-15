@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-Qnw3RN2/UFmQ8ok58PagN5u2BahrrwCBVSbUN2xJT9c='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>P100 Model Tests</title>
@@ -434,7 +436,8 @@ const tip = document.getElementById("tip");
 document.addEventListener("mousemove", e => {
   const el = e.target.closest("[data-tip]");
   if (!el) { tip.style.opacity = 0; return; }
-  tip.innerHTML = el.dataset.tip;
+  // Historical tooltip strings contain only formatting. Render them as text, never HTML.
+  tip.textContent = el.dataset.tip.replace(/<br\s*\/?\s*>/gi, " · ").replace(/<\/?b>/gi, "");
   const x = Math.min(e.clientX + 14, innerWidth - tip.offsetWidth - 8);
   tip.style.left = x + "px"; tip.style.top = (e.clientY + 14) + "px"; tip.style.opacity = 1;
 });
@@ -747,13 +750,27 @@ document.getElementById("idxC").innerHTML = [
 })();
 
 /* ---------- gallery ---------- */
-fetch("site/gallery/gallery.json").then(r => r.json()).then(G => {
+const validGalleryItem = x => x && ["geneval", "t2i_compbench"].includes(x.dataset)
+  && ["best", "worst"].includes(x.tag) && typeof x.file === "string"
+  && /^gallery\/[A-Za-z0-9_-]+\.(?:jpg|jpeg|png|webp)$/.test(x.file)
+  && typeof x.prompt === "string" && typeof x.test === "string" && Number.isFinite(x.clip);
+fetch("site/gallery/gallery.json").then(r => { if (!r.ok) throw new Error("Gallery unavailable"); return r.json(); }).then(data => {
+  if (!Array.isArray(data)) throw new Error("Invalid gallery");
+  const G = data.filter(validGalleryItem);
   const g = document.getElementById("gallery"), f = document.getElementById("gfilt");
   let cur = "all";
   const render = () => {
     f.innerHTML = [["all","All"],["geneval","GenEval"],["t2i_compbench","T2I-CompBench"]].map(([k, v]) => `<button type="button" data-k="${k}" aria-pressed="${k === cur}">${v}</button>`).join("");
     f.querySelectorAll("button").forEach(b => b.onclick = () => { cur = b.dataset.k; render(); });
-    g.innerHTML = G.filter(x => cur === "all" || x.dataset === cur).map(x => `<figure><img loading="lazy" src="site/${x.file}" alt="${esc(x.prompt)}"><figcaption><span class="pill ${x.tag}">${x.tag}</span> <b>${esc(x.test.replace(/_/g, " "))}</b> · CLIP ${x.clip.toFixed(3)}<br>${esc(x.prompt)}</figcaption></figure>`).join("");
+    g.replaceChildren(...G.filter(x => cur === "all" || x.dataset === cur).map(x => {
+      const figure = document.createElement("figure"), img = document.createElement("img");
+      img.loading = "lazy"; img.src = `site/${x.file}`; img.alt = x.prompt;
+      const caption = document.createElement("figcaption"), pill = document.createElement("span"), label = document.createElement("b");
+      pill.className = `pill ${x.tag}`; pill.textContent = x.tag;
+      label.textContent = x.test.replace(/_/g, " ");
+      caption.append(pill, " ", label, ` · CLIP ${x.clip.toFixed(3)}`, document.createElement("br"), x.prompt);
+      figure.append(img, caption); return figure;
+    }));
   };
   render();
 }).catch(() => { document.getElementById("gallery").innerHTML = '<p class="note">Gallery data could not be loaded.</p>'; });

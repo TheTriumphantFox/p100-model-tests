@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """set_ctx.py SECTION CTX -- set ctx-size inside one [SECTION] of ~/llama-cuda12/models.ini."""
-import re, sys
+import os, re, sys
 from pathlib import Path
-p = Path.home() / "llama-cuda12/models.ini"
+if os.environ.get("P100_ALLOW_ARCHIVED_DRIVER") != "1" or not os.environ.get("P100_PRESET_FILE"):
+    sys.exit("Refusing archived preset edit: explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 and P100_PRESET_FILE to a disposable preset copy. See SECURITY.md.")
+p = Path(os.environ["P100_PRESET_FILE"]).resolve()
 sec, ctx = sys.argv[1], sys.argv[2]
 out, cur, done = [], None, False
 for line in p.read_text().splitlines(keepends=True):

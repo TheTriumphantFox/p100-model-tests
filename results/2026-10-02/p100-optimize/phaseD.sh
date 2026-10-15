@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # The two unsloth MTP GGUFs downloaded 2026-10-02: the planner's twin and the stock Qwen3.6-27B.
 cd "$(dirname "$0")"
 until grep -q PHASE_DONE serve/phaseC.txt; do sleep 10; done

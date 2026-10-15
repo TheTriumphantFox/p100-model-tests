@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Raise each pi model's ctx to the largest value that fills to ctx-1024 and keeps >=600 MiB
 # free per card (the rule from the devstral warmup OOM). Reverts on failure.
 cd "$(dirname "$0")"

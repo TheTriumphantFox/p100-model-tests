@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Q8_K_P vs the incumbent Q5_K_P: same HauhauCS Aggressive abliteration, two quant levels.
 # Every leg uses the exact settings of the incumbent's 2026-09-19 baselines (per-category 5,
 # seed 42, router ctx 8192 thinking-off / 16384 thinking-on, num_predict 12288, timeout

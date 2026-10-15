@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # 2026-10-02: qwen3.8-flash-next IQ2_XXS on the 2026-09-30 harness (copied from qwen36-q8kp),
 # paired against the incumbent q5_k_p. Original header follows.
 # Q8_K_P vs the incumbent Q5_K_P: same HauhauCS Aggressive abliteration, two quant levels.

@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Same as bench_one.sh but runs MMLU-Pro at BOTH token budgets unconditionally.
 # Why: every model in round 2 is a reasoning model. At the 96-token baseline they parse
 # fine (unlike gpt-oss) but answer with no chain of thought, so 96 measures a different

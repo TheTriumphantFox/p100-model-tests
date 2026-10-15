@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Rerun the 4 MMLU-Pro thinking-on batches that looped/capped on 2026-10-02
 # (economics, engineering, history, law; seed 42, per-category 5, np 12288, ctx 16384)
 # Qwen3.8-27B (:8080 preset qwen3.8-27b-mtp). Batches that capped on 09-19: engineering, law.

@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # QUEUE 1 -- complete the matrix rows for the four models that have no CUDA numbers in it,
 # at the EXISTING settings (--per-category 5, seed 42), not the extended 280-question ones.
 # Every cell produced here is therefore pairable via mcnemar.py against the round-2 records

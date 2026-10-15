@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Round 2, part 3: the shelf's Qwen3.8-27B, scored on the CUDA build for the first time.
 # It has never been measured on anything but Vulkan, and Artificial Analysis ranks it the
 # top small open model - so "does a Qwen3.8 clear 10 tok/s here" deserves a measurement

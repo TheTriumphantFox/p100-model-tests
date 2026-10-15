@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # First full rig run, scheduled for 2026-09-26 21:00 (systemd user timer rig-first-stack).
 # Part 1: five qwen3.6-35b-a3b configs on flows + bench40. Part 2: the dense 27B in all three
 # roles, flows only (it is ~5x slower). Both write to this folder; drive.sh stops the :8080

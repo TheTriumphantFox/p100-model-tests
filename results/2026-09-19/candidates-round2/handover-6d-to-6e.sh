@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Wait for run-queue-6d's PHASE B to finish, then hand the rig to run-queue-6e, which
 # inserts the two thinking-on shelf baselines BEFORE Phase A. 6d would otherwise roll
 # straight into Phase A, so this kills it at the boundary. Written as a FILE, launched

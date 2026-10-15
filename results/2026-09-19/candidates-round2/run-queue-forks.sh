@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# SECURITY: historical driver; may stop services, kill processes, or edit live presets.
+if [ "${P100_ALLOW_ARCHIVED_DRIVER:-}" != "1" ]; then
+  printf '%s\n' 'Refusing archived driver. Review SECURITY.md; explicitly set P100_ALLOW_ARCHIVED_DRIVER=1 only in a disposable test environment.' >&2
+  exit 2
+fi
 # Round 2, part 2. Waits for the production-build queue, fills in the MMLU-Pro 2048
 # passes it skipped, then swaps the router binary for each out-of-tree architecture.
 # Router pid is found via the listening socket - `pkill -f llama-server` would match

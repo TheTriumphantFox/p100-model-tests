@@ -243,11 +243,10 @@ def sandbox_command(work_dir: Path) -> list[str]:
     if not bwrap:
         raise RuntimeError("bubblewrap (bwrap) is required for the default sandbox")
 
-    command = [bwrap, "--die-with-parent", "--new-session", "--unshare-all"]
-    # Python and its standard library are under /usr on this machine.  Keep
-    # common runtime directories read-only and expose only the work directory
-    # as writable.  Network access is disabled by --unshare-all.
-    for root in ("/usr", "/usr/local", "/bin", "/lib", "/lib64", "/etc"):
+    command = [bwrap, "--die-with-parent", "--new-session", "--unshare-all", "--clearenv"]
+    # Read-only is not confidential: omit host /etc and clear inherited secrets.
+    # Only runtime directories and the disposable work directory are exposed.
+    for root in ("/usr", "/bin", "/lib", "/lib64"):
         if Path(root).exists():
             command.extend(["--ro-bind", root, root])
     command.extend(
@@ -274,6 +273,9 @@ def sandbox_command(work_dir: Path) -> list[str]:
             "--setenv",
             "PYTHONDONTWRITEBYTECODE",
             "1",
+            "--setenv",
+            "LANG",
+            "C.UTF-8",
         ]
     )
     python = sys.executable
@@ -358,6 +360,7 @@ def run_checker(
             encoding="utf-8",
             errors="replace",
             start_new_session=True,
+            env={"PATH": "/usr/bin:/bin", "LANG": "C.UTF-8"},
         )
         try:
             stdout, stderr = process.communicate(timeout=timeout)
