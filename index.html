@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-Qnw3RN2/UFmQ8ok58PagN5u2BahrrwCBVSbUN2xJT9c='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-KK3G8BNToLeSfp9qTpLoX+buJlMD/B6QcO5CVwc+JYU='; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -153,7 +153,7 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
 </header>
 
 <section id="standing">
-  <h2>Where things stand (8 Oct)</h2>
+  <h2>Where things stand (25 Oct)</h2>
   <p class="sub">The default question for these tests is now the best all-around model: accuracy, editing, tool use, speed and context together. Only tests that name another goal (like the AIOS planner) are judged differently.</p>
   <div class="verdict">
     <ul>
@@ -163,6 +163,7 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
       <li><b>Production :8080:</b> <code>devstral</code> is the weakest coder on the shelf (4/25 Aider, 84.8 HumanEval). Tensor split would take it from 12.9 to 22.3 tok/s.</li>
       <li><b>Qwen3.8 vs 3.6 (5 Oct):</b> with the anti-loop thinking budget, Flash-Next and the Qwen3.8-27B UD-Q6_K tie the incumbent on thinking-on MMLU-Pro (87.1 / 88.6 vs 87.1, all p ≥ 0.11). On editing the incumbent leads both 3.8s that were run: Flash-Next 21/50 (p=0.09) and the 27B Q8 17/50 (p=0.01). Every Polyglot run so far had thinking off.</li>
       <li><b>Context:</b> the UD-Q6_K runs at 126k with nothing on CPU, at 28 tok/s. The Q8_0 needed 8 layers' FFN on CPU to reach 64k, at 16.5 tok/s. Flash-Next at 256k froze the host (RAM exhausted with <code>--fit</code>), so 128k is its ceiling.</li>
+      <li><b>Flash-Next on Strata (12–25 Oct):</b> the GSQ-RCO IQ3_S on Strata, an expert-offload engine (the most-used experts in VRAM, all of them in RAM, the CPU computes the rest), reads a fresh 128k prompt at 402 tok/s and decodes at 35.7 tok/s, with 4.3 GiB of RAM to spare. A fixed layer split of 36 with per-card weight trimming put 10,653 experts on the two cards (8,789 before) and gave +10 % prompt and +3 % decode over the first run. Accuracy at IQ3_S is not scored. <a href="#speed">Details</a></li>
       <li><b>Image and audio (8 Oct, ComfyUI):</b> <code>FLUX.2 klein 4B</code> for images (23 s at 1024², twice as fast as anything else, top CLIP score), <code>Stable Audio 3 Medium</code> for sound effects (2 s per 10 s clip), Chatterbox or VibeVoice for speech. ComfyUI needs a cu126 PyTorch on these cards. <a href="#comfy">Details</a></li>
       <li><b>Still to measure:</b> accuracy for the MoE and K2 Horizon; Aider Polyglot with thinking on; MTP and tensor split on the full 40-task planner bench; pi's tool-call loops.</li>
     </ul>
@@ -282,6 +283,7 @@ tr.grp td{background:var(--surface-2);font-weight:650;font-size:12.5px;color:var
       <tr><td>Router presets</td><td>Command-line <code>--ctx-size</code>, <code>--cache-type-*</code>, <code>--split-mode</code> and <code>--ubatch-size</code> on the router override every per-model preset, so they live in <code>[*]</code> of <code>models.ini</code>. Every preset keeps ≥0.6 GB free per card at a full fill: devstral loaded at 64k and then OOMed in warmup.</td><td><a data-md="results/2026-10-02/pi-context/REPORT.md">pi-context</a></td></tr>
       <tr><td>Context cost</td><td>The Qwen 27B models measured 72 KB/token of KV, not the 260 KB in earlier notes. Devstral measured 168 KB/token f16 (about 84 KB at q8_0, derived rather than measured), with room for ~100k tokens.</td><td><a data-md="results/2026-09-21/cuda-matrix/FINAL.md">cuda-matrix</a></td></tr>
       <tr><td>Models bigger than VRAM</td><td>qwen3.8-flash-next (512-expert MoE): the 82 GB UD-IQ3_XXS ran at 5.3 tok/s steady through Ollama (MMLU-Pro 70.0). The 75 GB IQ2_XXS runs at 19.3 tok/s on llama.cpp with <code>--fit</code> putting experts in RAM. The quant and the runtime both changed, so the two causes are not separated. A sparse MoE must get distinct prompts: repeating one gave a bogus 12.53 tok/s on 19 Sep.</td><td><a data-md="results/2026-09-19/qwen3.8-flash-next/REPORT.md">flash-next</a>, <a data-md="results/2026-10-02/flash-next-iq2/REPORT.md">flash-next IQ2</a></td></tr>
+      <tr><td>Flash-Next on Strata</td><td>Strata's CUDA 12 engine built for sm_60 runs the GSQ-RCO IQ3_S as a layer split. The cards take turns per verify window, so a 70/30 utilisation split is expected, not idle capacity. GPU1's Gen3 x4 link (3.3 GB/s) makes a missed expert ~6× as costly there, so <code>auto</code> gave it only layers 39–47. <code>STRATA_STAGE_TRIM=1</code> (each card loads only its own layers' dense weights) plus a fixed split of 36 raised the GPU expert slots 8,789 → 10,653 and the decode hit rate to ~93 %. 128k fresh prompt: 366 → 402 tok/s, decode 34.9 → 35.7. Split 36 started from a learned expert profile, so it is not a pure A/B against 39.</td><td><a data-md="results/2026-10-12/strata-flash-next-iq3s/README.md">first run</a>, <a data-md="results/2026-10-25/strata-stagetrim/README.md">trim</a>, <a data-md="results/2026-10-25/strata-split36/README.md">split 36</a></td></tr>
       <tr class="grp"><td colspan="3">Benchmarks</td></tr>
       <tr><td>Thinking budget (anti-loop)</td><td>Qwen3.8 models could think until the 12,288-token cap and give no answer (Flash-Next: 3 of 14 MMLU batches, 0/5 on history and law). Preset <code>reasoning-budget = 6144</code> + <code>reasoning-effort = medium</code> + Qwen's thinking-mode sampling: 70/70 answered on both 3.8s, with 1.8–3.2× fewer thinking tokens than their no-fix runs; a batch that reaches the budget is cut off and still answers. The budget does the work on the 27B; medium effort alone fixes most of Flash-Next.</td><td><a data-md="results/2026-10-05/think-fix-full/REPORT.md">think-fix-full</a>, <a data-md="results/2026-10-04/qwen38-antiloop/REPORT.md">27B</a>, <a data-md="results/2026-10-04/flash-next-antiloop/REPORT.md">Flash-Next</a></td></tr>
       <tr><td>Flash-Next + MTP</td><td>Works only on a PR build with the head appended to the GGUF: 18.6 → 20.7 tok/s at n-max 3 with p-min 0.75 (92 % accepted). Ungated drafting is slower than none, because a rejected draft costs a pass over experts in RAM.</td><td><a data-md="results/2026-10-03/flash-next-mtp/REPORT.md">flash-next-mtp</a></td></tr>
@@ -646,6 +648,7 @@ const MODELS = [
   ["k2-horizon-7b Q8_0","9.6","fast","IFM K2 Horizon 7B. Needs the IFM fork build (:8083). 35 → 56 tok/s; accuracy not scored."],
   ["qwen3.8-flash-next IQ2_XXS (2 splits)","75.2","fast","512-expert MoE, bartowski (2 Oct). 19.3 tok/s with experts in RAM via <code>--fit</code>; needs the whole machine; 128k max (256k froze the host). 97.6 HumanEval, 68.6 MMLU-Pro quick, 87.1 thinking with the anti-loop budget (78.6 without), 21/50 Aider Polyglot."],
   ["qwen3.8-flash-next IQ2_XXS + MTP head (shard 1)","41.5","fast","The same model with ggml-org's MTP head appended (3 Oct); shard 2 is a hard link to the original. Needs the PR build <code>~/llama-cuda12-mtp</code>: 18.6 → 20.7 tok/s gated at p-min 0.75."],
+  ["qwen3.8-flash-next GSQ-RCO IQ3_S (Strata, 2 shards)","83.6","fast","ISTA-DASLab's IQ3_S on the Strata expert-offload engine, :8090 (12 Oct). 402 tok/s prompt and 35.7 tok/s decode at 128k with split 36 + stage trim (25 Oct); ~47 GiB expert arena in RAM, so it needs the whole machine. Accuracy not scored."],
   ["Qwen3.8-27B UD-Q6_K (Unsloth, built-in MTP)","22.0","fast","Re-downloaded 5 Oct for context: 126k on :8080 with nothing on CPU, 28 tok/s with MTP. 88.6 thinking-on MMLU-Pro with the anti-loop budget. First tested 21 Sep (95.7 HumanEval / 70.0 quick) and removed as dominated by the Q8_0 on speed: Q6_K decodes ~15 % slower on GP100."],
   ["Qwen3.8-27B Q8_0 (ggml-org)","28.6","archive","10.8 → 18.6 tok/s, 49 with the MTP file on planner edits (22.72 with DFlash, layer split); 95.7 HumanEval."],
   ["mtp-Qwen3.8-27B Q8_0","3.2","fast","MTP draft file. Works on any Qwen3.8-27B and on the Qwen3.6-27B incumbent (95 % acceptance); the incumbent's :8080 preset uses it (4 Oct)."],
@@ -716,6 +719,9 @@ const IDX = [
   ["2026-10-05","qwen38-q6k-think","Qwen3.8-27B UD-Q6_K at 126k","22 GB instead of 29: a full 128k fill with nothing on CPU, 28 tok/s at 40k and 128k alike (Q8_0: 33 on the same prompts). Production at 126k for the 0.6 GB floor.","REPORT.md"],
   ["2026-10-05","think-fix-full","Thinking-on with the anti-loop fix","All 70 MMLU-Pro thinking questions, both 3.8s through the :8080 presets, at temp 0 and with preset sampling. UD-Q6_K 88.6 / 87.1, Flash-Next 87.1 / 84.3 (78.6 before): 70/70 answered everywhere, ties with the incumbent.","REPORT.md"],
   ["2026-10-07","comfyui-image-audio","ComfyUI image and audio overnight","Six image, two sound-effect, one music and three speech models through ComfyUI on a cu126 venv. FLUX.2 klein 4B leads images at 23 s; Stable Audio 3 Medium makes a 10 s clip in 2 s; fp16 helps FLUX.1 dev and breaks Qwen-Image and ACE-Step.","REPORT.md"],
+  ["2026-10-12","strata-flash-next-iq3s","Flash-Next IQ3_S on Strata","First run of the Strata expert-offload engine (sm_60 container build) under a RAM watchdog: 366 tok/s prompt, 34.9 decode at 128k, needles 3/3 at ~122k, 5.55 GiB RAM to spare on 61 GiB.","README.md"],
+  ["2026-10-25","strata-stagetrim","Strata: per-card weight trimming","<code>STRATA_STAGE_TRIM=1</code> with the split fixed at 39: GPU expert slots 8,789 → 9,502, GPU1 holds every expert of its layers. Prompt 375.7, decode 34.7 tok/s.","README.md"],
+  ["2026-10-25","strata-split36","Strata: layer split 36 vs 39","Three more layers on the x4 card: 10,653 slots, hit rate ~93 %, prompt 401.7 (+6.9 %) and decode 35.7 (+2.9 %) tok/s. Kept.","README.md"],
 ];
 const EARLY = [
   ["2026-09-01","local-llm-benchmark","Ollama throughput (GTX 1660)","12 tags × 12 prompts, 720 requests, with graphs.","graphs/index.html"],
@@ -734,7 +740,7 @@ document.getElementById("idxP").innerHTML = IDX.map(card).join("");
 document.getElementById("idxE").innerHTML = EARLY.map(card).join("");
 document.getElementById("idxC").innerHTML = [
   ["rig","Full-stack rig","Controller, flow, roles, personas and scenario generator. Swappable models per config."],
-  ["scripts","Benchmark scripts","Throughput, KV A/B, spec-decoding A/B, the HBM bandwidth kernel, the CUDA 12.6 sm_60 build script, the Ollama→llama.cpp shim, the Aider Polyglot order + runner, and the overnight ComfyUI image/audio runner and scorer. Per-run drivers (sweeps, server probes) live in each result folder."],
+  ["scripts","Benchmark scripts","Throughput, KV A/B, spec-decoding A/B, the HBM bandwidth kernel, the CUDA 12.6 sm_60 build script, the Strata CUDA 12 sm_60 container build, the Ollama→llama.cpp shim, the Aider Polyglot order + runner, and the overnight ComfyUI image/audio runner and scorer. Per-run drivers (sweeps, server probes) live in each result folder."],
 ].map(([p, t, s]) => `<div class="card"><div class="t">${t}</div><div class="s">${s}</div><div class="links"><a href="${tree(p)}">${p}/</a></div></div>`).join("");
 
 /* ---------- early accuracy table ---------- */

@@ -1,0 +1,71 @@
+{
+ "exe": "/home/hm/AI/Strata/engine-cuda12/strata",
+ "args": [
+  "--pack",
+  "/home/hm/models/strata-data/packs/iq3_s",
+  "--native",
+  "/home/hm/models/strata-data/models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+  "--ple-gguf",
+  "/home/hm/models/strata-data/models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+  "--expert-profile",
+  "/home/hm/AI/Strata/data/expert-profile.bin",
+  "--expert-cache",
+  "auto",
+  "--prefill",
+  "auto",
+  "--spec",
+  "4",
+  "--spec-min-p",
+  "0.5",
+  "--mtp",
+  "/home/hm/models/strata-data/mtp/rt",
+  "--max-context",
+  "131072",
+  "--kv",
+  "int8",
+  "--control-vector-scaled",
+  "/home/hm/models/strata-data/cvec/Huihui-Qwen3.8-Flash-Next-refusal-direction-r.gguf:1.0",
+  "--control-vector-layer-range",
+  "4",
+  "44",
+  "--cvec-mode",
+  "project",
+  "--cvec-dir",
+  "per-layer",
+  "--vision",
+  "--vram-reserve-mib",
+  "700"
+ ],
+ "cwd": "/home/hm/AI/Strata",
+ "tokenizer": "/home/hm/models/strata-data/packs/iq3_s/tokenizer",
+ "model_name": "qwen3.8-flash-next-iq3_s",
+ "log": "/home/hm/AI/Strata/strata-iq3_s.log",
+ "lib_dirs": [
+  "/home/hm/AI/Strata/engine-cuda12/lib"
+ ],
+ "port": 8090,
+ "cuda": 12,
+ "gpu": [
+  0,
+  1
+ ],
+ "gpus_asked": true,
+ "layer_split": "36",
+ "sampling": {
+  "experimental_speed_projection": false
+ },
+ "aliases": [
+  "qwen3.8-flash-next-iq3_s-uncensored"
+ ],
+ "vision": {
+  "exe": "/home/hm/AI/Strata/engine-cuda12/strata-vision",
+  "mmproj": "/home/hm/models/strata-data/models/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+  "model": "/home/hm/models/strata-data/models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+  "gpu": true,
+  "max_tokens": 1024
+ },
+ "expert_profile_save": "expert-profile-learned.bin",
+ "env": {
+  "STRATA_STAGE_TRIM": "1"
+ }
+}
